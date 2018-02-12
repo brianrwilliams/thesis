@@ -1,0 +1,212 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\title{Local functionals from formal vector fields}
+
+\begin{document}
+\maketitle
+
+\subsection{Gelfand-Fuks cohomology}
+
+The formal disk $\hD^d$ has ring of functions given by formal power series in $d$-variables $\hO_d = \CC[[t_1,\ldots,t_d]]$. 
+Let $\Vect$ be the Lie algebra of formal vector fields. 
+In other words, the Lie algebra of derivations of $\hO_d$. 
+
+As with any Lie algebra, there is the adjoint module that we denote by $\hT_d$. 
+
+\begin{dfn/lem} Consider the following two classes of cocycles on $\W_d$.
+\begin{itemize}
+\item[Chern type:] For $1 \leq k \leq n$, let $\tau_k \in \clie^k(\W_d; \hOmega_d^k)$ be the cocycle
+\ben
+\tau_k = \sigma_k \left({\rm At}(\hT_d)\right) ...finish...
+\een
+\item[$\GL$ type:] For $1 \leq i \leq d$ let $\xi_i \in \clie^{2i-1}(\W_d ; \hO_d)$ be the cocycle 
+\ben
+\xi_i : (f_{i_1} \partial_{i_1} ,\ldots, f_{i_{2i-1}} \partial_{i_{2i-1}}) \mapsto \sum ..
+\een
+\end{itemize}
+\end{dfn/lem}
+
+We will use the notation $\hOmega_d^\# = \oplus_{k} \hOmega^k_d [-k]$ to denote the graded $\W_d$-module with $\hOmega^k_d$ sitting in degree $k$. 
+The wedge product of forms endows this $\W_d$-module with the structure of a graded commutative algebra. 
+
+If $V$ is a graded vector space then we use the notation $\CC[V]$ to denote the free graded $\CC$-algebra on $V$.
+If $V$ is spanned by vectors $\{v_i\}$ we will use the shorthand $\CC[v_i]$ for this graded algebra. 
+
+\begin{thm}[\cite{GFnontrivial}] \label{thm nontrivial coeff} The bigraded commutative algebra $H^*(\W_d ; \hOmega_d^{\#})$ is isomorphic to the bigraded commutative algebra 
+\ben
+\left. \left(\CC[\xi_1,\ldots, \xi_{2d-1}, \tau_1,\ldots,\tau_d]\right) \right/ \left(c_1^{j_1}\cdots c_d^{j_d} \right),
+\een
+where the quotient is over all indices $\{j_1,\ldots,j_d\}$ that satisfiy $j_1 + 2j_2 + \cdots + d j_d > d$. 
+Here $\xi_{2i-1}$ is in bidegree $(2i-1,0)$ and $\tau_j$ is in bidegree $(j,j)$. 
+\end{thm}
+
+In the above result we have not turned on the de Rham differential $\d_{dR} : \hOmega^k_d \to \hOmega_d^{k+1}$. 
+This endows $\hOmega^*_d = (\hOmega^\#_d, \d_{dR})$ with the structure of a dg commutative algebra in $\W_d$-modules. 
+The formal Poincar\'{e} lemma asserts that the inclusion of the trivial $\W_d$-module 
+\ben
+\CC \xto{\simeq} \hOmega^*_d
+\een 
+is a quasi-isomorphism. 
+In turn, we obtain a quasi-isomorphism of Chevalley-Eilenberg complexes
+\ben
+\clie^*(\W_d) \xto{\simeq} \clie^*(\W_d ; \hOmega_d^*) . 
+\een 
+We may think of the cochain complex $\clie^*(\W_d ; \hOmega_d^*)$ as the total complex of the double complex with vertical differential given by the $\W_d$ Chevalley-Eilenberg differential for the graded module $\hOmega_d^\#$, and horizontal differential equal to the de Rham differential. 
+
+To any double complex there is a spectral sequence abutting to the cohomology of the total complex. 
+The $E_1$ page of this spectral sequence is given by the cohomology of the vertical differential. 
+Moreover, if the double complex is a bigraded algebra so are each of the pages. 
+In this case, the $E_1$ page is precisely the bigraded algebra of Theorem \ref{thm nontrivial coeff} and we have a spectral sequence
+\be\label{ss1}
+E^{p,q}_2 = \left(H^q(\W_d ; \hOmega^p_d), \d_{dR}\right) \implies H^*(\W_d ; \hOmega^*_d) \cong H^*(\W_d) .
+\ee
+
+\begin{eg}
+For the case $d = 1$ the spectral sequence collapses at the $E_2$ page. 
+The only nontrivial cohomology is $\CC$ in bidegree $(0,0)$ and $\xi_1 \cdot \tau_1$ in bidgree $(1,2)$. 
+The $1$-cocycle valued in formal power series $\xi_1$ is given by $\xi_1(f_i \partial_i) = \partial_i f_i \in \hO_n$. 
+The $1$-cocycle valued in formal $1$-forms $\tau_1$ is given by $\tau_1(g_j \partial_j) = \d_{dR}(\partial_j g_j)$. 
+To obtain the generator of $H^3({\rm W}_1)$ we perform the following zig-zag:
+\ben
+\xymatrix{
+\clie^3({\rm W}_1) \ar[r] & \clie^3({\rm W}_1 ; \hO_1) & \\
+& \clie^2({\rm W}_1 ; \hO_1) \ar[u]^-{\d_{CE}} \ar[r]^-{\d_{dR}} & \clie^2({\rm W}_1; \hOmega^1_1) . 
+} 
+\een
+The de Rham differential kills $\xi_1 \cdot \tau_1$, so there exists an $\alpha \in \clie^2({\rm W}_1 ; \hO_1)$ such that $\d_{dR} \alpha = - \xi_1 \cdot \tau_1$. 
+Now, the class $\d^{\hO}_{CE} \alpha \in \clie^3({\rm W}_1 ; \hO_n)$ satisfies
+\begin{align*}
+\d_{dR} (\d^{\hO}_{CE} \alpha) & = - \d_{CE} (\xi_1 \tau_1) = 0 \\
+\d_{CE} \d_{CE}^{\hO} \alpha & = 0 .
+\end{align*}
+Here, $\d_{CE}^{\hO}$ denote the Chevalley-Eilenberg differential for $\clie^*(\W_1 ; \hO_1)$ and $\d_{CE}$ is the restriction of this Chevalley-Eilenberg differential to $\clie^*(\W_1)$. 
+The first line says that $\d_{CE}\alpha$ lifts to $\clie^3(\W_1)$, and the second line says that it is a cocycle for the absolute cohomology.  
+Finally, note that $(\d_{CE}^{\hO} + \d_{dR} ) \alpha = \d_{CE}^{\hO} \alpha - \xi_1 \tau_1$. 
+Thus, in the total complex $\d_{CE}^{\hO} \alpha$ is homotopic to $\xi_1 \tau_1$, and so $[\d_{CE}^{\hO} \alpha]$ is the generator of $H^3(\W_1)$. 
+\end{eg}
+
+For general $d \geq 1$, one can apply this spectral sequence to understand the cohomology $H^*(\W_d)$. 
+To describe it, we introduce the following topological space. 
+Let ${\rm Gr}(d,n)$ be the complex Grassmannian of $d$-planes in $\CC^n$. 
+Denote by ${\rm Gr}(d,\infty)$ the colimit of the natural sequence 
+\ben
+{\rm Gr}(d,d) \to {\rm Gr}(d, d+1) \to \cdots . 
+\een 
+It is a standard fact that ${\rm Gr}(d, \infty)$ is a model for the classifying space $B\U(d)$ of principal $\U(d)$-bundles. 
+Let $E\U(d) \to B\U(d)$ be the universal principal $\U(d)$-bundle. 
+Using the colimit description above, we have a natural skeletal filtration of $B\U(d)$ by 
+\ben
+{\rm sk}_{k} B\U(d) = {\rm Gr}(d, k) .
+\een 
+Let $X_d$ denote the restriction of $E\U(d)$ over the $2d$-skeleton:
+\ben
+\xymatrix{
+X_d \ar[r] \ar[d] & E \U(d) \ar[d] \\
+{\rm sk}_{2d} B \U(d) \ar[r] & B\U(d) .
+}
+\een
+
+\begin{rmk}
+Though not the way the Gelfand and Fuks originally proved the result, one can use the computation of the cohomology of $\W_d$ with coefficients in $\hOmega^k_d$ together with the spectral sequence (\ref{ss1}) to prove this description of $H^*(\W_d)$. 
+Indeed, the spectral sequence (\ref{ss1}) is isomorphic, up to regradings, to the Serre spectral sequence for the principal $\U(d)$-bundle $X_d \to {\rm sk}_{2d} B \U(d)$. 
+In other words, the formal de Rham differential on $\hOmega^*_d$ is exactly the $E_2$ differential for the Serre spectral sequence. 
+\end{rmk}
+
+\begin{thm}[\cite{GF1} Theorem 2.2.4] 
+There is an isomorphism of graded vector spaces
+\ben
+H^*(\W_d) \cong H^*_{dR} (X_d) .
+\een
+Moreover, the commutative algebra structure on $H^*(\W_d)$ is trivial. 
+\end{thm}
+
+As a simple example, note that when $d = 1$ we have ${\rm sk}_2 B \U(1) = \PP^1 \subset \PP^\infty = B \U(1)$. 
+Moreover, the restriction of the universal bundle is Hopf fibration $U(1) \to S^3 \to \PP^1$. 
+In particular, one has $X_1 = S^3$. 
+
+\subsection{Local cocycles on holomorphic vector fields} 
+
+We now turn to a description of local central extensions of the local Lie algebra of holomorphic vector fields $\sT_X = \Omega^{0,*}(X ; T_X^{1,0})$ for any complex $d$-fold $X$. 
+Recall, such a central extension is determined by a cocycle in complex of local functionals $\cloc^*(\sT_X)$. 
+Our main result is to identify such local cocycles with Gelfand-Fuks cocycles we have just discussed. 
+
+Our first goal is to construct, from a Gelfand-Fuks class in $\clie^*(\W_d)$, a local functional on $\sT_X$. 
+We have seen that the cochain complex $\clie^*(\W_d ; \hOmega_d^*)$, equipped with the total differential $\d_{CE} + \d_{dR}$, computes the absolute Gelfand-Fuks cohomology $H^*(\W_d)$. 
+We will use this property to represent elements of $H^*(\W_d)$ by local cocycles on $\sT_X$. 
+
+Using the natural framing on the formal disk, we can decompose a class $\alpha \in \clie^k(\W_d ; \hOmega^*_d)$ as 
+\ben
+\alpha = f^I \d t_I
+\een
+where the sum is over the multi-index $I = (i_1,\ldots, i_k)$ where $1 \leq i_j \leq d$, and for each $I$, $f^I$ is a $k$ multi-linear symmetric functional on $\W_d$ valued in $\hO_d$
+\ben
+f^I : \Sym^k(\W_d [1]) \to \hO_d .
+\een 
+We extend $f^I$ to a functional on the Dolbeault complex $\Omega^{0,*}(\CC^d ; T^{1,0} \CC^d)$ as follows. 
+Using the framing on $\CC^d$, every element of the Dolbeualt complex can be written as
+\ben
+X^{J} (z,\zbar) \d \zbar_J
+\een
+where $J = (j_1,\ldots, j_l)$ is a multi-index and $X^J$ is an ordinary holomorphic vector field on $\CC^d$.
+We extend $f^I$ to a Dolbeualt valued functional $\Omega^{0,*}(\CC^d ; T^{1,0}\CC^d)$ via the formula
+\ben
+\begin{array}{cccc}
+f^I_{\Omega^{0,*}} : & \Sym^k\left(\Omega^{0,*}(\CC^d ; T^{1,0})\right) & \to & \Omega^{0,*}(\CC^d) \\ 
+&\left(X_1^{J(1)} (z,\zbar) \d \zbar_{J(1)}, \ldots, X^{J(k)}_k (z,\zbar) \d \zbar_{J(k)} \right) & \mapsto & f^I(X_1^{J(1)} , \ldots, X^{J(k)}_k) \d \zbar_{J(1)} \wedge \cdots \d \zbar_{J(k)} 
+\end{array}
+\een
+
+The local functional corresponding to the original class $\alpha = f^I \d t_I \in \clie^*(\Vect ; \hOmega^*_d)$ is defined by the $k$-multi-linear functional
+\ben
+(\xi_1, \ldots, \xi_k) \mapsto \int_{\CC^d} f^I_{\Omega^{0,*}}(\xi_1,\ldots, \xi_k) \d z_I .
+\een
+Denote this functional by $J^{GF}(\alpha)$. 
+Note that it is only nonzero when the multi-index $I$ is a permutation of $(1,\ldots, d)$. 
+Since it is given by the integral of a some multi-differential operators against a density it is manifestly a local functional. 
+
+\begin{prop}
+Let $\cloc^*(\sT_{\CC^d})$ be the local functionals of $\sT_{\CC^d}$ on $\CC^d$. The map
+\ben
+J^{GF} : \clie^*(\W_d ; \hOmega^*_n)[2d] \to \cloc^*(\sT_{\CC^d}) 
+\een
+sending $\alpha \mapsto J^{GF}(\alpha)$ is a map of cochain complexes. 
+Moreover, it is a quasi-isomorphism. 
+\end{prop}
+
+\begin{thm}
+Let $X$ be a complex $d$-fold. 
+Then, the map
+\ben
+J^{GF} : \ul{\clie^*(\W_d ; \hOmega^*_n)}[2d] \to \cloc^*(\sT_X)
+\een
+is a quasi-isomorphism of sheaves.
+In particular, there is an isomorphism of graded vector spaces
+\be\label{central charges}
+H^{*+2d}(\Vect) \cong H^*(X, \cloc^*(\sT_X)) ,
+\ee
+where the right-hand side denotes the hypercohomology. 
+\end{thm}
+
+\begin{eg}
+Again, take the case $d=1$. 
+We can describe the local cocycle corresponding to the generator $H^3(\W_1) \cong H^1(\sT_{\CC})$ explicitly. 
+Recall, the generator of $H^3(\W_1)$ came from the element $\xi_1 \tau_1 \in \clie^2(\W_1 ; \hOmega^1_1)$ on the $E_2$ page of the spectral sequence (\ref{ss1}). 
+Using the formulas for $\xi_1,\tau_1$ above, we see that the local functional $J^{GF}(\xi_1 \tau_1)$ is given by
+\ben
+\left(f(z,\zbar) \frac{\partial}{\partial z}, g(z,\zbar)\d \zbar \frac{\partial}{\partial z} \right) \mapsto \int_\CC \left(\frac{\partial}{\partial z} f \right) \partial \left(\frac{\partial}{\partial z} g\right) \d \zbar .
+\een 
+For instance, the linear functional $\tau_1 : g(t) \frac{\partial}{\partial t} \mapsto \d_{dR} (\partial_t g(t))$ is mapped to the functional on the Dolbeualt complex of holomorphic vector fields given by $g(z,\zbar) \frac{\partial}{\partial z} \mapsto \partial (\partial_z g(z,\zbar))$. 
+
+If we integrate by parts, we can put $J^{GF}(\xi_1 \tau_1)$ in the form $\int f \partial^3_z g \d z \d \zbar$. 
+If one restricts this local functional to the annulus and performs the radial integration, we recover the usual formula for the generator of $H^2({\rm Vect}(S^1))$ \brian{citation} defining the central extension of the Virasoro Lie algebra. 
+In fact, in \cite{BWVir} \brian{finish}
+\end{eg}
+
+
+\end{document}

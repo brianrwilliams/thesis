@@ -1,0 +1,238 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\title{Deformations of a holomorphic theory}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\def\hD{\Hat{D}}
+
+\begin{document}
+
+\subsection{Free holomorphic theories}
+
+We restrict ourselves to considering theories on the manifold $\CC^d = \RR^{2n}$ equipped with its standard complex structure. 
+Fix a holomorphic vector bundle $V$ on $\CC^d$ and an identification of bundles 
+\ben
+V \cong \CC^d \times V_0
+\een
+where $V_0$ is the fiber of $V$ at $0 \in \CC^d$. 
+We want to consider a classical theory with space of fields given by $\Omega^{0,*}(\CC^d, V)$. 
+Moreover, we want this theory to be invariant with respect to the group of translations on $\CC^d$. 
+Per usual, it is easiest to work with the corresponding Lie algebra of translations. 
+Moreover, using the complex structure, we choose a presentation for this Lie algebra as
+\ben
+\CC^d \cong {\rm span} \left\{\frac{\partial}{\partial z_i}, \frac{\partial}{\partial \zbar_i}\right\}_{1 \leq i \leq d}.
+\een
+
+The first thing we need to do is fix a $(-1)$-shifted symplectic pairing.
+To do this, we suppose that a we have a translation invariant pairing on $V$ valued in the canonical bundle $K_{\CC^d}$.
+That is, suppose 
+\be\label{pairing 1}
+\< \;\;,\;\; \>_V : V \tensor V \to K_{\CC^d} [d-1]
+\ee
+is a skew-symmetric bundle map that is equivariant for the Lie algebra of translations. 
+The shift is so that the resulting pairing on the Dolbeualt complex is of the appropriate degree.
+Here, equivariance means that for sections $v,v'$ we have
+\ben
+\< \frac{\partial}{\partial z_i} v, v'\>_V = L_{\partial_{z_i}} \<v,v'\>_V
+\een
+where the right-hand side denotes the Lie derivative applied to $\<v,v'\>_V \in K_{\CC^d}$. 
+There is a similar relation for the anti-holomorphic derivatives. 
+We obtain a $\CC$-valued pairing on $\Omega^{0,*}_c(\CC^d , V)$ via integration:
+\ben
+\int_{\CC^d} \circ \<\;\;,\;\;\>_V : \Omega^{0,*}_c (\CC^d , V) \tensor \Omega^{0,*}_c(\CC^d , V) \xto{\wedge \cdot \<\;, \;\>_V} \Omega^{d,*}(\CC^d) \xto{\int} \CC .
+\een
+The first arrow is the wedge product of forms combined with the pairing on $V$. 
+The second arrow is only nonzero on forms of type $\Omega^{d,d}$. 
+Clearly, integration is translation invariant, so that the composition is as well. 
+
+This pairing $\Omega^{0,*}(\CC^d , V)$ together with the differential $\dbar$ are enough to define a free theory. 
+However, it is convenient to consider a slightly generalized version of this situation. 
+We want to allow deformations of the differential $\dbar$ on Dolbeault forms of the form
+\ben
+Q = \dbar + Q^{hol}
+\een
+where $Q^{hol}$ is a holomorphic differential operator of the form
+\be\label{hol operator}
+Q^{hol} = \sum_I \frac{\partial}{\partial z^I} \mu_I
+\ee
+where $I$ is some multi-index and $\mu_I : V \to V$ is a linear map of cohomological degree $+1$. 
+Note that we have automatically written $Q^{hol}$ in a way that it is translation invariant.
+Of course, for this differential to define a free theory there needs to be some compatibility with the pairing on $V$. 
+We can summarize this in the following definition, which should be viewed as a slight modification of a free theory to this translation invariant holomorphic setting. 
+
+\begin{dfn} A {\em holomorphically translation invariant free BV theory} is the data of a holomorphic vector bundle $V$ together with
+\begin{enumerate}
+\item an identification $V \cong \CC^d \times V_0$;
+\item a translation invariant skew-symmetric pairing  $\<-,-\>_V$ as in (\ref{pairing 1});
+\item a holomorphic differential operator $Q^{hol}$ as in (\ref{hol operator});
+\end{enumerate}
+such that the following conditions hold
+\begin{enumerate}
+\item the induced $\CC$-valued pairing $\int \circ \<-,-\>_V$ is non-degenerate;
+\item the operator $Q^{hol}$ satisfies $(\dbar + Q^{hol})^2 = 0$ and
+\ben
+\int \<Q^{hol} v, v'\>_V = \pm \int \<v, Q^{hol} v'\> .
+\een
+\end{enumerate}
+\end{dfn}
+
+The first condition is required so that we obtain an actual $(-1)$-shifted symplectic structure on $\Omega^{0,*}(\CC^d, V)$. 
+The second condition implies that the derivation $Q = \dbar + Q^{hol}$ defines a cochain complex
+\ben
+\sE_V = \left(\Omega^{0,*}(\CC^d, V), \dbar + Q^{hol}\right),
+\een
+and that $Q$ is skew self-adjoint for the symplectic structure. 
+Thus, in particular, $\sE_V$ together with the pairing define a free BV theory in the ordinary sense. 
+In the usual way, we obtain the action functional via
+\ben
+S(\varphi) = \int \<\varphi, (\dbar + Q^{hol}) \varphi\>_V .
+\een 
+
+Before going further, we will list some familiar examples.
+
+\begin{eg}\label{eg bg affine} {\em The free $\beta\gamma$ system on $\CC^d$}.
+Suppose that 
+\ben
+V = \ul{\CC} \oplus K_{\CC^d} [d - 1] .
+\een
+Let $\<\;,\;\>_V$ be the pairing
+\ben
+(\ul{\CC} \oplus K_{\CC^d}) \tensor (\ul{\CC} \oplus K_{\CC^d}) \to K_{\CC^{d}} \oplus K_{\CC^d} \to K_{\CC^d} 
+\een 
+sending $(\lambda, \mu) \tensor (\lambda',\mu') \mapsto (\lambda \mu', \lambda'\mu) \mapsto \lambda\mu' + \lambda' \mu$.
+Finally, let $Q^{hol} = 0$. 
+One immediately checks that this is a holomorphically translation invariant free theory as above.
+The space of fields can be written as
+\ben
+\Omega^{0,*}(\CC^d) \oplus \Omega^{d,*}(\CC^d)[d - 1] .
+\een 
+We write $\gamma$ for a field in the first component, and $\beta$ for a field in the second component. 
+The action functional reads
+\ben
+S(\gamma + \beta, \gamma'+\beta') = \int_{\CC^d} \beta \wedge \dbar \gamma' + \beta' \wedge \dbar \gamma .
+\een 
+When $d = 1$ this reduces to the ordinary chiral $\beta\gamma$ system from conformal field theory \brian{ref}. 
+We will discuss this higher dimensional version further in Section \brian{}.
+For instance, we will see how this theory is the starting block for constructing general holomorphic $\sigma$-models. 
+\end{eg}
+
+Of course, there are many variants of the $\beta\gamma$ system that we can consider.
+For instance, if $E$ is {\em any} holomorphic vector bundle we can take 
+\ben
+V = E \oplus K_{\CC^d} \tensor E^\vee
+\een
+where $E^\vee$ is the linear dual bundle. 
+The pairing is constructed as in the case above where we also use the evaluation pairing between $E$ and $E^\vee$, ${\rm ev}_E : E \tensor E^\vee \to \CC$.
+In thise case, the fields are $\gamma \in \Omega^{0,*}(\CC^d, E)$ and $\beta \in \Omega^{d,*}(\CC^d, E^\vee)[d-1]$. 
+The action functional is simply
+\ben
+S(\gamma, \beta) = \int_{\CC^d} {\rm ev}_E(\beta \wedge \dbar \gamma) .
+\een
+
+\begin{eg} {\em Topological ...}
+Consider the above example with $Q^{hol} = \partial$..\brian{finish}. 
+\end{eg}
+
+\subsection{Interacting holomorphic theories}
+
+It is convenient to introduce the following set of degree $-1$ derivations of $\Omega^{0,*}(\CC^d)$ given by
+\ben
+\Bar{\eta}_i := \frac{\partial}{\partial (\d \zbar_i)} .
+\een
+The right-hand side is sometimes written using the interior derivative notation $\iota_{\partial / \partial \zbar_i}$. 
+By a holomorphic version of ``Cartan's magic formula" these derivations satisfy the relation
+\ben
+L_{\frac{\partial}{\partial \zbar_i}} = \dbar \Bar{\eta}_i + \Bar{\eta}_i \dbar .
+\een
+In addition, they serve to define homotopies for the following holomorphic version of Poincar\'{e}'s lemma. 
+First, consider the algebraic case. 
+Let $\AA^d$ be the complex $d$-dimensional affine space with space of smooth algebraic functions $\sO^{alg, sm}(\AA^d) = \CC[z_1,\ldots, z_d, \zbar_1,\ldots,\zbar_d]$. 
+Then, we can build the algebraic Dolbeualt complex 
+\ben
+\Omega^{0,*}_{alg} (\AA^d) = \CC[z_1,\ldots,z_d, \zbar_1,\ldots,\zbar_d][\d \zbar_1,\ldots,\d \zbar_d]
+\een
+where the $\d \zbar_i$'s are in cohomological degree $1$. 
+The Dolbeault differential $\dbar$ is define in the same way. 
+Note that the operators $\Bar{\eta}_i$ also make sense on $\Omega^{0,*}_{alg}(\AA^d)$. 
+
+\begin{lem} 
+The map 
+\ben
+\CC[z_1,\ldots, z_d] \hookrightarrow \Omega^{0,*}_{alg}(\AA^d)
+\een
+is a quasi-isomorphism.
+\end{lem}
+\begin{proof}
+Note that
+\ben
+\Omega^{0,*}_{alg}(\AA^d) \cong \CC[z_1,\ldots, z_d] \tensor_\CC \CC[\zbar_1,\ldots,\zbar_d][\d \zbar_1,\ldots,\d \zbar_d] .
+\een
+The right-hand term is one-dimensional, concentrated in degree zero by the ordinary Poincar\'{e} lemma. 
+An explicit homotopy for a \brian{...}
+\end{proof}
+
+The analogous result holds with $\AA^d$ replaced by the formal $d$-disk $\hD^d$. 
+
+For the general case...
+
+\begin{lem} \brian{find good citation. should I just state the general Stein resut?}
+The map
+\ben
+\sO^{hol} (\CC^d) \hookrightarrow \Omega^{0,*}(\CC^d)
+\een
+is a quasi-isomorphism.
+\end{lem}
+
+\brian{Include equivalence with certain structured local Lie algebras. Namely holomorphically translation invariant local Lie algebras.}
+
+Local Lie \footnote{Local Lie algebras will mean $L_\infty$...} are a convenient language to phrase the data of an interacting classical field theory. 
+In \brian{ref} it is shown that the data of a local Lie algebra together with a non-degenerate pairing of degree $-3$ is equivalent to the data of a classical interacting BV theory. 
+It will be convenient for us to formulate, under this equivalence, a Lie theoretic interpretation of holomorphically translation invariant interacting BV theories. 
+First, we introduce the following definition. 
+Recall, data of a local Lie algebra is a $\ZZ$-graded vector bundle $L$ together with poly-differential operators 
+\ben
+\ell_n : L \tensor \cdots \tensor L \to L 
+\een 
+for $n \geq 1$, satisfying some conditions. 
+The sheaf of smooth sections of this bundle will be denoted by $\sL$, which inherits from the operators $\{\ell_n\}$ the structure of a sheaf of $L_\infty$ algebras. 
+We will often refer to the local Lie algebra simply by its sheaf of sections. 
+
+\begin{dfn}
+A translation invariant local Lie algebra on $\RR^n$ is a local Lie algebra $\sL$,
+together with an identification $L = \RR^n \times L_0$ such that for each $n$ the structure map
+\ben
+\ell_n : \RR^n \times (L_0 \tensor \cdots \tensor L_0) \to \RR^n \times L_0
+\een
+is compatible with translations. 
+\end{dfn}
+
+\subsection{Holomorphic deformations}
+
+Any local Lie algebra on a manifold endows the structure of an $L_\infty$ algebra on its fibers. 
+Suppose $\sL$ is a holomorphically translation invariant local Lie algebra on $\CC^d$ of the form $\Omega^{0,*}(\CC^d, L)$ where $L$ is a graded holomorphic vector bundle....
+
+%\begin{lem} Let $\sL_0$ denote the fiber of $\sL$ over $0 \in \CC^d$. 
+%Then, if $\ell_1 = \dbar$, there is an equivalence of $L_\infty$ algebras
+%\ben
+%L_0 \xto{\simeq} \sL_0
+%\een 
+%where $L_0$ is the fiber of the holomorphic bundle $L$ over $0 \in \CC^d$. 
+%\end{lem}
+
+\begin{prop} Suppose $\sL$ is a holomorphically translation invariant local Lie algebra on $\CC^d$ such that $\ell_1 = \dbar$.
+Then, one has
+\ben
+\cloc^*(\sL)^{\CC^d} \simeq K_{\CC^d} \tensor^{\LL}_{\CC[\frac{\partial}{\partial z_i}]} \cred^*(L_0 [[z_1,\ldots,z_d]]).
+\een
+\end{prop}
+
+For instance, if $L = \ul{\fg}$ is the constant bundle on $\CC^d$ where $\fg$ is an ordinary Lie (or $L_\infty$) algebra one has $L_0 = \fg$ so that
+\ben
+\cloc^*(\Omega^{0,*}(\CC^d, \fg))^{\CC^d} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\frac{\partial}{\partial z_i}]} \cred^*(\fg [[z_1,\ldots,z_d]]) .
+\een
+\end{document}

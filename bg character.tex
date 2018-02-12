@@ -1,0 +1,112 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\title{Local operators for the $\beta\gamma$}
+
+\def\Obs{{\rm Obs}}
+\def\ev{{\rm ev}}
+\def\Wedge{\bigwedge}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\begin{document}
+
+We consider the $\beta\gamma$ theory on $\CC^d$ with values in a complex vector space $V$. 
+We have already seen that when the complex dimension is $d = 2$, this theory is the holomorphic twist of the $\cN = 1$ chiral multiplet with on $\RR^4$. 
+
+\subsection{The character}
+
+The $\beta\gamma$ system on $\CC^d$ has a symmetry by the group unitary group $U(d)$. 
+Indeed, the fields of the $\beta\gamma$ system are built from sections of certain natural holomorphic vector bundles on $\CC^d$. 
+The group $U(d)$ acts by automorphisms on every holomorphic vector bundle, hence it acts on sections via the pull-back. 
+
+There is another symmetry that we wish to contemplate. 
+Introduce an action of $U(1)$ on the fields of the theory such that $V$ has weight $q_f \in \ZZ$ and $V^*$ has weight $-q_f$.
+The value of the fields $\gamma$ lie in the vector space $V$, so these fields are of weight $q_f$. 
+Conversely, the fields $\beta$ lie in $V^*$, so have weight $-q_f$.
+Since the pairing defining the free theory is only non-zero between a single $\gamma$ and single $\beta$ field, the theory is invariant under this symmetry.
+In the physics literature, this is a so-called ``flavor symmetry" of the theory, and so to distinguish it from the other symmetry we will denote this group by $U(1)_f$. 
+
+\begin{lem} The symmetry by $U(d) \times U(1)_f$ on the classical $\beta\gamma$ system with values in the complex vector space $V$ extends to a symmetry of the factorization algebra of quantum observables $\Obs^q$.
+\end{lem}
+\begin{proof}
+The differential on the factorization algebra is of the form $\dbar + \hbar \Delta$. 
+The operator $\dbar$ is manifestly equivariant for the action of $U(d)$.
+Since $U(1)_f$ does not act on spacetime, $\dbar$ trivially commutes with its action. Further, the action of $U(d)$ is through linear automorphisms, and since the BV Laplacian $\Delta$ is a second order differential operator, it certainly commutes with the action of $U(d)$. 
+Likewise, since $U(1)_f$ is compatible with the $(-1)$-symplectic pairing, it automatically is compatible with $\Delta$. 
+\end{proof}
+
+In this section we compute the character of the action of $U(d) \times U(1)_f$ on the local observables of the free $\beta\gamma$ system with values in $V$. 
+Since the character is conjugation invariant, it is completely determined by its value on the subgroup $T^d \times U(1)_f \subset U(d) \times U(1)_f$. 
+Choose the following basis for the maximal torus of $U(d)$: 
+\ben
+T^d = \{{\rm diag}(q_1,\ldots,q_d) \; | \; |q_i| = 1\} \subset U(d).
+\een 
+We label the coordinate on $U(1)_f$ by $u$. 
+\brian{something about filtrations. I.e., why does the "formal character" make sense?} 
+We conclude that the character is valued in the power series ring $\CC[[q_i^{\pm}, u^{\pm q_f}]]$. 
+
+We now turn to the case that the complex dimension $d = 2$, with an aim to compare to the formula for the character of the $\cN = 1$ supersymmetric chiral multiplet on $\RR^4$. 
+
+The local operators of the theory are equal to the observables on a complex $2$-disk $D^2 \subset \CC^2$. 
+By translation invariance it suffices to consider a disk centered at the origin $0 \in \CC^2$. 
+When $d=2$ we use Proposition \ref{} to read off the cohomology of the disk observables $H^*\Obs^q (D^2)$:
+\ben
+\Sym\left((\sO^{hol}(D^2) \tensor V)^\vee \right) \tensor \Sym \left( (\Omega^{2,hol}(D^2) \tensor V^*)^\vee [-1] \right) .
+\een 
+
+\begin{prop} The $U(2) \times U(1)_f$ character of the local operators of the $\beta\gamma$ system on $\CC^2$ is equal to
+\ben
+\prod_{n_1, n_2 \geq 0} \frac{1 - u^{q_f} q_1^{n_1 - 1} q_2^{n_2 - 1}}{1 - u^{-q_f} q_1^{n_1} q_2^{n_2}} \in \CC[[q_1^{\pm},q_2^{\pm}, u^{\pm q_f}]]
+\een
+\end{prop}
+\begin{proof}
+We will write down a basis for a dense subspace of the observables on a $2$-disk.
+For integers $n_1,n_2 \geq 0$ and elements $v \in V$, $v^* \in V^*$ consider the following linear observables on the $2$-disk:
+\ben
+\begin{array}{ccclll} 
+O_{\gamma} (n_1,n_2 ; v^*) & : & \gamma \tensor w & \in \sO^{hol}(D^2) \tensor V & \mapsto & \ev(v^*, w) \frac{\partial^{n_1}}{\partial z_1^{n_1}} \frac{\partial^{n_2}}{\partial z_2^{n_2}} \gamma (0) \\
+O_{\beta} (n_1+1,n_2+1; v) & : & \beta \d z_1 \d z_2 \tensor w^* & \in \Omega^{2,hol} (D^2) \tensor V^* & \mapsto & \ev(w^*, v) \frac{\partial^{n_1}}{\partial z_1^{n_1}} \frac{\partial^{n_2}}{\partial z_2^{n_2}} \beta (0) .
+\end{array} 
+\een
+
+Since the field $\gamma \tensor w \in \sO^{hol} \tensor V$ has $U(2)$ weight zero, we see that the 
+
+For fixed $n_1,n_2 \geq 0$, let $V^*_{n_1,n_2}$ denote the linear span of operators $O_{\gamma}(n_1, n_2; v^*)$. 
+As a vector space $V_{n_1,n_2}^* \cong V^*$, but we want to remember the weights under $U(2)$. 
+Likewise, for $n_1 , n_2 > 0$, let $V_{n_1,n_2} \cong V$ be the linear span of the operators $O_{\beta}(n_1, n_2 ; v)$. 
+
+There is an injective map of graded vector spaces
+\ben
+\Sym \left( \left(\bigoplus_{n_1,n_2 \geq 0} V_{n_1,n_2}^*\right) \oplus \left(\bigoplus_{n_1,n_2 > 0}  V_{n_1,n_2}[-1] \right)\right)  \to \Sym\left( \left(\sO^{hol}(D^2) \tensor V\right)^\vee \oplus \left( \Omega^{2,hol}(D^2) \tensor V^*\right)^\vee [-1] \right),
+\een
+where the right-hand side is the cohomology of the observables on $D^2$. 
+Moreover, this map is {\em dense}. \brian{explain}
+
+Thus, to compute the character of the local operators it suffices to compute it on the vector space
+\ben
+\Sym \left( \left(\bigoplus_{n_1,n_2 \geq 0} V_{n_1,n_2}^*\right) \oplus \left(\bigoplus_{n_1,n_2 > 0} \oplus V_{n_1,n_2}[-1] \right)\right) \cong \Sym \left(\bigoplus_{n_1,n_2 \geq 0} V_{n_1,n_2}^*\right) \tensor \Wedge \left(\bigoplus_{n_1,n_2 > 0} V_{n_1,n_2} \right) .
+\een
+We have used the convention that as (ungraded) vector spaces the symmetric algebra of a vector space in odd degree is the exterior algebra. 
+For instance, $\Sym(W[-1]) = \Wedge(W)$ as ungraded vector spaces. 
+We can further simplify the right-hand side as
+\ben
+\bigotimes_{n_1, n_2 \geq 0} \left(\Sym(V^*_{n_1,n_2})\right) \bigotimes \bigotimes_{n_1,n_2 > 0} \left(\Wedge (V_{n_1,n_2})\right) .
+\een 
+The character of the symmetric algebra $\Sym(V^*_{n_1,n_2})$ is equal to $(1-u^{-q_f}q_1^{n_1}q_2^{n_2})^{-1}$ and the character of $\Wedge(V_{n_1,n_2})$ is equal to $(1- u^{q_f} q_1^{n_1}q_2^{n_2})$. 
+The formula for character in the statement of the proposition follows from the fact that the character of a tensor product is the product of the characters. 
+\end{proof}
+
+We have seen in Proposition \brian{ref} that when $d = 2$, the free $\beta\gamma$ system is equal to the holomorphic twist of the free $\cN=1$ chiral multiplet in four dimensions. 
+In \cite{Closset1} Equation 5.58 the index for the $\cN=1$ chiral multiplet is computed, and our answer is easily seen to agree with theirs. 
+We conclude that in this instance that under the holomorphic twist the superconformal index was sent to the character of the local observables of the holomorphic theory. 
+We will see \brian{ref} that this is a general fact about superconformal indices.
+
+\brian{Do general case. Relate to elliptic gamma functions. Relate to Witten index, which is the parition function on $S^3 \times S^1$.}
+
+
+
+\end{document}

@@ -1,0 +1,95 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\title{Gauging versus the background field method}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\begin{document}
+\maketitle
+
+\subsection{Gauging = local BRST cohomology}
+
+\brian{recall ordinary BRST cohomology for symplectic actions}
+
+We now explain, in more detail, the process of gauging a symmetry of a BV theory.
+We will find that the observables of the gauged theory introduce a ``local" version of BRST cohomology.
+In our setup, of course, this will be a factorization algebra. 
+As in the case of the equivariant observables, the process of gauging is defined whenever we have a symmetry of a theory by some local Lie algebra, but there are many key differences as we have explained in Table \brian{ref}.
+First, we focus on the classical case. 
+
+\subsubsection{}
+
+Indeed, let $\sE$ be the fields of a classical BV theory on a manifold $M$ described by some action functional
+\ben
+S = S^{free} + I \in \oloc(\sE),
+\een
+satisfying the classical master equation $\{S, S\} = 0$.
+Let $\sL$ be a local Lie algebra that acts on the theory $\sE$ with corresponding Noether functional $I^{\sL} : \sL \to \oloc(\sE)$. 
+Recall, this means that the equivariant classical master equation $(\d_{\sL} + Q) (I + I^{\sL}) + \frac{1}{2}\{I + I^{\sL}, I + I^{\sL}\} = 0$, where $\d_{\sL}$ is the Chevalley--Eilenberg differential on $\sL$, is satisfied. 
+ 
+We define a new BV theory built from this action of $\sL$ on $\sE$. 
+The space of fields is
+\ben
+\sE^{\sL}_{BRST} = \sE \oplus \sL[1] \oplus \sL^![-2] .
+\een 
+The $(-1)$-shifted symplectic pairing is given by the sum of the pairing defining the theory $\sE$ together with the natural pairing
+\ben
+\<-,-\>_{\sL} : \sL[1] \times \sL^! [-2] \xto{{\rm ev}} {\rm Dens}_M \xto{\int_M} \CC .
+\een
+The first arrow is the density valued evaluation pairing between $\sL$ and its $!$-dual~$\sL^! = \sL^\vee \tensor {\rm Dens}_M$.
+Write $X, X^!$ for elements of $\sL,\sL^!$, respectively. 
+The action functional for this new theory is 
+\ben
+S_{BRST}^{\sL} = S + I^{\sL} + \sum_{n \geq 0} \frac{1}{n!} \<X^!, \ell_n (X, \ldots, X)\>_{\sL} \in \oloc(\sE_{BRST}^{\sL}) . 
+\een 
+If we denote by $\{\ell_n\}$ the $L_\infty$ structure maps for $\sL$ we can think about this new theory as splitting up into a free part
+\ben
+S_{BRST}^{\sL, free} = S^{free} + \<X^!, \ell_1(X)\>_{\sL}
+\een
+and an interacting part
+\ben
+I_{BRST}^{\sL} = I + I^{\sL} + \sum_{n \ne 1} \<X^!, \ell_n (X,\ldots,X)\>_{\sL} .
+\een  
+
+\begin{lem} Let $\{-,-\}_{BRST}$ denote the bracket on $\oloc(\sE^{BRST})$ induced by the $(-1)$-shifted symplectic structure on $\sE^{BRST}$ defined above.
+The functional $S^{\sL}_{BRST}$ satisfies the curved classical master equation
+\ben
+\{S^{\sL}_{BRST}, S^{\sL}_{BRST}\} = \ell_0 .
+\een 
+\end{lem}
+
+\begin{dfn}
+The {\em local BRST complex} for the action of $\sL$ on $\sE$ is the factorization algebra ${\rm Obs}^{cl}_{BRST}$ of classical observables for the theory $(\sE^{\sL}_{BRST}, S^{\sL}_{BRST})$. 
+\end{dfn}
+
+The 
+
+\begin{eg}
+Suppose that $\Sigma$ is a Riemann surface with fixed metric $g_0$. 
+We have already seen in Example \ref{?} how the local Lie algebra controlling deformations of Riemannian metrics $\sL^{Riem}$ acts on the free boson on $\Sigma$. 
+The corresponding BRST theory
+\ben
+\sE_{BRST} = \sE^{boson}_\Sigma \oplus \sL^{Riem}_{(\Sigma,g_0)}[1] \oplus (\sL_{(\Sigma,g_0)}^{Riem})^![-2], 
+\een 
+is precisely the perturbative expansion of the Polchinski string \ref{?} near the fixed metric $(\Sigma, g_0)$. 
+Explicitly, the action functional is \brian{finish, copy from string}
+\end{eg}
+
+\begin{eg}
+Suppose, again, that $\Sigma$ is a Riemann surface. 
+Consider local Lie algebra given by the Dolbeualt complex of holomorphic vector fields $\sL = \sT_\Sigma = \Omega^{0,*}(\Sigma, T_\Sigma^{1,0})$. 
+\end{eg}
+
+\subsubsection{}
+
+\brian{Quantum story. Formula in the case that the theory is free.}
+
+\subsection{Examples of BRST cohomology}
+
+\subsection{Chiral gravity}
+
+\end{document}

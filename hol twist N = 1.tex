@@ -1,0 +1,112 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\title{The holomorphic twist of $\cN=1$ in four dimensions}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\def\SU{{\rm SU}}
+\def\Spin{{\rm Spin}}
+\def\dvol{{\rm dvol}}
+\def\dslash{\slashed{\partial}}
+\begin{document}
+\maketitle
+
+In this section we describe how the $\cN = 1$ chiral supermultiplet in four dimensions is related to the two dimensional $\beta\gamma$ system. 
+
+\subsection{}
+
+\subsubsection{}
+
+We work on the four manifold $\RR^4$ equipped with the flat metric. We will write $\Omega^i$ for the space of smooth $i$-forms on $\RR^4$. The space of sections of the spinor bundles are denoted by $\sS_{\pm} = C^\infty(\RR^4 ; S_{\pm})$ where $S_{\pm}$ are the defining representations of the two copies of $\SU(2)$ in $\Spin(4)$. Write $\dvol = \d x_1 \cdots \d x_4$ and $\star$ for the Hodge star operator. 
+
+We fix an even dimensional real vector space $V$ equipped with a complex structure, denoted by $J$, and a Hermitian inner product, denoted by $h$. 
+
+\subsubsection{}
+
+\begin{dfn}
+The $N=1$ chiral supermultiplet on $\RR^4$ with values in the complex vector space $V$ equipped with a Hermitian pairing $h$ has space of fields
+\bestar
+\Phi_+ & = & (\varphi_+ , \psi_+, F_+) \in \Omega^0 \tensor V \oplus \cS_+ \tensor V \oplus \Omega^2 \tensor V \\
+\Phi_- & = & (\varphi_-,\psi_-,F_-) \in \Omega^0 \tensor V \oplus \cS_- \tensor V \oplus \Omega^2 \tensor V 
+\eestar
+and action functional given by
+\ben
+S^{\rm SO}(\varphi,\psi,F) = \int h(\varphi \tensor \Delta \varphi)\dvol + \int h(\<\psi_+ , \dslash \psi_-\>) \dvol +\int F^2
+\een
+where $\<-,-\>$ denotes the standard symplectic pairing $S_+ \tensor S_+ \to \CC$. 
+\end{dfn}
+
+We have written the fields as a pair of superfields, a chiral one $\Phi_+$ and an anti-chiral one $\Phi_-$. 
+
+It will be useful for our purposes to write the chiral supermultiplet in the BV-BRST formalism. There are no gauge symmetries, so all that this amounts to is the the introduction of the anti-fields to the fields we have already written.
+\bestar
+\Phi_+^\vee & = & (\varphi_+^\vee, \psi_+^\vee, F_+^\vee) \in \Omega^4 \tensor V \oplus \cS_-' \tensor V \oplus \Omega^2 \tensor V \\
+\Phi_-^\vee & = & (\varphi_-^\vee, \psi_-^\vee, F_-^\vee) \in \Omega^4 \tensor V \oplus \cS_-' \tensor V \oplus \Omega^2 \tensor V .
+\eestar
+We note that the anti-field to a positive spinor $\psi_+ \in \cS_{\pm}$ is a spinor $\psi_\pm^\vee \in \cS_+$ of the same chirality. The prime simply indicates the same underlying spinor bundle except we are viewing it as an anti-field. Using this notation, we can define the classical theory in the BV formalism in a succinct way. 
+
+\begin{dfn} The $N=1$ chiral supermultiplet on $\RR^4$ in the BV formalism is the $\ZZ \times \ZZ/2$ graded theory with complex of fields given by
+\end{dfn}
+
+The $R$-charge of an anti-field is opposite to that of the corresponding field. Thus, $\psi_{\pm}^\vee$ has $R$-charge $\mp 1$ and $F^\vee_{\pm}$ has $R$-charge $\mp 2$. 
+
+We will perform a twist of the free chiral supermultiplet by a fixed constant spinor $Q \in \cS_-$. This element acts on the fields $\Phi = (\varphi_+, \psi_+, F)$ as above:
+\ben
+Q \cdot (\varphi_+, \psi_+, F) = (0, Q \cdot (\d \varphi_+), \<Q, \dslash \psi_+\>) .
+\een
+The action of $Q$ on the anti-fields reads is determined by compatibility with the $(-1)$-shifted symplectic pairing. Explicitly it is
+\ben
+Q \cdot (\varphi_+^\vee, \psi_+^\vee, F) = (\<Q, \dslash \psi_+^\vee\>, Q \cdot (\star F_+^\vee), 0) .
+\een
+
+We have arrived at the following. 
+
+\begin{prop} The twist of the $N=1$ free chiral supermultiplet on $\RR^4$ with values in the hermitian vector space $V$ by an element $Q \in \cS_-$ is equivalent to the free $\beta\gamma$ system on $\CC^2$ with values in $V$:
+\ben
+(\gamma,\beta) \in \Omega^{0,*}(\CC^2 ; V) \oplus \Omega^{1,*}(\CC^2 ; V^\vee)[1] .
+\een
+The action functional is $S(\gamma,\beta) = \int \<\beta, \dbar \gamma\>$ where $\<-,-\>$ is the evaluation pairing on $V$. 
+\end{prop}
+
+\subsubsection{}
+We will introduce the following ``first-order" reformulation of the chiral supermultiplet that will be convenient for our description of it as a BV theory. Introduce additional scalar fields of the form
+\ben
+B \in \Omega^3 \tensor V
+\een
+and define the action 
+\bestar
+S^{\rm FO}(\varphi, B , \psi , F) & = &  \int h(B \wedge \d \varphi) - \frac{1}{2} \int h(B \wedge \star B)  \\ & + & \int h(\<\psi_+ , \dslash \psi_-\>) \dvol 
+\eestar
+
+\begin{lem} The theories $S^{\rm SO}$ and $S^{\rm FO}$ are classically equivalent. 
+\end{lem}
+\begin{proof} We show that the spaces of solutions to the classical equations of motion are equivalent. The equations of motion for the chiral supermultiplet read
+\bestar
+\Delta \varphi & = & 0 \\
+\dslash \psi & = & 0 \\
+F & = & 0 .
+\eestar 
+Next, consider $S^{\rm FO}$. The pieces of the action functional involving $\psi, F$ are identical. We use the variation of the scalar field $\varphi \mapsto \varphi + \delta \varphi$ to obtain the equation of motion $\d B = 0$. The variation $B \mapsto B + \delta B$ yields the equation $\d \varphi - h^\vee(\star B)$. This equation is equivalent to $\star \d \varphi = h^\vee (B)$. Applying $\d$ to this equation and using the equation $\d B = 0$ we obtain $\d \star \d \varphi = \Delta \varphi = 0$, as desired. 
+
+An explicit equivalence at the level of fields can be written as follows. \brian{Want $\varphi \mapsto \varphi, B \mapsto \star h^\vee(\d \varphi) + h^\vee(F)$.}
+\end{proof}
+
+\brian{physics description of susy action}
+
+\subsubsection{}
+We describe the theory $S^{\rm FO}$ as a classical theory in the BV formalism. The space of fields
+\[
+\xymatrix{
+& \ul{0} & \ul{1} \\
+{\rm Fermion \; degree}\;\; \ul{0} & \Omega^0 \tensor V \ar[r]^-{\d_+} & (\Omega^1 \tensor V)_+ \\
+{\rm Fermion \; degree} \; \; \ul{0} & (\Omega^{3} \tensor V)_- \ar[r]^-{\d} & \Omega^4 \tensor V  \\
+{\rm Fermion \; degree} \; \; \ul{1} & (\sS_+ \oplus \sS_-) \tensor V \ar[r]^-{\dslash} & (\sS'_-\oplus \sS'_+) \tensor V \\
+}
+\]
+
+
+\end{document}

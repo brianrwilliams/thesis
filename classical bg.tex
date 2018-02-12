@@ -1,0 +1,60 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\title{The classical theory}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\begin{document}
+\maketitle
+
+Let $Y$ be a complex $d$-fold and $X$ a complex manifold of any dimension. 
+In this section we construct the classical BV theory describing the cotangent theory of the formal neighborhood of some fixed holomorphic map inside ${\rm Map}^{hol}(Y,X)$. 
+As we have already justified, this is a higher dimensional generalization of the curved $\beta\gamma$ system. 
+
+Just like in the ordinary $\beta\gamma$ system, there exists a modification of this theory given the data of holomorphic vector bundle $V$ on $Y$. 
+It will be convenient for us to include this data in our general construction of the classical theory.
+At the level of the Dolbeualt complex, this modification is easy to understand. 
+The holomorphic vector bundle $V$ defines an operator 
+\ben
+\dbar : \Gamma(Y, V) \to \Omega^{0,1}(Y, V),
+\een
+which extends to all Dolbeault forms and defines an elliptic complex $\Omega^{0,*}(Y,V)$.
+There is also a geometric description of this modification at the level of the holomorphic $\sigma$-model. 
+Indeed, the base fields of the original cotangent theory consist of smooth maps $\gamma : Y \to X$ which, on-shell, are required to be holomorphic....\brian{finish}
+
+We will provide a construction of the classical holomorphic $\sigma$ model based on formal geometry...
+
+\subsection{The free theory}
+As above, let $Y$ be a complex $d$-fold. 
+Furthermore, we fix a complex vector space $W$, that will be the ``target" of our free theory. 
+Denote by ${\rm ev}_W : W \tensor W^* \to \CC$ the evaluation pairing between $W$ and its linear dual.
+%The definition of a free theory on a manifold $Y$ in the BV formalism consists of three pieces: 1) a finite rank $\ZZ$-graded vector bundle on $Y$, 2) a density valued pairing for this vector bundle that is fiberwise nondegenerate, and 3) an operator $Q$ of 
+\begin{dfn}
+The free $\beta\gamma$ system on $Y$ with values in $W$ has complex of fields
+\ben
+\Omega^{0,*}(Y , W) \oplus \Omega^{d,*}(Y, W^*)[d-1]
+\een 
+equipped with the Dolbeualt operator 
+\ben
+\dbar = \dbar_{\Omega^{0,*}} \tensor {\rm id}_{W} + \dbar_{\Omega^{d,*}} \tensor {\rm id}_{W^*}.
+\een 
+We will denote these fields by $\gamma \in \Omega^{0,*}(Y, W)$ and $\beta \in \Omega^{d,*}(Y, W^*)[d-1]$. 
+The $(-1)$-shifted symplectic pairing is defined by ``wedge and integrate"
+\ben
+\<\gamma + \beta, \gamma'+\beta'\> = \int_Y \ev_{W} (\gamma \wedge \beta') + \ev_W(\beta \wedge \gamma') .
+\een 
+The action functional is
+\ben
+S_{free}(\gamma, \beta) = \<\beta, \dbar \gamma\> = \int_Y {\rm ev}_W(\beta \wedge \dbar \gamma) .
+\een 
+\end{dfn}
+
+When $Y= \CC^d$ this the theory we introduced in Section \brian{ref} Example \ref{eg bg affine}, where we saw that it defines a holomorphically translation invariant theory. 
+
+
+
+\end{document}
