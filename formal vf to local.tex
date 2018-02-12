@@ -11,19 +11,41 @@
 \begin{document}
 \maketitle
 
+\section{Local functionals from Gelfand-Fuks cohomology}
+
 \subsection{Gelfand-Fuks cohomology}
 
-The formal disk $\hD^d$ has ring of functions given by formal power series in $d$-variables $\hO_d = \CC[[t_1,\ldots,t_d]]$. 
-Let $\Vect$ be the Lie algebra of formal vector fields. 
-In other words, the Lie algebra of derivations of $\hO_d$. 
+In this section we recall some facts about the Lie algebra cohomology of formal vector fields $\W_d$ on the $d$-disk with values in certain non-trivial modules. 
+We refer to Section \ref{sec: gk formal geometry} for the requisite notation for objects living on the formal disk.
 
-As with any Lie algebra, there is the adjoint module that we denote by $\hT_d$. 
+In Section \ref{sec: formal atiyah} we have constructed the formal Atiyah class for any formal vector bundle $\cV$ on $\hD^n$. 
+It is an element of the relative Gelfand-Fuks cohomology
+\ben
+\At^{\GF}(\cV) \in \clie^1(\W_d,\GL_d; \hOmega^1_d \otimes_{\hO_d} \End_{\hO_d}(\cV)) .
+\een
+From the Atiyah class we have built the formal Chern character using the usual formula 
+\ben
+\ch^{\GF}(\cV) = \Tr\left(\exp\left(\frac{1}{2\pi i} \At^{\GF}(\cV)\right)\right),
+\een
+and have studied how components of this formal Chern character give rise to $L_\infty$ extensions of $\W_d$ that appear as natural universal symmetries of quantizations of higher dimensional holomorphic $\sigma$ models with target $\hD^d$. 
+
+In this section we arrive at the Lie algebra of formal vector fields, and its cohomology, from a different perspective. 
+Instead of using formal geometry to construct universal objects on the {\em target} of a $\sigma$ model, we will see how Gelfand-Fuks classes characterize holomorphic symmetries on the higher {\em world-sheet}, or source manifold. 
+
+The symmetry is that of holomorphic reparametrizations. 
+Infinitesimally, this is described by the Lie algebra of holomorphic vector fields. 
+We have already seen \brian{ref} that classical theories on a complex manifold $X$ with such a symmetry by holomorphic reparametrizations admit an action by the local Lie algebra $\sT_X = \Omega^{0,*}(X , T_X^{1,0})$. 
+
+The Gelfand-Fuks classes we will consider in this section appear as anomalies for quantizing an action by the local Lie algebra $\sT_X$. 
+In other words, these classes parametrize shifted central extensions of $\sT_X$, just as the classes $\theta \in \Sym^{d+1}(\fg^*)^\fg$ defined central extensions of the current algebra $\fg^X$. 
+By our usual yoga of studying equivariant quantizations, we know such anomalies live in the local cohomology complex $\cloc^*(\sT_X)$. 
+
 
 \begin{dfn/lem} Consider the following two classes of cocycles on $\W_d$.
 \begin{itemize}
 \item[Chern type:] For $1 \leq k \leq n$, let $\tau_k \in \clie^k(\W_d; \hOmega_d^k)$ be the cocycle
 \ben
-\tau_k = \sigma_k \left({\rm At}(\hT_d)\right) ...finish...
+\tau_k = \sigma_k \left(\At^{\GF}(\hT_d)\right) ...finish...
 \een
 \item[$\GL$ type:] For $1 \leq i \leq d$ let $\xi_i \in \clie^{2i-1}(\W_d ; \hO_d)$ be the cocycle 
 \ben

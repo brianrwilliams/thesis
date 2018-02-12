@@ -12,7 +12,7 @@
 
 \begin{document}
 
-\subsection{Free holomorphic theories}
+\subsection{Holomorphically translation invariant theories}
 
 We restrict ourselves to considering theories on the manifold $\CC^d = \RR^{2n}$ equipped with its standard complex structure. 
 Fix a holomorphic vector bundle $V$ on $\CC^d$ and an identification of bundles 
@@ -138,7 +138,7 @@ S(\gamma, \beta) = \int_{\CC^d} {\rm ev}_E(\beta \wedge \dbar \gamma) .
 Consider the above example with $Q^{hol} = \partial$..\brian{finish}. 
 \end{eg}
 
-\subsection{Interacting holomorphic theories}
+\subsubsection{Interacting holomorphic theories}
 
 It is convenient to introduce the following set of degree $-1$ derivations of $\Omega^{0,*}(\CC^d)$ given by
 \ben
@@ -190,7 +190,7 @@ is a quasi-isomorphism.
 
 \brian{Include equivalence with certain structured local Lie algebras. Namely holomorphically translation invariant local Lie algebras.}
 
-Local Lie \footnote{Local Lie algebras will mean $L_\infty$...} are a convenient language to phrase the data of an interacting classical field theory. 
+Local Lie algebras \footnote{Local Lie algebras will mean $L_\infty$...} provide a convenient language to cast the data of an interacting classical field theory. 
 In \brian{ref} it is shown that the data of a local Lie algebra together with a non-degenerate pairing of degree $-3$ is equivalent to the data of a classical interacting BV theory. 
 It will be convenient for us to formulate, under this equivalence, a Lie theoretic interpretation of holomorphically translation invariant interacting BV theories. 
 First, we introduce the following definition. 
@@ -211,7 +211,80 @@ together with an identification $L = \RR^n \times L_0$ such that for each $n$ th
 is compatible with translations. 
 \end{dfn}
 
+\subsection{Holomorphic theories on general complex manifolds}
+
+There is a weaker notion of a holomorphic theory that makes sense on a general complex manifold.
+It is most convenient to formulate this in terms of $L_\infty$ algebras. 
+We start with the definition of a {\em holomorphic local Lie algebra} on a complex manifold. 
+Enhancing this to a definition of a holomorphic classical BV theory will be immediate. 
+
+Fix a complex manifold $X$, of complex dimension $d$.
+The starting data of a local Lie algebra on $X$ is a $\ZZ$-graded vector bundle $L$ on $X$. 
+By a {\em holomorphic} $\ZZ$-graded vector bundle we mean a $\ZZ$-graded vector bundle $L = \oplus_i L^i$ such that each graded piece $L^i$ is a holomorphic vector bundle. 
+
+If $E$ and $F$ are two holomorphic vector bundles on $X$, we can speak of holomorphic differential operators between $E$ and $F$. 
+First, note that the Hom-bundle ${\rm Hom}(E,F)$ inherits a natural holomorphic structure. 
+By definition, a holomorphic differential operator of order $m$ is a linear map
+\ben
+D : \Gamma^{hol}(X ; E) \to \Gamma^{hol}(X ; F)
+\een
+such that, with respect to a holomorphic coordinate chart $\{z_i\}$ on $X$, $D$ can be written as
+\be\label{local holomorphic}
+D|_{\{z_i\}} = \sum_{|I| \leq m} a_I (z) \frac{\partial^{|I|}}{\partial z_I}
+\ee
+where $a_I(z)$ is a local holomorphic section of ${\rm Hom}(E,F)$.
+Here, the sum is over all multi-indices $I = (i_1,\ldots, i_d)$ and 
+\ben
+\frac{\partial^{|I|}}{\partial z_I} := \frac{\partial^{i_k}}{\partial z_k^{i_k}} . 
+\een 
+The length is defined by $|I| := i_1 + \cdots + i_d$. 
+
+The most basic example of a holomorphic differential operator is the $\partial$ operator which, for each $1 \leq \ell \leq d$, is a holomorphic differential operator from $E = \wedge^\ell T^{1,0*}X$ to $F = \wedge^{\ell+1} T^{1,0*}X$. 
+Locally, of course, it has the form
+\ben
+\partial = \sum_{i = 1}^{d} (\d z_i \wedge (-)) \frac{\partial}{\partial z_i},
+\een
+where $\d z_i \wedge (-)$ is the vector bundle homomorphism $\wedge^\ell T^{1,0*}X \to \wedge^{\ell+1} T^{1,0*}X$ sending $\alpha \mapsto \d z_i \wedge \alpha$. 
+
+\begin{dfn} 
+A {\em holomorphic} local Lie algebra on a complex manifold $X$ is the data
+\begin{enumerate}
+\item A $\ZZ$-graded holomorphic vector bundle $L$ on $X$;
+\item For each $n \geq 1$ a holomorphic differential operator 
+\ben
+\ell_n : L^{\boxtimes n} \to L;
+\een
+\end{enumerate}
+such that $\{\ell_n\}$ endow the sheaf of holomorphic sections $\Gamma_{hol}(L)$ with the structure of a sheaf of $L_\infty$ algebras. 
+\end{dfn}
+
+A holomorphic local Lie algebra is {\em not} a local Lie algebra in the usual sense. 
+The problem is that, in the definition, we have utilized the space of {\em holomorphic sections}, instead of the space of all smooth sections. 
+There is a natural resolution that will allow us to turn every holomorphic local Lie algebra into an ordinary local Lie algebra. 
+Of course, given a holomorphic vector bundle $L$ we can consider its Dolbeualt complex $\sL = \Omega^{0,*}(X , L)$.
+For a holomorphic local Lie algebra $L$ this is really the object we want to consider.
+
+Applying the Dolbeault complex functor to the $L_\infty$ maps $\ell_n : L^{\boxtimes n} \to L$ we obtain maps
+\ben
+{\rm Dol}(\ell_n) : \Omega^{0,*}(X , L)^{\tensor n} \to \Omega^{0,*}(X , L) . 
+\een 
+
+\begin{lem} Suppose $L$ is a holomorphic local Lie algebra. 
+Then, $\sL = \Omega^{0,*}(X , L)$ is endowed with the structure of a local Lie algebra with structure maps given by $\ell_1 = \dbar + {\rm Dol}(\ell^L_1)$ and $\ell_n = {\rm Dol}(\ell^L_n)\}$ for $n \geq 2$. 
+\end{lem}
+\begin{proof}
+We need to check that for each $n \geq 1$ the map
+\ben 
+{\rm Dol}(\ell^L_n) : \Omega^{0,*}(X, L)^{\tensor n} = \Omega^{0,*}(X^{\times n} , L^{\boxtimes n}) \to \Omega^{0,*}(X , L)
+\een
+is compatible with the Dolbeualt differential. 
+This is a local calculation, so it suffices to assume all operators $\ell_n^L$ are of the form (\ref{local holomorphic}). 
+Indeed, since each of the coefficients $a_I(z)$ are holomorphic we see that ${\rm Dol}(\ell_n^L)$ is compatible with $\dbar$. 
+\end{proof}
+
 \subsection{Holomorphic deformations}
+
+\subsubsection{Translation invariant deformations on $\CC^d$}
 
 Any local Lie algebra on a manifold endows the structure of an $L_\infty$ algebra on its fibers. 
 Suppose $\sL$ is a holomorphically translation invariant local Lie algebra on $\CC^d$ of the form $\Omega^{0,*}(\CC^d, L)$ where $L$ is a graded holomorphic vector bundle....
@@ -235,4 +308,22 @@ For instance, if $L = \ul{\fg}$ is the constant bundle on $\CC^d$ where $\fg$ is
 \ben
 \cloc^*(\Omega^{0,*}(\CC^d, \fg))^{\CC^d} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\frac{\partial}{\partial z_i}]} \cred^*(\fg [[z_1,\ldots,z_d]]) .
 \een
+
+\subsubsection{Holomorphic deformations on an arbitrary complex manifold}
+
+There is a more general result that holds on an arbitrary complex manifold. 
+Suppose $\sL$ is a local Lie algebra on a complex manifold $X$ of the form
+\ben
+\sL = \Omega^{0,*}(X , L)
+\een
+where $L \to X$ is a $\ZZ_{\geq 0}$-graded holomorphic vector bundle on $X$. 
+
+\begin{prop} 
+Let $\sL$ be a holomorphic local Lie algebra on $X$.
+There is a quasi-isomorphisms of sheaves of cochain complexes
+\ben
+\cloc^*(\sL) \simeq \Omega^{d,hol}_X \tensor^{\LL}_{D_X^{hol}} \clie^*(J \sL^{hol}) .
+\een
+\end{prop}
+
 \end{document}
