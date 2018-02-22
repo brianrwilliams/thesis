@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 JAN 2018 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  12 FEB 2018 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -617,23 +617,23 @@ LaTeX Font Info:    Try loading font information for U+eus on input line 87.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [2] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
-
-[4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+[4] [5] [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 368.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 368.
  (./deformations of holomorphic theory.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 368.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 368.
 Package rerunfilecheck Info: File `"deformations of holomorphic theory".out' ha
 s not changed.
-(rerunfilecheck)             Checksum: 218F4F6D8C43A4A0E9684B61B341531C;216.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
+(rerunfilecheck)             Checksum: D3C3CB9C05EFF96418204D60B3EE77A2;254.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 368.
  ) 
 Here is how much of TeX's memory you used:
- 10240 strings out of 493089
- 138862 string characters out of 6134842
- 279348 words of memory out of 5000000
- 13316 multiletter control sequences out of 15000+600000
+ 10332 strings out of 493089
+ 139322 string characters out of 6134842
+ 280242 words of memory out of 5000000
+ 13394 multiletter control sequences out of 15000+600000
  33898 words of font info for 112 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  36i,11n,29p,3269b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -648,14 +648,15 @@ xlive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texliv
 e/2015/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/urw/palatino/uplri8a.pfb>
-Output written on "deformations of holomorphic theory.pdf" (4 pages, 129175 byt
+5/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on "deformations of holomorphic theory.pdf" (7 pages, 150005 byt
 es).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 23 named destinations out of 1000 (max. 500000)
+ 149 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

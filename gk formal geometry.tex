@@ -1061,11 +1061,15 @@ Explicitly:
 \]
 \end{cor}
 
-\subsubsection{Extended pair}
-The $2$-cocycle $\ch_2^{\GF}(\hT_n)$ determines an extension Lie algebras of $\Vect$ by the abelian Lie algebra $\hOmega^2_{n,cl}$
+\subsection{A family of extended pairs}
+
+We will be most interested in the cocycles $\ch_k(\cV)$ for $k \geq 2$. 
+When $k=2$ we obtain a $2$-cocycle with values in $\hOmega^2_{n,cl}$, $\ch_2(\cV) \in \clie(\Vect , \GL_n ; \hOmega^2_{n,cl})$. 
+This $2$-cocycle $\ch_2^{\GF}(\cV)$ determines an abelian extension Lie algebras of $\Vect$ by $\hOmega^2_{n,cl}$
 \ben
-0 \to \hOmega^2_{n,cl} \to \TVect \to \Vect \to 0 .
+0 \to \hOmega^2_{n,cl} \to \Tilde{\rm W}_{n, \cV} \to \Vect \to 0 .
 \een
+When $\cV = \hT_n$, denote this extension by $\Tilde{\rm W}_{n, \cV} = \Tilde{\rm W}_{n,1}$. (The notation will become clearer momentarily)
 
 We have already discussed the pair $(\Vect, \GL_n)$. We will need that
 the above extension of Lie algebras fits in to a Harish-Chandra pair
@@ -1073,7 +1077,7 @@ as well. The action of $\GL_n$ extends to an action on $\TVect$ where
 we declare the action of $\GL_n$ on closed two-forms to be the natural
 one via linear formal automorphisms.
 
-\begin{lem} 
+\begin{lem} \label{lem d=1 pair}
 The pair $(\TVect, \GL_n)$ form a Harish-Chandra pair and fits into an extension of pairs
 \ben
 0 \to \hOmega^2_{n,cl} \to (\TVect, \GL_n) \to (\Vect, \GL_n) \to 0
@@ -1087,5 +1091,260 @@ an embedding of linear automorphisms $\GL_n$ into formal automorphisms
 $\Aut_n$. The extension of formal automorphisms $\Aut_n$ defined by
 the group two-cocycle $\ch_2^\GF(\hT_n)$ is trivial when restricted to
 $\GL_n$ so that it does not get extended.
+
+\subsubsection{An $L_\infty$ extension}
+
+For $k > 2$, it will be useful to think of $\ch_k(\cV)$ as defining a similar type of extension.
+For this to make sense, we observe the following phenomena for higher cocycles. 
+Suppose $M$ is a module for a Lie algebra $\fg$, and suppose $c \in \clie^k(\fg ; M)$ is a cocycle $\d_{CE} c = 0$. 
+Then, $c$ determines an abelian extension of $L_{\infty}$-{\em algebras}
+\ben
+0 \to M[k-2] \to \Tilde{\fg} \to \fg
+\een
+As a graded vector space $\Tilde{\fg}$ is $\fg \oplus M[k-2]$ (so that $M$ is placed in degree $2-k$). 
+The $L_\infty$ structure on $\Tilde{\fg}$ is defined by, for $x,y,x_1,\ldots,x_k \in \fg$, $m \in M$:
+\begin{align*}
+\ell_2(x, y+m) & = [x,y] + x \cdot m \\
+\ell_k(x_1,\ldots,x_k) = c(x_1,\ldots,x_k) .
+\end{align*}
+Here, $x \cdot m \in M$ uses the module structure. 
+
+Thus, for any formal vector bundle $\cV$, $\ch_k(\cV)$ determines an abelian $L_\infty$ extension of $\Vect$ by the abelian Lie algebra $\hOmega^{k}_{n,cl}$. 
+The case $\cV= \hT_n$ will be especially relevant for us. 
+
+\def\TVectd{\Tilde{\rm W}_{n,d}}
+
+\begin{dfn} 
+Denote by $\TVectd$ the $L_\infty$ extension of $\Vect$ by the module $\hOmega^{d+1}_{n,cl}[d-1]$:
+\ben
+0 \to \hOmega^{d+1}_{n,cl}[d-1] \to \TVectd \to \Vect \to 0
+\een
+determined by the $(d+1)$-cocycle $\ch_{d+1}(\hT_n) \in \clie^{d+1}(\Vect , \GL_n ; \hOmega^{d+1}_{n,cl})$. 
+\end{dfn}
+
+We would like to have an an analog of Lemma \ref{lem d=1 pair} for $\TVectd$ and the group $\GL_n$. 
+To make this possible, we need to slightly enlarge our category of Harish-Chandra pairs to include the data of an $L_\infty$ algebra, instead of an ordinary Lie algebra. 
+
+\subsubsection{$L_\infty$ pairs}
+
+The concept of an ordinary Harish-Chandra pair involves a Lie group $K$, a Lie algebra $\fg$ with an action by $K$, together with an embedding of Lie algebras $\Lie(K) \to \fg$. 
+There is a natural way to relax this to include $L_\infty$ algebras.
+
+\begin{dfn} An $L_\infty$ Harish-Chandra pair is a pair $(\fg,K)$ where $\fg$ is an $L_\infty$ algebra and $K$ is a Lie group together with
+\begin{enumerate}
+\item a linear action of $K$ on $\fg$, $\rho_K : K \to {\rm GL}(\fg)$;
+\item a map of $L_\infty$ algebras $i : \Lie(K) \rightsquigarrow \fg$;
+\end{enumerate}
+such that $i$ is compatible with the action $\rho_K$ and the adjoint action of $K$ on $\Lie(K)$.
+\end{dfn}
+
+\begin{rmk}
+A morphism of $L_\infty$ algebras $f : \fh \rightsquigarrow \fg$ is, by definition, a map of the underlying Chevalley-Eilenberg complexes
+\ben
+\clieu_*(f) : \clieu(\fh) \to \clieu(\fg)
+\een 
+as cocoummutative coalgebras. 
+Now, $\clieu_*(\fg)$, being a free cocoummtative coalgebra, this map is determined by a sequence of maps $f_n : \Sym^n(\fh[1]) \to \fg[1]$ satisfying certain compatibility conditions. 
+\end{rmk}
+
+\begin{rmk} 
+This is certainly not the most general definition one can imagine for a homotopy enhancement of a Harish-Chandra pair. 
+For instance, we have required that $K$ acts on $\fg$ in a rather strict way. 
+It turns out that this will be enough for our purposes.
+\end{rmk}
+
+The condition that $i : \Lie(K) \to \fg$ be compatible with $\rho_K$ can be stated as follows. 
+The $L_\infty$ map $i : \Lie(K) \rightsquigarrow \fg$ is uniquely determined by a sequence of maps $i_n : \Sym^n(\Lie(K)[1]) \to \fg$, for each $n \geq 1$. 
+We require that for each $n \geq 1$, all $A \in K$, and $x_1,\ldots, x_n \in \Lie(K)$ that
+\ben
+\rho_K(A) \cdot i_n(x_1,\ldots, x_n) = i_n \left(\left({\rm Ad}(A) \cdot x_{1}\right) \cdots  \left({\rm Ad}(A) \cdot x_{n}\right)\right) .
+\een 
+Here ${\rm Ad}(A)$ denotes the adjoint action of $A \in K$ on $\Lie(K)$. 
+
+\begin{lem} The for any $d \geq 1$ the pair $(\TVectd, \GL_n)$ has the structure of an $L_\infty$ Harish-Chandra pair.
+\end{lem}
+\begin{proof}
+The proof is similar to the case $d=1$. 
+The linear action of $\GL_n$ on $\TVectd$ comes from the natural one on $\Vect$ and $\hOmega^{d+1}_{n,cl}$. 
+Now, note that we have an $\GL_n$-equivariant extension
+\ben
+\xymatrix{
+& \TVectd \ar[d] \\
+\gl_n \ar[r] \ar@{.>}[ur] & \Vect 
+}
+\een
+since the cocycle $\ch_{d+1}(\hT_n)$ vanishes when one of the inputs lies in $\gl_n$. 
+\end{proof}
+
+In the next section we will see how the theory of descent for $(\Vect, \GL_n)$ can be extended to the pair $(\TVectd, \GL_n)$ provided a trivialization of the $(d+1)$st component of the Chern character is trivialized. 
+This will be our main application of this extended pair. 
+
+\section{Descent for extended pairs}
+
+\subsection{General theory of descent for $L_\infty$ pairs}
+
+In this section we set up the general theory of descent for $L_\infty$ pairs $(\fg,K)$.
+Recall, this means that $K$ is still and ordinary Lie group, but $\fg$ is an $L_\infty$ algebra. 
+
+Let $X$ be a fixed manifold, for which we are defining descent over. 
+The starting point is the theory of bundles over $X$ for the pair $(\fg,K)$. 
+In the usual context of Harish-Chandra pairs (where $\fg$ is an ordinary Lie algebra), this means that we have a principal $K$-bundle $P \to X$ equipped with a $K$-equivariant one-form valued in $\fg$, $\omega \in \Omega^1(P, \fg)$ satisfying the flatness condition
+\ben
+\d \omega + \frac{1}{2} [\omega, \omega] = 0 .
+\een 
+In other words, $\omega$ is a Maurer-Cartan element of the dg Lie algebra $\Omega^*(P) \tensor \fg$ that is equivariant for the action of $K$ on $P$ and $\fg$. 
+
+The theory of Maurer-Cartan forms works just as well in the $L_\infty$ case. 
+First, note that the category of $L_\infty$ algebras is tensored over commutative dg algebras. 
+In other words, if $\fg$ is an $L_\infty$ algebra and $A$ a commutative dg algebra, there is the natural structure of an $L_\infty$ algebra on $A \tensor \fg$. 
+The $n$-ary brackets are of the form 
+\ben
+\ell_n^{A \tensor \fg}(a_1 \tensor x_1, \ldots, a_n \tensor x_n) = (a_1 \cdots a_n) \ell^\fg_n(x_1,\ldots, x_n)
+\een
+where $\ell_n^\fg$ is the $n$-ary bracket on $\fg$, and where we have used the commutative algebra structure on $A$. 
+
+\begin{dfn} 
+Let $(\fg, K)$ be an $L_\infty$ Harish-Chandra pair. 
+A principal $(\fg,K)$-bundle on $X$ is the data:
+\begin{enumerate}
+\item a principal $K$-bundle $P \to X$;
+\item a $K$-invariant element 
+\ben
+\omega \in \Omega^*(P) \tensor \fg
+\een
+of total degree $+1$;
+\end{enumerate}
+such that 
+\begin{enumerate}
+\item for all $a_1,\ldots,a_n \in \Lie(K)$ we have $\omega(\xi_{a_1}, \cdots, \xi_{a_n}) = i(a_1,\ldots, a_n)$ where $\xi_{a_i}$ is the vertical vector field on $P$ determined by $a_i$, and $i : \Lie(K) \rightarrow \fg$ is the $L_\infty$ morphism determining the Harish-Chandra pair;
+\item $\omega$ is a Maurer-Cartan element of the $L_\infty$ algebra $\Omega^*(P) \tensor \fg$. In other words, 
+\ben
+\d \omega + \sum_{n \geq 1} \ell_n(\omega,\ldots,\omega) = 0
+\een
+where $\{\ell_n\}$ are the structure maps for $\fg$. 
+\end{enumerate}
+\end{dfn}  
+
+To define descent, we need an appropriate theory of modules for an $L_\infty$ pair $(\fg,K)$. 
+
+\begin{dfn} 
+\label{dfn ss HC mod}
+A {\em semi-strict Harish-Chandra module} for the $L_\infty$ pair $(\fg,K)$ is a dg vector space $(V,\d_V)$ equipped with
+\begin{itemize}
+\item[(i)] a strict group action $\rho^K_V$ of $K$, meaning a group map 
+\ben
+\rho^K_{V^d} : K \to \GL(V^d)
+\een 
+for each degree $d$ such that the product map $\prod_d \rho^K_{V^d}: K \to \prod_d \GL(V^d)$ commutes with the differential~$\d_V$;
+\item[(ii)] an $L_\infty$-action of $\fg$ on $V$, i.e., a map of $L_\infty$-algebras $\rho^\fg_V : \fg \rightsquigarrow \End(V)$,
+such that the composite 
+$$\cliels(\rho^\fg_V) \circ \cliel_*(i): \cliels(\Lie(K)) \to \cliels(\End(V))$$
+equals the map 
+$$\cliel_*(D\rho^K_V): \cliels(\Lie(K)) \to \cliels(\End(V)).$$ 
+\end{itemize}
+Here $D \rho^K_V : \Lie(K) \to \End(V)$ is the differential of the strict $K$-action and $i: \Lie(K) \rightsquigarrow \fg$ is part of the data of the Harish-Chandra pair $(\fg,K)$.
+\end{dfn}
+
+\subsubsection{Basic forms}
+
+Before the construction of descent, we recall a basic object in equivariant differential geometry.
+
+Let $V$ be a finite-dimensional $K$-representation. 
+Denote by $\ul{V}$ the trivial vector bundle on $P$ with fiber $V$. 
+Sections of this bundle $\Gamma_P(V)$ have the structure of a $K$-representation by
+\ben
+A \cdot (f\tensor v) := (A \cdot f) \tensor (A \cdot v) \;\; , \;\; A \in K, \; f \in \cO(P)\; , v \in V .
+\een
+Every $K$-invariant section $f : P \to \ul{V}$ induces a section $s(f): X \to V_X$,
+where the value of $s(f)$ at $x \in X$ is the $K$-equivalence class $[(p,f(p)]$, with $p \in \pi^{-1}(x) \cong K$.
+That is, there is a natural map 
+\ben
+s : \Gamma_P(\ul{V})^K \to \Gamma_X(V_X) 
+\een
+and it is an isomorphism of $\cO(X)$-modules. A $K$-invariant section $f$ of $\ul{V} \to P$ also satisfies the infinitesimal version of invariance: 
+\ben
+(Y \cdot f)\tensor v + f \tensor {\rm Lie}(\rho)(Y) \cdot v = 0 
+\een
+for any $Y \in {\rm Lie}(K)$.
+
+There is a similiar statement for differential forms with values in the bundle $V_X$. Let $\Omega^k(P ; \ul{V}) = \Omega^k(P) \tensor V$ denote the space of $k$-forms on $P$ with values in the trivial bundle $\ul{V}$. Given $\alpha \in \Omega^1(X ; V_X)$, its pull-back along the projection $\pi: P \to X$ is annihilated by any vertical vector field on $P$. In general, if $\alpha \in \Omega^k(X; V_X)$, then $i_Y(\pi^*\alpha) = 0$ for all $Y \in {\rm Lie}(K)$.
+
+\begin{dfn} A $k$-form $\alpha \in \Omega^k(P; \ul{V})$ is called {\em basic} if 
+\begin{enumerate}
+\item it is $K$-invariant: $L_Y \alpha + \rho(Y) \cdot \alpha = 0 $ for all $Y \in {\rm Lie}(K)$ and
+\item  it vanishes on vertical vector fields: $i_Y \alpha = 0$ for all $Y \in {\rm Lie}(K)$. 
+\end{enumerate}
+\end{dfn}
+
+Denote the subspace of basic $k$-forms by $\Omega^k(P; \ul{V})_{bas}$. Just as with sections, there is a natural isomorphism
+\ben
+s : \Omega^k(P; \ul{V})_{bas} \xto{\cong} \Omega^k(X; V_X) 
+\een
+between basic $k$-forms and $k$-forms on $X$ with values in the associated bundle.
+In fact, $\Omega^{\#}(P; \ul{V})_{bas}$ forms a graded subalgebra of $\Omega^{\#}(P; \ul{V})$ and the isomorphism $s$ extends to an isomorphism of graded algebras $\Omega^{\#}(P; \ul{V})_{bas} \cong \Omega^{\#}(X; V_X)$.
+
+It is manifest that this construction of basic forms is natural in maps of $(\fg,K)$-bundles: basic forms pull back to basic forms along maps of bundles.
+
+\subsubsection{}
+
+Starting with the data:
+\begin{enumerate}
+\item an $L_\infty$ Harish-Chandra pair $(\fg,K)$;
+\item a principal $(\fg,K)$ bundle $(P \to X, \omega)$;
+\item a semi-strict $(\fg,K)$-module $V$;
+\end{enumerate}
+we are now ready to define descent along $X$. 
+It is constructed in the following steps.
+
+\begin{enumerate}
+\item Using the linear action of $K$ on $V$ we define the associated vector bundle
+\ben
+V_X = P \times^{K} V
+\een 
+on $X$. Note that the differential forms on $X$ with values in $V_X$, $\Omega^*(X ; V_X)$, is isomorphic, as a dg $\Omega^*(X)$-module, to the complex of basic forms
+\ben
+\Omega^*(P ; \ul{V})_{bas} \subset \Omega^*(P ; \ul{V}) .
+\een 
+\item The Maurer-Cartan element $\omega \in \Omega^*(P) \tensor \fg$ allows us to deform the differential on $\Omega^{*}(P ; \ul{V}) = \Omega^*(P) \tensor V$ by the following transfer of Maurer-Cartan elements. 
+By the usual yoga of Koszul duality, the Maurer-Cartan element $\omega \in \Omega^*(P) \tensor \fg$ is equivalent to the data of a map of commutative dg algebras
+\ben
+\omega^* : \clie^*(\fg) \to \Omega^*(P) .
+\een 
+We can then use the $L_\infty$ module structure map $\rho_V : \fg \rightsquigarrow \End(V)$ to  form the composition
+\ben
+\xymatrix{
+\clie^*(\End(V)) \ar[r]^-{\clie^*(\rho_V^\fg)} & \clie^*(\fg) \ar[r]^-{\omega^*} & \Omega^*(P) .
+}
+\een
+This, in turn, corresponds to a Maurer-Cartan element 
+\ben
+\omega_V \in \Omega^*(P) \tensor \End(V) .
+\een 
+We use this element to deform the differential on $\Omega^*(P , \ul{V}) = \Omega^*(P) \tensor V$ via
+\ben
+\left(\Omega^*(P) \tensor V, \d + \omega_V \right) .
+\een
+Here, $\d = \d_{dR} + \d_V$ where $\d_{dR}$ is the de Rham differential on $P$ and $\d_V$ is the internal differential to $V$. 
+We can think of $\nabla^V := \d + \omega_V$ as a flat ``super-connection" on the trivial bundle $P \times V \to P$. 
+This means that $\omega_V$ may contain higher differential forms, not just one-forms. 
+Tracing through the above construction, we see that $\omega_V$ actually preserves the subspace of basic forms, so it that $\nabla^V$ descends to a flat super-connection on the vector bundle $V_X$ over $X$. 
+In other words we obtain the $\Omega^*(X)$-module
+\begin{align*}
+\bdesc \left((P \to X, \omega), V\right) & :=  \left(\Omega^*(P , \ul{V})_{bas} , \d + \omega_V\right) \\ & = \left(\Omega^*(X , V_X), \nabla^V\right) . 
+\end{align*}
+
+\end{enumerate}
+
+\begin{dfn} 
+We will denote the vector bundle $V_X$ equipped with its flat superconnection $\nabla^V$ obtained in this way by $\desc((P\to X, \omega), V)$. 
+Its associated de Rham complex is denoted $\bdesc((P \to X, \omega), V)$. 
+\end{dfn}
+ 
+\begin{rmk} 
+This construction of descent enjoys a number of nice functorial properties. \brian{..finish}.
+\end{rmk}
+
+\subsection{The flat connection from the extended pair}
+
 
 \end{document}

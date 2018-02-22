@@ -261,7 +261,7 @@ such that $\{\ell_n\}$ endow the sheaf of holomorphic sections $\Gamma_{hol}(L)$
 A holomorphic local Lie algebra is {\em not} a local Lie algebra in the usual sense. 
 The problem is that, in the definition, we have utilized the space of {\em holomorphic sections}, instead of the space of all smooth sections. 
 There is a natural resolution that will allow us to turn every holomorphic local Lie algebra into an ordinary local Lie algebra. 
-Of course, given a holomorphic vector bundle $L$ we can consider its Dolbeualt complex $\sL = \Omega^{0,*}(X , L)$.
+Of course, given a holomorphic vector bundle $L$ we can consider its Dolbeualt complex ${\rm Dol}(L) = \Omega^{0,*}(X , L)$.
 For a holomorphic local Lie algebra $L$ this is really the object we want to consider.
 
 Applying the Dolbeault complex functor to the $L_\infty$ maps $\ell_n : L^{\boxtimes n} \to L$ we obtain maps
@@ -270,7 +270,7 @@ Applying the Dolbeault complex functor to the $L_\infty$ maps $\ell_n : L^{\boxt
 \een 
 
 \begin{lem} Suppose $L$ is a holomorphic local Lie algebra. 
-Then, $\sL = \Omega^{0,*}(X , L)$ is endowed with the structure of a local Lie algebra with structure maps given by $\ell_1 = \dbar + {\rm Dol}(\ell^L_1)$ and $\ell_n = {\rm Dol}(\ell^L_n)\}$ for $n \geq 2$. 
+Then, ${\rm Dol}(L) = \Omega^{0,*}(X , L)$ is endowed with the structure of a local Lie algebra with structure maps given by $\ell_1 = \dbar + {\rm Dol}(\ell^L_1)$, and $\ell_n = {\rm Dol}(\ell^L_n)\}$ for $n \geq 2$. 
 \end{lem}
 \begin{proof}
 We need to check that for each $n \geq 1$ the map
@@ -312,18 +312,57 @@ For instance, if $L = \ul{\fg}$ is the constant bundle on $\CC^d$ where $\fg$ is
 \subsubsection{Holomorphic deformations on an arbitrary complex manifold}
 
 There is a more general result that holds on an arbitrary complex manifold. 
-Suppose $\sL$ is a local Lie algebra on a complex manifold $X$ of the form
-\ben
-\sL = \Omega^{0,*}(X , L)
-\een
-where $L \to X$ is a $\ZZ_{\geq 0}$-graded holomorphic vector bundle on $X$. 
+Recall, that on a complex manifold $X$ we have introduced the notion of a holomorphic local Lie algebra $L$. 
+Let $\sL = {\rm Dol}(L) = \Omega^{0,*}(X , L)$ be its associated local Lie algebra. 
+Ordinarily, the local Lie algebra cohomology of a local Lie algebra is computed in terms of the Lie algebra cohomology of the associated jet bundle. 
+With holomorphicity and some mild assumption, we can, up to quasi-isomorphism, exhibit a smaller complex computing this local cohomology. 
 
 \begin{prop} 
-Let $\sL$ be a holomorphic local Lie algebra on $X$.
+Suppose $L$ is a holomorphic local Lie algebra with $\ell_1 = 0$, and let $\sL = \Omega^{0,*}(X, L)$ be its associated local Lie algebra.
 There is a quasi-isomorphisms of sheaves of cochain complexes
 \ben
 \cloc^*(\sL) \simeq \Omega^{d,hol}_X \tensor^{\LL}_{D_X^{hol}} \clie^*(J \sL^{hol}) .
 \een
 \end{prop}
+\begin{proof}
+Recall, the definition of $\cloc^*(\sL)$ is given in terms of $D$-module data by
+\ben
+\cloc^*(\sL) = \Omega^{d,d}_{X} \tensor^{\LL}_{D_X} \clie^*(J \sL)
+\een
+where $J \sL$ denotes the $\infty$-jet bundle of $\Omega^{0,*}(X , L)$. 
+Of course, $J\sL$ is a bundle equipped with a natural flat connection, and hence the structure of a $D_X$-module. 
+The Chevalley-Eilenberg complex $\clie^*(J\sL)$ inherits this $D_X$-module structure.  
+
+On the other hand, if we view $L$ as a holomorphic vector bundle, it makes sense to look at the {\em holomorphic} jet bundle $J^{hol} L$. 
+This holomorphic vector bundle is equipped with a holomorphic flat connection, and hence is a module for the sheaf of holomorphic differential operators $D^{hol}_X$. 
+
+\begin{lem} Let $(J^{hol} L)^{C^\infty}$ be the $D_X^{hol}$-module $J^{hol} L$ viewed, via the forgetful functor, as a $D_X$-module. 
+Then, there is a quasi-isomorphism of dg $D_X$-modules $(J^{hol} L)^{C^\infty} \simeq J \Omega^{0,*}(X , L)$.
+Furthermore, this quasi-isomorphism is compatible with the $L_\infty$ structures, so that we obtain a quasi-isomorphism of dg $D_X$-modules $\clie^*(J^{hol} L)^{C^\infty} \simeq \clie^*(J \sL)$. 
+\end{lem}
+\begin{proof}
+For any holomorphic vector bundle $E$, the Dolbeualt complex of $E$ is a resolution of the sheaf of holomorphic sections of $E$.
+Thus, there is an equivalence of sheaves on $X$
+\ben
+\Omega^{0,*}_X(E) \simeq \Gamma^{hol}_X(E) .
+\een 
+Thus, there is an equivalence of sheaves on $X$:
+\ben
+J^{hol} L \simeq J \Omega^{0,*}(X , L) .
+\een
+We need to see that this equivalence respects the $D_X$-module structure present on both sides....
+
+\end{proof}
+
+To finish the proof, we verify the following general lemma. 
+
+\begin{lem} Suppose $V$ is a $D_X^{hol}$-module, and let $V^{C^\infty}$ denote its underlying $D_X$-module. 
+Then, there is a quasi-isomorphism of sheaves of cochain complexes
+\ben
+\Omega^{d,hol}_X \tensor^\LL_{D_X^{hol}} V [d] \simeq \Omega^{d,d}_X \tensor_{D_X}^\LL V^{C^\infty} .
+\een 
+\end{lem}
+
+\end{proof}
 
 \end{document}

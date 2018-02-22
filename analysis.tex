@@ -1,0 +1,85 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc,through}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{pgffor}
+
+\title{Random analysis}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\def\wbar{\Bar{w}}
+
+\begin{document}
+\maketitle
+
+\section{The propagator} 
+
+We will write down the effective propagator for the free $\beta\gamma$ system on flat space $\CC^d$. 
+Throughout, we follow the formalism of Costello's renormalization\brian{...}.
+This is a purely analytic calculation, so we will consider the case where the target is one dimensional and hence the fields are
+\ben
+\sE = \Omega^{0,*}(\CC^d) \oplus \Omega^{d,*}(\CC^d)[d-1] .
+\een 
+
+Choosing the standard flat metric on $\CC^d$, we obtain a natural gauge fixing operator 
+\ben
+Q^{GF} = \dbar^* : \Omega^{0,*}(\CC^d) \to \Omega^{0,*-1}(\CC^d)
+\een
+which acts on $(d,*)$ forms in a similar way. 
+Choosing holomorphic coordinates $\{z_i\}$ for $\CC^d$ we see that $\dbar^*$ can be written as 
+\ben
+\dbar^* = \sum_{i=1}^d \frac{\partial}{\partial (\d \zbar_i)} \frac{\partial}{\partial z_i} .
+\een
+The corresponding operator $[Q,Q^{GF}] = \dbar \dbar^* + \dbar^* \dbar$ is simply the Hodge Laplacian $\Delta_{\dbar}$.
+
+For $t > 0$, the heat kernel $K_t \in \sE (\CC^d) \Hat{\tensor} \sE (\CC^d)$ is characterized by the equation
+\ben
+\Delta_{\dbar} K_t + \frac{\partial}{\partial t} K_t = 0
+\een
+and normalized so that
+\ben
+\left\<\varphi(x), K_t(x,y)\right\>_x = (e^{-t \Delta_{\dbar}} \varphi)(y)
+\een
+where $\varphi \in \sE$ and $\<-,-\>$ is the $(-1)$-symplectic pairing. 
+Using the standard formula for the heat kernel for the flat Laplacian on $\CC^d$ we have the expression for our heat kernel, including the correct differential form factors
+\ben
+K_t(z,w) = \frac{1}{(4 \pi t)^d} e^{-|z-w|^2/ 4t} \left((\d^d z - \d^d w) \wedge \prod_{i=1}^d (\d \zbar_i - \d \Bar{w}_i) \right)
+\een
+
+The effective propagator is defined for $0 < \epsilon, L$ and given by
+\ben
+P_{\epsilon<L} (z,w) = \int_{t = \epsilon}^L \d t (\dbar^* \tensor 1) K_t(z,w) .
+\een 
+We can compute this propagator directly
+\bestar
+P_{\epsilon}(z,w) & = &  \frac{1}{(4 \pi)^d} \int_{t = \epsilon}^L \d t e^{- |z-w|^2 / 4t} \frac{1}{(4 \pi t)^d} \sum_{j = 1}^d (-1)^{j-1} \frac{\zbar_j - \wbar_j}{4t} (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \d \wbar_i) \\ & = & \frac{1}{(4 \pi)^d} \frac{1}{|z-w|^{2d}} \sum_{j} (-1)^{j-1} (\zbar_j - \wbar_j) (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \wbar_i) \int_{u = |z-w|^2/L}^{|z-w|^2/\epsilon} \d u u^{d-1} e^{-u} .
+\eestar
+In the second line we have made the substitution $u = |z-w|^2 / t$. 
+\brian{work out factors}
+We see that the differential form part above is precisely the Bochner-Martinelli kernel $\omega_{BM} \in \Omega^*(\CC^d \times \CC^d \setminus \Delta)$ 
+\ben
+\omega_{BM}(z,w) = C_n \frac{1}{|z-w|^{2d}} \sum_{j} (-1)^{j-1} (\zbar_j - \wbar_j) (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \wbar_i) .
+\een
+
+\begin{lem} Suppose $z \ne w$. 
+The $\epsilon \to 0, L\to \infty$ limit of the propagator $P_{\epsilon<L}(z,w)$ exists and
+\ben
+\lim_{\epsilon \to 0} \lim_{L \to \infty} P_{\epsilon<L}(z,w) = \omega_{BM}(z,w) .
+\een 
+\end{lem}
+
+KeggersMazzacar!
+
+
+
+\end{document}

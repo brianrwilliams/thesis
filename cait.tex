@@ -1,0 +1,429 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc,through}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{pgffor}
+
+\title{A chiral algebraic index theorem}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+
+
+\begin{document}
+\maketitle
+
+\section{A chiral algebraic index theorem}
+
+In this section we would like to leverage our analysis of the holomorphic $\sigma$-model to formulate an index theorem for operators on the higher sphere spaces, ${\rm Map}(S^{2d-1}, X)$, of the target manifold. 
+We are inspired, in part, by Witten's original study of elliptic genera appearing as the index of Dirac operators on the loop space $LX = {\rm Map}(S^1, X)$ of $X$\cite{WittenDirac,WittenElliptic}.
+At first, we will focus on this $d = 1$ case by giving a mathematical formulation of Witten's result that has the flavor of an ``algebraic index theorem" in the sense of Fedosov, Nest-Tsygan \cite{Fedosov, NestTsygan}. 
+
+The overall method in formulating the chiral index theorem is reminiscent of Nest-Tsygan's approach based on Gelfand-Kazhdan formal geometry to formulate to ordinary index theorem.
+This method is further clarified in \cite{FFS} for the case of a general deformation quantization. 
+It is therefore no surprise that our approach to constructing $\sigma$-models in the BV formalism using formal geometry is applicable to these higher dimensional index theorem. 
+Our technique is to construct a local version of the index theorem on the formal $n$-disk, and then use the technique of descent to deduce the index theorem on a general manifold (satisfying the usual anomaly conditions for the chiral case). 
+
+\subsection{The algebraic index theorem and QM}
+
+Before embarking on this chiral version of the algebraic index theorem, we recall how the ordinary algebraic index theorem is related to the study of one-dimensional quantum field theory, that is, quantum mechanics. 
+Recently, in \cite{GLL} it is shown how to deduce the algebraic index theorem using the Batalin-Vilkovisky approach to perturbative quantum field theory. 
+
+We start with topological quantum mechanics on an $n$-disk $D^n$. 
+This is a one-dimensional theory with fields given by
+\begin{align*}
+(f,g) \in \Omega^*(\RR, \RR^n \oplus (\RR^n)^*) .
+\end{align*}
+The dual $(-)^*$ is to remind ourselves that $f$ and $g$ are conjugate to each other. 
+The action functional is
+\ben
+S_{1d}(f,g) = \int_{\RR} g \d f,
+\een
+where we are implicitly using the evaluation pairing on $\RR^n$. 
+The equations of motion on $\RR$ reduce to looking just at constant maps. 
+Being a free theory, it has a unique quantization. 
+The factorization algebra of quantum observables $\Obs_{1d}$ is a locally constant factorization algebra on $\RR$, which is equivalent as an associative algebra to the Weyl algebra $\Weyl^\hbar_n$ on generators $\{t_1,\ldots,t_n, \partial_{t_1}, \ldots, \partial_{t_n}\}$. 
+Here, the commutation relation is $[t_i, \partial_{t_j}] = \hbar \delta_{ij}$. 
+
+In addition, as a factorization algebra on $\RR$, $\Obs_{1d}$ is translation invariant. 
+Thus, we can place this factorization algebra on the circle $S^1$, viewing $S^1 = \RR / \ZZ$. 
+Equivalently, this is the quantization of the $\sigma$-model of maps $S^1 \to D^n$. 
+Now, the factorization homology, or global sections, of any topological factorization algebra on the circle $S^1$ is equivalent to the Hochschild homology of the underlying algebra. 
+In fact, in \cite{GLL}, an explicit cochain homotopy equivalence is written down
+\ben
+\Phi : {\rm Hoch}(\Weyl_n^\hbar) \xto{\simeq} \int_{S^1} \Obs_{1d}, 
+\een
+that we will recall further in Section \brian{ref}. 
+
+Using the standard flat metric on $S^1$ we can consider the finite dimensional subspace of harmonic forms on the circle $\HH(S^1) \subset \Omega^*(S^1)$. 
+It follows that there is quasi-isomorphism of cochain complexes 
+\ben
+\int_{S^1} \Obs_{1d} \xto{\simeq} \left(\sO(\HH(S^1) \tensor (\RR^n \oplus (\RR^n)^*)) [[\hbar]], \hbar \Delta_\infty\right).
+\een
+Here $\Delta_\infty$ \brian{how to say this best}.
+We will see how we can interpret this map as taking homotopy RG flow to ``scale $\infty$". 
+
+In \cite{GradyGwilliamCS1} this theory is called one-dimensional abelian Chern-Simons theory. 
+It makes sense when we replace the target $D^n$ with any $L_\infty$ space. 
+In particular, if $X$ is a smooth manifold, we can substitute the $L_\infty$ space $\fg_X$ encoding the smooth structure to obtain a BV formulation of the perturbative $\sigma$-model of maps $\RR \to X$ that are infinitesimally close to the constant maps
+\ben
+T^*[-1] \Hat{\rm Map}_0(\RR, X) .
+\een
+Here ${\rm Map}_0$ denotes the formal neighborhood of constant maps inside the space of all smooth maps $\RR \to X$. 
+
+Alternatively, we can replace the target disk $D^n$ by the formal disk $\hD^n$ and formulate this theory using Gelfand-Kazhdan descent. 
+This means that we need to study how the free theory is equivariant for the Lie algebra of formal vector fields $\Vect$ on the $n$-disk. 
+
+\subsection{Stating the chiral algebraic index theorem}
+
+We begin by formulating the chiral algebraic index theorem. 
+Our starting point is the holomorphic $\sigma$-model of maps from a Riemann surface to a complex manifold $X$ that we have just considered earlier in this thesis. 
+We will propose a higher dimensional version of this story in the end of this section. 
+
+So far, in our analysis of the holomorphic $\sigma$-model we have been considered with the local theory so we have taken the source to be of the form $\CC^d$. 
+For the $d=1$ chiral algebraic index theorem we are most interested in the case that the source of this $\sigma$-model is an elliptic curve 
+\ben
+E_\tau = \CC / (\ZZ + \tau \ZZ)
+\een
+where $\tau$ lies in the upper-half plane $\HH$. 
+It will sometimes be convenient to use the ``$q$-presentation" where $q = e^{2 \pi i \tau}$ and write the elliptic curve as a quotient of $\CC^\times$ by the integers $E_q = \CC^\times / q^\ZZ$.
+Of course, the exponential induces an isomorphism $E_\tau \cong E_q$. 
+
+As a smooth manifold, the elliptic curve is just a torus $S^1 \times S^1$. 
+We may therefore write the fields of the $\sigma$-model on $E_\tau$ with target $X$ as $T^*[-1]{\rm Map}(E_\tau, X) = T^*[-1] {\rm Map}(S^1, L X)$ where $LX$ is the free loop space of the manifold $X$.
+Thus, via compactification along one of the circles, we obtain a one-dimensional $\sigma$-model akin to the one we have just discussed in the previous section. 
+Heuristically, one can think of this as quantum mechanics on the free loop space. 
+We will state the precise relationship between the two-dimensional chiral theory and this one-dimensional quantum mechanics in Section \ref{sec: }.
+
+Of course, the space $LX$ is not a smooth manifold in the ordinary sense.
+Consequently, there are many analytic difficulties when doing quantum mechanics. 
+In \cite{WittenDirac}, Witten provides a physical description of the path integral for quantum mechanics on the free loop space.
+One of the main outcomes of his work is the partition function of this system, from which he extracts the so-called {\em Witten genus} of the manifold $X$.
+We will not work with the space of topological loops $LX$, but rather work with an algebraic replacement that we will call the algebraic loop space $LX^{alg}$.
+There is an associated sheaf of associative algebras on $X$ that deserves to be called differential operators on $LX^{alg}$, denoted $D^{\hbar}_{LX^{alg}}$ that we will define in Section \brian{ref}. 
+The fundamental object in the chiral algebraic index theorem will be a $q$-twisted version of a trace on this sheaf of algebras. 
+
+In \cite{CostelloWG1,CostelloWG2} it is shown how the partition function of the holomorphic $\sigma$-model along an elliptic curve $E_\tau$ recovers the Witten genus of the target manifold. 
+We will see how to arrive at this result through the lens of formal geometry, which will be the key step in deducing the global chiral algebraic index theorem. 
+The one main advantage of working directly with the elliptic curve, as opposed to doing quantum mechanics on the loop space, is that the modular properties of the Witten genus are manifest. 
+
+The advantage of the perspective of quantum mechanics is that we have at our disposal many algebraic tools that will allow us to view the calculation of the Witten genus on an elliptic curve as a ``chiral index theorem". 
+
+\begin{thm}
+(Chiral algebraic index theorem)
+Let $q \in D(0,1)^\times$, $X$ be a compact complex manifold, and $\alpha$ a trivialization of $\ch_2(TX) \in H^2(X , \Omega^2_{cl})$, so that the factorization algebra $\Obs^\q_{X,\alpha}$ of quantum observables of the two-dimensional holomorphic $\sigma$-model from $E_q$ to $X$ is defined (Theorem \ref{thm curved quantization}). 
+Then:
+\begin{enumerate}
+\item there is quasi-isomorphism of sheaves of cochain complexes on $X$
+\ben
+\Phi^q : {\rm Hoch}(D_{LX^{alg}}^{\hbar} ; q) \xto{\simeq} \int_{E_q} \Obs^\q_{X,\alpha} ;
+\een 
+\item there is a $q$-twisted trace map
+\ben
+{\rm Tr}^q_X : {\rm Hoch}(D_{LX^{alg}}^{\hbar} ; q) \to \CC[[\hbar,\hbar^{-1}];
+\een
+\brian{some uniqueness?}
+\item if $$1 \in H^* \int_{E_q} \Obs^q_{X,\alpha} \cong HH^*(D_{LX^{alg}}^{\hbar} ; q)$$ denotes the unit observable, then in cohomology the trace map satisfies
+\ben
+{\rm Tr}^q_X(1) = \int_X {\rm Wit}(X , q) .
+\een
+\end{enumerate}
+\end{thm}
+
+Item (1) will be a formal consequence of the quantization of the two-dimensional holomorphic $\sigma$-model and will be proved in \brian{ref}.
+Item (2) is a $q$-twisted version of the trace present in ordinary deformation quantization, which we will be a consequence of Proposition \brian{ref}. 
+Finally, item (3) will follow from an explicit Feynman diagram calculation which is akin to Costello's original calculation of the Witten genus as the partition function of the holomorphic $\sigma$-model. 
+
+\subsection{The local chiral algebraic index theorem}
+
+In this section we prove a local version of the chiral algebraic index theorem in the case the target manifold is the complex $n$-disk. 
+For now, we take the source of our theory to be the punctured complex line $\CC^\times$.
+Eventually, we will descend this to the elliptic curve $E_q$. 
+The two-dimensional chiral theory describing this holomorphic $\sigma$-model is the usual $\beta\gamma$ system on $\CC^\times$ with values in the $n$-dimensional affine space $\CC^n$. 
+In this section it will be convenient to replace $\CC^n$ with an arbitrary finite dimensional complex vector space $V$. 
+
+The fields of the theory are of the form
+\ben
+(\gamma, \beta) \in \Omega^{0,*}(\CC^\times) \tensor V \oplus \Omega^{1,*}(\CC^\times) \tensor V^*
+\een
+with the usual action $\int \beta \dbar \gamma$. 
+As in Section \brian{ref} it is convenient to use a smoothed version of the factorization algebra of observables that we denote by $\Obs_V^{\q, sm}$. 
+To an open set $U \subset \CC^\times$ the smoothed observables assign the cochain complex
+\ben
+{\Obs}^{\q,sm}_V(U) = (\cSym(\Omega^{1,*}_c(U) \otimes V [1] \oplus \Omega^{0,*}_c(U) \otimes V[1])[[\hbar]], \dbar + \hbar \Delta). 
+\een
+Note that the naive BV Laplacian is well-defined on the smoothed observables. 
+
+\subsubsection{Quantum mechanics on the loop space}
+
+We consider a reduction of the two dimensional theory on $\CC^\times$ to a one-dimensional theory.
+It is convenient to view $\CC^\times$ as a cylinder
+\ben
+\CC^\times \cong \RR_{>0} \times S^1 .
+\een
+We can view the radial direction $\RR_{>0}$ as a ``time" parameter and the $S^1$ as the ``loop" parameter. 
+We consider the reduction of our theory ``along the circle $S^1$". 
+At the level of factorization algebras, this is equivalent to pushing forward along the radial projection map $\pi : \CC^\times \to \RR_{>0}$ which we can view pictorially as
+\ben
+\begin{tikzpicture}
+\draw (0,0) ellipse (1.25 and 0.5);
+\draw (-1.25,0) -- (-1.25,-3.5);
+\draw (-1.25,-3.5) arc (180:360:1.25 and 0.5);
+\draw [dashed] (-1.25,-3.5) arc (180:360:1.25 and -0.5);
+\draw (1.25,-3.5) -- (1.25,0);  
+%\fill [gray,opacity=0.5] (-1.25,0) -- (-1.25,-3.5) arc (180:360:1.25 and 0.5) -- (1.25,0) arc (0:180:1.25 and -0.5);
+
+\draw[->] (2, -1.75) -- (5,-1.75) ;
+
+\node (pi) at (3.5, -1.5) {$\pi$};
+\draw (6, -3.5) -- (6, 0);
+\draw (5.9,-3.45) arc(180:360:0.1cm); 
+
+\end{tikzpicture}
+\een
+
+Inside of the pushforward $\Obs^{\q, sm}_{V}$ along $\pi$ is a locally constant factorization algebra on $\RR_{>0}$ that we will see can be viewed as the observables of topological quantum mechanics with target the algebraic loop space of $V$. 
+To see this, we will express our two-dimensional theory in terms of the natural coordinates on the cylinder. 
+
+We will use the coordinates on $\CC^\times$ coming from the flat coordinates on $\CC$ via the exponential map
+\ben
+\CC \to \CC^\times \;\; , \;\; w \mapsto e^{2 \pi i w} .
+\een
+We will use the coordinate $z = e^{2\pi i w} \in \CC^\times$. 
+Thus the constant holomorphic and anti-holomorphic one-forms read
+\begin{align*}
+\d w & = \frac{1}{2 \pi i} \frac{\d z}{z} \\
+\d \Bar{w} & = - \frac{1}{2 \pi i} \frac{\d \zbar}{\zbar} .
+\end{align*}
+Using this coordinate we fix trivializations
+\begin{align*}
+\Omega^{0,*}(\CC^\times) & \cong C^\infty(\CC^\times) \left[\frac{\d \zbar}{2 \pi i z}\right] \\
+\Omega^{1,*}(\CC^\times) & \cong \frac{\d z}{2 \pi i} C^\infty(\CC^\times) \left[\frac{\d \zbar}{2 \pi i z}\right] .
+\end{align*}
+
+The zero degree piece of the $\gamma$ field is a map from $\CC^\times$ to a vector space $V$.
+In terms of the coordinates $(r, e^{i \theta}) \in \RR_{>0} \times S^1$ we can expand $\gamma$ as:
+\ben
+\gamma (z,\zbar) = \sum_{n \in \ZZ} f_n(r) e^{in\theta}
+\een
+where $f_n : \RR_{>0} \to V$ is defined by $f_n(r) = \frac{1}{2\pi}\int_{S^1}\d\theta\, \gamma e^{-in\theta}$. 
+There is a similar mode expansion of $\beta \frac{\d z}{z} \in \Omega^{1,0}(\CC^\times) \tensor V^*$. 
+\ben
+\beta(z,\zbar) \frac{\d z}{2 \pi i z} = \sum_{n \in \ZZ} g_n(r) e^{in\theta} \frac{1}{2\pi i} \left(\frac{\d r}{r} + i \,\d\theta\right),
+\een
+where we used the fact $\d z/z = \d r/r + i \, \d\theta$. 
+
+With respect to the mode expansion, the action functional becomes
+\begin{align}
+\label{action for loop mechanics in q coordinates}
+S(\gamma,\beta) & = \int_{\CC^\times} \left(\beta \frac{\d z}{2 \pi i z}\right) \dbar \gamma \\ 
+& = \frac{1}{2} \sum_{n \in \ZZ} \int_{r \in \RR_{> 0}} \d r \, g_{-n}(r) \left( \partial_r  - \frac{n}{r}\right)f_n(r),
+\end{align}
+where we have performed an integration over the loop parameter $\theta$. 
+
+We can rewrite this action functional as $S = \sum_{n \in \ZZ} S^{(n)}$ where $S^{(n)}(g_{-n}, f_{n}) = \int_{\RR_{>0}} g_{-n} \nabla^{(n)} f_n$,
+using the connection $\nabla^{(n)} = \d - \frac{n}{r} \d r$ on the trivial bundle on $\RR_{>0}$. 
+We think of the collection $\{S^{(n)}\}_{n \in \ZZ}$ defining a family of quantum mechanics theories, one for each mode number $n \in \ZZ$. 
+
+The algebraic loop space of the vector space $V$ is defined by $LV = V [u,u^{-1}]$ where $u$ is a formal loop parameter. 
+What we have written down is a version of quantum mechanics on $\RR_{>0}$ with target this algebraic loop space $LV$.
+The piece of the action functional $S^{(n)}$ comes restricting the target to $z^n V \subset L V$. 
+Note that $S$ does not define a one-dimensional BV theory in the usual sense, since the fields are not the sections of a finite dimensional vector bundle. 
+Nevertheless, we can still make sense of the observables of this theory. 
+
+For each $n$ the action functional $S^{(n)}$ describes a free theory.
+This theory is described by the $(-1)$-symplectic elliptic complex
+\ben
+\left(\Omega^*(\RR_{>0}) \tensor (u^n V \oplus u^{-n} V^*), \nabla^{(n)}\right),
+\een
+where $\nabla^{(n)}$ is as above. 
+Of course, as a vector space $u^n V = V$, but the notation reminds us of the mode number. 
+Correspondingly, there is a factorization algebra of smoothed quantum observables $\Obs^{\q,sm}_{z^n V}$, which assigns to an interval $I \subset \RR_{>0}$ the cochain complex
+\ben
+\left(\Sym\left(\Omega^*(I) \tensor (u^n V \oplus u^{-n}V^*)^*\right), \nabla^{(n)} + \hbar \Delta\right) .
+\een 
+
+\begin{dfn}
+Define the factorization algebra (valued in pro-cochain complexes) of {\em smoothed quantum observables for topological quantum mechanics on $LV$} to be the colimit
+\ben
+\Obs_{LV}^{\q,sm} := \underset{N \to \infty}{\rm colim} \bigotimes_{|n| \leq N} \Obs^{\q,sm}_{z^nV} .
+\een 
+\end{dfn}
+
+
+\begin{dfn} Let $D^{\hbar}_{z^n V}$ denote the Weyl algebra on the symplectic vector space $z^n \, V \oplus z^{-n} \, V^*$. 
+Define the {\em Weyl algebra of $LV$} by the colimit:
+\ben
+D^{\hbar}_{LV} := \underset{N \to \infty}{\rm colim} \bigotimes_{|n| \leq N} D^{\hbar}_{z^n V} .
+\een 
+\end{dfn}
+
+Of course, $D^{\hbar}_{z^n V}$ is isomorphic to the ordinary Weyl algebra on $V \oplus V^*$. 
+The notation is to keep track of the $L_0$ weight $n$. 
+Indeed, the Weyl algebra $D^{\hbar}_{LV}$ inherits this $L_0$ weight grading from $LV$. 
+
+We can describe this Weyl algebra in the following equivalent way.
+Consider the following bilinear map
+\ben
+\omega : L V \times LV^* \to \CC \;\; , \;\; (v \tensor f , v^* \tensor g) \mapsto {\rm ev}(v,v^*) \Res_{z=0} \left(f \d g\right) . 
+\een 
+Here, ${\rm ev}(v,v^*)$ denotes the evaluation pairing between $V$ and $V^*$. 
+Note that $\omega(v \tensor z^n, v^* \tensor z^m)$ is only nonzero when $n+m = 0$. 
+This equips $LV \oplus LV^{*}$ with the structure of a symplectic vector space. 
+
+For each $N \geq 0$ denote by $LV^{(N)}$ be the finite sum
+\ben
+LV^{(N)} = \bigoplus_{n \leq N} z^n \cdot V \subset LV .
+\een 
+Then, $\omega$ restricts to a symplectic form on the finite dimensional vector space $LV^{(N)} \oplus LV^{*(N)}$. 
+Denote by $\Weyl(LV^{(N)})$ the corresponding Weyl algebra on this finite dimensional vector space. 
+There is a $L_0$-equivariant equivalence of algebras
+\ben
+D^{\hbar}_{LV} \cong \underset{N \to \infty}{\rm colim} \; \Weyl(LV^{(N)}) .
+\een
+
+\begin{lem} The following hold about the associative algebra $D_{LV}^\hbar$ and the factorization algebras $\Obs^{\q,sm}_{LV}$, $\Obs^{\q,sm}_V$:
+\begin{enumerate}
+\item there is a quasi-isomorphism of factorization algebras on $\RR_{>0}$ 
+\ben
+\ul{D^{\hbar}_{LV}} \xto{\simeq} \Obs^{\q,sm}_{LV} .
+\een 
+\item
+There is a map of factorization algebras on $\RR_{>0}$
+\be\label{dense1}
+\Obs^{\q,sm}_{LV} \to \pi_*\Obs_V^{\q,sm},
+\ee
+which is dense inclusion when applied to each interval. 
+\item the map (\ref{dense1}) induces, for each $q \in D(0,1)^\times$, a quasi-isomorphism of cochain complexes
+\be
+\int_{S_q^1}  \Obs_{loop}^{\q, sm} \xto{\simeq} \int_{E_q} \Obs_V^{\q,sm} .
+\ee
+\end{enumerate}
+\end{lem}
+
+\subsubsection{A map from Hochschild homology to the global observables}
+
+The next piece of input we need to formulate the local chiral algebraic index theorem is a map from the Hochschild homology of the Weyl algebra on the the loop space to quantum mechanics. 
+
+
+\begin{prop}\cite{GLL} 
+The map $\Phi : {\rm Hoch}_*(\Weyl(W, \omega)) \to \Obs_{W}(S^1)$ is a map of BV algebras.
+\end{prop}
+
+\subsubsection{BV integration}
+
+To the vector space $V$ we can associate the $(-1)$-shifted symplectic vector space $T^*[-1] V = V \oplus V^*[-1]$. 
+Then, the space of functions $\sO(T^*[-1]V)$ has the structure of a $P_0$-algebra. 
+In this case, there is a natural quantization of this $P_0$-algebra to a BV algebra, defined over $\CC[[\hbar]]$. 
+Choose a basis $\{x_i\}$ for $V$ and a dual basis $\{\xi_i\}$ for $V^*$. 
+Note that in $T^*[-1] V$, the variables $\xi_i$ are odd.
+The BV operator is defined by
+\ben
+\Delta = \sum_i \frac{\partial}{\partial x_i} \frac{\partial}{\partial \xi_i} .
+\een 
+The BV algebra is $(\sO(T^*[-1]V)[[\hbar]], \hbar \Delta, \cdot)$ where $\cdot$ is the ordinary commutative product of functions. 
+
+One motivation for considering BV structures is that it gives us a setting to do integration. \brian{ref schwarz, kevin, etc.}
+There is a pairing between homology classes of Lagrangian super-submanifolds (in this setting, these are submanifolds of the $(-1)$-shifted symplectic vector space $T^*[-1] V$) and the corresponding BV cohomology. 
+
+In this case, there is essentially a unique super-submanifold of $T^*[-1] V$:
+\ben
+V^*[-1] \subset T^*[-1] V = V \oplus V^*[-1] .
+\een 
+The corresponding ``integration map" $\int_{BV} : \sO(T^*[-1]V)[[\hbar]] \to \CC[[\hbar]]$ is the Berezin integral over $V^*[-1]$ as a supermanifold.
+This is the map that simply picks out the ``top fermion" and is normalized by the condition
+\ben
+\int_{BV} \xi_1 \cdots \xi_{\dim V} = 1 .
+\een
+
+Ordinarily, this toy model does not work for BV algebras coming from quantum field theory, as the BV algebra we obtain is not finite dimensional. 
+One solution is to perform regularization, but there another approach that allows us to directly apply the discussion above. 
+
+The BV algebra we are interested in is the global observables of the chiral theory on the elliptic curve $E_q$.
+Let us fix the flat metric on $E_q$, which is descended from the one we used on $\CC$ to find a gauge fixing condition in order to regularize the theory. 
+Inside of the Dolbeault complex $\Omega^{0,*}(E_q)$ we have the subspace of harmonic forms
+\ben
+\sH(E_q) \subset \Omega^{0,*}(E_q) .
+\een 
+This induces an inclusion of cochain complexes
+\be\label{harmonics}
+\sH(E_q) \tensor (V \oplus \frac{\d z}{z} V^*) \hookrightarrow \Omega^{0,*}(E_q) \tensor (V \oplus \frac{\d z}{z} V^*),
+\ee
+where the right-hand side is an expression for the fields $\sE_V(E_q)$ of the chiral theory on $E_q$ after using the frame $\frac{\d z}{z}$ for the canonical bundle. 
+At the level of functions we then obtain a projection
+\ben
+\xymatrix{
+\sO\left(\sH(E_q) \tensor (V \oplus \frac{\d z}{z} V^*)\right) & \ar[l]_-{\pi}  \sO(\sE_V(E_q)) .
+}
+\een
+On the right-hand side, we mean the continuous functions, so this is inherently built from distributional differential forms on $E_q$. 
+Using this projection, we obtain the following relationship to the smoothed global observables.
+
+\begin{lem} Homotopy RG flow induces the quasi-isomorphism $\pi_\infty$ from the smoothed global observables on $E_q$ to the harmonic observables equipped with the scale $\infty$ BV Laplacian $\Delta_\infty$:
+\ben
+\xymatrix{
+\Obs^{\q,sm}_V(E_q) \ar@{.>}_-{\pi_\infty} [dd]^-{\simeq}  \ar[r]^-{W_0^L}_-{\cong} & \Obs^{\q,sm}_V(E_q)[L] \ar[d]^-{i[L]}_-{\simeq} \\
+& \Obs^{\q}(E_q)[L] \ar[d]^-{W_L^\infty}_-{\cong} \\
+\left(\sO\left(\sH(E_q) \tensor (V \oplus \frac{\d z}{z} V^*)\right)[[\hbar]] , \hbar \Delta_\infty\right) & \ar[l]^-{\pi}  \Obs^{\q}_V [\infty].
+}
+\een 
+\end{lem}
+\begin{proof}
+Observe that homotopy RG flow from scale zero to an arbitrary scale $L$ is well defined on the smoothed observables, which defines the top horizontal isomorphism $W_0^L$. 
+The map $i[L]$ is inclusion of the smoothed observables at scale $L$ inside of all observables at scale $L$. 
+The space of all observables at scale $L$ is isomorphic through $W_L^\infty$ to the observables at scale $\infty$. 
+The scale $\infty$ observables $\Obs_V^\q[\infty]$ is equipped with the differential $\Delta_\infty$, which we observe restricts to functions on the harmonic fields. 
+This is because the kernel $K_\infty$ defining the scale $\infty$ BV Laplacian actually lies in the subspace $\sH(E_q) \tensor \sH(E_q)$. 
+\end{proof}
+
+We observe that $\sH(E_q) = \CC[\delta]$, where $\delta$ is a formal parameter of degree $+1$ representing the $(0,1)$ form $\frac{\d \zbar}{\zbar}$ generating $H^1(E_q , \sO) \cong \CC$. 
+We will use the natural $(-1)$-shifted symplectic structure on this polynomial algebra given by 
+\ben
+(f(\delta), g(\delta)) \mapsto \frac{\partial}{\partial \delta} \left(f(\delta)g(\delta)\right) .
+\een 
+Using the usual symplectic pairing between $V$ and $V^*$ we see that $\sH(E_q) \tensor (V \oplus \frac{\d z}{z} V^*)$ is a finite dimensional $(-1)$-shifted symplectic vector space. 
+This is clearly compatible with the map (\ref{harmonics}) using the $(-1)$-shifted symplectic structure defining the chiral theory. 
+
+Choosing the odd super-submanifold $\delta (V \oplus \frac{\d z}{z} V^*) \subset (V \oplus \frac{\d z}{z} V^*)[\delta] \cong \sH(E_q) \tensor (V \oplus \frac{\d z}{z} V^*)$ we obtain the BV integration map 
+\ben
+\int_{BV} : \left(\sO\left((V \oplus \frac{\d z}{z} V^*) [\delta] \right)[[\hbar]] , \hbar \Delta_\infty\right) \to \CC[[\hbar]] .
+\een
+For any vector space $W$ we can make the identification $\sO(W[\delta]) = \Omega^{-*}(W)$, the negatively graded de Rham forms on $W$. 
+For instance, the constant coefficient one-forms are identified with $\delta^* W^*$, which sits in degree $-1$. 
+It is convenient to identify $V \oplus \frac{\d z}{z} V^* \cong T^*V$ so that
+\ben
+\sO\left((V \oplus \frac{\d z}{z} V^*)[\delta]\right) \cong \Omega^{-*}(T^*V)
+\een
+ 
+The BV Laplacian $\Delta_\infty$ is identified with the Lie derivative $L_\pi$ with respect to the natural Poisson bivector on $T^*V$. 
+Making these identifications, the BV integration map
+\ben
+\int_{BV} : \left(\Omega^{-*}(T^*V) [[\hbar]] , \hbar L_\pi\right) \to \CC[[\hbar]]
+\een
+simply picks out the top de Rham form sitting in degree $-2n$, where $n = \dim_\CC V$. 
+
+\begin{rmk} The $\left(\Omega^{-*}(T^*V) [[\hbar]] , \hbar L_\pi\right)$ ...Poisson homology \brian{finish}.
+\end{rmk}
+
+
+\begin{thm} (Local chiral algebraic index theorem) For any $q \in D(0,1)^\times$ there is a commuting diagram of quasi-isomorphisms
+\ben
+\xymatrix{
+\displaystyle \int_{E_q} \Obs^{\q,sm}_{V} \ar[r]^-{\pi_\infty}_-{\simeq} & \left( \Omega^{-*}(T^*V) [[\hbar]], \hbar L_\pi \right) \ar[d]^-{\int_{BV}}_-{\simeq} \\
+\Hoch\left(\Weyl_{LV}^\hbar ; q \right) \ar[u]^-{\Phi}_-{\simeq}  \ar[r]^-{\tau^q}_-{\simeq} & \CC[[\hbar]] [2n] .
+}
+\een
+\end{thm}
+
+\subsection{The global chiral algebraic index theorem}
+
+\end{document}

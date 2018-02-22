@@ -14,33 +14,10 @@
 
 \begin{document}
 
-We consider the $\beta\gamma$ theory on $\CC^d$ with values in a complex vector space $V$. 
-We have already seen that when the complex dimension is $d = 2$, this theory is the holomorphic twist of the $\cN = 1$ chiral multiplet with on $\RR^4$. 
-
 \subsection{The character}
 
-The $\beta\gamma$ system on $\CC^d$ has a symmetry by the group unitary group $U(d)$. 
-Indeed, the fields of the $\beta\gamma$ system are built from sections of certain natural holomorphic vector bundles on $\CC^d$. 
-The group $U(d)$ acts by automorphisms on every holomorphic vector bundle, hence it acts on sections via the pull-back. 
-
-There is another symmetry that we wish to contemplate. 
-Introduce an action of $U(1)$ on the fields of the theory such that $V$ has weight $q_f \in \ZZ$ and $V^*$ has weight $-q_f$.
-The value of the fields $\gamma$ lie in the vector space $V$, so these fields are of weight $q_f$. 
-Conversely, the fields $\beta$ lie in $V^*$, so have weight $-q_f$.
-Since the pairing defining the free theory is only non-zero between a single $\gamma$ and single $\beta$ field, the theory is invariant under this symmetry.
-In the physics literature, this is a so-called ``flavor symmetry" of the theory, and so to distinguish it from the other symmetry we will denote this group by $U(1)_f$. 
-
-\begin{lem} The symmetry by $U(d) \times U(1)_f$ on the classical $\beta\gamma$ system with values in the complex vector space $V$ extends to a symmetry of the factorization algebra of quantum observables $\Obs^q$.
-\end{lem}
-\begin{proof}
-The differential on the factorization algebra is of the form $\dbar + \hbar \Delta$. 
-The operator $\dbar$ is manifestly equivariant for the action of $U(d)$.
-Since $U(1)_f$ does not act on spacetime, $\dbar$ trivially commutes with its action. Further, the action of $U(d)$ is through linear automorphisms, and since the BV Laplacian $\Delta$ is a second order differential operator, it certainly commutes with the action of $U(d)$. 
-Likewise, since $U(1)_f$ is compatible with the $(-1)$-symplectic pairing, it automatically is compatible with $\Delta$. 
-\end{proof}
-
 In this section we compute the character of the action of $U(d) \times U(1)_f$ on the local observables of the free $\beta\gamma$ system with values in $V$. 
-Since the character is conjugation invariant, it is completely determined by its value on the subgroup $T^d \times U(1)_f \subset U(d) \times U(1)_f$. 
+By definition, the character is conjugation invariant, so it is completely determined by its value on the subgroup $T^d \times U(1)_f \subset U(d) \times U(1)_f$. 
 Choose the following basis for the maximal torus of $U(d)$: 
 \ben
 T^d = \{{\rm diag}(q_1,\ldots,q_d) \; | \; |q_i| = 1\} \subset U(d).
@@ -100,7 +77,7 @@ The character of the symmetric algebra $\Sym(V^*_{n_1,n_2})$ is equal to $(1-u^{
 The formula for character in the statement of the proposition follows from the fact that the character of a tensor product is the product of the characters. 
 \end{proof}
 
-We have seen in Proposition \brian{ref} that when $d = 2$, the free $\beta\gamma$ system is equal to the holomorphic twist of the free $\cN=1$ chiral multiplet in four dimensions. 
+We have seen in Proposition \brian{ref} that when the complex dimension $d = 2$, the free $\beta\gamma$ system is equivalent to the holomorphic twist of the free $\cN=1$ chiral multiplet in four dimensions. 
 In \cite{Closset1} Equation 5.58 the index for the $\cN=1$ chiral multiplet is computed, and our answer is easily seen to agree with theirs. 
 We conclude that in this instance that under the holomorphic twist the superconformal index was sent to the character of the local observables of the holomorphic theory. 
 We will see \brian{ref} that this is a general fact about superconformal indices.
