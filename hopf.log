@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 JAN 2018 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 FEB 2018 16:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -612,43 +612,70 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 
 LaTeX Warning: Citation `Hopf' on page 1 undefined on input line 29.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
-[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
 
-(./hopf.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
+LaTeX Warning: Citation `HirzebruchTopMethods' on page 1 undefined on input lin
+e 64.
+
+<xymatrix 2x2 86> [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/
+pdftex.map}]
+
+LaTeX Warning: Citation `Hirzebruch' on page 2 undefined on input line 72.
+
+
+Overfull \hbox (4.32878pt too wide) in paragraph at lines 71--75
+\OT1/ppl/m/n/10 which ex-ists so long as we as-sume that $\OML/zplm/m/it/10 F$ 
+\OT1/ppl/m/n/10 is Kahler [[]]. The spec-tral se-quence has pages $\OT1/zplm/m/
+n/10 (\OML/zplm/m/it/10 E[]\OT1/ppl/m/n/10 , d[]\OT1/zplm/m/n/10 )\OT1/ppl/m/n/
+10 , \OML/zplm/m/it/10 r \OMS/zplm/m/n/10 ^^U
+ []
+
+<xymatrix 2x2 86> [2]
+LaTeX Font Info:    Try loading font information for U+eus on input line 143.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
+ [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
+ (./hopf.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
 Package rerunfilecheck Info: File `hopf.out' has not changed.
-(rerunfilecheck)             Checksum: CCD7D4C23218EE79669FDC396E9094C3;133.
+(rerunfilecheck)             Checksum: 7FF7FE90F732A6ADC82D59540C35141E;202.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
- 10193 strings out of 493089
- 137937 string characters out of 6134842
- 276253 words of memory out of 5000000
- 13305 multiletter control sequences out of 15000+600000
- 29166 words of font info for 95 fonts, out of 8000000 for 9000
+ 10316 strings out of 493089
+ 138714 string characters out of 6134842
+ 280087 words of memory out of 5000000
+ 13415 multiletter control sequences out of 15000+600000
+ 30898 words of font info for 100 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 36i,8n,29p,3237b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,14n,31p,3237b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/urw/palatino/uplri8a.pfb>
-Output written on hopf.pdf (1 page, 89284 bytes).
+e/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/xypic/xycmat10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/xypic/xycmbt10.pfb>
+Output written on hopf.pdf (3 pages, 125095 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 97 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

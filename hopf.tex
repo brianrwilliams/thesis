@@ -44,7 +44,113 @@ Here, $\lambda = (|q_1|^2 + \cdots + |q_d|^2)^{1/2} > 0$.
 Since there are no non-trivial $S^{2d-1}$ fibrations over $S^1$ we obtain $H_{\bf q} = S^{2d-1} \times S^1$. 
 
 There is an equivalent description of $H_{\bf q}$ as a quotient of affine space that we will take advantage of. 
-Consider the exponential map ${\rm exp} 
+
+\section{A higher chiral algebraic index}
+
+\begin{prop}\label{prop hopf cohomology}
+Any Hopf manifold is strictly formal. 
+In particular, if $X$ is a Hopf manifold, then there is a bigraded quasi-isomorphism
+\ben
+\left(\Omega^{*,*}(X) , \dbar \right) \simeq \left(H^{*,*}_{\dbar}(X), 0\right) .
+\een
+Moreover, let $\delta, \epsilon$ be formal parameters of bidegree $(0,1)$ and $(d-1,d)$. 
+Then, there is a bigraded isomorphism
+\ben
+H^{*,*}_{\dbar} (X) = H^*(X , \Omega^*_{hol}) \cong \CC[\delta,\epsilon] / (\epsilon^2)
+\een
+where $\delta$ has bi-degree $(0,1)$ and $\epsilon$ has bi-degree $(d,d-1)$. 
+\end{prop}
+\begin{proof}
+This proof is essentially in Appendix \cite{HirzebruchTopMethods}.
+We use the Borel spectral sequence for a holomorphic fibration
+\ben
+\xymatrix{
+F \ar[r] & E \ar[d] \\
+& B 
+}
+\een
+which exists so long as we assume that $F$ is K\:{a}hler \cite{Hirzebruch}. 
+The spectral sequence has pages $(E_r, \d_r), r \geq 0$, each of which is trigraded $E_{r}^{p,q,s}$, where $(p,q)$ are the the Dolbeault types and $s$ is the internal degree of the spectral sequence. 
+The $E_1$ page is given by
+\ben
+E_{1}^{p,q,s} = \oplus_{i} \Omega^{i, s-i}(B) \tensor H^{p-i, q-s+i}(F)
+\een
+with differential $\dbar_B$ the Dolbeualt differential on the base $B$. 
+Note that since $F$ is K\:{a}hler, it is strictly formal and their exists a Dolbeault model of the form $(\CC[V], \d)$. 
+By general nonsense, we can hence obtain a model for the total space $E$ by deforming the differential on $(\Omega^{*,*}(B) \tensor \CC[V], \dbar + \d)$ using the above spectral sequence.
+
+Any Hopf manifold $X$ of complex dimension $d$ sits in a holomorphic fibration
+\ben
+\xymatrix{
+T \ar[r] & X \ar[d] \\
+& \CC P^{d-1}
+}
+\een
+where $T = S^1\times S^1$ is a torus. 
+Of course, $T$ is K\:{a}hler with Dolbeualt model given by
+\ben
+\left(\CC[\delta, x], 0\right)
+\een
+where $\delta$ has bidegree $(0,1)$ and $x$ has bidegree $(1,0)$. 
+An explicit Dolbeualt model for $\CC P^{d-1}$ is given by
+\ben
+(\CC[y,\epsilon] , \dbar_B) \;\;\;, \;\; |y| = (1,1) \;\;, \;\; |\epsilon| = (d-1,d) \;\; , \; \; \dbar_B(\epsilon) = y^d .
+\een
+
+Thus, the $E_1$ page is of the form
+\ben
+\left(\CC[x,y,\delta,\epsilon] , \dbar_B\right) .
+\een
+The only possible differential on the $E_2$ page must have the form $\d_2(x) = c y$, where $c$ is some constant. 
+By rescaling generators we can assume that $c = 0$ or $1$. 
+The following fact will determine the value of this constant.
+
+\begin{lem} \brian{either cite Hirzebruch, Kodaira, or find easy proof} For any Hopf manifold $X$ one has 
+\ben
+H^{1,0}_{\dbar}(X) = H^0(X , \Omega^1_{hol}) = 0 .
+\een
+\end{lem}
+
+This lemma implies that $x$ must support a differential and with our normalization above $\d_2 x = y$. 
+It follows that a model for $X$ is given by
+\ben
+\left(\CC[x,y,\delta,\epsilon] , \dbar_B + \eta\right) 
+\een
+where $\dbar_B(\epsilon) = y^d$ and $\eta(x) = y$. 
+The statements of the proposition follow immediately.
+\end{proof}
+
+This result will allow us to write down an explicit model for the factorization homology of the higher dimensional $\beta\gamma$ system along an arbitrary Hopf surface. 
+Since the method is very similar to the case of an elliptic curve, we will be brief in the details. 
+
+Let $X$ be an arbitrary Hopf surface. 
+We will first work in the free situation where the target is a vector space $V$. 
+The fields of the theory on $X$ are given by
+\ben
+\Omega^{0,*}(X , V) \oplus \Omega^{d,*}(X, V^*)[d-1] .
+\een
+By Proposition \ref{prop hopf cohomology} we know that there is a quasi-isomorphism
+\begin{align*}
+\Omega^{0,*}(X , V) \oplus \Omega^{d,*}(X, V^*)[d-1] & \simeq H^{0,*}_{\dbar} (X, V) \tensor H^{d,*}_{\dbar}(X , V^*)[d-1] \\ & \cong \CC[\delta] \tensor V \oplus \epsilon \CC[\delta] \tensor V^* \\ & = \CC[\delta] \tensor (V \oplus \epsilon V^*) .
+\end{align*}
+where $\delta$ has degree $+1$ and $\epsilon$ has degree $d-1$. 
+(Note that only the $(0,*)$-grading contributes to the cohomological degree in our language.)
+
+As an immediate consequence, we see that the classical observables along $X$ satisfy
+\ben
+\Obs^{\cl}_V(X) \simeq \Omega^{-*}(T^*V) 
+\een
+where we view $\Omega^{-*}(T^*V) = \sO(\CC[\delta] \tensor (V \oplus \epsilon V[d-1])$.
+Since $\epsilon$ has degree $d-1$, the graded vector space $\epsilon V[d-1]$ sits in degree zero, so we have omitted the parameter $\epsilon$ from the notation. 
+
+\begin{prop}
+Let $X$ be any Hopf manifold.
+For any scale $L$, there is a quasi-isomorphism
+\ben
+\Obs^{\q}_V(X) [L] \simeq \left(\Omega^{-*}(T^*V) [\hbar] , \hbar L_\pi\right)
+\een
+where $L_\pi$ is the Lie derivative with respect to the Poisson tensor of the symplectic vector space $T^*V$.
+\end{prop}
 
 
 \end{document}
