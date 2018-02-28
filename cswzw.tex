@@ -1,0 +1,159 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc,through}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{pgffor}
+
+\title{Chern-Simons/WZW correspondence}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\begin{document}
+\maketitle
+
+As a warmup to ...
+
+\begin{prop}
+The algebra of operators on the boundary of perturbative Chern-Simons theory at level $k$ is the Kac-Moody algebra at level $k - h^\vee$ where $h^\vee$ is the dual Coxeter number of $\fg$.
+\end{prop}
+
+If $M$ is any $3$-manifold, perturbative Chern-Simons theory at level $k$ in the BV formalism has fields
+\ben
+A \in \Omega^*(M) \tensor \fg [1]
+\een
+with action functional $S(A) = \int_M CS(A)$ where $CS(A)$ is the usual Chern-Simons $3$-form. 
+
+We start with Chern-Simons theory at level $k$ placed on a $3$-manifold of the form
+\ben
+\Sigma \times \RR
+\een
+where $\Sigma$ is a Riemann surface. 
+Soon we will replace $\RR$ by $\RR_{\geq 0}$ and discuss the boundary condition that leads to the Kac-Moody vertex algebra.
+In choosing a Riemann surface we have fixed a complex structure on $\Sigma$. 
+We can write our fields in a way that reflects this complex structure. 
+Indeed, the fields together with the linearized BRST differential take the form
+\ben
+\xymatrix{
+\Omega^{0,*}(\Sigma) \tensor \Omega^*(\RR) \tensor \fg[1] \ar[r]^-{\partial} & \Omega^{1,*}(\Sigma) \tensor \Omega^*(\RR) \tensor \fg .}
+\een
+Here, the $\dbar$ differential on $\Sigma$ and the de Rham differential $\d_{dR}$ on $\RR$ are implicit in the notation $\Omega^{i,*}(\Sigma) \tensor \Omega^*(\RR)$ for $i=0,1$. 
+We will write fields with respect to this decomposition as $A_+ \in \Omega^{0,*}(\Sigma) \tensor \Omega^*(\RR) \tensor \fg[1]$ and $A_- \in \Omega^{1,*}(\Sigma) \tensor \Omega^*(\RR) \tensor \fg$. 
+In this notation, the Chern-Simons action functional reads
+\ben
+S(A_+ + A_-) = \frac{ik}{4 \pi} \int \left(\<A_- , F(A_+)\>_\fg + \frac{1}{2} \<A_+ , \d A_-\>_\fg \right)
+\een
+where $F(A_+) = \d A_+ + \frac{1}{2} [A_+, A_+]$, and where we have fixed an invariant non-degenerate pairing $\<-,-\>_\fg$ on $\fg$. 
+If one makes the change of coordinates $A = A_+$, $B = \frac{ik}{4\pi} A_-$, one can rewrite the action functional as
+\ben
+S(A,B) = \int \<B , F(A)\>_\fg + \frac{ik}{8 \pi} \int \<A, \partial A\>_\fg
+\een
+where we have used the fact that if $A \in \Omega^{0,*}(\Sigma) \tensor \Omega^*(\RR)$ then $A \d A = A \partial A$. 
+Note that in the limit $k \to 0$ we recover precisely $3$-dimensional $BF$ theory, which we discussed in Section \brian{ref}. 
+This level zero limit is also referred to as Chern-Simons at the critical level \brian{ref} because of the one-loop effect that we will soon witness. 
+
+We have formulated topological $BF$ theory is a cotangent BV theory.
+It is constructive to think about Chern-Simons theory on $\Sigma \times \RR$ as a {\em twisted} cotangent theory.
+Indeed, if $\sL$ denotes the local Lie algebra $\Omega^{0,*}(\Sigma) \tensor \fg$, note that when $k \to 0$ the theory coincides with the formal moduli space $T^*[-1] B \sL$. 
+For finite $k$, we can realize the theory as a linear deformation by the map $\partial : \sL \to \sL^! [-1]$.
+We will denote this twisted (and shifted) cotangent bundle describing the theory by $T_\partial^*[-1] \sL$. 
+
+\subsection{The chiral boundary condition}
+
+We now consider putting Chern-Simons theory on the manifold with boundary $\Sigma \times \RR_{\geq 0}$.
+In order to do this, we must fix a boundary condition at $\Sigma \times \{0\}$. 
+The boundary condition we choose is defined by
+\ben
+\left\{A|_\Sigma = 0 \right\} \subset {\rm Fields}|_{\Sigma}.
+\een
+
+This boundary condition defines a Lagrangian subspace of the space of fields supported on the boundary. 
+Indeed, the boundary fields are given by twisted cotangent bundle $T^*_{\partial} B (\sL|_\Sigma)$ where
+\ben
+\sL|_\Sigma = \Omega^{0,*}(\Sigma) \tensor \fg
+\een 
+Again, $T_\partial$ means that we are deforming the cotangent bundle by the linear operator $\partial : \sL \to \sL^!$ mapping the base to the cotangent fiber:
+\ben
+T^*_{\partial} B (\sL|_\Sigma) = \Omega^{0,*}(\Sigma) \tensor \fg[1] \xto{\partial} \Omega^{1,*}(\Sigma) \tensor \fg .
+\een
+The $(-1)$-shifted symplectic structure defined on the bulk fields restricts to an ordinary ($0$-shifted) symplectic structure on the fields supported on the boundary.
+Concretely, the boundary condition we choose is given by the Lagrangian subspace 
+\ben
+\Omega^{1,*}(\Sigma) \tensor \fg  \subset T^*_{\partial} B (\sL|_\Sigma) , 
+\een
+which is precisely the cotangent fiber of the twisted cotangent bundle.
+Note that $\Omega^{1,0}(\Sigma) \tensor \fg$ sits in degree zero inside of the boundary fields.
+
+The observables on the boundary are functions on the Lagrangian subspace determining the boundary condition. 
+So, for us, the boundary observables are functions of only the $B$-fields in the coordinates we used above to define Chern-Simons.
+\brian{describe these $\cO_{B, n}(z)$}
+
+The bulk observables of any perturbative quantum field theory have the structure of a factorization algebra.
+Classically, the factorization algebra of observables has a $P_0$ structure, induced from the $(-1)$-symplectic pairing on fields. 
+It is the main result of \cite{ButsonYoo} that for sufficiently well-behaved boundary conditions of field theories that are topological in the direction normal to the boundary that the classical boundary observables form a factorization algebra with a $P_0$ structure compatible with the $P_0$ structure on the bulk observables. 
+In general, and is the case here, this $P_0$ structure is not induced from a symplectic structure.
+It could happen that the bracket defining the $P_0$ structure be degenerate.
+For this reason, such boundary conditions are said to define {\em degenerate} theories on the boundary. 
+
+\begin{prop}
+The classical limit of the Kac-Moody factorization algebra on $\Sigma$ is quasi-isomorphic to the factorization algebra of classical boundary operators of Chern-Simons theory at level $k$ with the chiral boundary condition.
+The $P_0$ structure on boundary operators agrees with the $P_0$ structure on the classical limit of Kac-Moody given by
+\ben
+\Pi = [-,-]_\fg + \# k \partial_\Sigma .
+\een
+\end{prop}
+
+\subsection{The boundary OPE}
+
+In this section we compute the boundary OPE of Chern-Simons theory on the $3$-manifold $\CC \times \RR_{\geq 0}$ with chiral boundary condition introduced in the previous section. 
+
+\begin{prop}
+The boundary OPE between the operators $\cO_{B,n}(z)$ agrees with the OPE of the Kac-Moody vertex algebra at level $k - h^\vee$. 
+\end{prop}
+
+\begin{proof}
+
+For non-zero $k$, we treat the term $(k / 8\pi) \int A \partial A$ as an interaction term of the theory. 
+In general, this would be an ill-defined thing to do, since bivalent vertices can span unbounded Feynman diagrams, but due to the nature of the symplectic pairing in the bulk theory the Feynman expansion is well behaved. 
+Alternatively, we could introduce a formal deformation parameter attached to this vertex, and expand formally in this parameter. 
+This added complication is unnecessary here. 
+
+\ben
+\cO_{B,-1}(M_1, z_1) \cdot \cO_{B,-1}(M_2, z_2) = F_{{\rm I}} (z_1,z_2) + F_{{\rm II}}(z_1,z_2) + F_{{\rm III}} (z_1,z_2)
+\een
+
+The first diagram is linear in the field $B$ and contributes the following quantity
+\ben
+F_{\rm I}(z_1,z_2)(B) = \int_{(z,t) \in \CC \times \RR_{\geq 0}} \<B, [A(M_1, z_1) , A(M_2, z_2)] \>_\fg,
+\een
+where the one-forms $A(M_i,z_i)$ are defined by pairing the bulk-boundary propagator $P_{b\partial}$ with the linear operator $\cO_{B, -1}(M_i, z_i)$. 
+Using the form of the bulk-boundary propagator \brian{above} we see 
+\ben
+A(M_i,z_i) = \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_i|^2\right)^{-1/2} \tensor M_i 
+\een
+as an element in $\Omega^{0,*}(\CC \times \RR_{\geq 0}) \tensor \fg$.
+The bracket is given by
+\ben
+[A(M_1, z_1) , A(M_2, z_2)] = \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_1|^2\right)^{-1/2} \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_2|^2\right)^{-1/2} \tensor [M_1,M_2] .
+\een
+
+On shell, the fields on the boundary are required to be holomorphic. 
+Thus, we may assume that $B$ is a holomorphic one-form $B = f(z) \d z \tensor M$, where $M \in \fg$. 
+Thus, the contribution from diagram I reduces to
+\ben
+\<M, [M_1, M_2]\>_{\fg} \int_{(z,t) \in \CC \times \RR_{\geq 0}} f(z) \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_1|^2\right)^{-1/2} \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_2|^2\right)^{-1/2} \d z .
+\een
+
+\end{proof}
+
+
+
+\end{document}

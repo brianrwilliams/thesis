@@ -18,7 +18,6 @@
 \def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
 
 
-
 \begin{document}
 \maketitle
 
@@ -26,25 +25,40 @@
 
 In this section we would like to leverage our analysis of the holomorphic $\sigma$-model to formulate an index theorem for operators on the higher sphere spaces, ${\rm Map}(S^{2d-1}, X)$, of the target manifold. 
 We are inspired, in part, by Witten's original study of elliptic genera appearing as the index of Dirac operators on the loop space $LX = {\rm Map}(S^1, X)$ of $X$\cite{WittenDirac,WittenElliptic}.
-At first, we will focus on this $d = 1$ case by giving a mathematical formulation of Witten's result that has the flavor of an ``algebraic index theorem" in the sense of Fedosov, Nest-Tsygan \cite{Fedosov, NestTsygan}. 
+First, we will focus on this $d = 1$ case by giving a mathematical formulation of Witten's result that has the flavor of an ``algebraic index theorem" in the sense of Fedosov, Nest-Tsygan \cite{Fedosov, NestTsygan}. 
 
-The overall method in formulating the chiral index theorem is reminiscent of Nest-Tsygan's approach based on Gelfand-Kazhdan formal geometry to formulate to ordinary index theorem.
-This method is further clarified in \cite{FFS} for the case of a general deformation quantization. 
-It is therefore no surprise that our approach to constructing $\sigma$-models in the BV formalism using formal geometry is applicable to these higher dimensional index theorem. 
+The method we employ to formulate the chiral index theorem is reminiscent of Nest-Tsygan's \cite{NestTsygan} approach based on formal geometry to prove the original algebraic index theorem, which we recall now. 
+This approach is further clarified in \cite{FFS} for the case of a general deformation quantization. 
+There are two main steps.
+The first is to prove a ``local" algebraic index theorem which characterizes the unique trace present on the Weyl algebra in any number of variables.
+Precisely, the statement is that the Hochschild homology of the $n$-dimensional Weyl algebra is one-dimensional and concentrated in degree $-2n$. 
+
+The next step uses a version of Gelfand-Kazhdan formal geometry to ``descend" this result over any manifold. 
+The crucial fact that makes this procedure possible is that the cocycle representing the degree $-2n$ Hochschild homology of the Weyl algebra is equivariant for formal vector fields. 
+The cocycle then yields a differential form on the manifold, and in the case the manifold is closed, one can integrate it.
+The global index theorem is obtained by explicitly evaluating the integral of this descended cocycle, which is where the $\Hat{A}$-class appears.
+
+\brian{make this better} no surprise that our approach to constructing $\sigma$-models in the BV formalism using formal geometry is applicable to index theorems involving 
 Our technique is to construct a local version of the index theorem on the formal $n$-disk, and then use the technique of descent to deduce the index theorem on a general manifold (satisfying the usual anomaly conditions for the chiral case). 
+
+The above process should appear familiar in our construction of the quantization of $\sigma$-models. 
+We first study the BV quantization with target the formal disk, and then analyze how the quantization is equivariant for formal vector fields by placing them in the background.
+Before embarking on the chiral index theorem, we recall how the ordinary algebraic index theorem is related to the study of one-dimensional quantum field theory, that is, quantum mechanics.
 
 \subsection{The algebraic index theorem and QM}
 
-Before embarking on this chiral version of the algebraic index theorem, we recall how the ordinary algebraic index theorem is related to the study of one-dimensional quantum field theory, that is, quantum mechanics. 
 Recently, in \cite{GLL} it is shown how to deduce the algebraic index theorem using the Batalin-Vilkovisky approach to perturbative quantum field theory. 
+Our summary here highlights the application of formal geometry, \brian{finish}
 
-We start with topological quantum mechanics on an $n$-disk $D^n$. 
-This is a one-dimensional theory with fields given by
+Topological quantum mechanics is a one-dimensional $\sigma$-model which we will write in the BV formalism.
+We start with the case in which the target is an $n$-disk $D^n$. 
+The complex of fields is
 \begin{align*}
 (f,g) \in \Omega^*(\RR, \RR^n \oplus (\RR^n)^*) .
 \end{align*}
-The dual $(-)^*$ is to remind ourselves that $f$ and $g$ are conjugate to each other. 
-The action functional is
+The dual $(-)^*$ is to remind ourselves that $f$ and $g$ are conjugate to each other.
+The BRST differential is simply the de Rham operator. 
+The action functional reads
 \ben
 S_{1d}(f,g) = \int_{\RR} g \d f,
 \een
@@ -52,17 +66,17 @@ where we are implicitly using the evaluation pairing on $\RR^n$.
 The equations of motion on $\RR$ reduce to looking just at constant maps. 
 Being a free theory, it has a unique quantization. 
 The factorization algebra of quantum observables $\Obs_{1d}$ is a locally constant factorization algebra on $\RR$, which is equivalent as an associative algebra to the Weyl algebra $\Weyl^\hbar_n$ on generators $\{t_1,\ldots,t_n, \partial_{t_1}, \ldots, \partial_{t_n}\}$. 
-Here, the commutation relation is $[t_i, \partial_{t_j}] = \hbar \delta_{ij}$. 
+The commutation relation is $[\partial_{t_i},t_j] = \hbar \delta_{ij}$. 
 
-In addition, as a factorization algebra on $\RR$, $\Obs_{1d}$ is translation invariant. 
+As a factorization algebra on $\RR$, $\Obs_{1d}$ is translation invariant. 
 Thus, we can place this factorization algebra on the circle $S^1$, viewing $S^1 = \RR / \ZZ$. 
 Equivalently, this is the quantization of the $\sigma$-model of maps $S^1 \to D^n$. 
 Now, the factorization homology, or global sections, of any topological factorization algebra on the circle $S^1$ is equivalent to the Hochschild homology of the underlying algebra. 
 In fact, in \cite{GLL}, an explicit cochain homotopy equivalence is written down
 \ben
-\Phi : {\rm Hoch}(\Weyl_n^\hbar) \xto{\simeq} \int_{S^1} \Obs_{1d}, 
+\Phi : {\rm Hoch}(\Weyl_n^\hbar) \xto{\simeq} \int_{S^1} \Obs_{1d}.
 \een
-that we will recall further in Section \brian{ref}. 
+We will explain this equivalence further in Section \brian{ref}.
 
 Using the standard flat metric on $S^1$ we can consider the finite dimensional subspace of harmonic forms on the circle $\HH(S^1) \subset \Omega^*(S^1)$. 
 It follows that there is quasi-isomorphism of cochain complexes 
@@ -80,12 +94,21 @@ T^*[-1] \Hat{\rm Map}_0(\RR, X) .
 \een
 Here ${\rm Map}_0$ denotes the formal neighborhood of constant maps inside the space of all smooth maps $\RR \to X$. 
 
-Alternatively, we can replace the target disk $D^n$ by the formal disk $\hD^n$ and formulate this theory using Gelfand-Kazhdan descent. 
+Alternatively, which is the approach we will take in the chiral case, we can replace the target disk $D^n$ by the formal disk $\hD^n$ and formulate this theory using Gelfand-Kazhdan descent. 
 This means that we need to study how the free theory is equivariant for the Lie algebra of formal vector fields $\Vect$ on the $n$-disk. 
+The following theorem will appear in joint work with Grady and Gwilliam.
+
+\begin{thm}[\cite{GradyGwilliamW}]
+There is a $\Vect$-equivariant quantization of topological quantum mechanics on $\RR$ with target the formal disk $\hD^n$. 
+In turn, the factorization algebra $\Obs_{1d}$ is $\Vect$-equivariant and hence determines a sheaf $\Obs_{X}$ of locally constant factorization algebras on any smooth $n$-manifold $X$. 
+This sheaf is equivalent to the sheaf of differential operators $D_X$ as associative algebras.
+\end{thm}
+
+\brian{finish}
 
 \subsection{Stating the chiral algebraic index theorem}
 
-We begin by formulating the chiral algebraic index theorem. 
+We now proceed to formulate the chiral algebraic index theorem. 
 Our starting point is the holomorphic $\sigma$-model of maps from a Riemann surface to a complex manifold $X$ that we have just considered earlier in this thesis. 
 We will propose a higher dimensional version of this story in the end of this section. 
 
@@ -159,9 +182,14 @@ with the usual action $\int \beta \dbar \gamma$.
 As in Section \brian{ref} it is convenient to use a smoothed version of the factorization algebra of observables that we denote by $\Obs_V^{\q, sm}$. 
 To an open set $U \subset \CC^\times$ the smoothed observables assign the cochain complex
 \ben
-{\Obs}^{\q,sm}_V(U) = (\cSym(\Omega^{1,*}_c(U) \otimes V [1] \oplus \Omega^{0,*}_c(U) \otimes V[1])[[\hbar]], \dbar + \hbar \Delta). 
+{\Obs}^{\q,sm}_V(U) = (\Sym(\Omega^{1,*}_c(U) \otimes V [1] \oplus \Omega^{0,*}_c(U) \otimes V[1])[[\hbar]], \dbar + \hbar \Delta). 
 \een
 Note that the naive BV Laplacian is well-defined on the smoothed observables. 
+
+Consider the vector field $L_0 = z \frac{\partial}{\partial z}$. 
+This is simply the Euler vector field, which represents infinitesimal scaling automorphism on $\CC^\times$.
+There is a natural action of $L_0$ on the fields of the $\beta\gamma$ system by Lie derivative.
+This further induces an action on the factorization algebra of quantum observables.
 
 \subsubsection{Quantum mechanics on the loop space}
 
@@ -248,28 +276,41 @@ This theory is described by the $(-1)$-symplectic elliptic complex
 where $\nabla^{(n)}$ is as above. 
 Of course, as a vector space $u^n V = V$, but the notation reminds us of the mode number. 
 Correspondingly, there is a factorization algebra of smoothed quantum observables $\Obs^{\q,sm}_{z^n V}$, which assigns to an interval $I \subset \RR_{>0}$ the cochain complex
-\ben
-\left(\Sym\left(\Omega^*(I) \tensor (u^n V \oplus u^{-n}V^*)^*\right), \nabla^{(n)} + \hbar \Delta\right) .
-\een 
+\be\label{loop obs}
+\left(\Sym\left(\Omega_c^*(I) \tensor (u^n V \oplus u^{-n}V^*)^*\right), \nabla^{(n)} + \hbar \Delta\right) .
+\ee
 
 \begin{dfn}
 Define the factorization algebra (valued in pro-cochain complexes) of {\em smoothed quantum observables for topological quantum mechanics on $LV$} to be the colimit
-\ben
+\be\label{colimit1}
 \Obs_{LV}^{\q,sm} := \underset{N \to \infty}{\rm colim} \bigotimes_{|n| \leq N} \Obs^{\q,sm}_{z^nV} .
-\een 
+\ee
 \end{dfn}
 
+Heuristically, we think of the factorization algebra $\Obs_{LV}^{\q, sm}$ as being associated to the BV theory of quantum mechanics on the loop space. 
+To make this precise, we'd have to modify our definition of a BV theory to include fields that are sections of infinite dimensional vector bundles, but we omit that discussion here. 
+For now, we will work with the above well-posed definition.
+
+We can associate to any vector space $V$ the following associative algebra. 
+Consider first the one-dimensional central extension of the abelian Lie algebra $V \oplus V^*$
+\ben
+0 \to \CC \cdot \hbar \to \sH(V) \to V^* \oplus V \to 0
+\een
+with bracket given by $[v^*, v] = \hbar \ev(v,v^*)$.
+This is the Heisenberg algebra on $V$. 
+The Weyl algebra on $V$ is, by definition, the universal enveloping algebra of $\sH(V)$, which we denote by $D^\hbar_V$. 
+Of course, $D^\hbar_V$ is simply the associative algebra of polynomial differential operators on $V$. 
 
 \begin{dfn} Let $D^{\hbar}_{z^n V}$ denote the Weyl algebra on the symplectic vector space $z^n \, V \oplus z^{-n} \, V^*$. 
 Define the {\em Weyl algebra of $LV$} by the colimit:
-\ben
+\be\label{colimit2}
 D^{\hbar}_{LV} := \underset{N \to \infty}{\rm colim} \bigotimes_{|n| \leq N} D^{\hbar}_{z^n V} .
-\een 
+\ee 
 \end{dfn}
 
-Of course, $D^{\hbar}_{z^n V}$ is isomorphic to the ordinary Weyl algebra on $V \oplus V^*$. 
+The algebra $D^\hbar_{LV}$ has a natural weight filtration induced by the operator $L_0 = z \partial_z$ on $LV$.  
+For any $n$, $D^{\hbar}_{z^n V}$ is isomorphic as an algebra to the ordinary Weyl algebra on $V$.
 The notation is to keep track of the $L_0$ weight $n$. 
-Indeed, the Weyl algebra $D^{\hbar}_{LV}$ inherits this $L_0$ weight grading from $LV$. 
 
 We can describe this Weyl algebra in the following equivalent way.
 Consider the following bilinear map
@@ -291,32 +332,150 @@ There is a $L_0$-equivariant equivalence of algebras
 D^{\hbar}_{LV} \cong \underset{N \to \infty}{\rm colim} \; \Weyl(LV^{(N)}) .
 \een
 
-\begin{lem} The following hold about the associative algebra $D_{LV}^\hbar$ and the factorization algebras $\Obs^{\q,sm}_{LV}$, $\Obs^{\q,sm}_V$:
+\begin{lem} The following hold about the associative algebra $D_{LV}^\hbar$ and the factorization algebras $\Obs^{\q,sm}_{LV}$, $\Obs^{\q,sm}_V$.
 \begin{enumerate}
-\item there is a quasi-isomorphism of factorization algebras on $\RR_{>0}$ 
-\ben
-\ul{D^{\hbar}_{LV}} \xto{\simeq} \Obs^{\q,sm}_{LV} .
-\een 
+\item The factorization algebra $\Obs^{\q,sm}_{LV}$ is locally constant and is equivalent, as an associative algebra, to $D^{\hbar}_{LV}$. Moreover, this equivalence is $L_0$-equivariant.
+%\item there is a quasi-isomorphism of $L_0$-equivariant factorization algebras on $\RR_{>0}$ 
+%\ben
+%\ul{D^{\hbar}_{LV}} \xto{\simeq} \Obs^{\q,sm}_{LV} .
+%\een 
 \item
 There is a map of factorization algebras on $\RR_{>0}$
 \be\label{dense1}
-\Obs^{\q,sm}_{LV} \to \pi_*\Obs_V^{\q,sm},
+\iota : \Obs^{\q,sm}_{LV} \to \pi_*\Obs_V^{\q,sm},
 \ee
 which is dense inclusion when applied to each interval. 
-\item the map (\ref{dense1}) induces, for each $q \in D(0,1)^\times$, a quasi-isomorphism of cochain complexes
-\be
-\int_{S_q^1}  \Obs_{loop}^{\q, sm} \xto{\simeq} \int_{E_q} \Obs_V^{\q,sm} .
-\ee
 \end{enumerate}
 \end{lem}
 
-\subsubsection{A map from Hochschild homology to the global observables}
+\begin{proof}
+Consider $\Obs_{z^0V}^{\q, sm}$, the factorization algebra associated to topological quantum mechanics from the first part of this section.
+Equivalently, this is the zero mode part of the theory on the loop space described by the action $S^{(0)}$.
+It is clear that this factorization algebra is locally constant. 
+Moreover, in Section 4.4 of \cite{fact1} it is shown that the corresponding associative algebra is equivalent to the Weyl algebra.
+%Pick a bump function $f$ for the interval $(-1,1) \subset \RR$. 
+%This means that $f$ is compactly supported on $(-1,1)$, is zero outside $[-1,1]$, and satisfies $\int f \d x = 0$ 
+%WeFor each interval $I$ there is a map of cochain complexes
+%\ben
+%D_{V}^\hbar \to \Obs^{\q, sm}_{1d}(I)
+%\een
+To see (1) we observe that since $\d_{dR} (n \log r) = \frac{n}{r} \d r$, for each $n$ the connection $\nabla^{(n)} = \d_{dR} - \frac{n}{r} \d r$ is gauge equivalent to the de Rham differential $\d_{dR}$. 
+This implies that the classical observables of the theory $S^{(n)}$ are quasi-isomorphic to the classical observables of $S^{(0)}$. 
+Since the BV Laplacian $\Delta$ commutes with this gauge transformation, we see that this implies that the quantum observables are also quasi-isomorphic. 
+Thus, for each $n$, $\Obs^{\q,sm}_{z^n V} \simeq \Obs^{\q,sm}_{z^0V}$.  
+At each $N$ the factorization algebra 
+\ben
+\bigotimes_{|n| \leq N} \Obs^{\q,sm}_{z^nV}
+\een
+is thus equivalent to the associative algebra $\otimes_{|n|\leq N} D_{z^n V}^{\hbar}$.
+Moreover, this equivalence preserves the $L_0$-equivariance. 
+Both the observables $\Obs^{\q,sm}_{LV}$ and the Weyl algebra $D_{LV}^\hbar$ we are considering are defined as colimits (\ref{colimit1}), (\ref{colimit2}), so the result follows. 
+
+The claim (2) is a general fact about pushing forward holomorphic theories along the radial projection. 
+First, consider the cosheaf of compactly supported Dolbeualt forms on $\CC^\times$, $\Omega^{0,*}_{c}$.
+We can pushforward this cosheaf along $\pi : \CC^\times \to \RR_{>0}$ whose value on an interval $I \subset \RR_{>0}$ is $(\pi_* \Omega_{c}^{0,*})(I) = \Omega_c^{0,*}(\pi^{-1}(I))$. 
+Let $\Omega^*_c$ be the cosheaf of compactly supported forms on $\RR_{>0}$. 
+Pull-back induces a map of cosheaves $\pi^* : \Omega^*_c \to \pi_* \Omega^{0,*}_c$. 
+Moreover, for every $n$ we can define another map of cosheaves
+\ben
+\pi^*_n : \Omega^*_c \to \pi_* \Omega^{0,*}_c
+\een
+that sends a function $f(r)$ to $z^n f(|z|)$ and a one-form $f(r) \d r$ to the one-form $(z^n f(|z|)) \d (|z|)$. 
+We can then consider the direct sum $\oplus_{n \in \ZZ} \pi^*_n : \oplus_n \Omega^*_c \to \pi_* \Omega^{0,*}_c$. 
+Now, every open set in $\CC$ is Stein, so that the cohomology of $H^*(\Omega^{0,*}_c(\pi^{-1}(I)))$ is concentrated in degree one and given by
+\ben
+H^1(\Omega^{0,*}_c(\pi^{-1}(I))) \cong \left(\Omega^1_{hol}(\pi^{-1}(I)) \right)^\vee .
+\een
+In cohomology, $\oplus_n \pi_n^*$ exhibits a dense map $\CC[z,z^{-1}] \to \left(\Omega^1_{hol}(\pi^{-1}(I)) \right)^\vee$. 
+The same argument goes through to show that the smoothed observables of quantum mechanics on the loop space, which is built from the compactly supported forms on $\RR_{>0}$, maps densely in cohomology to the push forward of the observables of the $\beta\gamma$ system as desired. 
+For a more detailed argument that is similar to this, see Section \brian{ref Kac moody section}. 
+\end{proof}
+
+\subsubsection{Global sections}
+
+We now turn to the statement of the local chiral algebraic index theorem using factorization homology. 
+We will use the results above about the factorization algebras on $\CC^\times$ and $\RR_{>0}$ to deduce statements about the factorization homologies along $E_q$ and $S^1$, respectively.
+
+First, we recall the general fact about discretely equivariant factorization algebras. 
+Let $\sF$ be any factorization algebra on $X$, and that $G$ is a discrete group acting on $X$. 
+We say that $\sF$ is $G$-equivariant if, for every $g \in G$, there is a quasi-isomorphism of factorization algebras 
+\ben
+\rho_{g} : g^*(\sF) \xto{\simeq} \sF
+\een
+on $X$ such that for any $g,h$ $\rho_{gh} = \rho_h \circ h^*\rho_g$.
+We note that the pull-back of factorization algebras is defined since the action by $g : X \to X$ is a homeomorphism.
+In fact, as long as $f : X \to Y$ is an open immersion, the pullback $f^*\sG$ of a factorization algebra $\sG$ on $Y$ is defined \cite{CG} \brian{place?}.
+We denote by ${\rm Fact}_X^{G}$ the category of $G$-equivariant factorization algebras. 
+Note that this definition is sufficiently simpler than the case where $G$ is a continuous, or Lie, group since we do not need to impose any smoothness conditions.
+
+\begin{prop}[\cite{CG} Proposition \brian{??}] \label{prop discrete equivariance}Suppose $G$ acts properly discontinuously on $X$ and let $p : X \to X / G$ be the resulting open immersion.
+Then, the induced functor $p^* : {\rm Fact}_{X/G} \to {\rm Fact}_{X}^{G}$ is an equivalence of categories.
+\end{prop}
+
+\begin{rmk}
+This equivalence of categories factors through an equivalence of locally constant factorization algebras.
+\end{rmk}
+
+In our situation, for each $q \in D(0,1)^\times$, we have an action of the discrete group $\ZZ$ on two different spaces: $\CC^\times$ and $\RR_{>0}$.
+On $\CC^\times$ the action is by $n \in \ZZ : z \mapsto q^n z$.
+Equivalently, this is induced by the exponentiatation of the Euler vector field $L_0 = z \frac{\partial}{\partial z}$. 
+We have already seen that the factorization algebra $\Obs^{\q, sm}_{V}$ on $\CC^\times$ is equivariant for $L_0$.
+This induces, by exponentiation an action of $\ZZ$ on the factorization algebra by the automorphism $q^{L_0}$. 
+By Proposition \ref{prop discrete equivariance} this implies that $\Obs^{\q,sm}_{V}$ descends along $p_q : \CC^\times \to E_q$ to a factorization algebra on $E_q = \CC^\times / q^\ZZ$ for any $q$.
+The factorization homology along $E_q$ is quasi-isomorphic to the global sections 
+\ben
+\int_{E_q} \Obs^{\q,sm}_{V} \simeq \left(\Sym(\Omega^{1,*} (E_q) \otimes V [1] \oplus \Omega^{0,*}(E_q) \otimes V[1])[[\hbar]], \dbar + \hbar \Delta \right). 
+\een
+
+Next, we consider our locally constant factorization algebra on $\RR_{>0}$.
+Consider the quotient map $p : \RR_{>0} \to S_q^1 = \RR_{>0} / |q|^\ZZ$. 
+Here, we identify $r \in \RR_{>0}$ with $|q| r$. 
+For each $n$, the connection $\nabla^{(n)} = \d - \frac{n}{r} \d r$ is left invariant by this action of $\ZZ$, as is the BV Laplacian $\Delta$.
+Thus, the factorization algebra $\Obs^{\q,sm}_{LV}$ is $\ZZ$-equivariant and hence determines a factorization algebra on $S^1_q$. 
+
+Furthermore, the map of factorization algebras (\ref{dense1}) induces a map of factorization homologies
+\ben
+\iota : \int_{S^1_q} \Obs^{\q, sm}_{LV} \to \int_{E_q} \Obs^{\q, sm}_{V} .
+\een
+
+\brian{should this go here?}
+\begin{lem} 
+This map is a quasi-isomorphism.
+\end{lem}
+
+\subsubsection{Twisted Hochschild homology}
 
 The next piece of input we need to formulate the local chiral algebraic index theorem is a map from the Hochschild homology of the Weyl algebra on the the loop space to quantum mechanics. 
+If $\sF$ is any locally constant factorization algebra on $S^1$, then $p^* \sF$ is a $\ZZ$-equivariant factorization algebra on $\RR_{>0}$ where $p : \RR_{>0} \to S^1$ is the quotient map.
+In particular, the element $1 \in \ZZ$ defines an equivalence $\rho_1 : 1^* p^* \sF \xto{\simeq} p^* \sF$. 
+In addition, since $\sF$ is locally constant this implies that $1 \in \ZZ$ defines an automorphism $\rho_1 : p^* \sF \to p^* \sF$. 
+This, in turn induces an automorphism of the underlying associative algebra defined by $p^*\sF$. 
+Thus, to prescribe a locally constant factorization algebra $\sF$ on $S^1$, it is equivalent to give the data of an associative algebra $A_{\sF}$ (really an $E_1$-algebra) together with an algebra automorphism $\sigma$ (really an $E_1$-automorphism). 
+It is a standard result of \cite{lurie, john} that the factorization homology along $S^1$ of an associative algebra is equivalent to its Hochschild complex. 
+The following is true about this twisted case. 
+
+\begin{prop}[\cite{Lurie} 5.3.3] 
+Let $\sF$ be a locally constant factorization algebra on $S^1$ and $(A_{\sF}, \sigma)$ the corresponding pair of an $E_1$ algebra and an $E_1$ algebra automorphism.
+Then there is a quasi-isomorphism
+\ben
+\int_{S^1} \sF \simeq {\rm Hoch}_*(A_{\sF}, \sigma)
+\een
+where ${\rm Hoch}_*(A_{\sF}, \sigma)$ is the Hochschild cochain complex twisted by $\sigma$.
+\end{prop}
+
+\begin{rmk} \brian{define twisted Hochschild}
+\end{rmk}
+
+Suppose $\sG$ is a locally constant factorization algebra on $\RR_{>0}$.
+Moreover, suppose 
+In our situation we can make this equivalence of the factorization homology with the twisted Hochschild complex more precise by exhibiting an explicit quasi-isomorphism.
+
+We first recount a construction that's implicit in \cite{GLL} relating ordinary Hocschild homology to quantum mechanics on $S^1$.
+
 
 
 \begin{prop}\cite{GLL} 
-The map $\Phi : {\rm Hoch}_*(\Weyl(W, \omega)) \to \Obs_{W}(S^1)$ is a map of BV algebras.
+The map $\Phi : {\rm Hoch}_*(D^{\hbar}_{LV}) \xto{\simeq} \int_{S^1} \Obs^{\q,sm}_{LV}$ is a quasi-isomorphism.
 \end{prop}
 
 \subsubsection{BV integration}

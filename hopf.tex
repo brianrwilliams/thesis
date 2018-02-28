@@ -27,6 +27,27 @@ As a warmup we recall a familiar situation
 \subsection{Hopf manifolds}
 
 We focus on a family of complex manifolds defined by Hopf in \cite{Hopf} defined in every complex dimension $d$. 
+
+\begin{dfn}
+Fix an integer $d \geq 1$.
+Let $f : \CC^d \to \CC^d$ be a polynomial map such that $f(0) = 0$ such that its Jacobian at zero $Jac(f)(0)$ is invertible with eigenvalues $\{\lambda_i\}$ all satisfying $|\lambda_i|<1$. 
+Define the {\em Hopf manifold associated to $f$} to be the $d$-dimensional complex manifold
+\ben
+Y_f := \left. \left(\CC^d \setminus \{0\}\right) \right/ (x \sim f(x)) .
+\een
+\end{dfn}
+
+Note that $Y_{f}$ is compact for any $f$. 
+In the case $d=1$ all Hopf surfaces are equivalent to elliptic curves.
+\brian{give some history}
+
+\begin{lem} 
+For any $f$ there is a diffeomorphism $Y_f \cong S^{2d-1} \times S^1$.
+\end{lem}
+
+This implies that when $d > 1$, the cohomology $H^{2}_{dR} (Y_f) = 0$ for any $f$. 
+In particular, $Y_f$ is not K\"{a}hler when $d > 1$. 
+
 For $1 \leq i \leq d$ let $q_i \in D(0,1)^{\times}$ be a nonzero complex number of modulus $|q_i| <1$. 
 The $d$-dimensional {\em Hopf manifold of type} ${\bf q} = (q_1,\ldots,q_d)$ is the following quotient of punctured affine space $\CC^d \setminus \{0\}$ by the discrete group $\ZZ^d$:
 \ben
@@ -47,12 +68,57 @@ There is an equivalent description of $H_{\bf q}$ as a quotient of affine space 
 
 \section{A higher chiral algebraic index}
 
-\begin{prop}\label{prop hopf cohomology}
-Any Hopf manifold is strictly formal. 
-In particular, if $X$ is a Hopf manifold, then there is a bigraded quasi-isomorphism
+Let $V^{*,*} = \oplus_{p,q} V^{p,q}$ be a bigraded vector space.
+If $v \in V^{p,q}$ we say that $v$ is of homogeneous bidegree and write $|v| = (p,q)$. 
+The total degree $n=p+q$ endows $V$ with the structure of an ordinary $\ZZ$-graded vector space. 
+We will denote by $\CC[V] = \Sym(V)$ the graded symmetric algebra with respect to this $\ZZ$-grading. 
+Note that since $V$ is bigraded, there is an induced bigrading on the symmetric algebra 
 \ben
-\left(\Omega^{*,*}(X) , \dbar \right) \simeq \left(H^{*,*}_{\dbar}(X), 0\right) .
+\CC[V] = \oplus_{p,q} \CC[V]^{p,q}
 \een
+where $\CC[V]^{p,q}$ consists of polynomials $v_1\ldots v_l$ such that $|v_1| + \cdots + |v_l| = (p,q)$. 
+
+\begin{dfn}
+Let $X$ be a complex manifold.
+A {\em Dolbeualt model} for $X$ is a bigraded vector space $V^{*,*} = \oplus_{p,q} V^{p,q}$ together with:
+\begin{itemize}
+\item an operator 
+\ben
+\dbar_V : V^{p,q} \to \CC[V]^{p,q+1}
+\een
+such that $\dbar_V^2 = 0$;
+\item a map of cochain complexes
+\ben
+\varphi : (\CC[V], \dbar_V) \to \left(\Omega^{0,*}(X), \dbar\right)
+\een
+\end{itemize}
+\end{dfn}
+
+\begin{dfn}
+We say that a complex manifold is {\em Dolbeualt formal} if there exists a Dolbeault model $(\CC[V],\dbar)$ and quasi-isomorphisms
+\ben
+\xymatrix{
+(\Omega^{0,*}(X), \dbar) & \ar[l]_-{\varphi}^-{\simeq} (\CC[V],\dbar_V) \ar[r]^-{\psi}_{\simeq} & (H^{0,*}_{\dbar} (X), 0) .
+}
+\een
+\end{dfn}
+
+Note that this definition is slightly different than ordinary formality of $X$ as a smooth manifold, which is defined using the de Rham complex of $X$.
+There is a definition that ties these two notions together. 
+
+\begin{dfn}
+A complex manifold $X$ is said to be {\em strictly formal} if there exists...
+\end{dfn}
+
+A famous result of Deligne-Griffiths-Morgan-Sullivan states that compact K\"{a}hler manifolds are formal. 
+Without much more work, one can show that their result actually implies that any compact K\"{a}hler manifold is also strictly formal (and hence Dolbeualt formal).
+
+The manifolds we are most interested in throughout this section are Hopf manifolds.
+As we've already pointed out these complex manifolds are {\em not} K\"{a}hler.
+Nevertheless, we have the following result. 
+
+\begin{prop}\label{prop hopf cohomology}
+Any Hopf manifold $X$ is strictly formal, so that $\Omega^{*,*}(X)$ is quasi-isomorphic (in a way that preserves the bigrading) to its cohomology $H^{*,*}_{\dbar}(X)$.
 Moreover, let $\delta, \epsilon$ be formal parameters of bidegree $(0,1)$ and $(d-1,d)$. 
 Then, there is a bigraded isomorphism
 \ben
@@ -63,13 +129,13 @@ where $\delta$ has bi-degree $(0,1)$ and $\epsilon$ has bi-degree $(d,d-1)$.
 \begin{proof}
 This proof is essentially in Appendix \cite{HirzebruchTopMethods}.
 We use the Borel spectral sequence for a holomorphic fibration
-\ben
+\be\label{hopf fibration}
 \xymatrix{
 F \ar[r] & E \ar[d] \\
 & B 
 }
-\een
-which exists so long as we assume that $F$ is K\:{a}hler \cite{Hirzebruch}. 
+\ee
+which exists so long as we assume that $F$ is K\"{a}hler \cite{Hirzebruch}. 
 The spectral sequence has pages $(E_r, \d_r), r \geq 0$, each of which is trigraded $E_{r}^{p,q,s}$, where $(p,q)$ are the the Dolbeault types and $s$ is the internal degree of the spectral sequence. 
 The $E_1$ page is given by
 \ben
@@ -131,7 +197,7 @@ The fields of the theory on $X$ are given by
 \een
 By Proposition \ref{prop hopf cohomology} we know that there is a quasi-isomorphism
 \begin{align*}
-\Omega^{0,*}(X , V) \oplus \Omega^{d,*}(X, V^*)[d-1] & \simeq H^{0,*}_{\dbar} (X, V) \tensor H^{d,*}_{\dbar}(X , V^*)[d-1] \\ & \cong \CC[\delta] \tensor V \oplus \epsilon \CC[\delta] \tensor V^* \\ & = \CC[\delta] \tensor (V \oplus \epsilon V^*) .
+\Omega^{0,*}(X , V) \oplus \Omega^{d,*}(X, V^*)[d-1] & \simeq H^{0,*}_{\dbar} (X, V) \tensor H^{d,*}_{\dbar}(X , V^*)[d-1] \\ & \cong \CC[\delta] \tensor V \oplus \epsilon \CC[\delta] \tensor V^* [d-1] \\ & = \CC[\delta] \tensor (V \oplus \epsilon V^*[d-1]) .
 \end{align*}
 where $\delta$ has degree $+1$ and $\epsilon$ has degree $d-1$. 
 (Note that only the $(0,*)$-grading contributes to the cohomological degree in our language.)
@@ -151,6 +217,47 @@ For any scale $L$, there is a quasi-isomorphism
 \een
 where $L_\pi$ is the Lie derivative with respect to the Poisson tensor of the symplectic vector space $T^*V$.
 \end{prop}
+\begin{proof}
+As we've already seen, the scale $L$ global observables are defined by
+\ben
+\Obs^\q_V(X) [L] = \left(\Obs^{\cl}_V(X) [\hbar], \dbar + \hbar \Delta_L\right)
+\een
+Recall, the operator $\Delta_L$ is given by contraction with the regularized heat kernel $K_L$. 
+By the formality result, which we used in the calculation above, we know there is a quasi-isomorphism
+\be\label{hopf quasi}
+\xymatrix{
+\CC[\delta] \tensor V \oplus \epsilon \CC[\delta] \tensor V^*[d-1] \ar@{^{(}->}[r]^-{\simeq} & \Omega^{0,*}(X , V) \oplus \Omega^{d,*}(X, V^*)[d-1]  .
+}
+\ee
+We can understand the elements $\delta,\epsilon$ concretely in the Dolbeualt complex of $X$ as follows.
+Let $z=(z_1,\ldots,z_d)$ be the coordinate on $\CC^d$.
+Note that
+\ben
+\dbar \log \left(|z|^2\right) = \sum_{i} \d \zbar_i \frac{z_i}{|z|^2}
+\een
+is a well-defined $(0,1)$ form on $\CC^d \setminus \{0\}$ and descends along quotient $\CC^d \setminus \{0\} \to X$ to define a $(0,1)$ form on $X$.
+The above quasi-isomorphism (\ref{hopf quasi}) sends $\delta \mapsto \dbar \log (|z|^2)$. 
+Next, recall from (\ref{hopf fibration}), that every Hopf manifold sits in a holomorphic fibration $T \to X \xto{\pi} \CC P^{d-1}$. 
+Let $\omega$ be the K\"{a}hler form on $\CC P^{d-1}$. 
+From the existence of Dolbeualt models for compact complex manifolds, we know there exists a $(d,d-1)$-form $\alpha \in \Omega^{d,d-1}(\CC P^{d-1})$ such that $\dbar \alpha = \omega^{d}$.
+The map (\ref{hopf quasi}) sends $\epsilon \mapsto \pi^* \alpha$.
 
+The left-hand side of (\ref{hopf quasi}) has natural $(-1)$-shifted symplectic structure given by fermionic integration against $\delta$ combined with the evaluation pairing between $V$ and its dual. 
+Moreover, this quasi-isomorphism is compatible with the $(-1)$-symplectic structure on fields. 
+We have just seen that classically this quasi-isomorphism induces $\Obs^{\cl}_V(X) \simeq \Omega^{-*}(T^*V)$, so we need to check that the scale $L$ BV Laplacian agrees with $L_\pi$ in the smaller complex $\Omega^{-*}(T^*V)$. 
+Since $\Delta_L$ is chain homotopy equivalent to $\Delta_{L'}$ for any $L,L'$ it suffices to compute this BV Laplacian at any scale. 
+Just as in the $1$-dimensional case we see that on $\Omega^{-*}(T^*V)$ the BV Laplacian is well defined as $L\to \infty$.
+In this limit, we recover exactly $L_\pi$ as desired.
+
+%The zig-zag of quasi-isomorphisms 
+%\ben
+%\xymatrix{
+%& \left(\CC[x,y,\delta,\epsilon] , \dbar_B + \eta\right) \ar[ld] \ar[rd] & \\
+%(\Omega^{*,*}(X), \dbar) & & (H^{*,*}_{\dbar}(X), 0)
+%}
+%\een
+%induces a zig-zag of quasi-isomorphisms
+
+\end{proof}
 
 \end{document}

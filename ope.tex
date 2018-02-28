@@ -438,6 +438,7 @@ If $I_1,I_2$ are two intervals, consider their disjoint union $I_1 \sqcup I_2 \s
 We define
 \ben
 \Phi(I_1 \sqcup I_2) : U(\sH_V) \tensor U({\sH_V}) \to \sF_{\sA_V} (I_1 \sqcup I_2) 
+\een
 
 We must explicitly compute the factorization product for certain observables in $\pi_*(\Obs_V^\q)$.
 \ben
@@ -552,6 +553,154 @@ which is immediate from our identification (\ref{U(d) identification})
 \subsubsection{Topological descent}
 
 \brian{review}
+Before jumping in to the construction of operators in holomorphic theories using a descent procedure, we'd like to a review a more familiar topological situation. 
+This concept was introduced by Witten in his introduction of cohomological field theories \cite{WittenCohomological}. 
+Expositions of this construction in the context of topological conformal field theory can be found in \cite{WittenZwiebach, DijkgraafVV}
+
+Suppose we have a translation invariant theory on $\RR^d$ for which all infinitesimal translations are exact for the BRST differential.
+If $Q^{BRST}$ is the BRST differential this means that for $i=1,\ldots,d$ there exists operators $G_i$ on the space of fields such that
+\be\label{G operator}
+[Q^{BRST},G_i] = \frac{\partial}{\partial x_i} .
+\ee
+Note that since $\partial / \partial x_i$ has BRST degree zero, the operators $G_i$ decrease the BRST degree by one. 
+Here, one thinks of the collection $\{G_i\}$ as providing a homotopy trivialization of the action by infinitesimal translations on the theory. 
+In particular, this means that $\partial/\partial x_i$ acts trivially on the $Q^{BRST}$-cohomology.
+
+In turn, $G_i$ also acts on the local operators of the theory. 
+Using translation invariance, we can view a local operator $\cO$ as a function on space-time $\RR^d$. 
+Suppose $\cO$ has pure BRST degree $k$.
+Using the operator $G_i$ we can consider the function valued operator $G_i \cO$ which is of BRST degree $k-1$.
+Using the frame on $\RR^d$ we can then define the {\em 1-form} valued operator
+\ben
+\cO^{(1)} = \sum_i (G_i \cO) \d x_i .
+\een
+By construction, the following relation is satisfied
+\ben
+\d_{dR} \cO = \sum_i \frac{\partial}{\partial x_i} \cO \d x_i = [Q^{BRST}, \cO^{(1)}] .
+\een
+This is the first so-called {\em topological descent equation}. 
+In general, we can iterate the above construction to define
+\ben
+\cO^{(l)} = \sum_{i_1,\ldots i_l} G_{i_1}\cdots G_{i_l} \cO \d x_{i_1} \cdots d x_{i_l} .
+\een
+This is an $l$-form valued operator of BRST degree $k-l$. 
+
+The operator $\cO^{(l)}$ allows us to define a new class of operators that depend on choosing an $l$-cycle inside of $\RR^d$. 
+Indeed, suppose $Z \subset \RR^d$ is a closed $l$-dimensional submanifold.
+Define the operator
+\ben
+\cO_Z = \int_{Z} \cO^{(l)} .
+\een
+The topological descent equations imply that if $\cO$ is BRST invariant $Q^{BRST} \cO = 0$, then $Q^{BRST} \cO_Z = 0$ as well.
+
+Interesting examples of cohomological field theories arise as topological twists of supersymmetric theories.
+Another class of examples come from topological vertex algebras \cite{Huang, LianZuckerman}.
+In Section \brian{ref} we will discuss a class of such theories by considering a higher dimensional version of holomorphic gravity. 
+
+We know that the local operators of a quantum field theory have the structure of a factorization algebra.
+In the world of factorization algebras, there is also a notion of being topological: being (homotopically) locally constant.
+This means that for every embedding of open balls $B \hookrightarrow B'$, the induced factorization structure map $\sF(B) \to \sF(B')$ is a quasi-isomorphism.
+
+It would be natural to expect that the observables of a topological field theory, in which the infinitesimal translations are BRST exact, should give rise to such a factorization algebra. 
+This is not exactly the case.
+The relations (\ref{G operator}) guarantee a slightly weaker condition on the factorization algebra of observables. 
+Indeed, the resulting action of the operators $G_i$ on the factorization algebra provide us with a sort of ``flat connection" on the factorization algebra. 
+The difference between this structure and the locally constant condition is analogous to the discrepancy between $D$-modules and local systems. 
+It is current work of Elliott and Safranov \cite{} to show how topological twists of supersymmetric theories give rise to such locally constant factorization algebras. 
+
+We discuss a more direct way in which we can extract a shadow of a locally constant factorization algebra from a topological field theory using descent. 
+There is an algebraic object associated to any locally constant factorization algebra.
+Indeed, a famous theorem of Lurie \cite{LurieAlg} states an equivalence of categories 
+\ben
+\{{\rm Locally\;constant\;factorization\;algebras\;on\;} \RR^d\} \; \simeq \; \{E_d-{\rm \; algebras}\} .
+\een
+The cohomology of an $E_d$-algebra has the structure of a $P_d$-algebra.
+In the category of cochain complexes, we have the following concrete definition of a $P_d$-algebra. 
+
+\begin{dfn}
+Let $d \geq 0$.
+A $P_d$ algebra in cochain complex is a commutative dg algebra $(A, \d)$ together with the data of a bracket of degree $1-d$
+\ben
+\{-,-\} : A \tensor A \to A [d-1]
+\een
+such that:
+\begin{enumerate}
+\item the bracket is graded anti-symmetric:
+\ben
+\{a,b\} = -(-1)^{|a| + d-1} (-1)^{|b| + d-1};
+\een
+\item the bracket satisfies graded Jacobi:
+\ben
+\{a,\{b,c\}\} = \{\{a,b\},c\} + (-1)^{|a| + d-1} (-1)^{|b|+d-1} \{a,\{b,c\}\} ;
+\een
+\item the bracket is a graded bi-derivation for the commutative product:
+\ben
+\{a,b \cdot c\} = \{a,b\} \cdot c + (-1)^{|b|(|a| + d-1)} b \cdot \{a,c\} .
+\een
+\end{enumerate}
+for all $a,b,c \in A$. 
+\end{dfn}
+
+\brian{finish}
+
+\begin{eg} Topological $BF$ theory.
+\brian{give references}
+For any dg Lie algebra $(\fg,\d_{\fg}, [-,-])$ one can define the following $d$-dimensional topological field theory.
+The fields of $BF$ theory with values in $\fg$ consist of 
+\ben
+(A,B) \in \Omega^*(\RR^d ; \fg[1]) \oplus \Omega^{*}(\RR^{d} ; \fg)[d-2]
+\een 
+with action functional
+\ben
+S(A,B) = \int \<B, d A + [A,A]\>_\fg,
+\een 
+where $\<-,-\>_\fg$ denotes a chosen invariant non-degenerate pairing on $\fg$. 
+The name comes from the fact that $S = \int B F(A)$ where $F(A) = \d A + [A,A]$ is the curvature. 
+The differential is a sum $\d = \d_{dR} + \d_{\fg}$. 
+Note that the theory is translation invariant and has a natural action by the infinitesimal translations $\{\frac{\partial}{\partial x_i}\}$ via Lie derivative.
+
+The class of local operators we consider are defined as
+\begin{align*}
+\cO_{A,a}(x) : & A \in \Omega^{0}(\RR^d; \fg)[1] \mapsto \<a,A(x)\>_\fg \\
+\cO_{B,a}(x) : & B \in \Omega^{0}(\RR^d, \fg)[d-2] \mapsto \<a, B(x)\> .
+\end{align*}
+where $x \in \RR^d$ is a fixed point and $a \in \fg$ is a fixed element.
+Using translation invariance, we view $\cO_{A,a}, \cO_{B,a}$ as function valued operators on $\RR^{d}$. 
+The total space of local operators can be identified with functions on the shifted tangent bundle to the formal moduli space $B\fg$, $\sO(T[d-1] B \fg)$. 
+The operator $\cO_{A,a}$ corresponds to the linear coordinate on the base of $B\fg$ and $\cO_{B,a}$ corresponds to a linear coordinate on the fiber.
+
+We consider the differential operator
+\ben
+G_i = \frac{\d}{\d(\d x_i)}
+\een
+that also acts on the space of fields. 
+This operator is equal to the contraction with the vector field $\frac{\partial}{\partial x_i}$. 
+Since $G_i$ commutes with the differential and bracket on the Lie algebra, the Cartan formula implies
+\ben
+[Q^{BRST}, G_i] = \left[\d_{dR}, \frac{\d}{\d(\d x_i)}\right] = \frac{\partial}{\partial x_i} .
+\een
+
+Following the descent procedure above, we go on to define the form valued local operators
+\ben
+\cO_{A,a}^{(l)} = \sum_{i_1,\ldots, i_l} G_i \cO_{A,a} \d x_i
+\een
+and similarly for $\cO_{B,a}$. 
+Then, for any $l$-cycle $Z \subset \RR^d$ we obtain operators $\int_Z \cO_{A,a}^{(l)}, \int_Z \cO_{B,a}^{(l)}$. 
+For example, one can check that the latter operator is of the form
+\ben
+\int_Z \cO_{B,a}^{(l)} : B \in \Omega^{l}(\RR^d)[d-2-l] \mapsto \int_Z B ,
+\een
+which is of degree $- d + 2 + l$. 
+
+
+To obtain the $P_n$-bracket via descent we consider the $(d-1)$-sphere $Z = S^{d-1}$, which we assume is centered at the origin.
+Then, the bracket between the linear operators $\sO_{A,a}, \cO_{B,a'}$ is computed by the operator product expansion of $\cO_{A,a}$ and the descended operator $\int_{S^{d-1}} \cO_{B,a'}^{(d-1)}$:
+\ben
+\{\cO_{A,a}, \cO_{B,a'}\}_{P_d} = \cO_{A,a}(0) \star \int_{S^{d-1}} \cO_{B,a'}^{(d-1)} .
+\een
+A simple OPE calculation \brian{finish this}
+\end{eg}
+
 
 \subsubsection{General theory}
 
