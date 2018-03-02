@@ -466,8 +466,32 @@ where ${\rm Hoch}_*(A_{\sF}, \sigma)$ is the Hochschild cochain complex twisted 
 \begin{rmk} \brian{define twisted Hochschild}
 \end{rmk}
 
-Suppose $\sG$ is a locally constant factorization algebra on $\RR_{>0}$.
-Moreover, suppose 
+\begin{eg}
+Suppose $\fg$ is a Lie algebra and consider its universal enveloping algebra $U\fg$.
+There is a convenient model for $U\fg$ as a locally constant factorization algebra on $\RR$.
+One starts with the cosheaf $\Omega^*_{c} \tensor \fg$, where $\Omega^{*}_c$ is the cosheaf of compactly supported sections on $\RR$.
+This is a cosheaf of Lie algebras, hence we may consider its Chevalley-Eilenberg chains $\clie^*(\Omega^*_{c} \tensor \fg)$.
+In \cite{CG} it is shown that this is a locally constant factorization algebra on $\RR$ which is equivalent, as an associative algebra, to $U\fg$.
+
+Now, suppose we fix a derivation $D$ of $\fg$.
+Then, $D$ induces a factorization algebra derivation of $\clie^*(\Omega^*_{c} \tensor \fg)$.
+We can deform the factorization algebra by the derivation $D$ in the following way: for every open set $U$ the deformed factorization algebra assigns the cochain complex
+\be
+\left(\Sym(\Omega^*_c(U) \tensor \fg[1]), \d_{dR} + \d_{CE} + \d t D\right) .
+\ee
+The operator $\d_{dR} + \d_{CE}$ is the ordinary differential for the cochain complex $\clie^*(\Omega^*_c(U)\tensor \fg)$.
+Since $(\d t)^2 = 0$ and $D$ commutes with $\d_{dR}, \d_{CE}$, the operator $\d_{dR} + \d_{CE} + \d t D$ still defines a differential.
+Moreover, this deformed factorization algebra is still translation invariant so we may consider its global sections along $S^1$.
+
+Note that $D$ determines a derivation of the associative algebra $U\fg$. 
+If $D$ is nilpotent, it defines an automorphism $\sigma_D = e^D = 1 + D + \frac{1}{2} D^2 + \cdots$. 
+In this case, the global sections of the deformed factorization algebra provide a nice model for the twisted Hochschild homology of the universal enveloping algebra:
+\ben
+{\rm Hoch}_*(U\fg, \sigma_D) \simeq \left(\Sym(\Omega^*(S^1) \tensor \fg[1]), \d_{dR} + \d_{CE} + \d t D\right) .
+\een
+Both of these are equivalent to the factorization homology of the factorization algebra on $S^1$ determined by $U\fg$ together with the automorphism $\varphi_D$.
+\end{eg} 
+
 In our situation we can make this equivalence of the factorization homology with the twisted Hochschild complex more precise by exhibiting an explicit quasi-isomorphism.
 
 We first recount a construction that's implicit in \cite{GLL} relating ordinary Hocschild homology to quantum mechanics on $S^1$.

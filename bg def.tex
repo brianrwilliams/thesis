@@ -1,0 +1,90 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\title{Deformations of higher CDOs}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\begin{document}
+\maketitle
+
+\section{Deformations for an $L_\infty$ space}
+
+We have already pointed out that our theory is a cotangent theory. 
+In particular, there is an action of the abelian group $\CC^\times_{cot}$ which assigns the base direction a weight of zero and the fiber a weight of $+1$. 
+Thus, if $(\gamma, \beta) \in \Omega^{0,*}(Y, \fg) \oplus \Omega^{d,*}(Y, \fg^\vee)[d-1]$, then an element $\lambda \in \CC^\times_{cot}$ acts by
+\ben
+\lambda \cdot (\gamma, \beta) = (\gamma, \lambda \beta) .
+\een
+Our first reduction is to restrict ourselves to studying deformations that are compatible with this $\CC^\times_{cot}$ action.
+
+Note that the symplectic pairing of the theory, as well as the classical action functional, is of $\CC^{\times}_{cot}$-weight $(-1)$.
+Our convention is that the parameter $\hbar$ {\em has $\CC^\times_{cot}$-weight $(-1)$} as well. 
+There are two compelling reasons for making this definition. 
+The first deals with studying correlation functions for the theory. 
+If we require the observables of the theory to be equivariant for this rescaling of the cotangent fibers, this means that the factorization product must have $\CC^\times_{cot}$ weight zero.
+In the case that the theory is free, we have seen that the factorization product between two operators of the theory $\cO, \cO'$ is computed by a Moyal type formula
+\ben
+\cO \star \cO' = e^{-\hbar \partial_P} \left(e^{\hbar \partial_P} \cO \cdot e^{\hbar \partial_P} \cO' \right) .
+\een
+Since the symplectic pairing is $\CC^\times_{cot}$-weight $(-1)$ we observe that the propagator is also $\CC^\times_{cot}$-weight $(+1)$.
+\footnote{This actually requires that we also take the gauge fixing operator to be of $\CC^\times_{cot}$-weight zero, which is the natural thing to do for cotangent theories.}
+For the product to have weight zero we are then forced to take $\hbar$ to have opposite weight to $P$.
+
+The other, related reason, we choose this weight for $\hbar$ is that we would like to require our BV complex to be equivariant for rescaling the fibers as well. 
+The classical BRST differential is of the form $\{S,-\} = Q + \{I,-\}$.
+We have already said that the classical action is of weight $(-1)$.
+Since the symplectic pairing is also degree $(-1)$, this means that the $P_0$ bracket is degree $+1$. 
+Thus, the classical BRST complex is manifestly equivariant.
+The quantum BV differential involves deforming this classical differential by $\hbar \Delta$. 
+For the same reason as the Poisson bracket, the BV Laplacian has weight $(+1)$. 
+Thus, we see that in order to have an equivariant differential we are again forced to take $\hbar$ to have weight $-1$. 
+
+In the case of an interacting theory, we have the following restriction on the quantum interactions of the theory as well. 
+We can expand an effective interaction as
+\ben
+I[L] = \sum_{g \geq 0} \hbar^g I^{(g)}[L] .
+\een
+In order for $I[L]$ to have $\CC^\times_{cot}$ weight $(-1)$ we see that $I^{(g)}[L]$ must have weight $g-1$. 
+We are only studying a one-loop quantization of the holomorphic theory, so the effective action has the form $I[L] = I^{(0)} + \hbar I^{(1)}[L]$ and hence $I^{(1)}[L]$ has weight zero. 
+
+Thus, all one-loop quantities compatible with the $\CC^\times_{cot}$ action also have weight zero, including the one-loop anomaly. 
+For this reason, we will be most concerned with the piece of the deformation complex that is $\CC^{\times}_{cot}$-weight zero. 
+This amounts to looking just at local functionals of the $\gamma$-field.
+
+\begin{dfn} 
+The {\em deformation complex for cotangent quantizations} of the holomorphic $\sigma$-model of maps $Y \to B \fg$ is the cochain complex 
+\ben
+\Def^{\rm cot}_{Y \to B\fg} = \cloc^*(\Omega^{0,*}_Y \tensor \fg) .
+\een
+This is simply the local cochains of the local Lie algebra $\Omega^{0,*}_Y \tensor \fg$ on $Y$. 
+\end{dfn}
+
+We will be most interested in seeing how both the anomaly and the resulting quantum correction induced by the anomaly are realized inside the complex $\Def_{Y \to Bg}^{\rm cot}$. 
+Before doing this, we'd like to restrict ourselves to looking at quantizations preserving further symmetries. 
+
+\brian{do this}
+
+To compute the translation invariant deformation complex we will invoke Proposition \brian{hol trans invt def} from Section \brian{ref}.
+Note that the deformation complex is simply the (reduced) local cochains on the local Lie algebra $\Omega^{0,*}_{\CC^d} \tensor \fg$. 
+Thus, in the notation of Section \brian{same ref} the bundle $L$ is simply the trivial bundle $\fg$.
+Thus, we see that the translation invariant deformation complex is quasi-isomorphic to the following cochain complex
+\ben
+\left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^d} \; \simeq \; \CC \cdot \d^d z \tensor^{\LL}_{\CC\left[\frac{\partial}{\partial z_i}\right]} \cred^*(\fg[[z_1,\ldots,z_d]])  .
+\een
+We'd like to recast the right-hand side in a more algebraic way. 
+
+Note that the the algebra $\CC\left[\frac{\partial}{\partial z_i}\right]$ is the enveloping algebra of the abelian Lie algebra $\CC^d = \CC\left\{\frac{\partial}{\partial z_i}\right\}$. 
+Thus, the complex we are computing is of the form
+\ben
+\CC \tensor^{\LL}_{U(\CC^d)} \cred^*(\fg[[z_1,\ldots,z_d]]) .
+\een
+This is precisely the Chevalley-Eilenberg cochain complex computing Lie algebra homology of $\CC^d$ with values in the module $\cred^*(\fg[[z_1,\ldots,z_d]])$:
+\ben
+\left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^d} \; \simeq  \; \clieu_*\left(\CC^d ; \cred^*(\fg[[z_1,\ldots,z_d]])\right) .
+\een
+
+\end{document}

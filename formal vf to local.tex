@@ -215,6 +215,42 @@ H^{*+2d}(\Vect) \cong H^*(X, \cloc^*(\sT_X)) ,
 where the right-hand side denotes the hypercohomology. 
 \end{thm}
 
+\begin{lem}
+On any complex manifold $X$ of complex dimension $d$ there is a quasi-isomorphism of sheaves of cochain complexes 
+\ben
+\cloc^*(\sT_X) \; \simeq \; \ul{\clie^*(\W_d)} [2d]
+\een
+\end{lem}
+\begin{proof}
+We recall a description of the local cohomology complex using $D$-modules given in Section 4.5 of \cite{CG2}.
+We have already seen that
+\ben
+\cloc^*(\sL) = \Omega^{d,d}_X \tensor_{D_X} \cred^*(JL)
+\een
+where $JL$ is the $D_X$-module given by taking the $\infty$-jets of the underlying vector bundle of $\sL$. 
+In \cite{CosRenormalization} it was shown that $\cred^*(JL)$ is flat as a $D_X$-module, thus we can replace the tensor product above by a left-derived tensor product
+\ben
+\Omega^{d,d}_X \tensor_{D_X} \cred^*(JL) \simeq \Omega^{d,d}_X \tensor^{\LL}_{D_X} \cred^*(JL) .
+\een
+\brian{finish spenser resolution}
+
+To wrap the above discussion up, we obtain a quasi-isormophism
+\ben
+\cloc^*(\sL) \simeq \Omega^*\left(X, \cred^*(JL)\right) [2d] .
+\een
+
+Any Lie algebra $\fg$ acts on its (reduced) Chevalley-Eilenberg cochains $\cred^*(\fg)$. 
+It is a standard fact that this action is, in fact, homotopically trivial.
+
+This argument transfers over to continuous Lie algebra cohomology.
+Indeed, applying this to the case $\W_d$, we see that the Lie algebra of formal vector fields acts homotopically trivial on its Gelfand-Fuks cochain complex $\clie^*(\W_d)$. 
+
+\begin{lem}
+For any $\ZZ$-graded vector bundle $L$ one has $\sO_{red}(JL) \cong J \sO(L)$.
+\end{lem}
+
+\end{proof}
+
 \begin{eg}
 Again, take the case $d=1$. 
 We can describe the local cocycle corresponding to the generator $H^3(\W_1) \cong H^1(\sT_{\CC})$ explicitly. 

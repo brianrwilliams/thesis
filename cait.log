@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 FEB 2018 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 FEB 2018 20:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1080,37 +1080,44 @@ LaTeX Warning: Citation `CG' on page 8 undefined on input line 411.
 
 [8]
 
-LaTeX Warning: Citation `lurie' on page 9 undefined on input line 452.
+LaTeX Warning: Citation `lurie' on page 9 undefined on input line 454.
 
 
-LaTeX Warning: Citation `john' on page 9 undefined on input line 452.
+LaTeX Warning: Citation `john' on page 9 undefined on input line 454.
 
 
-LaTeX Warning: Citation `Lurie' on page 9 undefined on input line 455.
+LaTeX Warning: Citation `Lurie' on page 9 undefined on input line 457.
 
 
-LaTeX Warning: Citation `GLL' on page 9 undefined on input line 474.
+LaTeX Warning: Citation `CG' on page 9 undefined on input line 474.
 
-[9] <xymatrix 2x1 54> <xymatrix 2x3 286> [10] <xymatrix 2x2 234> [11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 585.
+[9]
 
-[13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 585.
- (./cait.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 585.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 585.
+LaTeX Warning: Citation `GLL' on page 10 undefined on input line 497.
+
+
+LaTeX Warning: Citation `GLL' on page 10 undefined on input line 501.
+
+[10] <xymatrix 2x1 54> <xymatrix 2x3 286> [11] <xymatrix 2x2 234> [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 612.
+ [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 612.
+
+(./cait.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 612.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 612.
 Package rerunfilecheck Info: File `cait.out' has not changed.
 (rerunfilecheck)             Checksum: 33A1A6D8A2DA75797F5F60BBA302B5D5;443.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 585.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 612.
  ) 
 Here is how much of TeX's memory you used:
- 23266 strings out of 492995
- 442189 string characters out of 6132704
- 577177 words of memory out of 5000000
+ 23268 strings out of 492995
+ 442209 string characters out of 6132704
+ 573177 words of memory out of 5000000
  26109 multiletter control sequences out of 15000+600000
  32136 words of font info for 105 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -1133,10 +1140,10 @@ texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/public/xypic/xycmbt10.pfb>
-Output written on cait.pdf (13 pages, 186138 bytes).
+Output written on cait.pdf (13 pages, 189064 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
