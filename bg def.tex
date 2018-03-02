@@ -68,6 +68,14 @@ Before doing this, we'd like to restrict ourselves to looking at quantizations p
 
 \brian{do this}
 
+\begin{thm}
+Consider the deformation complex for cotangent quantizations of the holomorphic $\sigma$-model of maps $\CC^d \to B \fg$. 
+There is a quasi-isomorphism of the $\CC^d \ltimes U(d)$ invariant subcomplex with the complex of closed $(d+1)$-forms on $B\fg$:
+\ben
+J : \Omega^{d+1}_{cl}(B \fg) \xto{\simeq} \left(\Def_{\CC^d \to B \fg}\right)^{\CC^d \ltimes U(d)} .
+\een
+\end{thm}
+
 To compute the translation invariant deformation complex we will invoke Proposition \brian{hol trans invt def} from Section \brian{ref}.
 Note that the deformation complex is simply the (reduced) local cochains on the local Lie algebra $\Omega^{0,*}_{\CC^d} \tensor \fg$. 
 Thus, in the notation of Section \brian{same ref} the bundle $L$ is simply the trivial bundle $\fg$.
@@ -84,7 +92,102 @@ Thus, the complex we are computing is of the form
 \een
 This is precisely the Chevalley-Eilenberg cochain complex computing Lie algebra homology of $\CC^d$ with values in the module $\cred^*(\fg[[z_1,\ldots,z_d]])$:
 \ben
-\left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^d} \; \simeq  \; \clieu_*\left(\CC^d ; \cred^*(\fg[[z_1,\ldots,z_d]])\right) .
+\left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^d} \; \simeq  \; \clieu_*\left(\CC^d ; \cred^*(\fg[[z_1,\ldots,z_d]]) \d^d z\right) .
 \een
+Note that $\CC^d$ acts on $\d^d z$ trivially.
+We want to keep $\d^d z$ in the notation since below we are interested in computing the $\GL_d$-invariants.
+
+To compute the cohomology of this complex, we will first describe the differential explicitly. 
+There are two components to the differential.
+The first is the ``internal" differential coming from the Lie algebra cohomology of $\fg [[z_1,\ldots,z_d]]$, we will write this as $\d_{\fg}$. 
+The second comes from the $\CC^d$-module structure on $\clie^*(\fg[[z_1,\ldots,z_n]])$ and is the differential computing the Lie algebra homology, which we denote $\d_{\CC^d}$. 
+We will employ a spectral sequence whose first term turns on the $\d_{\fg}$ differential.
+The next term turns on the differential $\d_{\CC^d}$.
+
+As a graded vector space, the cochain complex we are trying to compute has the form
+\ben
+\Sym(\CC^d [1]) \tensor \cred^*\left(\fg[[z_1,\ldots,z_d]])\right) \d^d z .
+\een
+The spectral sequence is induced by the increasing filtration of $\Sym(\CC^d [1])$ by symmetric powers
+\ben
+F^k = \Sym^{\leq k}(\CC^d[1]) \tensor \cred^*\left(\fg[[z_1,\ldots,z_d]])\right) \d^d z .
+\een
+As above, we write the generators of $\CC^d$ by $\frac{\partial}{\partial z_i}$. 
+Also, note that the reduced Chevalley-Eilenberg complex has the form
+\ben
+\cred^*(\fg[[z_1,\ldots,z_n]]) = \left(\Sym^{\geq 1} \left(\fg^\vee [z_1^\vee,\ldots,z_d^\vee][-1] \right), \d_{\fg}\right),
+\een
+where $z_i^\vee$ is the dual variable to $z_i$. 
+
+Recall, we are only interested in the $U(d)$-invariant subcomplex of this deformation complex. 
+Sitting inside of $U(d)$ we have $S^1 \subset U(d)$ as multiples of the identity. 
+This induces an overall weight grading to the complex.
+The group $U(d)$ acts in the standard way on $\CC^d$.
+Thus, $z_i$ has weight $(+1)$ and both $z_i^\vee$ and $\frac{\partial}{\partial z_i}$ have $S^1$-weight $(-1)$. 
+Moreover, the volume element $\d^d z$ has $S^1$ weight $d$.
+It follows that in order to have total $S^1$-weight that the total number of $\frac{\partial}{\partial z_i}$ and $z_i^\vee$ must add up to $d$.
+Thus, as a graded vector space the invariant subcomplex has the following decomposition
+\ben
+\bigoplus_k \Sym^k(\CC^d[1]) \tensor \left(\bigoplus_{i \leq d-k} \Sym^{i} \left(\fg^\vee [z_1^\vee,\ldots,z_d^\vee][-1] \right) \right) \d^d z .
+\een
+It follows from Schur-Weyl that the space of $U(d)$ invariants of the $d$th tensor power of the fundamental representation $\CC^d$ is one-dimensional, spanned by the top exterior power. 
+Thus, when we pass to the $U(d)$-invariants, only the unique totally antisymmetric tensor involving $\frac{\partial}{\partial z_i}$ and $z_i^\vee$ survives. 
+Thus, for each $k$, we have
+\be\label{U(d) invariants}
+\left(\Sym^k(\CC^d[1]) \tensor \left(\bigoplus_{i \leq d-k} \Sym^{i} \left(\fg^\vee [z_1^\vee,\ldots,z_d^\vee][-1] \right) \right) \d^d z\right) \cong \wedge^{k}\left(\frac{\partial}{\partial z_i}\right) \wedge \wedge^{d-k}\left(z_i^\vee\right) \clie^*\left(\fg , \Sym^{d-k}(\fg^\vee)\right) \d^d z .
+\ee
+Here, $\wedge^{k}\left(\frac{\partial}{\partial z_i}\right) \wedge \wedge^{d-k}\left(z_i^\vee\right)$ is just a copy of the determinant $U(d)$-representation, but we'd like to keep track of the appearances of the partial derivatives and $z_i^\vee$. 
+Note that for degree reasons, we must have $k \leq d$. 
+When $k = 0$ this complex is the (shifted) space of functions modulo constants on the formal moduli space $B\fg$, $\sO_{red}(B\fg)[d]$. 
+When $k \geq 1$ this the (shifted) space of $k$-forms on the formal moduli space $B\fg$, which we write as $\Omega^{k}(B \fg)[d+k]$.
+Thus, we see that before turning on the differential on the next page, our complex looks like
+\be\label{bg def complex1}
+\xymatrix{
+\ul{-2d} & \cdots & \ul{-d-1} & \ul{-d} \\
+\sO_{red}(B \fg) & \cdots & \Omega^{d-1} (B \fg) & \Omega^{d}(B \fg) .
+}
+\ee
+We've omitted the extra factors for simplicity. 
+
+We now turn on the differential $\d_{\CC^d}$ coming from the Lie algebra homology of $\CC^d = \CC\left\{\frac{\partial}{\partial z_i}\right\}$ with values in the above module. 
+Since this Lie algebra is abelian the differential is completely determined by how the operators $\frac{\partial}{\partial z_i}$ act.
+We can understand this action explicitly as follows.
+Note that $\frac{\partial}{\partial z_i} z_j = \delta_{ij}$, thus we may as well think of $z_i^\vee$ as the element $\frac{\partial}{\partial z_i}$. 
+Consider the subspace corresponding to $k=d$ in Equation (\ref{U(d) invariants}):
+\ben
+\frac{\partial}{\partial z_1} \cdots \frac{\partial}{\partial z_d} \cred^*(\fg) \d^d z .
+\een 
+Then, if $x \in \fg^\vee [-1] \subset \cred^*(\fg)$ we observe that
+\ben
+\d_{\CC^d} \left(\frac{\partial}{\partial z_1} \cdots \frac{\partial}{\partial z_d} \tensor f \tensor \d^d z \right) = \det (\partial_i, z_j^\vee) \tensor 1 \tensor x \tensor \d^d z \in  \wedge^{d-1}\left(\frac{\partial}{\partial z_i}\right) \wedge \wedge^1 \left(z_i^\vee\right) \clie^*\left(\fg , \fg^\vee \right) \d^d z.
+\een
+This follows from the fact that the action of $\frac{\partial}{\partial z_i}$ on $x = x \tensor 1 \in \fg^\vee \tensor \CC[z_i^\vee]$ is given by
+\ben
+\frac{\partial}{\partial z_i} \cdot (x \tensor 1) = 1 \tensor x \tensor z_i^\vee \in \clie^*(\fg , \fg^\vee) z_i^\vee .
+\een
+By the Leibniz rule we can extend this to get the formula for general elements $f \in \cred^*(\fg)$. 
+We find that getting rid of all the factors of $z_i$ we recover precisely the de Rham differential 
+\ben
+\xymatrix{ 
+\cred^*(\fg) [2d] \ar@{=}[d] \ar[r]^-{\d_{\CC^d}} & \clie^*(\fg , \fg^\vee) [2d-1] \ar@{=}[d] \\
+\sO_{red}(B\fg) \ar[r]^-{\partial} & \Omega^1(B \fg) .
+}
+\een
+
+
+%where the direct sum runs over multi-indices $I = (i_1,\ldots,i_k)$. 
+%As usual, the we have used the multi-index notation for differential operators and $z_I^\vee = z_{i_1} \cdots z_{i_k
+%
+%\brian{...}
+%An element of $(\lambda_1,\ldots,\lambda_d)$ acts on $z = (z_1,\ldots, z_d)$ via $(\lambda_1z_1,\ldots,\lambda_d z_d)$.
+%Further, 
+%\ben
+%(\lamda_1,\ldots, \lambda_d) \cdot \frac{\partial}{\partial z_i} = \lambda_{i}^{-1} \frac{\partial}{\partial z_i} .
+%\een
+%
+%\ben
+%f \left(\frac{\partial}{\partial z_1}, \cdots, \frac{\partial}{\partial z_j}) 
+
+
 
 \end{document}
