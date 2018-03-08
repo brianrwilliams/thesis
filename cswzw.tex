@@ -115,6 +115,24 @@ The $P_0$ structure on boundary operators agrees with the $P_0$ structure on the
 
 In this section we compute the boundary OPE of Chern-Simons theory on the $3$-manifold $\CC \times \RR_{\geq 0}$ with chiral boundary condition introduced in the previous section. 
 
+\brian{derive propagator}
+We conclude that the propagator, with both UV and IR cutoffs, is of the form
+\be\label{3dprop}
+P_{\epsilon<L} (z,t;w,s) = \left(\d t \frac{\partial}{\partial z} - \d \zbar \frac{\partial}{\partial t}\right) \int_{T = \epsilon}^L \frac{\d T}{(4 \pi T)^{3/2}} e^{-r^2 / 4 T}, 
+\ee
+where $r^2 = (t-s)^2 + |z-w|^2$. 
+In the limit $\epsilon \to 0$, $L\to \infty$ the propagator has a more palatable form.
+Indeed, making the substitution $u = r^2 / 4$ we can write the above as
+\ben
+P_{\epsilon}^L (z,t;w,s) = \left(\d t \frac{\partial}{\partial z} - \d \zbar \frac{\partial}{\partial t}\right) \left(\frac{1}{r}\right) \int_{\epsilon}^L u^{1/2} e^{-u} \d u
+\een
+\brian{work out factors of $2,\pi$.}
+In the desired limit we can evaluate the Gaussian to obtain
+\ben
+P (z,t;w,s) = \lim_{\epsilon \to 0}\lim_{T \to \infty} P_{\epsilon}^L (z,t;w,s) = C \left(\d t \frac{\partial}{\partial z} - \d \zbar \frac{\partial}{\partial t}\right) \left(\frac{1}{r}\right) .
+\een
+
+
 \begin{prop}
 The boundary OPE between the operators $\cO_{B,n}(z)$ agrees with the OPE of the Kac-Moody vertex algebra at level $k - h^\vee$. 
 \end{prop}
@@ -134,7 +152,7 @@ The first diagram is linear in the field $B$ and contributes the following quant
 \ben
 F_{\rm I}(z_1,z_2)(B) = \int_{(z,t) \in \CC \times \RR_{\geq 0}} \<B, [A(M_1, z_1) , A(M_2, z_2)] \>_\fg,
 \een
-where the one-forms $A(M_i,z_i)$ are defined by pairing the bulk-boundary propagator $P_{b\partial}$ with the linear operator $\cO_{B, -1}(M_i, z_i)$. 
+where the one-forms $A(M_i,z_i)$ are defined by pairing the bulk-boundary propagator $P(z_i, 0 ; z,t)$ with the linear operator $\cO_{B, -1}(M_i, z_i)$. 
 Using the form of the bulk-boundary propagator \brian{above} we see 
 \ben
 A(M_i,z_i) = \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_i|^2\right)^{-1/2} \tensor M_i 
@@ -151,9 +169,88 @@ Thus, the contribution from diagram I reduces to
 \ben
 \<M, [M_1, M_2]\>_{\fg} \int_{(z,t) \in \CC \times \RR_{\geq 0}} f(z) \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_1|^2\right)^{-1/2} \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_2|^2\right)^{-1/2} \d z .
 \een
+In Section 17 of \cite{Omega} Costello has computed this 3-dimensional integral. 
+He shows that it is equal to an expression of the form
+\ben
+C \frac{\<M, [M_1, M_2]\>_{\fg}}{z_1-z_2} + g(z_1-z_2)
+\een
+where $g(z_1-z_2)$ is holomorphic in the variable $z_1-z_2$ and $C$ is some constant involving the value of the holomorphic function $f$ at $z = 0$.  
+Of course, $g$ does not contribute to the OPE. 
+We conclude that 
+\ben
+F_{\rm I}(z_1,z_2) \sim c \frac{[M_1,M_2]}{z_1-z_2} 
+\een 
+where the $\sim$ denotes the non-singular contribution. 
 
-\end{proof}
+The next term is $F_{\rm II}(z_1,z_2)$ which corresponds to the diagram II in the figure above. 
+The contribution is computed similarly to diagram I. 
+The Lie algebra factor is given by $k \<M_1,M_2\>_\fg$. 
+The analytic part is of the form
+\ben
+\int_{(z,t) \in \CC \times \RR_{\geq 0}} \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_1|^2\right)^{-1/2} \frac{\partial}{\partial z} \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_2|^2\right)^{-1/2} \d z . 
+\een
+Note that when applied to the function $(t^2 + |z-z_2|^2)^{-1/2}$ the operator $\frac{\partial}{\partial z}$ agrees with $\frac{\partial}{\partial z_2}$. 
+Thus we can pull it out of the integral, and we obtain by the same calculation above obtain
+\ben
+F_{\rm II}(z_1,z_2) \sim c k \frac{\partial}{\partial z_2} \frac{\<M_1,M_2\>_\fg}{z_1-z_2} = c  k \frac{\<M_1,M_2\>_\fg}{(z_1-z_2)^2} .
+\een
 
+Finally, we turn to diagram III. 
+This will contribute to the well-established shift of the critical level of Chern-Simons at the one-loop level. 
+See for instance \cite{WittenCS}.
+This diagram involves a loop, so there could potentially be UV divergences. 
+We find that once we regularize, using our convenient gauge fixing operator, that the UV divergence does not contribute to the OPE and we get a finite correction to level. 
+We will label the boundary to bulk edges by the full propagator $P(z_i,0;z,t)$ as above. 
+We label the internal edges of the loop, which occurs in the bulk, by the regularized propagator $P_{\epsilon<L} (z,t;w,s)$ from (\ref{3dprop}).
+Note that we can split the function on $C^\infty((\RR_{\geq 0} \times \CC) \times (\RR_{\geq 0} \times \CC)$ as
+\ben
+\frac{1}{(4 \pi T)^{3/2}} e^{-((t-s)^2 + |z-w|^2) / 4 T} = \left(\frac{1}{(4\pi T)^{1/2}} e^{-(t-s)^2/ 4T} \right)\left(\frac{1}{4 \pi T} e^{-|z-w|^2 / 4T}\right) . 
+\een
+The right-hand side is simply the product of two heat kernels $K^{1d}_{T}(t,s) K_T^{2d}(z,w)$, where $K^{1d}_T$ is the heat kernel for the one-dimensional Laplacian, and $K^{2d}_T$ is the heat kernel for the two-dimensional Laplacian on $\CC$. 
+It follows that we can write the regularized propagator as
+\begin{align*}
+P_{\epsilon < L}(z,t;w,s) & = \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \int_{T = \epsilon}^L \d T \left(\frac{1}{(4\pi T)^{1/2}} e^{-(t-s)^2/ 4T} \right)\left(\frac{1}{4 \pi T} e^{-|z-w|^2 / 4T}\right) \\ & = \d \zbar \int_{T = \epsilon}^L \d T \left(\frac{\partial}{\partial t} \frac{1}{(4\pi T)^{1/2}} e^{-(t-s)^2/ 4T} \right) \left(\frac{1}{4 \pi T} e^{-|z-w|^2 / 4T}\right) \\ & - \d t \int_{T = \epsilon}^L \d T \left(\frac{\partial}{\partial z}\frac{1}{4 \pi T} e^{-|z-w|^2 / 4T}\right)\left(\frac{1}{(4\pi T)^{1/2}} e^{-(t-s)^2/ 4T} \right) \\ 
+& = \d \zbar \int_{T=\epsilon} \d T \frac{\partial}{\partial t} K_T^{1d} (t,s) K_T^{2d}(z,w) - \d t \int_{T = \epsilon}^L \d T \frac{\partial}{\partial z} K_T^{2d}(z,w) K_T^{1d}(s,t) .
+\end{align*}
+
+We now move on to compute $F_{\rm III}(z_1,z_2)$. 
+The algebraic weight of the \brian{finish}
+For simplicity, set $\alpha(z_i; z,t) = \left(\d \zbar \frac{\partial}{\partial t} - \d t \frac{\partial}{\partial z}\right) \left(t^2 + |z-z_1|^2\right)^{-1/2}$.
+Here, $z_i$ is fixed on the boundary and $(z,t) \in \CC \times \RR_{\geq 0}$. 
+The analytic part of the regularized weight is of the form
+\ben
+\int_{(z, t ; w, s) \in (\CC \times \RR_{\geq 0})^2} \alpha(z_1, z) \alpha(z_2, w) P_{\epsilon < L}(z,t;w,s) P_{\epsilon < L}(w,s;z,t) .
+\een
+Using the splitting of the propagator above, we see that we can write this integral as a sum of two integrals.
+The first is of the form
+\ben
+\int_{(z, t ; w, s) \in (\CC \times \RR_{\geq 0})^2}  \alpha(z_1; z,t)\alpha(z_2;w,s) \d z \d w \d \zbar \d s \int_{T_1,T_2= \epsilon}^L \d T_1 \d T_2 \left(K_{T_1}^{1d}(s,t) \frac{\partial}{\partial t} K_{T_2}^{1d}(s,t)  \right) \left(K_{T_2}^{2d}(z,w) \frac{\partial}{\partial z} K_{T_1}^{2d}(z,w)\right) .
+\een
+The second term simply flips $(z,t) \leftrightarrow (w,s)$.
+
+We now perform a familiar trick.
+We will evaluate, using the Wick expansion, the Gaussian integral for the diagonal coordinate $z - w$ in the $\CC \hookrightarrow \CC \times \CC$ direction. 
+Doing this, the integral reduces to
+\be\label{CS oneloop1}
+C \int_{z \in \CC , (t,s) \in (\RR_{\geq 0})^2} \alpha(z_1; z, t) \frac{\partial}{\partial z} \alpha(z_2 ; z, s) \d z \d s \int_{T_1,T_2 = \epsilon}^L \d T_1 \d T_2 \left(K_{T_1}^{1d}(t,s) \frac{\partial}{\partial t} K_{T_2}^{1d}(t,s)  \right) \frac{T_2}{(T_1 + T_2)^2}  . 
+\ee
+Now, consider the quantity 
+\ben
+K_{T_1}^{1d}(t,s) \frac{\partial}{\partial t} K_{T_2}(t,s) \d s = \frac{1}{4 \pi} \frac{1}{T_1^{1/2} T_2^{3/2}} (t-s) e^{-(t-s)^2 \left(\frac{1}{T_1} + \frac{1}{T_2}\right) /4} \d s .
+\een
+Making the substitution $u = (t-s) \left(\frac{1}{T_1} + \frac{1}{T_2}\right)$ this expression becomes 
+\ben
+\frac{1}{T_1^{1/2}T_2^{3/2}} \frac{T_1T_2}{T_1+T_2} u e^{-u^2/4} \d u .
+\een
+Evaluating the $u$-integral we see that (\ref{CS oneloop}) reduces to 
+\ben
+\int_{(z,t) \in \CC \times \RR_{\geq 0}} \alpha(z_1; z,t) \frac{\partial}{\partial z} \alpha(z_2 ; z,t) f(t) \d z \d t \int_{T_1,T_2 = \epsilon}^L \d T_1 \d T_2 \frac{T_1^{1/2}T_2^{1/2}}{(T_1 + T_2)^3} .
+\een
+One checks immediately that the $\epsilon \to 0$ limit of the $T_1,T_2$ integral exists and is independent of $L$. 
+Moreover, ... 
+\end{proof}ggg
+
+eiorjeijmelkfmdkfmdkfmmfmfmf
 
 
 \end{document}

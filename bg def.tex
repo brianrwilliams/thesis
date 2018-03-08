@@ -11,11 +11,23 @@
 \begin{document}
 \maketitle
 
-\section{Deformations for an $L_\infty$ space}
+\section{Deformations of the holomorphic $\sigma$-model}
 
-We have already pointed out that our theory is a cotangent theory. 
+In this section we allow $\fg$ to be a curved $L_\infty$ algebra over a commutative dg ring $R$ and consider the holomorphic $\sigma$-model of maps $Y \to B \fg$, where $Y$ is a complex $d$-fold.
+We will be most interested in the following two cases:
+
+\begin{enumerate}
+\item the simplest case where $R = \CC$ and $\fg = \CC^n[-1]$ is the trivial $L_\infty$ algebra with $\ell_k = 0$ for all $k \geq 0$; 
+\item when $X$ is a smooth manifold $R = \Omega^*_X$, and $\fg$ is a curved $L_\infty$ algebra over $\Omega^*_X$. 
+Thus, $\fg$ is part of an $L_\infty$ space $(X, \fg)$ over $X$ in the terminology of \cite{wg2, GradyGwilliamDerived}.
+\end{enumerate}
+
+We have discussed how these two cases are related.
+Indeed, through Gelfand-Kazhdan descent along a complex manifold we can patch together the case (1) to the situation in (2) where $\fg = \fg_{X_{\dbar}}$, the curved $L_\infty$ algebra encoding the complex structure. 
+
+The theory we are studying is a cotangent theory of the form $T^*[-1] (\Omega^{0,*}(Y, \fg[1]))$. 
 In particular, there is an action of the abelian group $\CC^\times_{cot}$ which assigns the base direction a weight of zero and the fiber a weight of $+1$. 
-Thus, if $(\gamma, \beta) \in \Omega^{0,*}(Y, \fg) \oplus \Omega^{d,*}(Y, \fg^\vee)[d-1]$, then an element $\lambda \in \CC^\times_{cot}$ acts by
+Thus, if $(\gamma, \beta) \in \Omega^{0,*}(Y, \fg) [1] \oplus \Omega^{d,*}(Y, \fg^\vee)[d-1]$, then an element $\lambda \in \CC^\times_{cot}$ acts by
 \ben
 \lambda \cdot (\gamma, \beta) = (\gamma, \lambda \beta) .
 \een
@@ -68,6 +80,39 @@ Before doing this, we'd like to restrict ourselves to looking at quantizations p
 
 \brian{do this}
 
+\subsection{Forms as local functionals}
+
+Before we compute the possible deformations of the holomorphic $\sigma$-model, we describe how certain differential forms on the formal stack $B \fg$ yield local functionals of the holomorphic $\sigma$-model of maps $Y \to B \fg$. 
+Indeed, we will define a map of cochain complexes
+\ben
+J : \Omega^{d+1}_{cl}(B \fg) \xto{\simeq} \left(\Def_{\CC^d \to B \fg}\right)^{\CC^d \ltimes U(d)} .
+\een
+
+The functions on a formal moduli stack $B \fg$ are given by the Chevalley-Eilenberg complex $\sO(B\fg) = \clie^*(\fg)$.
+By definition, the $k$-forms on a formal moduli stack $B\fg$ are defined by
+\ben
+\Omega^k(B \fg) := \clie^*(\fg ; \Sym^k \fg^\vee [-k])
+\een
+where $\fg^\vee$ denotes the coadjoint module of $\fg$. 
+
+As a simple check, note that in the case $\fg = \CC^n [-1]$ the above complex reduces to
+\ben
+\Omega^k(B \fg) = \CC[t_1,\ldots, t_n] \tensor \wedge^k(t_1^\vee, \cdots, t_n^\vee),
+\een
+where $t_i^\vee$ denotes the dual coordinate. 
+Everything is in cohomological degree zero.
+If we identify $t_i^\vee \leftrightarrow \d t_i$, this is the usual definition of the algebraic de Rham forms. 
+
+\brian{finish. define de Rham operator, closed forms, J map, geometric interpretation..}
+
+\begin{rmk}
+We use $\partial$ to denote the de Rham differential on $B \fg$. 
+This is because our two main examples of $B \fg$ will be the formal holomorphic disk $\hD^n$ or the formal moduli space associated to any complex manifold $X$. 
+In each of these cases, the differential above is the holomorphic Dolbeualt operator $\partial : \Omega^k_{hol} \to \Omega^{k+1}_{hol}$.
+\end{rmk}
+
+\subsubsection{}
+
 \begin{thm}
 Consider the deformation complex for cotangent quantizations of the holomorphic $\sigma$-model of maps $\CC^d \to B \fg$. 
 There is a quasi-isomorphism of the $\CC^d \ltimes U(d)$ invariant subcomplex with the complex of closed $(d+1)$-forms on $B\fg$:
@@ -88,14 +133,13 @@ We'd like to recast the right-hand side in a more algebraic way.
 Note that the the algebra $\CC\left[\frac{\partial}{\partial z_i}\right]$ is the enveloping algebra of the abelian Lie algebra $\CC^d = \CC\left\{\frac{\partial}{\partial z_i}\right\}$. 
 Thus, the complex we are computing is of the form
 \ben
-\CC \tensor^{\LL}_{U(\CC^d)} \cred^*(\fg[[z_1,\ldots,z_d]]) .
+\CC \cdot \d^d z \tensor^{\LL}_{U(\CC^d)} \cred^*(\fg[[z_1,\ldots,z_d]]) .
 \een
-This is precisely the Chevalley-Eilenberg cochain complex computing Lie algebra homology of $\CC^d$ with values in the module $\cred^*(\fg[[z_1,\ldots,z_d]])$:
+Since $\CC \cdot \d^d z$ is the trivial module, this is precisely the Chevalley-Eilenberg cochain complex computing Lie algebra homology of $\CC^d$ with values in the module $\cred^*(\fg[[z_1,\ldots,z_d]])$:
 \ben
 \left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^d} \; \simeq  \; \clieu_*\left(\CC^d ; \cred^*(\fg[[z_1,\ldots,z_d]]) \d^d z\right) .
 \een
-Note that $\CC^d$ acts on $\d^d z$ trivially.
-We want to keep $\d^d z$ in the notation since below we are interested in computing the $\GL_d$-invariants.
+We will keep $\d^d z$ in the notation since below we are interested in computing the $U(d)$-invariants.
 
 To compute the cohomology of this complex, we will first describe the differential explicitly. 
 There are two components to the differential.
@@ -112,6 +156,11 @@ The spectral sequence is induced by the increasing filtration of $\Sym(\CC^d [1]
 \ben
 F^k = \Sym^{\leq k}(\CC^d[1]) \tensor \cred^*\left(\fg[[z_1,\ldots,z_d]])\right) \d^d z .
 \een
+
+\begin{rmk}
+In the examples we are most interested in we can understand the spectral sequence we are using as a version of the Hodge to de Rham spectral sequence.
+\end{rmk}
+
 As above, we write the generators of $\CC^d$ by $\frac{\partial}{\partial z_i}$. 
 Also, note that the reduced Chevalley-Eilenberg complex has the form
 \ben
@@ -159,7 +208,7 @@ Consider the subspace corresponding to $k=d$ in Equation (\ref{U(d) invariants})
 \een 
 Then, if $x \in \fg^\vee [-1] \subset \cred^*(\fg)$ we observe that
 \ben
-\d_{\CC^d} \left(\frac{\partial}{\partial z_1} \cdots \frac{\partial}{\partial z_d} \tensor f \tensor \d^d z \right) = \det (\partial_i, z_j^\vee) \tensor 1 \tensor x \tensor \d^d z \in  \wedge^{d-1}\left(\frac{\partial}{\partial z_i}\right) \wedge \wedge^1 \left(z_i^\vee\right) \clie^*\left(\fg , \fg^\vee \right) \d^d z.
+\d_{\CC^d} \left(\frac{\partial}{\partial z_1} \cdots \frac{\partial}{\partial z_d} \tensor f \tensor \d^d z \right) = \det (\partial_i, z_j^\vee) \tensor 1 \tensor x \tensor \d^d z \in  \wedge^{d-1}\left(\frac{\partial}{\partial z_i}\right) \wedge \CC \{z_i^\vee\} \clie^*\left(\fg , \fg^\vee \right) \d^d z.
 \een
 This follows from the fact that the action of $\frac{\partial}{\partial z_i}$ on $x = x \tensor 1 \in \fg^\vee \tensor \CC[z_i^\vee]$ is given by
 \ben
@@ -173,7 +222,36 @@ We find that getting rid of all the factors of $z_i$ we recover precisely the de
 \sO_{red}(B\fg) \ar[r]^-{\partial} & \Omega^1(B \fg) .
 }
 \een
+A similar argument shows that $\d_{\CC^d}$ agrees with the de Rham differential on each $\Omega^k(B \fg)$. 
 
+
+We conclude that the $E_2$ page of this spectral sequence is quasi-isomorphic to the following truncated de Rham complex.
+\be\label{bg def complex2}
+\xymatrix{
+\ul{-2d} & \ul{-2d+1} & \cdots & \ul{-d-1} & \ul{-d} \\
+\sO_{red}(B \fg) \ar[r]^-{\partial} & \Omega^1(B \fg) \ar[r] & \cdots \ar[r] & \Omega^{d-1} (B \fg) \ar[r]^-{\partial} & \Omega^{d}(B \fg) .
+}
+\ee
+For now, denote this complex by (\ref{bg def complex2}). 
+
+Consider the full de Rham complex 
+\ben
+\xymatrix{
+\Omega^*(B \fg) & = & R[1] \ar[r] & \sO(B \fg) \ar[r]^-{\partial} & \Omega^1(B\fg)[-1] \ar[r] & \cdots \\
+& = & & \sO_{red}(B \fg)\ar[r]^-{\partial} & \Omega^{1}(B \fg) \ar[r] & \cdots  .
+}
+\een
+The second line follows from the definition of reduced Chevalley-Eilenberg cochains $\clie^*(\fg) = {\rm coker}(R \to \clie^*(\fg))$.
+Now, there is an obvious quotient map $\Omega^*(B \fg)[2d] \to$ (\ref{bg def complex2}) whose kernel is the complex of (shifted) closed $(d+1)$-forms
+\ben
+\Omega^{d+1}_{cl}(B \fg) [d-1] = \Omega^{d+1}(B \fg)[d-1] \xto{\partial} \Omega^{d+1}(B \fg)[d-2] \to \cdots .
+\een
+It follows that we have an exact sequence 
+\ben
+\Omega^{d+1}(B \fg)[d-1] \to \Omega^*(B \fg) \to (\ref{bg def complex2}) .
+\een 
+Since the middle term is acyclic, it follows that the connecting map (which is degree one) is a quasi-isomorphism $(\ref{bg def complex2}) \xto{\simeq} \Omega^{d+1}_{cl} (B \fg) [d]$. 
+This completes the proof.
 
 %where the direct sum runs over multi-indices $I = (i_1,\ldots,i_k)$. 
 %As usual, the we have used the multi-index notation for differential operators and $z_I^\vee = z_{i_1} \cdots z_{i_k

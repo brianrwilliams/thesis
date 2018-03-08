@@ -445,13 +445,39 @@ This map is a quasi-isomorphism.
 
 \subsubsection{Twisted Hochschild homology}
 
-The next piece of input we need to formulate the local chiral algebraic index theorem is a map from the Hochschild homology of the Weyl algebra on the the loop space to quantum mechanics. 
+The next piece of input we need to formulate the local chiral algebraic index theorem is to relate the factorization homology of the chiral theory along an elliptic curve to a twisted form of the Hochschild homology of the Weyl algebra on the the loop space.
+
+First, we recall the Hochschild cochain complex computing Hochschild homology, that we will denote $\Hoch(A,M)$. 
+Let $A$ be any (ordinary) algebra and $M$ an $A$-bimodule. 
+Denote by $\cdot$ both the associative product on $A$ and each of the bimodule structures.
+The underlying graded vector space of $\Hoch(A, M)$ is
+\ben
+\oplus_k A^{\tensor k} \tensor M [k] .
+\een
+Thus, $A^{\tensor k} \tensor M$ is in degree $-k$. 
+The differential splits into three pieces
+\ben
+\d_{\Hoch} = \d_A + \d_L + \d_R
+\een
+where, for $a_1,\ldots a_k \in A$, $m \in M$, we have:
+\begin{enumerate}
+\item $\d_A (a_1 \tensor \cdots \tensor a_k \tensor m = \sum_{i=1}^{k-1} (-1)^{j-1} a_1 \tensor \cdots \tensor (a_j \cdot a_{j+1}) \tensor \cdots a_k \tensor m$;
+\item $\d_L (a_1\tensor \cdots \tensor a_k \tensor m) = (-1)^{k-1} a_1\tensor \cdots \tensor a_{k-1} \tensor (a_k \cdot m)$;
+\item $\d_R (a_1\tensor \cdots \tensor a_k \tensor m) = (-1)^k a_2 \tensor \cdots \tensor a_k \tensor (m \cdot a_1)$.
+\end{enumerate}
+This is the standard complex computing the Hochschild homology $HH_*(A, M) = H^*(\Hoch(A,M))$.
+
+An example of a bimodule that will be important for us comes from the data of an algebra automorphism. 
+The underlying vector space of this bimodule is $M = A$ itself.
+Now, if $\sigma : A \to A$ is an automorphism then we can define the following left-module structure on $M = A$ by $a \cdot a' = \sigma(a) \cdot a'$. 
+We will write $\Hoch(A, \sigma)$ for the Hocschild complex above with coefficients in the $A$-bimodule where the left-module structure is given by this $\sigma$-twisted action, and the right-module structure is the standard one.
+
 If $\sF$ is any locally constant factorization algebra on $S^1$, then $p^* \sF$ is a $\ZZ$-equivariant factorization algebra on $\RR_{>0}$ where $p : \RR_{>0} \to S^1$ is the quotient map.
 In particular, the element $1 \in \ZZ$ defines an equivalence $\rho_1 : 1^* p^* \sF \xto{\simeq} p^* \sF$. 
 In addition, since $\sF$ is locally constant this implies that $1 \in \ZZ$ defines an automorphism $\rho_1 : p^* \sF \to p^* \sF$. 
 This, in turn induces an automorphism of the underlying associative algebra defined by $p^*\sF$. 
 Thus, to prescribe a locally constant factorization algebra $\sF$ on $S^1$, it is equivalent to give the data of an associative algebra $A_{\sF}$ (really an $E_1$-algebra) together with an algebra automorphism $\sigma$ (really an $E_1$-automorphism). 
-It is a standard result of \cite{lurie, john} that the factorization homology along $S^1$ of an associative algebra is equivalent to its Hochschild complex. 
+It is a well-known result of \cite{lurie, john} that the factorization homology along $S^1$ of an associative algebra is equivalent to its Hochschild complex. 
 The following is true about this twisted case. 
 
 \begin{prop}[\cite{Lurie} 5.3.3] 
@@ -462,9 +488,6 @@ Then there is a quasi-isomorphism
 \een
 where ${\rm Hoch}_*(A_{\sF}, \sigma)$ is the Hochschild cochain complex twisted by $\sigma$.
 \end{prop}
-
-\begin{rmk} \brian{define twisted Hochschild}
-\end{rmk}
 
 \begin{eg}
 Suppose $\fg$ is a Lie algebra and consider its universal enveloping algebra $U\fg$.
@@ -492,14 +515,47 @@ In this case, the global sections of the deformed factorization algebra provide 
 Both of these are equivalent to the factorization homology of the factorization algebra on $S^1$ determined by $U\fg$ together with the automorphism $\varphi_D$.
 \end{eg} 
 
-In our situation we can make this equivalence of the factorization homology with the twisted Hochschild complex more precise by exhibiting an explicit quasi-isomorphism.
+\subsubsection{}
 
-We first recount a construction that's implicit in \cite{GLL} relating ordinary Hocschild homology to quantum mechanics on $S^1$.
+In our situation we will exhibit an explicit quasi-isomorphism from the twisted Hochschild complex of the Weyl algebra on the loop space to the global sections of the $\beta\gamma$ system along an elliptic curve. 
+
+First, let's consider the zero mode part of quantum mechanics on the loop space.
+The global observables along $S^1$ for this sector are defined by
+\ben
+\Obs^{\q, sm}_{z^0 V} (S^1) = \left(\Sym (\Omega^*_c(S^1) \tensor (V[1] \oplus V^*[1])), \d_{dR} + \hbar \Delta\right) .
+\een
+
+We have already seen that for any interval $I \subset \RR_{>0}$ there is a quasi-isomorphism of cochain complexes
+\ben
+\Obs^{\q,sm}_{z^0V}(I)) \xto{\simeq} D_{z^0 V}^\hbar = D_V^\hbar
+\een
+given by taking $H^0$. 
+It is convenient to choose explicit sections of this map.
+To do this, we choose a bump function for $I$. 
+This is a compactly supported function $f \in C^\infty_c(I)$ such that $\int f \d r = 0$. 
+Given a linear element $v + v^* \in \sH(V) \subset D^\hbar_V$ we define the linear observable
+\ben
+f(r) \d r \tensor (v^* + v) \in \Omega^1_c(I)\tensor (V \oplus V^*) \subset \Obs^{\q,sm}_{z^0V}(I)) .
+\een
+\brian{extend to non-linear elements}
+
+If $t \in S^1$ is a fixed point on the circle, then we will let $f_{t}$ be a bump function supported in an infinitesimal open set around $t \in S^1$.
+Similarly, for each $k \geq 1$ distinct points $t_1,\ldots, t_k$ in $S^1$ pick bump functions $f_{t_1},\ldots, f_{t_{k}}$ whose supports are mutually disjoint. 
+Define the following map
+\ben
+\Phi : \sH(V)^{\tensor k} \to \Obs^{\q, sm}_{z^0 V} (S^1)
+\een
+by sending $(v_1^* + v_1) \tensor \cdots \tensor (v_k^* + v_k)$ to the smoothed observable
+\ben
+\left(f_1(t) \d t \tensor (v_1^* +  v_1)\right) \cdot (f_2(t) \tensor (v_2^* + v_2)) \cdots (f_k(t) \tensor (v_k^* + v_k)) \in \Sym^k(\Omega^*(S^1) \tensor (V^* \oplus V)[1]) \subset \Obs^{\q,sm}_{z^0 V}(S^1) .
+\een
 
 
+%We first recount a construction that's implicit in \cite{GLL} relating ordinary Hocschild homology to quantum mechanics on $S^1$.
 
-\begin{prop}\cite{GLL} 
-The map $\Phi : {\rm Hoch}_*(D^{\hbar}_{LV}) \xto{\simeq} \int_{S^1} \Obs^{\q,sm}_{LV}$ is a quasi-isomorphism.
+
+\begin{prop}
+The map $\Phi_q : {\rm Hoch}_*(D^{\hbar}_{LV}) \xto{\simeq} \int_{S^1} \Obs^{\q,sm}_{LV}$ is a quasi-isomorphism.
 \end{prop}
 
 \subsubsection{BV integration}
@@ -597,8 +653,93 @@ simply picks out the top de Rham form sitting in degree $-2n$, where $n = \dim_\
 \begin{rmk} The $\left(\Omega^{-*}(T^*V) [[\hbar]] , \hbar L_\pi\right)$ ...Poisson homology \brian{finish}.
 \end{rmk}
 
+\subsection{The $q$-twisted FSS cocycle}
 
-\begin{thm} (Local chiral algebraic index theorem) For any $q \in D(0,1)^\times$ there is a commuting diagram of quasi-isomorphisms
+The last piece of the local chiral algebraic index theorem is to define a $q$-twisted analog of the cocycle of Feigin-Felder-Shoikhet. 
+It is a theorem of \cite{FeiginTsyganJacobi} that the Hochschild homology of the Weyl algebra on $n$ generators is one-dimensional.
+
+\begin{thm}[\cite{FeiginTsyganJacobi}]\label{theorem FT}
+There is an isomorphism $HH_*(D^\hbar_V, D^\hbar_V) \cong \CC[2n]$. 
+Moreover, a cycle representing this homology is given by the ``top fermion"
+\ben
+c_{V} = \sum_{\sigma \in S_{2n}} 1 \tensor t_{\sigma(1)} \tensor \cdots \tensor t_{\sigma(n)} \tensor \frac{\partial}{\partial t_{\sigma(n+1)}} \tensor \cdots \tensor \frac{\partial}{\partial t_{\sigma(2n)}} \in (D^\hbar_{V})^{\tensor (k+1)} .
+\een 
+\end{thm}
+
+The Feigin-Felder-Shoikhet cocycle is a representative for the dual of this element in Hochschild {\em cohomology}. 
+We summarize their result as follows. 
+The part about equivariance for $\Vect$ will be relevant later when we discuss how Gelfand-Kazhdan descent may be applied to formulate the global index theorem.
+
+\begin{thm}[\cite{FFS}] There is a $\Vect$-equivariant cocycle 
+\ben
+\tau_{V} : \Hoch (D^\hbar_V, D^\hbar_V) \to \CC[2 \dim (V)]
+\een
+satisfying $\tau_{V} (c_{V}) = 1$. 
+\end{thm}
+
+\begin{rmk}
+In \cite{FFS} they work in the symplectic case, but we are only interested in the case where the symplectic structure is a cotangent bundle.
+\end{rmk}
+
+The complex we are interested in is the $q$-twisted Hochschild homology of differential operators on $LV$. 
+We note that there is a map of algebras $\pi^0 : D^\hbar_{LV} \to D^\hbar_{z^0V} = D^\hbar_V$ that simply projects onto the zero mode $z^0V \subset LV$. 
+We consider the induced map of Hochschild complexes $\pi^0 : {\rm Hoch}(D^\hbar_{LV}, q) \to {\rm Hoch}(D^\hbar_{z^0 V}, 0)$ where the right-hand side is just the usual Hochschild complex of the Weyl algebra $D^\hbar_V$. 
+
+\begin{prop}
+For any $q \in D(0,1)^\times$ the composition
+\ben
+\tau_{LV}^q : {\rm Hoch}(D^\hbar_{LV}, q) \xto{\pi^0} {\rm Hoch}(D^\hbar_{z^0 V}, 0) \xto{\tau_{V}} \CC[2 \dim V] .
+\een
+is a quasi-isomorphism.
+\end{prop}
+
+This will follow from the following general lemma.
+Suppose $A = \oplus_N A^{(N)}$ is any $\ZZ$-graded unital algebra over $\CC$ such that there exists an element $H \in A$ with the property $[H,a] = N a$ if $a \in A^{(N)}$.
+For each $q \in D(0,1)^\times$ we define an automorphism that we abusively denote $q^{H} : A \to A$, sending $a \in A^{(N)}$ to $q^N a$. 
+As above, we give $A$ an interesting $A$-bimodule structure by the formula
+\ben
+a \cdot a' \cdot a'' = q(a) a a'',
+\een
+where we use the ordinary multiplication on the right hand side. 
+The resulting twisted Hochschild complex is denoted $\Hoch(A, q)$. 
+
+\begin{lem}
+The inclusion map $A^{(0)}\hookrightarrow A$ determines a canonicaly quasi-isomorphism
+\ben
+\Hoch (A^{(0)}, A^{(0)}) \xto{\simeq} \Hoch_*(A; q) .
+\een
+\end{lem}
+
+\begin{proof}
+The retraction $A^{(0)} \leftrightarrow A$ determines a splitting
+\[
+\Hoch_*(A,q) \cong \Hoch_*(A^{(0)},0) \oplus C,
+\]
+where $C$ is the subcomplex whose terms always have at least one entry not from $A^{(0)}$:
+\[
+C^\sharp = \bigoplus_{n \geq 0} \bigoplus_{i = 0}^n A \otimes \cdots \otimes A^{(\neq 0)} \otimes \cdots \otimes A[n],
+\]
+with $A^{(\neq 0)}$ in the $i$th slot. 
+We need to show $C$ is acyclic.
+
+We will do this by exhibiting an explicit chain homotopy.
+The differential is of the form $\d_{\Hoch} : C^i \to C^{i-1}$. 
+We define $\eta : C^{i-1} \to C^i$ by the following formula
+\ben
+\eta (a_1 \tensor \cdots \tensor a_i) = \sum_{j=1}^{i+1} a_1 \tensor \cdots \tensor 1_j \tensor \cdots \tensor a_i
+\een
+where $1_j$ means we put the unit in the $j$th slot of the tensor product. 
+
+We now show that $\eta$ is a null homotopy.
+Suppose that $a_1 \in \ne A^{(0)}$. 
+Then, we compute
+\ben
+\d_{\Hoch} \eta (a_1 \tensor \cdots \tensor a_i) 
+\een
+\end{proof}
+
+
+\begin{thm} (Local chiral algebraic index theorem) For any $q \in D(0,1)^\times$ the following diagram commutes
 \ben
 \xymatrix{
 \displaystyle \int_{E_q} \Obs^{\q,sm}_{V} \ar[r]^-{\pi_\infty}_-{\simeq} & \left( \Omega^{-*}(T^*V) [[\hbar]], \hbar L_\pi \right) \ar[d]^-{\int_{BV}}_-{\simeq} \\

@@ -231,12 +231,16 @@ The result for the quantum observables follows from the spectral sequence \brian
 
 We will denote $\cV_V = \Obs_V^\q(r)$, which is well-defined up to quasi-isomorphism by the preceding proposition. 
 This is the ``state space" of the higher dimensional holomorphic theory. 
+\brian{elude to OPE}
 
 \subsection{The sphere observables}
 
 We now provide a description of the value of the factorization algebra of observables of the $\beta\gamma$ system applied to another important class of open sets in $\CC^d$: neighborhoods of the $(2d-1)$-sphere $S^{2d-1} \subset \CC^d$. 
+Then, we study what structure the factorization product endows the operators on $S^{2d-1}$. 
 
-We first describe the precise open neighborhoods of the $(2d-1)$-sphere that we will consider.
+Heuristically speaking, the operators we will consider are supported on spheres.
+Since the factorization algebra only takes values on open sets, we need to fix small neighborhoods of the spheres in order to talk about observables.
+We describe the precise open neighborhoods of the $(2d-1)$-sphere that we will consider.
 Denote the closed $d$-disk centered at $w$ of radius $r$ by
 \ben
 \Bar{D}(w,r) = \left\{(z_1,z_2) \in \CC^2 \; | \; |z-w| \leq r^2\right\} . 
@@ -250,10 +254,8 @@ For any $\epsilon > 0$, the open set $N_{r,\epsilon}$ is a neighborhood of the c
 Note that when $d=1$, $N_{r,\epsilon}$ is simply an annulus centered at $w$. 
 
 Like in the case of a disk, it is convenient to get our hands on a class of simple observables supported on $N_{r,\epsilon}(w)$. 
-First, we describe linear functionals on the Dolbeualt complex of $N_{r,\epsilon}(w)$. 
-This will lead naturally to a description of linear observables supported on this neighborhood. 
-
-\brian{describe the complex $A_d$}
+We have the following general fact about linear functionals on the Dolbeualt complex of $N_{r,\epsilon}(w)$. 
+This lemma will allow us to describe linear observables supported on these neighborhoods. 
 
 \begin{lem}
 For any neighborhood $N_{r,\epsilon}(w)$ as above, the residue along the $(2d-1)$-sphere centered at $w$ of radius $r$, $S^{2d-1}_r(w)$, determines an embedding of topological dg vector spaces
@@ -266,7 +268,7 @@ i_{S^{2d-1}}(\alpha) : \omega \in \Omega^{0,*}(N_{r,\epsilon}(w)) \mapsto \oint_
 \een
 \end{lem}
 \begin{proof}
-This is a consequence of Stokes theorem. 
+This is a consequence of Stokes' theorem. 
 Suppose $\alpha = \dbar \alpha '$. 
 Then, for any $\omega \in \Omega^{0,*}(N_{r,\epsilon}(w))$ we have
 \ben
@@ -281,8 +283,8 @@ sending $\alpha \in A_{d} [d-1]$ to the functional
 \eta \in \Omega^{d,*}(N_{r,\epsilon}(w)) \mapsto \int_{S^{2d-1}_r(w)} \alpha \wedge \eta .
 \een
 
-These two embeddings allow us to provide a succinct description of the class of linear operators on $N_{r,\epsilon}(w)$ we will be mostly interested in. 
-Indeed, the linear embeddings above, determine a cochain map (that we proceed to denote by the same symbol):
+These two embeddings allow us to provide a succinct description of the class of linear operators on $N_{r,\epsilon}(w)$ we are interested in. 
+Indeed they determine a cochain map (that we proceed to denote by the same symbol):
 \ben
 i_{S^{2d-1}} : A_d \tensor \left(V^*[d-1] \oplus V\right) \to \left(\Omega^{0,*}(N_{r,\epsilon}(w)) \tensor V \oplus \Omega^{d,*}(N_{r,\epsilon}(w)) \tensor V^*[d-1] \right)^\vee \subset \Obs_V^{\cl}\left(N_{r,\epsilon}(w)\right).
 \een
@@ -317,27 +319,12 @@ i_{S^{2d-1}} : \sA_{V} \to \Obs^\q_V(N_{r,\epsilon}(w)) .
 \een
 We will refer to $\sA_V$ as the {\em quantum sphere observables}, or when there is no confusion, the sphere observables. 
 
-The cohomology of $A_d$ is concentrated in degrees $0$ and $d-1$. 
-Explicitly, one can represent the zeroeth cohomology as
-\ben
-H^0(A_d) = \CC[z_1,\ldots,z_d] .
-\een
-Now, let $\omega_{BM}(z,\zbar)$ be the Bochner-Martinelli kernel of type $(0,d-1)$ from above. 
-We can express the $(d-1)$st cohomology of $A_d$ as
-\ben
-H^{d-1}(A_d) = \CC[\partial_{z_1}, \cdots, \partial_{z_d}] \cdot \omega_{BM} 
-\een 
-That is, every element of $H^{d-1}(A_d)$ can be written as a holomorphic polynomial differential operator acting on $\omega_{BM}$. 
-Further, it is convenient to make the $U(d)$-equivariant identification 
-\be\label{U(d) identification}
- \CC[\partial_{z_1}, \cdots, \partial_{z_d}] \omega_{BM} \cong z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \ldots, z_d^{-1}],
- \ee
-which makes sense since $\omega_{BM}$ has $T^d \subset U(d)$-weight $(-1,\ldots,-1)$. 
-
 \subsubsection{The associative algebra associated to the sphere}
 
-So far we have not discussed the structure that the factorization product puts on the dg vector space $\sA_V$. 
+We now would like to discuss what happens when we study the factorization product on the observables supported on spheres. 
+This will endow the cochain complex $\sA_V^\hbar$ with the structure of an associative (really $A_\infty$) algebra. 
 To recover this structure, we will only be concerned with open sets that are neighborhoods of spheres, as in the previous section. 
+The factorization product is defined for any disjoint configurations of open sets. 
 The configurations of open sets we consider are given by nesting the neighborhoods of the form $N_{r,\epsilon}(w)$, where $w$ is a fixed center.
 
 For simplicity, we assume that our spheres and neighborhoods are all centered at $w=0$.
@@ -383,34 +370,31 @@ A fundamental feature of factorization algebras is that they push forward along 
 We can thus push forward the factorization algebra $\Obs^\q_V$ on $\CC^{d}\setminus \{0\}$ along $\pi$ to obtain a factorization algebra on $\RR_{>0}$. 
 To an open interval of the form $(r-\epsilon, r+\epsilon)\subset \RR_{>0}$ the factorization algebra assigns precisely the observables supported on $N_{r,\epsilon}$. 
 
-Lemma \ref{lem sphere alg} implies that the inclusion $\sA_V \hookrightarrow \Obs^\q(N_{r,\epsilon})$ induces a map of factorization algebras on $\RR_{>0}$:
+Lemma \ref{lem sphere alg} implies that there is a factorization algebra $\sF_{\sA_V}$ associated to $\sA_V$ and that the inclusion $\sA_V \hookrightarrow \Obs^\q(N_{r,\epsilon})$ induces a map of factorization algebras on $\RR_{>0}$:
 \ben
 \sF_{\sA_V} \to \pi_*(\Obs^\q_V) 
 \een
-where $\sF_{\sA_V}$ assigns, to every interval, the dg vector space $\sA_V$. 
-In particular $\sF_{\sA_V}$ is locally constant, and hence determines the structure of an associative (\brian{really} $A_\infty$) dg algebra on $\sA_V$. 
-
+The factorization algebra $\sF_{\sA_V}$ assigns to every interval the dg vector space $\sA_V$. 
+In particular $\sF_{\sA_V}$ is locally constant, and hence determines the structure of an $A_\infty$ algebra on $\sA_V$. 
 We would now like to identify this algebra structure. 
-To do this, note that we can view $\sA_V$ as the symmetric algebra on the following dg vector space
+
+We will proceed in two ways. 
+First, we will use the Moyal formula of Section \ref{??} as well as the explicit form of the propagator from Section \ref{?} to deduce the operator product expansion between cohomology classes of operators corresponding to $\sA_V$. 
+This will tell us what the (strict) associative algebra structure is on the cohomology $H^*(\sA_V)$. 
+Second, we will use the smoothed description of the observables to nail down the precise $A_\infty$ structure. 
+
+Note that we can view $\sA_V$ as the symmetric algebra on the following cochain complex
 \ben
 A_d \tensor (V^*[d-1] \tensor V) \oplus \CC \cdot \hbar .
 \een
-This dg vector space has the structure of a dg Lie algebra, with bracket given by
-\ben
-[\alpha \tensor v^*, \alpha \tensor v] = \hbar \<v^*, v\> \oint_{S^{2d-1}} \d^d z \; \alpha \wedge \alpha'  .
-\een
-All other brackets are determined by graded anti-symmetry.
-Moreover, the parameter $\hbar$ is central.
+This complex has the structure of a dg Lie algebra, with bracket given by
+\be\label{HV bracket}
+[\alpha \tensor v^*, \alpha \tensor v] = \hbar \<v^*, v\> \oint_{S^{2d-1}} \alpha \wedge \alpha'  \d^d z .
+\ee
+All other brackets are determined by graded anti-symmetry and declaring the parameter $\hbar$ is central.
 Denote this dg Lie algebra by $\sH_V$. 
 
-\begin{prop}
-There is a quasi-isomorphism of associative dg algebras
-\ben
-\sA_V \simeq U\left(\sH_V\right)
-\een
-where $U(-)$ is the universal enveloping algebra. 
-The associative dg algebra structure on the left-hand side is determined by the factorization product as in Lemma \ref{lem sphere alg} and the discussion above.
-\end{prop}
+Our main result is that the $A_\infty$ algebra structure on $\sA_V$ endowed by the factorization product is equivalent to the universal enveloping algebra $U(\sH_V)$ of the dg Lie algebra $\sH_V$.
 
 \begin{rmk}
 If $(\fg, \d, [-,-])$ is a dg Lie algebra its universal enveloping algebra is defined explicitly by 
@@ -420,37 +404,100 @@ U(\fg) = {\rm Tens}(\fg) / (x \tensor y - (-1)^{|x||y|} y \tensor x - [x,y]) .
 It is immediate to check that the differential $\d$ descends to one on $U(\fg)$, giving $U(\fg)$ the structure of an associative dg algebra.
 \end{rmk}
 
-\begin{proof}
-We have written down a map of factorization algebras $\sF_{\sA_V} \to \pi_*(\Obs_V^\q)$, where $\sF_{\sA_V}$ is the locally constant factorization algebra that assigns the cochain complex $\sA_V$ to every interval, and whose factorization product is induced from $\pi_*(\Obs_V^\q)$. 
+\subsubsection{Using the Moyal formula}
+
+As eluded to before, we now identify the algebra structure on the cohomology of $\sA_V$
+induced by the map of factorization algebras $\sF_{\sA_V} \to \pi_*(\Obs_V^\q)$, where $\sF_{\sA_V}$ is the locally constant factorization algebra that assigns the cochain complex $\sA_V$ to every interval.
 
 Let $\ul{U(\sH_V)}$ be the locally constant factorization algebra on $\RR_{>0}$ based on the associative algebra $U(\sH_V)$. 
-We will write down an explicit quasi-isomorphism of locally constant factorization algebras
+We will write down an explicit isomorphism of locally constant factorization algebras
 \ben
-\Phi : \ul{U(\sH_V)} \to \sF_{\sA_V},
+\Phi : \ul{U(H^*\sH_V)} \to H^*\sF_{\sA_V},
 \een
 implying the result. 
 
 By Poincar\'{e}-Birkoff-Witt, the dg vector spaces $U(\sH_V)$ and $\sA_V$ are isomorphic. 
 Therefore, if $I \subset \RR_{>0}$ is an interval, we define $\Phi(I)$ to be the identity map. 
-We also need to take into account a higher operation. 
+Thus, it suffices to show that the associative algebra structure on the spherical observables agrees with that of $U(\sH_V)$ in cohomology.
 
-If $I_1,I_2$ are two intervals, consider their disjoint union $I_1 \sqcup I_2 \subset \RR_{>0}$. 
-We define
-\ben
-\Phi(I_1 \sqcup I_2) : U(\sH_V) \tensor U({\sH_V}) \to \sF_{\sA_V} (I_1 \sqcup I_2) 
-\een
+%We also need to take into account a higher operation. 
 
-We must explicitly compute the factorization product for certain observables in $\pi_*(\Obs_V^\q)$.
+%If $I_1,I_2$ are two intervals, consider their disjoint union $I_1 \sqcup I_2 \subset \RR_{>0}$. 
+%We define
+%\ben
+%\Phi(I_1 \sqcup I_2) : U(\sH_V) \tensor U({\sH_V}) \to \sF_{\sA_V} (I_1 \sqcup I_2) 
+%\een
+
+We turn to an explicit calculation of factorization product for observables in $\pi_*(\Obs_V^\q)$.
+If $\sO, \sO' \in U(\sH_V)$ then we can compute the commutator $[\sO,\sO']$ in the factorization algebra as follows.
+For $i = 1,2,3$ let $\epsilon_i, r_i > 0$ be such that 
 \ben
-[\cO_{\gamma, \alpha_1}(0;v^*), \cO_{\beta, \alpha_2}(0;v)] = \cO_{\gamma, \alpha_1}(0;v^*) \star \cO_{\beta, \alpha_2}(0;v) - \cO_{\beta,\alpha_2}(0;v) \star \cO_{\gamma, \alpha_1}(0;v^*) .
+\epsilon \leq \epsilon_1 < r_1 \leq \epsilon_2 < r_2 \leq \epsilon_3 < r_3 \leq r
+\een 
+and consider the configurations
+\ben
+i_{12} : N_{r_1, \epsilon_1} \sqcup N_{r_2, \epsilon_2} \hookrightarrow N_{r, \epsilon}
 \een
-We will compute the factorization product using the explicit form of the propagator of the $\beta\gamma$ system computed in Section \ref{}. 
-The full propagator is an element
+and
+\ben
+i_{23} :  N_{r_2, \epsilon_2} \sqcup N_{r_3, \epsilon_3} \hookrightarrow N_{r, \epsilon}
+\een
+in $\CC^\d \setminus \{0\}$. 
+If $I_i = (r_i - \epsilon_i, r_i + \epsilon$ and $I = (r- \epsilon, r+\epsilon)$, these correspond to the configurations $i_{12} : I_1 \sqcup I_2 \hookrightarrow I$ and $i_{23} : I_2 \sqcup I_3 \hookrightarrow I$ in $\RR_{>0}$, respectively. 
+The induced factorization structure maps are
+\be\label{starprods}
+\begin{array}{ccc}
+\star_{12} & : & \Obs_V^\q(N_{r_1, \epsilon_1}) \tensor \Obs_V^\q( N_{r_2, \epsilon_2}) \to \Obs_V^\q(N_{r, \epsilon}) \\
+\star_{23} & : & \Obs_V^\q(N_{r_2, \epsilon_2}) \tensor \Obs_V^\q( N_{r_3, \epsilon_3}) \to \Obs_V^\q(N_{r, \epsilon}) .
+\end{array}
+\ee
+The commutator $[\sO, \sO']$ is computed via the formula
+\be\label{commutator}
+\sO \star_{12} \sO' - \sO' \star_{23} \sO .
+\ee
+In the notation $\sO \star_{12} \sO'$ we view $\sO$ as having support in $N_{r_1,\epsilon_1}$ and $\sO'$ as having support in $N_{r_2,\epsilon_2}$.
+
+We compute this commutator at the level of cohomology.
+The cohomology of $A_d$ is concentrated in degrees $0$ and $d-1$. 
+Explicitly, one can represent the zeroeth cohomology as
+\ben
+H^0(A_d) = \CC[z_1,\ldots,z_d] .
+\een
+Now, let $\omega_{BM}(z,\zbar)$ be the Bochner-Martinelli kernel of type $(0,d-1)$ from above. 
+We can express the $(d-1)$st cohomology of $A_d$ as
+\ben
+H^{d-1}(A_d) = \CC[\partial_{z_1}, \cdots, \partial_{z_d}] \cdot \omega_{BM} 
+\een 
+That is, every element of $H^{d-1}(A_d)$ can be written as a holomorphic polynomial differential operator acting on $\omega_{BM}$. 
+Further, it is convenient to make the $U(d)$-equivariant identification 
+\be\label{U(d) identification}
+ \CC[\partial_{z_1}, \cdots, \partial_{z_d}] \omega_{BM} \cong z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \ldots, z_d^{-1}],
+ \ee
+which makes sense since $\omega_{BM}$ has $T^d \subset U(d)$-weight $(-1,\ldots,-1)$. 
+
+Recall that $\sH_V = A_d \tensor (V^*[d-1] \oplus V)$.
+It follows from above that the cohomology of $\sH_V$ is concentrated in degrees $-(d-1), 0, d-1$. 
+The non-trivial Lie algebra structure on $\sH_V$ comes from the ordinary symplectic pairing on this space, as we've already discussed. 
+
+Suppose $v,v^*$ are in $V,V^*$, respectively and $\alpha,\alpha' \in A_d$.
+The corresponding classical observables $\cO_{\gamma,\alpha}(0;v^*)$ and $\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'}(0;v)$ have cohomological degrees
+\begin{align*}
+\left|\cO_{\gamma,\alpha}(0;v^*)\right| = |\alpha| - d + 1 \\
+\left|\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'}(0;v)\right| = |\alpha'| .
+\end{align*}
+In cohomology, the only nontrivial degrees of $\alpha,\alpha'$ that survive are $0,d-1$. 
+Suppose that $|\alpha| = 0$.
+Then, the only way we could obtain a nontrivial commutator between the operators above is if $|\alpha'| = d-1$. 
+
+We will compute the factorization product in (\ref{commutator}) using our explicit formula for the propagator of the $\beta\gamma$ system computed in Section \ref{?}.
+We diverge a moment to recall how this construction works.
+The main idea is that the propagator allows us to promote a classical observable to a quantum observable.
+Recall, the full propagator is an element
 \ben 
 P (z,w) = \lim_{L\to \infty} \lim_{\epsilon \to 0} P_{\epsilon < L}(z,w) \in \Bar{\sE}_V(\CC^d) \Hat{\tensor} \Bar{\sE}_V(\CC^d)
 \een
 where the $\Bar{\sE}_V(\CC^d)$ denotes the space of distributional sections on $\CC^d$.
-Explicitly, we found 
+Explicitly, we showed that 
 \ben
 P(z,w) = C_d \;\omega_{BM}(z,w) 
 \een
@@ -489,14 +536,78 @@ If $f$ is any any function in $C^\infty(U)$, where $U$ is a domain in $\CC^d$, t
 \ben
 f(z,\zbar) = \int_{w \in \partial U} \d^d w \; f(w) \; \omega_{BM}(z,w) - \int_{w \in D} \d^d w \; (\dbar f)(w) \wedge \omega_{BM}(z,w) .
 \een 
+In particular, if $f(z,\zbar)$ is holomorphic the second term drops out and we get the familiar expression for the higher dimensional residue.
 
-\end{proof}
+We can now perform the main calculation. 
+Recall, we have fixed observables $\cO_{\gamma, \alpha}(0;v^*)$ and $\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v)$.
+In the notation of Equation (\ref{starprods}), we have
+\bestar
+\cO_{\gamma, \alpha}(0;v^*) \star_{12} \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v) & = &  \cO_{\gamma, \alpha}(0;v^*) \cdot \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v) \\ & & + \hbar \<v, v^*\>\oint_{|z^1| = r_1} \oint_{|z^2| = r_2} \alpha(z^1) \d^d z^1 \alpha'(z^2) P(z^1,z^2) \\ & = & \cO_{\gamma, \alpha}(0;v^*) \cdot \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v) \\ & & + \hbar \<v, v^*\> \oint_{|z^1| = r_1} \oint_{|z^2| = r_2}  \alpha(z^1) \alpha'(z^2) \d^d z^1 \omega_{BM}(z^1,z^2) \\ & = & \cO_{\gamma, \alpha}(0;v^*) \cdot \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v)  +  \hbar \<v, v^*\> \oint_{|z| = r_1} \alpha(z) \alpha'(z) \d^d z \\ & & +  \hbar \<v, v^*\> \oint_{|z^1| = r_1} \int_{z^2 \in D(0, r_2)} \; \alpha(z^1) (\dbar \alpha')(z^2) \omega_{BM}(z^1,z^2) . 
+\eestar 
+In the first line we have used the Moyal formula.
+In the second line we have used the explicit form of the propagator. 
+In the third line we have used the higher residue formula. 
+Finally, since we are only interested in the cohomology class of the product, we can assume that $\alpha,\alpha'$ are both holomorphic. 
+In particular, the third term in the last line vanishes. 
+The calculation for the $\star_{23}$ product is similar. 
+We conclude that in cohomology the commutator between the quantum observables $\cO_{\gamma, \alpha}(0;v^*)$ and $\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v)$ is precisely
+\ben
+\# \hbar \<v, v^*\> \oint_{|z| = r_1} \alpha(z) \alpha'(z) \d^d z .
+\een
+This agrees with the commutator $(\ref{HV bracket})$ in $\sH_V$. 
+The extension to commutators between non-linear observables is completely analogous. 
+Thus, we conclude that as associative graded algebras one as 
+\ben
+U(H^* \sH_V) \cong H^* \sA_V .
+\een
 
+\subsubsection{Using smoothed observables}
 
+We now provide a refined description of the algebra of sphere operators, yet this approach may seem more indirect. 
+It relies on the existence of the subfactorization algebra of $\Obs^\q_{V}$ given by the {\em smoothed observables}. 
+\brian{have we already encountered this?}
 
+The linear smoothed observables, equipped with the linearized BRST differential, on any $U \subset \CC^d$ form the subcomplex 
+\ben
+\Omega^{d,*}_c(U) \tensor V^*[d] \oplus \Omega^{0,*} (U) \tensor V [1] \subset \Obs^{\cl, sm}_V(U) .
+\een
+Using the $P_0$ bracket restricted to the linear observables, we can form the central extension of dg Lie algebras
+\ben
+0 \to \CC [-1] \cdot \hbar \to \sH'_V(U) \to \Omega^{d,*}_c(U) \tensor V^*[d] \oplus \Omega^{0,*} (U) \to 0 .
+\een
+This is similar to the construction of the ordinary Heisenberg algebra (such as $\sH_V$ above).
+For classical linear observables the Lie bracket is defined by $[\cO, \cO'] = \hbar \{\cO, \cO'\}$, where $\{-,-\}$ is the $P_0$ bracket. 
+Since the $P_0$ bracket is degree $+1$ to make this a dg Lie algebra we must put $\hbar$ in degree $+1$ as well.
+Note that this construction works well as we vary the open set $U$. 
+Namely, $U \mapsto \sH'_V(U)$ is a cosheaf of Lie algebras on $\CC^d$. 
+An elementary observation identifies the smoothed quantum observables with the factorization enveloping algebra of $\sH'_V$:
+\ben
+\Obs^{\q,sm}_{V} \cong \UU(\sH_V^{sm}) .
+\een
+Indeed, the right hand side assigns to each open $U$ the cochain complex $\clieu_*(\sH_V'(U)) = \left(\Sym(\sH_V'(U)), \dbar + \d_{CE}\right)$. 
+One checks directly that $\d_{CE}$ is precisely the BV Laplacian $\hbar \Delta$. 
 
+We now introduce the following algebra, which is a deformation of the dg associative algebra $U(\sH_V)$ from the previous section.
+Let $\Tilde{\sH}_V$ denote the following extension of dg Lie algebras
+\ben
+0 \to \CC \cdot \hbar \to \Tilde{\sH}_V \to A_d \tensor (V^*[d-1] \tensor V) \to 0
+\een
+determined by the $2$-cocycle
+\ben
+(\alpha \tensor v^* , \alpha' \tensor v) \mapsto \hbar \<v,v^*\> \oint_{S^{2d-1}} \alpha \alpha' \d^d z + \hbar \<v, v^*\> \oint_{z \in S^{2d-1}} \alpha(z) \d^d z \int_{w \in D} \dbar \alpha' (w) \omega_{BM}(z,w)  + (\alpha \leftrightarrow \alpha') .
+\een 
+%To check that this is a cocycle, note that by the residue formula one has 
+%\ben
+%\oint_{z \in S^{2d-1}} \dbar \alpha(z) \d^d z \int_{w \in D} \dbar \alpha'(w) \omega_{BM}(z,w) = ...
+%\een
+\brian{call $\Tilde{A}_V$ the algebra with commutator that includes the error term in the residue}.
 
-
+\ben
+\xymatrix{
+\Obs^{\q, sm}(N_{r,\epsilon}) \ar@{^{(}->}[r] & \Obs^\q_V(N_{r,\epsilon}) \\
+\sA_V \ar@{.>}[u] \ar[ur]_-{i_{S^{2d-1}}} .
+}
+\een
 
 \subsubsection{The disk as a module}
 
@@ -745,6 +856,8 @@ The observables of the $\beta\gamma$ system comes naturally equipped with null-h
 
 So far, in Section \brian{ref} we have described the space of local operators on the $d$-disk of the $\beta\gamma$ system with values in a vector space $V$. 
 For disks centered at $z \in \CC^d$ there are two main classes of operators $O_\gamma (\vec{n}, z ; v^*)$ and $O_{\beta}(\vec{m}, z ; v)$ where $\vec{n} = (n_1,\ldots,n_d) \in (\ZZ_{\geq 0})^d$, $(m_1,\ldots,m_d) \in (\ZZ_{\geq 1})^d$, $v \in V$, and $v^* \in V$. 
+
+
 
 
 \end{document}

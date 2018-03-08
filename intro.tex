@@ -1,0 +1,74 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\title{Introduction}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\title{Higher dimensional holomorphic quantum field theory}
+
+\begin{document}
+\maketitle
+
+\begin{thm}
+Let $\sE$ be the fields of any holomorphically translation invariant field theory on $\CC^d$ with classical interaction $I \in \oloc(\sE)$.  
+Then, there exists a one-loop prequantization $\{I[L] \; | \; L > 0\}$ of $I$ involving no counterterms. 
+Moreover, we can pick the family $\{I[L]\}$ to be holomorphically translation invariant.
+\end{thm}
+
+\begin{thm}
+Let $d \geq 1$, and let $X$ be a K\"{a}hler manifold. 
+For every trivialization of 
+\ben
+\ch_{d+1} (T^{1,0}X) \in H^{d+1}(X ; \Omega^{d+1}_{cl}) \hookrightarrow H^{2d+2}_{dR}(X),
+\een
+there exists a unique (up to homotopy) cotangent quantization of the holomorphic $\sigma$-model of maps $\CC^d \to X$ that is compatible with the action of translations and the unitary group $U(d)$ on $\CC^d$. 
+\end{thm}
+
+\begin{thm}
+(Chiral algebraic index theorem)
+Let $q \in D(0,1)^\times$, $X$ be a compact complex manifold, and $\alpha$ a trivialization of $\ch_2(TX) \in H^2(X , \Omega^2_{cl})$, so that the factorization algebra $\Obs^\q_{X,\alpha}$ of quantum observables of the two-dimensional holomorphic $\sigma$-model from $E_q$ to $X$ is defined (Theorem \ref{thm curved quantization}). 
+Then:
+\begin{enumerate}
+\item there is quasi-isomorphism of sheaves of cochain complexes on $X$
+\ben
+\Phi^q : {\rm Hoch}(D_{LX^{alg}}^{\hbar} ; q) \xto{\simeq} \int_{E_q} \Obs^\q_{X,\alpha} ;
+\een 
+\item there is a $q$-twisted trace map
+\ben
+{\rm Tr}^q_X : {\rm Hoch}(D_{LX^{alg}}^{\hbar} ; q) \to \CC[[\hbar,\hbar^{-1}];
+\een
+\item if $$1 \in H^* \int_{E_q} \Obs^q_{X,\alpha} \cong HH^*(D_{LX^{alg}}^{\hbar} ; q)$$ denotes the unit observable, then in cohomology the trace map satisfies
+\ben
+{\rm Tr}^q_X(1) = \int_X {\rm Wit}(X , q) .
+\een
+\end{enumerate}
+\end{thm}
+
+\begin{thm}
+Suppose $\sE$ is a free holomorphic theory on a complex $d$-fold $X$ that is invariant for holomorphic diffeomorphisms. 
+Then, associated to $\sE$ there is a Gelfand-Fuks cohomology class
+\ben
+\alpha_{\sE} \in H^{2d+1}_{GF} (\W_d),
+\een
+and a map of factorization algebras on $X$
+\ben
+\Phi : \UU_{\alpha_{\sE}} (\sT_X) \to \Obs_{\sE}^\q .
+\een
+In other words, an extension of $\sT_X$ parametrized by the class $\alpha_\sE$ is a quantum symmetry of $\sE$.
+\end{thm}
+
+\begin{thm} The $A_\infty$-algebra of operators on $S^3 \subset \CC^2 \setminus \{0\}$ supported on the boundary of the twist of the $\cN = 1$ supersymmetric gauge theory on the $5$-manifold
+\ben
+\left(\CC^2 \setminus \{0\}\right) \times \RR_{\geq 0}
+\een
+is equivalent to the enveloping algebra $U^{\rm Lie} (\Hat{A_2 \tensor \fg})$, where the central extension is associated to the element
+\ben
+\ch_{3}(\fg^{ad}) \in \Sym^3(\fg^\vee)^\fg .
+\een
+\end{thm}
+
+\end{document}
