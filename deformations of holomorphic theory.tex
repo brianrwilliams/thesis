@@ -12,20 +12,167 @@
 
 \begin{document}
 
-\subsection{Holomorphically translation invariant theories}
+The goal of this section is to define the notion of a holomorphic field theory. 
 
-We restrict ourselves to considering theories on the manifold $\CC^d = \RR^{2n}$ equipped with its standard complex structure. 
-Fix a holomorphic vector bundle $V$ on $\CC^d$ and an identification of bundles 
+\subsection{The definition of a holomorphic theory}
+
+We give a general definition of a classical holomorphic theory on a general complex manifold $X$ of complex dimension $d$.
+We start with the definition of a {\em free} holomorphic field theory. 
+After that we will go on to define what an interacting holomorphic theory is.
+
+The fields of any theory are always expressed as sections of some $\ZZ$-graded vector bundle.
+Here, the $\ZZ$-grading is the cohomological, or BRST, grading of the theory.
+For a holomorphic theory we take this graded vector bundle to be holomorphic.  
+By a {\em holomorphic} $\ZZ$-graded vector bundle we mean a $\ZZ$-graded vector bundle $
+V = \oplus_i V^i$ such that each graded piece $V^i$ is a holomorphic vector bundle. 
+Thus, the data we start with is the following:
+
+\begin{itemize}
+\item[(1)] a $\ZZ$-graded holomorphic vector bundle $V^* = \oplus_i V^i [-i]$, so that the finite dimensional holomorphic vector bundle $V^i$ is in cohomological degree $i$. 
+\end{itemize}
+
+A free classical theory is made up of a space of fields as above together with the data of a linearized BRST differential $Q^{BRST}$ and a symplectic pairing. 
+Ordinarily, the BRST operator is a differential operator on the vector bundle defining the fields. 
+For the class of theories we are considering, we want this operator to be holomorphic. 
+
+If $E$ and $F$ are two holomorphic vector bundles on $X$, we can speak of holomorphic differential operators between $E$ and $F$. 
+First, note that the Hom-bundle ${\rm Hom}(E,F)$ inherits a natural holomorphic structure. 
+By definition, a holomorphic differential operator of order $m$ is a linear map
+\ben
+D : \Gamma^{hol}(X ; E) \to \Gamma^{hol}(X ; F)
+\een
+such that, with respect to a holomorphic coordinate chart $\{z_i\}$ on $X$, $D$ can be written as
+\be\label{local holomorphic}
+D|_{\{z_i\}} = \sum_{|I| \leq m} a_I (z) \frac{\partial^{|I|}}{\partial z_I}
+\ee
+where $a_I(z)$ is a local holomorphic section of ${\rm Hom}(E,F)$.
+Here, the sum is over all multi-indices $I = (i_1,\ldots, i_d)$ and 
+\ben
+\frac{\partial^{|I|}}{\partial z_I} := \frac{\partial^{i_k}}{\partial z_k^{i_k}} . 
+\een 
+The length is defined by $|I| := i_1 + \cdots + i_d$. 
+
+The most basic example of a holomorphic differential operator is the $\partial$ operator which, for each $1 \leq \ell \leq d$, is a holomorphic differential operator from $E = \wedge^\ell T^{1,0*}X$ to $F = \wedge^{\ell+1} T^{1,0*}X$. 
+Locally, of course, it has the form
+\ben
+\partial = \sum_{i = 1}^{d} (\d z_i \wedge (-)) \frac{\partial}{\partial z_i},
+\een
+where $\d z_i \wedge (-)$ is the vector bundle homomorphism $\wedge^\ell T^{1,0*}X \to \wedge^{\ell+1} T^{1,0*}X$ sending $\alpha \mapsto \d z_i \wedge \alpha$. 
+
+The next piece of data we fix is:
+\begin{itemize}
+\item[(2)] a holomorphic differential operator 
+\ben
+Q^{hol} : V \to V[-1]
+\een
+of cohomological degree $+1$. 
+\end{itemize}
+
+Finally, to define a free theory we need the data of a symplectic pairing. 
+For reasons to become clear in a moment, we must choose this pairing to have a strange cohomological degree. 
+The last piece of data we fix is:
+\begin{itemize}
+\item[(3)] a pairing 
+\ben
+(-,-)_V : V \tensor V \to K_{X}[d-1]
+\een
+such that for each $z \in X$ the induced pairing on the fibers $(-,-)_V|_{z}$ is non-degenerate.
+Here $K_X$ is the holomorphic canonical bundle on $X$. 
+\end{itemize}
+
+The definition of the fields of an ordinary field theory are the {\em smooth} sections of the vector bundle $V$. 
+In our situation this is a silly thing to do since we lose all of the data of the complex structure we used to define the objects above. 
+The more natural thing to do is take the {\em holomorphic} sections of the vector bundle $V$. 
+By construction, the operator $Q^{hol}$ and the pairing $(-,-)_V$ are defined on holomorphic sections, so on the surface this seems reasonable. 
+\brian{what should I say the problem is with doing things in the analytic category?}
+
+The solution to this problem is in the existence of a resolution for the holomorphic sections of a vector bundle by smooth sections of bundles. 
+Given any holomorphic vector bundle $E$ we can define it's {\em Dolbeualt complex} $\Omega^{0,*}(X , E)$ with it's Dolbeualt operator 
+\ben
+\dbar : \Omega^{0,p}(X, E) \to \Omega^{0,p+1}(X, E) .
+\een
+Here, $\Omega^{0,p}(X, E)$ denotes sections of the vector bundle
+\ben
+\Wedge^p T^{0,1*} X \tensor E
+\een
+and $\dbar$ is defined in the usual way \brian{recall this?}.
+
+Using this construction, we take the fields of our free theory to be the complex
+\ben
+\sE = \left(\Omega^{0,*}(X, E), \dbar + Q^{hol}\right) .
+\een
+The operator $\dbar + Q^{hol}$ is the total linearized BRST operator.
+By assumption we have $\dbar Q^{hol} = Q^{hol} \dbar^*$ so that $(\dbar + Q^{hol})^2 = 0$ and so the fields still define a complex. 
+The $(-1)$-shifted symplectic pairing is obtained by composition of the pairing $(-,-)_V$ with integration on $K_X$. 
+The thing to observe here is that $(-,-)_V$ extends to the Dolbeualt complex in a natural way: we simply combine the wedge product of forms with the pairing on $V$.
+The $(-1)$-shifted pairing $\omega$ on $\sE$ is defined by the diagram
+\ben
+\xymatrix{
+\sE \tensor \sE \ar[r]^-{(-,-)_V} \ar@{.>}[dr]_-{\omega} & \Omega^{0,*}(X , K_X) [d-1] \ar[d]^-{\int_X} \\
+& \CC[-1] .
+}
+\een
+
+We arrive at the following definition.
+
+\begin{dfn}
+A {\em free holomorphic theory} on a complex manifold $X$ defined by the data $(V, Q^{hol}, (-,-)_V)$ as in (1), (2), (3) has fields $\Omega^{0,*}(X , V)$, linearized BRST differential $\dbar + Q^{hol}$, and $(-1)$-shifted symplectic structure $\omega$ as above.
+\end{dfn}
+
+It is immediate to check that this defines a classical free theory in the ordinary sense as in Definition \ref{?} of \cite{CG}. 
+The usual prescription for writing down the associated action functional holds in this case.
+If $\varphi \in \Omega^{0,*}(X , V)$ denotes a field the action is
+\ben
+S(\varphi) = \int_X \left(\varphi, (\dbar + Q^{hol}) \varphi)\right)_V .
+\een
+
+The first example we explain is related to the subject of Chapter \ref{chap holsig} and will serve as the fundamental example of a holomorphic theory. 
+
+\begin{eg}\label{eg bg affine} {\em The free $\beta\gamma$ system}.
+Suppose that 
+\ben
+V = \ul{\CC} \oplus K_{X} [d - 1] .
+\een
+Let $(-,-)_V$ be the pairing
+\ben
+(\ul{\CC} \oplus K_{X}) \tensor (\ul{\CC} \oplus K_{X}) \to K_{X} \oplus K_{X} \to K_{X} 
+\een 
+sending $(\lambda, \mu) \tensor (\lambda',\mu') \mapsto (\lambda \mu', \lambda'\mu) \mapsto \lambda\mu' + \lambda' \mu$.
+In this example we set $Q^{hol} = 0$. 
+One immediately checks that this is a holomorphic free theory as above.
+The space of fields can be written as
+\ben
+\sE = \Omega^{0,*}(X) \oplus \Omega^{d,*}(X)[d - 1] .
+\een 
+We write $\gamma \in \Omega^{0,*}(X)$ for a field in the first component, and $\beta \in \Omega^{d,*}(X)[d - 1]$ for a field in the second component. 
+The action functional reads
+\ben
+S(\gamma + \beta, \gamma'+\beta') = \int_{X} \beta \wedge \dbar \gamma' + \beta' \wedge \dbar \gamma .
+\een 
+When $d = 1$ this reduces to the ordinary chiral $\beta\gamma$ system from conformal field theory \brian{ref}. 
+We will discuss this higher dimensional version further in Section \brian{}.
+For instance, we will see how this theory is the starting block for constructing general holomorphic $\sigma$-models. 
+\end{eg}
+
+
+
+\subsection{Holomorphically translation invariant theories on $\CC^d$}
+
+We first consider the affine manifold $\CC^d = \RR^{2n}$ equipped with its standard complex structure. 
+Later on we will give a definition of a holomorphic theory on a general complex manifold.
+Fix a holomorphic vector bundle $V$ on $\CC^d$.
+
+and an identification of bundles 
 \ben
 V \cong \CC^d \times V_0
 \een
 where $V_0$ is the fiber of $V$ at $0 \in \CC^d$. 
 We want to consider a classical theory with space of fields given by $\Omega^{0,*}(\CC^d, V)$. 
 Moreover, we want this theory to be invariant with respect to the group of translations on $\CC^d$. 
-Per usual, it is easiest to work with the corresponding Lie algebra of translations. 
-Moreover, using the complex structure, we choose a presentation for this Lie algebra as
+Per usual, it is best to work with the corresponding Lie algebra of translations. 
+Using the complex structure, we choose a presentation for this Lie algebra as
 \ben
-\CC^d \cong {\rm span} \left\{\frac{\partial}{\partial z_i}, \frac{\partial}{\partial \zbar_i}\right\}_{1 \leq i \leq d}.
+\CC^{2d} \cong {\rm span}_\CC \left\{\frac{\partial}{\partial z_i}, \frac{\partial}{\partial \zbar_i}\right\}_{1 \leq i \leq d}.
 \een
 
 The first thing we need to do is fix a $(-1)$-shifted symplectic pairing.
@@ -220,7 +367,7 @@ Enhancing this to a definition of a holomorphic classical BV theory will be imme
 
 Fix a complex manifold $X$, of complex dimension $d$.
 The starting data of a local Lie algebra on $X$ is a $\ZZ$-graded vector bundle $L$ on $X$. 
-By a {\em holomorphic} $\ZZ$-graded vector bundle we mean a $\ZZ$-graded vector bundle $L = \oplus_i L^i$ such that each graded piece $L^i$ is a holomorphic vector bundle. 
+
 
 If $E$ and $F$ are two holomorphic vector bundles on $X$, we can speak of holomorphic differential operators between $E$ and $F$. 
 First, note that the Hom-bundle ${\rm Hom}(E,F)$ inherits a natural holomorphic structure. 

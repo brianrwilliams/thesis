@@ -1,0 +1,270 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc,through}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{pgffor}
+
+\title{One-loop renormalization}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+
+\begin{document}
+\maketitle
+
+In this section we study the renormalization of holomorphically translation invariant field theories on $\CC^d$ for any $d \geq 1$. 
+We start with a classical interacting holomorphic theory on $\CC^d$ and consider one-loop homotopy RG flow from some finite scale $\epsilon$ to scale $L$.
+That is, we consider the sum over graphs of genus zero and one where at each vertex we place the holomorphic interaction.
+To obtain a prequantization of a classical theory one must make sense of the $\epsilon \to 0$ limit of this construction. 
+In general, this involves introducing a family of counterterms.
+Our main result is that for a holomorphic theory no such counterterms are required, and one obtains a well-defined $\epsilon \to 0$ limit. 
+
+We can write the fields of a holomorphic theory on $\CC^d$ as
+\ben
+\sE = \left(\Omega^{0,*}(\CC^d, V), \dbar + Q^{hol}\right)
+\een
+where $V$ is a graded holomorphic vector bundle and $Q^{hol}$ is a holomorphic differential operator.
+
+Since the theory is holomorphically translation invariant we have an identification $\Omega^{0,*}(\CC^d , V) \cong \Omega^{0,*}(\CC^d) \tensor_\CC V_0$ where $V_0$ is the fiber of $V$ over $0 \in \CC^d$.
+Further, we can write the $(-1)$-shifted symplectic structure defining the classical BV theory in the form
+\ben
+\omega(\alpha \tensor v, \beta \tensor w) = (v,w)_{V_0} \int \d^d z (\alpha \wedge \beta)
+\een
+where $(-,-)_{V_0}$ is a degree $(d-1)$-shifted \brian{check} pairing on the finite dimensional vector space $V_0$. 
+
+\subsection{Holomorphic gauge fixing}
+
+To begin the process of renormalization we must fix the data of a gauge fixing operator. 
+A gauge fixing operator is an operator on fields
+\ben
+Q^{GF} : \sE \to \sE[1]
+\een
+of cohomological degree $-1$ such that $[Q, Q^{GF}]$ is a generalized Laplacian on $\sE$ where $Q$ is the linearized BRST operator. 
+For a full definition of this see Definition ?? \ref{CG}. 
+
+For holomorphic theories there is a convenient choice for a gauge fixing operator. 
+To construct it we fix the standard flat metric on $\CC^d$. 
+Doing this, we let $\dbar^*$ be the adjoint of the operator $\dbar$.
+Using the coordinates on $(z_1,\ldots, z_d) \in \CC^d$ we can write this operator as
+\ben
+\dbar^* = \sum_{i=1}^d \frac{\partial}{\partial (\d \zbar_i)} \frac{\partial}{\partial z_i} .
+\een
+Equivalently $\frac{\partial}{\partial (\d \zbar_i)}$ is equal to contraction with the anti-holomorphic vector field $\frac{\partial}{\partial \zbar_i}$. 
+The operator $\dbar^*$ extends to the complex of fields via the formula
+\ben
+Q^{GF} = \dbar^* \tensor {\rm id}_V : \Omega^{0,*}(X , V) \to \Omega^{0,*-1}(X, V),
+\een
+We claim that this is a gauge fixing operator for our holomorphic theory.
+Indeed, since $Q^{hol}$ is a translation invariant holomorphic differential operator we have
+\ben
+[\dbar + Q^{hol}, Q^{GF}] = [\dbar,\dbar^*] \tensor \id_{V} .
+\een
+The operator $[\dbar,\dbar^*]$ is simply the Dolbeualt Laplacian on $\CC^d$, which is certainly a generalized Laplacian.
+In coordinates it is
+\ben
+[\dbar,\dbar^*] = -\sum_{i=1}^d \frac{\partial}{\partial \zbar_i}\frac{\partial}{\partial z_i} 
+\een
+
+By definition, the heat kernel is the dual
+\brian{check factor}
+
+
+Pick a basis $\{e_i\}$ of $V_0$ and let 
+\ben
+{\bf C}_{V_0} = \sum_{i,j} \omega_{ij} (e_i \tensor e_j) \in V_0 \tensor V_0
+\een
+be the quadratic Casimir.
+Here, $(\omega_{ij})$ is the inverse matrix to the pairing $(-,-)_{V_0}$. 
+The regularized heat kernel then takes the form
+\ben
+K_{\epsilon}(z,w) = K^{an}(z,w) \cdot {\bf C}_{V_0}
+\een
+
+\begin{lem} 
+If $\Gamma$ is a tree then $\lim_{\epsilon \to 0} W_{\Gamma}(P_{\epsilon < L}, I)$ exists.
+\end{lem}
+
+\subsection{One-loop weights}
+
+\begin{dfn}
+Let $\epsilon , L > 0$. 
+In addition, fix the following data.
+\begin{enumerate}
+\item An integer $k \geq 1$ that will be the number of vertices of the graph.
+\item For each $\alpha = 1, \ldots, k$ a sequence of integers
+\ben
+\vec{n}^\alpha = (n_1^\alpha, \ldots, n_d^{\alpha}) .
+\een
+We denote by $(\vec{n}) = (n_{i}^j)$ the corresponding $d \times k$ matrix of integers. 
+\item A smooth compactly supported function $\Phi \in C_c^\infty((\CC^d)^k) = C_c^\infty(\CC^{dk})$.
+\end{enumerate}
+The analytic weight associated to the triple $(k, (\vec{n}), \Phi)$ is
+\be\label{weight1}
+W_{k,(\vec{n})}^\Phi (\epsilon, L) = \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha) \prod_{\alpha = 1}^k \left(\frac{\partial}{\partial z^i}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^i, z^{i+1}) .
+\ee
+In the above expression, we use the convention that $z^{k+1} = z^1$. 
+\end{dfn}
+
+We will refer to the collection of data $(k, (\vec{n}), \Phi)$ in the definition as {\em wheel data}.
+The motivation for this is that the weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ is the analytic part of the full weight $W_{\Gamma}(P_{\epsilon<L}, I)$ where $\Gamma$ is a wheel with $k$ vertices. 
+
+We have reduced the proof of Theorem \ref{thm holo renorm} to showing that the $\epsilon \to 0$ limit of the analytic weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ exists for any tripe of wheel data $(k, (\vec{n}), \Phi)$.
+To do this, there are two steps. 
+First, we show a vanishing result that says when $k \geq d$ the  weights vanish for purely algebraic reasons. 
+The second part is the most technical aspect of the chapter where we show that for $k > d$ the weights have nice asymptotic behavior as a function of $\epsilon$.
+
+\begin{lem} Let $(k, (\vec{n}), \Phi)$ be a triple of wheel data.
+If the number of vertices $k$ satisfies $k \leq d$ then
+\ben
+W_{k, (\vec{n})}^{\Phi}(\epsilon , L) = 0
+\een
+for any $\epsilon,L > 0$. 
+\end{lem}
+\begin{proof}
+In the integral expression for the weight (\ref{weight1}) there is the following factor involving the product over the edges of the propagators:
+\be\label{productprops2}
+\prod_{\alpha = 1}^k \left(\frac{\partial}{\partial z^i}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^i, z^{i+1}) .
+\ee
+We will show that this expression is identically zero.
+To simplify the expression we first make the following change of coordinates on $\CC^{dk}$:
+\begin{align}
+w^i & = z^{\alpha+1} - z^\alpha \;\;\; , \;\;\; 1\leq \alpha < k \label{coords1}\\
+w^k & = z^k \label{coords2} .
+\end{align}
+Introduce the following operators
+\ben
+\eta^\alpha = \sum_{i=1}^{d} \wbar_i^\alpha \frac{\partial}{\partial (\d \wbar_i^\alpha)}
+\een
+acting on differential forms on $\CC^{dk}$.
+The operator $\eta^\alpha$ lowers the anti-holomorphic Dolbuealt type by one : $\eta : (p,q) \to (p,q-1)$.
+Equivalently, $\eta^\alpha$ is contraction with the anti-holomorphic Euler vector field $\wbar_i^\alpha \partial / \partial \wbar_i^\alpha$.
+
+Once we do this, we see that the expression (\ref{productprops2}) can be written as 
+\ben
+\left(\left(\sum_{\alpha=1}^{k-1} \eta^\alpha \right) \prod_{i=1}^d \left(\sum_{\alpha = 1}^{k-1} \d \wbar_{i}^\alpha\right) \right) \prod_{\alpha=1}^{k-1}\left( \eta^\alpha \prod_{i=1}^d \d \wbar_i^\alpha\right) .
+\een
+Note that only the variables $\wbar_i^{\alpha}$ for $i=1,\ldots,d$ and $\alpha = 1,\ldots, k-1$ appear. 
+Thus we can consider it as a form on $\CC^{d(k-1)}$.
+As such a form it is of Dolbeualt type $(0, (d-1) + (k-1)(d-1)) = (0, (d-1)k)$. 
+If $k < d$ then clearly $(d-1)k > d(k-1)$ so the form has greater degree than the dimension of the manifold and hence it vanishes. 
+
+The case left to consider is when $k = d$.
+In this case, the expression in (\ref{productprops2}) can be written as
+\be\label{productprops1}
+\left(\left(\sum_{\alpha=1}^{d-1} \eta^\alpha \right) \prod_{i=1}^d \left(\sum_{\alpha = 1}^{d-1} \d \wbar_{i}^\alpha\right) \right) \prod_{\alpha=1}^{d-1}\left( \eta^\alpha \prod_{i=1}^d \d \wbar_i^\alpha\right) .
+\ee
+Again, since only the variables $\wbar_i^{\alpha}$ for $i=1,\ldots,d$ and $\alpha = 1,\ldots, d-1$ appear, we can view this as a differential form on $\CC^{d(d-1)}$. 
+Furthermore, it is a form of type $(0, d(d-1))$. 
+For any vector field $X$ on $\CC^{d(d-1)}$ the interior derivative $i_X$ is a graded derivation. 
+Suppose $\omega_1,\omega_2$ are two $(0,*)$ forms on $\CC^{d(d-1)}$ such that the sum of their degrees is equal to $d^2$. 
+Then, $\omega_1 \iota_X \omega_2$ is a top form for any vector field on $\CC^{d(d-1)}$.
+Since $\omega_1 \omega_2 = 0$ for form type reasons, we conclude that $\omega_1 \iota_X \omega_2 = \pm (i_X \omega_1) \omega_2$ with sign depending on the dimension $d$. 
+Applied to the vector field $\zbar_i^1\partial / \partial \wbar_i^1$ in (\cite{productprops1}) we see that the expression can be written (up to a sign) as 
+\ben
+\eta^1 \left(\sum_{\alpha=1}^{d-1} \eta^\alpha \prod_{i=1}^d \left(\sum_{\alpha = 1}^{d-1} \d \wbar_{i}^\alpha\right) \right) \left(\prod_{i=1}^d \d \wbar_i^1\right) \prod_{\alpha=2}^{d-1} \left( \eta^\alpha \prod_{i=1}^d \d \wbar_i^\alpha\right) .
+\een
+Repeating this, for $\alpha =2,\ldots,k-1$ we can write this expression (up to a sign) as
+\ben
+\left(\eta_{k-1} \cdots \eta_2 \eta _1 \sum_{\alpha=1}^{k-1} \eta^\alpha \prod_{i=1}^d \left(\sum_{\alpha = 1}^{k-1} \d \wbar_{i}^\alpha\right) \right) \prod_{\alpha=1}^{k-1} \prod_{i=1}^d \d \wbar_i^\alpha 
+\een
+The expression inside the parentheses is zero since each term in the sum over $\alpha$ involves a term like $\eta^\beta \eta^\beta = 0$. 
+This completes the proof for $k=d$. 
+\end{proof}
+
+\begin{lem}
+Let $(k, (\vec{n}), \Phi)$ be a triple of wheel data such that $k > d$.
+Then the $\epsilon \to 0$ limit of the analytic weight
+\ben
+\lim_{\epsilon \to 0} W_{k,(\vec{n})}^\Phi (\epsilon, L) 
+\een
+exists.
+\end{lem}
+
+\begin{proof}
+
+We will bound the absolute value of the weight in Equation (\ref{weight1}) and show that it has a well-defined $\epsilon\to 0$ limit.
+First, consider the change of coordinates as in Equations (\ref{coords1}),(\ref{coords2}).
+The weight can be written as
+\be\label{weight2}
+\int_{w^k \in \CC^d} \d^{d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \left(\prod_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^\alpha}P^{an}_{\epsilon < L} (w^\alpha) \right) \sum_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^k} P^{an} \left(\sum_{\alpha=1}^{k-1} w^\alpha\right) .
+\ee
+For $\alpha = 1,\ldots,k-1$ the notation 
+\ben
+P^{an}_{\epsilon < L} (w^\alpha) = \int_{t_\alpha=\epsilon}^L \frac{\d t_\alpha}{4\pi t_\alpha} \dbar^* \brian{FINISH}
+\een
+makes sense since $P^{an}_{\epsilon<L}(z^\alpha,z^{\alpha+1})$ is only a function of $w^\alpha = z^{\alpha+1}-z^\alpha$.
+Similarly $P^{an}_{\epsilon<L}(z^{k+1},z^1)$ is a function of 
+\ben
+z^k - z^1 = \sum_{\alpha=1}^{k-1} w^\alpha . 
+\een
+Expanding out the propagators the weight takes the form
+\ben
+\begin{array}{lll}
+& \displaystyle \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \prod_{\alpha=1}^k \frac{\d t_\alpha}{4 \pi t_\alpha} \\
+& \displaystyle \times \sum_{i_1,\ldots,i_{k-1} =1}^d \left(\frac{\wbar^1_{i_1}}{t_1} \frac{(\wbar^1)^{n^1}}{t^{|n^1|}}\right) \cdots \left(\frac{\wbar^{k-1}_{i_{k-1}}}{t_{k-1}}\frac{(\wbar^{k-1})^{n^{k-1}}}{t^{|n^{k-1}|}}\right) \left(\sum_{\alpha=1}^{k-1} \frac{\wbar^\alpha_{i_k}}{t_k} \cdot \frac{1}{t^{|n^k|}} \left(\sum_{\alpha=1}^{k-1} \wbar^\alpha\right)^{n^k}\right) \\
+& \displaystyle \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right)
+\end{array}
+\een
+The notation used above warrants some explanation. 
+Recall, for each $\alpha$ the vector of integers is defined as $n^\alpha = (n^{\alpha}_1,\ldots,n^{\alpha}_d)$. 
+We use the notation
+\ben
+(\wbar^\alpha)^{n^\alpha} = \wbar^{n^\alpha_1}_1 \cdots \wbar^{n^\alpha_d}_d .
+\een
+Furthermore, $|n^\alpha| = n_1^\alpha + \cdots + n_d^\alpha$. 
+Each factor of the form $\frac{\wbar^\alpha_{i_\alpha}}{t_\alpha}$ comes from the application of the operator $\frac{\partial}{\partial z_i}$ in $\dbar^*$ applied to the propagator. 
+The factor $\frac{(\wbar^\alpha)^{n^\alpha}}{t^{|n^\alpha|}}$ comes from applying the operator $\left(\frac{\partial}{\partial w}\right)^{n^\alpha}$ to the propagator. 
+Note that $\dbar^*$ commutes with any translation invariant holomorphic differential operator, so it doesn't matter which order we do this.
+
+To bound this integral we will recognize each of the factors
+\ben
+\frac{\wbar^\alpha_{i_\alpha}}{t_\alpha} \frac{(\wbar^\alpha)^{n^\alpha}}{t^{|n^\alpha|}}
+\een
+as coming from the application of a certain holomorphic differential operator to the exponential in the last line.
+We will then integrate by parts to obtain a simple Gaussian integral which will give us the necessary bounds in the $t$-variables. 
+Let us denote this Gaussian factor by
+\ben
+E(w,t) := \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right)
+\een
+
+For each $\alpha,i_\alpha$ introduce the $t=(t_1,\ldots,t_k)$-dependent holomorphic differential operator
+\ben
+D_{\alpha, i_\alpha}(t) := \left(\frac{\partial}{\partial w^\alpha_{i_\alpha}} - \sum_{\beta = 1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_k} \frac{\partial}{\partial w_{i_\alpha}^{\beta}}\right)
+\prod_{j=1}^d \left(\frac{\partial}{\partial w_j^\alpha} - \sum_{\beta =1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_k} \frac{\partial}{\partial w_{j}^\beta}\right)
+^{n_j^\alpha} .
+\een
+
+The following lemma is an immediate calculation
+\begin{lem}
+One has
+\ben
+D_{\alpha,i_\alpha} E(w,t) = \frac{\wbar^\alpha_{i_\alpha}}{t_\alpha} \frac{(\wbar^\alpha)^{n^\alpha}}{t^{|n^\alpha|}} E(w,t) . 
+\een
+\end{lem}
+
+Note that all of the $D_{\alpha,i_{\alpha}}$ operators mutually commute. 
+Thus, we can integrate by parts iteratively to obtain the following expression for the weight:
+\ben
+\begin{array}{lll}
+& \displaystyle \pm \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}}\left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \prod_{\alpha=1}^k \frac{\d t_\alpha}{4 \pi t_\alpha}  \\ 
+& \displaystyle \times\left( \sum_{i_1,\ldots, i_d} D_{1, i_1} \cdots D_{k-1,i_{k-1}} \sum_{\alpha=1}^{k-1} D_{\alpha, i_k} \Phi(w^1,\ldots,w^k) \right) \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+\end{array}
+\een
+Now, since $t_\alpha / \sum_\beta t_\beta < 1$ for each $\alpha$ we have the following bound for the operators $D_{\alpha, i_\alpha}$:
+%\bestar
+%\left|D_{\alpha,i_{\alpha}} \Phi\right| & \leq \left(\left|\frac{\partial}{\partial w^\alpha_{i_\alpha}} \Phi\right| +  \sum_{\beta = 1}^{k-1}\frac{\partial}{\partial w_{i_\beta}^{\beta}}\right)
+%\prod_{j=1}^d \left(\frac{\partial}{\partial w_j^\alpha} - \frac{1}{k} \sum_{\beta =1}^{k-1} \frac{\partial}{\partial w_{j}^\beta}\right)
+%^{n_j^\alpha} \right| 
+\end{proof}
+
+
+\end{document}

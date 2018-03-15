@@ -13,20 +13,200 @@
 \begin{document}
 \maketitle
 
-\begin{thm}
-Let $\sE$ be the fields of any holomorphically translation invariant field theory on $\CC^d$ with classical interaction $I \in \oloc(\sE)$.  
-Then, there exists a one-loop prequantization $\{I[L] \; | \; L > 0\}$ of $I$ involving no counterterms. 
-Moreover, we can pick the family $\{I[L]\}$ to be holomorphically translation invariant.
-\end{thm}
+The goal of this thesis is to investigate a vast and interesting collection of quantum field theories that exist in the world of complex geometry. 
+These quantum field theories are sensitive to the complex structure of the underlying spacetime manifold in an analogous way to how topological field theories depend on the smooth structure. 
+
+\section{Renormalization in holomorphic quantum field theory}
+
+Our main objective in this chapter is two-fold. 
+First we will define the concept of a holomorphic field theory and set up notation and terminology that we will use throughout the text. 
+Our next goal is more technical, but will provide the backbone for much of the analysis throughout the remainder of this thesis.
+We will show how certain holomorphic theories are surprisingly well-behaved when it comes to the problem of renormalization. 
+
+In \cite{CostelloRenormalization} Costello has provided a mathematical formulation of the Wilsonian approach to quantum field theory.
+The main takeaway is that to construct a full quantum field theory it suffices to define the theory at each energy (or length) scale and to ask that these descriptions be compatible as we vary the scale.
+The infamous infinities of quantum field theory arise due to studying behavior of theories at arbitrarily high energies (or small lengths). 
+In physics this is called the ultra-violet (UV) divergence. 
+
+A classical theory is described by a local functional $I$ on the space of fields....\brian{not sure how much to review. This might go in the overview section of the thesis.}
+
+Summarizing, there are two main steps to construct a QFT in our formalism.
+\begin{itemize}
+\item[{\bf Renormalization:}] For each scale $L$ and regulator $\epsilon > 0$ consider the RG flow from scale $\epsilon$ to $L$:
+\be
+W(P_{\epsilon < L} , I) .
+\ee
+In general, the limit $\epsilon \to 0$ will not be defined, but by Costello's main result there exists counterterms $I^{CT}(\epsilon)$ such that the $\epsilon \to 0$ limit of 
+\ben
+W(P_{\epsilon<L} , I - I^{CT}(\epsilon))
+\een
+is well-defined. 
+Denote this limit by $I[L]$.
+The family $\{I[L]\}$ defines a prequantization.
+\item[{\bf Gauge consistency:}] We then ask if the family $\{I[L]\}$ defines a consistent quantization.
+For each $L$ we require that $I[L]$ satisfy the scale $L$ quantum master equation....
+\end{itemize}
+
+In this section we are concerned with the first step, that of renormalization. 
+The complication here is that even very natural field theories can have a very complicated collections of counterterms. 
+For instance, the naive quantization of Chern-Simons theory on a three-manifold has counterterms even at one-loop. 
+For holomorphic theories, however, we will show how the situation becomes much simpler at least at the level of one-loop.  
 
 \begin{thm}
-Let $d \geq 1$, and let $X$ be a K\"{a}hler manifold. 
-For every trivialization of 
+Let $\sE$ be the fields of a holomorphic theory on $\CC^d$ with classical interaction $I \in \oloc(\sE)$.  
+Then, there exists a one-loop prequantization $\{I[L] \; | \; L > 0\}$ of $I$ involving no counterterms. 
+That is, we can find a propagator $P_{\epsilon < L}$ for which the $\epsilon \to 0$ limit of
+\ben
+W(P_{\epsilon<L} , I) \mod \hbar^2
+\een
+exisits.
+Moreover, if $I$ is holomorphically translation invariant we can pick the family $\{I[L]\}$ to be holomorphically translation invariant as well.
+\end{thm}
+
+We will use this result repeatedly throughout this thesis. 
+For instance, knowing the one-loop behavior of a field theory is enough to study the possible anomalies to quantization. 
+We will leverage this to formulate and prove index theorems in the context of holomorphic QFT.
+
+One surprising aspect of this comes from thinking about holomorphic theories in a different way. 
+Any supercharge $Q$ of a supersymmetric theory satisfying $Q^2 = 0$ allows one to construct a ``twist". 
+In some cases, where clifford multiplication with $Q$ spans all translations such a twist becomes a topological theory (in the weak sense). 
+In any case, however, such a $Q$ defines a ``holomorphic twist", which results in the type of holomorphic theories we consider.
+Regularization in supersymmetric theories, especially gauge theories, is notoriously difficult. 
+Our result implies that after twisting the analytic difficulties become much easier to deal with. 
+Consequently, phenomena such as anomalies can be cast in a more algebraic framework.
+We will see such an example of this in the case of the holomorphic $\sigma$-model in the next chapter. 
+
+Already, in \cite{LiVertex} Li has used a complex one-dimensional version of this fact to all orders in $\hbar$. 
+He uses this to give an elegant interpretation of the quantum master equation for two-dimensional chiral conformal field theories using vertex algebras.
+We do not make any statements in this work past one-loop
+quantizations, but the higher loop behavior remains a very interesting and subtle problem that we hope to return to.
+
+\section{Holomorphic $\sigma$-models}
+
+This chapter contains a detailed analysis of one of the most fundamental holomorphic field theories: the holomorphic $\sigma$-model.
+This theory is appealing from both the perspective of mathematics and physics.
+It is an elegant nonlinear $\sigma$-model of maps complex $d$-fold $Y$ into a complex manifold $X$ (of any complex dimension). The equations of motion pick out the holomorphic maps. 
+Thus, from a purely mathematical perspective, it is a compelling example to study 
+because the classical theory naturally involves complex geometry and so must the quantization, although the meaning is less familiar. 
+
+From a physical perspective, this class of theories is intimately related to supersymmetric field theories in various dimensions.
+In complex dimension one this theory is known as the curved $\beta\gamma$ system.
+It arises naturally as a close cousin of more central theories: it is a half-twist of the $\cN = (0,2)$-supersymmetric $\sigma$-model \cite{WittenCDO}, and it is also the chiral part of the infinite volume limit of the usual (non-supersymmetric) $\sigma$-model. 
+In consequence, the curved $\beta\gamma$ system exhibits many features of these theories while enjoying the flavor of complex geometry, rather than super- or Riemannian geometry.
+In complex dimension two, we will see, in a similar vein, how the holomorphic $\sigma$-model arises as a twist of $\cN = 1$ supersymmetry in four real dimensions. 
+There is a similar relationship in dimension six.
+
+In mathematics, the complex dimension one version of this theory has appeared in a hidden form in the work of Beilinson-Drinfeld and Malikov-Schechtman-Vaintrob \cite{BD,MSV}, and it was subsequently developed by many mathematicians (see \cite{KV,Cheung,Bressler} among much else). The {\em chiral differential operators} (CDOs) on a complex $n$-manifold $X$ are a sheaf of vertex algebras locally resembling a vertex algebra of $n$ free bosons, and the name indicates the analogy with the differential operators, a sheaf of associative algebras on $X$ locally resembling the Weyl algebra for $T^*\CC^n$. Unlike the situation for differential operators, which exist on any manifold $X$, such a sheaf of vertex algebras exists only if $\ch_2(X) = 0$ in $H^2(X, \Omega^2_{cl})$, and each choice of trivialization $\alpha$ of this characteristic class yields a different sheaf $\CDO_{X,\alpha}$. In other words, there is a gerbe of vertex algebras over $X$, \cite{GMS}. The appearance of this topological obstruction (essentially the first Pontryagin class, but non-integrally) was surprising, and even more surprising was that the character of this vertex algebra was the Witten genus of $X$, up to a constant depending only on the dimension of $X$ \cite{BorLib}. These results exhibited the now-familiar rich connections between conformal field theory, geometry, and topology, but arising from a mathematical process rather than a physical argument. 
+
+Witten \cite{WittenCDO} explained how CDOs on $X$ arise as the perturbative piece of the chiral algebra of the curved $\beta\gamma$ system, by combining standard methods from physics and mathematics. (In elegant lectures on the curved $\beta\gamma$ system \cite{Nek}, with a view toward Berkovit's approach to the superstring, Nekrasov also explains this relationship.  Kapustin \cite{KapCDR} gave a similar treatment of the closely-related chiral de Rham complex.) This approach also gave a different understanding of the surprising connections with topology, in line with anomalies and elliptic genera as seen from physics. 
+Let us emphasize that only the perturbative sector of the theory appears (i.e., one works near the constant maps from $\Sigma$ to $T^*X$, ignoring the nonconstant holomorphic maps); the instanton corrections are more subtle and not captured just by CDOs (see \cite{KapOrlov} for a treatment of the instanton corrections for complex tori).
+
+In this paper we construct mathematically the perturbative sector of the holomorphic $\sigma$-model where the source is allowed to have arbitrary complex dimension.
+We use the approach to quantum field theory developed in \cite{CosBook, CG}, thus providing a rigorous construction of the path integral for the holomorphic $\sigma$-model. That means we work in the homotopical framework for field theory known as the Batalin-Vilkovisky (BV) formalism, in conjunction with Feynman diagrams and renormalization methods. 
+Just as CDO's have an anomaly we find that the higher dimensional theory admits a quantized action satisfying the quantum master equation only if the target manifold $X$ has $\ch_{d+1}(X) = 0$, where $\ch_{d+1}(X)$ is the $(d+1)$st component of the Chern character.
+
+One key feature of the framework in \cite{CG} is that every BV theory yields a factorization algebra of observables. (We mean here the version of factorization algebras developed in \cite{CG}, not the version of Beilinson and Drinfeld \cite{BD}.)
+In our situation, locally speaking the theory produces a factorization algebra living on the source manifold $\CC^d$.
+When $d=1$ the machinery of \cite{CG} allows one to extract a vertex algebra from this factorization algebra.
+It is the main result of our work in \cite{GGW} that this vertex algebra is precisely the sheaf of CDOs.
+One can interpret this as showing that in a wholly mathematical setting, one can start with the action functional for the curved $\beta\gamma$ system
+and recover the sheaf $\CDO_{X,\alpha}$ of vertex algebras on $X$ via the algorithms of \cite{CosBook, CG}.
+In higher dimensions we take the sheaf on $X$ of factorization algebras on $\CC^d$ produced via our work as a definition of higher dimensional chiral differential operators.
+The higher dimensional theory of vertex algebras has not been fully developed, but we still show how to extract sensitive algebraic objects from this factorization algebras, such as an $A_\infty$-algebra which one can view as a deformation quantization of the mapping space ${\rm Map}(S^{2d-1}, X)$. 
+
+Let us explain a little about our methods before stating our theorems precisely. 
+The main technical challenge is to encode the nonlinear $\sigma$-model in a way so that the BV formalism of \cite{CostelloRenormalization} applies. 
+In \cite{WG2}, Costello introduces a sophisticated approach by which he recovers the anomalies and the Witten genus as partition function, but it seems difficult to relate CDOs directly to the factorization algebra of observables of his quantization. 
+Instead, we use formal geometry {\it \`a la} Gelfand and Kazhdan \cite{GK}, as applied to the Poisson $\sigma$-model by Kontsevich \cite{KonDQ} and Cattaneo-Felder \cite{CF}.
+The basic idea of Gelfand-Kazhdan formal geometry is that every $n$-manifold $X$ looks, very locally, like the formal $n$-disk, and so any representation $V$ of the formal vector fields and formal diffeomorphisms determines a vector bundle $\cV \to X$, by a sophisticated variant of the associated bundle construction. (Every tensor bundle arises in this way, for instance.) In particular, the Gelfand-Kazhdan version of characteristic classes for $V$ live in the Gelfand-Fuks cohomology $H^*_{GF}(\Vect)$ and map to the usual characteristic classes for $\cV$. There is, for instance, a Gelfand-Fuks version of the Witten class for every tensor bundle.
+
+Thus, we start with the $\beta\gamma$ system on $\CC^d$ with target the formal $n$-disk $\widehat{D}^n = \rm{Spec}\,\CC[[t_1,\ldots,t_n]]$ and examine whether it quantizes \emph{equivariantly} with respect to the actions of formal vector fields $\Vect$ and formal diffeomorphisms on the formal $n$-disk. (These actions are compatible, so that we have a representation of a Harish-Chandra pair.) We call this theory the \emph{equivariant formal $\beta\gamma$ system of rank $n$}.
+
+\begin{thm}
+The $\Vect$-equivariant formal $\beta\gamma$ system on $\CC^d$ of rank $n$ has an anomaly given by a cocycle $\ch_{d+1} (\widehat{D}^n)$ in the Gelfand-Fuks  complex ${\rm C}^*_{GF}(\Vect ; \widehat{\Omega}^{d+1}_{n,cl})$. 
+This cocycle determines an $L_\infty$ algebra extension $\TVectd$ of $\Vect$. 
+The cocycle is exact in ${\rm C}^*_{\GF}(\TVectd ; \hOmega^{d+1}_{n,cl})$, and yields a $\TVectd$-equivariant BV quantization, unique up to homotopy. 
+When $d=1$, the partition function of this theory over the moduli of elliptic curves is the formal Witten class in the Gelfand-Fuks  complex ${\rm C}^*_{\GF}(\Vect, \bigoplus_k \widehat{\Omega}_n^k[k])[[\hbar]]$.
+\end{thm}
+
+Gelfand-Kazhdan formal geometry is used often in deformation quantization. See, for instance, the elegant treatment by Bezrukavnikov-Kaledin \cite{BK}. Here we develop a version suitable for vertex algebras and factorization algebras, which requires allowing homotopical actions of the Lie algebra $\Vect$. (Something like this appears already in \cite{BD,KV,Malikov2008}, but we need a method with the flavor of differential geometry and compatible with Feynman diagrammatics. It would be interesting to relate directly these different approaches.) In consequence, our equivariant theorem implies the following global version.
+ 
+ \begin{thm}
+Let $d \geq 1$, and let $X$ be a complex manifold. 
+The holomorphic $\sigma$-model of maps $\CC^d \to X$ admits a BV quantization that is compatible with the action of translations and the unitary group $U(d)$ on $\CC^d$ if the class
 \ben
 \ch_{d+1} (T^{1,0}X) \in H^{d+1}(X ; \Omega^{d+1}_{cl}) \hookrightarrow H^{2d+2}_{dR}(X),
 \een
-there exists a unique (up to homotopy) cotangent quantization of the holomorphic $\sigma$-model of maps $\CC^d \to X$ that is compatible with the action of translations and the unitary group $U(d)$ on $\CC^d$. 
+vanishes.
+Moreover, there exists a unique (up to homotopy) cotangent quantization of the holomorphic $\sigma$-model for every choice of trivialization of this class.
 \end{thm}
+
+When $d=1$ we showed in \cite{GGW} how the resulting factorization algebra produced by this result recovers CDO's. 
+Further, when we place the theory on an elliptic curve we recover the Witten genus of the target manifold. 
+In higher dimensions we provide a detailed analysis of the local operators in this theory that is similar in nature to the operators of a chiral CFT. 
+Indeed, we show how the state space is a natural module for the operators on higher dimensional annuli (neighborhoods of spheres). 
+A full theory of higher dimensional vertex algebras has not been fully developed. 
+It is an interesting question to relate our higher dimensional holomorphic factorization algebras to the more algebro-geometric theory of higher dimensional chiral algebras as in Francis Gaitsgory \cite{FrancisGaitsgory}. 
+
+We also show how our construction yields a quantization on source manifolds that have interesting topology. 
+We focus primarily on the case of Hopf manifolds, which are complex manifolds that are homeomorphic to $S^{2d-1} \times S^1$. 
+When the target is flat we compute the partition function and show that it agrees with the Witten index of the corresponding superconformal field theory. 
+In general the partition function of our quantization yields a complex invariant of the target manifold that varies holomorphically over the moduli of Hopf surfaces. 
+In future work we hope to relate this to a type of cohomology theory in a similar way that the Witten genus is related to elliptic cohomology and $tmf$. 
+
+Our techniques for assembling BV theories in families --- and their factorization algebras in families --- apply to many $\sigma$-models already constructed , such as the topological $B$-model \cite{LiLi}, Rozansky-Witten theory \cite{CLL}, and topological quantum mechanics \cite{GG1, GLL}. 
+They also allow us to recover quickly nearly all the usual variants on CDOs and structures therein, such as the chiral de Rham complex and the Virasoro actions.
+In Chapter \ref{??} of this thesis we study the problem of quantizing a higher dimensional version of the Virasoro action. 
+In complex dimension one we recover the usual requirement that the target be Calabi-Yau. 
+In general we get a more sensitive obstruction, which is still satisfied so long as the target admits a flat connection.
+
+\section{The chiral algebraic index theorem}
+
+There is a rich connection between ideas of deformation quantization and index theorems of elliptic operators. 
+This connection may be phrased elegantly when one replaces the algebra of pseudo-differential operators by the algebraic deformation quantization of a symplectic manifold.
+This is what led Fedosov \cite{Fedosov} and Nest-Tsygan \cite{NT} to formulate the following algebraic analog of the Atiyah-Singer index theorem.
+On a symplectic manifold $(X, \omega)$, the primary output of deformation quantization is a $\hbar$-linear trace map
+\ben
+{\rm Tr}_X : C^\infty(X) [[\hbar]] \to \CC[[\hbar,\hbar^{-1}] .
+\een
+The algebraic index theorem expresses the image of an element in the deformation quantization in terms of natural characteristic classes of the manifold $X$.
+In the case of the unit $1 \in C^\infty(X) [[\hbar]]$ this is
+\ben
+{\rm Tr}_X(1) = \int_{X} e^{-\omega/\hbar} \Hat{A}_X 
+\een
+where $\omega \in H^1 (X, \Omega^1_{cl})$ is the moduli parameter of the quantization.
+
+In \cite{GLL} a rigorous construction of the one-dimensional quantum field theory describing deformation quantization has been performed. 
+The theory is the topological $\sigma$-model of maps from the circle $S^1$ to the symplectic manifold $X$. 
+They recover the algebraic index theorem through an explicit analysis of Feynman diagrams arising through heat kernel regularization techniques in BV quantization developed by Costello et. al..
+
+In this chapter we formulate a chiral analog of the algebraic index theorem, largely motivated by the formulation in terms of the one-dimensional $\sigma$-model.
+Our starting point is a holomorphic $\sigma$-model of maps from a Riemann surface to complex manifold $X$.
+We will largely rely on the construction of the holomorphic $\sigma$-model in the previous chapter.
+We are most interested in the case that the source of this $\sigma$-model is an elliptic curve 
+\ben
+E_\tau = \CC / (\ZZ + \tau \ZZ)
+\een
+where $\tau$ lies in the upper-half plane $\HH$. 
+Of course, as a smooth manifold, the elliptic curve is a torus $S^1 \times S^1$. 
+We may write the fields of the $\sigma$-model on $E_\tau$ with target $X$ as ${\rm Map}(E_\tau, X) = {\rm Map}(S^1, L X)$ where $LX$ is the free loop space of the manifold $X$.
+Thus, via compactification along one of the circles, we obtain a one-dimensional $\sigma$-model. 
+Heuristically, one can think of this as quantum mechanics on the free loop space. 
+
+Of course, the space $LX$ is not a smooth manifold in the ordinary sense.
+Consequently, there are many analytic difficulties when doing quantum mechanics. 
+In \cite{WittenDirac}, Witten provides a physical description of the path integral for quantum mechanics on the free loop space.
+One of the main outcomes of his work is the partition function of this system, from which he extracts the so-called {\em Witten genus} of the manifold $X$. 
+
+In \cite{WG1,WG2, GGW} it is shown how the partition function of the holomorphic $\sigma$-model along an elliptic curve $E_\tau$ recovers the Witten genus of the target manifold. 
+The one main advantage of working directly with the elliptic curve, as opposed to doing quantum mechanics on the loop space, is that the modular properties of the Witten genus are manifest. 
+The advantage of the perspective of quantum mechanics is that we have at our disposal many algebraic tools that will allow us to view the calculation of the Witten genus on an elliptic curve as a ``chiral index theorem". 
+
+In this chapter our main goals are two-fold. 
+First, we will construct a one-dimensional quantum field theory in the BV formalism that we will argue deserves to be thought of as quantum mechanics on the loop space.
+We show how this one-dimensional theory is the compactification of the two-dimensional holomorphic $\sigma$ model on $E_\tau$ along one of the circles. 
+Secondly, we will use this description of the holomorphic theory to relate the factorization homology of the observables along the elliptic curve to $\tau$-twisted version of Hochschild homology.
+We will find that just as in the ordinary algebraic index theorem, the quantization defines a trace map on this Hochschild homology. 
 
 \begin{thm}
 (Chiral algebraic index theorem)
@@ -48,27 +228,156 @@ Then:
 \end{enumerate}
 \end{thm}
 
+The chapter splits up into two main parts, which parallel our construction of the holomorphic $\sigma$-model in the previous section.
+First we will formulate a local (on the target) version of the chiral algebraic index theorem.
+The main aspect here is relating the twisted Hocschild homology to the global sections of the $\sigma$-model, and then using the technique of BV integration to deduce a trace map.
+Next we will use the formalism of Gelfand-Kazhdan geometry to leverage this construction to state the chiral algebraic index theorem on a general manifold.
+
+\section{Local symmetries of holomorphic theories}
+
+In this chapter we investigate the symmetries that generic holomorphic quantum field theories possess.
+Our overarching goal is to explain tools for understanding such symmetries that provide a systematic generalization of methods used in chiral conformal field theory on Riemann surfaces, especially for the Kac-Moody and Virasoro vertex algebras.
+We will utilize the tools of BV quantization and factorization algebras that has already heavily percolated this thesis.
+
+We will focus on two main types of symmetries: holomorphic gauge symmetries and symmetries by holomorphic diffeomorphisms. 
+An ordinary gauge symmetry is characterized as being local on the spacetime manifold. 
+Each of the types of symmetries we consider share this characteristic, but they also enjoy an additional structure: they are holomorphic (up to homotopy) on the spacetime manifold. 
+This means that they are specific to the type of theories we consider.
+Moreover, they store more interesting information about the geometry of the underlying manifold as compared to the smooth version of such symmetries.
+
+Infinitesimally speaking, a symmetry is encoded by the action of a Lie algebra.
+For the holomorphic gauge symmetry this will become a sort of current algebra which is equivalent to holomorphic functions on the complex manifold with values in a Lie algebra.
+For the holomorphic diffeomorphisms this Lie algebra is that of holomorphic vector fields.
+Locality implies that this actually extends to a symmetry by a sheafy version of a Lie algebra. 
+The precise sheafy version we mean is called a {\em local Lie algebra}, which we will recall in the main body of the text. 
+To every local Lie algebra we can assign a factorization algebra through the so-called factorization enveloping algebra:
+\ben
+\mathbb{U} : {\rm Lie}_X \to {\rm Fact}_X .
+\een
+Here, ${\rm Lie}_X$ is the category of local Lie algebras which we will recall in the main body of the text.
+By this construction, we see that the symmetries themselves of field theories give rise to factorization algebras. 
+
+One compelling reason for constructing a factorization algebra model for Lie algebras encoding the symmetries of a theory is that it allows one to consider universal versions of such objects.
+In the case of the symmetry by a current algebra of a Lie algebra in chiral conformal field theory this has been spelled out in the book \cite{CG}. 
+For the case of conformal symmetry our work in \cite{BWVir} provides a factorization algebra lift of the ordinary Virasoro vertex algebra that exists uniformly on the site of Riemann surfaces. 
+In this chapter, we extend each of these objects to arbitrary complex dimensions.
+Our formulation lends itself to an explicit computation of the factorization homology along certain complex manifolds, for which we will focus on several examples.
+
+Studying such local symmetries involves rich geometric input even at the classical level, but the skeptical mathematician may view this as a repackaging of already familiar objects in complex geometry.
+The main advantage of working with factorization algebra analogs of such symmetries is in their relationship to studying quantizations of field theories.
+A similar obstruction deformation theory for studying quantizations of classical field theories also allows us to study the problem of {\em quantizing} local symmetries of a field theory.
+Moreover, we already know that factorization algebras describe the operator product expansion of the observables of a QFT.
+A formulation of Noether's theorem in \cite{CG} makes the relationship between the associated factorization algebra of a symmetry and the factorization algebra of observables of a theory.
+
+Of course, quantizing a symmetry of a field theory may not always exist.
+In fact, this failure sheds light into subtle field theoretic phenomena of the underlying system. 
+For example, in the case of conformal symmetries of a conformal field theory, the failure is exactly measured by the {\em central charge} of the theory. 
+It is well established that the central charge is a very important characterization of a conformal field theory.
+At the Lie theoretic level, this failure is measured by a cocycle which in turn defines a central extension of the Lie algebra. 
+It is this central extension that acts on the theory. 
+
+For this reason, an essential aspect of studying the local symmetries of holomorphic field theories we mentioned above is to characterize the possible cocycles that give rise to central extensions. 
+As we have already mentioned, for vector fields in complex dimension one this is related to the central charge and the central extension of the Witt algebra (vector fields on the circle) known as the Virasoro Lie algebra.
+In the case of a current algebra associated to a Lie algebra, central extensions are related to the {\em level} and the corresponding central extensions are called affine algebras. 
+
 \begin{thm}
-Suppose $\sE$ is a free holomorphic theory on a complex $d$-fold $X$ that is invariant for holomorphic diffeomorphisms. 
-Then, associated to $\sE$ there is a Gelfand-Fuks cohomology class
-\ben
-\alpha_{\sE} \in H^{2d+1}_{GF} (\W_d),
-\een
-and a map of factorization algebras on $X$
-\ben
-\Phi : \UU_{\alpha_{\sE}} (\sT_X) \to \Obs_{\sE}^\q .
-\een
-In other words, an extension of $\sT_X$ parametrized by the class $\alpha_\sE$ is a quantum symmetry of $\sE$.
+The following is true about the local Lie algebras associated to holomorphic diffeomorphisms and holomorphic gauge symmetries.
+\begin{enumerate}
+\item There is an isomorphism between the local cohomology of the sheaf of holomorphic vector fields on any complex manifold of dimension $d$ and the Gelfand-Fuks cohomology $H^*_{GF}(\W_d)[2d]$. 
+\item Let $\fg$ be an ordinary Lie algebra and $\fg^X$ is associated current algebra defined on any complex manifold $X$. 
+Any element in $H^*_{Lie}(\fg , \Sym^{d+1} g^\vee [-d-1])$ determines a unique 
+element in the local cohomology of $\fg^X$.
+\end{enumerate}
 \end{thm}
+
+The central extensions we are interested in come from classes of degree $+1$ of the above local Lie algebras.
+In the case of holomorphic vector fields the result above implies that all such extensions are parametrized by $H^{2d+1}(\W_d)$. 
+It is a classical result of Fuks \cite{Fuks} that this cohomology is isomorphic to $H^{2d+2}(BU(d))$. 
+In complex dimension one this cohomology is one dimensions corresponding to the class $c_1^2$. 
+In general we obtain new classes, which are shown to agree with calculations in the physics 
+literature in dimensions four and six. 
+
+In general, any of these cohomology classes define factorization algebras by twisting the factorization enveloping algebra. 
+We especially focus on this construction in the case that the complex $d$-fold is equal to affine space $\CC^d$.
+In the case of the current algebra, our result is compatible with recent work of Kapranov et. al. in \cite{FHK}.
+They study higher dimensional affine algebras, and we show how the factorization algebra on punctured affine space $\CC^d \setminus\{0\}$ associated to Lie algebra $\fg$ and a class in $\Sym^{d+1}(\fg^\vee)^\fg$ agrees with theirs. 
+
+These extensions are related to the moduli of $G$-bundles on complex $d$-folds \cite{FHK}, in the same way that affine algebras are related to the moduli of bundles on curves via Kac--Moody uniformization. 
+Moreover, we show how the classes $c_{\sE}$ correspond to certain natural line bundles on ${\rm Bun}_G(X)$ and prove a version of the Grothendieck--Riemann--Roch (GRR) theorem using methods of BV quantization through a calculation of Feynman diagrams. 
+
+\begin{thm}
+Let $V$ be a finite dimensional $\fg$-module and $X$ any complex $d$-fold.
+There exists a BV quantization of the $\beta\gamma$-system on $X$ with values in $V$ that is equivariant for the local Lie algebra $\fg^X$. 
+Moreover, the first Chern class of the line bundle on $B \fg^X$ defined by the factorization homology of the quantization is equal to
+\ben
+c_1(\Obs^\q(X)) = C \ch_{d+1}(V) \in \Sym^{d+1}(\fg^\vee)^\fg 
+\een
+where $C$ is some nonzero number.
+\end{thm}
+
+There is an elucidating geometric description of how the classes $\ch_{d+1}(V)$ appear: they describe line bundles over the moduli of $G$-bundles.
+Let ${\rm Bun}_{G}(X)$ denote the moduli space of $G$-bundles on the complex $d$-fold $X$. \footnote{For $d > 1$ \cite{FHK} have constructed a global smooth derived realization of this space, but its full structure will not be used in this discussion.}
+Over the space ${\rm Bun}_G(X) \times X$ there is the {\em universal} $G$-bundle. 
+If $P \to X$ is a $G$-bundle, the fiber over the point $\{[P]\} \times X$ is precisely the $G$-bundle $P \to X$. 
+This universal $G$-bundle is classified by a map $f : {\rm Bun}_G(X) \times X \to B G$. 
+Consider the following diagram
+\ben
+\xymatrix{
+& {\rm Bun}_G(X) \times X \ar[dr]^-{f} \ar[dl]_-{\pi} & \\
+{\rm Bun}_G(X) & & B G
+}
+\een
+where $\pi : {\rm Bun}_G(X) \times X \to {\rm Bun}_G(X)$ denotes the projection. 
+If $\theta \in \Sym^{d+1}(\fg^*)^\fg \cong H^{d+1}(G , \Omega^{d+1}) \subset H^{2d+2}(BG)$ then we obtain via push-pull in the diagram above
+\ben
+\int_\pi \circ f^* \theta \in H^2({\rm Bun}_G(X)) .
+\een 
+The formal moduli space $B \fg^X$ describes a formal neighborhood of the trivial bundle inside of the moduli of $G$-bundles.
+So the theorem above can be viewed as a formal version of the universal GRR theorem over the moduli of $G$-bundles.
+
+\section{A higher Chern-Simons/WZW correspondence}
+
+So far, we have only studied holomorphic field theories that are intrinsic to the complex geometry of the spacetime manifold.
+In this chapter we will exhibit a collection of holomorphic theories that are related to higher dimensional gauge theories through a bulk-boundary correspondence.
+The type of bulk-boundary relationship we consider is reminicscent of the idea of holography in the AdS/CFT correspondence.
+Though we will make no statements implying an actual AdS/CFT correspondence, at the end of this chapter we will outline a plan to attack such a result using our formulation.
+
+In any case, the idea of the AdS/CFT correspondence serves as motivation for the situation we consider. 
+There, the rough idea is that the correlation functions of a quantum field theory in dimension $d$ are related to the states of a field theory in dimension $d+1$.
+The primordial example of this is the infamous relationship between three-dimensional Chern-Simons theory and the two-dimensional Wess-Zumino-Witten model \cite{WittenJones}.
+
+To place the reader that is familiar with the ordinary CS/WZW correspondence, we will formulate the 3d/2d correspondence in our language of the BV formalism and factorization algebras.
+In this context, we do not focus on the full conformal field theory defined by the Wess-Zumino-Witten model, but only its chiral sector which is completely determined by the chiral algebra. 
+Inside of the chiral sector of the WZW theory this is simply the Kac-Moody chiral algebra.
+We show how the factorization product of operators on the boundary recovers the expected OPE of the chiral WZE model.
+
+After analyzing this familiar 3d/2d situation, we will focus on a bulk-boundary relationship that can be viewed as a higher dimension version of the CS/WZW correspondence. 
+On one hand, we already have a candidate for the chiral sector of a higher dimensional WZW model, namely the Kac-Moody factorization algebras we studied in the last chapter.
+The starting point for this situation is five-dimensional $\cN = 1$ supersymmetric gauge theory. 
+We show how, after performing a twist, how observables in the $\dim_\CC = 2$ Kac-Moody factorization algebra appear on the boundary of this five-dimensional gauge theory. 
+The twisted theory is topological, in a weak sense, but the boundary condition we consider is not since it is sensitive to the complex structure of the boundary manifold.
+
+The approach of using the BV-formalism to study quantum field theories on manifolds without boundary that we employ has been developed by Costello in \cite{CostelloRenormalization}. 
+The step of formulating classical field theory in the BV-formalism has been carried out by Butson-Yoo in \cite{ButsonYoo}.
+We use this setup to show in what sense the five-dimensional gauge theory determines a {\em degenerate} holomorphic theory on the boundary. 
+Intrinsic in this statement is the existence of a Poisson structure on the Kac-Moody factorization algebra, which we observe in Section \ref{}.
+A full theory of BV-quantization in the detail of \cite{CostelloRenormalization} and \cite{CG} for manifolds with boundary has not been fully developed. 
+Nevertheless, we analyze the operator product expansion of the boundary to the five-dimensional gauge theory and we find the $A_\infty$ algebra extracted from the Kac-Moody factorization algebra on $\CC^2$. 
 
 \begin{thm} The $A_\infty$-algebra of operators on $S^3 \subset \CC^2 \setminus \{0\}$ supported on the boundary of the twist of the $\cN = 1$ supersymmetric gauge theory on the $5$-manifold
 \ben
 \left(\CC^2 \setminus \{0\}\right) \times \RR_{\geq 0}
 \een
-is equivalent to the enveloping algebra $U^{\rm Lie} (\Hat{A_2 \tensor \fg})$, where the central extension is associated to the element
+is equivalent to the enveloping algebra $U^{\rm Lie} (\Hat{A_2 \tensor \fg})$, where the $L_\infty$ central extension is associated to a nonzero multiple of the element
 \ben
 \ch_{3}(\fg^{ad}) \in \Sym^3(\fg^\vee)^\fg .
 \een
 \end{thm}
+
+There is a similar formulation of this phenomena between an odd dimensional supersymmetric gauge theory and a holomorphic theory at the boundary in $7d/6d$ quantum field theory.
+
+\bibliographystyle{alpha}
+%\bibliographystyle{spmpsci}  
+\bibliography{thesis}
 
 \end{document}

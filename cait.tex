@@ -739,15 +739,136 @@ Then, we compute
 \end{proof}
 
 
-\begin{thm} (Local chiral algebraic index theorem) For any $q \in D(0,1)^\times$ the following diagram commutes
+\begin{thm} \label{thm: local cait} (Local chiral algebraic index theorem) For any $q \in D(0,1)^\times$ the following diagram commutes
 \ben
 \xymatrix{
 \displaystyle \int_{E_q} \Obs^{\q,sm}_{V} \ar[r]^-{\pi_\infty}_-{\simeq} & \left( \Omega^{-*}(T^*V) [[\hbar]], \hbar L_\pi \right) \ar[d]^-{\int_{BV}}_-{\simeq} \\
-\Hoch\left(\Weyl_{LV}^\hbar ; q \right) \ar[u]^-{\Phi}_-{\simeq}  \ar[r]^-{\tau^q}_-{\simeq} & \CC[[\hbar]] [2n] .
+\Hoch\left(\Weyl_{LV}^\hbar ; q \right) \ar[u]^-{\Phi}_-{\simeq}  \ar[r]^-{\tau^q}_-{\simeq} & \CC[[\hbar,\hbar^{-1}] [2n] .
 }
 \een
 \end{thm}
 
 \subsection{The global chiral algebraic index theorem}
+
+We now turn to the global chiral algebraic index theorem.
+Our method is to use the local result when the target $V$ is taken to be a formal disk $\hD^n$ together with the $\Vect$-equivariant quantization of the $\beta\gamma$ system.
+We have already seen how the equivariant BV quantization combined with Gelfand-Kazhdan descent allowed us to globalize quantizations over the target manifold.
+In this section we specialize this to the case where the source is an elliptic curve.
+
+First, we collect the local results above for the case when $V$ is replaced by the formal $n$-disk.
+Algebraically, this is accomplished by setting $V = \CC^n$ and changing all symmetric products to completed symmetric products. 
+For instance, the global observables of the $\beta\gamma$ system on $E_q$ with target the formal disk are defined by
+\ben
+\Obs^{\q,sm}_{\hD^n} (E_q) =  \left(\cSym(\Omega^{1,*}(E_q) \otimes \CC^n [1] \oplus \Omega^{0,*}_c(E_q) \otimes \CC^n[1])[[\hbar]], \dbar + \hbar \Delta)\right). 
+\een
+
+On the formal disk the graded de Rham forms is defined by
+\ben
+\hOmega^*_n = \hO_n \tensor_\CC \CC[\d t_1, \ldots, \d t_n] .
+\een 
+The variables $\d t_1,\ldots,\d t_n$ are in cohomological degree one. 
+As a $\Vect$-module $\hOmega^*_n$ is equal to $\Sym_{\hO_n}^*(\hOmega_n^1[-1])$ where $\hOmega_n^1$ is a module for $\Vect$ in the standard way.
+Similarly, the negatively graded de Rham forms are $\hOmega^{-*}_n = \Sym_{\hO_n}^* (\hOmega^1 [1])$. 
+
+Above, we found that in the case that the target was a vector space $V$ that there is a quasi-isomorphism of the global observables along an elliptic curve $E_q$ with the negatively graded de Rham forms on $T^*V$:
+\ben
+\Omega^{-*}(T^*V) = \Omega^{-*}(V) \tensor \Sym(V\oplus V[1]) .
+\een
+%There is an obvious projection map $\Omega^{-*}(T^*V) \to \Omega^{-*}(V)$ that can be thought of as pulling back along the zero section.
+%At the level of fields, we this is the restriction of global observables to ones that only depend on the $\gamma$ field. 
+On a formal disk, the graded vector space $\Omega^{-*}(T^*V)$ becomes
+\ben
+\hOmega^{-*}_n \tensor_{\hO_n} \cSym_{\hO_n}(\hT_n \oplus \hT_n [1]) .
+\een
+This has a naturally induced $\Vect$-module structure. 
+One can think of $\Sym(\hT_n\oplus\hT_n[1]) = \Hat{\rm PV}_n \tensor \Hat{\rm PV}_n^{-*}$ where $\Hat{\rm PV}_n$ is the module of poly-vector fields on the formal disk.
+The analog of Lemma \ref{lem htpy rg} implies that there is a quasi-isomorphism
+\be\label{formal harmonic}
+\pi_\infty : \Obs^{\q,sm}_{\hD^n} (E_q) \xto{\simeq} \left(\hOmega^{-*}_n \tensor_{\hO_n} \Sym(\hT_n \oplus \hT_n [1]) [[\hbar]] , \hbar L_\pi\right)
+\ee
+where $L_\pi$ is the contraction of the standard Poisson tensor on $T^*\hD^n$.
+
+\subsubsection{A short detour}
+
+The last piece we need to make sense of is the Weyl algebra for loops on the formal disk.
+This definition is similar to the case of a vector space $V$; we will arrive at it via a colimit over the the Weyl algebra associated to each mode of the loop parameter. 
+In the definition of $D^{\hbar}_{z^nV}$, the mode $n$ algebra was defined as follows.
+We first formed the Lie algebra extension $\sH(z^nV)$ of the abelian Lie algebra $z^{n}V^* \oplus z^{-n} V$ by the one-dimensional trivial module $\CC\cdot \hbar$.
+The bracket was given by the cocycle on $z^{n}V^* \oplus z^{-n} V$ given by the residue and the evaluation pairing on $V$. 
+The algebra $D^\hbar_{z^nV}$ is the universal enveloping algebra of this Lie algebra.
+
+In the present case, we need to recall a familiar construction of differential operators.  
+One way to present it is to consider the adjoint module $\hT_n$. 
+This is a Lie algebra object in $\Vect$-modules, hence ...
+\brian{finish this}
+
+When we replace $V$ by the formal disk $\hD^n$ the diagram in Theorem \ref{thm: local cait} becomexs
+\ben
+\xymatrix{
+\displaystyle \int_{E_q} \Obs^{\q,sm}_{\hD^n} \ar[r]^-{\pi_\infty}_-{\simeq} & \left( \Omega^{-*}_n \tensor_{\hO_n}\Hat{\rm PV}_n \tensor \Hat{\rm PV}_n^{-*}  [[\hbar]], \hbar L_\pi \right) \ar[d]^-{\int_{BV}}_-{\simeq} \\
+\Hoch\left(\Weyl_{L\hD^n}^\hbar ; q \right) \ar[u]^-{\Phi}_-{\simeq}  \ar[r]^-{\tau_n^q}_-{\simeq} & \CC[[\hbar,\hbar^{-1}]  [2n] .
+}
+\een
+
+We have seen that there exists a unique up to homotopy $\TVect$-equivariant quantization of the $\beta\gamma$ system with target $\hD^n$ on the elliptic curve $E_q$. 
+
+We let $I^{\Vect}[\infty]$ denote the scale $\infty$ interaction. 
+
+\begin{lem}
+The twisted BV integration map
+\ben
+\Tilde{\int_{BV}} : \clie^*\left(\Vect, \GL_n; \left( \Omega^{-*}_n \tensor_{\hO_n}\Hat{\rm PV}_n \tensor \Hat{\rm PV}_n^{-*}\right)  [[\hbar]], \hbar L_\pi \right) \to \clie^*(\Vect ; \CC)[[\hbar, \hbar^{-1}] [2n]
+\een
+sending $\varphi$ to $\int_{BV} e^{I^{\Vect}[\infty]} \varphi$ is a map of cochain complexes.
+\end{lem}
+\begin{proof}
+The total differential in
+\ben
+\clie^*\left(\Vect, \GL_n; \left( \Omega^{-*}_n \tensor_{\hO_n}\Hat{\rm PV}_n \tensor \Hat{\rm PV}_n^{-*}\right)\right)
+\een
+can be written as a sum
+\ben
+\d_{\Vect} + \{I^{\Vect}[\infty], -\}_\infty + \hbar \Delta .
+\een
+The part of the Chevalley-Eilenberg differential $\d_{\Vect}$ only acts on the $\Vect$ components. 
+The part of the differential $\{I^{\Vect}[\infty], -\}_\infty$ encodes the $\Vect$-module structure on the scale infinity observables. 
+
+Note that by the equivariant quantum master equation implies that as a composition of operators on global observables one has
+\ben
+e^{I^{\Vect}[\infty]} (\d_{\Vect} + \{I^{\Vect}[\infty], -\}_\infty + \hbar \Delta) = (\d_{\Vect} + \hbar \Delta) e^{I^{\Vect}[\infty]} .
+\een
+Thus, for any $\varphi$ in the equivariant global observables at scale $\infty$ we have
+\begin{align*}
+\Tilde{\int_{BV}} \left((\d_\Vect + \{I^{\Vect}[\infty], -\}_\infty + \hbar \Delta) \varphi\right) & = \int_{BV} e^{I^{\Vect}[\infty]}(\d_\Vect + \{I^{\Vect}[\infty], -\}_\infty + \hbar \Delta) \varphi \\ & = 
+\int_{BV}  (\d_{\Vect} + \hbar \Delta) \left(e^{I^{\Vect}[\infty]} \varphi \right) \\ & = \d_{\Vect} \int_{BV} e^{I^{\Vect}[\infty]} \varphi .
+\end{align*}
+In the last line we have used the fact that $\int_{BV}$ is equivariant for the $\Vect$ action.\brian{did we prove this?}
+The right-hand side is precisely $\d_{\Vect} \Tilde{\int_{BV}} \varphi$, so we are done. 
+\end{proof}
+
+\begin{cor}
+Equivariant BV quantization for the $\beta\gamma$ system yields the commuting diagram
+\ben
+\xymatrix{
+\displaystyle \clie^*\left(\Vect, \GL_n; \int_{E_q} \Obs^{\q,sm}_{\hD^n} \right) \ar[r]^-{\pi_\infty}_-{\simeq} & \clie^*\left(\Vect, \GL_n; \left( \Omega^{-*}_n \tensor_{\hO_n}\Hat{\rm PV}_n \tensor \Hat{\rm PV}_n^{-*}\right)  [[\hbar]], \hbar L_\pi \right) \ar[d]^-{{\Tilde{\int_{BV}}}}_-{\simeq} \\
+\clie^*\left(\Vect, \GL_n; \Hoch\left(\Weyl_{L\hD^n}^\hbar ; q \right)\right) \ar[u]^-{\Phi}_-{\simeq}  \ar[r]^-{\tau_n^q}_-{\simeq} & \clie^*\left(\Vect, \GL_n; \CC \right) [[\hbar,\hbar^{-1}] [2n] .
+}
+\een
+\end{cor}
+
+
+
+%\begin{prop}
+%The following diagram commutes
+%\ben
+%\xymatrix{
+%H^{2n}\left(\Vect, \GL_n ; \hOmega^{-*}_n \tensor_{\hO_n} \Sym(\hT_n \oplus \hT_n [1])\right) \ar[d]_-{\int_{BV}} \ar[r] & H^n\left(\Vect, \GL_n ; \hOmega^{-n}_n \right) \ar[dl]^-{\psi} \ar[dd]^-{{\rm char}_X} \\
+%H^{2n}(\Vect, \GL_n; \CC) \ar[d]_{\rm char_X} & \\
+%H^{2n}(X , \CC) & \ar[l] H^n(X , \Omega^{n}_X) & .  
+%}
+%\een
+%\end{prop}
+
+
 
 \end{document}

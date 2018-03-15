@@ -1,0 +1,172 @@
+\begin{thebibliography}{GMS00}
+
+\bibitem[BD04]{BD}
+Alexander Beilinson and Vladimir Drinfeld.
+\newblock {\em Chiral algebras}, volume~51 of {\em American Mathematical
+  Society Colloquium Publications}.
+\newblock American Mathematical Society, Providence, RI, 2004.
+
+\bibitem[BK04]{BK}
+R.~Bezrukavnikov and D.~Kaledin.
+\newblock Fedosov quantization in algebraic context.
+\newblock {\em Mosc. Math. J.}, 4(3):559--592, 782, 2004.
+
+\bibitem[BL00]{BorLib}
+Lev~A. Borisov and Anatoly Libgober.
+\newblock Elliptic genera of toric varieties and applications to mirror
+  symmetry.
+\newblock {\em Inventiones mathematicae}, 140(2):453--485, 2000.
+
+\bibitem[Bre07]{Bressler}
+Paul Bressler.
+\newblock The first {P}ontryagin class.
+\newblock {\em Compos. Math.}, 143(5):1127--1163, 2007.
+
+\bibitem[BY]{ButsonYoo}
+Dylan Butson and Philsang Yoo.
+\newblock Degenerate classical field theories and boundary theories.
+\newblock Available at \url{https://arxiv.org/abs/1611.00311}.
+
+\bibitem[CG]{CG}
+Kevin Costello and Owen Gwilliam.
+\newblock Factorization algebras in quantum field theory.
+\newblock available at \url{http://people.mpim-bonn.mpg.de/gwilliam}.
+
+\bibitem[Che12]{Cheung}
+Pokman Cheung.
+\newblock Chiral differential operators on supermanifolds.
+\newblock {\em Math. Z.}, 272(1-2):203--237, 2012.
+
+\bibitem[CLL]{CLL}
+Kwokwai Chan, Naichung~Conan Leung, and Qin Li.
+\newblock A mathematical foundation of {R}ozansky-{W}itten theory.
+\newblock available at \url{http://arxiv.org/abs/1502.03510}.
+
+\bibitem[Cos]{WG2}
+Kevin Costello.
+\newblock A geometric construction of the {W}itten genus, {II}.
+\newblock available at \url{http://arxiv.org/abs/1112.0816}.
+
+\bibitem[Cos10]{WG1}
+Kevin Costello.
+\newblock A geometric construction of the {W}itten genus, {I}.
+\newblock In {\em Proceedings of the {I}nternational {C}ongress of
+  {M}athematicians. {V}olume {II}}, pages 942--959. Hindustan Book Agency, New
+  Delhi, 2010.
+
+\bibitem[Cos11]{CostelloRenormalization}
+Kevin Costello.
+\newblock {\em Renormalization and effective field theory}, volume 170 of {\em
+  Mathematical Surveys and Monographs}.
+\newblock American Mathematical Society, Providence, RI, 2011.
+
+\bibitem[Fed96]{Fedosov}
+Boris Fedosov.
+\newblock {\em Deformation quantization and index theory}, volume~9 of {\em
+  Mathematical Topics}.
+\newblock Akademie Verlag, Berlin, 1996.
+
+\bibitem[FG12]{FrancisGaitsgory}
+John Francis and Dennis Gaitsgory.
+\newblock Chiral {K}oszul duality.
+\newblock {\em Selecta Math. (N.S.)}, 18(1):27--87, 2012.
+
+\bibitem[FHK]{FHK}
+Giovanni Faonte, Benjamin Hennion, and Mikhail Kapranov.
+\newblock {Higher Kac–Moody algebras and moduli spaces of G-bundles}.
+\newblock Available at \url{https://arxiv.org/pdf/1701.01368.pdf}.
+
+\bibitem[Fuk86]{Fuks}
+D.~B. Fuks.
+\newblock {\em Cohomology of infinite-dimensional {L}ie algebras}.
+\newblock Contemporary Soviet Mathematics. Consultants Bureau, New York, 1986.
+\newblock Translated from the Russian by A. B. Sosinski{\u\i}.
+
+\bibitem[GG14]{GG1}
+Owen Gwilliam and Ryan Grady.
+\newblock One-dimensional {C}hern-{S}imons theory and the {$\hat A$} genus.
+\newblock {\em Algebr. Geom. Topol.}, 14(4):2299--2377, 2014.
+
+\bibitem[GGW]{GGW}
+Owen Gwilliam, Vassily Gorbounov, and Brian Williams.
+\newblock {C}hiral differential operators via {B}atalin-{V}ilkovisky
+  quantization.
+\newblock Available at \url{https://arxiv.org/abs/1610.09657}.
+
+\bibitem[GLL17]{GLL}
+Ryan~E. Grady, Qin Li, and Si~Li.
+\newblock Batalin-{V}ilkovisky quantization and the algebraic index.
+\newblock {\em Adv. Math.}, 317:575--639, 2017.
+
+\bibitem[GMS00]{GMS}
+Vassily Gorbounov, Fyodor Malikov, and Vadim Schechtman.
+\newblock Gerbes of chiral differential operators.
+\newblock {\em Math. Res. Lett.}, 7(1):55--66, 2000.
+
+\bibitem[Kap]{KapCDR}
+Anton Kapustin.
+\newblock Chiral de {R}ham complex and the half-twisted sigma-model.
+\newblock available at \url{http://arxiv.org/abs/hep-th/0504074}.
+
+\bibitem[KV]{KV}
+Mikhail Kapranov and Eric Vasserot.
+\newblock Formal loops {IV}: {C}hiral differential operators.
+\newblock available at \url{http://arxiv.org/abs/math/0612371}.
+
+\bibitem[Li]{LiVertex}
+Si~Li.
+\newblock {V}ertex algebras and quantum master equation.
+\newblock available at \url{https://arxiv.org/abs/1612.01292}.
+
+\bibitem[LL16]{LiLi}
+Qin Li and Si~Li.
+\newblock On the {B}-twisted topological sigma model and {C}alabi-{Y}au
+  geometry.
+\newblock {\em J. Differential Geom.}, 102(3):409--484, 2016.
+
+\bibitem[Mal08]{Malikov2008}
+Fyodor Malikov.
+\newblock Lagrangian approach to sheaves of vertex algebras.
+\newblock {\em Comm. Math. Phys.}, 278(2):487--548, 2008.
+
+\bibitem[MSV99]{MSV}
+Fyodor Malikov, Vadim Schechtman, and Arkady Vaintrob.
+\newblock Chiral de {R}ham complex.
+\newblock {\em Comm. Math. Phys.}, 204(2):439--473, 1999.
+
+\bibitem[Nek]{Nek}
+Nikita Nekrasov.
+\newblock Lectures on curved beta-gamma systems, pure spinors, and anomalies.
+\newblock available at \url{http://arxiv.org/abs/0511.3008}.
+
+\bibitem[NT95]{NT}
+Ryszard Nest and Boris Tsygan.
+\newblock Algebraic index theorem.
+\newblock {\em Comm. Math. Phys.}, 172(2):223--262, 1995.
+
+\bibitem[Wil17]{BWVir}
+Brian Williams.
+\newblock The {V}irasoro vertex algebra and factorization algebras on {R}iemann
+  surfaces.
+\newblock {\em Letters in Mathematical Physics}, Aug 2017.
+\newblock \url{https://doi.org/10.1007/s11005-017-0982-7}.
+
+\bibitem[Wit88]{WittenDirac}
+Edward Witten.
+\newblock The index of the {D}irac operator in loop space.
+\newblock In {\em Elliptic curves and modular forms in algebraic topology
+  ({P}rinceton, {NJ}, 1986)}, volume 1326 of {\em Lecture Notes in Math.},
+  pages 161--181. Springer, Berlin, 1988.
+
+\bibitem[Wit89]{WittenJones}
+Edward Witten.
+\newblock Quantum field theory and the {J}ones polynomial.
+\newblock {\em Comm. Math. Phys.}, 121(3):351--399, 1989.
+
+\bibitem[Wit07]{WittenCDO}
+Edward Witten.
+\newblock Two-dimensional models with {$(0,2)$} supersymmetry: perturbative
+  aspects.
+\newblock {\em Adv. Theor. Math. Phys.}, 11(1):1--63, 2007.
+
+\end{thebibliography}

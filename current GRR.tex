@@ -1,0 +1,316 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc,through}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{pgffor}
+
+\title{A formal GRR theorem}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+
+\begin{document}
+\maketitle
+
+The local Lie algebra cohomology of any local Lie algebra embeds inside its ordinary (reduced) Lie algebra cohomology of global sections. 
+Thus we have an embedding of cochain complexes
+\ben
+\cloc^*(\fg^X) \hookrightarrow \cred^*(\fg^X(X)) = \cred^*(\Omega^{0,*}(X) \tensor \fg)
+\een
+By Kodaira-Spencer theory have already seen that the global sections of the local Lie algebra $\fg^X$ is a model for the formal neighborhood of the trivial $G$-bundle inside of $G$-bundles. 
+Thus we have an identification
+\ben
+\cred^*(\Omega^{0,*}(X) \tensor \fg) = \sO_{red}\left({\rm Bun}_G(X)^{\wedge}_{triv}\right) \cong  \Omega^1_{cl} \left({\rm Bun}_G(X)^{\wedge}_{triv}\right) 
+\een
+where we have used the equivalence of reduced functions and closed one-forms which makes sense on any formal moduli space.
+The same holds when we work around any holomorphic principal bundle $P$ on $X$, so that we have an embedding of cochain complexes
+\ben
+\cloc^*(\fg_{P}^X) \hookrightarrow  \Omega^1_{cl} \left({\rm Bun}_G(X)^{\wedge}_{P}\right) . 
+\een
+Further, we have the cochain map $J_P^X : \Sym^{d+1}(\fg^*)^\fg [-1] \to \cloc^*(\fg_{P}^X)$ constructed in Section \ref{sec:??}
+In this section we will compute an anomaly to quantizing a certain family of theories defined over the moduli of $G$-bundles.
+The anomaly is a degree $+1$ cocycle in the local cohomology of $\fg^X_P$. 
+At the level of $H^1$ the above maps determine a composition we obtain by composition of the above cochain complexes a map
+\be\label{cohbung}
+\Sym^{d+1}(\fg^*)^\fg \xto{J_P^X} H^1_{\rm loc} (\fg_{P}^X) \to H^1(\Omega^1_{cl}\left({\rm Bun}_G(X)^{\wedge}_{P}\right) .
+\ee
+
+\begin{thm}
+Let $P$ be any principal $G$-bundle over a compact affine complex manifold $X$ of dimension $d$.
+Suppose that $V$ is a $G$-representation.
+Then, the factorization homology $\int_X \Obs^\q_{V}$ defines a line bundle over the formal neighborhood of $P$ inside of the moduli of $G$-bundles.
+Moreover, its first Chern class is 
+\ben
+c_1\left(\int_X \Obs^\q_{V}\right) = C \ch_{d+1}^\fg (V)
+\een
+under the identification of $\ch_{d+1}^{\fg} (V)$ as a cohomology class on the formal neighborhood of $P$ inside of the moduli of $G$-bundles in Equation (\ref{cohbung}).
+Here, $C$ is some nonzero complex number.
+\end{thm}
+
+The main goal of the BV formalism developed in \cite{CosBook} is to rigorously construct quantum field theories using a combination of homological methods and a rigorous model for renormalization. 
+A particular nicety of this approach is the ability to study {\em families} of field theories. 
+In this section we will consider a family of QFT's parametrized by the moduli space of principal $G$-bundles. 
+Our main result is to interpret a certain anomaly coming from BV quantization as a families index over ${\rm Bun}_G(X)$. 
+This anomaly is computed via an explicit Feynman diagrammatic calculation and is related to a local cocycle of the current algebra discussed in Section \brian{ref}. 
+An immediate corollary is a formal universal version of the Grothendieck--Riemann--Roch theorem over the moduli space of bundles. 
+
+We will arrive at this result in a way that is local-to-global on space-time which we formulate in terms of factorization algebras.
+In \cite{CG1, CG2} it is shown how the observables of a QFT determine a factorization algebra. 
+We study the associated family of factorization algebras associated to the family of QFT's over the moduli space of $G$-bundles mentioned in the preceding paragraph. 
+We recollect a formulation of Noether's theorem for symmetries of a theory in terms of factorization algebras developed in Chapter ?? of \cite{CG2}. 
+The central object in this discussion is a ``local index" which describes how the Kac--Moody factorization algebra acts on the observables of the QFT. 
+Locally on space-time we see how Noether's theorem provides a {\em free field realization} of the Kac--Moody factorization algebra generalizing that of the Kac--Moody vertex algebra in chiral conformal field theory \cite{??}. 
+
+\subsection{The anomaly calculation}
+
+In this section we finish the proof of the formal index theorem by performing the local Feynman diagram calculation of the anomaly on $\CC^d$. 
+First we have the following general lemma about the exact form of the anomaly for a free theory charged by a local Lie algebra. 
+Recall, in this situation there is an $\sL$-dependent anomaly $\Theta^\sL \in \cloc^*(\sL)[[\hbar]]$ that we have related to the character of $\sL$ acting on the theory. 
+For us, the free theory is the $\beta\gamma$ system valued in some representation of the Lie algebra $\fg$, and the local Lie algebra is $\Omega^{0,*}(X) \tensor \fg$. 
+
+\begin{lem} \label{lem anomaly} Let $\sE$ be a free theory that is charged by the local Lie algebra $\sL$ via the interaction $I^\sL$. 
+Furthermore, suppose that the limit
+\ben
+\lim_{\epsilon \to 0} W(P_\epsilon^L, I^{\sL})
+\een
+exists.
+Then, the one-loop anomaly $\Theta^\sL$ is the $L \to 0$ limit of the following sum of Feynman weights
+\ben
+\sum_{\Gamma, e} \lim_{\epsilon \to 0} W_{\Gamma,e} (P_{\epsilon, L}, K_\epsilon, I^\sL) .
+\een
+The sum is over graphs that are wheels $\Gamma$ and distinguished edges $e \in E(\Gamma)$. 
+The weight $W_{\Gamma,e} (P_{\epsilon, L}, K_\epsilon, I^\sL)$ means we label the vertices by $I^\sL$ and place $P_{\epsilon,L}$ on all edges besides $e$, where we put $K_\epsilon$. 
+\end{lem}
+
+Before jumping in to the calculation for the $\Omega^{0,*}(\CC^d) \tensor \fg$ charged $\beta\gamma$ system on $\CC^d$ we need to set up some notation.
+Part of the data of a free theory is a gauge fixing condition $Q^{GF}$. 
+This is an operation on fields of cohomological degree $-1$ and enables us to fix the propagator uniquely. 
+For the $\beta\gamma$ system on $\CC^d$ with values in the vector space $V$ the gauge fixing operator we choose is 
+\ben
+Q^{GF} = \dbar^* \tensor \id_V = \pm \sum_i \frac{\partial}{\partial z_i} \frac{\partial}{\partial (\d \zbar_i)} \tensor \id_V .
+\een
+
+The propagator with UV-IR cutoff $\epsilon,L$ is equal to
+\ben
+P_{\epsilon, L} (z, w) = \int_{t = \epsilon}^L \dbar^* K_t(z,w)\d t .
+\een
+Here, 
+\ben
+K_t (z,w) = k_t(z,w) \Omega(z,w) (\id_V \tensor 1 + 1 \tensor \id_{V^*})
+\een
+where $k_t$ the heat kernel for the Dolbeault Laplacian $\dbar^* \dbar + \dbar \dbar^*$ acting on smooth functions on $\CC^d$, $\Omega(z,w)$ is a constant coefficient differential form on~$\CC^d_z \times \CC^d_w$ satisfying
+\ben
+\int_{z \in \CC^d} \phi(z) \wedge \Omega(z,w) = \pm \phi(w),
+\een
+and $\id_V , \id_{V^*} \in \Sym^2(V \oplus V^*)$ represent the identity maps $V \to V$, $V^* \to V^*$. 
+Explicitly, if we choose a basis $\{e_a\}$ for $V$ with dual basis $\{e_a^*\}$ we have the following formula for $K_t(z,w)$: 
+\ben
+K_t(z,w) = \frac{1}{(4 \pi t)^d} e^{-|z-w|^2/ t} \left((\d^d z - \d^d w) \wedge \prod_{i} (\d \zbar_i - \d \Bar{w}_i) \right) \left(\sum_{a = 1}^{\dim V} (e_a \tensor e_a^* + e_a^* \tensor e_a) \right).
+\een
+
+Now, we are ready to apply Lemma \ref{lem anomaly} to compute the anomaly cocycle. 
+The fact that the limit of $W(P_{\epsilon,L}, I^{\sL})$ as $\epsilon \to 0$ exists is technical and left in the appendix. 
+We provide an explicit analysis of the sum of the Feynman weights corresponding to wheels.
+We find that the sum reduces to evaluating the weight of a single wheel with $d+1$ vertices. 
+
+Fix $k \geq 1$ to be the number of vertices of the wheel $\Gamma$. 
+By differential form type reasons, the wheels with number of vertices $k \leq d$ vanish identically. 
+To see this, note that the integral computing the Feynman weight is an integral over $\CC^{dk}$. 
+Each propagator contributes a differential form of Dolbeault type $(d, d-1)$.
+The heat kernel contributes a differential form of type $(d,d)$. 
+Thus, in total the internal edges contribute a differential form of type 
+\ben
+(kd, (k-1)(d-1) + d) = (kd, (k-1)d + 1).
+\een
+Now, the anomaly is a cocycle of $\sL$ of cohomological degree $+1$.
+\brian{finish}
+
+The reason that the wheels of valency $k > d+1$ vanish is more subtle, and relies on analytic bounds of the integral computing the weight. 
+We provide this argument in the appendix. 
+
+We are left with the weight of a wheel with $k = d+1$ vertices. 
+Each trivalent vertex is labeled by both an analytic factor and Lie algebraic factor. 
+The Lie algebraic part of each vertex can be thought of as the defining map of the representation $\rho : \fg \to {\rm End}(V)$. 
+The diagrammitcs of the wheel amounts to taking the trace of the symmetric $(d+1)$st power of this Lie algebra factor. 
+Thus, the Lie algebraic factor of the weight of the wheel is the $(d+1)$st component of the character of the representation
+\ben
+{\rm ch}_{d+1}^\fg(V) = \frac{1}{(d+1)!} {\rm Tr}\left(\rho(X)^{d+1}\right) \in \Sym^{d+1}(\fg^*) .
+\een
+
+To finish the calculation we must compute the analytic weight of the wheel with $d+1$ vertices. 
+Recall, our goal is to identify the anomaly $\Theta$ with the image of ${\rm ch}_{d+1}^\fg(V)$ under the map
+\ben
+J : \Sym^{d+1}(\fg^*)^\fg \to \cloc^*(\Omega^{0,*}(\CC^d)\tensor \fg)
+\een
+that sends an element $\theta$ to the local functional $\int \theta(\alpha \partial \alpha \cdots \partial \alpha)$. 
+We have just seen that the Lie algebra factor in local functional representing the anomaly agrees with the $(d+1)$st Chern character. 
+Thus, to finish we must show the following.
+
+\begin{lem} As a functional on the abelian dg Lie algebra $\Omega^{0,*}(\CC^d)$, the analytic factor of the weight $\lim_{L\to 0} \lim_{\epsilon \to 0} W_{\Gamma, e} (P_{\epsilon, L}, K_\epsilon, I)$ is equal to a scalar multiple of the local functional
+\ben
+\int \alpha \partial \alpha \cdots \partial \alpha \in \cloc^*(\Omega^{0,*}(\CC^d)) .
+\een
+\end{lem}
+
+\begin{proof}
+
+Let's fix some notation. 
+We enumerate the vertices by integers $a = 0,\ldots, d$. 
+Label the coordinate at the $i$th vertex by $z^{(a)} = (z_1^{(a)}, \ldots, z_d^{(a)})$. 
+The incoming edges of the wheel will be denoted by homogeneous Dolbeault forms 
+\ben
+\alpha^{(a)} = \sum_{J} A^{(a)}_J \d \zbar_J^{(a)} \in \Omega_c^{0,*}(\CC^d) .
+\een
+where the sum is over the multiindex $J = (j_1,\ldots, j_k)$ where $j_a = 1,\ldots, d$ and $(0,k)$ is the homogenous Dolbeault form type. 
+For instance, if $\alpha$ is a $(0,2)$ form we would write
+\ben
+\alpha = \sum_{j_1 < j_2} A_{(j_1,j_2)} \d \zbar_{j_1} \d\zbar_{j_2} .
+\een
+Denote the functional obtained as the $\epsilon \to 0$ weight of the wheel with $(d+1)$ vertices from Lemma \ref{lem anomaly} by $W_L$.
+The $L\to 0$ limit of $W_L$ is the local functional representing the one-loop anomaly $\Theta$. 
+
+The weight has the form
+\ben
+W_L(\alpha^{(0)},\ldots,\alpha^{(d)}) = \pm \lim_{\epsilon \to 0} \int_{\CC^{d(d+1)}} \left(\alpha^{(0)}(z^{(0)}) \cdots \alpha^{(d)}(z^{(d)}) \right) K_\epsilon(z^{(0)},z^{(d)}) \prod_{a =1}^d P_{\epsilon,L} (z^{(a-1)}, z^{(a)}) .
+\een
+We introduce coordinates
+\begin{align*}
+w^{(0)} & = z^{(0)} \\
+w^{(a)} & = z^{(a)} - z^{(a-1)} \;\;\; 1 \leq a \leq d .
+\end{align*}
+The heat kernel and propagator part of the integral is of the form
+\[
+\begin{array}{ccl}
+\displaystyle
+K_\epsilon(w^{(0)},w^{(d)}) \prod_{a =1}^d P_{\epsilon,L} (w^{(a-1)}, w^{(a)}) & = & \displaystyle \frac{1}{(4 \pi \epsilon)^d} \int_{t_1,\ldots,t_d = \epsilon}^L \frac{\d t_1 \cdots \d t_d}{(4 \pi t_1)^d \cdots (4 \pi t_d)^d} \frac{1}{t_1\cdots t_d}  \\ & & \displaystyle \times \d^d w^{(0)} \prod_{i=1}^d (\d \Bar{w}^{(1)}_i + \cdots + \d \Bar{w}^{(d)}_i) \prod_{a = 1}^d \d^d w^{(a)} \left(\sum_{i = 1}^d \Bar{w}_i^{(a)} \prod_{j \ne i} \d \Bar{w}_{j}^{(a)}\right)
+\\ & & \displaystyle \times e^{-\sum_{a,b = 1}^d M_{a b} w^{(a)} \cdot \Bar{w}^{(b)}} .
+\end{array}
+\]
+Here, $M_{ab}$ is the $d \times d$ square matrix satisfying
+\ben
+\sum_{a,b = 1}^d M_{a b} w^{(a)} \cdot \Bar{w}^{(b)} = |\sum_{a = 1}^d w^{(a)} |^2 / \epsilon + \sum_{a = 1}^d |w^{(a)}|^2 / t_a .
+\een
+Note that
+\ben
+\prod_{i=1}^d (\d \Bar{w}^{(1)}_i + \cdots + \d \Bar{w}^{(d)}_i) \prod_{a = 1}^d \left(\sum_{i = 1}^d \Bar{w}_i^{(a)} \prod_{j \ne i} \d \Bar{w}_{j}^{(a)}\right) = \left( \sum_{i_1,\ldots i_d} \epsilon_{i_1\cdots i_d} \prod_{a=1}^d \Bar{w}^{(a)}_{i_a}\right) \prod_{a=1}^d \d^d \Bar{w}^{(a)} .
+\een
+In particular, only the $\d w_i^{(0)}$ components of $\alpha^{(0)} \cdots \alpha^{(d)}$ can contribute to the weight.
+
+Let $\Phi = $ \brian{some contraction of $\alpha^{(0)} \cdots \alpha^{(d)}$ by a antiholomorphic vector field}.
+Then, the weight can be written as 
+\ben
+\begin{array}{ccl}
+W (\alpha^{(0)}, \ldots, \alpha^{(d)}) & = & \lim_{\epsilon \to 0} \displaystyle \int_{\CC^{d(d+1)}} \left(\prod_{a = 0}^{d} \d^d w^{(a)} \d^d \Bar{w}^{(a)}\right) \Phi \\ & \times & \displaystyle \frac{1}{(4 \pi \epsilon)^d} \int_{t_1,\ldots,t_d = \epsilon}^L \frac{\d t_1 \cdots \d t_d}{(4 \pi t_1)^d \cdots (4 \pi t_d)^d} \frac{1}{t_1\cdots t_d} \sum_{i_1,\ldots, i_d} \epsilon_{i_1\cdots i_d} \Bar{w}_{i_1}^{(1)} \cdots \Bar{w}_{i_d}^{(d)} e^{-\sum_{a,b = 1}^d M_{a b} w^{(a)} \cdot \Bar{w}^{(b)}} 
+\end{array}
+\een
+
+Applying Wick's lemma in the variables $w^{(1)}, \ldots, w^{(d)}$, together with some elementary analytic bounds, we find that the weight above becomes to the following integral over $\CC^d$
+\ben
+f(L) \int_{w^{(0)} \in \CC^d}  \d^d w^{(0)} \d^d \Bar{w}^{(0)} \sum_{i_1,\ldots, i_d} \epsilon_{i_1\cdots i_d}  
+\left(\frac{\partial}{\partial w_{i_1}^{(1)}} \cdots \frac{\partial}{\partial w_{i_d}^{(d)}} \Phi\right)|_{w^{(1)}=\cdots=w^{(d)} = 0} 
+\een
+where
+\ben
+f(L) = \lim_{\epsilon \to 0} \int_{t_1,\ldots,t_d = \epsilon}^L \frac{\epsilon}{(\epsilon + t_1 + \cdots + t_d)^{d+1}} \d^d t .
+\een
+In fact, $f(L)$ is independent of $L$ and is equal to some nonzero constant $C \ne 0$.
+Finally, plugging in the forms $\alpha^{(0)}, \ldots, \alpha^{(d)}$, we observe that the integral over $w^{(0)} \in \CC^d$ simplifies to
+\ben
+C \int_{\CC^d} \alpha^{(0)} \partial \alpha^{(1)} \cdots\partial \alpha^{(d)}
+\een
+as desired.
+\end{proof}
+
+\subsubsection{The reduction to a disk}
+
+In this section we show how the anomaly cocycle for the $\fg^X$-equivariant quantization on any complex $d$-fold $X$ is completely determined by it's behavior locally on $X$.
+Thus, our local calculation on $\CC^d$ above is enough to pin down the obstruction.
+
+The fundament idea is that BV quantization behaves like a sheaf on the manifold. 
+Classically, we have a sheaf of $(-1)$-shifted elliptic complexes $\sE$ on $X$ together with a local functional $I \in \oloc(\sE)(X)$. The space of local functionals $\oloc(\sE)$ also forms a sheaf on $X$, so it makes sense to restrict $I$ to any open set $U \subset X$. In this way, for each open we have a $(-1)$-shifted elliptic complex $\sE(U)$ together with a local functional $I |_{U}\in \oloc(\sE)(U)$ -- that is, a classical field theory on $U \subset X$. A fancy way of saying this is that the space of classical field theories on $X$ forms a sheaf. 
+
+A very slightly refined version of this takes into account an action of a local Lie algebra. 
+If $\sL$ is a local Lie algebra on $X$ then the space of $\sL$-equivariant classical BV theories also forms a sheaf on $X$. 
+
+Costello has shown in \cite{CostelloRenormalization} that the simplicial set of quantum field theories forms a sheaf on $X$. In a completely analogous way, one can show that the space of $\sL$-equivariant quantum field theories forms a sheaf on $X$, for any local Lie algebra $\sL$.
+
+We have already seen how the obstruction to lifting a quantum field theory with an action of a local Lie algebra $\sL$ to an inner action arises as a failure of satisfying the equivariant QME. 
+Since an $\sL$-equivariant theory satisfies the QME modulo terms in $\cloc^*(\sL)(X)$, this obstruction $\Theta(X)$is a degree one cocycle $\Theta \in \cloc^*(\sL)(X)$. 
+By the discussion above, we can restrict any $\sL$-equivariant field theory to an arbitrary open set $U \subset X$. 
+Hence, for each open $U \subset X$ we have an obstruction element $\Theta^U$. The complex $\cloc^*(\sL)(X)$ also has a refinement to a sheaf of complexes on $X$ and the obstruction $\Theta^U$ is an element in $\cloc^*(\sL)(U)$. 
+The following is an immediate consequence of Costello's theorem that quantum field theories form a sheaf on $X$.
+
+\begin{lem} Let $\Theta^U$ be the obstruction cocycle on the open set $U$. 
+Suppose $i_U^V : U \hookrightarrow V$ be an inclusion of open sets in $X$. 
+Then
+\ben
+(i_U^V)^* ([\Theta^V]) = [\Theta^U]
+\een
+where $(i_U^V)^* : \cloc^*(\sL)(V) \to \cloc^*(\sL)(U)$ is the restriction map and the brackets $[-]$ denotes the cohomology class of the cocycle. In other words, the map that sends a quantum field theory on $X$ with an $\sL$-action to its obstruction to having an inner $\sL$-action is a map of sheaves. 
+\end{lem}
+
+We now restrict to the case of the local Lie algebra $\fg^X$ defined on a complex $d$-fold $X$.
+For any complex $d$-fold $X$ we have defined the map $J^X : {\rm Sym}^{d+1}(\fg^\vee)^\fg \to \cloc^*(\fg^X)$. 
+We'd like to understand this construction better once we take into account that $\cloc^*(\fg^X)$ forms a sheaf on $X$. 
+By definition, the sheaf $\cloc^*(\fg^X)$ is defined as
+\ben
+\cloc^*(\fg^X) = \Omega^{d,d}_X \tensor_{D_X} \cred^*(J \fg^X)
+\een
+where $J \fg^X$ denotes the $\infty$-jet bundle of the local Lie algebra $\fg^X$. 
+The local Lie algebra $\fg^X$ satisfies the conditions of being a {\em holomorphic} local Lie algebra, defined in Section \ref{??}.
+Thus, we can write the local cohomology in terms of holomorphic data as
+\ben
+\Omega^{d,d}_X \tensor_{D_X} \cloc^*(J \fg^X) \simeq \Omega^{d,hol}_X \tensor^{\LL}_{D_X^{hol}} \cred^*(J \sO_X^{hol} \tensor \fg) [d] .
+\een 
+The reduced cochains on $J \sO_X^{hol} \tensor \fg$ has underlying graded vector space of the form
+\ben
+\Sym \left((J \sO_X^{hol})^\vee \tensor \fg^*[-1]\right) .
+\een
+For any complex manifold one can identify $(J \sO_X^{hol})^\vee$ with the bundle of holomorphic differential operators ${\rm Diff}^{hol}(\sO_X, \sO_X)$.
+This is a flat $D^{hol}_X$-module, so that the derived tensor product above can be replaced by a strict tensor product
+\ben
+\Omega^{d,hol}_X \tensor_{D_X^{hol}} \cred^*(J \sO_X^{hol} \tensor \fg) [d] .
+\een
+Thus, we can write the cohomology of $\cloc^*(\fg^X)$ as the hypercohomology
+\ben
+H^*\left(X , \Omega^{d,hol}_X \tensor_{D_X^{hol}} \cred^*(J \sO_X^{hol} \tensor \fg)\right) [d] . 
+\een
+
+Consider the hypercohomology spectral sequence whose $E_1$ page is
+\ben
+H^*\left(X , \Omega^{d,hol}_X \tensor_{D_X^{hol}} H_{\rm Lie,red}^*(J \sO_X^{hol} \tensor \fg)\right) [d]
+\een
+
+\begin{lem}
+The map $J : \Sym^{d+1}(\fg^*)^\fg$ factors through 
+\ben
+J : \Sym^{d+1}(\fg^*)^\fg \to H^0\left(X , \Omega^{d,hol}_X \tensor_{D_X^{hol}} H_{\rm Lie,red}^{d+1} (J \sO_X^{hol} \tensor \fg)\right) .
+\een
+\end{lem}
+
+\begin{lem} The map 
+\ben
+J : \ul{\Sym^{d+1} (\fg^\vee)^\fg} \to \cloc^*(\fg^X)
+\een
+defined on each open by $J|_{U} = J^U$ is a map of sheaves. Here, the underline means the constant sheaf. 
+\end{lem} 
+
+\begin{lem} For any open sets $i_{U}^V : U \subset V$ in $X$ the induced map
+\ben
+(i_U^V)^* : H^1\left(V ; \cloc^*(\fg^X)\right) \to H^1\left(U ; \cloc^*(\fg^X)\right)
+\een
+is injective.
+\end{lem}
+
+
+
+\end{document}

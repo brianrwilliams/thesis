@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  13 MAR 2018 08:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  14 MAR 2018 20:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**cait.tex
-(./cait.tex
+**chap1.tex
+(./chap1.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amscls/amsart.cls
@@ -857,8 +857,12 @@ s.code.tex
 \tikz@lib@dec@box=\box64
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.pathreplacing.code.tex)) (./cait.aux)
-\openout1 = `cait.aux'.
+brarydecorations.pathreplacing.code.tex)) (./chap1.aux
+
+LaTeX Warning: Label `eg bg affine' multiply defined.
+
+)
+\openout1 = `chap1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
@@ -875,8 +879,7 @@ LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Try loading font information for OT1+ppl on input line 21.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Try loading font information for OML+zplm on input line 21.
@@ -998,206 +1001,182 @@ LaTeX Info: Redefining \ref on input line 21.
 LaTeX Info: Redefining \pageref on input line 21.
 LaTeX Info: Redefining \nameref on input line 21.
 
-(./cait.out) (./cait.out)
+(./chap1.out) (./chap1.out)
 \@outlinefile=\write5
-\openout5 = `cait.out'.
+\openout5 = `chap1.out'.
 
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 23.
+ (./chap1.toc)
+\tf@toc=\write6
+\openout6 = `chap1.toc'.
 
 
-LaTeX Warning: Citation `WittenDirac' on page 1 undefined on input line 27.
+LaTeX Warning: Citation `CostelloRenormalization' on page 1 undefined on input 
+line 30.
 
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for U+eus on input line 60.
 
-LaTeX Warning: Citation `WittenElliptic' on page 1 undefined on input line 27.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 60.
 
-
-LaTeX Warning: Citation `Fedosov' on page 1 undefined on input line 28.
-
-
-LaTeX Warning: Citation `NestTsygan' on page 1 undefined on input line 28.
-
-
-LaTeX Warning: Citation `NestTsygan' on page 1 undefined on input line 30.
-
-
-LaTeX Warning: Citation `FFS' on page 1 undefined on input line 31.
-
-
-LaTeX Warning: Citation `GLL' on page 1 undefined on input line 50.
-
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 58.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \vbox (badness 1365) has occurred while \output is active []
 
- [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Warning: Citation `LiVertex' on page 2 undefined on input line 83.
 
-LaTeX Warning: Citation `GLL' on page 2 undefined on input line 75.
-
-LaTeX Font Info:    Try loading font information for U+eus on input line 84.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
-File: ueus.fd 2013/01/14 v3.01 Euler Script
-)
-
-LaTeX Warning: Citation `GradyGwilliamCS1' on page 2 undefined on input line 89
-.
-
-
-LaTeX Warning: Citation `GradyGwilliamW' on page 2 undefined on input line 101.
-
-
-[2]
-
-LaTeX Warning: Reference `sec: ' on page 3 undefined on input line 128.
-
-
-LaTeX Warning: Citation `WittenDirac' on page 3 undefined on input line 132.
-
-
-LaTeX Warning: Citation `CostelloWG1' on page 3 undefined on input line 138.
-
-
-LaTeX Warning: Citation `CostelloWG2' on page 3 undefined on input line 138.
-
-
-LaTeX Warning: Reference `thm curved quantization' on page 3 undefined on input
- line 146.
-
-[3] [4] [5] [6]
-
-LaTeX Warning: Citation `fact1' on page 7 undefined on input line 355.
-
-[7]
-
-LaTeX Warning: Citation `CG' on page 8 undefined on input line 407.
-
-
-LaTeX Warning: Citation `CG' on page 8 undefined on input line 411.
-
-[8]
-Overfull \hbox (11.11142pt too wide) in paragraph at lines 468--469
-\OT1/ppl/m/n/10 This is the stan-dard com-plex com-put-ing the Hochschild ho-mo
-l-ogy $\OML/zplm/m/it/10 HH[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 A\OT1/ppl/m/n/
-10 , \OML/zplm/m/it/10 M\OT1/zplm/m/n/10 ) = \OML/zplm/m/it/10 H[]\OT1/zplm/m/n
-/10 ([](\OML/zplm/m/it/10 A\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 M\OT1/zplm/m/n/1
-0 ))$\OT1/ppl/m/n/10 . 
+[2] [3] <xymatrix 2x2 150>
+Overfull \hbox (12.96251pt too wide) in paragraph at lines 204--206
+[][]\OT1/ppl/b/n/10 Definition/Lemma 1. []\OT1/ppl/m/n/10 A \OT1/ppl/m/it/10 fr
+ee holo-mor-phic the-ory \OT1/ppl/m/n/10 on a com-plex man-i-fold $\OML/zplm/m/
+it/10 X$ \OT1/ppl/m/n/10 is the data $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1
+/ppl/m/n/10 , \OML/zplm/m/it/10 Q[]\OT1/ppl/m/n/10 , \OT1/zplm/m/n/10 (\OMS/zpl
+m/m/n/10 ^^@\OT1/ppl/m/n/10 , \OMS/zplm/m/n/10 ^^@\OT1/zplm/m/n/10 )[])$
  []
 
-[9]
+[4]
 
-LaTeX Warning: Citation `lurie' on page 10 undefined on input line 480.
+LaTeX Warning: Reference `chap holsig' on page 5 undefined on input line 214.
+
+[5] [6] [7] [8] [9]
+Overfull \hbox (7.3265pt too wide) in paragraph at lines 637--639
+[]\OT1/ppl/m/n/10 Since the the-ory is holo-mor-phi-cally trans-la-tion in-vari
+-ant we have an iden-ti-fi-ca-tion $\OT1/zplm/m/n/10 
+[](\U/fplmbb/m/n/10 C[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 V\OT1/zplm/m/n/10 ) 
+[]
+ []
 
 
-LaTeX Warning: Citation `john' on page 10 undefined on input line 480.
-
-
-LaTeX Warning: Citation `Lurie' on page 10 undefined on input line 483.
-
-
-LaTeX Warning: Citation `CG' on page 10 undefined on input line 497.
+LaTeX Warning: Reference `CG' on page 10 undefined on input line 652.
 
 [10]
-Overfull \hbox (54.78407pt too wide) detected at line 551
-[] \OMS/zplm/m/n/10 ^^A \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 f[]\OT1/zplm/m/n/10
- (\OML/zplm/m/it/10 t\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 
- \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 v[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 v
-[]\OT1/zplm/m/n/10 )) [] (\OML/zplm/m/it/10 f[]\OT1/zplm/m/n/10 (\OML/zplm/m/it
-/10 t\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 
- \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 v[] \OT1/zplm/m/n/10 + \OML/zplm/m/it/10 v
-[]\OT1/zplm/m/n/10 )) \OMS/zplm/m/n/10 2 [][]\OT1/zplm/m/n/10 (
-[](\OML/zplm/m/it/10 S[]\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 
- \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V[] \OMS/zplm/m/n/10 ^^H \OML/zplm/m/it/10
- V\OT1/zplm/m/n/10 )[\OT1/ppl/m/n/10 1\OT1/zplm/m/n/10 ]) \OMS/zplm/m/n/10 ^^Z 
-[][]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[]\OT1/zplm/m/n/10 )\OT1/ppl/m/n/10 .
+
+LaTeX Warning: Reference `thm holo renorm' on page 11 undefined on input line 7
+20.
+
+[11]
+
+LaTeX Warning: Citation `productprops1' on page 12 undefined on input line 771.
+
+
+[12]
+Overfull \hbox (80.20438pt too wide) detected at line 799
+[] [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [] \OT1/zplm/m/n/10 ^^H(\
+OML/zplm/m/it/10 w[]\OT1/ppl/m/n/10 , [] , \OML/zplm/m/it/10 w[]\OT1/zplm/m/n/1
+0 ) [] [] [][] \OML/zplm/m/it/10 P[] [] \OT1/ppl/m/n/10 .
  []
-
-[11] <xymatrix 2x1 54> <xymatrix 2x3 286> [12]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 658.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 658.
-
-
-LaTeX Warning: Citation `FeiginTsyganJacobi' on page 13 undefined on input line
- 659.
-
-
-LaTeX Warning: Citation `FeiginTsyganJacobi' on page 13 undefined on input line
- 661.
-
-
-Overfull \hbox (1.16217pt too wide) in paragraph at lines 669--672
-[]\OT1/ppl/m/n/10 The Feigin-Felder-Shoikhet co-cy-cle is a rep-re-sen-ta-tive 
-for the dual of this el-e-ment in Hochschild
- []
-
-
-LaTeX Warning: Citation `FFS' on page 13 undefined on input line 673.
-
-
-LaTeX Warning: Citation `FFS' on page 13 undefined on input line 681.
 
 [13]
-Overfull \hbox (1.37233pt too wide) in paragraph at lines 702--705
-\OT1/ppl/m/n/10 where we use the or-di-nary mul-ti-pli-ca-tion on the right han
-d side. The re-sult-ing twisted Hochschild
+Overfull \hbox (99.54366pt too wide) detected at line 867
+[]\OMS/zplm/m/n/10 j\OML/zplm/m/it/10 W[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 ^^
+O\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 L\OT1/zplm/m/n/10 )\OMS/zplm/m/n/10 j ^^T 
+\OML/zplm/m/it/10 C [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [] \OT1/
+ppl/m/n/10 d[]\OML/zplm/m/it/10 w[]\OT1/zplm/m/n/10 	(\OML/zplm/m/it/10 w[]\OT1
+/ppl/m/n/10 , [] , \OML/zplm/m/it/10 w[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 w[]
+\OT1/zplm/m/n/10 ) [][] \OT1/ppl/m/n/10 d\OML/zplm/m/it/10 t[] [] \OT1/ppl/m/n/
+10 d\OML/zplm/m/it/10 t[][][] \OMS/zplm/m/n/10 ^^B \OML/zplm/m/it/10 E\OT1/zplm
+/m/n/10 (\OML/zplm/m/it/10 w\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 t\OT1/zplm/m/n/
+10 )
  []
 
-<xymatrix 2x2 234> [14]
 
-LaTeX Warning: Reference `lem htpy rg' on page 15 undefined on input line 785.
+Overfull \hbox (68.85329pt too wide) in paragraph at lines 892--892
+[] 
+ []
 
-<xymatrix 2x2 234> [15] <xymatrix 2x2 234> [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 860.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 860.
- (./cait.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 860.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 860.
-Package rerunfilecheck Info: File `cait.out' has not changed.
-(rerunfilecheck)             Checksum: 7582B71161B2FEF446A7AE384DF601DA;522.
+[14]
+
+LaTeX Warning: Citation `CosRenormalization' on page 15 undefined on input line
+ 926.
+
+
+LaTeX Warning: Citation `CG' on page 15 undefined on input line 926.
+
+
+LaTeX Warning: Citation `CG' on page 15 undefined on input line 940.
+
+
+LaTeX Warning: Citation `CosBook' on page 15 undefined on input line 944.
+
+
+LaTeX Warning: Citation `CosBook' on page 15 undefined on input line 947.
+
+
+LaTeX Warning: Citation `CG' on page 15 undefined on input line 949.
+
+[15]
+
+LaTeX Warning: Reference `Noether' on page 16 undefined on input line 955.
+
+
+Overfull \hbox (6.71468pt too wide) in paragraph at lines 970--972
+[][]\OT1/ppl/b/n/10 Definition 4.2. []\OT1/ppl/m/n/10 An $\U/euf/m/n/10 h$\OT1/
+ppl/m/it/10 -equivariant BV quan-ti-za-tion \OT1/ppl/m/n/10 is a col-lec-tion o
+f ef-fec-tive in-ter-ac-tions $\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 I[]\OT1/zplm
+/m/n/10 [\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]\OMS/zplm/m/n/10 g[]$
+ []
+
+
+LaTeX Warning: Citation `CosRenormalization' on page 16 undefined on input line
+ 987.
+
+
+LaTeX Warning: Citation `CG' on page 16 undefined on input line 987.
+
+[16] [17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1006.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1006.
+ (./chap1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1006.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1006.
+
+Package rerunfilecheck Info: File `chap1.out' has not changed.
+(rerunfilecheck)             Checksum: 45A531BC7F222C6250375567D011F232;1090.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 860.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1006.
  ) 
 Here is how much of TeX's memory you used:
- 23290 strings out of 492995
- 442442 string characters out of 6132704
- 576331 words of memory out of 5000000
- 26116 multiletter control sequences out of 15000+600000
- 32136 words of font info for 105 fonts, out of 8000000 for 9000
+ 23244 strings out of 492995
+ 440753 string characters out of 6132704
+ 579557 words of memory out of 5000000
+ 26043 multiletter control sequences out of 15000+600000
+ 33831 words of font info for 110 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 55i,18n,67p,3237b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,13n,67p,3238b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-d
-ist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dist/fo
-nts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/xypic/xycmbt10.pfb>
-Output written on cait.pdf (16 pages, 210002 bytes).
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/
+texlive/2017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
+1/public/xypic/xycmbt10.pfb>
+Output written on chap1.pdf (17 pages, 206348 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 199 compressed objects within 2 object streams
- 66 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 269 compressed objects within 3 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
