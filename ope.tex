@@ -13,11 +13,9 @@
 \usetikzlibrary{decorations.pathreplacing}
 \usepackage{pgffor}
 
-\title{Random analysis}
+\title{Local observables}
 
 \def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
-
-
 
 \begin{document}
 \maketitle
@@ -25,16 +23,6 @@
 \section{The higher OPE and descent}
 
 In this section we provide a partial analysis of the higher operator product expansion present in holomorphically translation invariant quantum field theories. 
-
-\subsection{The observables on the $d$-disk}
-
-In this section we give a description of the observables of the $\beta\gamma$ system supported on a $d$-disk inside $\CC^d$. 
-For now, we will only consider the free $\beta\gamma$ system with target a complex vector space $V$. 
-Thus the observables are..\brian{finish}
-
-We would like to study a class of local operators...
-
-\subsubsection{Primaries of a CFT}
 
 In ordinary chiral conformal field theory, there is a collection of operators that, in some sense, generate all other operators. 
 These are called ``primary operators" (or primary fields), and are defined by those operators that are killed by the positive part of the Virasoro algebra \cite{polchinski}, that is, the ``lowering operators". 
@@ -62,12 +50,32 @@ Applied to the disk, or local, observables this is precisely the $\ZZ_{\geq 0}$ 
 For instance, the operators $\cO_{\gamma,-n}(w), \cO_{\beta, -n}$ lie in the weight $n$ subspace of the factorization algebra applied to $D(w,r)$ (for any $r >0$). 
 We will see a similar grading in the higher dimensional holomorphic case.
 
-\subsubsection{}
-The $\beta\gamma$ system on $\CC^d$ has a symmetry by the group unitary group $U(d)$. 
+\subsection{The observables on the $d$-disk}
+
+In this section we give a description of the observables of the $\beta\gamma$ system supported on a $d$-disk inside $\CC^d$. 
+For now, we will only consider the free $\beta\gamma$ system with target a complex vector space $V$. 
+Thus the observables are..\brian{finish}
+
+\noindent{\bf Notation}: Throughout this section $\Obs^{\q}_V$ will denote the factorization algebra of smoothed quantum observables.
+
+
+\subsubsection{The cohomology of the observables}
+
+\begin{lem}
+For any $d$-dimensional disk in $\CC^d$ there is an isomorphism
+\ben
+H^* \left(\Obs^{\q}_V(D(w,r))\right) \cong \Sym\left( \left(\sO^{hol}(D(w,r)\right)^\vee \tensor V^* \oplus \left(\Omega^{d,hol}(D(w,r))\right)^\vee\tensor V[-d+1] \right) [\hbar]
+\een
+where the $(-)^\vee$ is the topological dual.
+\end{lem}
+
+\subsubsection{An explicit characterization}
+
+The $\beta\gamma$ system on $\CC^d$ has a symmetry by the unitary group $U(d)$. 
 Indeed, the fields of the $\beta\gamma$ system are built from sections of certain natural holomorphic vector bundles on $\CC^d$. 
 The group $U(d)$ acts by automorphisms on every holomorphic vector bundle, hence it acts on sections via the pull-back. 
 
-There is another symmetry that we wish to contemplate. 
+There is another symmetry that will be relevant later on when we exhibit a calculation of the character for the local operators.
 Introduce an action of $U(1)$ on the fields of the theory such that $V$ has weight $q_f \in \ZZ$ and $V^*$ has weight $-q_f$.
 The value of the fields $\gamma$ lie in the vector space $V$, so these fields are of weight $q_f$. 
 Conversely, the fields $\beta$ lie in $V^*$, so have weight $-q_f$.
@@ -75,8 +83,9 @@ Since the pairing defining the free theory is only non-zero between a single $\g
 In the physics literature, this is a so-called ``flavor symmetry" of the theory, and so to distinguish it from the other symmetry we will denote this group by $U(1)_f$. 
 This symmetry will be especially relevant when we compute the character of the $\beta \gamma$ system.
 
-\begin{lem}\label{lem U(d) equivariance}  The symmetry by $U(d) \times U(1)_f$ on the classical $\beta\gamma$ system with values in the complex vector space $V$ extends to a symmetry of the factorization algebra of quantum observables $\Obs^q$.
+\begin{lem}\label{lem U(d) equivariance}  The symmetry by $U(d) \times U(1)_f$ on the classical $\beta\gamma$ system with values in the complex vector space $V$ extends to a symmetry of the factorization algebra of smoothed quantum observables $\Obs^{\q}_V$.
 \end{lem}
+
 \begin{proof}
 The differential on the factorization algebra is of the form $\dbar + \hbar \Delta$. 
 The operator $\dbar$ is manifestly equivariant for the action of $U(d)$.
@@ -107,12 +116,17 @@ Let
 \een
 where the direct sum is over all vectors of non-negative integers.
 \end{enumerate}
-\brian{should I make separate dfn for classical and quantum}
+By setting $\hbar = 0$ this also induces weight spaces for the classical observables.
 \end{dfn}
 
 \begin{rmk}
 Note that we have excluded $w \in \CC^d$ from the notation above. 
-This is because the $\beta\gamma$ system is translation invariant. \brian{say more?}
+This is because the $\beta\gamma$ system, as we have already pointed out, is a translation invariant factorization algebra (in fact, it's holomorphically translation invariant). 
+In particular if $z,w$ are any points then translation by $z$ induces an isomorphism
+\ben
+\tau_z : \Obs^\q_V(D(w,r)) \cong \Obs^\q_V(D(w-z, r)) .
+\een
+Translation clearly preserves the action by $U(d)$, so this isomorphism restricts to the weight spaces defined above.
 \end{rmk}
 
 We now introduce the following operators that will be of most relevance for our study of the operator product expansion.
@@ -122,14 +136,15 @@ Define the following linear observables supported on $D(w,r)$.
 \begin{enumerate}
 \item For $n_i \in \ZZ_{\geq 0}, i = 1,\ldots d$, and $v^* \in V^*$ define
 \ben
-\cO_{\gamma, -\vec{n}} (w;v^*) : \gamma \in \Omega^{0,*}(D(w,r)) \mapsto \left\<v^*,\left(\left.\frac{\partial^{n_1}}{\partial z_1^{n_1}} \cdots \frac{\partial^{n_d}}{\partial z_d^{n_d}} \gamma(z,\zbar) \right|_{z=w}\right)\right\> .
+\cO_{\gamma, -\vec{n}} (w;v^*) : \gamma \in \Omega^{0,*}(D(w,r)) \mapsto \left\<v^*,\left(\left.\frac{\partial^{n_1}}{\partial z_1^{n_1}} \cdots \frac{\partial^{n_d}}{\partial z_d^{n_d}} \gamma(z,\zbar) \right|_{z=w}\right)\right\>_V .
 \een
 Here, the brackets denote the evaluation pairing between $V^*$ and $V$. 
 \item For $m_i \in \ZZ_{\geq 1}, i=1,\ldots d$, and $v \in V$ define
 \ben
-\cO_{\beta, -\vec{m}} (w;v) : \beta \d^d z \in \Omega^{d,*}(D(w,r)) \mapsto \left\<v ,\left(\left.\frac{\partial^{m_1-1}}{\partial z_1^{m_1-1}} \cdots \frac{\partial^{m_d-1}}{\partial z_d^{m_d-1}} \beta(z,\zbar) \right|_{z=w}\right)\right\> .
+\cO_{\beta, -\vec{m}} (w;v) : \beta \d^d z \in \Omega^{d,*}(D(w,r)) \mapsto \left\<v ,\left(\left.\frac{\partial^{m_1-1}}{\partial z_1^{m_1-1}} \cdots \frac{\partial^{m_d-1}}{\partial z_d^{m_d-1}} \beta(z,\zbar) \right|_{z=w}\right)\right\>_V .
 \een
 \end{enumerate}
+The braces $\<-,-\>_V$ denotes the evaluation pairing for the vector space $V$ and its dual.
 \end{dfn}
 
 Our convention is that the evaluation of a Dolbeualt form is zero $\d \zbar_i |_{z=w} = 0$.
@@ -140,58 +155,59 @@ In particular, this implies that these operators are of the following homogenous
 \deg(\cO_{\beta, -\vec{m}} (w ; v)) & = d-1 .
 \end{align*}
 
+\begin{rmk}
 The minus sign in $\cO_{\gamma, -\vec{n}}(w)$ is purely conventional, and meant to match up with the physics and vertex algebra literature \brian{ref}.
-One reason for using this convention is to note that for any $d$-disk $D(0,r)$ there is an embedding of topological vector spaces
+One reason for using this convention is motivated by the state-operator correspondence by realizing the above operators as coming from residues over higher dimensional spheres.
+Note that for any $d$-disk $D(0,r)$ there is an embedding of topological vector spaces
 \ben
-z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \cdots, z_d^{-1}] \to \left(\Omega^{0,*}(D(w,r))\right)^\vee 
+z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \cdots, z_d^{-1}] \to \left(\Omega^{0,*}(D(w,r))\right)^\vee
 \een
 that sends a Laurent polynomial $f(z)$ functional
 \ben
-\gamma \in \Omega^{0,*}(D(w,r)) \mapsto \oint_{z \in S^{2d-1}} f(z-w) \gamma(z,\zbar) \d^d z \wedge \omega_{BM}(z-w,\zbar-\wbar) ,
+\gamma \in \Omega^{0,*}(D(w,r)) \mapsto \oint_{z \in S^{2d-1}} f(z-w) \gamma(z,\zbar) \wedge \left(\d^d z \wedge \omega^{BM}(z-w,\zbar-\wbar)\right) ,
 \een
 where $\omega_{BM}$ is the Bochner-Martinelli form of type $(0,d-1)$, and $S^{2d-1}$ is the sphere of radius $r$ around $w$.
-
-\begin{rmk}
-This is the analog of the fact that when $d=1$ there is an embedding
+This is the higher dimensional versoin of the embedding 
 \ben
-z^{-1} \CC [z^{-1}] \to \left(\sO^{hol}(D)\right)^\vee
+z^{-1} \CC [z^{-1}] \to \left(\Omega^{1,hol}(D)\right)^\vee
 \een
-sending $f(z)$ to the residue functional $g \mapsto \Res_{z} (f(z) g(z) \d z)$. 
+sending $f(z) \in z^{-1} \CC[z^{-1}] $ to the residue functional $g \mapsto \Res_{z} (f(z) g(z) \d z)$. 
+We will elaborate more on these types of sphere operators in the next section.
 \end{rmk}
 
-Similarly, there is an embedding $z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \ldots,z_d^{-1}] \to \left(\Omega^{d,*}(D(w,r)\right)^\vee$ sending $f(z)$ to the functional
-\ben
-\beta \in \Omega^{d,*}(D(w,r)) \mapsto \oint_{S^{2d-1}} f(z-w) \beta(z,\zbar) \wedge \omega_{BM}(z-w,\zbar-\wbar).
-\een
+%Similarly, there is an embedding $z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \ldots,z_d^{-1}] \to \left(\Omega^{d,*}(D(w,r)\right)^\vee$ sending $f(z)$ to the functional
+%\ben
+%\beta \in \Omega^{d,*}(D(w,r)) \mapsto \oint_{S^{2d-1}} f(z-w) \beta(z,\zbar) \wedge \omega_{BM}(z-w,\zbar-\wbar).
+%\een
 
-These embeddings determine a linear map 
-\ben
-i_D : z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \ldots,z_d^{-1}] \tensor (V^* \oplus V[-d+1]) \to \left(\Omega^{0,*}(D(w,r)) \tensor V \oplus \Omega^{d,*}(D(w,r)) \tensor V^*[d-1]\right)^\vee .
-\een
-The right-hand side is simply the linear observables sitting inside of $\Obs^{\cl}_V(D(w,r))$.
-It follows from the higher dimensional residue formula that, for $n_i \geq 0$, the image of 
-\ben
-z_1^{-n_1} \cdots z_d^{-n_d} \tensor v^* \in \CC[z_1^{-1},\ldots, z_d^{-1}] \tensor V^*
-\een
-under this map is precisely $\cO_{\gamma, -\vec{n}}(w;v^*)$, where $\vec{n} = (n_1,\ldots,n_d)$. 
-Similarly, for $m_i \geq 1$, the image of
-\ben
-z_{1}^{-m_1+1} \cdots z_d^{-m_d+1} \tensor v \in \CC[z_1^{-1},\ldots, z_d^{-1}] \tensor V [-d+1]
-\een
-under this map is $\cO_{\beta,\vec{m}}(w;v)$. 
-This motivates the following general definition. 
+%These embeddings determine a linear map 
+%\ben
+%i_D : z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \ldots,z_d^{-1}] \tensor (V^* \oplus V[-d+1]) \to \left(\Omega^{0,*}(D(w,r)) \tensor V \oplus \Omega^{d,*}(D(w,r)) \tensor V^*[d-1]\right)^\vee .
+%\een
+%The right-hand side is simply the linear observables sitting inside of $\Obs^{\cl}_V(D(w,r))$.
+%It follows from the higher dimensional residue formula that, for $n_i \geq 0$, the image of 
+%\ben
+%z_1^{-n_1} \cdots z_d^{-n_d} \tensor v^* \in \CC[z_1^{-1},\ldots, z_d^{-1}] \tensor V^*
+%\een
+%under this map is precisely $\cO_{\gamma, -\vec{n}}(w;v^*)$, where $\vec{n} = (n_1,\ldots,n_d)$. 
+%Similarly, for $m_i \geq 1$, the image of
+%\ben
+%z_{1}^{-m_1+1} \cdots z_d^{-m_d+1} \tensor v \in \CC[z_1^{-1},\ldots, z_d^{-1}] \tensor V [-d+1]
+%\een
+%under this map is $\cO_{\beta,\vec{m}}(w;v)$. 
+%This motivates the following general definition. 
 
-\begin{dfn}\label{dfn disk2}
-For any $f(z) \in \CC[z_1^{-1},\ldots,z_1^{-1}]$, denote by $\cO_{\gamma, f}(w; v^*)$ the image of $f\tensor v^*$ under the linear map $i_D$
-\ben
-\cO_{\gamma,f}(w;v^*) := i_D(f \tensor v^*)
-\een
-In particular, note $\cO_{\gamma, z_1^{-n_1}\cdots z_d^{-n_d}}(w;v^*) = \cO_{\gamma , -\vec{n}}(w;v^*)$.
-Similarly, if $g \in z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1},\ldots,z_d^{-1}]$, let
-\ben
-\cO_{\beta,g}(w;v) := i_D(z_1\cdots z_d g(z) \tensor v) .
-\een
-\end{dfn}
+%\begin{dfn}\label{dfn disk2}
+%For any $f(z) \in \CC[z_1^{-1},\ldots,z_1^{-1}]$, denote by $\cO_{\gamma, f}(w; v^*)$ the image of $f\tensor v^*$ under the linear map $i_D$
+%\ben
+%\cO_{\gamma,f}(w;v^*) := i_D(f \tensor v^*)
+%\een
+%In particular, note $\cO_{\gamma, z_1^{-n_1}\cdots z_d^{-n_d}}(w;v^*) = \cO_{\gamma , -\vec{n}}(w;v^*)$.
+%Similarly, if $g \in z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1},\ldots,z_d^{-1}]$, let
+%\ben
+%\cO_{\beta,g}(w;v) := i_D(z_1\cdots z_d g(z) \tensor v) .
+%\een
+%\end{dfn}
 
 \begin{lem}
 Let $r < s$.
@@ -211,7 +227,7 @@ It follows from Lemma \ref{lem U(d) equivariance} that the factorization algebra
 Hence, the map restricts to each of the eigenspaces, yielding the diagram. 
 
 In \cite{fact1} it is shown in Corollary 5.3.6.4 that for the one-dimensional $\beta\gamma$ system, the lower map above is a quasi-isomorphism. 
-In fact, a similar argument applies to the $\beta\gamma$ system on $\CC^d$. 
+A completely similar argument applies to the $\beta\gamma$ system on $\CC^d$. 
 Indeed, consider the collection
 \ben
 \{\cO_{\gamma, -\vec{n}_1} (0 ; v_1^*) \cdot \cO_{\gamma, -\vec{n}_k} (0 ; v_k^*) \cdot \cO_{\beta, -\vec{m}_1}(0;v_1) \cdots \cO_{\beta, - \vec{m}_l}(0;v_l)\}. 
@@ -236,11 +252,11 @@ This is the ``state space" of the higher dimensional holomorphic theory.
 \subsection{The sphere observables}
 
 We now provide a description of the value of the factorization algebra of observables of the $\beta\gamma$ system applied to another important class of open sets in $\CC^d$: neighborhoods of the $(2d-1)$-sphere $S^{2d-1} \subset \CC^d$. 
-Then, we study what structure the factorization product endows the operators on $S^{2d-1}$. 
+We then study the algebraic structure that the factorization product endows the collection of sphere operators with.
 
-Heuristically speaking, the operators we will consider are supported on spheres.
-Since the factorization algebra only takes values on open sets, we need to fix small neighborhoods of the spheres in order to talk about observables.
-We describe the precise open neighborhoods of the $(2d-1)$-sphere that we will consider.
+Heuristically speaking, the operators we will consider are supported on $(2d-1)$ sphere.
+Since the factorization algebra only takes values on open sets, we need to fix small neighborhoods of the spheres in order to define the observables precisely.
+Let us explain the exact open neighborhoods of the $(2d-1)$-sphere that we will consider.
 Denote the closed $d$-disk centered at $w$ of radius $r$ by
 \ben
 \Bar{D}(w,r) = \left\{(z_1,z_2) \in \CC^2 \; | \; |z-w| \leq r^2\right\} . 
@@ -319,16 +335,16 @@ i_{S^{2d-1}} : \sA_{V} \to \Obs^\q_V(N_{r,\epsilon}(w)) .
 \een
 We will refer to $\sA_V$ as the {\em quantum sphere observables}, or when there is no confusion, the sphere observables. 
 
-\subsubsection{The associative algebra associated to the sphere}
+\subsubsection{Nesting spherical shells}
 
 We now would like to discuss what happens when we study the factorization product on the observables supported on spheres. 
-This will endow the cochain complex $\sA_V^\hbar$ with the structure of an associative (really $A_\infty$) algebra. 
+This will endow the cochain complex $\sA_V$ with the structure of an associative (really $A_\infty$) algebra. 
 To recover this structure, we will only be concerned with open sets that are neighborhoods of spheres, as in the previous section. 
 The factorization product is defined for any disjoint configurations of open sets. 
 The configurations of open sets we consider are given by nesting the neighborhoods of the form $N_{r,\epsilon}(w)$, where $w$ is a fixed center.
 
 For simplicity, we assume that our spheres and neighborhoods are all centered at $w=0$.
-For $\epsilon < r$ we have defined the open neighborhood $N_{r,\epsilon}=N_{r,\epsilon}(0)$ of the sphere $S^{2d-1}_r$ centered at zero.
+For $x\epsilon < r$ we have defined the open neighborhood $N_{r,\epsilon}=N_{r,\epsilon}(0)$ of the sphere $S^{2d-1}_r$ centered at zero.
 Pick positive numbers $0 < \epsilon_i < r_i$ such that $r_1 < r < r_2$, $\epsilon_1 < r - r_1$, and $\epsilon_2 < r_2 - r$.
 Finally, suppose $r > \epsilon > \max\{r - r_1 + \epsilon_1, r_2 - r + \epsilon_2\}$. 
 We consider the factorization product structure map for $\Obs^{\q}_{V}$ corresponding to the following embedding of open sets
@@ -380,8 +396,8 @@ We would now like to identify this algebra structure.
 
 We will proceed in two ways. 
 First, we will use the Moyal formula of Section \ref{??} as well as the explicit form of the propagator from Section \ref{?} to deduce the operator product expansion between cohomology classes of operators corresponding to $\sA_V$. 
-This will tell us what the (strict) associative algebra structure is on the cohomology $H^*(\sA_V)$. 
-Second, we will use the smoothed description of the observables to nail down the precise $A_\infty$ structure. 
+This will tell us what the algebra structure is on the cohomology $H^*(\sA_V)$. 
+Second, we will use the smoothed description of the observables as a factorization enveloping algebra to nail down the precise algebra structure at the cochain level. 
 
 Note that we can view $\sA_V$ as the symmetric algebra on the following cochain complex
 \ben
@@ -394,7 +410,7 @@ This complex has the structure of a dg Lie algebra, with bracket given by
 All other brackets are determined by graded anti-symmetry and declaring the parameter $\hbar$ is central.
 Denote this dg Lie algebra by $\sH_V$. 
 
-Our main result is that the $A_\infty$ algebra structure on $\sA_V$ endowed by the factorization product is equivalent to the universal enveloping algebra $U(\sH_V)$ of the dg Lie algebra $\sH_V$.
+Our main result is that the dg algebra structure on $\sA_V$ endowed by the factorization product is equivalent to the universal enveloping algebra $U(\sH_V)$ of the dg Lie algebra $\sH_V$.
 
 \begin{rmk}
 If $(\fg, \d, [-,-])$ is a dg Lie algebra its universal enveloping algebra is defined explicitly by 
@@ -482,10 +498,11 @@ The non-trivial Lie algebra structure on $\sH_V$ comes from the ordinary symplec
 Suppose $v,v^*$ are in $V,V^*$, respectively and $\alpha,\alpha' \in A_d$.
 The corresponding classical observables $\cO_{\gamma,\alpha}(0;v^*)$ and $\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'}(0;v)$ have cohomological degrees
 \begin{align*}
-\left|\cO_{\gamma,\alpha}(0;v^*)\right| = |\alpha| - d + 1 \\
-\left|\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'}(0;v)\right| = |\alpha'| .
+{\rm deg}\left(\cO_{\gamma,\alpha}(0;v^*)\right) = |\alpha| - d + 1 \\
+\left|\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'}(0;v)\right| = |\alpha'|,
 \end{align*}
-In cohomology, the only nontrivial degrees of $\alpha,\alpha'$ that survive are $0,d-1$. 
+where $|\alpha|$ denotes the differential form degree.
+In cohomology the only nontrivial form degrees of $\alpha,\alpha'$ that survive are $0,d-1$. 
 Suppose that $|\alpha| = 0$.
 Then, the only way we could obtain a nontrivial commutator between the operators above is if $|\alpha'| = d-1$. 
 
@@ -569,7 +586,7 @@ It relies on the existence of the subfactorization algebra of $\Obs^\q_{V}$ give
 
 The linear smoothed observables, equipped with the linearized BRST differential, on any $U \subset \CC^d$ form the subcomplex 
 \ben
-\Omega^{d,*}_c(U) \tensor V^*[d] \oplus \Omega^{0,*} (U) \tensor V [1] \subset \Obs^{\cl, sm}_V(U) .
+\Omega^{d,*}_c(U) \tensor V^*[d] \oplus \Omega^{0,*} (U) \tensor V [1] \subset \Obs^{\cl}_V(U) .
 \een
 Using the $P_0$ bracket restricted to the linear observables, we can form the central extension of dg Lie algebras
 \ben
@@ -580,11 +597,11 @@ For classical linear observables the Lie bracket is defined by $[\cO, \cO'] = \h
 Since the $P_0$ bracket is degree $+1$ to make this a dg Lie algebra we must put $\hbar$ in degree $+1$ as well.
 Note that this construction works well as we vary the open set $U$. 
 Namely, $U \mapsto \sH'_V(U)$ is a cosheaf of Lie algebras on $\CC^d$. 
-An elementary observation identifies the smoothed quantum observables with the factorization enveloping algebra of $\sH'_V$:
+An elementary observation identifies the smoothed quantum observables with the factorization enveloping algebra of $\Tilde{\sH}_V$:
 \ben
-\Obs^{\q,sm}_{V} \cong \UU(\sH_V^{sm}) .
+\Obs^{\q}_{V} \cong \UU(\sH'_V) .
 \een
-Indeed, the right hand side assigns to each open $U$ the cochain complex $\clieu_*(\sH_V'(U)) = \left(\Sym(\sH_V'(U)), \dbar + \d_{CE}\right)$. 
+Indeed, the right hand side assigns to each open $U$ the cochain complex $\clieu_*(\Tilde{\sH}_V(U)) = \left(\Sym(\sH_V'(U)), \dbar + \d_{CE}\right)$. 
 One checks directly that $\d_{CE}$ is precisely the BV Laplacian $\hbar \Delta$. 
 
 We now introduce the following algebra, which is a deformation of the dg associative algebra $U(\sH_V)$ from the previous section.
@@ -600,14 +617,50 @@ determined by the $2$-cocycle
 %\ben
 %\oint_{z \in S^{2d-1}} \dbar \alpha(z) \d^d z \int_{w \in D} \dbar \alpha'(w) \omega_{BM}(z,w) = ...
 %\een
-\brian{call $\Tilde{A}_V$ the algebra with commutator that includes the error term in the residue}.
+The first term above defined the bracket for $\sH_V$, so we are deforming the bracket by the second term. 
+\brian{call $\Tilde{\sA}_V$ the algebra with commutator that includes the error term in the residue}.
 
+%\ben
+%\xymatrix{
+%\Obs^{\q, sm}(N_{r,\epsilon}) \ar@{^{(}->}[r] & \Obs^\q_V(N_{r,\epsilon}) \\
+%\sA_V \ar@{.>}[u] \ar[ur]_-{i_{S^{2d-1}}} .
+%}
+%\een
+
+\begin{prop}
+There is a locally constant factorization algebra $\sF_V$ on $\RR_{>0}$ with the following properties:
+\begin{enumerate}
+\item $\sF_V$ admits a map of factorization algebras
 \ben
-\xymatrix{
-\Obs^{\q, sm}(N_{r,\epsilon}) \ar@{^{(}->}[r] & \Obs^\q_V(N_{r,\epsilon}) \\
-\sA_V \ar@{.>}[u] \ar[ur]_-{i_{S^{2d-1}}} .
-}
+\sF_V \to \rho_* (\Obs^\q_V)
 \een
+that is dense at the level of cohomology.
+\item As a locally constant one-dimensional factorization algebra $\sF_V$ is equivalent to the dg algebra $\Tilde{\sA}_V$. 
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+We will write down the factorization algebra $\sF_V$ and then prove the above two properties we claim it satisfies. 
+Consider the local Lie algebra on $\RR_{>0}$ whose compactly supported sections are $\Omega^*_{\RR_{>0},c} \tensor \Tilde{\sH}_V$.
+The Lie bracket is encoded by the Lie bracket on $\Tilde{\sH}_V$ combined with the wedge product of forms on $\RR_{>0}$. 
+Now, we define $\sF_V$ as the factorization envelope of this local Lie algebra 
+\ben
+\sF_V = \UU\left(\Omega^*_{\RR_{>0},c} \tensor \Tilde{\sH}_V\right) .
+\een
+
+We have just expressed $\Obs_V^\q$ as a factorization enveloping algebra as well.
+Since the pushforward commutes with the functor $\UU(-)$, to construct the map in (1) it suffices to provide a map of factorization Lie algebras
+\ben
+\Omega^*_{\RR_{>0},c} \tensor \Tilde{\sH}_V \to \rho_* \sH_V' .
+\een
+
+\end{proof}
+
+\begin{rmk}
+At the level of cohomology $H^*(\Tilde{\sA}_V) \cong H^*(\sA_V)$ as graded algebras....\brian{comment}
+\end{rmk}
+
+
 
 \subsubsection{The disk as a module}
 
