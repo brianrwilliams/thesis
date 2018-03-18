@@ -445,8 +445,8 @@ The map $j$ from Proposition \ref{prop fhk1} determines a map of dg commutative 
 Thus, we obtain a map
 \ben
 \begin{array}{cccc}
-\Phi(I) = (\pr_{\Omega^{0,*}} \circ \rho^*) \tensor j : & \Omega^*_c(I) \tensor A_d & \to & \Omega^{0,*}_c\left((\rho^{-1}(I)\right) \\
-& \varphi \tensor a & \mapsto & \left((\pr_{\Omega^{0,*}} \circ \rho^*) \varphi\right) \wedge j(a) 
+\Phi(I) = ({\rm pr}_{\Omega^{0,*}} \circ \rho^*) \tensor j : & \Omega^*_c(I) \tensor A_d & \to & \Omega^{0,*}_c\left((\rho^{-1}(I)\right) \\
+& \varphi \tensor a & \mapsto & \left(({\rm pr}_{\Omega^{0,*}} \circ \rho^*) \varphi\right) \wedge j(a) 
 \end{array}
 \een
 Since this is a map of commutative dg algebras it defines a map of dg Lie algebras
@@ -1149,19 +1149,212 @@ In particular, one has $X_1 = S^3$.
 
 \subsection{The local cohomology of holomorphic vector fields}
 
-We now turn to providing a complete description of local cohomology of the local Lie algebra of holomorphic vector fields $\sT_X = \Omega^{0,*}(X ; T_X^{1,0})$ for any complex $d$-fold $X$. 
-Recall, such a central extension is determined by a cocycle in complex of local functionals $\cloc^*(\sT_X)$. 
-Our main result is to identify such local cocycles with Gelfand-Fuks cocycles we have just discussed. 
+Our main result in this section is a complete classification of the local cohomology of the sheaf of Dolbeualt complex of holomorphic vector fields $\sT_X = \Omega^{0,*}(X ; T_X^{1,0})$ on any complex manifold.
+This description involves the Gelfand-Fuks cohomology of formal vector fields that we have just discussed. 
 
-Our first goal is to construct, from a Gelfand-Fuks class in $\clie^*(\W_d)$, a local functional on $\sT_X$. 
-We have seen that the cochain complex $\clie^*(\W_d ; \hOmega_d^*)$, equipped with the total differential $\d_{CE} + \d_{dR}$, computes the absolute Gelfand-Fuks cohomology $H^*(\W_d)$. 
-We will use this property to represent elements of $H^*(\W_d)$ by local cocycles on $\sT_X$. 
-
-Using the natural framing on the formal disk, we can decompose a class $\alpha \in \clie^k(\W_d ; \hOmega^*_d)$ as 
+\begin{thm}
+Let $X$ be a complex $d$-fold. 
+There is a quasi-isomorphism of sheaves of cochain complexes
 \ben
-\alpha = f^I \d t_I
+\cloc^*(\sT_X) \; \simeq \; \Omega^*_X \tensor \cred^*(\W_d) [2d] 
 \een
-where the sum is over the multi-index $I = (i_1,\ldots, i_k)$ where $1 \leq i_j \leq d$, and for each $I$, $f^I$ is a $k$ multi-linear symmetric functional on $\W_d$ valued in $\hO_d$
+where $\Omega^{*}_X$ is the sheaf of de Rham forms on $X$. 
+\end{thm}
+
+The core of the argument is in interpretting the local Lie algebra cohomology as the cohomology of vector fields on the formal disk through the process of {\em Gelfand-Kazhdan descent} that we introduced in Chapter \ref{chap}
+Before moving on to the proof, we have the immediate cohomological interpretation of the calculation.
+Recall that when we study classical BV theories equivariant for a local Lie algebra $\sL$, the space the failure for quantizing the BV theory in a way that is equivariant for the Lie algebra is measured by an anomaly class in the local cohomology.
+For holomorphic diffeomorphisms, we obtain the following. 
+
+\begin{cor} 
+For $X$ any complex manifold of complex dimension $d$ one has at the level of cohomology 
+\ben
+H^k_{\rm loc}(\sT_X) \; \cong \; \bigoplus_{i=0}^{2d} H^i_{dR}(X) \tensor H^{2d + k-i}_{\rm Lie, red}(\W_d) .
+\een
+In particular, if the manifold is connected the space of anomalies for holomorphic diffeomorphisms for a theory defined on $X$ is:
+\ben
+H^{1}_{\rm loc}(\sT_X) =  H^{2d+1}_{\rm Lie}(\W_d),
+\een
+which is independent of the complex manifold.
+\end{cor}
+
+%\begin{thm}
+%Let $X$ be a complex $d$-fold. 
+%There is a quasi-isomorphism of sheaves
+%\ben
+%J^{GF} : \ul{\clie^*(\W_d ; \hOmega^*_n)}_X [2d] \to \cloc^*(\sT_X)
+%\een
+%where $\ul{(-)}_X$ denotes the constant sheaf on $X$. 
+%Further, by the formal Hodge to de Rham spectral sequence there is a quasi-isomorphism $\ul{\clie^*(\W_d)}_X [2d] \simeq \cloc^*(\sT_X)$ of sheaves on $X$.
+%\end{thm}
+
+The corollary implies that the cohomology $H^{2d+1}_{\rm Lie}(\W_d)$ deserves to be thought of as the space of ``higher dimensional central charges" of a classically holomorphic diffeomorphism invariant theory. 
+After the proof of our main result we will how this relates to the central extensions of holomorphic vector fields and the role of these extensions in quantum field theory.
+
+\begin{proof}
+We recall a description of the local cohomology complex using $D$-modules given in Section 4.5 of \cite{CG2}.
+Let $\sL$ be any local Lie algebra on $X$ with associated graded vector bundle $L$.
+The local Lie algebra cohomology is defined as the sheaf
+\ben
+\cloc^*(\sL) = \Omega^{d,d}_X \tensor_{D_X} \cred^*(JL)
+\een
+where $JL$ is the $D_X$-module given by taking the $\infty$-jets of the underlying vector bundle of $\sL$. 
+In \cite{CosRenormalization} it was shown that $\cred^*(JL)$ is flat as a $D_X$-module, thus we can replace the tensor product above by a left-derived tensor product
+\be\label{derived tensor1}
+\Omega^{d,d}_X \tensor_{D_X} \cred^*(JL) \simeq \Omega^{d,d}_X \tensor^{\LL}_{D_X} \cred^*(JL) .
+\ee
+The Spenser resolution is a free resolution of $\Omega^{d,d}_X$ as a right $D_X$-module (by $D_X$ we mean smooth differential operators) given by
+\ben
+M^* = \left(\cdots \to \Omega^{2d-1} \tensor_{C^\infty_X} D_X \xto{\nabla_D} \Omega^{d,d} \tensor_{C^\infty_X} D_X\right)
+\een
+The differential $\nabla_D$ is determined by the natural flat connection on $D_X$.
+This complex $M^*$ is concentrated in degree $-2d,\ldots,0$. 
+Via this resolution, we see that (\ref{derived tensor1}) is quasi-isomorphic to 
+\ben
+M^* \tensor_{D_X} \cred^*(JL) \simeq  \left(\cdots \to \Omega^{2d-1} \tensor_{C^\infty_X} \cred^*(JL)  \xto{\nabla_D} \Omega^{d,d} \tensor_{C^\infty_X}\cred^*(JL) \right) .
+\een
+The right-hand side is, by definition, the shifted de Rham complex of the $D_X$-module $\cred^*(JL)$ so we obtain
+
+\be\label{de rham 1}
+\cloc^*(\sL) \simeq \Omega^*(X , \cred^*(JL))[2d] .
+\ee
+
+Now, suppose that $\sL$ is a holomorphic local Lie algebra of the form $\Omega^{0,*}(X, L^{hol})$ where $L^{hol}$ is a holomorphic vector bundle. 
+In the above notation, the underlying smooth vector bundle is $L = \Wedge^* T^{0,1^*}X \tensor L^{hol}$. 
+
+We have used the notation $JE$ to denote the smooth sections of the infinite rank vector bundle ${\rm Jet}(E)$. 
+If $E$ is a holomorphic vector bundle let ${\rm Jet}^{hol}(E)$ denote the infinite rank holomorphic vector bundle of holomorphic jets. 
+Similarly, let $J^{hol}E$ be the holomorphic sections of this bundle. 
+This is a $D^{hol}_X$-module where $D^{hol}_X$ is the sheaf of holomorphic differential operators. 
+Equivalently, a $D^{hol}_X$-module is a holomorphic vector bundle with a holomorphic flat connection.
+Of course, any $D_X^{hol}$-module $E$ forgets to a smooth $D_X$-module that we denote $E^{C^\infty}$. 
+
+\begin{lem} \label{lem: hol dmodule}
+Let $L, L^{hol}$ be as above.
+There is a quasi-isomorphism of $D_X$-modules $JL \simeq (J^{hol}L^{hol})^{C^\infty}$.
+\end{lem}
+\begin{proof}
+Let $\sL$ be the sheaf of sections of $L$. 
+The Dolbeualt complex is a resolution of the sheaf of holomorphic sections; thus there is a quasi-isomorphism $\sL \simeq \sL^{hol}$ of $\sO^{hol}_X$-modules. 
+\end{proof}
+
+This means that we can further reduce the expression for the local cohomology in (\ref{de rham 1}) to 
+\be\label{de rham 2}
+\cloc^*(\sL) \simeq \Omega^*(X , \cred^*(J^{hol}L^{hol}))[2d] .
+\ee
+We have dropped the notation $(-)^{C^\infty}$ for convenience.
+
+We now turn to the local Lie algebra in question, namely $\sT_X$. 
+This is, of course, a holomorphic local Lie algebra as it is given by $\sT_X = \Omega^{0,*}(X, TX)$. 
+The underlying holomorphic vector bundle is the holomorphic tangent bundle $T^{1,0}X$. 
+
+Suppose that $\sV$ is any $(\W_d, \GL_d)$-module.
+Then, Gelfand-Kazhdan descent along the complex manifold $X$ yields the $D_X$-module $\desc_X(\sV)$. 
+In the case that $\sV = \hT_d$ we have seen that the $D_X$-module $\desc_X(\hT_d)$ is equivalent to the $D_X$-module $J^{hol} T^{1,0}X$. 
+
+\begin{lem}
+Gelfand-Kazhdan descent is symmetric monoidal. 
+That is, if $\sV,\sV'$ are two $(\W_d, \GL_d)$-modules, then
+\ben
+\sV \tensor_{\hO_n} \sV' \simeq \desc_X(\sV) \tensor_{J^{hol} \sO^{hol}_X} \desc_X(\sV') .
+\een
+\end{lem}
+
+This implies that there is a string of isomorphisms of $D_X$-modules
+\ben
+J^{hol} \cred^*(T^{1,0} X) = \desc(\cred^*(\W_d)) \cong \cred^*(\desc(\W_d)) = \cred^*(J ^{hol} T^{1,0} X).
+\een
+Equivalently, by \ref{owen and ryan} we know that the functor of jets is symmetric monoidal, so the same result follows.
+
+To summarize we see that the Gelfand-Kazhdan descent of the $(\Vect, \GL_d)$-module $\cred(\W_d)$ is equal to the $D_X$-module $\cred^*(J ^{hol} T^{1,0}_X)$.
+This is precisely the $D_X$-module present in the definition of the local cohomology of $\sT_X$.
+Indeed, by Lemma \ref{lem: hol dmodule} we have
+\ben
+\cloc^*(\sT_X) \simeq \Omega^*\left(X ,  \cred^*(J^{hol}T^{1,0}_X)\right) .
+\een
+Thus, the de Rham complex of the $D_X$-module given by descent is precisely the local cohomology 
+\ben
+\cloc^*(\sT_X) \simeq \Omega^*\left(X , \desc_X(\cred^*(\W_d))\right)
+\een
+
+The interpretation via descent will allow us to describe this de Rham complex explicitly. 
+Suppose that $\fg$ is any Lie algebra.
+Then $\fg$ acts on itself (and its dual) via the adjoint action. 
+This extends to an action of $\fg$ on its Chevalley-Eilenberg complex $\clie^*(\fg ; M)$, where $M$ is any $\fg$-module via the formula
+\ben
+(x \cdot \varphi) (x_1,\ldots, x_k) = \sum_i \varphi(x_1,\ldots, [x, x_i], \ldots,x_k) - x \cdot \varphi(x_1,\ldots,x_k)
+\een
+Here, $x, x_i \in \fg$ and $\varphi$ is a $k$-cochain with values in $M$.
+The $[-,-]$ denotes adjoint action, and the $\cdot$ is the $\fg$-module structure on $M$. 
+The following lemma is well-known.
+The same formula holds for the reduced cochains.
+
+\begin{lem}
+The $\fg$-module structure on the cochain complexes $\clie^*(\fg)$ and $\cred^*(\fg)$ is homotopically trivial.
+\end{lem}
+
+For the case of an infinite dimensional Lie algebra, such as $\W_d$, the same result holds when we use the continuous, or Gelfand-Fuks, Lie algebra cohomology.
+Thus, $\W_d$ acts homotopically trivial on $\cred^*(\W_d)$.
+
+This implies that the descent $\desc_X(\W_d)$ has a homotopically trivial $D_X$-module structure. 
+Equivalently, this means that the flat connection on $\cred^*(J^{hol}T^{1,0}X)$ is gauge equivalent to the trivial connection.
+Thus, there is a quasi-isomorphism of de Rham complexes
+\ben
+\Omega^*\left(X ,  \cred^*(J^{hol}T^{1,0}_X)\right) \simeq \Omega^*(X) \tensor_{C^\infty_X}\ul{\cred^*(\W_d)}_X
+\een
+where the underline denotes the sections of the trivial bundle with fiber $\cred^*(\W_d)$.
+We have identified the left hand side with the local cohomology complex, so we are done.
+\end{proof}
+
+\subsubsection{An explicit description of the local cocycles}
+
+We'd like to leverage our knowledge of the the Gelfand-Fuks cohomology of formal vector fields to provide an explicit description of the local cocycles. 
+The theorem in the previous section gives a very general equivalence of the local cohomology on any complex manifold with the Gelfand-Fuks cohomology, but writing down the form of the local cocycle from the description on a formal disk is not so obvious.
+
+For instance, consider the case $d=1$ and we work on $X = \CC$. 
+The cohomology $H^*_{\rm Lie, red}(\W_1)$ is one-dimensional concentrated in degree $3$. 
+We'd like to describe the local cocycle corresponding to the generator of $H^3(\W_1) \cong H^1_{\rm loc}(\sT_{\CC})$ explicitly. 
+Recall, using the formal Hodge-to-de Rham spectral sequence we saw that the generator of $H^3(\W_1)$ came from the element $a_1 \tau_1 \in H^2_{\rm Lie} (\W_1 ; \hOmega^1_1)$ on the $E_2$ page of the spectral sequence (\ref{ss1}). 
+
+Now, the $1$-cocycles $a_1,\tau_1$ can both be interpreted as functionals on the Dolbeault complex $\Omega^{0,*}(\CC, T^{1,0}\CC)$. 
+Indeed, if $\xi = \alpha(z,\zbar) \partial_z$ is an element of the Dolbeault complex we can define
+\begin{align*}
+\Tilde{a}_1 (\xi) & = \partial_z \alpha(z,\zbar) \in \Omega^{0,*}(\CC) \\
+\Tilde{\tau}_1 (\xi) & = \partial (\partial_z \alpha(z,\zbar)) \in \Omega^{1,*}(\CC) .
+\end{align*}
+Each of these cocycles clearly only depends on the jet of the vector field $\alpha \partial_z$.
+Similarly, the product is $\Tilde{a}_1 \Tilde{\tau}_1$ is the bilinear functional on jets of $\sT_\CC$:
+\begin{align*}
+\Tilde{a}_1 \Tilde{\tau}_1 (\xi_1,\xi_2) & = \partial_z \alpha_1(z,\zbar)  \partial (\partial_z \alpha_2(z,\zbar)) \in \Omega^{1,*}(\CC)
+\end{align*}
+This is a density precisely when $|\alpha_1|+|\alpha_2| = 1$.
+Thus, $\Tilde{a}_1 \Tilde{\tau}_1$ determines a degree $+1$ density valued cochain on $J \sT_\CC$; in other other words an element of $\cloc^*(\sT_\CC)$ that we write as
+\ben
+\int_\CC \partial_z \alpha_1(z,\zbar)  \partial (\partial_z \alpha_2(z,\zbar)) .
+\een
+If we integrate by parts, we can put this local functional in the form $\int f \partial^3_z g \d z \d \zbar$. 
+If one restricts this local functional to the annulus and performs the radial integration, we recover the usual formula for the generator of $H^2({\rm Vect}(S^1))$ \brian{citation} defining the central extension of the Virasoro Lie algebra. 
+In fact, in \cite{BWVir} \brian{finish}
+
+
+%\ben
+%\left(f(z,\zbar) \frac{\partial}{\partial z}, g(z,\zbar)\d \zbar \frac{\partial}{\partial z} \right) \mapsto \int_\CC \left(\frac{\partial}{\partial z} f \right) \partial \left(\frac{\partial}{\partial z} g\right) \d \zbar .
+%\een
+
+%For instance, the linear functional $\tau_1 : g(t) \frac{\partial}{\partial t} \mapsto \d_{dR} (\partial_t g(t))$ is mapped to the functional on the Dolbeualt complex of holomorphic vector fields given by $g(z,\zbar) \frac{\partial}{\partial z} \mapsto \partial (\partial_z g(z,\zbar))$. 
+
+This can be generalized to arbitrary dimensions in a natural way. 
+
+Our first goal is to construct, from a Gelfand-Fuks classes in $\clie^*(\W_d)$ and $\clie^*(\Vect ; \hOmega^*_d)$, a local functional on $\sT_X$. 
+We have seen that the cochain complex $\clie^*(\W_d ; \hOmega_d^*)$, equipped with the total differential $\d_{CE} + \d_{dR}$, computes the absolute Gelfand-Fuks cohomology $H^*(\W_d)$ through the formal Hodge to de Rham spectral sequence.
+We will use this property to represent elements of $H^*(\W_d)$ by local functionals on $\sT_X$ by first representing elements in $\clie^*(\Vect ; \hOmega^*_d)$ by local functionals.
+
+We can decompose an element $\alpha \in \clie^k(\W_d ; \hOmega^*_d)$ as 
+\ben
+\alpha = f^I \d t_I .
+\een
+The sum is over the multi-index $I = (i_1,\ldots, i_k)$, where $1 \leq i_j \leq d$.
+For each $I$, $f^I$ is a $k$ multi-linear symmetric functional on $\W_d$ valued in $\hO_d$
 \ben
 f^I : \Sym^k(\W_d [1]) \to \hO_d .
 \een 
@@ -1179,7 +1372,7 @@ f^I_{\Omega^{0,*}} : & \Sym^k\left(\Omega^{0,*}(\CC^d ; T^{1,0})\right) & \to & 
 \end{array}
 \een
 
-The local functional corresponding to the original class $\alpha = f^I \d t_I \in \clie^*(\Vect ; \hOmega^*_d)$ is defined by the $k$-multi-linear functional
+The local functional corresponding to the original element $\alpha = f^I \d t_I \in \clie^*(\Vect ; \hOmega^*_d)$ is defined by the $k$-multi-linear functional
 \ben
 (\xi_1, \ldots, \xi_k) \mapsto \int_{\CC^d} f^I_{\Omega^{0,*}}(\xi_1,\ldots, \xi_k) \d z_I .
 \een
@@ -1187,79 +1380,44 @@ Denote this functional by $J^{GF}(\alpha)$.
 Note that it is only nonzero when the multi-index $I$ is a permutation of $(1,\ldots, d)$. 
 Since it is given by the integral of a some multi-differential operators against a density it is manifestly a local functional. 
 
-\begin{prop}
-Let $\cloc^*(\sT_{\CC^d})$ be the local functionals of $\sT_{\CC^d}$ on $\CC^d$. The map
-\ben
-J^{GF} : \clie^*(\W_d ; \hOmega^*_n)[2d] \to \cloc^*(\sT_{\CC^d}) 
-\een
-sending $\alpha \mapsto J^{GF}(\alpha)$ is a map of cochain complexes. 
-Moreover, it is a quasi-isomorphism. 
-\end{prop}
-
-\begin{thm}
-Let $X$ be a complex $d$-fold. 
-Then, the map
-\ben
-J^{GF} : \ul{\clie^*(\W_d ; \hOmega^*_n)}[2d] \to \cloc^*(\sT_X)
-\een
-is a quasi-isomorphism of sheaves.
-In particular, there is an isomorphism of graded vector spaces
-\be\label{central charges}
-H^{*+2d}(\Vect) \cong H^*(X, \cloc^*(\sT_X)) ,
-\ee
-where the right-hand side denotes the hypercohomology. 
-\end{thm}
+%\begin{lem}
+%Let $\cloc^*(\sT_{\CC^d})$ be the local functionals of $\sT_{\CC^d}$ on $\CC^d$. The map
+%\ben
+%J^{GF} : \clie^*(\W_d ; \hOmega^*_n)[2d] \to \cloc^*(\sT_{\CC^d}) 
+%\een
+%sending $\alpha \mapsto J^{GF}(\alpha)$ is a map of cochain complexes. 
+%\end{lem}
+%
+%\begin{proof}
+%It suffices to show that the map 
+%\end{proof}
 
 \begin{lem}
-On any complex manifold $X$ of complex dimension $d$ there is a quasi-isomorphism of sheaves of cochain complexes 
+Let $\cloc^*(\sT_{\CC^d})^{\CC^d}$ denote the translation invariant local cochain complex of the local Lie algebra $\sT_{\CC^d}$.
+Then, there is a quasi-isomorphism
 \ben
-\cloc^*(\sT_X) \; \simeq \; \ul{\clie^*(\W_d)} [2d]
+\clie^*(\W_d)[2d] \xto{\simeq} \cloc^*(\sT_{\CC^d})^{\CC^d} .
 \een
 \end{lem}
 \begin{proof}
-We recall a description of the local cohomology complex using $D$-modules given in Section 4.5 of \cite{CG2}.
-We have already seen that
+By Lemma \ref{??} we know that if $\sL = \Gamma(L)$ is any holomorphically translation invariant local Lie algebra on $\CC^d$ then there is a quasi-isomorphism
 \ben
-\cloc^*(\sL) = \Omega^{d,d}_X \tensor_{D_X} \cred^*(JL)
+\cloc^*(\sL)^{\CC^d} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_1,\ldots,\partial_d]} \clie^*(J_0L) [d]
 \een
-where $JL$ is the $D_X$-module given by taking the $\infty$-jets of the underlying vector bundle of $\sL$. 
-In \cite{CosRenormalization} it was shown that $\cred^*(JL)$ is flat as a $D_X$-module, thus we can replace the tensor product above by a left-derived tensor product
+where $J_0L$ denotes the $\infty$-jets of $L$ at $0 \in\CC^d$. 
+There is a Koszul resolution of the trivial right $\CC[\partial_1,\ldots,\partial_d] = \CC\left[\frac{\partial}{\partial z_1},\ldots, \frac{\partial}{\partial z_d}\right]$ given by
 \ben
-\Omega^{d,d}_X \tensor_{D_X} \cred^*(JL) \simeq \Omega^{d,d}_X \tensor^{\LL}_{D_X} \cred^*(JL) .
+\left(\CC\left[\frac{\partial}{\partial z_1},\ldots, \frac{\partial}{\partial z_d}\right] [\epsilon_1,\ldots,\epsilon_d], \d \epsilon_i = \frac{\partial}{\partial z_i} \right)
 \een
-\brian{finish spenser resolution}
-
-To wrap the above discussion up, we obtain a quasi-isormophism
+where $\epsilon_i$ put in cohomological degree $-1$. 
+Thus, we can write
 \ben
-\cloc^*(\sL) \simeq \Omega^*\left(X, \cred^*(JL)\right) [2d] .
+\cloc^*(\sL)^{\CC^d} \simeq \clie^*(J_0L) [d]
 \een
-
-Any Lie algebra $\fg$ acts on its (reduced) Chevalley-Eilenberg cochains $\cred^*(\fg)$. 
-It is a standard fact that this action is, in fact, homotopically trivial.
-
-This argument transfers over to continuous Lie algebra cohomology.
-Indeed, applying this to the case $\W_d$, we see that the Lie algebra of formal vector fields acts homotopically trivial on its Gelfand-Fuks cochain complex $\clie^*(\W_d)$. 
-
-\begin{lem}
-For any $\ZZ$-graded vector bundle $L$ one has $\sO_{red}(JL) \cong J \sO(L)$.
-\end{lem}
-
 \end{proof}
 
-\begin{eg}
-Again, take the case $d=1$. 
-We can describe the local cocycle corresponding to the generator $H^3(\W_1) \cong H^1(\sT_{\CC})$ explicitly. 
-Recall, the generator of $H^3(\W_1)$ came from the element $\xi_1 \tau_1 \in \clie^2(\W_1 ; \hOmega^1_1)$ on the $E_2$ page of the spectral sequence (\ref{ss1}). 
-Using the formulas for $\xi_1,\tau_1$ above, we see that the local functional $J^{GF}(\xi_1 \tau_1)$ is given by
-\ben
-\left(f(z,\zbar) \frac{\partial}{\partial z}, g(z,\zbar)\d \zbar \frac{\partial}{\partial z} \right) \mapsto \int_\CC \left(\frac{\partial}{\partial z} f \right) \partial \left(\frac{\partial}{\partial z} g\right) \d \zbar .
-\een 
-For instance, the linear functional $\tau_1 : g(t) \frac{\partial}{\partial t} \mapsto \d_{dR} (\partial_t g(t))$ is mapped to the functional on the Dolbeualt complex of holomorphic vector fields given by $g(z,\zbar) \frac{\partial}{\partial z} \mapsto \partial (\partial_z g(z,\zbar))$. 
 
-If we integrate by parts, we can put $J^{GF}(\xi_1 \tau_1)$ in the form $\int f \partial^3_z g \d z \d \zbar$. 
-If one restricts this local functional to the annulus and performs the radial integration, we recover the usual formula for the generator of $H^2({\rm Vect}(S^1))$ \brian{citation} defining the central extension of the Virasoro Lie algebra. 
-In fact, in \cite{BWVir} \brian{finish}
-\end{eg}
+
 
 
 

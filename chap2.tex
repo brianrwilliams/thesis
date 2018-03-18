@@ -1433,6 +1433,263 @@ This construction of descent enjoys a number of nice functorial properties. \bri
 
 \subsection{The flat connection from the extended pair}
 
+\section{The classical holomorphic $\sigma$-model}
+
+\section{Deformations of the holomorphic $\sigma$-model}
+
+In this section we allow $\fg$ to be a curved $L_\infty$ algebra over a commutative dg ring $R$ and consider the holomorphic $\sigma$-model of maps $Y \to B \fg$, where $Y$ is a complex $d$-fold.
+We will be most interested in the following two cases:
+
+\begin{enumerate}
+\item the simplest case where $R = \CC$ and $\fg = \CC^n[-1]$ is the trivial $L_\infty$ algebra with $\ell_k = 0$ for all $k \geq 0$; 
+\item when $X$ is a smooth manifold $R = \Omega^*_X$, and $\fg$ is a curved $L_\infty$ algebra over $\Omega^*_X$. 
+Thus, $\fg$ is part of an $L_\infty$ space $(X, \fg)$ over $X$ in the terminology of \cite{wg2, GradyGwilliamDerived}.
+\end{enumerate}
+
+We have discussed how these two cases are related.
+Indeed, through Gelfand-Kazhdan descent along a complex manifold we can patch together the case (1) to the situation in (2) where $\fg = \fg_{X_{\dbar}}$, the curved $L_\infty$ algebra encoding the complex structure. 
+
+The theory we are studying is a cotangent theory of the form $T^*[-1] (\Omega^{0,*}(Y, \fg[1]))$. 
+In particular, there is an action of the abelian group $\CC^\times_{cot}$ which assigns the base direction a weight of zero and the fiber a weight of $+1$. 
+Thus, if $(\gamma, \beta) \in \Omega^{0,*}(Y, \fg) [1] \oplus \Omega^{d,*}(Y, \fg^\vee)[d-1]$, then an element $\lambda \in \CC^\times_{cot}$ acts by
+\ben
+\lambda \cdot (\gamma, \beta) = (\gamma, \lambda \beta) .
+\een
+Our first reduction is to restrict ourselves to studying deformations that are compatible with this $\CC^\times_{cot}$ action.
+
+Note that the symplectic pairing of the theory, as well as the classical action functional, is of $\CC^{\times}_{cot}$-weight $(-1)$.
+Our convention is that the parameter $\hbar$ {\em has $\CC^\times_{cot}$-weight $(-1)$} as well. 
+There are two compelling reasons for making this definition. 
+The first deals with studying correlation functions for the theory. 
+If we require the observables of the theory to be equivariant for this rescaling of the cotangent fibers, this means that the factorization product must have $\CC^\times_{cot}$ weight zero.
+In the case that the theory is free, we have seen that the factorization product between two operators of the theory $\cO, \cO'$ is computed by a Moyal type formula
+\ben
+\cO \star \cO' = e^{-\hbar \partial_P} \left(e^{\hbar \partial_P} \cO \cdot e^{\hbar \partial_P} \cO' \right) .
+\een
+Since the symplectic pairing is $\CC^\times_{cot}$-weight $(-1)$ we observe that the propagator is also $\CC^\times_{cot}$-weight $(+1)$.
+\footnote{This actually requires that we also take the gauge fixing operator to be of $\CC^\times_{cot}$-weight zero, which is the natural thing to do for cotangent theories.}
+For the product to have weight zero we are then forced to take $\hbar$ to have opposite weight to $P$.
+
+The other, related reason, we choose this weight for $\hbar$ is that we would like to require our BV complex to be equivariant for rescaling the fibers as well. 
+The classical BRST differential is of the form $\{S,-\} = Q + \{I,-\}$.
+We have already said that the classical action is of weight $(-1)$.
+Since the symplectic pairing is also degree $(-1)$, this means that the $P_0$ bracket is degree $+1$. 
+Thus, the classical BRST complex is manifestly equivariant.
+The quantum BV differential involves deforming this classical differential by $\hbar \Delta$. 
+For the same reason as the Poisson bracket, the BV Laplacian has weight $(+1)$. 
+Thus, we see that in order to have an equivariant differential we are again forced to take $\hbar$ to have weight $-1$. 
+
+In the case of an interacting theory, we have the following restriction on the quantum interactions of the theory as well. 
+We can expand an effective interaction as
+\ben
+I[L] = \sum_{g \geq 0} \hbar^g I^{(g)}[L] .
+\een
+In order for $I[L]$ to have $\CC^\times_{cot}$ weight $(-1)$ we see that $I^{(g)}[L]$ must have weight $g-1$. 
+We are only studying a one-loop quantization of the holomorphic theory, so the effective action has the form $I[L] = I^{(0)} + \hbar I^{(1)}[L]$ and hence $I^{(1)}[L]$ has weight zero. 
+
+Thus, all one-loop quantities compatible with the $\CC^\times_{cot}$ action also have weight zero, including the one-loop anomaly. 
+For this reason, we will be most concerned with the piece of the deformation complex that is $\CC^{\times}_{cot}$-weight zero. 
+This amounts to looking just at local functionals of the $\gamma$-field.
+
+\begin{dfn} 
+The {\em deformation complex for cotangent quantizations} of the holomorphic $\sigma$-model of maps $Y \to B \fg$ is the cochain complex 
+\ben
+\Def^{\rm cot}_{Y \to B\fg} = \cloc^*(\Omega^{0,*}_Y \tensor \fg) .
+\een
+This is simply the local cochains of the local Lie algebra $\Omega^{0,*}_Y \tensor \fg$ on $Y$. 
+\end{dfn}
+
+We will be most interested in seeing how both the anomaly and the resulting quantum correction induced by the anomaly are realized inside the complex $\Def_{Y \to Bg}^{\rm cot}$. 
+Before doing this, we'd like to restrict ourselves to looking at quantizations preserving further symmetries. 
+
+\brian{do this}
+
+\subsection{Forms as local functionals}
+
+Before we compute the possible deformations of the holomorphic $\sigma$-model, we describe how certain differential forms on the formal stack $B \fg$ yield local functionals of the holomorphic $\sigma$-model of maps $Y \to B \fg$. 
+Indeed, we will define a map of cochain complexes
+\ben
+J : \Omega^{d+1}_{cl}(B \fg) \xto{\simeq} \left(\Def_{\CC^d \to B \fg}\right)^{\CC^d \ltimes U(d)} .
+\een
+
+The functions on a formal moduli stack $B \fg$ are given by the Chevalley-Eilenberg complex $\sO(B\fg) = \clie^*(\fg)$.
+By definition, the $k$-forms on a formal moduli stack $B\fg$ are defined by
+\ben
+\Omega^k(B \fg) := \clie^*(\fg ; \Sym^k \fg^\vee [-k])
+\een
+where $\fg^\vee$ denotes the coadjoint module of $\fg$. 
+
+As a simple check, note that in the case $\fg = \CC^n [-1]$ the above complex reduces to
+\ben
+\Omega^k(B \fg) = \CC[t_1,\ldots, t_n] \tensor \wedge^k(t_1^\vee, \cdots, t_n^\vee),
+\een
+where $t_i^\vee$ denotes the dual coordinate. 
+Everything is in cohomological degree zero.
+If we identify $t_i^\vee \leftrightarrow \d t_i$, this is the usual definition of the algebraic de Rham forms. 
+
+\brian{finish. define de Rham operator, closed forms, J map, geometric interpretation..}
+
+\begin{rmk}
+We use $\partial$ to denote the de Rham differential on $B \fg$. 
+This is because our two main examples of $B \fg$ will be the formal holomorphic disk $\hD^n$ or the formal moduli space associated to any complex manifold $X$. 
+In each of these cases, the differential above is the holomorphic Dolbeualt operator $\partial : \Omega^k_{hol} \to \Omega^{k+1}_{hol}$.
+\end{rmk}
+
+\subsubsection{}
+
+\begin{thm}
+Consider the deformation complex for cotangent quantizations of the holomorphic $\sigma$-model of maps $\CC^d \to B \fg$. 
+There is a quasi-isomorphism of the $\CC^d \ltimes U(d)$ invariant subcomplex with the complex of closed $(d+1)$-forms on $B\fg$:
+\ben
+J : \Omega^{d+1}_{cl}(B \fg) \xto{\simeq} \left(\Def_{\CC^d \to B \fg}\right)^{\CC^d \ltimes U(d)} .
+\een
+\end{thm}
+
+To compute the translation invariant deformation complex we will invoke Proposition \brian{hol trans invt def} from Section \brian{ref}.
+Note that the deformation complex is simply the (reduced) local cochains on the local Lie algebra $\Omega^{0,*}_{\CC^d} \tensor \fg$. 
+Thus, in the notation of Section \brian{same ref} the bundle $L$ is simply the trivial bundle $\fg$.
+Thus, we see that the translation invariant deformation complex is quasi-isomorphic to the following cochain complex
+\ben
+\left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^d} \; \simeq \; \CC \cdot \d^d z \tensor^{\LL}_{\CC\left[\frac{\partial}{\partial z_i}\right]} \cred^*(\fg[[z_1,\ldots,z_d]])  .
+\een
+We'd like to recast the right-hand side in a more algebraic way. 
+
+Note that the the algebra $\CC\left[\frac{\partial}{\partial z_i}\right]$ is the enveloping algebra of the abelian Lie algebra $\CC^d = \CC\left\{\frac{\partial}{\partial z_i}\right\}$. 
+Thus, the complex we are computing is of the form
+\ben
+\CC \cdot \d^d z \tensor^{\LL}_{U(\CC^d)} \cred^*(\fg[[z_1,\ldots,z_d]]) .
+\een
+Since $\CC \cdot \d^d z$ is the trivial module, this is precisely the Chevalley-Eilenberg cochain complex computing Lie algebra homology of $\CC^d$ with values in the module $\cred^*(\fg[[z_1,\ldots,z_d]])$:
+\ben
+\left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^d} \; \simeq  \; \clieu_*\left(\CC^d ; \cred^*(\fg[[z_1,\ldots,z_d]]) \d^d z\right) .
+\een
+We will keep $\d^d z$ in the notation since below we are interested in computing the $U(d)$-invariants.
+
+To compute the cohomology of this complex, we will first describe the differential explicitly. 
+There are two components to the differential.
+The first is the ``internal" differential coming from the Lie algebra cohomology of $\fg [[z_1,\ldots,z_d]]$, we will write this as $\d_{\fg}$. 
+The second comes from the $\CC^d$-module structure on $\clie^*(\fg[[z_1,\ldots,z_n]])$ and is the differential computing the Lie algebra homology, which we denote $\d_{\CC^d}$. 
+We will employ a spectral sequence whose first term turns on the $\d_{\fg}$ differential.
+The next term turns on the differential $\d_{\CC^d}$.
+
+As a graded vector space, the cochain complex we are trying to compute has the form
+\ben
+\Sym(\CC^d [1]) \tensor \cred^*\left(\fg[[z_1,\ldots,z_d]])\right) \d^d z .
+\een
+The spectral sequence is induced by the increasing filtration of $\Sym(\CC^d [1])$ by symmetric powers
+\ben
+F^k = \Sym^{\leq k}(\CC^d[1]) \tensor \cred^*\left(\fg[[z_1,\ldots,z_d]])\right) \d^d z .
+\een
+
+\begin{rmk}
+In the examples we are most interested in we can understand the spectral sequence we are using as a version of the Hodge to de Rham spectral sequence.
+\end{rmk}
+
+As above, we write the generators of $\CC^d$ by $\frac{\partial}{\partial z_i}$. 
+Also, note that the reduced Chevalley-Eilenberg complex has the form
+\ben
+\cred^*(\fg[[z_1,\ldots,z_n]]) = \left(\Sym^{\geq 1} \left(\fg^\vee [z_1^\vee,\ldots,z_d^\vee][-1] \right), \d_{\fg}\right),
+\een
+where $z_i^\vee$ is the dual variable to $z_i$. 
+
+Recall, we are only interested in the $U(d)$-invariant subcomplex of this deformation complex. 
+Sitting inside of $U(d)$ we have $S^1 \subset U(d)$ as multiples of the identity. 
+This induces an overall weight grading to the complex.
+The group $U(d)$ acts in the standard way on $\CC^d$.
+Thus, $z_i$ has weight $(+1)$ and both $z_i^\vee$ and $\frac{\partial}{\partial z_i}$ have $S^1$-weight $(-1)$. 
+Moreover, the volume element $\d^d z$ has $S^1$ weight $d$.
+It follows that in order to have total $S^1$-weight that the total number of $\frac{\partial}{\partial z_i}$ and $z_i^\vee$ must add up to $d$.
+Thus, as a graded vector space the invariant subcomplex has the following decomposition
+\ben
+\bigoplus_k \Sym^k(\CC^d[1]) \tensor \left(\bigoplus_{i \leq d-k} \Sym^{i} \left(\fg^\vee [z_1^\vee,\ldots,z_d^\vee][-1] \right) \right) \d^d z .
+\een
+It follows from Schur-Weyl that the space of $U(d)$ invariants of the $d$th tensor power of the fundamental representation $\CC^d$ is one-dimensional, spanned by the top exterior power. 
+Thus, when we pass to the $U(d)$-invariants, only the unique totally antisymmetric tensor involving $\frac{\partial}{\partial z_i}$ and $z_i^\vee$ survives. 
+Thus, for each $k$, we have
+\be\label{U(d) invariants}
+\left(\Sym^k(\CC^d[1]) \tensor \left(\bigoplus_{i \leq d-k} \Sym^{i} \left(\fg^\vee [z_1^\vee,\ldots,z_d^\vee][-1] \right) \right) \d^d z\right) \cong \wedge^{k}\left(\frac{\partial}{\partial z_i}\right) \wedge \wedge^{d-k}\left(z_i^\vee\right) \clie^*\left(\fg , \Sym^{d-k}(\fg^\vee)\right) \d^d z .
+\ee
+Here, $\wedge^{k}\left(\frac{\partial}{\partial z_i}\right) \wedge \wedge^{d-k}\left(z_i^\vee\right)$ is just a copy of the determinant $U(d)$-representation, but we'd like to keep track of the appearances of the partial derivatives and $z_i^\vee$. 
+Note that for degree reasons, we must have $k \leq d$. 
+When $k = 0$ this complex is the (shifted) space of functions modulo constants on the formal moduli space $B\fg$, $\sO_{red}(B\fg)[d]$. 
+When $k \geq 1$ this the (shifted) space of $k$-forms on the formal moduli space $B\fg$, which we write as $\Omega^{k}(B \fg)[d+k]$.
+Thus, we see that before turning on the differential on the next page, our complex looks like
+\be\label{bg def complex1}
+\xymatrix{
+\ul{-2d} & \cdots & \ul{-d-1} & \ul{-d} \\
+\sO_{red}(B \fg) & \cdots & \Omega^{d-1} (B \fg) & \Omega^{d}(B \fg) .
+}
+\ee
+We've omitted the extra factors for simplicity. 
+
+We now turn on the differential $\d_{\CC^d}$ coming from the Lie algebra homology of $\CC^d = \CC\left\{\frac{\partial}{\partial z_i}\right\}$ with values in the above module. 
+Since this Lie algebra is abelian the differential is completely determined by how the operators $\frac{\partial}{\partial z_i}$ act.
+We can understand this action explicitly as follows.
+Note that $\frac{\partial}{\partial z_i} z_j = \delta_{ij}$, thus we may as well think of $z_i^\vee$ as the element $\frac{\partial}{\partial z_i}$. 
+Consider the subspace corresponding to $k=d$ in Equation (\ref{U(d) invariants}):
+\ben
+\frac{\partial}{\partial z_1} \cdots \frac{\partial}{\partial z_d} \cred^*(\fg) \d^d z .
+\een 
+Then, if $x \in \fg^\vee [-1] \subset \cred^*(\fg)$ we observe that
+\ben
+\d_{\CC^d} \left(\frac{\partial}{\partial z_1} \cdots \frac{\partial}{\partial z_d} \tensor f \tensor \d^d z \right) = \det (\partial_i, z_j^\vee) \tensor 1 \tensor x \tensor \d^d z \in  \wedge^{d-1}\left(\frac{\partial}{\partial z_i}\right) \wedge \CC \{z_i^\vee\} \clie^*\left(\fg , \fg^\vee \right) \d^d z.
+\een
+This follows from the fact that the action of $\frac{\partial}{\partial z_i}$ on $x = x \tensor 1 \in \fg^\vee \tensor \CC[z_i^\vee]$ is given by
+\ben
+\frac{\partial}{\partial z_i} \cdot (x \tensor 1) = 1 \tensor x \tensor z_i^\vee \in \clie^*(\fg , \fg^\vee) z_i^\vee .
+\een
+By the Leibniz rule we can extend this to get the formula for general elements $f \in \cred^*(\fg)$. 
+We find that getting rid of all the factors of $z_i$ we recover precisely the de Rham differential 
+\ben
+\xymatrix{ 
+\cred^*(\fg) [2d] \ar@{=}[d] \ar[r]^-{\d_{\CC^d}} & \clie^*(\fg , \fg^\vee) [2d-1] \ar@{=}[d] \\
+\sO_{red}(B\fg) \ar[r]^-{\partial} & \Omega^1(B \fg) .
+}
+\een
+A similar argument shows that $\d_{\CC^d}$ agrees with the de Rham differential on each $\Omega^k(B \fg)$. 
+
+
+We conclude that the $E_2$ page of this spectral sequence is quasi-isomorphic to the following truncated de Rham complex.
+\be\label{bg def complex2}
+\xymatrix{
+\ul{-2d} & \ul{-2d+1} & \cdots & \ul{-d-1} & \ul{-d} \\
+\sO_{red}(B \fg) \ar[r]^-{\partial} & \Omega^1(B \fg) \ar[r] & \cdots \ar[r] & \Omega^{d-1} (B \fg) \ar[r]^-{\partial} & \Omega^{d}(B \fg) .
+}
+\ee
+For now, denote this complex by (\ref{bg def complex2}). 
+
+Consider the full de Rham complex 
+\ben
+\xymatrix{
+\Omega^*(B \fg) & = & R[1] \ar[r] & \sO(B \fg) \ar[r]^-{\partial} & \Omega^1(B\fg)[-1] \ar[r] & \cdots \\
+& = & & \sO_{red}(B \fg)\ar[r]^-{\partial} & \Omega^{1}(B \fg) \ar[r] & \cdots  .
+}
+\een
+The second line follows from the definition of reduced Chevalley-Eilenberg cochains $\clie^*(\fg) = {\rm coker}(R \to \clie^*(\fg))$.
+Now, there is an obvious quotient map $\Omega^*(B \fg)[2d] \to$ (\ref{bg def complex2}) whose kernel is the complex of (shifted) closed $(d+1)$-forms
+\ben
+\Omega^{d+1}_{cl}(B \fg) [d-1] = \Omega^{d+1}(B \fg)[d-1] \xto{\partial} \Omega^{d+1}(B \fg)[d-2] \to \cdots .
+\een
+It follows that we have an exact sequence 
+\ben
+\Omega^{d+1}(B \fg)[d-1] \to \Omega^*(B \fg) \to (\ref{bg def complex2}) .
+\een 
+Since the middle term is acyclic, it follows that the connecting map (which is degree one) is a quasi-isomorphism $(\ref{bg def complex2}) \xto{\simeq} \Omega^{d+1}_{cl} (B \fg) [d]$. 
+This completes the proof.
+
+%where the direct sum runs over multi-indices $I = (i_1,\ldots,i_k)$. 
+%As usual, the we have used the multi-index notation for differential operators and $z_I^\vee = z_{i_1} \cdots z_{i_k
+%
+%\brian{...}
+%An element of $(\lambda_1,\ldots,\lambda_d)$ acts on $z = (z_1,\ldots, z_d)$ via $(\lambda_1z_1,\ldots,\lambda_d z_d)$.
+%Further, 
+%\ben
+%(\lamda_1,\ldots, \lambda_d) \cdot \frac{\partial}{\partial z_i} = \lambda_{i}^{-1} \frac{\partial}{\partial z_i} .
+%\een
+%
+%\ben
+%f \left(\frac{\partial}{\partial z_1}, \cdots, \frac{\partial}{\partial z_j}) 
+
 \section{BV quantization of the holomorphic $\sigma$-model}
 
 \brian{This is big thing to do still}
@@ -1572,7 +1829,7 @@ In particular, this implies that these operators are of the following homogenous
 \end{align*}
 
 \begin{rmk}
-The minus sign in $\cO_{\gamma, -\vec{n}}(w)$ is purely conventional, and meant to match up with the physics and vertex algebra literature \brian{ref}.
+The minus sign in $\cO_{\gamma, -\vec{n}}(w;v^*)$ is purely conventional, and meant to match up with the physics and vertex algebra literature \brian{ref}.
 One reason for using this convention is motivated by the state-operator correspondence by realizing the above operators as coming from residues over higher dimensional spheres.
 Note that for any $d$-disk $D(0,r)$ there is an embedding of topological vector spaces
 \ben
@@ -1583,12 +1840,15 @@ that sends a Laurent polynomial $f(z)$ functional
 \gamma \in \Omega^{0,*}(D(w,r)) \mapsto \oint_{z \in S^{2d-1}} f(z-w) \gamma(z,\zbar) \wedge \left(\d^d z \wedge \omega^{BM}(z-w,\zbar-\wbar)\right) ,
 \een
 where $\omega_{BM}$ is the Bochner-Martinelli form of type $(0,d-1)$, and $S^{2d-1}$ is the sphere of radius $r$ around $w$.
-This is the higher dimensional versoin of the embedding 
-\ben
-z^{-1} \CC [z^{-1}] \to \left(\Omega^{1,hol}(D)\right)^\vee
-\een
-sending $f(z) \in z^{-1} \CC[z^{-1}] $ to the residue functional $g \mapsto \Res_{z} (f(z) g(z) \d z)$. 
+The operator $\cO_{\gamma, -\vec{n}}(w;v^*)$ corresponds to the Laurent polynomial $f(z) = z^{-n_1}\cdots z^{-n_d}$. 
 We will elaborate more on these types of sphere operators in the next section.
+
+%This is the higher dimensional version of the embedding 
+%\ben
+%z^{-1} \CC [z^{-1}] \to \left(\Omega^{1,hol}(D)\right)^\vee
+%\een
+%sending $f(z) \in z^{-1} \CC[z^{-1}] $ to the residue functional $g \mapsto \Res_{z} (f(z) g(z) \d z)$. 
+
 \end{rmk}
 
 %Similarly, there is an embedding $z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \ldots,z_d^{-1}] \to \left(\Omega^{d,*}(D(w,r)\right)^\vee$ sending $f(z)$ to the functional
@@ -1663,7 +1923,7 @@ The result for the quantum observables follows from the spectral sequence \brian
 
 We will denote $\cV_V = \Obs_V^\q(r)$, which is well-defined up to quasi-isomorphism by the preceding proposition. 
 This is the ``state space" of the higher dimensional holomorphic theory. 
-\brian{elude to OPE}
+We will elaborate more on its structure later on in this section.
 
 \subsection{The sphere observables}
 
@@ -1997,8 +2257,7 @@ U(H^* \sH_V) \cong H^* \sA_V .
 \subsubsection{Using smoothed observables}
 
 We now provide a refined description of the algebra of sphere operators, yet this approach may seem more indirect. 
-It relies on the existence of the subfactorization algebra of $\Obs^\q_{V}$ given by the {\em smoothed observables}. 
-\brian{have we already encountered this?}
+It relies on interpreting the observables of the $\beta\gamma$ system as the {\em factorization envelope} of a certain sheaf of Lie algebras.
 
 The linear smoothed observables, equipped with the linearized BRST differential, on any $U \subset \CC^d$ form the subcomplex 
 \ben
@@ -2020,21 +2279,21 @@ An elementary observation identifies the smoothed quantum observables with the f
 Indeed, the right hand side assigns to each open $U$ the cochain complex $\clieu_*(\Tilde{\sH}_V(U)) = \left(\Sym(\sH_V'(U)), \dbar + \d_{CE}\right)$. 
 One checks directly that $\d_{CE}$ is precisely the BV Laplacian $\hbar \Delta$. 
 
-We now introduce the following algebra, which is a deformation of the dg associative algebra $U(\sH_V)$ from the previous section.
-Let $\Tilde{\sH}_V$ denote the following extension of dg Lie algebras
-\ben
-0 \to \CC \cdot \hbar \to \Tilde{\sH}_V \to A_d \tensor (V^*[d-1] \tensor V) \to 0
-\een
-determined by the $2$-cocycle
-\ben
-(\alpha \tensor v^* , \alpha' \tensor v) \mapsto \hbar \<v,v^*\> \oint_{S^{2d-1}} \alpha \alpha' \d^d z + \hbar \<v, v^*\> \oint_{z \in S^{2d-1}} \alpha(z) \d^d z \int_{w \in D} \dbar \alpha' (w) \omega_{BM}(z,w)  + (\alpha \leftrightarrow \alpha') .
-\een 
-%To check that this is a cocycle, note that by the residue formula one has 
+%We now introduce the following algebra, which is a deformation of the dg associative algebra $U(\sH_V)$ from the previous section.
+%Let $\Tilde{\sH}_V$ denote the following extension of dg Lie algebras
 %\ben
-%\oint_{z \in S^{2d-1}} \dbar \alpha(z) \d^d z \int_{w \in D} \dbar \alpha'(w) \omega_{BM}(z,w) = ...
+%0 \to \CC \cdot \hbar \to \Tilde{\sH}_V \to A_d \tensor (V^*[d-1] \tensor V) \to 0
 %\een
-The first term above defined the bracket for $\sH_V$, so we are deforming the bracket by the second term. 
-\brian{call $\Tilde{\sA}_V$ the algebra with commutator that includes the error term in the residue}.
+%determined by the $2$-cocycle
+%\ben
+%(\alpha \tensor v^* , \alpha' \tensor v) \mapsto \hbar \<v,v^*\> \oint_{S^{2d-1}} \alpha \alpha' \d^d z + \hbar \<v, v^*\> \oint_{z \in S^{2d-1}} \alpha(z) \d^d z \int_{w \in D} \dbar \alpha' (w) \omega_{BM}(z,w)  + (\alpha \leftrightarrow \alpha') .
+%\een 
+%%To check that this is a cocycle, note that by the residue formula one has 
+%%\ben
+%%\oint_{z \in S^{2d-1}} \dbar \alpha(z) \d^d z \int_{w \in D} \dbar \alpha'(w) \omega_{BM}(z,w) = ...
+%%\een
+%The first term above defined the bracket for $\sH_V$, so we are deforming the bracket by the second term. 
+%\brian{call $\Tilde{\sA}_V$ the algebra with commutator that includes the error term in the residue}.
 
 %\ben
 %\xymatrix{
@@ -2051,67 +2310,233 @@ There is a locally constant factorization algebra $\sF_V$ on $\RR_{>0}$ with the
 \sF_V \to \rho_* (\Obs^\q_V)
 \een
 that is dense at the level of cohomology.
-\item As a locally constant one-dimensional factorization algebra $\sF_V$ is equivalent to the dg algebra $\Tilde{\sA}_V$. 
+\item As a locally constant one-dimensional factorization algebra $\sF_V$ is equivalent to the dg algebra $U(\sH_V)$. 
 \end{enumerate}
 \end{prop}
 
 \begin{proof}
 We will write down the factorization algebra $\sF_V$ and then prove the above two properties we claim it satisfies. 
-Consider the local Lie algebra on $\RR_{>0}$ whose compactly supported sections are $\Omega^*_{\RR_{>0},c} \tensor \Tilde{\sH}_V$.
-The Lie bracket is encoded by the Lie bracket on $\Tilde{\sH}_V$ combined with the wedge product of forms on $\RR_{>0}$. 
+Consider the local Lie algebra on $\RR_{>0}$ whose compactly supported sections are $\Omega^*_{\RR_{>0},c} \tensor \sH_V$.
+The Lie bracket is encoded by the Lie bracket on $\sH_V$ combined with the wedge product of forms on $\RR_{>0}$. 
 Now, we define $\sF_V$ as the factorization envelope of this local Lie algebra 
 \ben
-\sF_V = \UU\left(\Omega^*_{\RR_{>0},c} \tensor \Tilde{\sH}_V\right) .
+\sF_V = \UU\left(\Omega^*_{\RR_{>0},c} \tensor \sH_V\right) .
 \een
 
 We have just expressed $\Obs_V^\q$ as a factorization enveloping algebra as well.
 Since the pushforward commutes with the functor $\UU(-)$, to construct the map in (1) it suffices to provide a map of factorization Lie algebras
 \ben
-\Omega^*_{\RR_{>0},c} \tensor \Tilde{\sH}_V \to \rho_* \sH_V' .
+\Phi : \Omega^*_{\RR_{>0},c} \tensor \sH_V \to \rho_* \sH_V' .
+\een
+Recall that as a vector space $\Tilde{\sH}_V = A_d \tensor (V^*[d-1] \oplus V)$.
+Let $I \subset \RR_{>0}$ be an open subset, we will describe the map $\Phi(I)$.
+There is the natural map $\rho^* : \Omega^*_c(I) \to \Omega^*_c(\rho^{-1}(I))$ given by the pull back of differential forms. 
+We can post compose this with the natural projection ${\rm pr}_{\Omega^{0,*}} : \Omega^*_c \to \Omega^{0,*}_c$ to obtain a map of commutative algebras ${\rm pr}_{\Omega^{0,*}} \circ \rho^* : \Omega^*_c(I) \to \Omega^{0,*}_c(\rho^{-1}(I))$. 
+The map $j$ from Proposition \ref{prop fhk1} determines a map of dg commutative algebras $j : A_d \to \Omega^{0,*}(\rho^{-1}(I))$. 
+Thus, we obtain a map
+\ben
+\begin{array}{cccc}
+\Phi(I) = ({\rm pr}_{\Omega^{0,*}} \circ \rho^*) \tensor j \tensor {\rm id}_V : & \Omega^*_c(I) \tensor A_d \tensor V & \to & \Omega^{0,*}_c\left((\rho^{-1}(I)\right) \tensor V \\
+& \varphi \tensor a \tensor v & \mapsto & \left(\left(({\rm pr}_{\Omega^{0,*}} \circ \rho^*) \varphi\right) \wedge j(a) \right) \tensor v
+\end{array}
+\een
+Note that since the map $j$ is a dense map in cohomology so is $\Phi(I)$ for each $I \subset \RR_{>0}$.
+The map on the $A_d \tensor V^*[d-1]$ component of $\sH_V$ is defined similarly.
+Moreover, on the central factor $\hbar \Omega^*_c(I) \subset \Omega^*_{\RR_{>0},c} \tensor \sH_V$ we define
+\ben
+\Phi(I) (\hbar \varphi) = \hbar \int_I \varphi .
 \een
 
+To show that this is a map of cosheaves of dg Lie algebras we must show that the differentials and brackets are compatible.
+The differential on $\sH_V$ is $\d_{dR, \RR} + \dbar$ where $\dbar$ is the differential on $A_d$. 
+Let $\varphi \tensor a \tensor v^*$ be an element in $\Omega^*(I) \tensor A_d \tensor V^*[d-1]$. 
+The differential applied to this element is
+\ben
+\frac{\partial \varphi}{\partial r} \d r \tensor a \tensor v^* + \varphi \tensor \dbar a \tensor v^* .
+\een
+Under $\Phi(I)$ this element gets mapped to
+\ben
+\sum_i \frac{\partial \varphi}{\partial r} \frac{z_i}{2r} \d \zbar_i \wedge a(z,\zbar) \tensor v^* + \varphi (r) \wedge \dbar a (z,\zbar) \tensor v^* .
+\een
+To see that the differentials are compatible, we note that when acting on functions $\varphi(r)$ that only depend on the radius, one has $\frac{\partial \varphi}{\partial \zbar_i} = \frac{z_i}{2r} \frac{\partial}{\partial r}$. 
+The fact that the differentials are compatible follows immediately. 
+
+Now, suppose $\varphi \tensor a \tensor v^* \in \Omega^*_c(I) \tensor A_d \tensor V^*[d-1]$ and $\psi \tensor b \tensor v \in \Omega^*_c(I) \tensor A_d \tensor V$.
+The Lie bracket in $\sH_V$ of these elements is
+\be\label{bracket1}
+[\varphi \tensor a \tensor v^*, \psi \tensor b \tensor v]_{\sH_V} = \hbar \<v,v^*\> \int_I \varphi \psi \oint a b \d^d z .
+\ee
+Now, using the definition of the $(-1)$-shifted symplectic structure defining the free $\beta\gamma$ system, we have
+\begin{align*}
+[\Phi(I)(\varphi \tensor a \tensor v^*), \Phi(I)(\psi \tensor b \tensor v)]_{\sH_V'} & = \hbar \<v,v^*\> \int_{\rho^{-1}(I)} \phi(r) a(z,\zbar) \psi(r) b(z,\zbar)\d^d z \\  & = \hbar \<v,v*\> \int_{r \in I} \phi(r) \psi(r) \oint_{S^{2d-1}_r} a(z,\zbar) b(z,\zbar) \d^d z . 
+\end{align*}
+This is precisely the image of the right hand side of (\ref{bracket1}) under $\Phi(I)$. 
+Thus, $\Phi$ determines a map of cosheaves of Lie algebras.
+By functoriality of the enveloping factorization algebra together with compatibility under pushforward $\UU(\rho_* \sF) \cong \rho_* \UU(\sF)$, we obtain a map of factorization algebras
+\ben
+\Phi : \sF_V = \UU\left( \Omega^*_{\RR_{>0},c} \tensor \sH_V \right) \to \rho_* \UU (\sH_V') = \rho_* \Obs^\q_V .
+\een
 \end{proof}
 
-\begin{rmk}
-At the level of cohomology $H^*(\Tilde{\sA}_V) \cong H^*(\sA_V)$ as graded algebras....\brian{comment}
-\end{rmk}
+
+
+%\begin{rmk}
+%At the level of cohomology $H^*(\Tilde{\sA}_V) \cong H^*(\sA_V)$ as graded algebras....\brian{comment}
+%\end{rmk}
 
 
 
-\subsubsection{The disk as a module}
-
-We point out the potential confusion with notation for disk observables in Definition \ref{dfn disk2}. 
-This is remedied by the following lemma. 
-
-\begin{lem} 
-Consider the factorization algebra structure map for the inclusion $N_{r, \epsilon}(w) \hookrightarrow D(w, R)$ where $R > r + \epsilon$:
+\subsection{The disk as a module}
+In the beginning of this section we extracted a subspace of the cohomology of the observables on the $d$-dimensional disk 
 \ben
-\mu : \Obs^\q_V(N_{r,\epsilon}(w)) \to \Obs^\q_V(D(w,R)) .
+\sV_V \subset \Obs^{\q}_{V} (D(0,r))
 \een
-Then, in cohomology $H^*(\mu)|_{H^* \sA_V}$ is only nonzero on elements in
+by looking at the $U(d)$ weight spaces. 
+We have also seen how the factorization product endows a subspace of the observables supported on neighborhoods of spheres $S^{2d-1} \subset N_{\epsilon, r}$
 \ben
-\Sym \left(H^{d-1}(A_d) \tensor (V^*[d-1] \oplus V)\right) .
+\sA_V \subset \Obs^\q_V (N_{\epsilon,r})
 \een
-On the linear elements inside of this symmetric algebra, the factorization map map satisfies
+with the structure of a dg associative algebra.
+In this section we study a different piece of the factorization algebra that equips $\sV_V$ with the structure of a module over $\sA_V$. 
+Moreover, we will identify this module structure in a way that is reminiscent of the state space of a vertex algebra in the world of chiral CFT.
+
+First, we describe the factorization structure map for a very simple configuration of open sets. 
+Suppose $R > r + \epsilon$ and consider the inclusion 
+\be\label{NtoD}
+N_{r,\epsilon} \hookrightarrow D(0, R) .
+\ee
+This configuration induces the following composition
+\be\label{composition1}
+\sA_V \hookrightarrow \Obs^\q_V(N_{r,\epsilon}) \to \Obs^\q_V(D(0,R)) \xto{H^*(-)} H^*\left(\Obs^\q_V(D(0,R))\right).
+\ee
+The first arrow is just the inclusion of the sphere algebra.
+The middle arrow is the factorization structure map associated to (\ref{NtoD}).
+The map $H^*(-)$ is projection onto cohomology.
+Usually this does not exist, but in the case of the observables on a disk the cohomology is concentrated in the top degree so that the map makes sense.
+Recall, the state space $\sV_V$ embeds inside the cohomology of the observables on a disk, we will see in the next lemma that the map above factors through $\sV_V$, hence we get a map $\sA_V \to \sV_V$.
+
+To state the lemma, recall the presentation for the cohomology of the commutative dg algebra $A_d$ in terms of the Bochner-Martinelli kernel.
+One has a $U(d)$-equivariant presentation
 \ben
-H^* \mu : \cO_{\gamma , \partial_z^{\vec{n}} \omega_{BM}} \mapsto \cO_{\gamma, -\vec{n}}
+H^{d-1}(A_d) = \CC\left[\frac{\partial}{\partial z_1}, \ldots, \frac{\partial}{\partial z_d}\right] \omega^{BM},
 \een
+where, on the right hand side we take the cohomology class.
+
+\begin{lem}
+The above composition (\ref{composition}) factors through the state space $\sV_V$ to define a map $\pi_- : \sA_V \to \sV_V$. 
+This is a map of symmetric algebras, further on linear elements $a \tensor v^*, b \tensor v \in A_d \tensor (V^*[d-1] \oplus V) \subset \sA_V$ the map is
+\ben
+\pi_-(a \tensor v^*) = 
+\begin{cases}
+    \cO_{\gamma, -\vec{n}}(0;v^*) ,& \text{if } |a| = d-1 \\
+    0,              & \text{otherwise} .
+\end{cases}
+\een
+and
+\ben
+\pi_-(b \tensor v) = 
+\begin{cases}
+    \cO_{\beta, -\vec{m}}(0;v) ,& \text{if } |b| = d-1 \\
+    0,              & \text{otherwise} .
+\end{cases}
+\een
+Where, $a = (\frac{\partial}{\partial z})^{\vec{n}} \omega^{BM} \in A^{d-1}_d$ and $b = (\frac{\partial}{\partial z})^{\vec{m}} \omega^{BM} \in A^{d-1}_d$.
 \end{lem}
 
-\begin{prop}
-The factorization product above gives the cohomology $H^*\sV_V$ the structure of a graded module for the associative graded algebra $H^*\sA_V$.
-Moreover, there is an isomorphism of $H^*\sA_V$ modules
+The notation $\pi_-$ will become apparent momentarily.
+
+\begin{proof}
+For degree reasons it is automatic that in the composition in (\ref{composition}) is only nonzero on $a\tensor v^*, b \tensor v \in A_d\tensor (V^*[d-1] \oplus V)$ if $|a|=|b|=d-1$. 
+Since $\omega^{BM}$ is $U(d)$ invariant, it is clear that the element $a = \partial^{\vec n} \omega^{BM}$ it lives in the weight $-\vec{n}$ subspace and defines the observable 
 \ben
-H^*\sV \cong H^*\sA_V \tensor_{\sA_{V,+}} \CC .
-\een 
+\gamma \tensor v \mapsto \<v,v^*\> \oint_{S^{2d-1}} \gamma(z,\zbar) (\frac{\partial}{\partial z})^{\vec{n}} \omega^{BM} \d^d z .
+\een
+Since we are only interested in the cohomology class, we can assume that $\gamma$ is holomorphic.
+In this case, the residue formula implies that this is precisely the observable $\cO_{\gamma 
+; -\vec{n}} (0 ; v^*)$. 
+The argument for $b \tensor v$ is similar.
+\end{proof}
+
+We consider the configuration of open sets of a small $d$-disk enclosed by a neighborhood $N_{\epsilon, r}$. 
+Concretely, suppose $r_1 < r_2 -\epsilon < r_2 + \epsilon < R$ and consider the inclusion of opens
+\be\label{open module}
+D(0,r_1) \sqcup N_{\epsilon, r_2} \hookrightarrow D(0,R). 
+\ee
+Consider the following diagram
+\ben
+\xymatrix{
+\Obs^\q_V (D(0,r_1)) \tensor \Obs^\q_V(N_{\epsilon,r_2}) \ar[r]^-{\mu} & \Obs^\q_V(D(0,R)) \ar[d]^-{H^*(-)} \\
+\Obs^\q_V(D) \tensor \sA_V \ar[u] \ar[r]^-{\mu|_{\sA_V}} & H^*(\Obs^\q_V(D(0,R))) \\
+\sV_V \tensor \sA_V \ar[u] \ar@{.>}[r] & \sV_V \ar[u] .
+}
+\een
+The top horizontal line $\mu$ is the factorization structure map coming from the configuration in (\ref{open module}).
+The map $H^*(-)$ is simply the quotient map onto the cohomology.
+
+The map $\mu|_{\sA_V}$ is simply the composition of $\mu$ with this quotient map onto cohomology.
+All of the upward pointing vertical arrows are the inclusions of $\sA_V, \sV_V$ into the sphere and disk observables, respectively. 
+We claim that the bottom horizontal arrow exists; that is, the restricted factorization product factors through $\sV$. 
+To see this, we note that at the cochain level, the factorization ... \brian{finish}
+
+We have seen that the commutative dg algebra $A_d$ has cohomology concentrated in degrees $0$ and $d-1$.
+Since the complex is concentrated in degrees $0,\ldots,d-1$ there exists a quotient map $q : A_d \to H^{d-1}(A_d)$. 
+In the remainder of the section we use the notation $A_{d,-} := H^{d-1}(A_d)$.
+In addition, let $A_{d,+}$ denote the kernel of this map $A_{d,+} = \ker (q) \subset A_d$. 
+
+Correspondingly, there is an abelian dg Lie subalgebra
+\ben
+\sH_{V,+} = A_{d,+} \tensor (V^*[d-1] \oplus V) \subset \sA_V 
+\een
+and a commutative subalgebra $\sA_{V,+} = U(\sH_{V,+}) \subset \sA_V$. 
+In fact, this is a maximal commutative subalgebra of $\sA_V$. 
+Using $A_{d,-}$ we can similarly define the cochain complex $\sH_{V,-} = A_{d,-} \tensor (V^*[d-1] \oplus V)$. 
+As cochain complexes there is a splitting $\sH_V = \sH_{V,+} \oplus \sH_{V,-}$.
+Hence, by the PBW theorem there is a splitting $\sA_{V} = \sA_{V,+} \tensor \sA_{V,-}$ as cochain complexes.
+
+\begin{prop}
+The factorization product corresponding disks enclosed by the neighborhoods $N_{r,\epsilon}$ endows the state space $\sV_V$ the the structure of a module over the dg algebra $\sA_V$. 
+Moreover, as $\sA_V$-modules there is an isomorphism
+\ben
+\sV_V \cong \sA_V \tensor_{\sA_{V,+}} \CC .
+\een
 \end{prop}
 
-The tensor product $H^*\sA_V \tensor_{\sA_{V,+}} \CC$ is equal to the induction of the trivial module along the subalgebra $\sA_{V,+} \subset H^*\sA_V$. 
-In particular, it implies that as a graded vector space
-\ben
-H^* \sV_V \cong \sA_{V,-} [-d+1],
-\een
-which is immediate from our identification (\ref{U(d) identification})
+
+\begin{rmk}
+The subalgebra of sphere operators $\sA_{V,+}$ is the higher dimensional generalization of ``annihilation operators" in the context of CFT. 
+Repeated application of these operators kills any vector in $\sV_V$.
+Similarly, the quotient $\sA_{V,-}$ is the collection of "creation operators". 
+\end{rmk}
+
+%\begin{lem} 
+%Consider the factorization algebra structure map for the inclusion $N_{r, \epsilon}(w) \hookrightarrow D(w, R)$ where $R > r + \epsilon$:
+%\ben
+%\mu : \Obs^\q_V(N_{r,\epsilon}(w)) \to \Obs^\q_V(D(w,R)) .
+%\een
+%Then, in cohomology $H^*(\mu)|_{H^* \sA_V}$ is only nonzero on elements in
+%\ben
+%\Sym \left(H^{d-1}(A_d) \tensor (V^*[d-1] \oplus V)\right) .
+%\een
+%On the linear elements inside of this symmetric algebra, the factorization map map satisfies
+%\ben
+%H^* \mu : \cO_{\gamma , \partial_z^{\vec{n}} \omega_{BM}} \mapsto \cO_{\gamma, -\vec{n}}
+%\een
+%\end{lem}
+%
+%\begin{prop}
+%The factorization product above gives the cohomology $H^*\sV_V$ the structure of a graded module for the associative graded algebra $H^*\sA_V$.
+%Moreover, there is an isomorphism of $H^*\sA_V$ modules
+%\ben
+%H^*\sV \cong H^*\sA_V \tensor_{\sA_{V,+}} \CC .
+%\een 
+%\end{prop}
+%
+%The tensor product $H^*\sA_V \tensor_{\sA_{V,+}} \CC$ is equal to the induction of the trivial module along the subalgebra $\sA_{V,+} \subset H^*\sA_V$. 
+%In particular, it implies that as a graded vector space
+%\ben
+%H^* \sV_V \cong \sA_{V,-} [-d+1],
+%\een
+%which is immediate from our identification (\ref{U(d) identification})
 
 \subsection{The colored operad of holomorphic disks}
 
