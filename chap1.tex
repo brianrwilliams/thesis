@@ -91,6 +91,34 @@ quantizations, but the higher loop behavior remains a very interesting and subtl
 
 \subsection{Renormalization}
 
+In the BV formalism, as developed in \cite{CosRenormalization,CG}, 
+a quantum BV theory consists of a space of fields and an effective action functional $\{S[L]\}_{L \in (0,\infty)}$,
+which is a family of non-local functionals on the fields that are parametrized by a length scale $L$ 
+and satisfy
+\begin{enumerate}[(a)]
+\item an exact renormalization group (RG) flow equation,
+\item the scale $L$ quantum master equation (QME) at every length scale $L$,~and
+\item as $L \to 0$, the functional $S[L]$ has an asymptotic expansion that is local.
+\end{enumerate}
+The first condition ensures that the scale $L$ action functional $S[L]$ determines the functional at every other scale.
+The second can be interpreted as saying that we have a proper path integral measure at scale $L$ 
+(i.e., the QME can be seen as a definition of the measure).
+The third condition implies that the effective action is a quantization of a classical field theory,
+since a defining property of a classical theory is that its action functional is local.
+(A full definition is available in Section 8.2 of \cite{CG}.)
+
+\begin{rmk}
+The length scale is associated with a choice of Riemannian metric on the underlying manifold,
+but the formalism of \cite{CosBook} keeps track of how the space of quantum BV theories depends upon such a choice 
+(and other choices that might go into issues like renormalization).
+Hence, when the choices should not be essential --- such as with a topological field theory --- one can typically show rigorously that different choices give equivalent answers.
+The length scale is also connected with the use of heat kernels in \cite{CosBook},
+but one can work with more general parametrices (and hence more general notions of ``scale''),
+as explained in Chapter 8 of \cite{CG}.
+We use a natural length scale in this section; 
+when it becomes relevant, in the context of factorization algebras, we switch to general parametrices.
+\end{rmk}
+
 \subsection{The quantum master equation}
 
 \section{Holomorphic field theories}
@@ -157,12 +185,11 @@ Finally, to define a free theory we need the data of a symplectic pairing.
 For reasons to become clear in a moment, we must choose this pairing to have a strange cohomological degree. 
 The last piece of data we fix is:
 \begin{itemize}
-\item[(3)] a pairing 
+\item[(3)] an invertible bundle map
 \ben
-(-,-)_V : V \tensor V \to K_{X}[d-1]
+(-,-)_V : V \times V \to \Omega^{d,hol}_X[d-1]
 \een
-such that for each $z \in X$ the induced pairing on the fibers $(-,-)_V|_{z}$ is non-degenerate.
-Here $K_X$ is the holomorphic canonical bundle on $X$. 
+Here, $\Omega^{d,hol}_X$ is the holomorphic canonical bundle on $X$. 
 \end{itemize}
 
 The definition of the fields of an ordinary field theory are the {\em smooth} sections of the vector bundle $V$. 
@@ -172,11 +199,11 @@ By construction, the operator $Q^{hol}$ and the pairing $(-,-)_V$ are defined on
 \brian{what should I say the problem is with doing things in the analytic category?}
 
 The solution to this problem is in the existence of a resolution for the holomorphic sections of a vector bundle by smooth sections of bundles. 
-Given any holomorphic vector bundle $E$ we can define it's {\em Dolbeualt complex} $\Omega^{0,*}(X , E)$ with it's Dolbeualt operator 
+Given any holomorphic vector bundle $E$ we can define its {\em Dolbeualt complex} $\Omega^{0,*}(X , E)$ with it's Dolbeualt operator 
 \ben
 \dbar : \Omega^{0,p}(X, E) \to \Omega^{0,p+1}(X, E) .
 \een
-Here, $\Omega^{0,p}(X, E)$ denotes sections of the vector bundle
+Here, $\Omega^{0,p}(X, E)$ denotes smooth sections of the vector bundle
 \ben
 \Wedge^p T^{0,1*} X \tensor E
 \een
@@ -188,12 +215,12 @@ Using this construction, we take the fields of our free theory to be the complex
 \een
 The operator $\dbar + Q^{hol}$ is the total linearized BRST operator.
 By assumption we have $\dbar Q^{hol} = Q^{hol} \dbar^*$ so that $(\dbar + Q^{hol})^2 = 0$ and so the fields still define a complex. 
-The $(-1)$-shifted symplectic pairing is obtained by composition of the pairing $(-,-)_V$ with integration on $K_X$. 
+The $(-1)$-shifted symplectic pairing is obtained by composition of the pairing $(-,-)_V$ with integration on $\Omega^{d,hol}_X$. 
 The thing to observe here is that $(-,-)_V$ extends to the Dolbeualt complex in a natural way: we simply combine the wedge product of forms with the pairing on $V$.
 The $(-1)$-shifted pairing $\omega$ on $\sE$ is defined by the diagram
 \ben
 \xymatrix{
-\sE_V \tensor \sE_V \ar[r]^-{(-,-)_V} \ar@{.>}[dr]_-{\omega_V} & \Omega^{0,*}(X , K_X) [d-1] \ar[d]^-{\int_X} \\
+\sE_V \tensor \sE_V \ar[r]^-{(-,-)_V} \ar@{.>}[dr]_-{\omega_V} & \Omega^{0,*}(X , \Omega^{d,hol}_X) [d-1] \ar[d]^-{\int_X} \\
 & \CC[-1] .
 }
 \een
@@ -201,7 +228,7 @@ The $(-1)$-shifted pairing $\omega$ on $\sE$ is defined by the diagram
 We arrive at the following definition. 
 
 \begin{dfn/lem}\label{dfn hol free theory}
-A {\em free holomorphic theory} on a complex manifold $X$ is the data $(V, Q^{hol}, (-,-)_V)$ as in (1), (2), (3) above such that $Q^{hol}$ is a square zero elliptic differential operator that is skew self-adjoint for the pairing $(-,-)_V$.
+A {\em free holomorphic theory} on a complex manifold $X$ is the data $(V, Q^{hol}, (-,-)_V)$ as in (1), (2), (3) above such that $Q^{hol}$ is a square zero elliptic differential operator that is graded skew self-adjoint for the pairing $(-,-)_V$.
 The triple $(\sE_V, Q_V = \dbar + Q^{hol}, \omega_V)$ defines a free BV theory in the usual sense.
 \end{dfn/lem}
 
@@ -216,18 +243,18 @@ The first example we explain is related to the subject of Chapter \ref{chap hols
 \begin{eg}\label{eg bg affine} {\em The free $\beta\gamma$ system}.
 Suppose that 
 \ben
-V = \ul{\CC} \oplus K_{X} [d - 1] .
+V = \ul{\CC} \oplus \Omega^{d,hol}_X [d - 1] .
 \een
 Let $(-,-)_V$ be the pairing
 \ben
-(\ul{\CC} \oplus K_{X}) \tensor (\ul{\CC} \oplus K_{X}) \to K_{X} \oplus K_{X} \to K_{X} 
+(\ul{\CC} \oplus \Omega^{d,hol}_X) \tensor (\ul{\CC} \oplus \Omega^{d,hol}_X) \to \Omega^{d,hol}_X \oplus \Omega^{d,hol}_X \to \Omega^{d,hol}_X 
 \een 
 sending $(\lambda, \mu) \tensor (\lambda',\mu') \mapsto (\lambda \mu', \lambda'\mu) \mapsto \lambda\mu' + \lambda' \mu$.
 In this example we set $Q^{hol} = 0$. 
 One immediately checks that this is a holomorphic free theory as above.
 The space of fields can be written as
 \ben
-\sE = \Omega^{0,*}(X) \oplus \Omega^{d,*}(X)[d - 1] .
+\sE_V = \Omega^{0,*}(X) \oplus \Omega^{d,*}(X)[d - 1] .
 \een 
 We write $\gamma \in \Omega^{0,*}(X)$ for a field in the first component, and $\beta \in \Omega^{d,*}(X)[d - 1]$ for a field in the second component. 
 The action functional reads
@@ -239,9 +266,17 @@ We will discuss this higher dimensional version further in Section \brian{}.
 For instance, we will see how this theory is the starting block for constructing general holomorphic $\sigma$-models. 
 \end{eg}
 
-\subsubsection{Interacting holomorphic theories}
-\def\olochol{\sO_{\rm loc}^{hol}}
+\begin{eg}
+{\em The free chiral scalar}.
+Another basic example is the free chiral scalar. 
+Let $X$ be a complex manifold with Hermitian metric $g$. 
+Let $V = \ul{\CC}$, the trivial vector bundle. 
+\brian{do this}
+\end{eg}
 
+\subsubsection{Interacting holomorphic theories}
+
+\def\olochol{\sO_{\rm loc}^{hol}}
 
 We now define what an interacting holomorphic theory is.
 In general, an interacting field theory on a manifold $M$ is prescribed by the data of a free theory plus a local functional $I \in \oloc(\sE)$ that satisfies the classical master equation. 
@@ -249,6 +284,34 @@ Recall, the sheaf of local functionals on $\sE = \Gamma(E)$ is defined as the sh
 \ben
 \oloc(\sE) = {\rm Dens}_M \tensor_{D_M} \sO_{red}(JE) .
 \een
+In the expression above $JE$ stands for the sheaf of smooth sections of the $\infty$-jet bundle ${\rm Jet}(E)$ which has the structure of a $D_X$-module.
+
+If $V$ is a holomorphic vector bundle let $J^{hol} E$ denote the sheaf of holomorphic sections of the holomorphic bundle of holomorphic $\infty$-jets ${\rm Jet}^{hol}(V)$. 
+The fibers of the infinite rank vector bundle ${\rm Jet}^{hol}(V)$ are isomorphic to 
+\ben
+{\rm Jet}^{hol}(V)|_w = V_w \times \CC[[z_1,\ldots,z_d]] 
+\een
+where $w \in X$.
+The sheaf $J^{hol}V$ has the natural structure of a $D_X^{hol}$-module, that is, it is equipped with a holomorphic flat connection $\nabla^{hol}$.
+This is completely analogous to the smooth case.
+Locally, the holomorphic flat connection is of the form
+\ben
+\nabla^{hol} |_w = \sum_{i=1}^d \d w_i \left(\frac{\partial}{\partial w_i} - \frac{\partial}{\partial z_i}\right),
+\een
+where $\{w_i\}$ is the local coordinate on $X$ near $w$ and $z_i$ is the fiber coordinate labeling the holomorphic jet expansion.
+Using holomorphic jets we can make a completely analogous definition in our setting.
+
+\begin{dfn}\label{dfn hol lag}
+Let $V$ be a vector bundle. 
+The space of {\em holomorphic Lagrangian densities} on $V$ is
+\ben
+\sO_{red}^{hol}(V) = \prod_{n > 0} {\rm Hom} ({\rm Jet}(V)^{\times n} , K_X) .
+\een
+Equivalently, a holomorphic Lagrangian density is of the form $F = \sum_n F_n \in \sO_{red}^{hol}(V)$ where each $F_n$ is a holomorphic polydifferential operator 
+\ben
+F_n : V \tensor \cdots \tensor V \to K_X .
+\een
+\end{dfn}
 
 \begin{dfn}
 Suppose $V$ is a graded holomorphic vector bundle.
@@ -258,12 +321,16 @@ We define the sheaf of {\em holomorphic} local functionals on $V$ by
 \een
 \end{dfn}
 
+Suppose that $V$ is part of the data of a free holomorphic theory $(V, Q^{hol},(-,-)_V)$.
+The pairing $(-,-)_V$ endows the space of local functionals with a bracket of cohomological degree $+1$ that we denote by $\{-,-\}^{hol}$. 
+We can now state the definition of a classical holomorphic theory. 
+
 \begin{dfn}
-An interacting holomorphic theory on a complex manifold $X$ is the data of a free holomorphic theory $(V, Q^{hol}, (-,-)_V)$ plus a functional
+A {\em classical holomorphic theory} on a complex manifold $X$ is the data of a free holomorphic theory $(V, Q^{hol}, (-,-)_V)$ plus a functional
 \ben
-I^{hol} \in \olochol(V)'
+I^{hol} \in \olochol(V)^+
 \een
-of cohomological degree zero \brian{check this} such that $Q^{hol} I^{hol} + \{I^{hol}, I^{hol}\}^{hol} = 0$.
+of cohomological degree zero such that $Q^{hol} I^{hol} + \{I^{hol}, I^{hol}\}^{hol} = 0$.
 \end{dfn} 
 
 \begin{dfn/lem}
@@ -274,6 +341,58 @@ Then $Q^{hol} + \{I^{hol},-\}$ equips $\olochol(V)$ with the structure of a shea
 \een
 \end{dfn/lem}
 
+Just as in the free case, we see that classical holomorphic theories are special cases of ordinary classical BV theories.
+The underlying space of fields, as we have already seen is $\sE_V = \Omega^{0,*}(X , V)$. 
+Now, we know that $I^{hol}$ is a $\Omega^{d,hol}_X$-valued functional that is a linear combination of functionals of the form 
+\ben
+(\varphi_1,\ldots,\varphi_k) \mapsto D_1(\varphi_1)\cdots D_k(\varphi_k) \in \Omega^{d,hol}_X
+\een
+where $\varphi_i$ is a section of $V^{hol}$ and $D_i$ is a holomorphic differential operator on $V$.
+Now, every holomorphic differential operator on the holomorphic vector bundle $V$ extends to a differential operator on its Dolbeualt complex $\sE_V = \Omega^{0,*}(X, V)$. 
+Thus, we can define the functional
+\ben
+(\alpha_1\tensor \varphi_1,\ldots, \alpha_k \tensor \varphi_k) \mapsto \int_X D_1(\alpha_1 \tensor \varphi_1)\cdots D_k(\alpha_k \tensor \varphi_k)
+\een
+where $\alpha_i \tensor \varphi_i \in \Omega^{0,*}(X, V)$. 
+The symbol $\int_X$ reminds us that we are working modulo total derivatives, so that the above expression defines an element of $\oloc(\sE_V)$. 
+This defines a linear map $\olochol(V) \to \oloc(\sE_V)$ that we denote $I^{hol} \mapsto I^{\Omega^{0,*}}$. 
+
+\begin{lem} Every classical holomorphic theory $(V, Q^{hol},(-,-)_V, I^{hol})$ determines the structure of a classical BV theory.
+The underlying free BV theory is given in Definition/Lemma \ref{dfn hol free theory} $(\sE_V, Q, \omega_V)$ and the interaction is $I^{\Omega^{0,*}}$. 
+\end{lem}
+\begin{proof}
+We must show that $Q^{hol}I^{hol} + \frac{1}{2} \{I^{hol},I^{hol}\}^{hol} = 0$ implies 
+\ben
+\dbar I^{\Omega^{0,*}} + Q^{hol}I^{\Omega^{0,*}} + \frac{1}{2} \{I^{\Omega^{0,*}},I^{\Omega^{0,*}}\} = 0 .
+\een
+\end{proof}
+
+\begin{eg} {\em Holomorphic $BF$-theory}
+Let $\fg$ be a Lie algebra and $X$ any complex manifold.
+Consider the following holomorphic vector bundle on $X$:
+\ben
+V = \ul{\fg}_X \oplus \Omega^{d,hol}_X \tensor \fg^* [d-1] .
+\een
+The pairing $V \tensor V \to \Omega^d_{hol}[d-1]$ is similar to the pairing for the $\beta\gamma$ system, except we use the evaluation pairing $\<-.-\>_\fg$ between $\fg$ and its dual. 
+In this example, $Q^{hol} = 0$.
+Write $f \in \sO^{hol}_X$ and $\beta \in \Omega^{d,hol}_X$ and consider
+\ben
+I^{hol} (f_1 \tensor X_1, f_2 \tensor X_2, \beta \tensor X^\vee) = f_1f_2 \beta \<X^\vee, [X_1,X_2]\> + \cdots
+\een
+where the $\cdots$ means that we symmetrize the inputs.
+This defines an element $I^{hol} \in \olochol(V)^+$ and the Jacobi identity ensures $\{I^{hol}, I^{hol}\}^{hol} = 0$. 
+The fields of the corresponding BV theory are
+\ben
+\sE_V = \Omega^{0,*}(X, \fg) \oplus \Omega^{d,*}(X, \fg^*) [d-1] .
+\een
+The induced local functional $I^{\Omega^{0,*}}$ on $\sE_V$ is
+\ben
+I^{\Omega^{0,*}} (\alpha, \beta) = \int_X \<\beta, [\alpha,\alpha]\>_\fg .
+\een
+\end{eg}
+
+\begin{eg} {\em Topological $BF$-theory}
+\end{eg}
 \begin{lem}
 Suppose $(V, 0, (-,-)_V, I^{hol})$ is the data of a holomorphic theory with $Q^{hol} = 0$.
 Let $(\sE_V, Q = \dbar, \omega_V, I)$ be the corresponding BV theory.
@@ -917,39 +1036,45 @@ This concludes the proof.
 
 \section{Equivariant BV quantization}
 
+Equivariant BV quantization is an enhancement of ordinary BV quantization where one takes into account the action of a group or Lie algebra. 
+We will heavily rely on techniques of equivariant BV quantization throughout this thesis, notably in the construction of the holomorphic $\sigma$-model in Chapter \ref{chap hol sig} and in the proof of a local version of the Grothendieck-Riemann-Roch theorem in Chapter \ref{chap symmetries} using Feynman diagrammatic expansions.
+
 \subsection{Classical equivariance}
 
-\brian{classical equivariant theory}
+The equivariance that we consider is a direct analog of symmetries in ordinary Hamiltonian mechanics, which we briefly recall. 
+Suppose that $\fh$ is a Lie algebra on $(M,\omega)$ is an ordinary symplectic manifold. 
+A symplectic action of $\fh$ on $X$ is a map of Lie algebras 
+\ben
+\rho : \fh \to {\rm SympVect}(M)
+\een
+where ${\rm SympVect}(M)$ is the Lie algebra of symplectic vector fields, i.e. those vector fields $X$ which preserve the symplectic form $L_X \omega = 0$.
+On any symplectic manifold, the Poisson algebra of functions admits a Lie algebra map $\sO(M) \to {\rm SympVect}(M)$ sending a function $f$ to its Hamiltonian vector field $X_f = \{f,-\}$, where $\{-,-\}$ is the Poisson bracket.
+An action $\rho$ is said to be {\em inner} if it lifts to a map of Lie algebras $\Tilde{\rho} : \fh \to \sO(M)$. 
+Recall that on any symplectic manifold the kernel of $f \mapsto X_f$ is precisely the constant functions. 
+
+All of our classical theories arise as $(-1)$-shifted symplectic formal moduli problems.
+Hence, suppose we replace the symplectic manifold $M$ by a formal moduli problem $B \fg$, where $\fg$ is some dg Lie (or $L_\infty$ algebra). 
+To give $B \fg$ the structure of a $(-1)$-shifted symplectic structure is equivalent to having a $(-3)$-shifted non-degenerate pairing on $\fg$. 
+Functions on $B\fg$ are precisely the Chevalley-Eilenberg cochains $\sO(B\fg) = \clie^*(\fg)$. 
+The $(-1)$-shifted symplectic structure equips $\clie^*(\fg) [-1]$ with the structure of a dg Lie algebra.
+Since all symplectic vector fields are Hamiltonian in this case we see that 
+\ben
+{\rm SympVect}(B \fg) = \clie^*(\fg)[-1] / \CC = \cred^*(\fg)[-1]
+\een
+where we have taken the quotient by the constants, which by definition is the reduced cochains. 
+We modify the notion of a symplectic action slightly to allow for more general maps of Lie algebras.
+A symplectic action of $\fh$ on the $(-1)$-shifted symplectic formal moduli space $B \fg$ is a map of $L_\infty$ algebras, or a homotopy coherent map of dg Lie algebras
+\ben
+\rho : \fh \rightsquigarrow \cred^*(\fg)[-1] .
+\een
+Such a map $\rho$ is equivalent to a Maurer-Cartan element in the dg Lie algebra
+\ben
+\clie^*(\fh) \tensor \cred^*(\fg)[-1].
+\een
+This is a cohomological degree $+1$ element $I^\fh$ such that $\d I^\fh + \frac{1}{2}\{I^\fh, I^\fh\} = 0$.
+Here $\{-,-\}$ is the bracket on $\cred^*(\fg)$ and $\d$ is the sum of the Chevalley-Eilenberg differentials on $\fh$ and $\fg$. 
 
 \subsection{Quantum equivariance}
-
-Recall that in the BV formalism, as developed in \cite{CosRenormalization,CG}, 
-a quantum BV theory consists of a space of fields and an effective action functional $\{S[L]\}_{L \in (0,\infty)}$,
-which is a family of non-local functionals on the fields that are parametrized by a length scale $L$ 
-and satisfy
-\begin{enumerate}[(a)]
-\item an exact renormalization group (RG) flow equation,
-\item the scale $L$ quantum master equation (QME) at every length scale $L$,~and
-\item as $L \to 0$, the functional $S[L]$ has an asymptotic expansion that is local.
-\end{enumerate}
-The first condition ensures that the scale $L$ action functional $S[L]$ determines the functional at every other scale.
-The second can be interpreted as saying that we have a proper path integral measure at scale $L$ 
-(i.e., the QME can be seen as a definition of the measure).
-The third condition implies that the effective action is a quantization of a classical field theory,
-since a defining property of a classical theory is that its action functional is local.
-(A full definition is available in Section 8.2 of \cite{CG}.)
-
-\begin{rmk}
-The length scale is associated with a choice of Riemannian metric on the underlying manifold,
-but the formalism of \cite{CosBook} keeps track of how the space of quantum BV theories depends upon such a choice 
-(and other choices that might go into issues like renormalization).
-Hence, when the choices should not be essential --- such as with a topological field theory --- one can typically show rigorously that different choices give equivalent answers.
-The length scale is also connected with the use of heat kernels in \cite{CosBook},
-but one can work with more general parametrices (and hence more general notions of ``scale''),
-as explained in Chapter 8 of \cite{CG}.
-We use a natural length scale in this section; 
-when it becomes relevant, in the context of factorization algebras, we switch to general parametrices.
-\end{rmk}
 
 If we start with an $\fh$-equivariant classical BV theory with fields $\sE$ with action functional $S$ --- so that $\fh$ has an $\L8$ action on the fields that preserves the pairing and the action functional $S$ --- then we can encode the action of $\fh$ as a Maurer-Cartan element $I^\fh$ in $\clie^*(\fh) \otimes \oloc (\sE)$.
 (For the formal $\beta\gamma$ system, we did this in Lemma \ref{Noether}.)

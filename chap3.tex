@@ -69,13 +69,12 @@ For this reason, an essential aspect of studying the local symmetries of holomor
 As we have already mentioned, for vector fields in complex dimension one this is related to the central charge and the central extension of the Witt algebra (vector fields on the circle) known as the Virasoro Lie algebra.
 In the case of a current algebra associated to a Lie algebra, central extensions are related to the {\em level} and the corresponding central extensions are called affine algebras. 
 
-\begin{thm}
+\begin{thm}\label{thm: chap3 1}
 The following is true about the local Lie algebras associated to holomorphic diffeomorphisms and holomorphic gauge symmetries.
 \begin{enumerate}
-\item There is an isomorphism between the local cohomology of the sheaf of holomorphic vector fields on any complex manifold of dimension $d$ and the Gelfand-Fuks cohomology $H^*_{GF}(\W_d)[2d]$. 
 \item Let $\fg$ be a Lie algebra and $\fg^X$ is associated current algebra defined on any complex manifold $X$. 
-There is an embedding of the cohomology $H^*_{Lie}(\fg , \Sym^{d+1} g^\vee [-d-1])$ inside of the local cohomology of $\fg^X$. 
-In particular, if $\fg$ is an ordinary (not dg or $L_\infty$) Lie algebra then any....
+There is an embedding of the cohomology $H^*_{Lie}(\fg , \Sym^{d+1} g^\vee [-d-1])$ inside of the local cohomology of $\fg^X$.
+\item There is an isomorphism between the local cohomology of holomorphic vector fields on any complex manifold $X$ of dimension $d$ and $H_{dR}^*(X) \tensor H^*_{GF}(\W_d)[2d]$, where  $H^*_{GF}(\W_d)$ is the Gelfand-Fuks cohomology of vector fields on the formal disk.
 \end{enumerate}
 \end{thm}
 
@@ -87,42 +86,25 @@ In general we obtain new classes, which are shown to agree with calculations in 
 literature in dimensions four and six. 
 
 In general, any of these cohomology classes define factorization algebras by twisting the factorization enveloping algebra. 
-We especially focus on this construction in the case that the complex $d$-fold is equal to affine space $\CC^d$.
-In the case of the current algebra, our result is compatible with recent work of Kapranov et. al. in \cite{FHK}.
-They study higher dimensional affine algebras, and we show how the factorization algebra on punctured affine space $\CC^d \setminus\{0\}$ associated to Lie algebra $\fg$ and a class in $\Sym^{d+1}(\fg^\vee)^\fg$ agrees with theirs. 
+We especially focus on this construction in the case that the complex $d$-fold is equal to affine space $\CC^d$, or some of its natural submanifolds.
+In the case of the current algebra, our result is compatible with recent work of Kapranov et. al. in \cite{FHK} where they study higher dimensional versions of affine algebras, and their relationship to the (derived) moduli space of $G$-bundles in an analogous way that affine algebras are related to the moduli of bundles on curves via Kac-Moody uniformization.  
+Our second main result shows how to recover these higher affine algebras from our factorization algebra on punctured affine space $\CC^d \setminus\{0\}$, see Theorem \ref{??}.
 
-These extensions are related to the moduli of $G$-bundles on complex $d$-folds, see \cite{FHK}, in the same way that affine algebras are related to the moduli of bundles on curves via Kac-Moody uniformization. 
-Moreover, we show how the classes $c_{\sE}$ correspond to certain natural line bundles on ${\rm Bun}_G(X)$ and prove a version of the Grothendieck-Riemann-Roch (GRR) theorem using methods of BV quantization through a calculation of Feynman diagrams. 
+The extensions of part (1) of Theorem \ref{thm: chap3 1} are related to cohomology classes in the moduli of $G$-bundles on complex $d$-folds.
+We will show how techniques in equivariant BV quantization lead to natural families of QFTs defined over formal neighborhoods in the moduli space of $G$-bundles. 
+Our techniques allow us to study quantizations of such families, in particular there are anomalies to quantization. 
+An explicit analysis of Feynman diagrams leads to a computation of certain classes in the local cohomology which we relate to Chern classes of natural line bundles on ${\rm Bun}_G(X)$.
+This leads us to our next main result which is to prove a version of the Grothendieck-Riemann-Roch (GRR) theorem using the aforementioned methods of BV quantization, see Theorem \brian{ref}.
 
-\begin{thm}
-Let $V$ be a finite dimensional $\fg$-module and $X$ any complex $d$-fold.
-There exists a BV quantization of the $\beta\gamma$-system on $X$ with values in $V$ that is equivariant for the local Lie algebra $\fg^X$. 
-Moreover, the first Chern class of the line bundle on $B \fg^X$ defined by the factorization homology of the quantization is equal to
-\ben
-c_1(\Obs^\q(X)) = C \ch_{d+1}(V) \in \Sym^{d+1}(\fg^\vee)^\fg 
-\een
-where $C$ is some nonzero number.
-\end{thm}
-
-There is an elucidating geometric description of how the classes $\ch_{d+1}(V)$ appear: they describe line bundles over the moduli of $G$-bundles.
-Let ${\rm Bun}_{G}(X)$ denote the moduli space of $G$-bundles on the complex $d$-fold $X$. \footnote{For $d > 1$ \cite{FHK} have constructed a global smooth derived realization of this space, but its full structure will not be used in this discussion.}
-Over the space ${\rm Bun}_G(X) \times X$ there is the {\em universal} $G$-bundle. 
-If $P \to X$ is a $G$-bundle, the fiber over the point $\{[P]\} \times X$ is precisely the $G$-bundle $P \to X$. 
-This universal $G$-bundle is classified by a map $f : {\rm Bun}_G(X) \times X \to B G$. 
-Consider the following diagram
-\ben
-\xymatrix{
-& {\rm Bun}_G(X) \times X \ar[dr]^-{f} \ar[dl]_-{\pi} & \\
-{\rm Bun}_G(X) & & B G
-}
-\een
-where $\pi : {\rm Bun}_G(X) \times X \to {\rm Bun}_G(X)$ denotes the projection. 
-If $\theta \in \Sym^{d+1}(\fg^*)^\fg \cong H^{d+1}(G , \Omega^{d+1}) \subset H^{2d+2}(BG)$ then we obtain via push-pull in the diagram above
-\ben
-\int_\pi \circ f^* \theta \in H^2({\rm Bun}_G(X)) .
-\een 
-The formal moduli space $B \fg^X$ describes a formal neighborhood of the trivial bundle inside of the moduli of $G$-bundles.
-So the theorem above can be viewed as a formal version of the universal GRR theorem over the moduli of $G$-bundles.
+%\begin{thm}
+%Let $V$ be a finite dimensional $\fg$-module and $X$ any compact affine complex manifold. 
+%There exists a BV quantization of the $\beta\gamma$-system on $X$ with values in $V$ that is equivariant for the local Lie algebra $\fg^X$. 
+%Moreover, the first Chern class of the line bundle on $B \fg^X$ defined by the factorization homology of the quantization is equal to
+%\ben
+%c_1(\Obs^\q(X)) = C \ch_{d+1}(V) \in \Sym^{d+1}(\fg^\vee)^\fg 
+%\een
+%where $C$ is some nonzero number.
+%\end{thm}
 
 \section{The current algebra}
 
@@ -789,10 +771,41 @@ The complex $\Hoch_*(U(g[z,z^{-1}]), q)$ is the Hochschild homology of $U(\fg[z,
 
 \section{Universal Grothendieck-Riemann-Roch from BV quantization}
 
+The main goal of the BV formalism developed in \cite{CosBook} is to rigorously construct quantum field theories using a combination of homological methods and a rigorous model for renormalization. 
+A particular nicety of this approach is the ability to study {\em families} of field theories, which we will turn into an equivariant version of BV quantization, see Section \ref{sec equivariance}. 
+In this section we will consider a family of QFT's parametrized by the moduli space of principal $G$-bundles. 
+Our main result is to interpret a certain anomaly coming from BV quantization as a families index over ${\rm Bun}_G(X)$. 
+This anomaly is computed via an explicit Feynman diagrammatic calculation and is related to a local cocycle of the current algebra discussed in Section \brian{ref}. 
+We will interpret this as a formal universal version of the Grothendieck-Riemann-Roch theorem over the moduli space of bundles. 
+
+We will arrive at the result in a way that is local-to-global on spacetime which we formulate in terms of factorization algebras.
+The main them of Costello-Gwilliam's approach to QFT is that the observables of a QFT determine a factorization algebra. 
+We study the associated family of factorization algebras associated to the family of QFT's over the moduli space of $G$-bundles.
+We will recollect a formulation of Noether's theorem for symmetries of a theory in terms of factorization algebras developed in Chapter ?? of \cite{CG2}. 
+The central object in this discussion is a ``local index" which describes how the Kac--Moody factorization algebra acts on the observables of the QFT. 
+Locally on spacetime we see how Noether's theorem provides a {\em free field realization} of the Kac-Moody factorization algebra generalizing that of the Kac--Moody vertex algebra in chiral conformal field theory \cite{??}. 
+
+We now give a brief summary of the results, with a background for the situation we consider.
+Suppose that $P$ is a fixed holomorphic $G$-bundle on a complex manifold $X$.
+We have already seen how to express the formal deformation space of $P$ inside of the moduli of $G$-bundles using the dg Lie algebra $\sAd(P)(X) = \Omega^{0,*}(X , \ad (P))$.
+In particular, any Maurer-Cartan element of $\sAd(P)(X)$ defines a deformation of $P$. 
+We have seen that there is a refinement of this dg Lie algebra to a local Lie algebra $\sAd(P)$ whose factorization envelope defines the higher Kac-Moody factorization algebra above.
+To any $G$-representation $V$ we will define a holomorphic theory with fields $\sE_V$ that is equivariant for this local Lie algebra. 
+Equivalently, we can think of $\sE_V$ as defining a family of theories over the formal completion of $P$ in the moduli of $G$-bundles
+\ben
+\xymatrix{
+\sE_V|_{P'} \ar[d] \ar[r] & \sE_V \ar[d] \\
+\{P'\} \ar[r] & {\rm Bun}_G(X)^{\wedge}_P .
+}
+\een
+Over each fiber $P'$ the theory $\sE_V|_{P'}$ is a {\em free} theory, so admits a canonical BV quantization. 
+Our formulation of equivariant BV quantization is codification of the problem of gluing together these quantizations in a compatible way.
+We will show how this presents itself in the failure of the BV quantization to be a {\em flat} family. 
+Our main result is the following. 
 
 \begin{thm}
 Let $P$ be any principal $G$-bundle over a compact affine complex manifold $X$ of dimension $d$.
-Suppose that $V$ is a $G$-representation.
+Suppose   $V$ is a $G$-representation.
 Then, the factorization homology $\int_X \Obs^\q_{V}$ defines a line bundle over the formal neighborhood of $P$ inside of the moduli of $G$-bundles.
 Moreover, its first Chern class is 
 \ben
@@ -802,20 +815,61 @@ under the identification of $\ch_{d+1}^{\fg} (V)$ as a cohomology class on the f
 Here, $C$ is some nonzero complex number.
 \end{thm}
 
-The main goal of the BV formalism developed in \cite{CosBook} is to rigorously construct quantum field theories using a combination of homological methods and a rigorous model for renormalization. 
-A particular nicety of this approach is the ability to study {\em families} of field theories. 
-In this section we will consider a family of QFT's parametrized by the moduli space of principal $G$-bundles. 
-Our main result is to interpret a certain anomaly coming from BV quantization as a families index over ${\rm Bun}_G(X)$. 
-This anomaly is computed via an explicit Feynman diagrammatic calculation and is related to a local cocycle of the current algebra discussed in Section \brian{ref}. 
-An immediate corollary is a formal universal version of the Grothendieck--Riemann--Roch theorem over the moduli space of bundles. 
+There is an elucidating geometric description of how the classes $\ch_{d+1}(V)$ appear: they describe curvatures of line bundles over the moduli of $G$-bundles.
+Let ${\rm Bun}_{G}(X)$ denote the moduli space of $G$-bundles on the complex $d$-fold $X$. \footnote{For $d > 1$ \cite{FHK} have constructed a global smooth derived realization of this space, but its full structure will not be used in this discussion.}
+Over the space ${\rm Bun}_G(X) \times X$ there is the {\em universal} $G$-bundle. 
+If $P \to X$ is a $G$-bundle, the fiber over the point $\{[P]\} \times X$ is precisely the $G$-bundle $P \to X$. 
+This universal $G$-bundle is classified by a map $f : {\rm Bun}_G(X) \times X \to B G$. 
+Consider the following diagram
+\ben
+\xymatrix{
+& {\rm Bun}_G(X) \times X \ar[dr]^-{f} \ar[dl]_-{\pi} & \\
+{\rm Bun}_G(X) & & B G
+}
+\een
+where $\pi : {\rm Bun}_G(X) \times X \to {\rm Bun}_G(X)$ denotes the projection. 
+If $\theta \in \Sym^{d+1}(\fg^*)^\fg \cong H^{d+1}(G , \Omega^{d+1}) \subset H^{2d+2}(BG)$ then we obtain via push-pull in the diagram above
+\ben
+\int_\pi \circ f^* \theta \in H^2({\rm Bun}_G(X)) .
+\een 
+The formal moduli space $B \fg^X$ describes a formal neighborhood of the trivial bundle inside of the moduli of $G$-bundles.
+So the theorem above can be viewed as a formal version of the universal GRR theorem over the moduli of $G$-bundles.
 
-We will arrive at this result in a way that is local-to-global on space-time which we formulate in terms of factorization algebras.
-In \cite{CG1, CG2} it is shown how the observables of a QFT determine a factorization algebra. 
-We study the associated family of factorization algebras associated to the family of QFT's over the moduli space of $G$-bundles mentioned in the preceding paragraph. 
-We recollect a formulation of Noether's theorem for symmetries of a theory in terms of factorization algebras developed in Chapter ?? of \cite{CG2}. 
-The central object in this discussion is a ``local index" which describes how the Kac--Moody factorization algebra acts on the observables of the QFT. 
-Locally on space-time we see how Noether's theorem provides a {\em free field realization} of the Kac--Moody factorization algebra generalizing that of the Kac--Moody vertex algebra in chiral conformal field theory \cite{??}. 
 
+
+\subsection{The classical family}
+
+In this section, we consider a BV theory that is equivariant for the local Lie algebra $\sAd(P)$ in the language of Section \ref{sec equivariance}. 
+Let $V$ be any $G$-representation, and define the associated vector bundle $\sV_P = P \times^G V$ on $X$.
+The holomorphic theory we consider is based on the graded holomorphic vector bundle $\sV_P \oplus K_X \tensor \sV_P^* [d-1]$, where $\sV^*_P$ is the linear dual bundle. 
+The fields of the associated free BV theory are
+\ben
+\sE_V = \Omega^{0,*}(X, \sV) \oplus \Omega^{d,*}(X , \sV_P^*)[d-1] .
+\een
+This is simply the $\beta\gamma$ system on $X$ twisted by the vector bundle $\sV_P$. 
+The action functional is $\int \<\beta, \dbar \gamma\>_{V}$ where the pairing is between $V$ and its dual. 
+In particular, the theory $\sE_V$ is free.
+
+The action of $\fg$ on $V$ extends to an action of the local Lie algebra $\sAd(P)$ on this classical BV theory.
+To define this equivariance we need to presribe a Noether current. 
+
+\begin{lem} 
+The local Noether current $I^{\fg} \in \cloc^*(\sAd(P)) \tensor \oloc(\sE_V)$ defined by
+\ben
+I^\fg(\alpha, \gamma,\beta) = \int_X \<\beta, \alpha \cdot \gamma\>_V
+\een
+satisfies the equivariant classical master equation
+\ben
+(\d_{\fg} + \dbar) I^\fg + \frac{1}{2}\{I^\fg, I^\fg\} = 0 ,
+\een 
+where $\d_{\fg}$ encodes the Lie algebra structure on $\sAd(P)$.
+Hence, $I^\fg$ gives $\sE_V$ the structure of a classical $\sAd(P)$-equivariant theory.
+\end{lem}
+\begin{proof}
+If $\alpha$ is an element in $\sAd(P)$ and $\gamma \in \Omega^{0,*}(X, \sV_P)$ we define $\alpha \cdot \gamma$ through the $\fg$-module structure of $\fg$ on $V$ combined with the wedge product of Dolbeault forms. 
+Note that $I^\fg$ is arises from holomorphic differential operators so that $\dbar I^\fg = 0$.
+From the definition of the bracket we see that for $\alpha_1,\alpha_2$ one has $\{\int \<\beta, \alpha_1 \cdot \gamma\>, \int \<\beta, \alpha_2\cdot \gamma\>\} = \int \<\beta, [\alpha_1,\alpha_2] \cdot \gamma\>$ which cancels the term coming from $\d_{\fg}$. 
+\end{proof}
 
 \subsection{BV quantization in families}
 
@@ -841,7 +895,6 @@ At the level of $H^1$ the above maps determine a composition we obtain by compos
 \be\label{cohbung}
 \Sym^{d+1}(\fg^*)^\fg \xto{J_P^X} H^1_{\rm loc} (\fg_{P}^X) \to H^1(\Omega^1_{cl}\left({\rm Bun}_G(X)^{\wedge}_{P}\right) .
 \ee
-
 
 \subsection{The anomaly calculation}
 
@@ -1003,8 +1056,38 @@ C \int_{\CC^d} \alpha^{(0)} \partial \alpha^{(1)} \cdots\partial \alpha^{(d)}
 as desired.
 \end{proof}
 
+\subsection{A module for the higher Kac-Moody}
 
-\subsection{Free field realization}
+The last part of this section we diverge to deduce a consequence of the quantum Noether theorem using our analysis above by exhibiting a module for the higher affine algebras from the previous section. 
+For convenience, we fix the trivial $\fg$-bundle $P = {\rm triv}$ so that $\sAd(P) = \sG_X$.
+
+On any manifold $X$, the quantum Noether theorem provides a map of factorization algebras
+\ben
+\Phi : \UU_\alpha (\sG_X) \to \Obs^\q_{V} .
+\een
+We consider, as we did above, the case $X = \CC^d \setminus  \{0\}$. 
+By functoriality of pushforwards, the quantum Noether theorem produces a map of one-dimensional factorization algebras
+\ben
+\rho_* \Phi : \rho_* \UU_{\ch_{d+1}(V)} (\sG_{\CC^d \setminus \{0\}}) \to \rho_* \Obs^\q_{V} .
+\een
+We have exhibited a locally constant dense subfactorization algebra $\sF^{lc}_{1d}$ of $\rho_* \UU_\alpha (\sG_X)$ which is equivalent, as an $E_1$-algebra, to $U \Hat{\fg}_{d, \ch_{d+1}(V)}$. 
+Similarly, in Section \ref{sec sphere operators} we have shown that there is a locally constant dense subfactorization algebra that is equivalent to the dg algebra $\sA_V$. 
+
+The map $\rho_* \Phi$ restricts to these dense subfactorization algebras and so defines a map of $E_1$ algebras
+\ben
+\rho_* \Phi : U \Hat{\fg}_{d, \ch_{d+1}(V)}\to \sA_V .
+\een
+Also, in Section \ref{sec disk module} we have shown how the disk operators $\sV_V$ form a module, through the factorization product, for the dg algebra $\sA_V$. 
+This is essentially the Fock module of the algebra $\sA_V$, thus we should view the above map $\rho_*\Phi$ as being a higher dimensional analog of the ``free field realization" for the higher dimensional affine algebras. 
+
+Further, by induction along the map $\rho_* \Phi$, we obtain the following.
+
+\begin{prop}
+The map $\rho_*\Phi$ endows the space $\sV_V$ with the structure of a module over the $E_1$-algebra $U \Hat{\fg}_{d, \ch_{d+1}(V)}$.
+Equivalently, $\sV_V$ is an $A_\infty$-module for $U \Hat{\fg}_{d, \ch_{d+1}(V)}$. 
+\end{prop}
+
+This is the vacuum Verma module...\brian{finish}.
 
 \section{Holomorphic diffeomorphisms}
 
