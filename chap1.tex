@@ -220,7 +220,7 @@ The thing to observe here is that $(-,-)_V$ extends to the Dolbeualt complex in 
 The $(-1)$-shifted pairing $\omega$ on $\sE$ is defined by the diagram
 \ben
 \xymatrix{
-\sE_V \tensor \sE_V \ar[r]^-{(-,-)_V} \ar@{.>}[dr]_-{\omega_V} & \Omega^{0,*}(X , \Omega^{d,hol}_X) [d-1] \ar[d]^-{\int_X} \\
+\sE_V \tensor \sE_V \ar[r]^-{(-,-)_V} \ar@{.>}[dr]_-{\omega_V} & \Omega^{0,*}(X , K_X) [d-1] \ar[d]^-{\int_X} \\
 & \CC[-1] .
 }
 \een
@@ -240,14 +240,14 @@ S(\varphi) = \int_X \left(\varphi, (\dbar + Q^{hol}) \varphi)\right)_V .
 
 The first example we explain is related to the subject of Chapter \ref{chap holsig} and will serve as the fundamental example of a holomorphic theory. 
 
-\begin{eg}\label{eg bg affine} {\em The free $\beta\gamma$ system}.
+\begin{eg}\label{eg bg} {\em The free $\beta\gamma$ system}.
 Suppose that 
 \ben
-V = \ul{\CC} \oplus \Omega^{d,hol}_X [d - 1] .
+V = \ul{\CC} \oplus K_X [d - 1] .
 \een
 Let $(-,-)_V$ be the pairing
 \ben
-(\ul{\CC} \oplus \Omega^{d,hol}_X) \tensor (\ul{\CC} \oplus \Omega^{d,hol}_X) \to \Omega^{d,hol}_X \oplus \Omega^{d,hol}_X \to \Omega^{d,hol}_X 
+(\ul{\CC} \oplus K_X) \tensor (\ul{\CC} \oplus K_X) \to K_X \oplus K_X \to K_X 
 \een 
 sending $(\lambda, \mu) \tensor (\lambda',\mu') \mapsto (\lambda \mu', \lambda'\mu) \mapsto \lambda\mu' + \lambda' \mu$.
 In this example we set $Q^{hol} = 0$. 
@@ -301,47 +301,79 @@ Locally, the holomorphic flat connection is of the form
 where $\{w_i\}$ is the local coordinate on $X$ near $w$ and $z_i$ is the fiber coordinate labeling the holomorphic jet expansion.
 Using holomorphic jets we can make a completely analogous definition in our setting.
 
+Differential operators between holomorphic bundles are the same as bundle maps between the associated jet bundles. 
+Suppose $V,W$ are holomorphic vector bundles with spaces of holomorphic sections given by $\sV,\sW$ respectively.
+Then we can express polydifferential operators from $V$ to $W$ as
+\ben
+{\rm PolyDiff}^{hol}(\sV \times \cdots \times \sV, \sW) \cong {\rm Hom}({\rm Jet}^{\rm hol}(V) \tensor \ldots \tensor {\rm Jet}^{\rm hol}(V) , W) .
+\een
+
 \begin{dfn}\label{dfn hol lag}
 Let $V$ be a vector bundle. 
 The space of {\em holomorphic Lagrangian densities} on $V$ is
 \ben
-\sO_{red}^{hol}(V) = \prod_{n > 0} {\rm Hom} ({\rm Jet}(V)^{\times n} , K_X) .
+\sO_{red}^{hol}(V) = \prod_{n > 0} {\rm Hom} ({\rm Jet}^{hol}(V)^{\tensor n} , K_X)_{S_n} .
 \een
 Equivalently, a holomorphic Lagrangian density is of the form $F = \sum_n F_n \in \sO_{red}^{hol}(V)$ where each $F_n$ is a holomorphic polydifferential operator 
 \ben
-F_n : V \tensor \cdots \tensor V \to K_X .
+F_n : \sV \times \cdots \times \sV \to \Omega^{d,hol}_X .
 \een
 \end{dfn}
 
-\begin{dfn}
-Suppose $V$ is a graded holomorphic vector bundle.
-We define the sheaf of {\em holomorphic} local functionals on $V$ by
-\ben
-\olochol(V) = \Omega^{d,hol}_X \tensor_{D^{hol}_X} \sO_{red}(J^{hol}V) [d]
-\een
-\end{dfn}
+%\begin{dfn}
+%Suppose $V$ is a graded holomorphic vector bundle.
+%We define the sheaf of {\em holomorphic} local functionals on $V$ by
+%\ben
+%\olochol(V) = \Omega^{d,hol}_X \tensor_{D^{hol}_X} \sO_{red}(J^{hol}V) [d]
+%\een
+%\end{dfn}
 
 Suppose that $V$ is part of the data of a free holomorphic theory $(V, Q^{hol},(-,-)_V)$.
-The pairing $(-,-)_V$ endows the space of local functionals with a bracket of cohomological degree $+1$ that we denote by $\{-,-\}^{hol}$. 
+The pairing $(-,-)_V$ endows the space of holomorphic Lagrangians with a sort of bracket.
+Indeed, suppose $F, F' \in \sO_{red}^{hol}(V)$.
+For simplicity suppose $F,F'$ are of homogenous symmetric degree $k,k'$ respectively.
+Then, their product $F \tensor F'$ is a symmetric element in the homomorphism space
+\ben
+{\rm Hom}({\rm Jet}^{hol}(V)^{\tensor k +k'} , K_X \tensor K_X) .
+\een
+Now, the bundle map $(-,-)_V : V \tensor V \to K_X[d-1]$ is invertible, hence it determines an element $(-,-)^{-1}_V \in V \tensor K_X^*$, where $K_X^*$ is the dual bundle. 
+We can then consider the composition
+\ben
+\xymatrix{
+{\rm Hom}({\rm Jet}^{hol}(V)^{\tensor n} , K_X \tensor K_X) \ar[r]^-{(-,-)^{-1}_V} & {\rm Hom}({\rm Jet}^{hol}(V)^{\tensor k +k' -2} , K_X^* \tensor K_X \tensor K_X) \ar[r] & {\rm Hom}({\rm Jet}^{hol}(V)^{\tensor k +k' -2} , K_X).
+}
+\een
+In the first arrow we have evaluated $(-,-)^{-1}_V$ on the first two factors and the second arrow is simply the evaluation pairing. 
+We symmetrize this to obtain an element $\{F, F'\}^{hol} \in \Sym^{k+k'-2}({\rm Jet}^{hol}(V)^{\tensor n} , K_X)_{S_{k+k'-2}}$. 
+In this way, we have produced a map
+\ben
+\{-,-\}^{hol} : \sO_{red}^{hol}(V) \times \sO_{red}^{hol}(V) \to \sO_{red}^{hol}(V) [d-1].
+\een
+Note that this bracket is of cohomological degree $-d+1$. 
+
+\begin{rmk}
+Note that the above still makes sense if $(-,-)_V$ is a polydifferential operator...
+\end{rmk}
+
 We can now state the definition of a classical holomorphic theory. 
 
 \begin{dfn}
 A {\em classical holomorphic theory} on a complex manifold $X$ is the data of a free holomorphic theory $(V, Q^{hol}, (-,-)_V)$ plus a functional
 \ben
-I^{hol} \in \olochol(V)^+
+I^{hol} \in \prod_{n \geq 3} {\rm Hom} ({\rm Jet}^{hol}(V)^{\tensor n} , K_X)_{S_n} \subset \sO_{red}^{hol}(V) 
 \een
-of cohomological degree zero such that $Q^{hol} I^{hol} + \{I^{hol}, I^{hol}\}^{hol} = 0$.
+of cohomological degree $d$ such that $Q^{hol} I^{hol} + \{I^{hol}, I^{hol}\}^{hol} = 0$.
 \end{dfn} 
 
-\begin{dfn/lem}
-Let $(V, Q^{hol}, (-,-)_V, I^{hol})$ be the data of an interacting holomorphic theory. 
-Then $Q^{hol} + \{I^{hol},-\}$ equips $\olochol(V)$ with the structure of a sheaf of cochain complexes that we will denote
-\ben
-\Def^{hol}_{V} := \left(\olochol(V), Q^{hol} + \{I^{hol}, -\}^{hol}\right) .
-\een
-\end{dfn/lem}
+%\begin{dfn/lem}
+%Let $(V, Q^{hol}, (-,-)_V, I^{hol})$ be the data of an interacting holomorphic theory. 
+%Then $Q^{hol} + \{I^{hol},-\}$ equips $\olochol(V)$ with the structure of a sheaf of cochain complexes that we will denote
+%\ben
+%\Def^{hol}_{V} := \left(\olochol(V), Q^{hol} + \{I^{hol}, -\}^{hol}\right) .
+%\een
+%\end{dfn/lem}
 
-Just as in the free case, we see that classical holomorphic theories are special cases of ordinary classical BV theories.
+Just as in the free case, we see that classical holomorphic theories define ordinary classical BV theories with interactions.
 The underlying space of fields, as we have already seen is $\sE_V = \Omega^{0,*}(X , V)$. 
 Now, we know that $I^{hol}$ is a $\Omega^{d,hol}_X$-valued functional that is a linear combination of functionals of the form 
 \ben
@@ -357,25 +389,42 @@ where $\alpha_i \tensor \varphi_i \in \Omega^{0,*}(X, V)$.
 The symbol $\int_X$ reminds us that we are working modulo total derivatives, so that the above expression defines an element of $\oloc(\sE_V)$. 
 This defines a linear map $\olochol(V) \to \oloc(\sE_V)$ that we denote $I^{hol} \mapsto I^{\Omega^{0,*}}$. 
 
+The following is a useful table to show how we are producing a BV theory from a holomorphic theory.
+
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Holomorphic theory & BV theory \\
+ \hline \hline
+Holomorphic bundle $V$ & Space of fields $\sE_V = \Omega^{0,*}(X, V)$  \\ 
+Holomorphic differential operator $Q^{hol}$ & Linear BRST operator $\dbar + Q^{hol}$ \\ 
+Non-degenerate pairing $(-,-)_V$ & $(-1)$-symplectic structure $\omega_{V}$ \\ 
+Holomorphic Lagrangian $I^{hol}$ & Local functional $I^{\Omega^{0,*}} \in \oloc(\sE_V)$ \\ 
+ \hline
+\end{tabular}
+\end{center}
+
 \begin{lem} Every classical holomorphic theory $(V, Q^{hol},(-,-)_V, I^{hol})$ determines the structure of a classical BV theory.
 The underlying free BV theory is given in Definition/Lemma \ref{dfn hol free theory} $(\sE_V, Q, \omega_V)$ and the interaction is $I^{\Omega^{0,*}}$. 
 \end{lem}
 \begin{proof}
-We must show that $Q^{hol}I^{hol} + \frac{1}{2} \{I^{hol},I^{hol}\}^{hol} = 0$ implies 
+We must show that $Q^{hol}I^{hol} + \frac{1}{2} \{I^{hol},I^{hol}\}^{hol} = 0$ implies the ordinary classical master equation for $I^{\Omega^{0,*}}$:
 \ben
 \dbar I^{\Omega^{0,*}} + Q^{hol}I^{\Omega^{0,*}} + \frac{1}{2} \{I^{\Omega^{0,*}},I^{\Omega^{0,*}}\} = 0 .
 \een
+Since $I^{\Omega^{0,*}}$ is defined using holomorphic differential operators, the first term vanishes.
+The fact that $Q^{hol}I^{hol} + \frac{1}{2} \{I^{hol},I^{hol}\}^{hol} = 0$ implies $Q^{hol}I^{\Omega^{0,*}} + \frac{1}{2} \{I^{\Omega^{0,*}},I^{\Omega^{0,*}}\} = 0$ follows immediately from our definitions.
 \end{proof}
 
 \begin{eg} {\em Holomorphic $BF$-theory}
 Let $\fg$ be a Lie algebra and $X$ any complex manifold.
 Consider the following holomorphic vector bundle on $X$:
 \ben
-V = \ul{\fg}_X \oplus \Omega^{d,hol}_X \tensor \fg^* [d-1] .
+V = \ul{\fg}_X \oplus K_X \tensor \fg^* [d-1] .
 \een
-The pairing $V \tensor V \to \Omega^d_{hol}[d-1]$ is similar to the pairing for the $\beta\gamma$ system, except we use the evaluation pairing $\<-.-\>_\fg$ between $\fg$ and its dual. 
+The pairing $V \tensor V \to K_X[d-1]$ is similar to the pairing for the $\beta\gamma$ system, except we use the evaluation pairing $\<-.-\>_\fg$ between $\fg$ and its dual. 
 In this example, $Q^{hol} = 0$.
-Write $f \in \sO^{hol}_X$ and $\beta \in \Omega^{d,hol}_X$ and consider
+Write $f \in \sO^{hol}_X$ and $\beta \in K_X$ and consider
 \ben
 I^{hol} (f_1 \tensor X_1, f_2 \tensor X_2, \beta \tensor X^\vee) = f_1f_2 \beta \<X^\vee, [X_1,X_2]\> + \cdots
 \een
@@ -389,18 +438,28 @@ The induced local functional $I^{\Omega^{0,*}}$ on $\sE_V$ is
 \ben
 I^{\Omega^{0,*}} (\alpha, \beta) = \int_X \<\beta, [\alpha,\alpha]\>_\fg .
 \een
+The total action is $S(\alpha,\beta) = \int \<\beta, \dbar \alpha\> + \<\beta,[\alpha,\alpha]\>_\fg$.
+This is formally similar to $BF$ theory (see below) and for that reason we refer to it as {\em holomorphic} BF theory.
+In \cite{johanson}, or for a more mathematical treatment see \cite{CostelloYangian}, it is shown that this theory is a twist of $N=1$ supersymmetric Yang-Mills on $\RR^4$.
 \end{eg}
 
 \begin{eg} {\em Topological $BF$-theory}
+\brian{do this}
+
+In this case $Q^{hol} = \partial$. 
 \end{eg}
+
+When we construct a BV theory from a holomorphic theory $V \rightsquigarrow \sE_V$ it is natural to expect that deformations of the theory must come from holomorphic data.
+In the special case that $Q^{hol} = 0$ we have the following result which relates the deformation complex of the classical theory $\sE_V$ to a sheaf built from holomorphic differential operators.
+
 \begin{lem}
 Suppose $(V, 0, (-,-)_V, I^{hol})$ is the data of a holomorphic theory with $Q^{hol} = 0$.
 Let $(\sE_V, Q = \dbar, \omega_V, I)$ be the corresponding BV theory.
 Then, there is a quasi-isomorphism of sheaves
 \ben
-\Def^{hol}_{V} \simeq \Def_{\sE_V}  
+\Def_{\sE_V}  \simeq \Omega^{d,hol}_X \tensor^{\LL}_{D_X^{hol}} \sO_{red}^{hol}(V)
 \een
-compatible with the brackets $\{-,-\}^{hol}$ and $\{-,-\}$ on both sides.
+that is compatible with the brackets and $\{-,-\}$ and $\{-,-\}^{hol}$ on both sides.
 \end{lem}
 
 \begin{rmk}
@@ -575,9 +634,6 @@ The action functional is simply
 S(\gamma, \beta) = \int_{\CC^d} {\rm ev}_E(\beta \wedge \dbar \gamma) .
 \een
 
-\begin{eg} {\em Topological ...}
-Consider the above example with $Q^{hol} = \partial$..\brian{finish}. 
-\end{eg}
 
 %\subsubsection{Interacting holomorphic theories}
 %
@@ -681,62 +737,62 @@ For instance, if $L = \ul{\fg}$ is the constant bundle on $\CC^d$ where $\fg$ is
 \cloc^*(\Omega^{0,*}(\CC^d, \fg))^{\CC^d} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\frac{\partial}{\partial z_i}]} \cred^*(\fg [[z_1,\ldots,z_d]]) .
 \een
 
-\subsubsection{Holomorphic deformations on an arbitrary complex manifold}
-
-\brian{fix and move this to above}
-There is a more general result that holds on an arbitrary complex manifold. 
-Recall, that on a complex manifold $X$ we have introduced the notion of a holomorphic local Lie algebra $L$. 
-Let $\sL = {\rm Dol}(L) = \Omega^{0,*}(X , L)$ be its associated local Lie algebra. 
-Ordinarily, the local Lie algebra cohomology of a local Lie algebra is computed in terms of the Lie algebra cohomology of the associated jet bundle. 
-With holomorphicity and some mild assumption, we can, up to quasi-isomorphism, exhibit a smaller complex computing this local cohomology. 
-
-\begin{prop} 
-Suppose $L$ is a holomorphic local Lie algebra with $\ell_1 = 0$, and let $\sL = \Omega^{0,*}(X, L)$ be its associated local Lie algebra.
-There is a quasi-isomorphisms of sheaves of cochain complexes
-\ben
-\cloc^*(\sL) \simeq \Omega^{d,hol}_X \tensor^{\LL}_{D_X^{hol}} \clie^*(J \sL^{hol}) .
-\een
-\end{prop}
-\begin{proof}
-Recall, the definition of $\cloc^*(\sL)$ is given in terms of $D$-module data by
-\ben
-\cloc^*(\sL) = \Omega^{d,d}_{X} \tensor^{\LL}_{D_X} \clie^*(J \sL)
-\een
-where $J \sL$ denotes the $\infty$-jet bundle of $\Omega^{0,*}(X , L)$. 
-Of course, $J\sL$ is a bundle equipped with a natural flat connection, and hence the structure of a $D_X$-module. 
-The Chevalley-Eilenberg complex $\clie^*(J\sL)$ inherits this $D_X$-module structure.  
-
-On the other hand, if we view $L$ as a holomorphic vector bundle, it makes sense to look at the {\em holomorphic} jet bundle $J^{hol} L$. 
-This holomorphic vector bundle is equipped with a holomorphic flat connection, and hence is a module for the sheaf of holomorphic differential operators $D^{hol}_X$. 
-
-\begin{lem} Let $(J^{hol} L)^{C^\infty}$ be the $D_X^{hol}$-module $J^{hol} L$ viewed, via the forgetful functor, as a $D_X$-module. 
-Then, there is a quasi-isomorphism of dg $D_X$-modules $(J^{hol} L)^{C^\infty} \simeq J \Omega^{0,*}(X , L)$.
-Furthermore, this quasi-isomorphism is compatible with the $L_\infty$ structures, so that we obtain a quasi-isomorphism of dg $D_X$-modules $\clie^*(J^{hol} L)^{C^\infty} \simeq \clie^*(J \sL)$. 
-\end{lem}
-\begin{proof}
-For any holomorphic vector bundle $E$, the Dolbeualt complex of $E$ is a resolution of the sheaf of holomorphic sections of $E$.
-Thus, there is an equivalence of sheaves on $X$
-\ben
-\Omega^{0,*}_X(E) \simeq \Gamma^{hol}_X(E) .
-\een 
-Thus, there is an equivalence of sheaves on $X$:
-\ben
-J^{hol} L \simeq J \Omega^{0,*}(X , L) .
-\een
-We need to see that this equivalence respects the $D_X$-module structure present on both sides....
-
-\end{proof}
-
-To finish the proof, we verify the following general lemma. 
-
-\begin{lem} Suppose $V$ is a $D_X^{hol}$-module, and let $V^{C^\infty}$ denote its underlying $D_X$-module. 
-Then, there is a quasi-isomorphism of sheaves of cochain complexes
-\ben
-\Omega^{d,hol}_X \tensor^\LL_{D_X^{hol}} V [d] \simeq \Omega^{d,d}_X \tensor_{D_X}^\LL V^{C^\infty} .
-\een 
-\end{lem}
-
-\end{proof}
+%\subsubsection{Holomorphic deformations on an arbitrary complex manifold}
+%
+%\brian{fix and move this to above}
+%There is a more general result that holds on an arbitrary complex manifold. 
+%Recall, that on a complex manifold $X$ we have introduced the notion of a holomorphic local Lie algebra $L$. 
+%Let $\sL = {\rm Dol}(L) = \Omega^{0,*}(X , L)$ be its associated local Lie algebra. 
+%Ordinarily, the local Lie algebra cohomology of a local Lie algebra is computed in terms of the Lie algebra cohomology of the associated jet bundle. 
+%With holomorphicity and some mild assumption, we can, up to quasi-isomorphism, exhibit a smaller complex computing this local cohomology. 
+%
+%\begin{prop} 
+%Suppose $L$ is a holomorphic local Lie algebra with $\ell_1 = 0$, and let $\sL = \Omega^{0,*}(X, L)$ be its associated local Lie algebra.
+%There is a quasi-isomorphisms of sheaves of cochain complexes
+%\ben
+%\cloc^*(\sL) \simeq \Omega^{d,hol}_X \tensor^{\LL}_{D_X^{hol}} \clie^*(J \sL^{hol}) .
+%\een
+%\end{prop}
+%\begin{proof}
+%Recall, the definition of $\cloc^*(\sL)$ is given in terms of $D$-module data by
+%\ben
+%\cloc^*(\sL) = \Omega^{d,d}_{X} \tensor^{\LL}_{D_X} \clie^*(J \sL)
+%\een
+%where $J \sL$ denotes the $\infty$-jet bundle of $\Omega^{0,*}(X , L)$. 
+%Of course, $J\sL$ is a bundle equipped with a natural flat connection, and hence the structure of a $D_X$-module. 
+%The Chevalley-Eilenberg complex $\clie^*(J\sL)$ inherits this $D_X$-module structure.  
+%
+%On the other hand, if we view $L$ as a holomorphic vector bundle, it makes sense to look at the {\em holomorphic} jet bundle $J^{hol} L$. 
+%This holomorphic vector bundle is equipped with a holomorphic flat connection, and hence is a module for the sheaf of holomorphic differential operators $D^{hol}_X$. 
+%
+%\begin{lem} Let $(J^{hol} L)^{C^\infty}$ be the $D_X^{hol}$-module $J^{hol} L$ viewed, via the forgetful functor, as a $D_X$-module. 
+%Then, there is a quasi-isomorphism of dg $D_X$-modules $(J^{hol} L)^{C^\infty} \simeq J \Omega^{0,*}(X , L)$.
+%Furthermore, this quasi-isomorphism is compatible with the $L_\infty$ structures, so that we obtain a quasi-isomorphism of dg $D_X$-modules $\clie^*(J^{hol} L)^{C^\infty} \simeq \clie^*(J \sL)$. 
+%\end{lem}
+%\begin{proof}
+%For any holomorphic vector bundle $E$, the Dolbeualt complex of $E$ is a resolution of the sheaf of holomorphic sections of $E$.
+%Thus, there is an equivalence of sheaves on $X$
+%\ben
+%\Omega^{0,*}_X(E) \simeq \Gamma^{hol}_X(E) .
+%\een 
+%Thus, there is an equivalence of sheaves on $X$:
+%\ben
+%J^{hol} L \simeq J \Omega^{0,*}(X , L) .
+%\een
+%We need to see that this equivalence respects the $D_X$-module structure present on both sides....
+%
+%\end{proof}
+%
+%To finish the proof, we verify the following general lemma. 
+%
+%\begin{lem} Suppose $V$ is a $D_X^{hol}$-module, and let $V^{C^\infty}$ denote its underlying $D_X$-module. 
+%Then, there is a quasi-isomorphism of sheaves of cochain complexes
+%\ben
+%\Omega^{d,hol}_X \tensor^\LL_{D_X^{hol}} V [d] \simeq \Omega^{d,d}_X \tensor_{D_X}^\LL V^{C^\infty} .
+%\een 
+%\end{lem}
+%
+%\end{proof}
 
 \section{Renormalization of holomorphic theories}
 
@@ -749,26 +805,32 @@ Our main result is that for a holomorphic theory no such counterterms are requir
 
 We can write the fields of a holomorphic theory on $\CC^d$ as
 \ben
-\sE = \left(\Omega^{0,*}(\CC^d, V), \dbar + Q^{hol}\right)
+\sE_V = \left(\Omega^{0,*}(\CC^d, V), \dbar + Q^{hol}\right)
 \een
 where $V$ is a graded holomorphic vector bundle and $Q^{hol}$ is a holomorphic differential operator.
 
 Since the theory is holomorphically translation invariant we have an identification $\Omega^{0,*}(\CC^d , V) \cong \Omega^{0,*}(\CC^d) \tensor_\CC V_0$ where $V_0$ is the fiber of $V$ over $0 \in \CC^d$.
 Further, we can write the $(-1)$-shifted symplectic structure defining the classical BV theory in the form
 \ben
-\omega(\alpha \tensor v, \beta \tensor w) = (v,w)_{V_0} \int \d^d z (\alpha \wedge \beta)
+\omega_V(\alpha \tensor v, \beta \tensor w) = (v,w)_{V_0} \int \d^d z (\alpha \wedge \beta)
 \een
 where $(-,-)_{V_0}$ is a degree $(d-1)$-shifted \brian{check} pairing on the finite dimensional vector space $V_0$. 
+
+We will assume that the holomorphic Lagrangian $I^{hol}$ is also translation invariant and so defines an interaction of the form $I = \sum_k I_k$ where $I_k$ is symmetric degree $k$ and
+\ben
+I_k = \int I^{hol}_k(\varphi) = \int D_{k,1}(\varphi)\cdots D_{k,k} (\varphi) \d^d z 
+\een
+where each $D_{i,j}$ is a translation invariant holomorphic differential operator. 
 
 \subsection{Holomorphic gauge fixing}
 
 To begin the process of renormalization we must fix the data of a gauge fixing operator. 
 A gauge fixing operator is an operator on fields
 \ben
-Q^{GF} : \sE \to \sE[1]
+Q^{GF} : \sE_V \to \sE_V[1]
 \een
 of cohomological degree $-1$ such that $[Q, Q^{GF}]$ is a generalized Laplacian on $\sE$ where $Q$ is the linearized BRST operator. 
-For a full definition of this see Definition ?? \ref{CG}. 
+For a full definition of this see Definition ?? in \ref{CG}. 
 
 For holomorphic theories there is a convenient choice for a gauge fixing operator. 
 To construct it we fix the standard flat metric on $\CC^d$. 
@@ -793,26 +855,79 @@ In coordinates it is
 [\dbar,\dbar^*] = -\sum_{i=1}^d \frac{\partial}{\partial \zbar_i}\frac{\partial}{\partial z_i} 
 \een
 
-By definition, the heat kernel is the dual
-\brian{check factor}
-
-
+By definition, the scale $L>0$ heat kernel $K_L^V \in \sE_V(\CC^d) \tensor \sE_V(\CC^d)$ satisfies
+\ben
+\omega_V(K_L, \varphi) = e^{-L[Q,Q^{GF}] } \varphi
+\een
+for any field $\varphi \in \sE_V$.
 Pick a basis $\{e_i\}$ of $V_0$ and let 
 \ben
 {\bf C}_{V_0} = \sum_{i,j} \omega_{ij} (e_i \tensor e_j) \in V_0 \tensor V_0
 \een
 be the quadratic Casimir.
 Here, $(\omega_{ij})$ is the inverse matrix to the pairing $(-,-)_{V_0}$. 
-The regularized heat kernel then takes the form
+We see that for the holomorphic theory we can write this regularized heat kernel as
 \ben
-K_{\epsilon}(z,w) = K^{an}(z,w) \cdot {\bf C}_{V_0}
+K_{L}^V (z,w) = K^{an}_L(z,w) \cdot {\bf C}_{V_0} 
 \een
+where the analytic part is independent of $V$ and equal to
+\ben
+K_L^{an} (z,w) = \frac{1}{(4 \pi L)^d} e^{-|z-w|^2/ 4L} \prod_{i=1}^d (\d \zbar_i - \d \zbar_j)  \in \Omega^{0,*} (\CC^d) \tensor \Omega^{0,*} (\CC^d) \cong \Omega^{0,*} (\CC^d \times \CC^d) .
+\een
+The propagator is defined by
+\ben
+P_{\epsilon < L}^V(z,w) = \int_{t=\epsilon}^L \d t (Q^{GF} \tensor 1) K_{L}^V(z,w) .
+\een
+Since ${\bf C}_{V_0}$ is independent of the coordinate on $\CC$ this propagator is of the form $P_{\epsilon < L}^V(z,w) = P_{\epsilon < L}^{an}(z,w) \cdot {\bf C}_{V_0}$ where
+\begin{align*}
+P_{\epsilon < L}^{an}(z,w) & = \int_{t=\epsilon}^L \d t (\dbar^* \tensor 1) K_{L}^V(z,w) \\
+& = \int_{t=\epsilon}^L \d t \frac{1}{(4 \pi t)^d} \sum_{j=1}^d \left(\frac{z_j - w_j}{4 t} \right)  e^{-|z-w|^2 / 4}  \prod_{i \ne j}^d (\d \zbar_i - \d \zbar_j) .
+\end{align*}
+
+Our goal in this section is to show that one-loop RG flow produces a prequantization modulo $\hbar^2$ that requires no counterterms. 
+The one-loop RG flow from $\epsilon$ to $L$ is defined by the weight expansion
+\ben
+W(P_{\epsilon<L}^V , I) = \sum_{\Gamma} \frac{\hbar^{g(\Gamma)}}{|{\rm Aut}(\Gamma)|} W_\Gamma (P_{\epsilon<L}^V, I) 
+\een
+where the sum is over graphs of genus $\leq 1$ and $W_\Gamma$ is the weight associated to the graph $\Gamma$. 
+
+For the genus zero graphs, or trees, we do not have any analytic difficulties to worry about. 
+The propagator $P_{\epsilon<L}^V$ is smooth so long as $\epsilon,L > 0$ but when $\epsilon \to 0$ it inherits a singularity along the diagonal $z = w$.
+But, if $\Gamma$ is a tree the weight $W_\Gamma(P_{0<L}^V, I)$ only involves multiplication of distributions with transverse singular support, so is well-defined.
+Thus we have the following.
 
 \begin{lem} 
 If $\Gamma$ is a tree then $\lim_{\epsilon \to 0} W_{\Gamma}(P_{\epsilon < L}, I)$ exists.
 \end{lem}
 
 \subsection{One-loop weights}
+
+The only possible divergences in the $\epsilon \to 0$ limit, then, must come from graphs of genus one. 
+Every graph of genus one is a wheel with some trees protruding from the external edges of the tree.
+Thus, we can write the weight of a genus one graph as a product of weights associated to trees times the weight associated to a wheel.
+As we just saw, the weights associated to trees are automatically convergent in the $\epsilon \to 0$ limit, thus it suffices to focus on genus one graphs that are purely wheels with external edges as in Figure \brian{fig}. 
+
+The definition of the weight of the wheel involves placing the propagator at each internal edge and the interaction $I$ at each vertex. 
+The weights are evaluated by placing compactly supported fields $\varphi \in \sE_{V,c} = \Omega^{0,*}_c(\CC^d, V)$ at each of the external edges.
+We will make two simplifications:
+\begin{enumerate}
+\item the only $\epsilon$ dependence appears in the analytic part of the propagator $P_{\epsilon<L}^{an}$, so we can forget about the combinatorial factor ${\bf C}_{V_0}$ and assume all external edges are labeled by compactly supported Dolbeault forms in $\Omega^{0,*}_c(\CC^d)$;
+\item each vertex labeled by $I$ is a sum of interactions of the form
+\ben
+\int_{\CC^d} D_1(\varphi) \cdots D_k(\varphi) \d^d z
+\een
+where $D_i$ is a translation invariant differential operator. 
+Some of the differential operators will hit the compactly supported Dolbeualt forms placed on the external edges of the graph.
+The remaining operators will hit the internal edges labeled by the propagators.
+Since a holomorphic differential operator preserves the space of compactly supported Dolbeault forms that is independent of $\epsilon$, we replace each input by an arbitrary compactly supported Dolbeault form.
+\end{enumerate}
+
+Thus, for the $\epsilon \to 0$ behavior it suffices to look at weights of wheels with arbitrary compactly supported functions as inputs where each of the internal edges are labeled by some translation invariant holomorphic differential operator 
+\ben
+D = \sum_{n_1,\ldots n_d} \frac{\partial^{n_1}}{\partial z_{1}^{n_1}}\cdots \frac{\partial^{n_d}}{\partial z_{d}^{n_d}}
+\een
+applied to the propagator $P_{\epsilon<L}^{an}$.
+This motivates the following definition. 
 
 \begin{dfn}
 Let $\epsilon , L > 0$. 
@@ -834,7 +949,7 @@ In the above expression, we use the convention that $z^{k+1} = z^1$.
 \end{dfn}
 
 We will refer to the collection of data $(k, (\vec{n}), \Phi)$ in the definition as {\em wheel data}.
-The motivation for this is that the weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ is the analytic part of the full weight $W_{\Gamma}(P_{\epsilon<L}, I)$ where $\Gamma$ is a wheel with $k$ vertices. 
+The motivation for this is that the weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ is the analytic part of the full weight $W_{\Gamma}(P^V_{\epsilon<L}, I)$ where $\Gamma$ is a wheel with $k$ vertices. 
 
 We have reduced the proof of Theorem \ref{thm holo renorm} to showing that the $\epsilon \to 0$ limit of the analytic weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ exists for any tripe of wheel data $(k, (\vec{n}), \Phi)$.
 To do this, there are two steps. 
@@ -916,11 +1031,7 @@ The weight can be written as
 \be\label{weight2}
 \int_{w^k \in \CC^d} \d^{d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \left(\prod_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^\alpha}P^{an}_{\epsilon < L} (w^\alpha) \right) \sum_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^k} P^{an} \left(\sum_{\alpha=1}^{k-1} w^\alpha\right) .
 \ee
-For $\alpha = 1,\ldots,k-1$ the notation 
-\ben
-P^{an}_{\epsilon < L} (w^\alpha) = \int_{t_\alpha=\epsilon}^L \frac{\d t_\alpha}{4\pi t_\alpha} \dbar^* \brian{FINISH}
-\een
-makes sense since $P^{an}_{\epsilon<L}(z^\alpha,z^{\alpha+1})$ is only a function of $w^\alpha = z^{\alpha+1}-z^\alpha$.
+For $\alpha = 1,\ldots,k-1$ the notation $P^{an}_{\epsilon < L} (w^\alpha)$ makes sense since $P^{an}_{\epsilon<L}(z^\alpha,z^{\alpha+1})$ is only a function of $w^\alpha = z^{\alpha+1}-z^\alpha$.
 Similarly $P^{an}_{\epsilon<L}(z^{k+1},z^1)$ is a function of 
 \ben
 z^k - z^1 = \sum_{\alpha=1}^{k-1} w^\alpha . 
@@ -1034,6 +1145,10 @@ This concludes the proof.
 %^{n_j^\alpha} \right| 
 \end{proof}
 
+\subsection{Relation to renormalization of topological theories}
+
+\brian{it's a fun corollary to see that a slight modification of the above actually shows that topological BF theory in any dimension has a one-loop quantization with no counterterms, not sure if I'll put that here.}
+
 \section{Equivariant BV quantization}
 
 Equivariant BV quantization is an enhancement of ordinary BV quantization where one takes into account the action of a group or Lie algebra. 
@@ -1073,6 +1188,8 @@ Such a map $\rho$ is equivalent to a Maurer-Cartan element in the dg Lie algebra
 \een
 This is a cohomological degree $+1$ element $I^\fh$ such that $\d I^\fh + \frac{1}{2}\{I^\fh, I^\fh\} = 0$.
 Here $\{-,-\}$ is the bracket on $\cred^*(\fg)$ and $\d$ is the sum of the Chevalley-Eilenberg differentials on $\fh$ and $\fg$. 
+
+\brian{finish}
 
 \subsection{Quantum equivariance}
 
@@ -1117,9 +1234,14 @@ A careful reading of those texts shows that the freedom to work over interesting
 
 \subsection{The case of a local Lie algebra}
 
-The above formalism works equally well, with some slight modifications, if we replace the Lie algebra $\fh$ by a {\em local Lie algebra} on the manifold where the theory lives.
+The above formalism works equally well, with some slight modifications, if we replace the Lie algebra $\fh$ by a {\em local Lie algebra} $\sL$ on the manifold where the theory lives.
+This is done in detail in Section \ref{} of \cite{CG}, and we refer the reader there for more details. 
 
-\brian{do this}
+The data is essentially the same as above.
+By definition an \brian{finish}
+
+In the case of a local Lie algebra we are interested in a more refined version of an action of a Lie algebra on a QFT: that of an {\em inner action}.
+
 
 \begin{lem}\label{lem: innner action}
 Suppose $\{I^{\sL}[L]\}$ is an effective family satisfying the $\sL$-equivariant quantum master equation modulo $\cloc^*(\sL)$.

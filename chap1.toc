@@ -6,13 +6,13 @@
 \contentsline {subsection}{\tocsubsection {}{2.1}{The definition of a holomorphic theory}}{3}{subsection.2.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{2.1.1}{Free holomorphic theories}}{3}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\tocsubsubsection {}{2.1.2}{Interacting holomorphic theories}}{6}{subsubsection.2.1.2}
-\contentsline {subsection}{\tocsubsection {}{2.2}{Holomorphically translation invariant theories}}{8}{subsection.2.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{2.2.1}{Holomorphic translation invariant deformations}}{10}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\tocsubsubsection {}{2.2.2}{Holomorphic deformations on an arbitrary complex manifold}}{11}{subsubsection.2.2.2}
-\contentsline {section}{\tocsection {}{3}{Renormalization of holomorphic theories}}{12}{section.3}
+\contentsline {subsection}{\tocsubsection {}{2.2}{Holomorphically translation invariant theories}}{9}{subsection.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.1}{Holomorphic translation invariant deformations}}{11}{subsubsection.2.2.1}
+\contentsline {section}{\tocsection {}{3}{Renormalization of holomorphic theories}}{11}{section.3}
 \contentsline {subsection}{\tocsubsection {}{3.1}{Holomorphic gauge fixing}}{12}{subsection.3.1}
 \contentsline {subsection}{\tocsubsection {}{3.2}{One-loop weights}}{13}{subsection.3.2}
-\contentsline {section}{\tocsection {}{4}{Equivariant BV quantization}}{17}{section.4}
-\contentsline {subsection}{\tocsubsection {}{4.1}{Classical equivariance}}{17}{subsection.4.1}
-\contentsline {subsection}{\tocsubsection {}{4.2}{Quantum equivariance}}{18}{subsection.4.2}
-\contentsline {subsection}{\tocsubsection {}{4.3}{The case of a local Lie algebra}}{19}{subsection.4.3}
+\contentsline {subsection}{\tocsubsection {}{3.3}{Relation to renormalization of topological theories}}{18}{subsection.3.3}
+\contentsline {section}{\tocsection {}{4}{Equivariant BV quantization}}{18}{section.4}
+\contentsline {subsection}{\tocsubsection {}{4.1}{Classical equivariance}}{18}{subsection.4.1}
+\contentsline {subsection}{\tocsubsection {}{4.2}{Quantum equivariance}}{19}{subsection.4.2}
+\contentsline {subsection}{\tocsubsection {}{4.3}{The case of a local Lie algebra}}{20}{subsection.4.3}

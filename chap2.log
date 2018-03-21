@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 MAR 2018 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  21 MAR 2018 08:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1299,112 +1299,112 @@ it/10 d$\OT1/ppl/m/it/10 -extended Gelfand-Kazhdan
 
 LaTeX Warning: Citation `atiyah' on page 26 undefined on input line 1495.
 
-
-Overfull \hbox (3.12123pt too wide) in paragraph at lines 1528--1532
-\OT1/ppl/m/n/10 quence. Now, $[]$ is a $\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 , [
-][]\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 -module whose de-scent is equal to the $\
-OML/zplm/m/it/10 D[]$\OT1/ppl/m/n/10 -module $\OML/zplm/m/it/10 J\OT1/zplm/m/n/
-10 
-[](\OML/zplm/m/it/10 X\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 .
+[26]
+Overfull \hbox (33.40749pt too wide) in paragraph at lines 1568--1572
+\OT1/ppl/m/n/10 By as-sump-tion, $[]\OML/zplm/m/it/10  \OT1/zplm/m/n/10 = []\O
+ML/zplm/m/it/10  \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 j[][][]\OT1/zplm/m/n/10 
+(\OML/zplm/m/it/10 T[]\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 , but this pre-cisely 
+$\OML/zplm/m/it/10 `[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 ![]\OT1/ppl/m/n/10 , 
+[] , \OML/zplm/m/it/10 ![]\OT1/zplm/m/n/10 ) = [][]([])(\OML/zplm/m/it/10 ![]\O
+T1/ppl/m/n/10 , [] , \OML/zplm/m/it/10 ![]\OT1/zplm/m/n/10 ) =
  []
 
-[26]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1568.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1568.
+(hyperref)                removing `math shift' on input line 1575.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1568.
+(hyperref)                removing `\sigma' on input line 1575.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1597.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 1597.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gamma' on input line 1597.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1597.
-
-
-LaTeX Warning: Reference `sec ??' on page 27 undefined on input line 1597.
+(hyperref)                removing `math shift' on input line 1575.
 
 [27]
 
-LaTeX Warning: Reference `chap1' on page 28 undefined on input line 1612.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1604.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beta' on input line 1604.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\gamma' on input line 1604.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1604.
+
+
+LaTeX Warning: Reference `sec ??' on page 28 undefined on input line 1604.
+
+
+LaTeX Warning: Reference `chap1' on page 28 undefined on input line 1619.
 
 
 LaTeX Warning: Reference `sec: equivariant' on page 28 undefined on input line 
-1638.
+1645.
 
 [28]
 
-LaTeX Warning: Reference `GLaction' on page 29 undefined on input line 1667.
+LaTeX Warning: Reference `GLaction' on page 29 undefined on input line 1674.
 
 
 LaTeX Warning: Reference `sec comparison' on page 29 undefined on input line 16
-69.
+76.
 
 
-LaTeX Warning: Citation `WG2' on page 29 undefined on input line 1670.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1684.
+LaTeX Warning: Citation `WG2' on page 29 undefined on input line 1677.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1684.
+(hyperref)                removing `math shift' on input line 1691.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\infty' on input line 1684.
+(hyperref)                removing `subscript' on input line 1691.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1684.
-
-
-LaTeX Warning: Citation `WG2' on page 29 undefined on input line 1685.
-
-
-LaTeX Warning: Citation `GWCS' on page 29 undefined on input line 1685.
-
-
-LaTeX Warning: Citation `GWderived' on page 29 undefined on input line 1685.
+(hyperref)                removing `\infty' on input line 1691.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1690.
+(hyperref)                removing `math shift' on input line 1691.
+
+
+LaTeX Warning: Citation `WG2' on page 29 undefined on input line 1692.
+
+
+LaTeX Warning: Citation `GWCS' on page 29 undefined on input line 1692.
+
+
+LaTeX Warning: Citation `GWderived' on page 29 undefined on input line 1692.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1690.
+(hyperref)                removing `math shift' on input line 1697.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1690.
+(hyperref)                removing `\sigma' on input line 1697.
 
 
-LaTeX Warning: Citation `wg2' on page 29 undefined on input line 1702.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1697.
+
+
+LaTeX Warning: Citation `wg2' on page 29 undefined on input line 1709.
 
 
 LaTeX Warning: Citation `GradyGwilliamDerived' on page 29 undefined on input li
-ne 1702.
+ne 1709.
 
 [29] [30] [31] [32]
-Overfull \hbox (57.21916pt too wide) detected at line 1867
+Overfull \hbox (57.21916pt too wide) detected at line 1874
 [] [] [] \OMS/zplm/m/n/10 ^[] [] ^ ^[] [] \OT1/ppl/m/n/10 C[] [] d[]\OML/zplm/m
 /it/10 z\OT1/ppl/m/n/10 .
  []
@@ -1413,60 +1413,60 @@ Overfull \hbox (57.21916pt too wide) detected at line 1867
 240>
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1949.
+(hyperref)                removing `math shift' on input line 1956.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1949.
+(hyperref)                removing `\sigma' on input line 1956.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1949.
+(hyperref)                removing `math shift' on input line 1956.
 
 
-LaTeX Warning: Citation `GwThesis' on page 34 undefined on input line 1956.
+LaTeX Warning: Citation `GwThesis' on page 34 undefined on input line 1963.
 
 
-LaTeX Warning: Reference `sec gk cc' on page 34 undefined on input line 1959.
+LaTeX Warning: Reference `sec gk cc' on page 34 undefined on input line 1966.
 
 
-LaTeX Warning: Citation `WittenCDO' on page 34 undefined on input line 1960.
+LaTeX Warning: Citation `WittenCDO' on page 34 undefined on input line 1967.
 
 
-LaTeX Warning: Citation `Nek' on page 34 undefined on input line 1960.
+LaTeX Warning: Citation `Nek' on page 34 undefined on input line 1967.
 
 
-LaTeX Warning: Reference `chap1' on page 34 undefined on input line 1961.
+LaTeX Warning: Reference `chap1' on page 34 undefined on input line 1968.
 
 [34]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1968.
+(hyperref)                removing `math shift' on input line 1975.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1968.
+(hyperref)                removing `subscript' on input line 1975.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1968.
+(hyperref)                removing `math shift' on input line 1975.
 
 
-LaTeX Warning: Citation `CosBook' on page 35 undefined on input line 1978.
+LaTeX Warning: Citation `CosBook' on page 35 undefined on input line 1985.
 
 
-LaTeX Warning: Reference `prequant' on page 35 undefined on input line 1980.
+LaTeX Warning: Reference `prequant' on page 35 undefined on input line 1987.
 
 
 LaTeX Warning: Reference `lem: holrenorm' on page 35 undefined on input line 19
-81.
+88.
 
 [35]
 
-LaTeX Warning: Reference `eqdef' on page 36 undefined on input line 2017.
+LaTeX Warning: Reference `eqdef' on page 36 undefined on input line 2024.
 
 
-Overfull \hbox (11.55827pt too wide) in paragraph at lines 2038--2041
+Overfull \hbox (11.55827pt too wide) in paragraph at lines 2045--2048
 [][]\OT1/ppl/b/n/10 Lemma 5.3. []\OT1/ppl/m/it/10 The limit $\OT1/zplm/m/n/10 ^
 ^B[] := [][] ^^B[][\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]$ \OT1/ppl/m/it/10 ex-i
 sts and is an el-e-ment of de-gree one in $\OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 
@@ -1475,13 +1475,13 @@ sts and is an el-e-ment of de-gree one in $\OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10
  []
 
 
-LaTeX Warning: Citation `WG2' on page 36 undefined on input line 2056.
+LaTeX Warning: Citation `WG2' on page 36 undefined on input line 2063.
 
 
-LaTeX Warning: Reference `obslemma' on page 36 undefined on input line 2126.
+LaTeX Warning: Reference `obslemma' on page 36 undefined on input line 2133.
 
 [36]
-Overfull \hbox (5.57645pt too wide) in paragraph at lines 2136--2138
+Overfull \hbox (5.57645pt too wide) in paragraph at lines 2143--2145
 \OT1/ppl/m/n/10 Given two for-mal vec-tor fields $\OML/zplm/m/it/10 X\OT1/ppl/m
 /n/10 , \OML/zplm/m/it/10 Y$\OT1/ppl/m/n/10 , let $\OT1/zplm/m/n/10 ^^B[](\OML/
 zplm/m/it/10 X\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 Y\OT1/zplm/m/n/10 )$ \OT1/ppl
@@ -1490,16 +1490,16 @@ U/euf/m/n/10 g[]\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 .
  []
 
 
-Overfull \hbox (57.35214pt too wide) in paragraph at lines 2268--2268
+Overfull \hbox (57.35214pt too wide) in paragraph at lines 2275--2275
 [] 
  []
 
 [37]
 
-LaTeX Warning: Reference `J when n=1' on page 38 undefined on input line 2325.
+LaTeX Warning: Reference `J when n=1' on page 38 undefined on input line 2332.
 
 
-Overfull \hbox (5.04947pt too wide) in paragraph at lines 2324--2326
+Overfull \hbox (5.04947pt too wide) in paragraph at lines 2331--2333
 \OT1/ppl/m/n/10 as de-sired. Set-ting $\OML/zplm/m/it/10 f[] \OT1/zplm/m/n/10 =
  \OML/zplm/m/it/10 g[]$ \OT1/ppl/m/n/10 we see that this co-in-cides with the a
 n-a-lytic part of $\OML/zplm/m/it/10 J[]\OT1/zplm/m/n/10 ([][]([]))(\OML/zplm/m
@@ -1508,26 +1508,26 @@ n-a-lytic part of $\OML/zplm/m/it/10 J[]\OT1/zplm/m/n/10 ([][]([]))(\OML/zplm/m
  []
 
 
-LaTeX Warning: Citation `polchinski' on page 38 undefined on input line 2349.
+LaTeX Warning: Citation `polchinski' on page 38 undefined on input line 2356.
 
 [38]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2376.
+(hyperref)                removing `math shift' on input line 2383.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2376.
+(hyperref)                removing `math shift' on input line 2383.
 
 [39] [40] <xymatrix 2x2 166> [41]
 
-LaTeX Warning: Citation `fact1' on page 42 undefined on input line 2553.
+LaTeX Warning: Citation `fact1' on page 42 undefined on input line 2560.
 
 
-LaTeX Warning: Citation `fact1' on page 42 undefined on input line 2561.
+LaTeX Warning: Citation `fact1' on page 42 undefined on input line 2568.
 
 [42]
-Overfull \hbox (3.08302pt too wide) in paragraph at lines 2611--2614
+Overfull \hbox (3.08302pt too wide) in paragraph at lines 2618--2621
 []\OT1/ppl/m/n/10 This is a con-se-quence of Stokes' the-o-rem. Sup-pose $\OML/
 zplm/m/it/10  \OT1/zplm/m/n/10 = []\OML/zplm/m/it/10 []$\OT1/ppl/m/n/10 . The
 n, for any $\OML/zplm/m/it/10 ! \OMS/zplm/m/n/10 2 \OT1/zplm/m/n/10 
@@ -1536,7 +1536,7 @@ n, for any $\OML/zplm/m/it/10 ! \OMS/zplm/m/n/10 2 \OT1/zplm/m/n/10
  []
 
 
-Overfull \hbox (25.35712pt too wide) detected at line 2630
+Overfull \hbox (25.35712pt too wide) detected at line 2637
 \OML/zplm/m/it/10 i[] \OT1/zplm/m/n/10 : \OML/zplm/m/it/10 A[] \OMS/zplm/m/n/10
  
  [] ! [][] ^^Z [][] [] \OT1/ppl/m/n/10 .
@@ -1544,26 +1544,26 @@ Overfull \hbox (25.35712pt too wide) detected at line 2630
 
 [43] <xymatrix 2x2 164> [44]
 
-LaTeX Warning: Reference `??' on page 45 undefined on input line 2722.
+LaTeX Warning: Reference `??' on page 45 undefined on input line 2729.
 
 
-LaTeX Warning: Reference `?' on page 45 undefined on input line 2722.
+LaTeX Warning: Reference `?' on page 45 undefined on input line 2729.
 
 [45]
 
-LaTeX Warning: Reference `?' on page 46 undefined on input line 2833.
+LaTeX Warning: Reference `?' on page 46 undefined on input line 2840.
 
 [46]
 
-LaTeX Warning: Reference `??' on page 47 undefined on input line 2868.
+LaTeX Warning: Reference `??' on page 47 undefined on input line 2875.
 
 
-Overfull \hbox (5.8453pt too wide) in alignment at lines 2885--2887
+Overfull \hbox (5.8453pt too wide) in alignment at lines 2892--2894
  [][][] []
  []
 
 [47]
-Overfull \hbox (67.8433pt too wide) in paragraph at lines 2926--2929
+Overfull \hbox (67.8433pt too wide) in paragraph at lines 2933--2936
 \OT1/ppl/m/n/10 Indeed, the right hand side as-signs to each open $\OML/zplm/m/
 it/10 U$ \OT1/ppl/m/n/10 the cochain com-plex $C[]\OT1/zplm/m/n/10 ([](\OML/zpl
 m/m/it/10 U\OT1/zplm/m/n/10 )) = []$\OT1/ppl/m/n/10 .
@@ -1571,31 +1571,31 @@ m/m/it/10 U\OT1/zplm/m/n/10 )) = []$\OT1/ppl/m/n/10 .
 
 [48]
 
-LaTeX Warning: Reference `prop fhk1' on page 49 undefined on input line 2983.
+LaTeX Warning: Reference `prop fhk1' on page 49 undefined on input line 2990.
 
 [49] [50]
 
-LaTeX Warning: Reference `composition' on page 51 undefined on input line 3074.
+LaTeX Warning: Reference `composition' on page 51 undefined on input line 3081.
 
 
 
-LaTeX Warning: Reference `composition' on page 51 undefined on input line 3097.
+LaTeX Warning: Reference `composition' on page 51 undefined on input line 3104.
 
 
 <xymatrix 2x3 296> [51]
 
 LaTeX Warning: Citation `WittenCohomological' on page 52 undefined on input lin
-e 3210.
+e 3217.
 
 
 LaTeX Warning: Citation `WittenZwiebach' on page 52 undefined on input line 321
-1.
+8.
 
 
-LaTeX Warning: Citation `DijkgraafVV' on page 52 undefined on input line 3211.
+LaTeX Warning: Citation `DijkgraafVV' on page 52 undefined on input line 3218.
 
 [52]
-Overfull \hbox (4.00844pt too wide) in paragraph at lines 3246--3248
+Overfull \hbox (4.00844pt too wide) in paragraph at lines 3253--3255
 \OT1/ppl/m/n/10 The topo-log-i-cal de-scent equa-tions im-ply that if $\OMS/zpl
 m/m/n/10 O$ \OT1/ppl/m/n/10 is BRST in-vari-ant $\OML/zplm/m/it/10 Q[]\OMS/zplm
 /m/n/10 O \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 0$, then $\OML/zplm/m/it/10 Q[]\OM
@@ -1603,39 +1603,39 @@ S/zplm/m/n/10 O[] \OT1/zplm/m/n/10 =
  []
 
 
-LaTeX Warning: Citation `Huang' on page 53 undefined on input line 3250.
+LaTeX Warning: Citation `Huang' on page 53 undefined on input line 3257.
 
 
-LaTeX Warning: Citation `LianZuckerman' on page 53 undefined on input line 3250
+LaTeX Warning: Citation `LianZuckerman' on page 53 undefined on input line 3257
 .
 
 
-LaTeX Warning: Citation `LurieAlg' on page 53 undefined on input line 3266.
+LaTeX Warning: Citation `LurieAlg' on page 53 undefined on input line 3273.
 
 [53] [54] [55]
 
-LaTeX Warning: Reference `' on page 56 undefined on input line 3418.
+LaTeX Warning: Reference `' on page 56 undefined on input line 3425.
 
 
-Overfull \hbox (45.89546pt too wide) detected at line 3447
+Overfull \hbox (45.89546pt too wide) detected at line 3454
 [] [] \OMS/zplm/m/n/10 ! [] [] \OT1/ppl/m/n/10 ,
  []
 
 [56]
-Overfull \hbox (3.5346pt too wide) detected at line 3454
+Overfull \hbox (3.5346pt too wide) detected at line 3461
 [] [] [] [] [] \OMS/zplm/m/n/10 
  [] [] \OT1/ppl/m/n/10 .
  []
 
 
-LaTeX Warning: Citation `Closset1' on page 57 undefined on input line 3466.
+LaTeX Warning: Citation `Closset1' on page 57 undefined on input line 3473.
 
 [57]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3472.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3472.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3479.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3479.
  (./chap2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3472.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3472.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3479.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3479.
 
 Package rerunfilecheck Info: File `chap2.out' has not changed.
 (rerunfilecheck)             Checksum: 848407F4C2686C2DB8D3781BD533F03F;2026.
@@ -1643,7 +1643,7 @@ Package rerunfilecheck Info: File `chap2.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3472.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3479.
  ) 
 Here is how much of TeX's memory you used:
  23533 strings out of 492995
@@ -1673,7 +1673,7 @@ xlive/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2
 mf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/public/xypic/xycmbt10.pfb>
-Output written on chap2.pdf (57 pages, 405974 bytes).
+Output written on chap2.pdf (57 pages, 406626 bytes).
 PDF statistics:
  704 PDF objects out of 1000 (max. 8388607)
  619 compressed objects within 7 object streams

@@ -15,12 +15,12 @@
 \contentsline {subsection}{\tocsubsection {}{3.2}{Factorization homology along Hopf surfaces}}{15}{subsection.3.2}
 \contentsline {section}{\tocsection {}{4}{Universal Grothendieck-Riemann-Roch from BV quantization}}{17}{section.4}
 \contentsline {subsection}{\tocsubsection {}{4.1}{The classical family}}{19}{subsection.4.1}
-\contentsline {subsection}{\tocsubsection {}{4.2}{BV quantization in families}}{19}{subsection.4.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{The anomaly calculation}}{20}{subsubsection.4.2.1}
+\contentsline {subsection}{\tocsubsection {}{4.2}{BV quantization in families}}{20}{subsection.4.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{4.2.1}{The anomaly calculation}}{21}{subsubsection.4.2.1}
 \contentsline {subsection}{\tocsubsection {}{4.3}{Local to global}}{23}{subsection.4.3}
-\contentsline {subsection}{\tocsubsection {}{4.4}{A module for the higher Kac-Moody}}{24}{subsection.4.4}
-\contentsline {section}{\tocsection {}{5}{Holomorphic diffeomorphisms}}{24}{section.5}
-\contentsline {subsection}{\tocsubsection {}{5.1}{Gelfand-Fuks cohomology}}{24}{subsection.5.1}
-\contentsline {subsection}{\tocsubsection {}{5.2}{The local cohomology of holomorphic vector fields}}{27}{subsection.5.2}
-\contentsline {subsubsection}{\tocsubsubsection {}{5.2.1}{An explicit description of the local cocycles}}{30}{subsubsection.5.2.1}
-\contentsline {subsection}{\tocsubsection {}{5.3}{The holomorphic anomaly for $\sigma $-models}}{32}{subsection.5.3}
+\contentsline {subsection}{\tocsubsection {}{4.4}{A module for the higher Kac-Moody}}{25}{subsection.4.4}
+\contentsline {section}{\tocsection {}{5}{Holomorphic diffeomorphisms}}{26}{section.5}
+\contentsline {subsection}{\tocsubsection {}{5.1}{Gelfand-Fuks cohomology}}{26}{subsection.5.1}
+\contentsline {subsection}{\tocsubsection {}{5.2}{The local cohomology of holomorphic vector fields}}{28}{subsection.5.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{5.2.1}{An explicit description of the local cocycles}}{31}{subsubsection.5.2.1}
+\contentsline {subsection}{\tocsubsection {}{5.3}{The holomorphic anomaly for $\sigma $-models}}{34}{subsection.5.3}

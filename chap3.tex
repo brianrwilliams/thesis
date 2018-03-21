@@ -885,29 +885,43 @@ If $\theta \in \Sym^{d+1}(\fg^*)^\fg \cong H^{d+1}(G , \Omega^{d+1}) \subset H^{
 \ben
 \int_\pi \circ f^* \theta \in H^2({\rm Bun}_G(X)) .
 \een 
-The formal moduli space $B \fg^X$ describes a formal neighborhood of the trivial bundle inside of the moduli of $G$-bundles.
-So the theorem above can be viewed as a formal version of the universal GRR theorem over the moduli of $G$-bundles.
 
+Let $\sP$ denote the universal principal $G$-bundle.
+This is the $G$-bundle over ${\rm Bun}_G(X) \times X$ whose fiber over $\{[P\to X]\} \times X$ is the principal $G$-bundle $P \to X$ itself. 
+Given any representation $V$ we can define the vector bundle
+\ben
+\sV = \sP \times^G V
+\een
+over ${\rm Bun}_G(X) \times X$.
+The fiber of this bundle over $\{[P\to X]\} \times X$ is the associated vector bundle $P \times^G V$. 
+We take the determinant of the derived pushforward of $\sV$ along $\pi$ to obtain a line bundle $\det(\RR \pi_* \sV)$ on ${\rm Bun}_G(X)$. 
+We will see how the global observables $\int_X \Obs^\q_{P,V}$ provide a formal version of this line bundle near a fixed principal bundle $P$. 
+Moreover, if we naively apply the Grothendieck-Riemann-Roch theorem in this universal context one finds
+\ben
+c_1(\det(\RR \pi_* \sV)) = \int_\pi {\rm Td}_X \cdot {\rm ch}(\sV) \in H^2(\Bun_G(X)) .
+\een
+In the case that $X$ is affine, so that ${\rm Td}_X = 1$, our theorem provides a proof of this formula using methods of perturbative QFT. 
+To prove the theorem on a general complex manifold we need to take into account the action of holomorphic vector fields, which is the content of the next section.
 
-
-\subsection{The classical family}
+\subsection{The classical family}\label{sec: classical g equiv} 
 
 In this section, we consider a BV theory that is equivariant for the local Lie algebra $\sAd(P)$ in the language of Section \ref{sec equivariance}. 
 Let $V$ be any $G$-representation, and define the associated vector bundle $\sV_P = P \times^G V$ on $X$.
 The holomorphic theory we consider is based on the graded holomorphic vector bundle $\sV_P \oplus K_X \tensor \sV_P^* [d-1]$, where $\sV^*_P$ is the linear dual bundle. 
 The fields of the associated free BV theory are
 \ben
-\sE_V = \Omega^{0,*}(X, \sV_P) \oplus \Omega^{d,*}(X , \sV_P^*)[d-1] .
+\sE_{P,V} = \Omega^{0,*}(X, \sV_P) \oplus \Omega^{d,*}(X , \sV_P^*)[d-1] .
 \een
 This is simply the $\beta\gamma$ system on $X$ twisted by the vector bundle $\sV_P$. 
 The action functional is $\int \<\beta, \dbar \gamma\>_{V}$ where the pairing is between $V$ and its dual. 
 In particular, the theory $\sE_V$ is free.
+Let $\Obs^\q_{P,V}$ denote the corresponding factorization algebra of quantum observables.
 
 The action of $\fg$ on $V$ extends to an action of the local Lie algebra $\sAd(P)$ on this classical BV theory.
 To define this equivariance we need to presribe a Noether current. 
 
 \begin{lem} 
-The local Noether current $I^{\fg} \in \cloc^*(\sAd(P)) \tensor \oloc(\sE_V)$ defined by
+The local Noether current $I^{\fg} \in \cloc^*(\sAd(P)) \tensor \oloc(\sE_{P,V})$ defined by
 \ben
 I^\fg(\alpha, \gamma,\beta) = \int_X \<\beta, \alpha \cdot \gamma\>_V
 \een
@@ -1171,8 +1185,6 @@ This completes the proof of Proposition \ref{prop: inner anomaly}.
 
 \subsection{Local to global}
 
-
-
 In this section we finish the proof of our main result Theorem \ref{thm ggrr} by showing how our local calculation above implies the formula for the anomaly on a general compact affine manifold $X$.
 By an complex affine manifold, we mean a quotient 
 \ben
@@ -1182,49 +1194,108 @@ of an open subset $U \subset \CC^d$ by a free and proper action of a discrete su
 We consider affine manifolds that are also compact. 
 To deduce our main theorem we will show that the theory and the anomaly above also exhibit equivariance for the affine group on $\CC^d$, thus it will descend to any affine manifold.
 
-
-
 We have stated the main result for an arbitrary principal $G$-bundle $P$ on the affine manifold $X$. 
 Suppose the discrete subgroup $\Gamma \leq U(d) \ltimes \CC^d$ defines the affine manifold $q : U \to X = U / \Gamma$ as above. 
 Then, principal $G$-bundles on $X$ are equivalent to $\Gamma$-equivariant principal $G$-bundles on $U$. 
 
-First, notice that the classical free theory $\sE_V$ is equivariant for the affine group $U(d) \ltimes \CC^d$.
-Thus, it defines a classical theory on any affine manifold $X$.
-Similarly, the functional $I^\fg$ is equivariant for the affine group, so that it also descents to a functional on $X$.
-Thus, the Noether current $I^\fg$ defines a \brian{finish}
+Let $\sE$ be an arbitrary elliptic complex on $X$, and suppose the Lie algebra $\fh$ acts on $\sE$. 
+Since $X$ is compact, the cohomology $H^*(\sE(X))$ is finite dimensional.
+It therefore makes sense to define the character of the action of $\fh$ on $H^*(\sE(X))$.
+\be\label{superchar}
+\chi_\sE : \fh \to \CC \;\; , \;\; M \in \fh \mapsto {\rm STr}_{H^*(\sE(X))} (M) .
+\ee
+Here, STr denotes the supertrace. 
+The character factors through the determinant of the representation.
+For the graded character above, we must use the superdeterminant which we denote by $\det (H^*(\sE(X)))$. 
+Free BV quantization gives a natural field theoretic interpretation of this determinant.
 
-The local Lie algebra cohomology of any local Lie algebra embeds inside its ordinary (reduced) Lie algebra cohomology of global sections. 
-Thus we have an embedding of cochain complexes
+\begin{prop}[\cite{CG} Lemma 12.7.0.1] 
+Let $\sE$ be any elliptic complex on a compact manifold $X$ and let $T^*[-1] \sE$ be the corresponding free BV theory given by the shifted cotangent bundle. 
+Let $\Obs^\q_\sE$ be the factorization algebra of quantum observables of this theory.
+Then, there is an isomorphism
 \ben
-\cloc^*(\fg^X) \hookrightarrow \cred^*(\fg^X(X)) = \cred^*(\Omega^{0,*}(X) \tensor \fg)
+H^* \left(\Obs^\q_{\sE}(X) \right) \cong \det H^*(\sE(X)) [n]
 \een
-By Kodaira-Spencer theory have already seen that the global sections of the local Lie algebra $\fg^X$ is a model for the formal neighborhood of the trivial $G$-bundle inside of $G$-bundles. 
-Thus we have an identification
+where $n$ is the Euler characteristic of $\sE(X)$ modulo $2$. 
+\end{prop}
+
+Notice that the classical free theory $\sE_V$ is equivariant for the affine group $U(d) \ltimes \CC^d$.
+Thus, it defines a classical theory on any affine manifold $X$.
+This theory is free and of the form
+\ben
+\sE_V (X) = T^*[-1] (\Omega^{0,*}(X , V))
+\een
+where $T^*[-1]$ denotes the shifted cotangent bundle.
+Thus, the global quantum observables satisfy
+\be\label{quantum obs}
+H^*(\Obs^\q_{V}(X)) = \det \left(H^*(X, \sO^{hol}) \tensor V \right) [??] 
+\ee
+ 
+%Similarly, the functional $I^\fg$ is equivariant for the affine group, so that it also descents to a functional on $X$.
+%Thus, the Noether current $I^\fg$ defines a \brian{finish}
+
+In Section \ref{sec: classical g equiv} we have showed how the classical theory $\sE_{V}$ has an an action by the local Lie algebra $\sG_X$.
+This arose from an action of $\sG(X) = \Omega^{0,*}(X, \fg)$ on the elliptic complex $\Omega^{0,*}(X, V)$. 
+At the level of cohomology we have an action of $H^*(\sG(X))$ on $H^*(\Omega^{0,*}(X, V))$ and hence a character $\chi_{V}$ as in Equation (\ref{superchar}) which is an element in $H^*_{red}(\sG(X))$. 
+
+The local Lie algebra cohomology of any local Lie algebra embeds inside its ordinary (reduced) Lie algebra cohomology of global sections $\cloc^*(\sL(X)) \subset \cred^*(\sL(X))$. 
+The character (\ref{superchar}) is an element in $H_{red}^*(\sL(X))$.
+As an immediate corollary of \cite{CG} Theorem 12.6.0.1 we have the following relationship between the anomaly cocycle and the character.
+
+\begin{prop}\label{inner char}
+Suppose $\sL$ is a local Lie algebra that acts on the elliptic complex $\sE$ on a compact manifold $X$.
+Let $\Theta_\sE \in \cloc^*(\sL)$ be the local cocycle measuring the failure to satisfy the $\sL$-equivariant classical master equation (that is, the obstruction to having an inner action).
+Then, its global cohomology class satisfies $[\Theta_\sE (X)] = \chi_{\sE} \in \cred^*(\sL(X))$ where $\chi_\sE$ is the trace of the action of $H^*(\sL(X))$ on $H^*(\sE(X))$. 
+\end{prop}
+
+%\begin{proof}
+%A version of this is proved in Section 7 of \cite{GwilliamThesis}, but we will sketch the proof here.
+%\end{proof}
+
+For the case of $\sL = \sG_X$ we have an embedding of cochain complexes
+\ben
+\cloc^*(\sG(X)) \hookrightarrow \cred^*(\sG(X)) = \cred^*(\Omega^{0,*}(X) \tensor \fg) .
+\een
+By Kodaira-Spencer theory have already seen that the global sections of the local Lie algebra $\sG(X)$ is a model for the formal neighborhood of the trivial $G$-bundle inside of $G$-bundles. 
+In particular, the $\sG(X)$-module of quantum observables defines a line bundle $\int_X \Obs^\q_{\sE_V}$ over this formal neighborhood.
+Its character as a $\sG(X)$-module is identified with the first Chern class of the corresponding line bundle $\chi_\sE(\Obs^\q_{V}(X)) = c_1(\int_X \Obs^\q_{V})$. 
+
+Now, notice that the one-loop quantization we constructed in the previous section, as well as the anomaly cocycle $\Theta_V \in \cloc^*(\sG_{\CC^d})$ are equivariant for the group $U(d) \ltimes \CC^d$. 
+Thus, they descend to the global sections of $\cloc^*(\sG_X)$ for any affine manifold $X$.
+Explicitly, if $\Gamma\subset U(d) \ltimes \CC^d$ is the discrete subgroup such that $X = U / \Gamma$ where $U \subset \CC^d$, then under the isomorphism 
+\ben
+\cloc^*(\sG(X)) \cong \cloc^*(\sG(U))^\Gamma
+\een
+we have $\Theta_V(X) \leftrightarrow \Theta_V(U)$.
+
+Further, we have an identification
 \ben
 \cred^*(\Omega^{0,*}(X) \tensor \fg) = \sO_{red}\left({\rm Bun}_G(X)^{\wedge}_{triv}\right) \cong  \Omega^1_{cl} \left({\rm Bun}_G(X)^{\wedge}_{triv}\right) 
 \een
 where we have used the equivalence of reduced functions and closed one-forms which makes sense on any formal moduli space.
+At the level of $H^1$ we have the composition composition
+\be\label{cohbung}
+\Sym^{d+1}(\fg^*)^\fg \xto{J^X} H^1_{\rm loc} (\sG(X)) \to H^1(\Omega^1_{cl}\left({\rm Bun}_G(X)^{\wedge}_{triv}\right) .
+\ee
+As a corollary of Proposition \ref{inner char} and our calculation of the local anomaly cocycle we see that the image of $\ch_{d+1}^\fg(V)$ is equal to $[\Theta_V(X)] = [c_1(\int_X \Obs^\q_V)]$. 
+
 The same holds when we work around any holomorphic principal bundle $P$ on $X$, so that we have an embedding of cochain complexes
 \ben
-\cloc^*(\fg_{P}^X) \hookrightarrow  \Omega^1_{cl} \left({\rm Bun}_G(X)^{\wedge}_{P}\right) . 
+\cloc^*(\sAd(P)(X)) \hookrightarrow  \Omega^1_{cl} \left({\rm Bun}_G(X)^{\wedge}_{P}\right) . 
 \een
-Further, we have the cochain map $J_P^X : \Sym^{d+1}(\fg^*)^\fg [-1] \to \cloc^*(\fg_{P}^X)$ constructed in Section \ref{sec:??}
-In this section we will compute an anomaly to quantizing a certain family of theories defined over the moduli of $G$-bundles.
-The anomaly is a degree $+1$ cocycle in the local cohomology of $\fg^X_P$. 
-At the level of $H^1$ the above maps determine a composition we obtain by composition of the above cochain complexes a map
-
+which determines a composition
 \be\label{cohbung}
-\Sym^{d+1}(\fg^*)^\fg \xto{J_P^X} H^1_{\rm loc} (\fg_{P}^X) \to H^1(\Omega^1_{cl}\left({\rm Bun}_G(X)^{\wedge}_{P}\right) .
+\Sym^{d+1}(\fg^*)^\fg \xto{J_P^X} H^1_{\rm loc} (\sAd(P)(X)) \to H^1(\Omega^1_{cl}\left({\rm Bun}_G(X)^{\wedge}_{P}\right) .
 \ee
-
-
+Since every principal $G$-bundle $P$ on $X$ is trivial when we pull it back to $U\subset \CC^d$, the above local anomaly calculation proves that $[c_1(\int_X \Obs^\q_{P,V})] = C \ch_{d+1}^\fg (V)$ in this case as well.
+This completes the proof of Theorem \ref{thm ggrr}. 
 
 \subsection{A module for the higher Kac-Moody}
 
 The last part of this section we diverge to deduce a consequence of the quantum Noether theorem using our analysis above by exhibiting a module for the higher affine algebras from the previous section. 
 For convenience, we fix the trivial $\fg$-bundle $P = {\rm triv}$ so that $\sAd(P) = \sG_X$.
 
-On any manifold $X$, the quantum Noether theorem provides a map of factorization algebras
+On any manifold $X$, the quantum Noether theorem \brian{reference} provides a map of factorization algebras
 \ben
 \Phi : \UU_\alpha (\sG_X) \to \Obs^\q_{V} .
 \een

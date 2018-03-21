@@ -1497,14 +1497,13 @@ The $(1,1)$-form $F_{\nabla'}^{1,1}$ is $\dbar$-closed  and is independent, in D
 Moreover, the cohomology class $[F_{\nabla'}^{(1,1)}]_{\dbar} \in H^{1,1}(X ; \End(E))$ is a Dolbeault representative for the Atiyah class ${\rm At}(E) \in H^1(X ; \Omega^{1,hol}_X \tensor_{\cO} \End(\sE))$.
 \end{prop}
 
-As a corollary, we see that \brian{factors} $\Tr \left((F_{\nabla'}^{(1,1)})^{d+1}\right)$ is closed for both $\partial$ and $\dbar$. 
+As a corollary, we see that up to transcendental factors $\Tr \left((F_{\nabla'}^{(1,1)})^{d+1}\right)$ is closed for both $\partial$ and $\dbar$. 
 Moreover, this $(k,k)$-form is a Dolbeault representative for the
 $k$th component of the Chern character $\ch_{k}(E)$. 
 In particular, trivializations for $\ch_{d+1}(T_X)$, as in the theorem, 
-are equivalent to $\partial$-closed $\dbar$-trivializations $\alpha$ of the element
-\brian{factor} $\Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right) \in \Omega^{d+1,d+1}(X)$.
+are equivalent to $\partial$-closed $\dbar$-trivializations $\alpha$ of the element $\Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right) \in \Omega^{d+1,d+1}(X)$.
 
-So, suppose that $\alpha \in \Omega^{d,d-1}(X)$ satisfies $\partial \alpha = 0$ and $\dbar \alpha = \Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right)$.
+Suppose that $\alpha \in \Omega^{d,d-1}(X)$ satisfies $\partial \alpha = 0$ and $\dbar \alpha = \Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right)$.
 We will view $\alpha$ as an element of the following truncated de Rham complex
 \be\label{truncated}
 \Omega^{\geq d+1, *}_X = \Omega^{d+1,*}_X \xto{\partial} \Omega^{d+2,*} \to \cdots
@@ -1516,52 +1515,60 @@ Consider the defining exact sequence for $\TVectd$:
 \ben
 0 \to \hOmega^{d+1}_{n,cl}[d-1] \to \TVectd \to \Vect \to 0 .
 \een
-We need a slightly more coherent version of this extension.
-Instead of working over the formal holomorphic disk $\hD^n$ as we have this entire chapter thusfar, we we ill work with the formal complex disk $(\hD^n)^{\CC}$ whose ring of functions is $\hO_n^{\CC} = \CC[[t_1,\ldots,t_n,\Bar{t}_1,\ldots,\Bar{t}_n]]$. 
+We need a slightly more homotopy coherent version of this extension.
+Instead of working over the formal holomorphic disk $\hD^n$ as we have this entire chapter thus far, we we ill work with the formal complex disk $(\hD^n)^{\CC}$ whose ring of functions is $\hO_n^{\CC} = \CC[[t_1,\ldots,t_n,\Bar{t}_1,\ldots,\Bar{t}_n]]$. 
 Similarly, we have the formal Dolbeualt complex $\hOmega^{*,*}_n$ with differential $\d_{dR} = \partial + \dbar$. 
 Let $\hOmega^{\geq d+1, *}$ be the formal version of the truncated de Rham complex in Equation (\ref{truncated}). 
-By the formal $\dbar$-Poincar\'e lemma we see that this truncated complex is quasi-isomorphic to $\hOmega^{d+1}_{cl}$, in our previous holomorphic notation. 
-
-Tensoring this with the commutative dg algebra $\Omega^*(\Fr_X)$ we obtain an exact sequence of $L_\infty$-algebras
+By the formal $\dbar$-Poincar\'e lemma we see that this truncated complex is quasi-isomorphic to $\hOmega^{d+1}_{n,cl}$, in our previous holomorphic notation. 
+We use this resolution to define a homotopy equivalent extension. 
 \ben
-0 \to \Omega^*(\Fr_X) \tensor \hOmega^{d+1}_{n,cl}[d-1] \to \Omega^*(\Fr_X) \tensor \TVectd \to \Omega^*(\Fr_X) \tensor \Vect \to 0 .
+0 \to \hOmega^{\geq d+1, *}_n[d-1] \to \TVectd' \to \Vect \to 0
+\een
+
+We tensor this exact sequence with the commutative dg algebra $\Omega^*(\Fr_X)$ to obtain an exact sequence of $L_\infty$-algebras
+\ben
+0 \to \Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1, *}_n[d-1] \to \Omega^*(\Fr_X) \tensor \TVectd' \to \Omega^*(\Fr_X) \tensor \Vect \to 0 .
 \een
 We want to produce a Maurer-Cartan element in the middle $L_\infty$ algebra of this short exact sequence.
-Now, $\hOmega^{d+1}_{n,cl}$ is a $(\Vect,\GL_n)$-module whose descent is equal to the $D_X$-module $J \Omega^{d+1,hol}_{cl}(X)$.
-The trivialization $\alpha \in \Omega^{d+1,d}(X)$ determines a flat section in the de Rham complex
+Now, $\hOmega^{\geq d+1, *}$ is a $(\Vect,\GL_n)$-module whose descent is equal to the $D_X$-module $J \Omega^{\geq d+1,*}_X$.
+The trivialization $\alpha \in \Omega^{d+1,d}(X)$ determines a flat section in the de Rham complex of this $D_X$-module
 \ben
-\Omega^*(X , J \Omega^{d+1,hol}_{cl}(X)[d-1])
+j_\infty \alpha \in \Omega^*(X , J \Omega^{\geq d+1,*}_X) .
 \een
-of degree $+1$. 
 This de Rham complex is equivalent to
 \be\label{alpha1}
-\left(\left(\Omega^*(\Fr_X) \tensor \hOmega^{d+1}_{n,cl} [d-1] \right)_{bas}, \d_{dR} + \omega_\sigma \right) .
+\left(\left(\Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1, *}_n \right)_{bas}, \d_{dR} + \omega_\sigma \right) .
 \ee
-In particular, $\alpha$ determines an element of degree $+1$ in $\Omega^*(\Fr_X) \tensor \hOmega^{d+1}_{n,cl} [d-1]$.
+Here, $\d_{dR} + \omega_\sigma$ is the usual flat connection on the jet bundle.
+%and $\Hat{d}$ is the internal differential in $\hOmega^{\geq d+1, *}_n$.
+In particular, $j_\infty\alpha$ determines an element of degree $+1$ in $\Omega^*(\Fr_X) \tensor \hOmega^{d+1}_{n,cl} \hOmega^{\geq d+1, *} [d-1]$.
 We claim that the element 
 \ben
-\Tilde{\omega}_\sigma = \omega_\sigma + \alpha \in \Omega^*(\Fr_X) \tensor \TVectd
+\Tilde{\omega}_{\sigma , \alpha} = \omega_\sigma + j_\infty\alpha \in \Omega^*(\Fr_X) \tensor \TVectd '
 \een
-satisfies the Maurer-Cartan equation:
+satisfies the Maurer-Cartan equation in $\Omega^*(\Fr_X) \tensor \TVectd '$.
+Thus, we must show
 \ben
-\d_{dR}(\omega_\sigma + \alpha) + \sum_{k \geq 2} \frac{1}{k!} \ell_k(\omega_\sigma + \alpha) = 0 .
+\d_{dR} (\omega_\sigma + j_\infty\alpha) + \Hat{d} (\omega_\sigma + j_\infty\alpha) + \sum_{k \geq 2} \frac{1}{k!} \ell_k(\omega_\sigma + j_\infty\alpha) = 0 .
 \een
-By the nature of the bracket defining $\TVectd$ only the $k=2,d+1$ terms are nonzero in the above expression. 
+By the nature of the bracket defining $\TVectd'$ only the $k=2,d+1$ terms are nonzero in the above expression. 
 First, note that the factor $\d_{dR} \omega + \frac{1}{2}[\omega_\sigma,\omega_\sigma] = 0$ since $\omega_\sigma$ is a Maurer-Cartan element defining the non-extended Gelfand-Kazhdan structure. 
 The remaining terms are
 \ben
-\d_{dR} \alpha + [\omega_\sigma, \alpha] + \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
+\d_{dR} j_\infty\alpha + [\omega_\sigma, j_\infty\alpha] + \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
 )
 \een
-Now, $\d_{dR} = \partial + \dbar$.
-The term $\partial + [\omega_\sigma,-]$ is the differential in the de Rham complex (\ref{alpha1}) \brian{not quite, fix} and since $\alpha$ is flat $\partial \alpha + [\omega_\sigma,\alpha]=0$. 
+The term $\d_{dR} + [\omega_\sigma,-]$ is the flat connection for the $D_X$-module in 
+(\ref{alpha1}). 
+Since $\alpha$ is flat $\partial \alpha + [\omega_\sigma,\alpha]=0$. 
 The remaining terms are
 \ben
-\dbar \alpha + \frac{1}{(d+1)!} \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
+\Hat{d} \alpha + \frac{1}{(d+1)!} \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
 ) 
 \een
-By assumption, $\dbar \alpha = \ch_{d+1}(T_X^{1,0})$. ...
-
+By assumption, $\Hat{d} \alpha = \dbar \alpha = j_\infty \ch_{d+1}(T_X^{1,0})$, but this precisely $\ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma}) = \ch_{d+1}^{\GF} (\hT_n)(\omega_\sigma,\ldots,\omega_\sigma) = j_\infty \ch_{d+1}(T_X^{1,0})$.
+So, up to changing factors, the Maurer-Cartan equation is satisfied.
+Finally, since $\TVectd' \simeq \TVectd$, we obtain a Maurer-Cartan element in $\Omega^*(\Fr_X) \tensor \TVectd$, as desired. 
 \end{proof}
 
 
@@ -1986,7 +1993,7 @@ As an immediate corollary, the following definition is well-defined.
 For $L > 0$, let
 \ben
 I^{\rm W}[L] := \lim_{\epsilon \to 0} W(P_{\epsilon < L}, I^{\rm W}) 
-= \lim_{\epsilon \to 0} \sum_{\Gamma } \frac{\hbar^{g(\Gamma)}}{|{\rm Aut}(\Gamma)|} W_\Gamma(P_\epsilon^L, I^{\rm W}) . 
+= \lim_{\epsilon \to 0} \sum_{\Gamma } \frac{\hbar^{g(\Gamma)}}{|{\rm Aut}(\Gamma)|} W_\Gamma(P_{\epsilon<L}, I^{\rm W}) . 
 \een 
 Here the sum is over all isomorphism classes of stabled connected graphs, but only graphs of genus $\leq 1$ contribute nontrivially. 
 By construction, the collection satisfies the RG flow equation and its tree-level $L \to 0$ limit is manifestly $I^{\rm W}$.
