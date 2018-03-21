@@ -98,11 +98,12 @@ In Chapter \ref{??} of this thesis we study the problem of quantizing a higher d
 In complex dimension one we recover the usual requirement that the target be Calabi-Yau. 
 In general we get a more sensitive obstruction, which is still satisfied so long as the target admits a flat connection.
 
+
+
 \section{Gelfand-Kazhdan formal geometry}
 
-In this section we review the theory of Gelfand-Kazhdan formal geometry and its use in natural constructions in differential geometry,
-organized in a manner somewhat different from the standard
-approaches. We emphasize the role of the frame bundle and jet bundles.
+In this section we review the theory of Gelfand-Kazhdan formal geometry and its use in natural constructions in differential geometry, organized in a manner somewhat different from the standard approaches.
+We emphasize the role of the frame bundle and jet bundles.
 We conclude with a treatment of the Atiyah class, which may be our only novel addition (although unsurprising) to the formalism.
 
 We remark that from hereon we will work with complex manifolds and holomorphic vector bundles.
@@ -1204,7 +1205,7 @@ The case $\cV= \hT_n$ will be especially relevant for us.
 \begin{dfn} 
 Denote by $\TVectd$ the $L_\infty$ extension of $\Vect$ by the module $\hOmega^{d+1}_{n,cl}[d-1]$:
 \ben
-0 \to \hOmega^{d+1}_{n,cl}[d-1] \to \TVectd \to \Vect \to 0
+0 \to \hOmega^{d+1}_{n,cl}[d-1] \to \TVectd \xto{\pi_{n,d}} \Vect \to 0
 \een
 determined by the $(d+1)$-cocycle $\ch_{d+1}(\hT_n) \in \clie^{d+1}(\Vect , \GL_n ; \hOmega^{d+1}_{n,cl})$. 
 \end{dfn}
@@ -1312,6 +1313,7 @@ where $\{\ell_n\}$ are the structure maps for $\fg$.
 \end{enumerate}
 \end{dfn}  
 
+Our main example of a $L_\infty$ Harish-Chandra pair that is not an ordinary pair will be associated to certain natural cohomology classes of formal vector fields.
 To define descent, we need an appropriate theory of modules for an $L_\infty$ pair $(\fg,K)$. 
 
 \begin{dfn} 
@@ -1372,7 +1374,7 @@ In fact, $\Omega^{\#}(P; \ul{V})_{bas}$ forms a graded subalgebra of $\Omega^{\#
 
 It is manifest that this construction of basic forms is natural in maps of $(\fg,K)$-bundles: basic forms pull back to basic forms along maps of bundles.
 
-\subsubsection{}
+\subsubsection{Semi-strict descent}
 
 Starting with the data:
 \begin{enumerate}
@@ -1433,11 +1435,265 @@ This construction of descent enjoys a number of nice functorial properties. \bri
 
 \subsection{The flat connection from the extended pair}
 
+In Section \ref{sec: extended pair} we have introduced the $L_\infty$ pair $(\TVectd, \GL_n)$ extending the pair $(\Vect, \GL_n)$.
+A Gelfand-Kazhdan structure is a natural $(\Vect,\GL_n)$-bundle whose underlying principal bundle is the frame bundle of $X$, and whose $\Vect$-valued connection comes from the natural flat connection on the coordinate bundle. 
+In this section we define extended Gelfand-Kazhdan structures that are bundles for the pair $(\TVectd,\GL_n)$.
+
+If $(\mathfrak{f},f) : (\Tilde{\fg},\Tilde{K}) \to (\fg, K)$ is a map of pairs, and $(P,\omega)$ is a principal $(\fg,K)$-bundle, then a reduction of $(P,\omega)$ along $(\mathfrak{f},f)$ is a principal $(\Tilde{\fg}, \Tilde{K})$-bundle $(\Tilde{P}, \Tilde{\omega})$ together with a map of bundles $\phi : \Tilde{P} \to P$ such that $\phi$ is a reduction of the principal $K$-bundle along $f$ and $\mathfrak{f}(\Tilde{\omega}) = \phi^*\omega$.
+
+\begin{dfn}
+Fix a Gelfand-Kazhdan structure $\sigma$ on $X$. 
+A {\em $d$-extended Gelfand-Kazhdan structure} associated to $\sigma$ is a reduction of $(\Fr_X, \omega_{\sigma})$ along the map $(\pi_{n,d}, {\rm id}) : (\TVectd,\GL_n) \to (\Vect, \GL_n)$.
+\end{dfn}
+
+Since the map on $\GL_n$ is the identity we see that necessarily any extended Gelfand-Kazhdan structure $(P, \Tilde{\omega}_\sigma)$ is of the form $(\Fr_X, \Tilde{\omega}_\sigma)$ where $\Tilde{\omega}_\sigma \in \Omega^*(\Fr_X) \tensor \TVectd$ satisfies the generalized Maurer-Cartan equation.
+
+We will show that extended Gelfand-Kazhdan structures are precisely associated to the data of a trivialization of of components of the Chern character $\ch(T_X^{1,0}) \in H^*(X, \Omega^*_{cl})$ and will be important when we discuss descent for the quantization of the holomorphic $\sigma$-model in the next section.
+
+\begin{prop}
+Fix an ordinary Gelfand-Kazhdan structure $(X,\sigma)$.
+Then, a $d$-extended Gelfand-Kazhdan structure exists if and only if $\ch_{d+1}(T^{1,0}_X) = 0$.
+Moreover, if $\ch_{d+1}(T_X^{1,0}) = 0$ then the equivalence classes of $d$-extended Gelfand-Kazhdan structures is a torsor for the abelian group $H^{d}(X , \Omega^{d+1}_{cl})$.
+\end{prop}
+
+\begin{proof}
+Suppose that we have an extended Gelfand-Kazhdan structure $(\Fr_X, \Tilde{\omega}_\sigma)$.
+We can then use semi-strict descent to define a map in cohomology
+\ben
+\Tilde{\rm char}_\sigma : H^*_{\rm Lie}(\TVectd, \GL_n ; \hOmega_{cl}^{d+1}) \to H^*(X , \Omega^{d+1}_{cl}) .
+\een
+This is the characteristic map for the semi-strict descent along the principal $(\TVectd,\GL_n)$-bundle $(\Fr_X , \Tilde{\omega}_\sigma)$.
+We are using the $\TVectd$ module structure on $\hOmega^k_{n,cl}$ induced from the map $\pi_{n,d}$. 
+Moreover the ordinary characteristic map ${\rm char}_\sigma : H^*_{\rm Lie}(\Vect, \GL_n ; \hOmega_{cl}^{d+1}) \to H^*(X , \Omega^{d+1}_{cl})$ factors through this extended characteristic map:
+\ben
+\xymatrix{
+H^*_{\rm Lie}(\Vect, \GL_n ; \hOmega_{cl}^{d+1}) \ar@/^2.0pc/[rr]^{{\rm char}_\sigma} \ar[r]^-{\pi_{n,d}^*} & H^*_{\rm Lie}(\TVectd, \GL_n ; \hOmega_{cl}^{d+1}) \ar[r]^-{\Tilde{\rm char}_\sigma} & H^*(X , \Omega^{d+1}_{cl})
+}
+\een
+Now, the image of the Gelfand-Fuks class $\ch_{d+1}^{\GF} (\hT_n)$ along ${\rm char}_\sigma$ is precisely $\ch_{d+1}(T_X^{1,0})$. 
+Notice, however, that the image of $\ch_{d+1}^\GF(\hT_n)$ in the middle cohomology is trivial.
+This is because it is the defining cocycle for the $L_\infty$ extension $\TVectd$. 
+It follows that the component of the Chern character $\ch_{d+1}(T_X^{1,0})$ is trivial in $H^{d+1}(X, \Omega^{d+1}_{cl})$. 
+
+Next, suppose that $\ch_{d+1}(T_X^{1,0}) = 0$ and suppose $X$ is K\"ahler.
+Also, let $\nabla$ be a smooth connection of type $(1,0)$ on $X$ for a
+holomorphic vector bundle $E$. 
+That is, an operator
+\ben
+\nabla : E \to \Omega^{1,0}(X, E) .
+\een
+Let $\nabla ' = \nabla + \dbar$, then $\nabla'$ is an ordinary
+connection for $E$. The curvature of $\nabla '$ splits as
+\ben
+F_{\nabla'} = F_{\nabla '}^{2,0} + F_{\nabla '}^{1,1} \in \Omega^{2,0}(X
+; \End(E)) \oplus \Omega^{1,1}(X ; \End(E)) .
+\een 
+According to the Dolbeault isomorphism 
+$H^{p,q}_{\dbar} (X ; E) \cong H^q(X ;  \Omega^p_X \tensor \sE)$, 
+one has the following fact about the $(1,1)$-component of the curvature. 
+
+\begin{prop} (Proposition 4 in \cite{atiyah})
+The $(1,1)$-form $F_{\nabla'}^{1,1}$ is $\dbar$-closed  and is independent, in Dolbeault cohomology, of the choice of $\nabla$. 
+Moreover, the cohomology class $[F_{\nabla'}^{(1,1)}]_{\dbar} \in H^{1,1}(X ; \End(E))$ is a Dolbeault representative for the Atiyah class ${\rm At}(E) \in H^1(X ; \Omega^{1,hol}_X \tensor_{\cO} \End(\sE))$.
+\end{prop}
+
+As a corollary, we see that \brian{factors} $\Tr \left((F_{\nabla'}^{(1,1)})^{d+1}\right)$ is closed for both $\partial$ and $\dbar$. 
+Moreover, this $(k,k)$-form is a Dolbeault representative for the
+$k$th component of the Chern character $\ch_{k}(E)$. 
+In particular, trivializations for $\ch_{d+1}(T_X)$, as in the theorem, 
+are equivalent to $\partial$-closed $\dbar$-trivializations $\alpha$ of the element
+\brian{factor} $\Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right) \in \Omega^{d+1,d+1}(X)$.
+
+So, suppose that $\alpha \in \Omega^{d,d-1}(X)$ satisfies $\partial \alpha = 0$ and $\dbar \alpha = \Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right)$.
+We will view $\alpha$ as an element of the following truncated de Rham complex
+\be\label{truncated}
+\Omega^{\geq d+1, *}_X = \Omega^{d+1,*}_X \xto{\partial} \Omega^{d+2,*} \to \cdots
+\ee
+where the internal differential $\dbar$ is implicit.
+As a sheaf, $\Omega^{\geq d+1,*}_X$ is equivalent to $\Omega^{d+1,hol}_{X,cl}$. 
+
+Consider the defining exact sequence for $\TVectd$: 
+\ben
+0 \to \hOmega^{d+1}_{n,cl}[d-1] \to \TVectd \to \Vect \to 0 .
+\een
+We need a slightly more coherent version of this extension.
+Instead of working over the formal holomorphic disk $\hD^n$ as we have this entire chapter thusfar, we we ill work with the formal complex disk $(\hD^n)^{\CC}$ whose ring of functions is $\hO_n^{\CC} = \CC[[t_1,\ldots,t_n,\Bar{t}_1,\ldots,\Bar{t}_n]]$. 
+Similarly, we have the formal Dolbeualt complex $\hOmega^{*,*}_n$ with differential $\d_{dR} = \partial + \dbar$. 
+Let $\hOmega^{\geq d+1, *}$ be the formal version of the truncated de Rham complex in Equation (\ref{truncated}). 
+By the formal $\dbar$-Poincar\'e lemma we see that this truncated complex is quasi-isomorphic to $\hOmega^{d+1}_{cl}$, in our previous holomorphic notation. 
+
+Tensoring this with the commutative dg algebra $\Omega^*(\Fr_X)$ we obtain an exact sequence of $L_\infty$-algebras
+\ben
+0 \to \Omega^*(\Fr_X) \tensor \hOmega^{d+1}_{n,cl}[d-1] \to \Omega^*(\Fr_X) \tensor \TVectd \to \Omega^*(\Fr_X) \tensor \Vect \to 0 .
+\een
+We want to produce a Maurer-Cartan element in the middle $L_\infty$ algebra of this short exact sequence.
+Now, $\hOmega^{d+1}_{n,cl}$ is a $(\Vect,\GL_n)$-module whose descent is equal to the $D_X$-module $J \Omega^{d+1,hol}_{cl}(X)$.
+The trivialization $\alpha \in \Omega^{d+1,d}(X)$ determines a flat section in the de Rham complex
+\ben
+\Omega^*(X , J \Omega^{d+1,hol}_{cl}(X)[d-1])
+\een
+of degree $+1$. 
+This de Rham complex is equivalent to
+\be\label{alpha1}
+\left(\left(\Omega^*(\Fr_X) \tensor \hOmega^{d+1}_{n,cl} [d-1] \right)_{bas}, \d_{dR} + \omega_\sigma \right) .
+\ee
+In particular, $\alpha$ determines an element of degree $+1$ in $\Omega^*(\Fr_X) \tensor \hOmega^{d+1}_{n,cl} [d-1]$.
+We claim that the element 
+\ben
+\Tilde{\omega}_\sigma = \omega_\sigma + \alpha \in \Omega^*(\Fr_X) \tensor \TVectd
+\een
+satisfies the Maurer-Cartan equation:
+\ben
+\d_{dR}(\omega_\sigma + \alpha) + \sum_{k \geq 2} \frac{1}{k!} \ell_k(\omega_\sigma + \alpha) = 0 .
+\een
+By the nature of the bracket defining $\TVectd$ only the $k=2,d+1$ terms are nonzero in the above expression. 
+First, note that the factor $\d_{dR} \omega + \frac{1}{2}[\omega_\sigma,\omega_\sigma] = 0$ since $\omega_\sigma$ is a Maurer-Cartan element defining the non-extended Gelfand-Kazhdan structure. 
+The remaining terms are
+\ben
+\d_{dR} \alpha + [\omega_\sigma, \alpha] + \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
+)
+\een
+Now, $\d_{dR} = \partial + \dbar$.
+The term $\partial + [\omega_\sigma,-]$ is the differential in the de Rham complex (\ref{alpha1}) \brian{not quite, fix} and since $\alpha$ is flat $\partial \alpha + [\omega_\sigma,\alpha]=0$. 
+The remaining terms are
+\ben
+\dbar \alpha + \frac{1}{(d+1)!} \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
+) 
+\een
+By assumption, $\dbar \alpha = \ch_{d+1}(T_X^{1,0})$. ...
+
+\end{proof}
+
+
 \section{The classical holomorphic $\sigma$-model}
+
+We will now define the classical field theory whose quantization is the subject of this chapter.
+We fix two complex manifolds $Y$ and $X$ where $Y$ has complex dimension $d$. 
+We will mostly be interested in the perturbative theory, but the full theory admits the following concise description.
+There are two types of fields in the theory:
+\begin{enumerate}
+\item a map $\gamma : Y \to X$;
+\item an element $\beta \in \Omega^{d, d-1} (Y , \gamma^* T^{1,0*}_X)$, i.e. a $(d,d-1)$-form on $Y$ with values in the pull-back of the holomorphic cotangent bundle on $X$ along $\gamma$.
+\end{enumerate}
+For this reason, we will sometimes refer to the theory as the {\em higher dimensional $\beta\gamma$ system}.
+The action functional is of the form 
+\ben
+S(\beta,\gamma) = \int_Y \<\beta, \dbar \gamma\>_{T^{1,0}X}
+\een
+where $\<-,-\>$ denotes the pairing between the holomorphic tangent bundle and its dual.
+One can immediately read off the equations of motion which state $\dbar \gamma = 0$ and $\dbar \beta = 0$.
+Thus, on-shell the solutions to the equations of motion state the $\gamma : Y \to X$ is a holomorphic map, and $\beta$ determines an element in the cohomology $H^{d-1}(Y , \Omega^{d,hol} \tensor \gamma^* T_X^{1,0})$. 
+The field $\beta$ appears linearly in the action functional, and in a way its dynamics are completely determined by $\gamma$. 
+In physics terminology it is the conjugate field to $\gamma$. 
+In our language we will present the holomorphic $\sigma$-model as a cotangent theory and $\beta$ will be the ``fiber" coordinate. 
+Notice that there is a large gauge symmetry present in the theory: for any $\beta' \in \Omega^{d,d-2}(Y , \gamma^*T^{1,0}X)$ the transformation $\beta \mapsto \beta + \dbar \beta'$ leaves the action invariant. 
+Our construction will provide a full BV-BRST formulation of the holomorphic $\sigma$-model with all gauge symmetries accounted for. 
+
+The fundamental approach we take is to construct this theory locally on the target, and then appeal to formal geometry to descend it over any complex manifold.
+For this reason, we first consider the case of a flat target.
+
+\subsection{The free $\beta\gamma$ system}
+
+In Section \ref{sec ??} we have provided a description, using the language of holomorphic field theories, of the $\beta\gamma$ system.
+It is not much different to define the $\beta\gamma$ system with target a complex vector space $V$. 
+The fields together with their linearized BRST operator are
+\ben
+\sE_V = \Omega^{0,*}(Y , V) \oplus \Omega^{d,*}(Y , V^*)[d-1] .
+\een
+We will write fields as $(\gamma,\beta)$ to match with the notation above.
+As usual the notation $[d-1]$ means we shift that copy of the fields down by $d-1$. 
+Note that the elements in degree zero, where the physical fields live, are precisely maps $\gamma : Y \to V$ and sections $\beta \in\Omega^{d,d-1} (Y ; V^*)$, just as in the description above. 
+In this flat case the section $\beta$ has no dependence on $\gamma$.
+The $(-1)$-shifted symplectic pairing is given by integration along $Y$ combined with the evaluation pairing between $V$ and its dual: $(\gamma, \beta) \mapsto \int_Y \<\gamma, \beta\>_V$. 
+The action functional for this free theory is thus of the form
+\ben
+S_V (\beta,\gamma) = \int_Y \<\beta, \dbar \gamma\>_{V} .
+\een
+One can immediately check that $\sE_V$ arises as the BV theory associated to a free holomorphic theory in the terminology of Chapter \ref{chap1} where $Q^{hol} = 0$. 
+
+Note that the gauge symmetry $\beta \to \beta + \dbar \beta'$, where $\beta' \in \Omega^{d,d-2} (Y, V^*)$ has naturally been incorporated into our BRST complex (which only consists of a linear operator since the theory is free). 
+Moreover, there are ghosts for ghosts $\beta'' \in \Omega^{d,d-3}(Y , V^*)$, and so on.
+Together with all of the antifields and antighosts, this makes up our full theory $\sE_V$. 
+
+\subsubsection{The formal $\beta\gamma$ system}
+
+In the case that $V = \CC^n$ we will see how the free $\beta\gamma$ system is an equivariant BV theory for the Harish-Chandra pair consisting of the group of linear automorphisms and the Lie algebra of formal vector fields on the $n$-disk.
+We will refer to this as the {\em formal} $\beta\gamma$ system, which one should heurstically think of as the $\beta\gamma$ system with target the formal disk $\hD^n$.
+
+In the remainder of the chapter we will use the notation $\sE_{\CC^n} = \sE_n$ and $S_{\CC^n} = S_n$.
+The group $\GL_n = \GL_n(\CC)$ acts on $V = \CC^n$ in the natural way which extends to an action on the Dolbeualt complex $\Omega^{0,*}(Y , \CC^n)$. 
+
+\begin{lem}
+The group $\GL_n$ acts on the theory $\sE_n$.
+That is, $\GL_n$ is a symmetry of the action functional $S_n$.
+\end{lem}
+\begin{proof} 
+The action of $\GL_n$ is induced by the defining representation on
+$V = \CC^n$ and the coadjoint action on $V^* =
+(\CC^n)^*$, so the pairing is preserved by definition.
+\end{proof}
+
+This is the first piece of data needed for Gelfand-Kazhdan formal geometry.
+The next piece is the action by the Lie algebra of formal vector fields. 
+Recall, from Section \ref{sec: equivariant} that to prescribe an action of a Lie algebra $\fh$ on 
+a BV theory $\sE$ we must prescribe a Noether current, that is, a Maurer-Cartan element
+\ben
+I^\fh \in \clie^*(\fh) \tensor \oloc(\sE)[-1],
+\een
+which is equivalent to a map of $L_\infty$ algebras $I^\fh : \fh \rightsquigarrow \oloc(\sE)[-1]$. 
+
+To define this...\brian{...}
+
+Suppose that we have a formal vector field
+\ben
+X = \sum_{j = 1}^n \;\;\sum_{\vec{m} = (m_1,\ldots,m_n) \in \NN^n} a_{j, \vec{m}} t_1^{m_1} \cdots t_n^{m_n} \partial_j \in \Vect .
+\een
+Define the local functional $I^{\rm W}_X \in \oloc(\sE_V)$ via the formula
+\be\label{eqn noether}
+I^{\rm W}_X(\gamma, \beta) = \sum_{j = 1}^n \sum_{\vec{m} \in \NN^n} a_{j, \vec{m}} \int_S  \gamma^{\wedge m_1}_1 \wedge \cdots \wedge \gamma^{\wedge m_n}_n \wedge \beta_j .
+\ee
+
+\begin{lem}
+The map $I^{\rm W} : \Vect \to \oloc(\sE_V)[-1]$ sending $X \mapsto I^{\rm W}_X$ is a map of dg Lie algebras.
+Hence, 
+\ben
+I^{\rm W} \in \clie^*(\Vect) \tensor \oloc(\sE_V)[-1]
+\een
+satisfies the equivariant classical master equation $(\d_{\rm W} + \dbar) I^{\rm W} + \frac{1}{2} \{I^{\rm W}, I^{\rm W}\} = 0$ and gives $\sE_V$ the structure of a $\Vect$-equivariant classical BV theory.
+\end{lem}
+
+\begin{rmk}
+When restricted to linear vector fields, the action of $\Vect$ on $\beta\gamma$ system with target $\hD^n$ 
+agrees with the action of $\GL_n$ described in Lemma \ref{GLaction}. In this sense, we have described an action of the Harish-Chandra pair $(\Vect, \GL_n)$ on the classical $\beta\gamma$ system. 
+This theory can thus be treated by Gelfand-Kazhdan formal geometry.
+We develop this reasoning more fully in Section \ref{sec comparison}. 
+In particular, in the next section we will show that this theory descends to the classical curved $\beta\gamma$ system where the target is a complex manifold $X$; more precisely, we will identify this theory with the theory defined by Costello in \cite{WG2}.
+\end{rmk}
+
+\begin{prop}
+The formal $\beta\gamma$ system $\sE_n$ has an action by the Harish-Chandra pair $(\Vect, \GL_n)$. 
+If $X$ is any complex manifold, the Gelfand-Kazhdan descent $\desc_X(\sE_n)$ is equivalent to cotangent theory of the formal completion of the derived mapping space
+\ben
+{\rm Map} (Y_{\dbar}, X_{\dbar})
+\een
+near the constant maps.
+\end{prop}
+
+\subsection{A description using $L_\infty$ spaces}
+
+We now give a second description of the holomorphic $\sigma$-model.
+This approach is based on the geometry of $L_\infty$ spaces developed by Costello \cite{WG2} and Gwilliam-Grady \cite{GWCS, GWderived}.
+We will relate it to our description above using formal geometry.
+
+\brian{finish this}
 
 \section{Deformations of the holomorphic $\sigma$-model}
 
+We now turn to computing the deformation complex of the holomorphic $\sigma$-model.
+This will be important when we quantize the $\sigma$-model, as the deformation complex controls both the obstructions and moduli space of such quantizations.
+
 In this section we allow $\fg$ to be a curved $L_\infty$ algebra over a commutative dg ring $R$ and consider the holomorphic $\sigma$-model of maps $Y \to B \fg$, where $Y$ is a complex $d$-fold.
+This was the most general form of the holomorphic $\sigma$-model from the previous section.
 We will be most interested in the following two cases:
 
 \begin{enumerate}
@@ -1692,10 +1948,402 @@ This completes the proof.
 
 \section{BV quantization of the holomorphic $\sigma$-model}
 
-\brian{This is big thing to do still}
+As we have already discussed, the formalism of BV quantization of any theory consists of two steps: I) renormalization, and II) solving the quantum master equation. 
+For holomorphic theories, as the one we are studying in this section, we have proved a general result about the one-loop renormalization theory on flat space $\CC^d$. 
+We will leverage this result to turn the problem of quantization to studying solutions of the quantum master equation.
+
+The formal $\beta\gamma$ system $\sE_n$ is a free BV theory and hence admits a natural quantization.
+(See Chapter 6 of \cite{GwThesis} for an extensive development.)  
+To study the general holomorphic $\sigma$-model we want to quantize \emph{equivariantly} with respect to the action of $\Vect$.
+We will find that there is an obstruction to quantizing equivariantly, 
+given by the Gelfand-Fuks Chern class $\ch_{d+1}^{\GF}(\hT_n)$ defined in Section \ref{sec gk cc}. 
+This obstruction is a very local avatar of the anomaly described by Witten and Nekrasov \cite{WittenCDO,Nek} in the complex one-dimensional holomorphic $\sigma$-model.
+We will refer to Chapter \ref{chap1} for notations and terminology of equivariant BV quantization.
+
+The section splits up into two main parts, first we study the $\Vect$-equivariant quantization of the formal $\beta\gamma$ system.
+Then we show how Gelfand-Kazhdan formal geometry intertwines with BV quantization to define the quantization general target complex manifold. 
+
+\subsection{The $\Vect$-equivariant quantization}
+
+\subsubsection{The prequantization}
+
+Our first step is to construct an equivariant effective prequantization.
+(i.e., effective actions satisfying the locality and RG flow conditions but not necessarily the QME condition)
+for the $\Vect$-equivariant formal $\beta\gamma$ system.
+Essentially, we try to run the RG flow from the classical theory by naively guessing
+\be\label{w prequant}
+I^{\rm W} [L] = \lim_{\epsilon \to 0} W(P^L_\epsilon,I^{\rm W})
+\ee
+and then adding counterterms to deal with singularities that prevent this limit from existing.
+(One of the main theorems of \cite{CosBook} guarantees that we can construct such a prequantization.)
+
+In general, the limit Equation (\ref{prequant}) may be ill-defined and counterterms would be necessary.
+The key in our situation is that the equivariant $\beta\gamma$ system is a holomorphic theory on $\CC^d$ so that we can apply Lemma \ref{lem: holrenorm}.
+The existence of the holomorphic gauge fixing operator $\dbar^*$ was the crucial tool in proving this well-behaved analyticity.
+As an immediate corollary, the following definition is well-defined. 
+
+\begin{dfn}
+For $L > 0$, let
+\ben
+I^{\rm W}[L] := \lim_{\epsilon \to 0} W(P_{\epsilon < L}, I^{\rm W}) 
+= \lim_{\epsilon \to 0} \sum_{\Gamma } \frac{\hbar^{g(\Gamma)}}{|{\rm Aut}(\Gamma)|} W_\Gamma(P_\epsilon^L, I^{\rm W}) . 
+\een 
+Here the sum is over all isomorphism classes of stabled connected graphs, but only graphs of genus $\leq 1$ contribute nontrivially. 
+By construction, the collection satisfies the RG flow equation and its tree-level $L \to 0$ limit is manifestly $I^{\rm W}$.
+Hence $\{I^{\rm W}[L]\}_{L \in (0,\infty)}$ is a \emph{$\Vect$-equivariant prequantization} of the $\Vect$-equivariant classical formal $\beta\gamma$ system.
+\end{dfn}
+
+Organizing the sums by genus of the graphs, we write the interaction as a sum $I^{\rm W}[L] = I^{{\rm W},0}[L] + \hbar I^{{\rm W},1}[L]$ where 
+\bestar
+I^{{\rm W},0}[L] & = & \sum_{\Gamma \in \; {\rm Trees}} \frac{1}{|{\rm Aut}(\Gamma)|} W_{\Gamma}(P_{\epsilon < L}, I^{\rm W}),\\
+I^{{\rm W},1}[L] & = & \sum_{\Gamma \in \; {\rm 1-loop}} \frac{1}{|{\rm Aut}(\Gamma)|} W_{\Gamma}(P_{\epsilon < L}, I^{\rm W}).
+\eestar
+With these technicalities out of the way, we can now turn to studying the obstruction to satisfying the equivariant quantum master equation. 
+
+\subsubsection{The one-loop anomaly}
+
+We now move on to calculating the one-loop anomaly of the equivariant theory.
+
+\begin{prop}\label{obsprop} 
+There is an obstruction to a $\Vect$-equivariant quantization of the formal $\beta\gamma$ system on $\CC^d$ that preserves the symmetry by the group $U(d) \ltimes \CC^d$.
+It is represented by a non-trivial cocycle of degree one
+\ben
+\Theta_{d,n} \in \left(\Def^{\rm W}_n\right)^{U(d) \ltimes \CC^d}
+\een
+such that 
+\[
+\Theta_{d,n}  = a J^{\rm W}(\ch^{\GF}_{d+1}(\hT_n))
+\]
+for some non-zero number $a$, where $J^{\rm W}$ is the quasi-isomorphism of Proposition \ref{eqdef}
+and $\ch^{\GF}_{d+1}(\hT_n)$ is the component of the Gelfand-Fuks Chern character living in~$\clie^{d+1}(\Vect; \hOmega_{n,cl}^{d+1}).$ 
+\end{prop}
+
+By definition, the scale $L$ {\em obstruction cocycle} $\Theta_{d,n}[L]$ is 
+the failure for the interaction $I^{\rm W}[L]$ to satisfy the scale $L$ equivariant quantum master equation. 
+Explicitly, one has
+\ben
+\hbar \Theta_{d,n} [L] = (\d_{\Vect} + Q)I^{\rm W}[L] + \hbar \Delta_L I^{\rm W}[L] + \{I^{\rm W}[L], I^{\rm W}[L]\}_L,
+\een
+where the right hand side is divisible by $\hbar$ since $I^{{\rm W},0}$ satisfies the classical master equation so that the $\hbar^0$ component vanishes.
+Moreover, the right hand side has no components weighted by $\hbar^2$ or higher powers,
+because the BV Laplacian $\Delta_L$ vanishes on $I^{{\rm W},1}[L]$ as it is only a function of $\gamma$ and a vector field $X$.
+Thus, we have
+\ben
+\hbar \Theta_{d,n} [L] = (\d_{\Vect} + Q)I^{{\rm W},1}[L] + \hbar \Delta_L I^{{\rm W},0}[L] + 2\{I^{{\rm W},0}[L], I^{{\rm W},1}[L]\}_L,
+\een
+and so $\Theta[L]$ only depends on $\gamma$ and hence is a degree one
+element of $\clie^*(\Vect ; \clies(\fg_n^\CC))$. 
+
+\begin{lem}\label{lem: obs1}
+The limit $\Theta_{d,n} := \lim_{L \to 0} \Theta_{d,n}[L]$ exists and 
+is an element of degree one in $\clie^*(\Vect,\Cloc^*(\fg_n^\CC))$. 
+Moreover, it is given by
+\ben
+\lim_{\epsilon \to 0} \sum_{\substack{\Gamma \in (d+1)\text{\rm -vertex wheels}\\ e \in {\rm Edge}(\Gamma)}} W_{\Gamma,e}(P_{\epsilon<1}, K_\epsilon,
+I^{\rm W}[\epsilon]),
+\een
+where the sum is over wheels $\Gamma$ with two vertices and a distinguished inner edge $e$.
+\end{lem}
+
+\begin{rmk}
+In the lemma above, the notation $W_{\Gamma, e}(P_{\epsilon < 1},K_\epsilon, I^{\rm W}[\epsilon])$ denotes a variation on the usual weight associated to a graph. 
+As usual, we attach the interaction term $I^{\rm W}[\epsilon]$ to each vertex. 
+To the distinguished internal edge labeled $e$, we attach the heat kernel $K_\epsilon$, 
+but we attach the propagator $P_{\epsilon < 1}$ to every other internal edge. 
+\end{rmk}
+
+\begin{proof}
+By Corollary 16.0.5 of \cite{WG2} we see that the scale $L$ obstruction is given by a sum over wheels.
+That is
+\ben
+\Theta[L] = \sum_{\substack{\Gamma \in \text{Wheels}\\ e \in {\rm Edge}(\Gamma)}} W_{\Gamma,e}(P_{\epsilon<1}, K_\epsilon,
+I^{\rm W}[\epsilon]) .
+\een
+Thus, to prove the lemma we must show that only the $(d+1)$-vertex wheels contribute to the $\epsilon \to 0$ limit. 
+\brian{finish}
+\end{proof}
+
+
+We now turn to the proof of Proposition \ref{obsprop}. 
+We must construct the obstruction cocycle $\Theta_{d,n}$ by the techniques of perturbative field theory. 
+In the end, we want to recognize it as the local functional $J^{\rm W}(\ch^{\GF}_{d+1}(\hT_n))$. 
+
+%We can describe that local functional already, thanks to our description of $J^{\rm W}$.
+
+%\begin{lemma}
+%\label{lem: form of J(ch2)}
+%Let $X = a^i \partial_i$ and $Y = b^j \partial_j$ be formal vector fields in $\Vect$ where the coefficients $a^i, b^j$ live in $\hO_n$.
+%For simplicity, suppose all the $a^i$ are homogeneous of degree $k$ and the $b^j$ are homogeneous of degree $l$.
+%Then 
+%\[
+%J^{\rm W}(\ch^{\GF}_2(\hT_n))(X,Y,\gamma) = \int_S \<(\partial_j a^i)^S(\gamma), \partial\left( (\partial_i
+%b^j)^S(\gamma)\right)\>_{\fgn},
+%\]
+%with surface $S = \CC$ and using the notation $f^S$ from Section~\ref{defining J}.
+%\end{lemma}
+%
+%In particular, to focus on the analytic component, suppose $n =1$ so $\gamma \in \Omega^{0,*}(\CC)$ as the target is one-dimensional.
+%Moreover, we can restrict to $a(t) = t^k$ and $b(t) = t^l$.
+%Then
+%\begin{align}
+%J^{\rm W}(\ch^{\GF}_{d+1} (\hT_n))(t^k \partial_t,t^l \partial_t,\gamma) &= \int_\CC k \gamma^{\wedge k-1} \wedge \partial_z( l \gamma^{\wedge l-1}) \d z \\
+%&= k l (l-1) \int_\CC \gamma^{\wedge k+l-2} \wedge \partial_z( \gamma) \d z. \label{J when n=1}
+%\end{align}
+%This expression will appear as the analytic component of our Feynman diagrams.
+%
+%\begin{proof}
+%We first observe that
+%\[
+%J^{\rm W}_{\omega}(X,Y,\gamma) = J_{\omega(X,Y)}(\gamma)
+%\]
+%since the map $J$ is $\Vect$-equivariant.
+%Moreover, since $J_{\d_{dR} \theta} = \Tilde{J}_\theta$, we deduce that
+%\[
+%J^{\rm W}_{\d_{dR} \theta}(X,Y,\gamma) = J_{\theta([X,Y])} (\gamma).
+%\]
+%Hence it is convenient to recognize that 
+%\[
+%\ch^{\GF}_2(\hT_n) = \d_{dR}(\alpha)
+%\]
+%where $\alpha \in \clies(\Vect,\hOmega^1_n)$ satisfies
+%\[
+%\alpha(X,Y) = \alpha(a^i \partial_i, b^j \partial_j) = - (\partial_j a^i) \d_{dR}(\partial_i b^j).
+%\]
+%Note that if the $a^i$ are homogeneous of degree $k$ and the $b^j$ are homogeneous of degree $l$,
+%then $\alpha(X,Y)$ is a one-form whose coefficients are homogeneous of degree~$k+l-3$.
+%
+%Lemma \ref{easy} then implies
+%\ben
+%\Tilde{J}_{\alpha(X,Y)} (\gamma_1,\ldots,\gamma_{k-1}, \gamma'_1,\ldots,\gamma_{l-1}') 
+%= \int_S \<(\partial_j a^i)^S(\gamma_1,\ldots, \gamma_{k-1}), \partial\left( (\partial_i
+%b^j)^S(\gamma_1',\ldots,\gamma_{l-1}')\right)\>_{\fgn},
+%\een
+%where $S = \CC$ for us. 
+%(Here we are describing the local functional as a tensor with $k+l-2$ inputs to be maximally explicit.)
+%\end{proof}
+
+In the below calculation we write $\Theta = \Theta_{d,n}$ as the dimensions $d,n$ will be fixed.
+The limit in Lemma \ref{obslemma} can be moved inside the summation, 
+i.e., the weight for each 2-vertex wheel $\Gamma$ with edge $e$ has an $\epsilon \to 0$ limit.
+We denote this summand by
+\ben
+\Theta_{\Gamma,e} = \lim_{\epsilon \to 0} W_{\Gamma,e}(P_\epsilon^1,K_\epsilon,I^{\rm W}[\epsilon]) .
+\een
+By the nature of the graph, this functional is of the form
+\ben
+\Theta_{\Gamma,e} : {\rm W}_n^{\tensor (d+1)} \tensor \Sym(\Omega^{0,*}_c
+\tensor \fg_n [1] ) \to \CC .
+\een
+Given two formal vector fields $X,Y$, let $\Theta_{\Gamma,e}(X,Y)$ denote the associated local functional in~$\cloc^*(\fg_n^S)$. 
+
+Due to linear dependence on the vector fields, it suffices to assume that $X,Y$ are of the form $X = a^i \partial_i$ and $Y = b^j \partial_j$ where the coefficients $a^i,b^i \in \hO_n$ are homogeneous of degrees $k$ and $l$, respectively. In this case, there is only one graph $\Gamma$ whose functional $\Theta_{\Gamma,e}(X,Y)$ is nonzero: this graph has a vertex of valency $k+1$ and a vertex of valency $l+1$, namely 
+%\begin{center}
+%\begin{tikzpicture}[decoration={markings,mark=at position 1.7cm with {\arrow[black,line width=.4mm]{stealth}}}];
+%
+%\filldraw (-1.5,0) circle (.1);
+%\draw (-1.5, .5) node {$I_X^{\rm W}$};
+%\draw[postaction=decorate, line width=.2mm] (-3,0.5) -- (-1.5,0);
+%\draw (-3.3,0.6) node {$\gamma$};
+%\draw (-2.8,0.1) node {$\vdots$};
+%\draw[postaction=decorate, line width=.2mm] (-3,-0.5) -- (-1.5,0);
+%\draw (-3.3,-0.65) node {$\gamma$};
+%
+%\filldraw (1.5,0) circle (.1);
+%\draw (1.5, .5) node {$I_Y^{\rm W}$};
+%\draw[postaction=decorate, line width=.2mm] (3,0.5) -- (1.5,0);
+%\draw (3.3,0.6) node {$\gamma$};
+%\draw (2.8,0.1) node {$\vdots$};
+%\draw[postaction=decorate, line width=.2mm] (3,-0.5) -- (1.5,0);
+%\draw (3.3,-0.65) node {$\gamma$};
+%
+%\draw[postaction=decorate, line width=.2mm] (-1.5,0) .. controls (0,.75) .. (1.5,0);
+%\draw (0, 1) node {$P_{\epsilon<1}$};
+%\draw[postaction=decorate, line width=.2mm] (1.5,0) .. controls (0,-.75) .. (-1.5,0);
+%\draw (0, -1) node {$K_\epsilon$};
+%\end{tikzpicture}
+%\end{center}
+For this graph, the functional $\Theta_{\Gamma,e}(X,Y)$ is homogeneous of degree $k+l-2$:
+\ben
+\Theta_{\Gamma,e}(X,Y) : \Sym^{k+l -2} (\Omega^{0,*}_c(\CC) \tensor \fg_n [1]) \to \CC .
+\een
+By describing this functional explicitly, 
+we will complete the proof of Proposition \ref{obsprop},
+as it will agree on the nose with~$J^{\rm W}(\ch_2^{\GF}(\hT_n))$.
+
+%
+%We can factor this functional into an an algebraic piece (dependent on $\fg_n$) and an analytic piece (independent of $\fg_n$). 
+%Write 
+%\[
+%\Theta_{\Gamma,e}(X,Y) = \Theta_{\Gamma,e}^{an}(X,Y) \Theta_{\Gamma,e}^{alg}(X,Y).
+%\]
+%The analytic piece is a functional
+%\ben
+%\Theta^{an}_{\Gamma,e} (X,Y) :\Sym^{k+l-2} (\Omega_c^{0,*}(\CC)) \to \CC,
+%\een
+%which we describe explicitly in the next lemma. 
+%
+%It will be convenient to fix an anti-holomorphic 1-form $\d \zbar \in \Omega^{0,1}(\CC)$ 
+%and write $\Omega_c^{0,*}(\CC) = \Omega_c^{0,0}(\CC) [\d\zbar]$. 
+
+\begin{prop}
+Let $X = a^i \partial_i$ be homogeneous of degree $k$
+and $Y = b^j \partial_j$ homogeneous of degree $l$. Let $\Gamma$ be the two-vertex wheel with vertices of valencies $k+1$ and $l+1$ and mark one internal edge as distinguished. Then, we have an identification $\Theta_{\Gamma,e}(X,Y) = a J^{\rm W}(\ch_2^\GF (\hT_n))(X,Y)$ for some nonzero number $a$. 
+\end{prop}
+
+\[
+\Theta_{\Gamma,e}(X,Y)(\gamma) = \int_\CC \<(\partial_j a^i)^S(\gamma), \partial\left( (\partial_i
+b^j)^S(\gamma)\right)\>_{\fgn}.
+\]
+ 
+%If $_1,\ldots,f_{k-1} \in \Omega_c^{0,0}(\CC)$ denote the inputs to the first vertex and 
+%$g_1,\ldots,g_{l-1} \in \Omega_c^{0,0}(\CC)$ denote the inputs to the second vertex, 
+%then
+%\ben
+%\Theta_{\Gamma,e}^{an}(X,Y)  (f_1 \d \zbar, f_2,\ldots,f_{k-1},g_1,\ldots,g_{l-1}) 
+%= \frac{1}{2 (4 \pi)^2}\int_{z \in \CC} \left( \prod_{i=1}^{k-1}f_i\right) \partial \left( \prod_{j=1}^{l-1} g_j \right) \d \zbar  .
+%\een
+%In particular, the analytic weight only depends on $k,l$. 
+%\end{prop}
+
+\begin{proof}
+We simplify further by setting
+\[
+X = t_1^{k_1} \cdots t_n^{k_n} \partial_i \quad\text{and}\quad Y = t_1^{l_1} \cdots t_n^{l_n} \partial_j
+\]
+with $k =\sum k_m$ and $l = \sum l_m$.
+Ignoring the analytic factors momentarily, 
+we observe that in computing the weight of the graph $\Gamma$,
+we contract $\beta$ legs with $\gamma$ legs.
+In our case, the $X$-vertex contributes a $\beta_i$ leg,
+which then contracts with the $k_i$ different $\gamma$ legs from the $Y$-vertex.
+Likewise, the $Y$-vertex contributes a $\beta_j$ leg,
+which then contracts with the $k_j$ different $\gamma$ legs from the $X$-vertex.
+These contractions explain the terms $(\partial_j a^i)^S(\gamma)$ and $(\partial_i b^j)^S(\gamma)$ in the integrand.
+
+We now turn to comparing the analytic factors. It suffices here to consider the situation $n =1$,
+since we have already taken care of the dependence on the target coordinates.
+To clarify the notation, we use $f_1, \ldots, f_{k-1}$ to label the inputs to the remaining legs of the $X$-vertex.
+We use $g_1,\ldots, g_{l-1}$ to label the inputs to the remaining legs of the $Y$-vertex.
+
+The following diagram encodes the weight that we must compute:
+%\begin{center}
+%\begin{tikzpicture}[decoration={markings,mark=at position 1.7cm with {\arrow[black,line width=.4mm]{stealth}}}];
+%
+%\filldraw (-1.5,0) circle (.1);
+%\draw[postaction=decorate, line width=.2mm] (-3,0.75) -- (-1.5,0);
+%\draw (-3.45,0.9) node {$f_1\,\d \zbar$};
+%\draw[postaction=decorate, line width=.2mm] (-3,0.35) -- (-1.5,0);
+%\draw (-3.3,0.4) node {$f_2$};
+%\draw (-2.8,0) node {$\vdots$};
+%\draw[postaction=decorate, line width=.2mm] (-3,-0.7) -- (-1.5,0);
+%\draw (-3.3,-0.9) node {$f_{k-1}$};
+%
+%\filldraw (1.5,0) circle (.1);
+%\draw[postaction=decorate, line width=.2mm] (3,0.65) -- (1.5,0);
+%\draw (3.3,0.7) node {$g_1$};
+%\draw (2.8,0.1) node {$\vdots$};
+%\draw[postaction=decorate, line width=.2mm] (3,-0.6) -- (1.5,0);
+%\draw (3.4,-0.7) node {$g_{l-1}$};
+%
+%\draw[postaction=decorate, line width=.2mm] (-1.5,0) .. controls (0,.75) .. (1.5,0);
+%\draw (0, 1) node {$P_{\epsilon<1}$};
+%\draw[postaction=decorate, line width=.2mm] (1.5,0) .. controls (0,-.75) .. (-1.5,0);
+%\draw (0, -1) node {$K_\epsilon$};
+%\end{tikzpicture}
+%\end{center}
+We wish to take the $\epsilon \to 0$ limit of the associated integral.
+Thus, we have
+\begin{align*}
+\Theta_{\Gamma,e}(X,Y) (f_1 \d \zbar, f_2,\cdots,g_{l-1}) 
+& = \lim_{\epsilon \to 0} \int_{\CC^2} 
+\left(\prod_{i=1}^{k-1} f_i(z_1) \right) 
+\left(\prod_{j=1}^{l-1} g_i(z_2)\right) \d \zbar_1 
+\wedge K^{an}_\epsilon(z_1,z_2) \wedge P^{an}_{\epsilon < 1} (z_1,z_2) \\
+& =\lim_{\epsilon \to 0} \int_{\CC^2}
+  \left(\prod_{i=1}^{k-1} f_i (z_1) \right) 
+  \left(\prod_{j=1}^{l-1} g_i(z_2) \right) 
+  \int_{t = \epsilon}^L \frac{1}{(4 \pi)^2 \epsilon t}
+  e^{-|z_1-z_2|^2/4 \epsilon}  \frac{\partial}{\partial z_1}
+  e^{-|z_1-z_2|^2/ 4 t} \, \d t.
+\end{align*}
+Now, $\partial_{z_1} e^{-|z_1-z_2|^2/4 t} = - \frac{1}{4t} (\zbar_1 - \zbar_2)
+e^{-|z_1-z_2|^2/t}$. We make the change of coordinates $w_1 = z_2 -
+z_1$ and $w_2 = z_2$. The integral over $w_1,w_2$ can be written as
+\be\label{integral1}
+- \int_{w_1,w_2\in \CC} \left(\prod_{i=1}^{k-1} f_i \right) \d^2 w_1 \d^2 w_2 \left(\prod_{j=1}^{l-1}
+  g_i \right) \Bar{w}_1 \frac{1}{4 (4 \pi)^2 \epsilon t^2} \exp\left(-\frac{1}{4}(t^{-1} +
+\epsilon^{-1} ) |w_1|^2\right) .
+\ee
+Using the same trick as in the proof that the theory involves no
+counterterms, we introduce the differential operator
+\ben
+D(t) = \left(1 - \frac{t}{t+ \epsilon} \right) 
+\frac{\partial}{\partial
+  w_1} = \frac{\epsilon}{t+\epsilon} \frac{\partial}{\partial w_1} . 
+\een 
+Then
+\begin{align*}
+D_1(t) & \left(\prod_{i=1}^{k-1} f_i \prod_{j=1}^k
+  g_i \frac{1}{\epsilon t} \exp\left(-\frac{1}{4}(t^{-1} +
+\epsilon^{-1} ) |w_1|^2\right) \right) \\ & = \left(-
+                                            \frac{\Bar{w}_1}{t} \prod_{i=1}^{k-1} f_i \prod_{j=1}^{l-1}
+  g_i \Bar{w}_1 + D_1(t) \left( \prod_{i=1}^{k-1} f_i \prod_{j=1}^{l-1}
+  g_i \right) \right) \frac{1}{4\epsilon t} \exp\left(-(t^{-1} +
+\epsilon^{-1} ) |w_1|^2\right) 
+\end{align*}
+The left hand side is a total derivative, hence the integal in (\ref{integral1}) can
+be written as 
+\ben
+- \int_{w_1,w_2} \frac{\partial}{\partial w_1} \left(\prod f_i \prod 
+  g_i\right) \frac{1}{4 (4 \pi)^2 t(\epsilon + t)} \exp\left(-\frac{1}{4}(t^{-1} +
+\epsilon^{-1} ) |w_1|^2\right) .
+\een
+In the $\epsilon \to 0$ limit only the the first term in the Wick
+expansion for integrating $w_1$ will be nonzero. This term is
+\ben
+\frac{1}{(4 \pi)^2}\int_{w_2} \d^2 w_2 \frac{\partial}{\partial w_1}
+\left(\prod f_i \prod 
+  g_i\right)(w_1 = 0) \frac{\epsilon}{(t + \epsilon)^2} .
+\een
+Note that the condition $w_1 = 0$ implies that $z_1 = z_2$ in our
+original parametrization. Thus 
+\ben
+\frac{\partial}{\partial w_1} \left(\prod f_i \prod
+  g_i\right)(w_1 = 0) = \left(\frac{\partial}{\partial z}  \prod
+  f_i(z) \right) \prod g_j (z)
+\een
+where $z = z_1 = z_2$. Finally, we compute the $\epsilon \to 0$
+limit of the $t$-integral
+\ben
+\frac{1}{(4 \pi)^2}\lim_{\epsilon \to 0} \int_{\epsilon}^1 \frac{\epsilon}{(t + \epsilon)^2} \d t = \frac{1}{2}  .
+\een 
+Integrating by parts (to get rid of the $(-)$ sign) we see that the total weight is
+\ben
+\frac{1}{2 (4 \pi)^2}\int_{z \in \CC} \left( \prod 
+  f_i\right) \frac{\partial}{\partial z} \left( \prod g_j \right) \d^2 z
+\een
+as desired. Setting $f_i = g_j$ we see that this coincides with the analytic part of $J^{\rm W}(\ch_2(\hT_n))(X,Y,f_i = g_j)$ written above in (\ref{J when n=1}). 
+\end{proof}
+%
+%We proceed to compute the algebraic factor $\Theta^{alg}_{\Gamma,e}(X,Y)$. Indeed, this is computed by
+%\ben
+%\Theta^{alg}_{\Gamma,e}(X,Y) = W_\Gamma^{alg}({\rm id}_{\fg_n} + {\rm id}_{\fg_n^\vee}, I^{{\rm W},k, alg}, I^{{\rm W}, l, alg})
+%\een
+%where...
+
+\begin{rmk} 
+Note that when restricted to {\em linear} vector fields $\gl_n \hookrightarrow \Vect$, 
+the entire obstruction $\Theta$ vanishes. 
+This vanishing means that there is no obstruction to quantizing equivariantly for the Lie algebra $\gl_n$. 
+This result is just the Lie algebra-level version of an earlier observation: 
+the action of the group $\GL_n$ lifts $\hbar$-linearly to an action on the quantization.
+\end{rmk}
+
+\subsection{Quantization on general manifolds via formal geometry}
+
 
 \section{The local operators}
-n this section we provide a partial analysis of the higher operator product expansion present in holomorphically translation invariant quantum field theories. 
+In this section we provide a partial analysis of the higher operator product expansion present in holomorphically translation invariant quantum field theories. 
 
 In ordinary chiral conformal field theory, there is a collection of operators that, in some sense, generate all other operators. 
 These are called ``primary operators" (or primary fields), and are defined by those operators that are killed by the positive part of the Virasoro algebra \cite{polchinski}, that is, the ``lowering operators". 
