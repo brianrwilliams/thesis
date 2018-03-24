@@ -161,7 +161,7 @@ D|_{\{z_i\}} = \sum_{|I| \leq m} a_I (z) \frac{\partial^{|I|}}{\partial z_I}
 where $a_I(z)$ is a local holomorphic section of ${\rm Hom}(E,F)$.
 Here, the sum is over all multi-indices $I = (i_1,\ldots, i_d)$ and 
 \ben
-\frac{\partial^{|I|}}{\partial z_I} := \frac{\partial^{i_k}}{\partial z_k^{i_k}} . 
+\frac{\partial^{|I|}}{\partial z_I} := \prod_{k=1}^d \frac{\partial^{i_k}}{\partial z_k^{i_k}} . 
 \een 
 The length is defined by $|I| := i_1 + \cdots + i_d$. 
 
@@ -176,9 +176,10 @@ The next piece of data we fix is:
 \begin{itemize}
 \item[(2)] a square zero holomorphic differential operator 
 \ben
-Q^{hol} : V \to V[-1]
+Q^{hol} : \sV \to \sV[-1]
 \een
 of cohomological degree $+1$. 
+Here $\sV$ denotes the holomorphic sections of $V$. 
 \end{itemize}
 
 Finally, to define a free theory we need the data of a symplectic pairing. 
@@ -187,43 +188,41 @@ The last piece of data we fix is:
 \begin{itemize}
 \item[(3)] an invertible bundle map
 \ben
-(-,-)_V : V \times V \to \Omega^{d,hol}_X[d-1]
+(-,-)_V : V \tensor V \to K_X[d-1]
 \een
-Here, $\Omega^{d,hol}_X$ is the holomorphic canonical bundle on $X$. 
+Here, $K_X$ is the canonical bundle on $X$. 
 \end{itemize}
 
 The definition of the fields of an ordinary field theory are the {\em smooth} sections of the vector bundle $V$. 
-In our situation this is a silly thing to do since we lose all of the data of the complex structure we used to define the objects above. 
+In our situation this is a silly thing to do since we lose all of the data of the complex structure we used to define the objects above. Dolbeault
 The more natural thing to do is take the {\em holomorphic} sections of the vector bundle $V$. 
 By construction, the operator $Q^{hol}$ and the pairing $(-,-)_V$ are defined on holomorphic sections, so on the surface this seems reasonable. 
 \brian{what should I say the problem is with doing things in the analytic category?}
 
 The solution to this problem is in the existence of a resolution for the holomorphic sections of a vector bundle by smooth sections of bundles. 
-Given any holomorphic vector bundle $E$ we can define its {\em Dolbeualt complex} $\Omega^{0,*}(X , E)$ with it's Dolbeualt operator 
+Given any holomorphic vector bundle $E$ we can define its {\em Dolbeault complex} $\Omega^{0,*}(X , E)$ with its Dolbeault operator 
 \ben
 \dbar : \Omega^{0,p}(X, E) \to \Omega^{0,p+1}(X, E) .
 \een
-Here, $\Omega^{0,p}(X, E)$ denotes smooth sections of the vector bundle
-\ben
-\Wedge^p T^{0,1*} X \tensor E
-\een
-and $\dbar$ is defined in the usual way \brian{recall this?}.
+Here, $\Omega^{0,p}(X, E)$ denotes smooth sections of the vector bundle $\Wedge^p T^{0,1*} X \tensor E$. 
 
-Using this construction, we take the fields of our free theory to be the complex
+We now take a graded holomorphic vector bundle $V$ as above, equipped with the differential operator $Q^{hol}$. 
+We can then define the totalization of the Dolbeault complex with the operator $Q^{hol}$:
 \ben
 \sE_V = \left(\Omega^{0,*}(X, E), \dbar + Q^{hol}\right) .
 \een
-The operator $\dbar + Q^{hol}$ is the total linearized BRST operator.
-By assumption we have $\dbar Q^{hol} = Q^{hol} \dbar^*$ so that $(\dbar + Q^{hol})^2 = 0$ and so the fields still define a complex. 
+The operator $\dbar + Q^{hol}$ will be the linearized BRST operator of our theory.
+By assumption, we have $\dbar Q^{hol} = Q^{hol} \dbar^*$ so that $(\dbar + Q^{hol})^2 = 0$ and hence the fields still define a complex. 
 The $(-1)$-shifted symplectic pairing is obtained by composition of the pairing $(-,-)_V$ with integration on $\Omega^{d,hol}_X$. 
-The thing to observe here is that $(-,-)_V$ extends to the Dolbeualt complex in a natural way: we simply combine the wedge product of forms with the pairing on $V$.
-The $(-1)$-shifted pairing $\omega$ on $\sE$ is defined by the diagram
+The thing to observe here is that $(-,-)_V$ extends to the Dolbeault complex in a natural way: we simply combine the wedge product of forms with the pairing on $V$.
+The $(-1)$-shifted pairing $\omega_V$ on $\sE$ is defined by the diagram
 \ben
 \xymatrix{
 \sE_V \tensor \sE_V \ar[r]^-{(-,-)_V} \ar@{.>}[dr]_-{\omega_V} & \Omega^{0,*}(X , K_X) [d-1] \ar[d]^-{\int_X} \\
 & \CC[-1] .
 }
 \een
+We note that the top Dolbeault forms with values in the canonical bundle $K_X$ are precisely the top forms on the smooth manifold $X$, so integration makes sense. 
 
 We arrive at the following definition. 
 
@@ -286,13 +285,15 @@ Recall, the sheaf of local functionals on $\sE = \Gamma(E)$ is defined as the sh
 \een
 In the expression above $JE$ stands for the sheaf of smooth sections of the $\infty$-jet bundle ${\rm Jet}(E)$ which has the structure of a $D_X$-module.
 
-If $V$ is a holomorphic vector bundle let $J^{hol} E$ denote the sheaf of holomorphic sections of the holomorphic bundle of holomorphic $\infty$-jets ${\rm Jet}^{hol}(V)$. 
-The fibers of the infinite rank vector bundle ${\rm Jet}^{hol}(V)$ are isomorphic to 
+If $V$ is a holomorphic vector bundle we can define the bundle of holomorphic $\infty$-jets ${\rm Jet}^{hol}(V)$. 
+This is a pro-vector bundle that is holomorphic in a natural way.
+The fibers of this infinite rank bundle ${\rm Jet}^{hol}(V)$ are isomorphic to 
 \ben
-{\rm Jet}^{hol}(V)|_w = V_w \times \CC[[z_1,\ldots,z_d]] 
+{\rm Jet}^{hol}(V)|_w = V_w \tensor \CC[[z_1,\ldots,z_d]] 
 \een
-where $w \in X$.
-The sheaf $J^{hol}V$ has the natural structure of a $D_X^{hol}$-module, that is, it is equipped with a holomorphic flat connection $\nabla^{hol}$.
+where $w \in X$ and where $\{z_i\}$ is the choice of a formal coordinate near $w$. 
+We denote by $J^{hol} V$ denote the sheaf of holomorphic sections of this jet bundle.
+The sheaf $J^{hol}V$ has the structure of a $D_X^{hol}$-module, that is, it is equipped with a holomorphic flat connection $\nabla^{hol}$.
 This is completely analogous to the smooth case.
 Locally, the holomorphic flat connection is of the form
 \ben
@@ -375,18 +376,19 @@ of cohomological degree $d$ such that $Q^{hol} I^{hol} + \{I^{hol}, I^{hol}\}^{h
 
 Just as in the free case, we see that classical holomorphic theories define ordinary classical BV theories with interactions.
 The underlying space of fields, as we have already seen is $\sE_V = \Omega^{0,*}(X , V)$. 
-Now, we know that $I^{hol}$ is a $\Omega^{d,hol}_X$-valued functional that is a linear combination of functionals of the form 
+We will write $I^{hol} = \sum_k I^{hol}_k$ where $I^{hol}_k$ is symmetric degree $k$.
+Now, we know that $I^{hol}_k$ is a $\Omega^{d,hol}_X$-valued functional of the form
 \ben
 (\varphi_1,\ldots,\varphi_k) \mapsto D_1(\varphi_1)\cdots D_k(\varphi_k) \in \Omega^{d,hol}_X
 \een
-where $\varphi_i$ is a section of $V^{hol}$ and $D_i$ is a holomorphic differential operator on $V$.
-Now, every holomorphic differential operator on the holomorphic vector bundle $V$ extends to a differential operator on its Dolbeualt complex $\sE_V = \Omega^{0,*}(X, V)$. 
+where $\varphi_i\in \sV = \Gamma^{hol}(X, V)$ and $D_i$ is a holomorphic differential operator on $\sV$.
+Every holomorphic differential operator on the holomorphic vector bundle $V$ extends to a differential operator on its Dolbeault complex $\sE_V = \Omega^{0,*}(X, V)$. 
 Thus, we can define the functional
 \ben
-(\alpha_1\tensor \varphi_1,\ldots, \alpha_k \tensor \varphi_k) \mapsto \int_X D_1(\alpha_1 \tensor \varphi_1)\cdots D_k(\alpha_k \tensor \varphi_k)
+(\varphi_1,\ldots, \varphi_k) \mapsto \int D_1(\alpha_1 \tensor \varphi_1)\cdots D_k(\alpha_k \tensor \varphi_k)
 \een
-where $\alpha_i \tensor \varphi_i \in \Omega^{0,*}(X, V)$. 
-The symbol $\int_X$ reminds us that we are working modulo total derivatives, so that the above expression defines an element of $\oloc(\sE_V)$. 
+where, now $\varphi_i$ is a section of the Dolbeault complex $\Omega^{0,*}(X , V)$. 
+The symbol $\int$ reminds us that we are working modulo total derivatives, so that the above expression defines an element of $\oloc(\sE_V)$. 
 This defines a linear map $\olochol(V) \to \oloc(\sE_V)$ that we denote $I^{hol} \mapsto I^{\Omega^{0,*}}$. 
 
 The following is a useful table to show how we are producing a BV theory from a holomorphic theory.
@@ -488,7 +490,7 @@ We will not do that here, but hope the idea of how to do so is clear.
 %A holomorphic local Lie algebra is {\em not} a local Lie algebra in the usual sense. 
 %The problem is that, in the definition, we have utilized the space of {\em holomorphic sections}, instead of the space of all smooth sections. 
 %There is a natural resolution that will allow us to turn every holomorphic local Lie algebra into an ordinary local Lie algebra. 
-%Of course, given a holomorphic vector bundle $L$ we can consider its Dolbeualt complex ${\rm Dol}(L) = \Omega^{0,*}(X , L)$.
+%Of course, given a holomorphic vector bundle $L$ we can consider its Dolbeault complex ${\rm Dol}(L) = \Omega^{0,*}(X , L)$.
 %For a holomorphic local Lie algebra $L$ this is really the object we want to consider.
 %
 %Applying the Dolbeault complex functor to the $L_\infty$ maps $\ell_n : L^{\boxtimes n} \to L$ we obtain maps
@@ -504,7 +506,7 @@ We will not do that here, but hope the idea of how to do so is clear.
 %\ben 
 %{\rm Dol}(\ell^L_n) : \Omega^{0,*}(X, L)^{\tensor n} = \Omega^{0,*}(X^{\times n} , L^{\boxtimes n}) \to \Omega^{0,*}(X , L)
 %\een
-%is compatible with the Dolbeualt differential. 
+%is compatible with the Dolbeault differential. 
 %This is a local calculation, so it suffices to assume all operators $\ell_n^L$ are of the form (\ref{local holomorphic}). 
 %Indeed, since each of the coefficients $a_I(z)$ are holomorphic we see that ${\rm Dol}(\ell_n^L)$ is compatible with $\dbar$. 
 %\end{proof}
@@ -521,7 +523,7 @@ V \cong \CC^d \times V_0
 \een
 where $V_0$ is the fiber of $V$ at $0 \in \CC^d$. 
 We want to consider a classical theory with space of fields given by $\Omega^{0,*}(\CC^d, V) \cong \Omega^{0,*}(\CC^d) \tensor_\CC V_0$. 
-Moreover, we want this theory to be invariant with respect to the group of holomorphic translations on $\CC^d$. 
+Moreover, we want this theory to be invariant with respect to the group of translations on $\CC^d$. 
 Per usual, it is best to work with the corresponding Lie algebra of translations. 
 Using the complex structure, we choose a presentation for the Lie algebra of all translations given by
 \ben
@@ -532,13 +534,13 @@ To define a theory, we need to fix a non-degenerate pairing on $V$.
 Moreover, we want this to be translation invariant. 
 So, suppose
 \be\label{pairing 1}
-\< \;\;,\;\; \>_V : V \tensor V \to \Omega^{d,hol}_{\CC^d} [d-1]
+(-,-)_V : V \tensor V \to K_{\CC^d} [d-1]
 \ee
 is a skew-symmetric bundle map that is equivariant for the Lie algebra of translations. 
-The shift is so that the resulting pairing on the Dolbeualt complex is of the appropriate degree.
+The shift is so that the resulting pairing on the Dolbeault complex is of the appropriate degree.
 Here, equivariance means that for sections $v,v'$ we have
 \ben
-\< \frac{\partial}{\partial z_i} v, v'\>_V = L_{\partial_{z_i}} \<v,v'\>_V
+(\frac{\partial}{\partial z_i} v, v')_V = L_{\partial_{z_i}} (v,v')_V
 \een
 where the right-hand side denotes the Lie derivative applied to $(v,v')_V \in \Omega^{d,hol}_{\CC^d}$. 
 There is a similar relation for the anti-holomorphic derivatives. 
@@ -568,15 +570,15 @@ We can summarize this in the following definition, which should be viewed as a s
 \begin{dfn} A {\em holomorphically translation invariant free BV theory} is the data of a holomorphic vector bundle $V$ together with
 \begin{enumerate}
 \item an identification $V \cong \CC^d \times V_0$;
-\item a translation invariant skew-symmetric pairing  $\<-,-\>_V$ as in (\ref{pairing 1});
+\item a translation invariant skew-symmetric pairing  $(-,-)_V$ as in (\ref{pairing 1});
 \item a holomorphic differential operator $Q^{hol}$ as in (\ref{hol operator});
 \end{enumerate}
 such that the following conditions hold
 \begin{enumerate}
-\item the induced $\CC$-valued pairing $\int \circ \<-,-\>_V$ is non-degenerate;
+\item the induced $\CC$-valued pairing $\int \circ (-,-)_V$ is non-degenerate;
 \item the operator $Q^{hol}$ satisfies $(\dbar + Q^{hol})^2 = 0$ and
 \ben
-\int \<Q^{hol} v, v'\>_V = \pm \int \<v, Q^{hol} v'\> .
+\int (Q^{hol} v, v')_V = \pm \int (v, Q^{hol} v') .
 \een
 \end{enumerate}
 \end{dfn}
@@ -590,7 +592,7 @@ and that $Q$ is skew self-adjoint for the symplectic structure.
 Thus, in particular, $\sE_V$ together with the pairing define a free BV theory in the ordinary sense. 
 In the usual way, we obtain the action functional via
 \ben
-S(\varphi) = \int \<\varphi, (\dbar + Q^{hol}) \varphi\>_V .
+S(\varphi) = \int (\varphi, (\dbar + Q^{hol}) \varphi\>_V .
 \een 
 
 Before going further, we will list some familiar examples.
@@ -600,7 +602,7 @@ Suppose that
 \ben
 V = \ul{\CC} \oplus K_{\CC^d} [d - 1] .
 \een
-Let $\<\;,\;\>_V$ be the pairing
+Let $(\;,\;\>_V$ be the pairing
 \ben
 (\ul{\CC} \oplus K_{\CC^d}) \tensor (\ul{\CC} \oplus K_{\CC^d}) \to K_{\CC^{d}} \oplus K_{\CC^d} \to K_{\CC^d} 
 \een 
@@ -649,7 +651,7 @@ S(\gamma, \beta) = \int_{\CC^d} {\rm ev}_E(\beta \wedge \dbar \gamma) .
 %In addition, they serve to define homotopies for the following holomorphic version of Poincar\'{e}'s lemma. 
 %First, consider the algebraic case. 
 %Let $\AA^d$ be the complex $d$-dimensional affine space with space of smooth algebraic functions $\sO^{alg, sm}(\AA^d) = \CC[z_1,\ldots, z_d, \zbar_1,\ldots,\zbar_d]$. 
-%Then, we can build the algebraic Dolbeualt complex 
+%Then, we can build the algebraic Dolbeault complex 
 %\ben
 %\Omega^{0,*}_{alg} (\AA^d) = \CC[z_1,\ldots,z_d, \zbar_1,\ldots,\zbar_d][\d \zbar_1,\ldots,\d \zbar_d]
 %\een
@@ -770,7 +772,7 @@ For instance, if $L = \ul{\fg}$ is the constant bundle on $\CC^d$ where $\fg$ is
 %Furthermore, this quasi-isomorphism is compatible with the $L_\infty$ structures, so that we obtain a quasi-isomorphism of dg $D_X$-modules $\clie^*(J^{hol} L)^{C^\infty} \simeq \clie^*(J \sL)$. 
 %\end{lem}
 %\begin{proof}
-%For any holomorphic vector bundle $E$, the Dolbeualt complex of $E$ is a resolution of the sheaf of holomorphic sections of $E$.
+%For any holomorphic vector bundle $E$, the Dolbeault complex of $E$ is a resolution of the sheaf of holomorphic sections of $E$.
 %Thus, there is an equivalence of sheaves on $X$
 %\ben
 %\Omega^{0,*}_X(E) \simeq \Gamma^{hol}_X(E) .
@@ -849,7 +851,7 @@ Indeed, since $Q^{hol}$ is a translation invariant holomorphic differential oper
 \ben
 [\dbar + Q^{hol}, Q^{GF}] = [\dbar,\dbar^*] \tensor \id_{V} .
 \een
-The operator $[\dbar,\dbar^*]$ is simply the Dolbeualt Laplacian on $\CC^d$, which is certainly a generalized Laplacian.
+The operator $[\dbar,\dbar^*]$ is simply the Dolbeault Laplacian on $\CC^d$, which is certainly a generalized Laplacian.
 In coordinates it is
 \ben
 [\dbar,\dbar^*] = -\sum_{i=1}^d \frac{\partial}{\partial \zbar_i}\frac{\partial}{\partial z_i} 
@@ -917,7 +919,7 @@ We will make two simplifications:
 \int_{\CC^d} D_1(\varphi) \cdots D_k(\varphi) \d^d z
 \een
 where $D_i$ is a translation invariant differential operator. 
-Some of the differential operators will hit the compactly supported Dolbeualt forms placed on the external edges of the graph.
+Some of the differential operators will hit the compactly supported Dolbeault forms placed on the external edges of the graph.
 The remaining operators will hit the internal edges labeled by the propagators.
 Since a holomorphic differential operator preserves the space of compactly supported Dolbeault forms that is independent of $\epsilon$, we replace each input by an arbitrary compactly supported Dolbeault form.
 \end{enumerate}
@@ -943,7 +945,7 @@ We denote by $(\vec{n}) = (n_{i}^j)$ the corresponding $d \times k$ matrix of in
 \end{enumerate}
 The analytic weight associated to the triple $(k, (\vec{n}), \Phi)$ is
 \be\label{weight1}
-W_{k,(\vec{n})}^\Phi (\epsilon, L) = \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha) \prod_{\alpha = 1}^k \left(\frac{\partial}{\partial z^i}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^i, z^{i+1}) .
+W_{k,(\vec{n})}^\Phi (\epsilon, L) = \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha) \prod_{\alpha = 1}^k \left(\frac{\partial}{\partial z^i}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^\alpha, z^{\alpha+1}) .
 \ee
 In the above expression, we use the convention that $z^{k+1} = z^1$. 
 \end{dfn}
@@ -988,7 +990,7 @@ Once we do this, we see that the expression (\ref{productprops2}) can be written
 \een
 Note that only the variables $\wbar_i^{\alpha}$ for $i=1,\ldots,d$ and $\alpha = 1,\ldots, k-1$ appear. 
 Thus we can consider it as a form on $\CC^{d(k-1)}$.
-As such a form it is of Dolbeualt type $(0, (d-1) + (k-1)(d-1)) = (0, (d-1)k)$. 
+As such a form it is of Dolbeault type $(0, (d-1) + (k-1)(d-1)) = (0, (d-1)k)$. 
 If $k < d$ then clearly $(d-1)k > d(k-1)$ so the form has greater degree than the dimension of the manifold and hence it vanishes. 
 
 The case left to consider is when $k = d$.
@@ -1039,7 +1041,7 @@ z^k - z^1 = \sum_{\alpha=1}^{k-1} w^\alpha .
 Expanding out the propagators the weight takes the form
 \ben
 \begin{array}{lll}
-& \displaystyle \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \prod_{\alpha=1}^k \frac{\d t_\alpha}{4 \pi t_\alpha} \\
+& \displaystyle \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \prod_{\alpha=1}^k \frac{\d t_\alpha}{(4 \pi t_\alpha)^d} \\
 & \displaystyle \times \sum_{i_1,\ldots,i_{k-1} =1}^d \left(\frac{\wbar^1_{i_1}}{t_1} \frac{(\wbar^1)^{n^1}}{t^{|n^1|}}\right) \cdots \left(\frac{\wbar^{k-1}_{i_{k-1}}}{t_{k-1}}\frac{(\wbar^{k-1})^{n^{k-1}}}{t^{|n^{k-1}|}}\right) \left(\sum_{\alpha=1}^{k-1} \frac{\wbar^\alpha_{i_k}}{t_k} \cdot \frac{1}{t^{|n^k|}} \left(\sum_{\alpha=1}^{k-1} \wbar^\alpha\right)^{n^k}\right) \\
 & \displaystyle \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right)
 \end{array}
@@ -1074,7 +1076,7 @@ D_{\alpha, i_\alpha}(t) := \left(\frac{\partial}{\partial w^\alpha_{i_\alpha}} -
 \een
 
 The following lemma is an immediate calculation
-\begin{lem}
+\begin{lem}\label{lem: diff applied E}
 One has
 \ben
 D_{\alpha,i_\alpha} E(w,t) = \frac{\wbar^\alpha_{i_\alpha}}{t_\alpha} \frac{(\wbar^\alpha)^{n^\alpha}}{t^{|n^\alpha|}} E(w,t) . 
@@ -1085,7 +1087,7 @@ Note that all of the $D_{\alpha,i_{\alpha}}$ operators mutually commute.
 Thus, we can integrate by parts iteratively to obtain the following expression for the weight:
 \ben
 \begin{array}{lll}
-& \displaystyle \pm \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}}\left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \prod_{\alpha=1}^k \frac{\d t_\alpha}{4 \pi t_\alpha}  \\ 
+& \displaystyle \pm \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}}\left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \prod_{\alpha=1}^k \frac{\d t_\alpha}{(4 \pi t_\alpha)^d}  \\ 
 & \displaystyle \times\left( \sum_{i_1,\ldots, i_d} D_{1, i_1} \cdots D_{k-1,i_{k-1}} \sum_{\alpha=1}^{k-1} D_{\alpha, i_k} \Phi(w^1,\ldots,w^k) \right) \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
 \end{array}
 \een
@@ -1098,7 +1100,7 @@ Thus, the absolute value of the weight is bounded by
 To compute the right hand side we will perform a Gaussian integration with respect to the variables $(w^1,\ldots,w^{k-1})$. 
 To this end, notice that the exponential can be written as
 \ben
-E(w,t) = \exp\left(-M_{\alpha\beta} (w^\alpha, w^\beta)\right)
+E(w,t) = \exp\left(-\frac{1}{4} M_{\alpha\beta} (w^\alpha, w^\beta)\right)
 \een
 where $(M_{\alpha\beta})$ is the $(k-1)\times (k-1)$ matrix given by
 \ben

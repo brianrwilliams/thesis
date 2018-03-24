@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 MAR 2018 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 MAR 2018 13:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**chap2.tex
-(./chap2.tex
+**"hol descent.tex"
+(./hol descent.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amscls/amsart.cls
@@ -857,8 +857,8 @@ s.code.tex
 \tikz@lib@dec@box=\box64
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.pathreplacing.code.tex)) (./chap2.aux)
-\openout1 = `chap2.aux'.
+brarydecorations.pathreplacing.code.tex)) (./hol descent.aux)
+\openout1 = `"hol descent.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
@@ -998,708 +998,85 @@ LaTeX Info: Redefining \ref on input line 20.
 LaTeX Info: Redefining \pageref on input line 20.
 LaTeX Info: Redefining \nameref on input line 20.
 
-(./chap2.out) (./chap2.out)
+(./hol descent.out) (./hol descent.out)
 \@outlinefile=\write5
-\openout5 = `chap2.out'.
+\openout5 = `"hol descent.out"'.
 
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 22.
- (./chap2.toc)
-\tf@toc=\write6
-\openout6 = `chap2.toc'.
 
 
-LaTeX Warning: Citation `WittenCDO' on page 1 undefined on input line 32.
-
-[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `BD' on page 2 undefined on input line 37.
+LaTeX Warning: Citation `WittenCohomological' on page 1 undefined on input line
+ 44.
 
 
-LaTeX Warning: Citation `MSV' on page 2 undefined on input line 37.
+LaTeX Warning: Citation `WittenZwiebach' on page 1 undefined on input line 45.
 
 
-LaTeX Warning: Citation `KV' on page 2 undefined on input line 37.
+LaTeX Warning: Citation `DijkgraafVV' on page 1 undefined on input line 45.
 
-
-LaTeX Warning: Citation `Cheung' on page 2 undefined on input line 37.
-
-
-LaTeX Warning: Citation `Bressler' on page 2 undefined on input line 37.
-
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 37.
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 47.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-
-LaTeX Warning: Citation `GMS' on page 2 undefined on input line 37.
-
-
-LaTeX Warning: Citation `BorLib' on page 2 undefined on input line 37.
-
-
-LaTeX Warning: Citation `WittenCDO' on page 2 undefined on input line 39.
-
-
-LaTeX Warning: Citation `Nek' on page 2 undefined on input line 39.
-
-
-LaTeX Warning: Citation `KapCDR' on page 2 undefined on input line 39.
-
-
-LaTeX Warning: Citation `KapOrlov' on page 2 undefined on input line 40.
-
-
-LaTeX Warning: Citation `CosBook' on page 2 undefined on input line 43.
-
-
-LaTeX Warning: Citation `CG' on page 2 undefined on input line 43.
-
-
-LaTeX Warning: Citation `CG' on page 2 undefined on input line 46.
-
-
-LaTeX Warning: Citation `CG' on page 2 undefined on input line 46.
-
-
-LaTeX Warning: Citation `BD' on page 2 undefined on input line 46.
-
-
-LaTeX Warning: Citation `CG' on page 2 undefined on input line 48.
-
-
-LaTeX Warning: Citation `GGW' on page 2 undefined on input line 49.
-
-
-LaTeX Warning: Citation `CosBook' on page 2 undefined on input line 51.
-
-
-LaTeX Warning: Citation `CG' on page 2 undefined on input line 51.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-
-LaTeX Warning: Citation `CostelloRenormalization' on page 3 undefined on input 
-line 56.
-
-
-LaTeX Warning: Citation `WG2' on page 3 undefined on input line 57.
-
-
-LaTeX Warning: Citation `GK' on page 3 undefined on input line 58.
-
-
-LaTeX Warning: Citation `KonDQ' on page 3 undefined on input line 58.
-
-
-LaTeX Warning: Citation `CF' on page 3 undefined on input line 58.
-
-
-LaTeX Warning: Citation `BK' on page 3 undefined on input line 70.
-
-
-LaTeX Warning: Citation `BD' on page 3 undefined on input line 70.
-
-
-LaTeX Warning: Citation `KV' on page 3 undefined on input line 70.
-
-
-LaTeX Warning: Citation `Malikov2008' on page 3 undefined on input line 70.
-
-[3]
-
-LaTeX Warning: Citation `GGW' on page 4 undefined on input line 82.
-
-
-LaTeX Warning: Citation `FrancisGaitsgory' on page 4 undefined on input line 87
-.
-
-
-LaTeX Warning: Citation `LiLi' on page 4 undefined on input line 95.
-
-
-LaTeX Warning: Citation `CLL' on page 4 undefined on input line 95.
-
-
-LaTeX Warning: Citation `GG1' on page 4 undefined on input line 95.
-
-
-LaTeX Warning: Citation `GLL' on page 4 undefined on input line 95.
-
-
-LaTeX Warning: Reference `??' on page 4 undefined on input line 97.
-
-[4] [5] <xymatrix 6x2 393> [6]
-
-LaTeX Warning: Citation `NT' on page 7 undefined on input line 258.
-
-
-LaTeX Warning: Citation `CF2' on page 7 undefined on input line 258.
-
-
-LaTeX Warning: Citation `BK' on page 7 undefined on input line 288.
-
-[7]
-
-LaTeX Warning: Citation `NT' on page 8 undefined on input line 342.
-
-
-LaTeX Warning: Citation `nest1995' on page 8 undefined on input line 342.
-
-
-LaTeX Warning: Citation `khors' on page 8 undefined on input line 342.
-
-
-LaTeX Warning: Citation `willwacher' on page 8 undefined on input line 367.
-
-[8] [9] [10]
-
-LaTeX Warning: Citation `Fuks' on page 11 undefined on input line 574.
-
-[11]
-Overfull \hbox (16.41621pt too wide) in paragraph at lines 630--631
-[][]\OT1/ppl/b/n/10 Lemma 1.18. []\OT1/ppl/m/it/10 For any choice of Gelfand-Ka
-zhdan struc-ture $\OT1/zplm/m/n/10 ([][]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 ^^[
-\OT1/zplm/m/n/10 )$\OT1/ppl/m/it/10 , the de-scent func-tor $[][]\OT1/zplm/m/n/
-10 (([][]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 ^^[\OT1/zplm/m/n/10 )\OT1/ppl/m/n/
-10 , \OMS/zplm/m/n/10 ^^@\OT1/zplm/m/n/10 )$
+Overfull \hbox (4.00844pt too wide) in paragraph at lines 80--82
+\OT1/ppl/m/n/10 The topo-log-i-cal de-scent equa-tions im-ply that if $\OMS/zpl
+m/m/n/10 O$ \OT1/ppl/m/n/10 is BRST in-vari-ant $\OML/zplm/m/it/10 Q[]\OMS/zplm
+/m/n/10 O \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 0$, then $\OML/zplm/m/it/10 Q[]\OM
+S/zplm/m/n/10 O[] \OT1/zplm/m/n/10 =
  []
 
 
-Overfull \hbox (20.49551pt too wide) detected at line 637
-\OT1/zplm/m/n/10 (
-[]([][]) \OMS/zplm/m/n/10 
- V\OT1/zplm/m/n/10 )[] \OMS/zplm/m/n/10 
- \OT1/zplm/m/n/10 (
-[]([][]) \OMS/zplm/m/n/10 
- W\OT1/zplm/m/n/10 )[] \OMS/zplm/m/n/10 ! \OT1/zplm/m/n/10 (
-[]([][]) \OMS/zplm/m/n/10 
- \OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 V 
- W\OT1/zplm/m/n/10 ))[] \OMS/zplm/m/n/10 ! \OT1/zplm/m/n/10 (
-[]([][]) \OMS/zplm/m/n/10 
- \OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 V 
-[] W\OT1/zplm/m/n/10 ))[]
- []
+LaTeX Warning: Citation `Huang' on page 1 undefined on input line 84.
 
-[12]
-Overfull \hbox (26.62213pt too wide) in paragraph at lines 641--645
-\OT1/ppl/m/n/10 phisms are $[]$-linear, we find that de-scent ac-tu-ally fac-to
-rs through the cat-e-gory of $[][]\OT1/zplm/m/n/10 (([][]\OT1/ppl/m/n/10 , \OML
-/zplm/m/it/10 ^^[\OT1/zplm/m/n/10 )\OT1/ppl/m/n/10 , []\OT1/zplm/m/n/10 )$\OT1/
-ppl/m/n/10 -
- []
 
-LaTeX Font Info:    Try loading font information for U+eus on input line 654.
+LaTeX Warning: Citation `LianZuckerman' on page 1 undefined on input line 84.
+
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for U+eus on input line 89.
+
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
 
-LaTeX Warning: Citation `atiyah' on page 13 undefined on input line 700.
+LaTeX Warning: Reference `G operator' on page 2 undefined on input line 93.
 
-[13]
 
-LaTeX Warning: Citation `atiyah' on page 14 undefined on input line 735.
+LaTeX Warning: Citation `LurieAlg' on page 2 undefined on input line 100.
 
-[14] [15]
-Overfull \hbox (2.77023pt too wide) in paragraph at lines 855--859
-\OT1/ppl/m/n/10 map $\OT1/zplm/m/n/10 ^^A[] : [] \OMS/zplm/m/n/10 ! []$\OT1/ppl
-/m/n/10 . Fix co-or-di-na-ti-za-tions $[] \OT1/zplm/m/n/10 = \U/fplmbb/m/n/10 C
-\OT1/zplm/m/n/10 [[\OML/zplm/m/it/10 t[]\OT1/ppl/m/n/10 , [] , \OML/zplm/m/it/1
-0 t[]\OT1/zplm/m/n/10 ]]$ \OT1/ppl/m/n/10 and $[] \OT1/zplm/m/n/10 = \U/fplmbb/
-m/n/10 C\OT1/zplm/m/n/10 [[\OML/zplm/m/it/10 t[]\OT1/ppl/m/n/10 , [] , \OML/zpl
-m/m/it/10 t[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 t[]\OT1/ppl/m/n/10 , [] , \OML
-/zplm/m/it/10 t[]\OT1/zplm/m/n/10 ]]\OT1/ppl/m/n/10 .$
- []
+[2] [3] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
+ (./hol descent.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 236.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
 
 
-Overfull \hbox (1.25543pt too wide) in paragraph at lines 887--893
-[]\OT1/ppl/m/n/10 For $\OMS/zplm/m/n/10 V$ \OT1/ppl/m/n/10 in $[][]$ there is a
-n in-duced ac-tion of $\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 , [][]\OT1/zplm/m/n/
-10 )$ \OT1/ppl/m/n/10 on the ten-sor prod-uct $\OMS/zplm/m/n/10 V 
-[] []\OT1/zplm/m/n/10 /[]$\OT1/ppl/m/n/10 .
- []
+Package rerunfilecheck Warning: File `"hol descent".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-
-LaTeX Warning: Citation `atiyah' on page 16 undefined on input line 901.
-
-
-LaTeX Warning: Citation `atiyah' on page 16 undefined on input line 904.
-
-[16]
-Overfull \hbox (3.17465pt too wide) in paragraph at lines 938--940
-\OT1/ppl/m/n/10 and from the ob-ser-va-tion that an ex-act se-quence in $[]\OT1
-/zplm/m/n/10 ([])$ \OT1/ppl/m/n/10 maps to an ex-act se-quence in $[]\OT1/zplm/
-m/n/10 ([][])$\OT1/ppl/m/n/10 . 
- []
-
-[17]
-Overfull \hbox (3.50058pt too wide) in paragraph at lines 1071--1075
-\OT1/ppl/m/n/10 Let $d[]$ de-note the dif-fer-en-tial on $C[]\OT1/zplm/m/n/10 (
-[]\OT1/ppl/m/n/10 ; \OMS/zplm/m/n/10 V\OT1/zplm/m/n/10 )$ \OT1/ppl/m/n/10 and $
-d[]$ de-note the dif-fer-en-tial on $C[]\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 ; [
-] \OMS/zplm/m/n/10 
-[]
- []
-
-[18]
-Overfull \hbox (10.67142pt too wide) in paragraph at lines 1138--1143
-\OT1/ppl/m/it/10 de Rham dif-fer-en-tial $\OT1/ppl/m/n/10 d[] \OT1/zplm/m/n/10 
-: [] \OMS/zplm/m/n/10 ! []$ \OT1/ppl/m/it/10 is $[]$-equivariant, there is an e
-l-e-ment $\OML/zplm/m/it/10 []$ \OT1/ppl/m/it/10 in $\OT1/ppl/m/n/10 C[]\OT1/z
-plm/m/n/10 ([]\OT1/ppl/m/n/10 , [][]; []\OT1/zplm/m/n/10 )$
- []
-
-[19] [20] <xymatrix 2x2 120>
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\infty' on input line 1274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1274.
-
-[21] [22]
-Overfull \hbox (17.16718pt too wide) in paragraph at lines 1397--1399
-[]\OT1/ppl/m/n/10 The Maurer-Cartan el-e-ment $\OML/zplm/m/it/10 ! \OMS/zplm/m/
-n/10 2 \OT1/zplm/m/n/10 
-[](\OML/zplm/m/it/10 P\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 
- \U/euf/m/n/10 g$ \OT1/ppl/m/n/10 al-lows us to de-form the dif-fer-en-tial on 
-$\OT1/zplm/m/n/10 
-[](\OML/zplm/m/it/10 P\OT1/ppl/m/n/10 ; []\OT1/zplm/m/n/10 ) =
- []
-
-[23] <xymatrix 3x1 102>
-
-LaTeX Warning: Reference `sec: extended pair' on page 24 undefined on input lin
-e 1438.
-
-[24]
-Overfull \hbox (3.37985pt too wide) in paragraph at lines 1454--1457
-[][]\OT1/ppl/b/n/10 Proposition 2.7. []\OT1/ppl/m/it/10 Fix an or-di-nary Gelfa
-nd-Kazhdan struc-ture $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/ppl/m/n/10 , \
-OML/zplm/m/it/10 ^^[\OT1/zplm/m/n/10 )$\OT1/ppl/m/it/10 . Then, a $\OML/zplm/m/
-it/10 d$\OT1/ppl/m/it/10 -extended Gelfand-Kazhdan
- []
-
-<xymatrix 3x1 150>
-
-LaTeX Warning: Citation `atiyah' on page 25 undefined on input line 1495.
-
-[25] [26]
-Overfull \hbox (33.40749pt too wide) in paragraph at lines 1568--1572
-\OT1/ppl/m/n/10 By as-sump-tion, $[]\OML/zplm/m/it/10  \OT1/zplm/m/n/10 = []\O
-ML/zplm/m/it/10  \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 j[][][]\OT1/zplm/m/n/10 
-(\OML/zplm/m/it/10 T[]\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 , but this pre-cisely 
-$\OML/zplm/m/it/10 `[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 ![]\OT1/ppl/m/n/10 , 
-[] , \OML/zplm/m/it/10 ![]\OT1/zplm/m/n/10 ) = [][]([])(\OML/zplm/m/it/10 ![]\O
-T1/ppl/m/n/10 , [] , \OML/zplm/m/it/10 ![]\OT1/zplm/m/n/10 ) =
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1575.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1575.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1575.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1604.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 1604.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gamma' on input line 1604.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1604.
-
-
-LaTeX Warning: Reference `sec ??' on page 27 undefined on input line 1604.
-
-[27]
-
-LaTeX Warning: Reference `chap1' on page 28 undefined on input line 1619.
-
-
-LaTeX Warning: Reference `sec: equivariant' on page 28 undefined on input line 
-1645.
-
-
-LaTeX Warning: Reference `GLaction' on page 28 undefined on input line 1674.
-
-
-LaTeX Warning: Reference `sec comparison' on page 28 undefined on input line 16
-76.
-
-
-LaTeX Warning: Citation `WG2' on page 28 undefined on input line 1677.
-
-[28]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1698.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1698.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\infty' on input line 1698.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1698.
-
-
-LaTeX Warning: Citation `WG2' on page 29 undefined on input line 1699.
-
-
-LaTeX Warning: Citation `GWCS' on page 29 undefined on input line 1699.
-
-
-LaTeX Warning: Citation `GWderived' on page 29 undefined on input line 1699.
-
-
-LaTeX Warning: Citation `CostelloHolomorphic' on page 29 undefined on input lin
-e 1704.
-
-
-LaTeX Warning: Citation `WG2' on page 29 undefined on input line 1704.
-
-
-LaTeX Warning: Citation `WG2' on page 29 undefined on input line 1714.
-
-[29]
-
-LaTeX Warning: Citation `WG2' on page 30 undefined on input line 1752.
-
-
-LaTeX Warning: Citation `WG2' on page 30 undefined on input line 1777.
-
-
-LaTeX Warning: Citation `WG2' on page 30 undefined on input line 1779.
-
-
-Overfull \hbox (5.58136pt too wide) in paragraph at lines 1780--1783
-[][]\OT1/ppl/b/n/10 Proposition 3.7 \OT1/ppl/m/n/10 ([[]] Propo-si-tion 5.0.1)\
-OT1/ppl/b/n/10 . []\OT1/ppl/m/it/10 Let $[][]\OT1/zplm/m/n/10 (\OML/zplm/m/it/1
-0 Y\OT1/ppl/m/n/10 , \OT1/zplm/m/n/10 
-[])$ \OT1/ppl/m/it/10 be the de-rived space of maps $\OT1/zplm/m/n/10 (\OML/zpl
-m/m/it/10 Y\OT1/ppl/m/n/10 , \OT1/zplm/m/n/10 
-[]) \OMS/zplm/m/n/10 !
- []
-
-[30]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1814.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1814.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1814.
-
-
-LaTeX Warning: Citation `wg2' on page 31 undefined on input line 1826.
-
-
-LaTeX Warning: Citation `GradyGwilliamDerived' on page 31 undefined on input li
-ne 1826.
-
-[31] [32] [33] <xymatrix 6x1 216> [34] [35]
-Overfull \hbox (57.21916pt too wide) detected at line 2076
-[] [] [] \OMS/zplm/m/n/10 ^[] [] ^ ^[] [] \OT1/ppl/m/n/10 C[] [] d[]\OML/zplm/m
-/it/10 z\OT1/ppl/m/n/10 .
- []
-
-<xymatrix 4x2 34> [36] <xymatrix 2x2 174> <xymatrix 5x2 198>
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2180.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 2180.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2180.
-
-
-LaTeX Warning: Citation `GwThesis' on page 37 undefined on input line 2187.
-
-
-LaTeX Warning: Reference `sec gk cc' on page 37 undefined on input line 2190.
-
-
-LaTeX Warning: Citation `WittenCDO' on page 37 undefined on input line 2191.
-
-
-LaTeX Warning: Citation `Nek' on page 37 undefined on input line 2191.
-
-
-LaTeX Warning: Reference `chap1' on page 37 undefined on input line 2192.
-
-[37]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2199.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2199.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2199.
-
-
-LaTeX Warning: Reference `sec: renormalization' on page 38 undefined on input l
-ine 2204.
-
-
-LaTeX Warning: Citation `CosBook' on page 38 undefined on input line 2210.
-
-
-LaTeX Warning: Reference `lem: holrenorm' on page 38 undefined on input line 22
-13.
-
-
-LaTeX Warning: Reference `sec: holrenorm' on page 38 undefined on input line 22
-15.
-
-
-LaTeX Warning: Reference `lem: holrenorm' on page 38 undefined on input line 22
-17.
-
-[38]
-
-LaTeX Warning: Reference `eqdef' on page 39 undefined on input line 2251.
-
-
-LaTeX Warning: Citation `WG2' on page 39 undefined on input line 2290.
-
-
-LaTeX Warning: Reference `obslemma' on page 39 undefined on input line 2361.
-
-[39] [40]
-
-LaTeX Warning: Reference `sec: holrenorm' on page 41 undefined on input line 24
-78.
-
-
-Overfull \hbox (37.26022pt too wide) detected at line 2495
-[]
- []
-
-[41]
-
-LaTeX Warning: Reference `lem: diff applied E' on page 42 undefined on input li
-ne 2525.
-
-
-Overfull \hbox (56.24893pt too wide) detected at line 2540
-[] [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[][] [][] [] [] [] ^^O[] [][] [] 
-[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 M\OT1/zplm/m/n/10 )[] [](\OML/zplm/m/it/1
-0 M\OT1/zplm/m/n/10 )[]
- []
-
-
-Overfull \hbox (55.0047pt too wide) detected at line 2544
-[] \OML/zplm/m/it/10 ^^O[] [][] \OT1/zplm/m/n/10 = [] \OML/zplm/m/it/10 ^^O[] [
-][] [] []\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 M\OT1/zplm/m/n/10 )[]
- []
-
-
-LaTeX Warning: Reference `sec: holrenorm' on page 42 undefined on input line 25
-46.
-
-
-Overfull \hbox (34.4546pt too wide) detected at line 2553
-[][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [] [][] []\OT1/ppl/m/n/10 d\
-OML/zplm/m/it/10 t[] [] \OT1/ppl/m/n/10 d\OML/zplm/m/it/10 t[]\OT1/ppl/m/n/10 .
-
- []
-
-[42]
-
-LaTeX Warning: Reference `??' on page 43 undefined on input line 2561.
-
-
-LaTeX Warning: Reference `sec: extended descent' on page 43 undefined on input 
-line 2611.
-
-[43]
-Overfull \hbox (17.44392pt too wide) detected at line 2692
-\OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 ; []\OT1/zplm/m/n/10 [\O
-ML/zplm/m/it/10 d\OT1/zplm/m/n/10 ]) = \OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 ([])
- \OMS/zplm/m/n/10 
-[] \OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 ; []\OT1/zplm/m/n/10 
-) [] \OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 ([]) \OMS/zplm/m/n/10 
-[] [][] \OT1/zplm/m/n/10 = [][]\OT1/ppl/m/n/10 .
- []
-
-[44]
-
-LaTeX Warning: Citation `LiLi' on page 45 undefined on input line 2712.
-
-
-LaTeX Warning: Citation `LiLi' on page 45 undefined on input line 2730.
-
-[45]
-
-LaTeX Warning: Reference `sec: extended geometry' on page 46 undefined on input
- line 2784.
-
-
-LaTeX Warning: Reference `sec: extended geometry' on page 46 undefined on input
- line 2788.
-
-
-LaTeX Warning: Citation `polchinski' on page 46 undefined on input line 2806.
-
-[46]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2833.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2833.
-
-[47] [48] <xymatrix 2x2 166>
-
-LaTeX Warning: Citation `fact1' on page 49 undefined on input line 3010.
-
-[49]
-
-LaTeX Warning: Citation `fact1' on page 50 undefined on input line 3018.
-
-[50]
-Overfull \hbox (3.08302pt too wide) in paragraph at lines 3068--3071
-[]\OT1/ppl/m/n/10 This is a con-se-quence of Stokes' the-o-rem. Sup-pose $\OML/
-zplm/m/it/10  \OT1/zplm/m/n/10 = []\OML/zplm/m/it/10 []$\OT1/ppl/m/n/10 . The
-n, for any $\OML/zplm/m/it/10 ! \OMS/zplm/m/n/10 2 \OT1/zplm/m/n/10 
-[](\OML/zplm/m/it/10 N[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w\OT1/zplm/m/n/10 )
-)$
- []
-
-
-Overfull \hbox (25.35712pt too wide) detected at line 3087
-\OML/zplm/m/it/10 i[] \OT1/zplm/m/n/10 : \OML/zplm/m/it/10 A[] \OMS/zplm/m/n/10
- 
- [] ! [][] ^^Z [][] [] \OT1/ppl/m/n/10 .
- []
-
-[51] <xymatrix 2x2 164>
-
-LaTeX Warning: Reference `??' on page 52 undefined on input line 3179.
-
-
-LaTeX Warning: Reference `?' on page 52 undefined on input line 3179.
-
-[52] [53]
-
-LaTeX Warning: Reference `?' on page 54 undefined on input line 3290.
-
-[54]
-
-LaTeX Warning: Reference `??' on page 55 undefined on input line 3325.
-
-
-Overfull \hbox (5.8453pt too wide) in alignment at lines 3342--3344
- [][][] []
- []
-
-[55]
-Overfull \hbox (67.8433pt too wide) in paragraph at lines 3383--3386
-\OT1/ppl/m/n/10 Indeed, the right hand side as-signs to each open $\OML/zplm/m/
-it/10 U$ \OT1/ppl/m/n/10 the cochain com-plex $C[]\OT1/zplm/m/n/10 ([](\OML/zpl
-m/m/it/10 U\OT1/zplm/m/n/10 )) = []$\OT1/ppl/m/n/10 .
- []
-
-[56]
-
-LaTeX Warning: Reference `prop fhk1' on page 57 undefined on input line 3440.
-
-[57]
-
-LaTeX Warning: Reference `composition' on page 58 undefined on input line 3531.
-
-
-[58]
-
-LaTeX Warning: Reference `composition' on page 59 undefined on input line 3554.
-
-
-<xymatrix 2x3 296> [59]
-
-LaTeX Warning: Reference `' on page 60 undefined on input line 3662.
-
-
-Overfull \hbox (45.89546pt too wide) detected at line 3691
-[] [] \OMS/zplm/m/n/10 ! [] [] \OT1/ppl/m/n/10 ,
- []
-
-
-Overfull \hbox (3.5346pt too wide) detected at line 3698
-[] [] [] [] [] \OMS/zplm/m/n/10 
- [] [] \OT1/ppl/m/n/10 .
- []
-
-[60]
-
-LaTeX Warning: Citation `Closset1' on page 61 undefined on input line 3710.
-
-[61]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3716.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3716.
- (./chap2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3716.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3716.
-
-Package rerunfilecheck Info: File `chap2.out' has not changed.
-(rerunfilecheck)             Checksum: 65256CCDFA75769FCCB0435A4D972924;1858.
-
+Package rerunfilecheck Info: Checksums for `"hol descent".out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  880D004FF497630C657935EE22C51329;148.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3716.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 236.
  ) 
 Here is how much of TeX's memory you used:
- 23551 strings out of 492995
- 443752 string characters out of 6132704
- 577876 words of memory out of 5000000
- 26174 multiletter control sequences out of 15000+600000
- 36827 words of font info for 121 fonts, out of 8000000 for 9000
+ 23111 strings out of 492995
+ 439568 string characters out of 6132704
+ 570767 words of memory out of 5000000
+ 25989 multiletter control sequences out of 15000+600000
+ 30091 words of font info for 99 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 55i,14n,67p,3238b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,8n,67p,3246b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1708,22 +1085,16 @@ ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/public/xypic/xycmbt10.pfb>
-Output written on chap2.pdf (61 pages, 430697 bytes).
+exlive/2017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/urw/palatino/uplri8a.pfb>
+Output written on "hol descent.pdf" (4 pages, 124071 bytes).
 PDF statistics:
- 735 PDF objects out of 1000 (max. 8388607)
- 646 compressed objects within 7 object streams
- 260 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 100 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 20 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
