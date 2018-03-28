@@ -31,8 +31,8 @@ In \cite{CostelloRenormalization} Costello has provided a mathematical formulati
 The main takeaway is that to construct a full quantum field theory it suffices to define the theory at each energy (or length) scale and to ask that these descriptions be compatible as we vary the scale.
 The infamous infinities of quantum field theory arise due to studying behavior of theories at arbitrarily high energies (or small lengths). 
 In physics this is called the ultra-violet (UV) divergence. 
-
-A classical theory is described by a local functional $I$ on the space of fields....\brian{not sure how much to review. This might go in the overview section of the thesis.}
+Classically, a theory is defined by a {\em local functional} $I^{cl}$ which is a functional on the space of fields obtained by integrating a Lagrangian density.
+At each scale $L$ a theory is defined by an action functional $I[L]$, which is a function on the space of fields. 
 
 Summarizing, there are two main steps to construct a QFT in our formalism.
 \begin{itemize}
@@ -51,29 +51,32 @@ The family $\{I[L]\}$ defines a prequantization.
 For each $L$ we require that $I[L]$ satisfy the scale $L$ quantum master equation....
 \end{itemize}
 
+
 In this section we are concerned with the first step, that of renormalization. 
 The complication here is that even very natural field theories can have a very complicated collections of counterterms. 
 For instance, the naive quantization of Chern-Simons theory on a three-manifold has counterterms even at one-loop. 
 For holomorphic theories, however, we will show how the situation becomes much simpler at least at the level of one-loop.  
 
-\begin{thm}
-Let $\sE$ be the fields of a holomorphic theory on $\CC^d$ with classical interaction $I \in \oloc(\sE)$.  
-Then, there exists a one-loop prequantization $\{I[L] \; | \; L > 0\}$ of $I$ involving no counterterms. 
+\begin{lem}\ref{lem: hol renorm}
+Let $\sE$ be a holomorphic theory on $\CC^d$ with classical interaction $I^{cl}$.  
+Then, there exists a one-loop prequantization $\{I[L] \; | \; L > 0\}$ of $I^{cl}$ involving no counterterms. 
 That is, we can find a propagator $P_{\epsilon < L}$ for which the $\epsilon \to 0$ limit of
 \ben
 W(P_{\epsilon<L} , I) \mod \hbar^2
 \een
 exisits.
 Moreover, if $I$ is holomorphically translation invariant we can pick the family $\{I[L]\}$ to be holomorphically translation invariant as well.
-\end{thm}
+\end{lem}
 
 We will use this result repeatedly throughout this thesis. 
-For instance, knowing the one-loop behavior of a field theory is enough to study the possible anomalies to quantization. 
-We will leverage this to formulate and prove index theorems in the context of holomorphic QFT.
+This result tells us that the analytic difficulties are manageable and that the key focus will be on obstructions to satisfying the quantum master equation.
+In particular, a corollary of this result will give us a procedure for computing the one-loop obstruction explicitly in terms of Feynman diagrams. 
+We conjecture that an extension of this result should hold to all orders in $\hbar$ which would give a constructive way of analyzing the obstruction theory order by order in $\hbar$. 
+Nevertheless, we will leverage the one-loop behavior to formulate and prove index theorems in the context of holomorphic QFT.
 
 One surprising aspect of this comes from thinking about holomorphic theories in a different way. 
 Any supercharge $Q$ of a supersymmetric theory satisfying $Q^2 = 0$ allows one to construct a ``twist". 
-In some cases, where clifford multiplication with $Q$ spans all translations such a twist becomes a topological theory (in the weak sense). 
+In some cases, where Clifford multiplication with $Q$ spans all translations such a twist becomes a topological theory (in the weak sense). 
 In any case, however, such a $Q$ defines a ``holomorphic twist", which results in the type of holomorphic theories we consider.
 Regularization in supersymmetric theories, especially gauge theories, is notoriously difficult. 
 Our result implies that after twisting the analytic difficulties become much easier to deal with. 
@@ -89,15 +92,24 @@ quantizations, but the higher loop behavior remains a very interesting and subtl
 
 \subsection{Classical field theory}
 
+Classical field theory is a re
+
 \subsection{Renormalization}
 
-In the BV formalism, as developed in \cite{CosRenormalization,CG}, 
-a quantum BV theory consists of a space of fields and an effective action functional $\{S[L]\}_{L \in (0,\infty)}$,
+In the BV formalism, as developed in \cite{CostelloRenormalization,CG1,CG2}, 
+a quantum BV theory consists of a space of fields and an effective action functional $\{S[L]\}_{L \in (0,\infty)} \subset \sO(\sE)[[\hbar]]$,
 which is a family of non-local functionals on the fields that are parametrized by a length scale $L$ 
 and satisfy
 \begin{enumerate}[(a)]
-\item an exact renormalization group (RG) flow equation,
-\item the scale $L$ quantum master equation (QME) at every length scale $L$,~and
+\item the exact renormalization group (RG) flow equation
+\ben
+I[L'] = W(P_{L<L'}, I[L])
+\een
+\item the scale $L$ quantum master equation (QME) at every length scale $L$:
+\ben
+??
+\een
+and
 \item as $L \to 0$, the functional $S[L]$ has an asymptotic expansion that is local.
 \end{enumerate}
 The first condition ensures that the scale $L$ action functional $S[L]$ determines the functional at every other scale.
@@ -105,16 +117,16 @@ The second can be interpreted as saying that we have a proper path integral meas
 (i.e., the QME can be seen as a definition of the measure).
 The third condition implies that the effective action is a quantization of a classical field theory,
 since a defining property of a classical theory is that its action functional is local.
-(A full definition is available in Section 8.2 of \cite{CG}.)
+(A full definition is available in Section 8.2 of \cite{CG2}.)
 
 \begin{rmk}
 The length scale is associated with a choice of Riemannian metric on the underlying manifold,
-but the formalism of \cite{CosBook} keeps track of how the space of quantum BV theories depends upon such a choice 
+but the formalism of \cite{CostelloRenormalization} keeps track of how the space of quantum BV theories depends upon such a choice 
 (and other choices that might go into issues like renormalization).
 Hence, when the choices should not be essential --- such as with a topological field theory --- one can typically show rigorously that different choices give equivalent answers.
-The length scale is also connected with the use of heat kernels in \cite{CosBook},
+The length scale is also connected with the use of heat kernels in \cite{CostelloRenormalization},
 but one can work with more general parametrices (and hence more general notions of ``scale''),
-as explained in Chapter 8 of \cite{CG}.
+as explained in Chapter 8 of \cite{CG2}.
 We use a natural length scale in this section; 
 when it becomes relevant, in the context of factorization algebras, we switch to general parametrices.
 \end{rmk}
@@ -124,6 +136,9 @@ when it becomes relevant, in the context of factorization algebras, we switch to
 \section{Holomorphic field theories}
 
 The goal of this section is to define the notion of a holomorphic field theory. 
+This is a variant of Costello's definition of a BV theory, see the previous section, and we will take for granted that the reader is familiar with the general format.
+In summary, we modify the definition of a theory by inserting the word ``holomorphic" in front of most objects (bundles, differential operators, etc..).
+By applying the Dolbeault complex in appropriate locations, we will recover Costello's definition of a theory, but with a holomorphic flavor, see Table \ref{table: holtoBV}. 
 
 \subsection{The definition of a holomorphic theory}
 
@@ -165,12 +180,18 @@ Here, the sum is over all multi-indices $I = (i_1,\ldots, i_d)$ and
 \een 
 The length is defined by $|I| := i_1 + \cdots + i_d$. 
 
-The most basic example of a holomorphic differential operator is the $\partial$ operator which, for each $1 \leq \ell \leq d$, is a holomorphic differential operator from $E = \wedge^\ell T^{1,0*}X$ to $F = \wedge^{\ell+1} T^{1,0*}X$. 
+\begin{eg}
+The most basic example of a holomorphic differential operator is the $\partial$ operator for the trivial vector bundle. 
+For each $1 \leq \ell \leq d = \dim_\CC(X)$, it is a holomorphic differential operator from $E = \wedge^\ell T^{1,0*}X$ to $F = \wedge^{\ell+1} T^{1,0*}X$ which on sections is
+\ben
+\partial : \Omega^{\ell, hol}(X) \to \Omega^{\ell+1, hol}(X) .
+\een
 Locally, of course, it has the form
 \ben
 \partial = \sum_{i = 1}^{d} (\d z_i \wedge (-)) \frac{\partial}{\partial z_i},
 \een
 where $\d z_i \wedge (-)$ is the vector bundle homomorphism $\wedge^\ell T^{1,0*}X \to \wedge^{\ell+1} T^{1,0*}X$ sending $\alpha \mapsto \d z_i \wedge \alpha$. 
+\end{eg}
 
 The next piece of data we fix is:
 \begin{itemize}
@@ -237,7 +258,7 @@ If $\varphi \in \Omega^{0,*}(X , V)$ denotes a field the action is
 S(\varphi) = \int_X \left(\varphi, (\dbar + Q^{hol}) \varphi)\right)_V .
 \een
 
-The first example we explain is related to the subject of Chapter \ref{chap holsig} and will serve as the fundamental example of a holomorphic theory. 
+The first example we explain is related to the subject of Chapter \ref{chap: holsig} and will serve as the fundamental example of a holomorphic theory. 
 
 \begin{eg}\label{eg bg} {\em The free $\beta\gamma$ system}.
 Suppose that 
@@ -313,8 +334,10 @@ Then we can express polydifferential operators from $V$ to $W$ as
 Let $V$ be a vector bundle. 
 The space of {\em holomorphic Lagrangian densities} on $V$ is
 \ben
-\sO_{red}^{hol}(V) = \prod_{n > 0} {\rm Hom} ({\rm Jet}^{hol}(V)^{\tensor n} , K_X)_{S_n} .
+\sO_{red}^{hol}(V) = \prod_{n > 0} {\rm Hom} ({\rm Jet}^{hol}(V)^{\tensor n} , K_X)_{S_n} ,
 \een
+where Hom is taken in the category of holomorphic vector bundles.\footnote{The holomorphic vector bundle ${\rm Jet}^{hol}(V)$ is infinite dimensional and can be expressed as a pro-object in the category of holomorphic vector bundles. 
+We require the bundle maps to be continuous with respect to the natural adic topology.}
 Equivalently, a holomorphic Lagrangian density is of the form $F = \sum_n F_n \in \sO_{red}^{hol}(V)$ where each $F_n$ is a holomorphic polydifferential operator 
 \ben
 F_n : \sV \times \cdots \times \sV \to \Omega^{d,hol}_X .
@@ -353,7 +376,7 @@ In this way, we have produced a map
 Note that this bracket is of cohomological degree $-d+1$. 
 
 \begin{rmk}
-Note that the above still makes sense if $(-,-)_V$ is a polydifferential operator...
+Note that the above still makes sense if $(-,-)_V$ is a polydifferential operator...\brian{should i say more?}
 \end{rmk}
 
 We can now state the definition of a classical holomorphic theory. 
@@ -379,32 +402,18 @@ The underlying space of fields, as we have already seen is $\sE_V = \Omega^{0,*}
 We will write $I^{hol} = \sum_k I^{hol}_k$ where $I^{hol}_k$ is symmetric degree $k$.
 Now, we know that $I^{hol}_k$ is a $\Omega^{d,hol}_X$-valued functional of the form
 \ben
-(\varphi_1,\ldots,\varphi_k) \mapsto D_1(\varphi_1)\cdots D_k(\varphi_k) \in \Omega^{d,hol}_X
+I_k^{hol} : (\varphi_1,\ldots,\varphi_k) \mapsto D_1(\varphi_1)\cdots D_k(\varphi_k) \in \Omega^{d,hol}_X
 \een
 where $\varphi_i\in \sV = \Gamma^{hol}(X, V)$ and $D_i$ is a holomorphic differential operator on $\sV$.
 Every holomorphic differential operator on the holomorphic vector bundle $V$ extends to a differential operator on its Dolbeault complex $\sE_V = \Omega^{0,*}(X, V)$. 
 Thus, we can define the functional
 \ben
-(\varphi_1,\ldots, \varphi_k) \mapsto \int D_1(\alpha_1 \tensor \varphi_1)\cdots D_k(\alpha_k \tensor \varphi_k)
+I_k^{\Omega^{0,*}} : (\varphi_1,\ldots, \varphi_k) \mapsto \int D_1 (\varphi_1)\cdots D_k(\varphi_k)
 \een
 where, now $\varphi_i$ is a section of the Dolbeault complex $\Omega^{0,*}(X , V)$. 
 The symbol $\int$ reminds us that we are working modulo total derivatives, so that the above expression defines an element of $\oloc(\sE_V)$. 
 This defines a linear map $\olochol(V) \to \oloc(\sE_V)$ that we denote $I^{hol} \mapsto I^{\Omega^{0,*}}$. 
-
-The following is a useful table to show how we are producing a BV theory from a holomorphic theory.
-
-\begin{center}
-\begin{tabular}{ |c|c|c| } 
- \hline
- Holomorphic theory & BV theory \\
- \hline \hline
-Holomorphic bundle $V$ & Space of fields $\sE_V = \Omega^{0,*}(X, V)$  \\ 
-Holomorphic differential operator $Q^{hol}$ & Linear BRST operator $\dbar + Q^{hol}$ \\ 
-Non-degenerate pairing $(-,-)_V$ & $(-1)$-symplectic structure $\omega_{V}$ \\ 
-Holomorphic Lagrangian $I^{hol}$ & Local functional $I^{\Omega^{0,*}} \in \oloc(\sE_V)$ \\ 
- \hline
-\end{tabular}
-\end{center}
+Note that since $I^{hol}$ is cohomological degree $d$, the local functional $I^{\Omega^{0,*}}$ is degree zero.
 
 \begin{lem} Every classical holomorphic theory $(V, Q^{hol},(-,-)_V, I^{hol})$ determines the structure of a classical BV theory.
 The underlying free BV theory is given in Definition/Lemma \ref{dfn hol free theory} $(\sE_V, Q, \omega_V)$ and the interaction is $I^{\Omega^{0,*}}$. 
@@ -417,6 +426,25 @@ We must show that $Q^{hol}I^{hol} + \frac{1}{2} \{I^{hol},I^{hol}\}^{hol} = 0$ i
 Since $I^{\Omega^{0,*}}$ is defined using holomorphic differential operators, the first term vanishes.
 The fact that $Q^{hol}I^{hol} + \frac{1}{2} \{I^{hol},I^{hol}\}^{hol} = 0$ implies $Q^{hol}I^{\Omega^{0,*}} + \frac{1}{2} \{I^{\Omega^{0,*}},I^{\Omega^{0,*}}\} = 0$ follows immediately from our definitions.
 \end{proof}
+
+Table \ref{table: holtoBV} is a useful summary showing how we are producing a BV theory from a holomorphic theory.
+
+\begin{table}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Holomorphic theory & BV theory \\
+ \hline \hline
+Holomorphic bundle $V$ & Space of fields $\sE_V = \Omega^{0,*}(X, V)$  \\ 
+Holomorphic differential operator $Q^{hol}$ & Linear BRST operator $\dbar + Q^{hol}$ \\ 
+Non-degenerate pairing $(-,-)_V$ & $(-1)$-symplectic structure $\omega_{V}$ \\ 
+Holomorphic Lagrangian $I^{hol}$ & Local functional $I^{\Omega^{0,*}} \in \oloc(\sE_V)$ \\ 
+ \hline
+\end{tabular}
+\caption{From holomorphic to BV}
+\label{table: holtoBV}
+\end{table}
+
+
 
 \begin{eg} {\em Holomorphic $BF$-theory}
 Let $\fg$ be a Lie algebra and $X$ any complex manifold.
@@ -442,7 +470,7 @@ I^{\Omega^{0,*}} (\alpha, \beta) = \int_X \<\beta, [\alpha,\alpha]\>_\fg .
 \een
 The total action is $S(\alpha,\beta) = \int \<\beta, \dbar \alpha\> + \<\beta,[\alpha,\alpha]\>_\fg$.
 This is formally similar to $BF$ theory (see below) and for that reason we refer to it as {\em holomorphic} BF theory.
-In \cite{johanson}, or for a more mathematical treatment see \cite{CostelloYangian}, it is shown that this theory is a twist of $N=1$ supersymmetric Yang-Mills on $\RR^4$.
+In \cite{johansen1}, or for a more mathematical treatment see \cite{CostelloYangian}, it is shown that this theory is a twist of $N=1$ supersymmetric Yang-Mills on $\RR^4$.
 \end{eg}
 
 \begin{eg} {\em Topological $BF$-theory}
@@ -832,7 +860,7 @@ A gauge fixing operator is an operator on fields
 Q^{GF} : \sE_V \to \sE_V[1]
 \een
 of cohomological degree $-1$ such that $[Q, Q^{GF}]$ is a generalized Laplacian on $\sE$ where $Q$ is the linearized BRST operator. 
-For a full definition of this see Definition ?? in \ref{CG}. 
+For a full definition of this see Definition 5.4.0.5 in \cite{CG2}. 
 
 For holomorphic theories there is a convenient choice for a gauge fixing operator. 
 To construct it we fix the standard flat metric on $\CC^d$. 
@@ -953,7 +981,7 @@ In the above expression, we use the convention that $z^{k+1} = z^1$.
 We will refer to the collection of data $(k, (\vec{n}), \Phi)$ in the definition as {\em wheel data}.
 The motivation for this is that the weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ is the analytic part of the full weight $W_{\Gamma}(P^V_{\epsilon<L}, I)$ where $\Gamma$ is a wheel with $k$ vertices. 
 
-We have reduced the proof of Theorem \ref{thm holo renorm} to showing that the $\epsilon \to 0$ limit of the analytic weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ exists for any tripe of wheel data $(k, (\vec{n}), \Phi)$.
+We have reduced the proof of Lemma \ref{lem: hol renorm} to showing that the $\epsilon \to 0$ limit of the analytic weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ exists for any tripe of wheel data $(k, (\vec{n}), \Phi)$.
 To do this, there are two steps. 
 First, we show a vanishing result that says when $k \geq d$ the  weights vanish for purely algebraic reasons. 
 The second part is the most technical aspect of the chapter where we show that for $k > d$ the weights have nice asymptotic behavior as a function of $\epsilon$.
@@ -1004,7 +1032,7 @@ For any vector field $X$ on $\CC^{d(d-1)}$ the interior derivative $i_X$ is a gr
 Suppose $\omega_1,\omega_2$ are two $(0,*)$ forms on $\CC^{d(d-1)}$ such that the sum of their degrees is equal to $d^2$. 
 Then, $\omega_1 \iota_X \omega_2$ is a top form for any vector field on $\CC^{d(d-1)}$.
 Since $\omega_1 \omega_2 = 0$ for form type reasons, we conclude that $\omega_1 \iota_X \omega_2 = \pm (i_X \omega_1) \omega_2$ with sign depending on the dimension $d$. 
-Applied to the vector field $\zbar_i^1\partial / \partial \wbar_i^1$ in (\cite{productprops1}) we see that the expression can be written (up to a sign) as 
+Applied to the vector field $\zbar_i^1\partial / \partial \wbar_i^1$ in (\ref{productprops1}) we see that the expression can be written (up to a sign) as 
 \ben
 \eta^1 \left(\sum_{\alpha=1}^{d-1} \eta^\alpha \prod_{i=1}^d \left(\sum_{\alpha = 1}^{d-1} \d \wbar_{i}^\alpha\right) \right) \left(\prod_{i=1}^d \d \wbar_i^1\right) \prod_{\alpha=2}^{d-1} \left( \eta^\alpha \prod_{i=1}^d \d \wbar_i^\alpha\right) .
 \een
@@ -1147,6 +1175,75 @@ This concludes the proof.
 %^{n_j^\alpha} \right| 
 \end{proof}
 
+\subsection{A general fact about chiral anomalies}
+
+Once any theory has been renormalized, the next step to constructing a quantization is to solve the quantum master equation. 
+In general, there may be an obstruction to solving this equation.
+Such obstructions in the physics literature are known as {\em anomalies}.
+In general, it may be difficult to characterize such anomalies, but in the case of holomorphic theories on $\CC^d$ our result in the previous section makes this problem much easier. 
+Indeed, since there are no counterterms requires, we can plug in the RG flow of the classical action functional 
+and study the quantum master equation directly. 
+As is usual in perturbation theory, we work order by order in $\hbar$ to construct a quantization.
+In this section we will study the first step, which is to promote a classical theory to a solution of the quantum master equation modulo $\hbar^2$. 
+
+As above, $\sE$ will be a holomorphically translation invariant theory on $\CC^d$ and $I$ will be the holomorphic interaction. 
+The linearized BRST operator is of the form $Q = \dbar + Q^{hol}$ where $Q^{hol}$ is a holomorphic differential operator. 
+
+Recall, from Section \ref{sec: qme} that the regularized quantum master equation at scale $L$ is 
+\ben
+Q I [L] + \hbar \Delta_L I[L] + \frac{1}{2} \{I[L], I[L]\}_L = 0 .
+\een
+This is equivalent to the equation $(Q + \hbar \Delta_L) e^{I[L]/\hbar} = 0$. 
+Therefore, the obstruction to satisfying the quantum master equation at scale $L$ is
+\ben
+\Theta[L] = \hbar^{-1} \left(Q I [L] + \hbar \Delta_L I[L] + \frac{1}{2} \{I[L], I[L]\}_L \right),
+\een
+or, equivalently $\Theta[L] = e^{-I[L]/\hbar} (Q + \hbar\Delta_L)e^{I[L]/\hbar}$. 
+By definition, $I[L] = \lim_{\epsilon \to 0} W(P_{\epsilon<L}, I)$ which is equivalent to $e^{I[L]/\hbar} = \lim_{\epsilon \to 0} e^{\hbar \partial_{P_{\epsilon<L}}} e^{I / \hbar}$ as a formal series in $\hbar$. 
+Thus, we can rewrite
+\ben
+(Q + \hbar \Delta_L) e^{I[L]/\hbar} = \lim_{\epsilon \to 0} (Q + \hbar \Delta_L)  \left(e^{\hbar \partial_{P_{\epsilon<L}}} e^{I / \hbar}\right) .
+\een
+Now, the operator $Q$ commutes with $e^{\hbar \partial_{P_{\epsilon < L}}}$ and $\Delta_L e^{\hbar \partial_{P_{\epsilon < L}}} = e^{\hbar \partial_{P_{\epsilon < L}}} \Delta_\epsilon$ acting on functionals. 
+Thus, 
+\ben
+\lim_{\epsilon \to 0} (Q + \hbar \Delta_L)  \left(e^{\hbar \partial_{P_{\epsilon<L}}} e^{I / \hbar}\right) = \lim_{\epsilon \to 0}  e^{\hbar \partial_{P_{\epsilon < L}}} (Q + \hbar \Delta_\epsilon) e^{I / \hbar} .
+\een
+Since $\Delta_\epsilon$ is a BV operator, we can rewrite the right-hand side as
+\ben
+\frac{1}{\hbar} \lim_{\epsilon \to 0} e^{\hbar P_{\epsilon < L}} (Q I + \hbar \Delta_\epsilon I + \{I, I\}_\epsilon) e^{I / \hbar}.
+\een
+For every $\epsilon > 0$ we have $\Delta_\epsilon I = 0$.
+Moreover, since $I$ is holomorphic $\dbar I = 0$. 
+\brian{finish}
+
+The main result of this section is the following.
+
+\begin{lem}\label{lem: gen chiral anomaly}
+The obstruction $\Theta = \lim_{L \to 0} \Theta[L]$ to satisfying the one-loop quantum master equation is given by the expression
+\ben
+\Theta = \lim_{L \to 0} \lim_{\epsilon \to 0} \sum_{\Gamma \in {\rm Wheel}_{d+1}} W_\Gamma(P_{\epsilon < L}, K_\epsilon,I)
+\een
+where the sum is over all wheels with $(d+1)$-vertices. 
+\end{lem}
+
+\begin{proof}
+The result will follow from two steps.
+\begin{enumerate}
+\item If $\Gamma$ is a wheel with $k < d+1$ vertices, then $ W_\Gamma(P_{\epsilon < L}, K_\epsilon,I)
+ = 0$ identically. 
+\item If $\Gamma$ is a wheel with $k > d+1$ vertices, then $\lim_{\epsilon \to 0} W_\Gamma(P_{\epsilon < L}, K_\epsilon,I) =0$.
+\end{enumerate} 
+\end{proof}
+%By the compatibility between the QME and RG flow, it suffices to solve this equation at any scale $L$. 
+%Thus, $(Q + \hbar \Delta_L)e^{I[L] / \hbar} = 0$ if and only if 
+%\begin{lem}
+%\ben
+%\lim_{L \to 0} \lim_{\epsilon \to 0} e^{-I / \hbar} e^{\hbar \partial_{P_{\epsilon < L}}} \left(\{I, I\}_\epsilon e^{I / \hbar}\right) = \lim_{L \to 0} \lim_{\epsilon \to 0} \sum_{\Gamma} W_\Gamma(P_{\epsilon<L}, K_\epsilon, I) \mod \hbar^2 .
+%\een
+%\end{lem}
+
+
 \subsection{Relation to renormalization of topological theories}
 
 \brian{it's a fun corollary to see that a slight modification of the above actually shows that topological BF theory in any dimension has a one-loop quantization with no counterterms, not sure if I'll put that here.}
@@ -1228,7 +1325,7 @@ lives in $\clie^*(\fh)$ for every scale $L$, and
 \end{enumerate}
 \end{dfn}
 
-In other words, we simply follow the constructions of \cite{CosRenormalization,CG} working over the base ring $\clie^*(\fh)$.
+In other words, we simply follow the constructions of \cite{CosRenormalization} working over the base ring $\clie^*(\fh)$.
 A careful reading of those texts shows that the freedom to work over interesting dg commutative algebras is built into the formalism.
 %\owen{We may need to be a bit careful since a version of nilpotency is used there but ..}
 %Note that our situation is particularly simple since the non-equivariant classical field theory is free and hence admits a very simple quantization,
@@ -1237,7 +1334,7 @@ A careful reading of those texts shows that the freedom to work over interesting
 \subsection{The case of a local Lie algebra}
 
 The above formalism works equally well, with some slight modifications, if we replace the Lie algebra $\fh$ by a {\em local Lie algebra} $\sL$ on the manifold where the theory lives.
-This is done in detail in Section \ref{} of \cite{CG}, and we refer the reader there for more details. 
+This is done in detail in Chapter 11 of \cite{CG2}, and we refer the reader there for more details. 
 
 The data is essentially the same as above.
 By definition an \brian{finish}
@@ -1258,6 +1355,10 @@ the interaction terms $I^\sL[L]$ encode the variation of the path integral measu
 (Solving the QME is our definition of well-posedness of the measure.)
 This should not be confused with {\em gauging} a theory by $\sL$, which involves putting the elements of $\sL$ in the theory as propagating fields.
 \end{rmk}
+
+\bibliographystyle{alpha}
+%\bibliographystyle{spmpsci}  
+\bibliography{thesis}
 
 \end{document}
 

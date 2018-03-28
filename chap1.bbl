@@ -1,0 +1,36 @@
+\begin{thebibliography}{Cos11}
+
+\bibitem[CG]{CG2}
+Kevin Costello and Owen Gwilliam.
+\newblock Factorization algebras in quantum field theory. {V}ol. 2.
+\newblock available at \url{http://people.mpim-bonn.mpg.de/gwilliam}.
+
+\bibitem[CG17]{CG1}
+Kevin Costello and Owen Gwilliam.
+\newblock {\em Factorization algebras in quantum field theory. {V}ol. 1},
+  volume~31 of {\em New Mathematical Monographs}.
+\newblock Cambridge University Press, Cambridge, 2017.
+
+\bibitem[Cos]{CostelloYangian}
+Kevin Costello.
+\newblock {S}upersymmetric gauge theory and the {Y}angian.
+\newblock Available at \url{http://arxiv.org/abs/1303.2632}.
+
+\bibitem[Cos11]{CostelloRenormalization}
+Kevin Costello.
+\newblock {\em Renormalization and effective field theory}, volume 170 of {\em
+  Mathematical Surveys and Monographs}.
+\newblock American Mathematical Society, Providence, RI, 2011.
+
+\bibitem[Joh94]{johansen1}
+A.~Johansen.
+\newblock Twisting of {N}=1 susy gauge theories and heterotic topological
+  theories.
+\newblock arXiv:hep-th/9403017, 1994.
+
+\bibitem[Li]{LiVertex}
+Si~Li.
+\newblock {V}ertex algebras and quantum master equation.
+\newblock available at \url{https://arxiv.org/abs/1612.01292}.
+
+\end{thebibliography}

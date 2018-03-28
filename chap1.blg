@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: chap1.aux
+The style file: alpha.bst
+Database file #1: thesis.bib
+Warning--I didn't find a database entry for "productprops1"
+Warning--I didn't find a database entry for "CosRenormalization"
+You've used 6 entries,
+            2543 wiz_defined-function locations,
+            598 strings with 5333 characters,
+and the built_in function-call counts, 1642 in all, are:
+= -- 158
+> -- 70
+< -- 6
++ -- 20
+- -- 20
+* -- 96
+:= -- 306
+add.period$ -- 18
+call.type$ -- 6
+change.case$ -- 30
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 72
+empty$ -- 109
+format.name$ -- 30
+if$ -- 314
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 4
+newline$ -- 33
+num.names$ -- 18
+pop$ -- 35
+preamble$ -- 1
+purify$ -- 38
+quote$ -- 0
+skip$ -- 50
+stack$ -- 0
+substring$ -- 42
+swap$ -- 6
+text.length$ -- 6
+text.prefix$ -- 4
+top$ -- 0
+type$ -- 40
+warning$ -- 0
+while$ -- 14
+width$ -- 9
+write$ -- 74
+(There were 2 warnings)

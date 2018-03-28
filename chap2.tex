@@ -13,6 +13,9 @@
 \usetikzlibrary{decorations.pathreplacing}
 \usepackage{pgffor}
 
+
+\def\Jac{{\rm Jac}}
+
 \title{The higher dimensional holomorphic $\sigma$-model}
 
 \def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
@@ -332,7 +335,7 @@ A formal exponential is useful because it equips the frame bundle with a $(\Vect
 %\begin{rmk} In \brian{Cattaneo-Felder, more} this bundle is denoted $X^{aff} \to X$ and is called the affine bundle. 
 %\end{rmk}
 
-\begin{prop} \label{gauge equiv}
+\begin{prop} \label{gauge equiv} 
 A formal exponential $\sigma$ pulls back to a $\GL_n$-equivariant map $\tilde{\sigma} : \Fr_X \to X^{coor}$,
 and hence equips $(\Fr_x, \sigma^* \omega^{coor})$ with the structure
 of a principal $(\Vect,\GL_n)$-bundle with flat connection.
@@ -387,8 +390,8 @@ In particular, every torsion-free affine connection determines a formal exponent
 %\brian{MC equation, gauge equivalence for different choices of splitting}
 
 \begin{dfn}
-A {\em Gelfand-Kazhdan structure} on the frame bundle $\Fr_X\to X$ of a complex manifold $X$ of dimension $n$ is a formal exponential $\sigma$, 
-which makes $\Fr_X$ into a flat $(\Vect,\GL_n)$-bundle with connection one-form $\omega^\sigma$, 
+A {\em Gelfand-Kazhdan structure} is a complex manifold $X$ of dimension $n$ together with a formal exponential $\sigma$, 
+which makes the frame bundle $\Fr_X$ into a flat $(\Vect,\GL_n)$-bundle with connection one-form $\omega^\sigma$, 
 the pullback of $\omega^{coor}$ along the $\GL_n$-equivariant lift $\tilde{\sigma} : \Fr_X \to X^{coor}$.
 \end{dfn}
 
@@ -616,18 +619,26 @@ by composing the projection map $X^{coor} \to X_k^{coor}$ with the $\GL_n$-equiv
 \begin{dfn}
 {\em Gelfand-Kazhdan descent} is the functor
 \[
-\desc_\GK: \GK_n^\op \times \WGLCAT \to \Pro(\VB)_{flat}
+\desc : \GK_n^\op \times \WGLCAT \to \Pro(\VB)_{flat}
 \]
-sending $(\Fr_X,\sigma)$ --- a frame bundle with formal exponential
+sending $(X,\sigma)$ --- a Gelfand-Kazhdan structure
 --- and a formal vector bundle $\cV$ 
 to the pro-vector bundle $\Fr_X \times^{\GL_n} \cV$ with flat connection induced by the Grothendieck connection.
 \end{dfn}
+
+When the Gelfand-Kazhdan structure $(X, \sigma)$ is fixed we will denote the corresponding functor $\desc((X, \sigma), -) :  \WGLCAT \to \Pro(\VB)_{flat}$ by $\desc_{X,\sigma}$. 
+
+By Proposition \label{gauge equiv} we see that for any two choices of formal exponentials $\sigma,\sigma'$ on the same complex manifold $X$ that there is an equivalence of functors
+\ben
+\desc((X, \sigma) , -) \simeq \desc((X, \sigma'), -) :  \WGLCAT \to \Pro(\VB)_{flat} .
+\een
+Thus, we will often abuse notation and write $\desc_{X,\sigma} = \desc_X$ when a formal exponential is understood. 
 
 This functor is, in essence, Harish-Chandra descent, but in a slightly exotic context.
 It has several nice properties.
 
 \begin{lem}\label{prop lax}
-For any choice of Gelfand-Kazhdan structure $(\Fr_X,\sigma)$, the descent functor $\desc_\GK((\Fr_X,\sigma),-)$ is lax symmetric monoidal.
+For any choice of Gelfand-Kazhdan structure $(X,\sigma)$, the descent functor $\desc((X,\sigma),-)$ is lax symmetric monoidal.
 \end{lem}
 
 \begin{proof}
@@ -638,29 +649,27 @@ For every $\cV,\cW$ in $\WGLCAT$, we have natural maps
 and the composition provides the natural transformation producing the lax symmetric monoidal structure.
 \end{proof}
 
-In particular, we observe that the de Rham complex of $\desc_\GK((\Fr_X,\sigma),\hO_n)$ is a commutative algebra object in $\Omega^*(X)$-modules. 
+In particular, we observe that the de Rham complex of $\desc((X,\sigma),\hO_n)$ is a commutative algebra object in $\Omega^*(X)$-modules. 
 As every object of $\WGLCAT$ is an $\hO_n$-module and the morphisms are $\hO_n$-linear, 
-we find that descent actually factors through the category of $\desc_\GK((\Fr_X,\sigma),\hO_n)$-modules. 
+we find that descent actually factors through the category of $\desc((\Fr_X,\sigma),\hO_n)$-modules. 
 In sum, we have the following.
 
 \begin{lem}
-The descent functor $\desc_\GK((\Fr_X,\sigma),-)$ factors as a composite
+The descent functor $\desc((X,\sigma),-)$ factors as a composite
 \[
-\VB_n \xto{\widetilde{\desc}_\GK((\Fr_X,\sigma),-)} \Mod_{\desc_\GK((\Fr_X,\sigma),\hO_n)} \xto{\txt{forget}} \VB_{flat}(X)
+\VB_n \xto{\overline{\desc}((X,\sigma),-)} \Mod_{\desc((X,\sigma),\hO_n)} \xto{\txt{forget}} \VB_{flat}(X)
 \]
-and the functor $\widetilde{\desc}_\GK((\Fr_X,\sigma),-)$ is symmetric monoidal.
+and the functor $\overline{\desc}((X,\sigma),-)$ is symmetric monoidal.
 \end{lem}
 
-As before, we let $\sdesc_{\GK}$ denote the associated local system
-obtained from $\desc_{\GK}$ by taking horizontal sections. This
-functor is well-known: it recovers the tensor bundles on $X$.
+As before, we let $\sdesc$ denote the associated local system obtained from $\desc$ by taking horizontal sections. This functor is well-known: it recovers the tensor bundles on $X$.
 
 If $E \to X$ is a holomorphic vector bundle on $X$ we denote by
-$J_{hol}^\infty(E)$ the holomorphic $\infty$-jet bundle of $E$. If
+$J^{hol}(E)$ the holomorphic $\infty$-jet bundle of $E$. If
 $E_0$ is the fiber of $E$ over a point $x \in X$, then the fiber of
 this pro-vector bundle over $x$ can be identified with
 \ben
-J_{hol}^\infty (E)|_{x} \cong E_0 \times \CC [[ t_1,\ldots,t_n]] .
+J^{hol} (E)|_{x} \cong E_0 \times \CC [[ t_1,\ldots,t_n]] .
 \een
 This pro-vector bundle has a canonical flat connection.
 
@@ -668,7 +677,7 @@ This pro-vector bundle has a canonical flat connection.
 For $\cV \in \VB_n$ corresponding to the $\GL_n$-representation $V$,
 there is a natural isomorphism of flat pro-vector bundles
 \[
-\desc_\GK((\Fr(X),\omega^\sigma),\cV) \cong J_{hol}^\infty(\Fr_X
+\desc((X, \sigma),\cV) \cong J^{hol}(\Fr_X
 \times^{\GL_n} V)
 \]
 In other words, the functor of descent along the frame bundle is
@@ -677,10 +686,10 @@ naturally isomorphic to the functor of taking $\infty$-jets of the associated bu
 
 As a corollary, we see that the associated sheaf of flat sections is
 \ben
-\sdesc_{\GK}(\omega^\sigma, \cV) \cong \Gamma_{hol}(\Fr_X
+\sdesc ((X,\sigma), \cV) \cong \Gamma^{hol}(\Fr_X
 \times^{\GL_n} V)
 \een
-where $\Gamma_{hol}(-)$ denotes the space of holomorphic sections. 
+where $\Gamma^{hol}(-)$ denotes holomorphic sections. 
 
 In other words, Gelfand-Kazhdan descent produces every tensor bundle. 
 For example, for the defining representation $V = \CC^n$ of $\GL_n$, we have $\cV =\hT_n$, 
@@ -769,22 +778,22 @@ Moreover, we have the following.
 The cohomology class of $(2\pi i)^{-k} S_k(\At(V))$ provides a section
 of the sheaf $H^k(X ; \Omega^k_{hol})$. On any compact K\"ahler manifold, it agrees with $c_k(V)$.
 \end{lem}
-
+desc
 \subsubsection{The formal Atiyah class}
 
 We now wish to show that Gelfand-Kazhdan descent sends an exact sequence in $\VB_{\hc}$ to an exact sequence in $\vb(\GK_n)$ (and hence in $\vb(\Hol_n)$). 
 It will then remain to verify that for each tensor bundle on $\Hol_n$, 
 there is an exact sequence over the formal $n$-disk that descends to the Atiyah sequence for that tensor bundle.
 
-We will use the notation $\desc_\GK(\cV)$ to denote the functor $\desc_\GK(-,\cV): \GK_n^\op \to \Pro(\vb)_{flat}$, 
+We will use the notation $\desc(\cV)$ to denote the functor $\desc(-,\cV): \GK_n^\op \to \Pro(\vb)_{flat}$, 
 since we want to focus on the sheaf on $\GK_n$ (or $\Hol_n$) defined
 by each formal vector bundle~$\cV$. Taking flat sections we get an
-$\cO$-module $\sdesc_{\GK}(\cV)$ which is locally free of finite
+$\cO$-module $\sdesc(\cV)$ which is locally free of finite
 rank and so determines an object in $\vb(\GK_n)$. 
 
 \begin{lem}
 If $$\cA \to \cB \to \cC$$ is an exact sequence in $\vb_{\hc}$, then 
-$$\sdesc_\GK(\cA) \to \sdesc_\GK(\cB) \to \sdesc_\GK(\cC)$$ 
+$$\sdesc(\cA) \to \sdesc(\cB) \to \sdesc(\cC)$$ 
 is exact in $\vb(\GK_n)$.
 \end{lem}
 
@@ -799,14 +808,14 @@ has a small neighborhood isomorphic to a small neighborhood of $0 \in
 $\cO$-module at a point $x$ injects into the $\infty$-jet at
 $x$. Hence, it suffices to verifying the exactness of the sequence of
 $\infty$-jets. Hence, we consider the $\infty$-jet at $0 \in \CC^n$ of
-the sequence $\desc_\GK(A) \to \desc_\GK(B) \to \desc_\GK(C)$. But
+the sequence $\desc(A) \to \desc(B) \to \desc(C)$. But
 this sequence is simply $A \to B \to C$, which is exact by
 hypothesis.
 \end{proof}
  %To see that we recover our original sequence, note that \owen{not sure how much to add here}
 
 \begin{cor}
-There is a canonical map from $\Ext^1_{\hc}(\cB,\cA)$ to $\Ext^1_{\GK_n}(\sdesc_\GK(\cB), \sdesc_\GK(\cA))$.
+There is a canonical map from $\Ext^1_{\hc}(\cB,\cA)$ to $\Ext^1_{\GK_n}(\sdesc(\cB), \sdesc(\cA))$.
 \end{cor}
 
 In particular, once we produce the $\hc$-Atiyah sequence for a formal tensor field $\cV$, 
@@ -939,7 +948,7 @@ $$\Ext^1(\cV \tensor_{\hO_n} \hOmega_{n}^1, \cV) \cong \clie^1(\Vect,\GL_n; \hOm
 and from the observation that an exact sequence in $\vb(\hD^n)$ maps to an exact sequence in $\vb(\GK_n)$.
 
 \begin{cor}
-There is a cocycle $\At^\GF(\cV) \in \clie^1(\Vect,\GL_n; \hOmega^1_n \otimes_{\hO_n} \End_{\hO_n}(\cV))$ representing the Atiyah class $\At(\desc_\GK(\cV))$. 
+There is a cocycle $\At^\GF(\cV) \in \clie^1(\Vect,\GL_n; \hOmega^1_n \otimes_{\hO_n} \End_{\hO_n}(\cV))$ representing the Atiyah class $\At(\desc(\cV))$. 
 \end{cor}
 
 We call this cocycle the Gelfand-Fuks-Atiyah class of $\cV$ since it
@@ -967,14 +976,14 @@ $\cO$-modules.
 
 %\owen{\begin{proof}[Proof of lemma]
 %The key is to use the Lie algebra structure on the formal Atiyah sequence for $\cV$. 
-%The action of formal vector fields on $\cV$ descends to the action of vector fields on the tensor bundle $\desc_\GK(\cV)$, which is canonical and determined by the Lie derivative.
-%Likewise, the action of $\cO$-linear endomorphisms $\End_{\hO_n}(\cV)$ descends to the action of $\cO$-linear endomorphisms $\End_{\cO}(\desc_\GK(\cV))$, which is also canonical.
+%The action of formal vector fields on $\cV$ descends to the action of vector fields on the tensor bundle $\desc(\cV)$, which is canonical and determined by the Lie derivative.
+%Likewise, the action of $\cO$-linear endomorphisms $\End_{\hO_n}(\cV)$ descends to the action of $\cO$-linear endomorphisms $\End_{\cO}(\desc(\cV))$, which is also canonical.
 %Hence, we have a short exact sequence of Lie algebras in sheaves on the site $\GK_n$, 
 %and its leftmost and rightmost terms are the same as Atiyah's sequence.
 %We need to identify the Lie algebras in the middle of the exact sequences.
 %One strategy would be to reinterpret $\cA(\cV)$ as "invariant vector fields on the total space of $\cV$ over $\hD^n$," although that may seem silly.
 %\end{proof}}
-%\owen{BW suggests the following approach: verify that $\desc_\GK(\Diff^{\leq 1})$ is the appropriate tensor bundle by directly doing sufficiently many examples}
+%\owen{BW suggests the following approach: verify that $\desc(\Diff^{\leq 1})$ is the appropriate tensor bundle by directly doing sufficiently many examples}
 %%\owen{I'd like to say that $$\loc(\Diff^{\leq 1}_\cV) = \Diff^{\leq 1}_{\loc(\cV)}$$ but I'm not sure how to write something rigorous. The crux seems to be showing that this localized Lie algebra, whose avatar on the formal disk acts naturally on $\cV$ as a ``Lie algebroid,'' acts on the localization of $\cV$ in the appropriate way.}
 %
 %\owen{Vague thoughts: 
@@ -1125,19 +1134,22 @@ We fix formal coordinates $\{t_j\}$ and let $\{\partial_j\}$ be the associated c
 Then the structure map is given by the Lie derivative $\rho_{\hT} (f^i \partial_i , \partial_j ) = - \partial_j f^i$. 
 The formula for the cocycle follows from the Proposition. 
 \end{proof}
+
+In the above statement, the vector field $f^i \partial_i$ appeared in the Atiyah class through its {\em Jacobian} $\partial_j f^i$. 
+For any formal vector field $X = f^i \partial_i$ we will use the notation $\Jac(X) = (\partial_j f^i) \in {\rm Mat}_n(\hO_n)$ for Jacobian.
+This is an $n \times n$ matrix of formal power power series.
  
 We can use this result to explicitly compute the cocycles representing the Gelfand-Kazhdan Chern characters. 
 For instance, we have the following formulas that will be useful in later sections.
 
-\def\Jac{{\rm Jac}}
+
 
 \begin{cor}
 The $k$th component $\ch_k^{\rm GF}(\hT_n)$ of the universal Chern character of the formal tangent bundle is the cocycle
 \ben
-\frac{1}{(-2\pi i)^k k!} {\rm Tr}({\rm At}^\GF(\hT_n)^{\wedge k}): (f_1^i \partial_i, \ldots, f_k^i \partial_i) \mapsto \frac{1}{(-2\pi i)^k k!} {\rm Tr} \left(\d_{dR}(\Jac(f_1)) \wedge \cdots \wedge \d_{dR}(\Jac(f_k))\right)
+\frac{1}{(-2\pi i)^k k!} {\rm Tr}({\rm At}^\GF(\hT_n)^{\wedge k}): (X_1,\ldots,X_k) \mapsto \frac{1}{(-2\pi i)^k k!} {\rm Tr} \left(\d_{dR}(\Jac(X_1)) \wedge \cdots \wedge \d_{dR}(\Jac(X_k))\right)
 \een 
 in $\clie^k(\Vect,\GL_n; \hOmega_n^k)$.
-Here, $\Jac(f)$ is the $n \times n$ matrix valued in $\hO_n$ with $(ij)$ entry given by $\partial_j f_i$.  
 As the de Rham differential $\d_{dR} : \hOmega^{k-1}_n \to \hOmega^{k}_n$ is $\Vect$-equivariant, 
 there is an element $\alpha_{k-1}$ in $\clie^k(\Vect,\GL_n; \hOmega_n^{k-1})$ such that
 \be\label{k to k-1}
@@ -1145,7 +1157,7 @@ there is an element $\alpha_{k-1}$ in $\clie^k(\Vect,\GL_n; \hOmega_n^{k-1})$ su
 \ee
 Explicitly:
 \be\label{k formula}
-\alpha_k : (f_1^i \partial_i, \ldots, f_k^i \partial_i) \mapsto \frac{1}{(-2\pi i)^k k!}  {\rm Tr} \left(\Jac(f_1) \wedge \d_{dR} (\Jac(f_2)) \wedge \cdots \wedge \d_{dR}(\Jac(f_k))\right) .
+\alpha_k : (f_1^i \partial_i, \ldots, f_k^i \partial_i) \mapsto \frac{1}{(-2\pi i)^k k!}  {\rm Tr} \left(\Jac(X_1) \wedge \d_{dR} (\Jac(X_2)) \wedge \cdots \wedge \d_{dR}(\Jac(X_k))\right) .
 \ee
 \end{cor}
 
@@ -1183,7 +1195,7 @@ $\GL_n$ so that it does not get extended.
 \subsubsection{An $L_\infty$ extension}
 
 For $k > 2$, it will be useful to think of $\ch_k(\cV)$ as defining a similar type of extension.
-For this to make sense, we observe the following phenomena for higher cocycles. 
+For this to make sense, we observe the following interpretation of higher cocycles. 
 Suppose $M$ is a module for a Lie algebra $\fg$, and suppose $c \in \clie^k(\fg ; M)$ is a cocycle $\d_{CE} c = 0$. 
 Then, $c$ determines an abelian extension of $L_{\infty}$-{\em algebras}
 \ben
@@ -1193,7 +1205,7 @@ As a graded vector space $\Tilde{\fg}$ is $\fg \oplus M[k-2]$ (so that $M$ is pl
 The $L_\infty$ structure on $\Tilde{\fg}$ is defined by, for $x,y,x_1,\ldots,x_k \in \fg$, $m \in M$:
 \begin{align*}
 \ell_2(x, y+m) & = [x,y] + x \cdot m \\
-\ell_k(x_1,\ldots,x_k) = c(x_1,\ldots,x_k) .
+\ell_k(x_1,\ldots,x_k) & = c(x_1,\ldots,x_k) .
 \end{align*}
 Here, $x \cdot m \in M$ uses the module structure. 
 
@@ -1211,7 +1223,8 @@ determined by the $(d+1)$-cocycle $\ch_{d+1}(\hT_n) \in \clie^{d+1}(\Vect , \GL_
 \end{dfn}
 
 We would like to have an an analog of Lemma \ref{lem d=1 pair} for $\TVectd$ and the group $\GL_n$. 
-To make this possible, we need to slightly enlarge our category of Harish-Chandra pairs to include the data of an $L_\infty$ algebra, instead of an ordinary Lie algebra. 
+Indeed, it turns out that $\TVectd$ is also part of a Harish-Chandra pair.
+To make this possible, we need to slightly enlarge our category of pairs to include the data of an $L_\infty$ algebra, instead of an ordinary Lie algebra. 
 
 \subsubsection{$L_\infty$ pairs}
 
@@ -1425,13 +1438,14 @@ In other words we obtain the $\Omega^*(X)$-module
 \end{enumerate}
 
 \begin{dfn} 
+\label{dfn: htpy descent}
 We will denote the vector bundle $V_X$ equipped with its flat superconnection $\nabla^V$ obtained in this way by $\desc((P\to X, \omega), V)$. 
 Its associated de Rham complex is denoted $\bdesc((P \to X, \omega), V)$. 
 \end{dfn}
  
-\begin{rmk} 
-This construction of descent enjoys a number of nice functorial properties. \brian{..finish}.
-\end{rmk}
+%\begin{rmk} 
+%This construction of descent enjoys a number of nice functorial properties. \brian{..finish}.
+%\end{rmk}
 
 \subsection{The flat connection from the extended pair}
 
@@ -1442,135 +1456,204 @@ In this section we define extended Gelfand-Kazhdan structures that are bundles f
 If $(\mathfrak{f},f) : (\Tilde{\fg},\Tilde{K}) \to (\fg, K)$ is a map of pairs, and $(P,\omega)$ is a principal $(\fg,K)$-bundle, then a reduction of $(P,\omega)$ along $(\mathfrak{f},f)$ is a principal $(\Tilde{\fg}, \Tilde{K})$-bundle $(\Tilde{P}, \Tilde{\omega})$ together with a map of bundles $\phi : \Tilde{P} \to P$ such that $\phi$ is a reduction of the principal $K$-bundle along $f$ and $\mathfrak{f}(\Tilde{\omega}) = \phi^*\omega$.
 
 \begin{dfn}
-Fix a Gelfand-Kazhdan structure $\sigma$ on $X$. 
-A {\em $d$-extended Gelfand-Kazhdan structure} associated to $\sigma$ is a reduction of $(\Fr_X, \omega_{\sigma})$ along the map $(\pi_{n,d}, {\rm id}) : (\TVectd,\GL_n) \to (\Vect, \GL_n)$.
+Fix a Gelfand-Kazhdan structure $(X,\sigma)$.  
+A {\em $d$-extension} associated of $(X,\sigma)$ is a reduction of $(\Fr_X, \omega_{\sigma})$ along the map $(\pi_{n,d}, {\rm id}) : (\TVectd,\GL_n) \to (\Vect, \GL_n)$.
 \end{dfn}
 
-Since the map on $\GL_n$ is the identity we see that necessarily any extended Gelfand-Kazhdan structure $(P, \Tilde{\omega}_\sigma)$ is of the form $(\Fr_X, \Tilde{\omega}_\sigma)$ where $\Tilde{\omega}_\sigma \in \Omega^*(\Fr_X) \tensor \TVectd$ satisfies the generalized Maurer-Cartan equation.
+Since the map on $\GL_n$ is the identity we see that the reduction of the bundle with connection $(P, \Tilde{\omega}_\sigma)$ is necessarily of the form $(\Fr_X, \Tilde{\omega}_\sigma)$ where $\Tilde{\omega}_\sigma \in \Omega^*(\Fr_X) \tensor \TVectd$ satisfies the generalized Maurer-Cartan equation.
 
 We will show that extended Gelfand-Kazhdan structures are precisely associated to the data of a trivialization of of components of the Chern character $\ch(T_X^{1,0}) \in H^*(X, \Omega^*_{cl})$ and will be important when we discuss descent for the quantization of the holomorphic $\sigma$-model in the next section.
 
 \begin{prop}
 Fix an ordinary Gelfand-Kazhdan structure $(X,\sigma)$.
-Then, a $d$-extended Gelfand-Kazhdan structure exists if and only if $\ch_{d+1}(T^{1,0}_X) = 0$.
+Then, a $d$-extension of the Gelfand-Kazhdan structure exists if and only if $\ch_{d+1}(T^{1,0}_X) = 0$.
 Moreover, if $\ch_{d+1}(T_X^{1,0}) = 0$ then the equivalence classes of $d$-extended Gelfand-Kazhdan structures is a torsor for the abelian group $H^{d}(X , \Omega^{d+1}_{cl})$.
 \end{prop}
 
+This proposition implies that every trivialization $\alpha$ of the component of the Chern character $\ch_{d+1}(T_X^{1,0})$ determines an extension of the original Gelfand-Kazhdan structure. 
+
 \begin{proof}
-Suppose that we have an extended Gelfand-Kazhdan structure $(\Fr_X, \Tilde{\omega}_\sigma)$.
+Suppose that we have a $d$-extension of a Gelfand-Kazhdan structure $(X,\sigma)$.
+We will omit the formal exponential in the proof below.
 We can then use semi-strict descent to define a map in cohomology
 \ben
-\Tilde{\rm char}_\sigma : H^*_{\rm Lie}(\TVectd, \GL_n ; \hOmega_{cl}^{d+1}) \to H^*(X , \Omega^{d+1}_{cl}) .
+\Tilde{\rm char}_X : H^*_{\rm Lie}(\TVectd, \GL_n ; \hOmega_{cl}^{d+1}) \to H^*(X , \Omega^{d+1}_{cl}) .
 \een
-This is the characteristic map for the semi-strict descent along the principal $(\TVectd,\GL_n)$-bundle $(\Fr_X , \Tilde{\omega}_\sigma)$.
+This is the characteristic map for the semi-strict descent along the principal $(\TVectd,\GL_n)$-bundle $(\Fr_X , \Tilde{\omega})$.
 We are using the $\TVectd$ module structure on $\hOmega^k_{n,cl}$ induced from the map $\pi_{n,d}$. 
-Moreover the ordinary characteristic map ${\rm char}_\sigma : H^*_{\rm Lie}(\Vect, \GL_n ; \hOmega_{cl}^{d+1}) \to H^*(X , \Omega^{d+1}_{cl})$ factors through this extended characteristic map:
+Moreover the ordinary characteristic map ${\rm char}_X : H^*_{\rm Lie}(\Vect, \GL_n ; \hOmega_{cl}^{d+1}) \to H^*(X , \Omega^{d+1}_{cl})$ factors through this extended characteristic map:
 \ben
 \xymatrix{
-H^*_{\rm Lie}(\Vect, \GL_n ; \hOmega_{cl}^{d+1}) \ar@/^2.0pc/[rr]^{{\rm char}_\sigma} \ar[r]^-{\pi_{n,d}^*} & H^*_{\rm Lie}(\TVectd, \GL_n ; \hOmega_{cl}^{d+1}) \ar[r]^-{\Tilde{\rm char}_\sigma} & H^*(X , \Omega^{d+1}_{cl})
+H^*_{\rm Lie}(\Vect, \GL_n ; \hOmega_{cl}^{d+1}) \ar@/^2.0pc/[rr]^{{\rm char}_X} \ar[r]^-{\pi_{n,d}^*} & H^*_{\rm Lie}(\TVectd, \GL_n ; \hOmega_{cl}^{d+1}) \ar[r]^-{\Tilde{\rm char}_X} & H^*(X , \Omega^{d+1}_{cl})
 }
 \een
-Now, the image of the Gelfand-Fuks class $\ch_{d+1}^{\GF} (\hT_n)$ along ${\rm char}_\sigma$ is precisely $\ch_{d+1}(T_X^{1,0})$. 
+Now, the image of the Gelfand-Fuks class $\ch_{d+1}^{\GF} (\hT_n)$ along ${\rm char}_X$ is precisely $\ch_{d+1}(T_X^{1,0})$. 
 Notice, however, that the image of $\ch_{d+1}^\GF(\hT_n)$ in the middle cohomology is trivial.
 This is because it is the defining cocycle for the $L_\infty$ extension $\TVectd$. 
 It follows that the component of the Chern character $\ch_{d+1}(T_X^{1,0})$ is trivial in $H^{d+1}(X, \Omega^{d+1}_{cl})$. 
 
-Next, suppose that $\ch_{d+1}(T_X^{1,0}) = 0$ and suppose $X$ is K\"ahler.
-Also, let $\nabla$ be a smooth connection of type $(1,0)$ on $X$ for a
-holomorphic vector bundle $E$. 
-That is, an operator
+Suppose now we fix a trivialization $\alpha$ of the component of the Chern character $\ch_{d+1}(T_X^{1,0}) \in H^{d+1}(X, \Omega^{d+1, hol}_{cl})$.
+We will resolve $\Omega^{d+1}_{cl}$ by holomorphic vector bundles via the complex
 \ben
-\nabla : E \to \Omega^{1,0}(X, E) .
+\Omega^{\geq d+1,hol}_X = \Omega^{d +1,hol}_X \xto{\partial} \Omega^{d+2,hol}_X[-1] \cdots .
 \een
-Let $\nabla ' = \nabla + \dbar$, then $\nabla'$ is an ordinary
-connection for $E$. The curvature of $\nabla '$ splits as
+We view the trivialization as a degree $d$ element in $\RR \Gamma(X, \Omega^{\geq d+1, hol}_X)$. 
+Now, if $\sV$ is any formal vector bundle then Gelfand-Kazhdan descent produces a pro-vector bundle with flat connection $\desc_X(\sV)$. 
+Flat sections of this vector bundle form a sheaf that we call $\sdesc_X(\sV)$.
+Moreover, the de Rham complex is a model for the derived sections of this sheaf:
 \ben
-F_{\nabla'} = F_{\nabla '}^{2,0} + F_{\nabla '}^{1,1} \in \Omega^{2,0}(X
-; \End(E)) \oplus \Omega^{1,1}(X ; \End(E)) .
+\Omega^*(X , \desc_X(\sV)) \simeq \RR \Gamma(X, \sdesc_X(\sV)) .
+\een
+We consider the complex of formal vector bundles
+\ben
+\hOmega^{\geq d+1}_n = \hOmega^{d +1}_n \xto{\partial} \hOmega^{d+2}_n[-1] \cdots .
 \een 
-According to the Dolbeault isomorphism 
-$H^{p,q}_{\dbar} (X ; E) \cong H^q(X ;  \Omega^p_X \tensor \sE)$, 
-one has the following fact about the $(1,1)$-component of the curvature. 
-
-\begin{prop} (Proposition 4 in \cite{atiyah})
-The $(1,1)$-form $F_{\nabla'}^{1,1}$ is $\dbar$-closed  and is independent, in Dolbeault cohomology, of the choice of $\nabla$. 
-Moreover, the cohomology class $[F_{\nabla'}^{(1,1)}]_{\dbar} \in H^{1,1}(X ; \End(E))$ is a Dolbeault representative for the Atiyah class ${\rm At}(E) \in H^1(X ; \Omega^{1,hol}_X \tensor_{\cO} \End(\sE))$.
-\end{prop}
-
-As a corollary, we see that up to transcendental factors $\Tr \left((F_{\nabla'}^{(1,1)})^{d+1}\right)$ is closed for both $\partial$ and $\dbar$. 
-Moreover, this $(k,k)$-form is a Dolbeault representative for the
-$k$th component of the Chern character $\ch_{k}(E)$. 
-In particular, trivializations for $\ch_{d+1}(T_X)$, as in the theorem, 
-are equivalent to $\partial$-closed $\dbar$-trivializations $\alpha$ of the element $\Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right) \in \Omega^{d+1,d+1}(X)$.
-
-Suppose that $\alpha \in \Omega^{d,d-1}(X)$ satisfies $\partial \alpha = 0$ and $\dbar \alpha = \Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right)$.
-We will view $\alpha$ as an element of the following truncated de Rham complex
-\be\label{truncated}
-\Omega^{\geq d+1, *}_X = \Omega^{d+1,*}_X \xto{\partial} \Omega^{d+2,*} \to \cdots
+In our case, we find a quasi-isomorphism
+\be\label{alpha de rham}
+\Omega^*(X, \desc_X(\hOmega^{\geq d+1}_n)) \simeq \RR \Gamma(X, \Omega^{\geq d+1,hol}_n) .
 \ee
-where the internal differential $\dbar$ is implicit.
-As a sheaf, $\Omega^{\geq d+1,*}_X$ is equivalent to $\Omega^{d+1,hol}_{X,cl}$. 
+By construction, the de Rham complex on the left-hand side is of the form
+\ben
+\left(\left(\Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1}_n\right)_{bas}, \d + \omega\right)
+\een
+where $\omega$ is the connection one-form defining Gelfand-Kazhdan descent. 
 
-Consider the defining exact sequence for $\TVectd$: 
+Consider the defining exact sequence for the $L_\infty$ algebra $\TVectd$: 
 \ben
-0 \to \hOmega^{d+1}_{n,cl}[d-1] \to \TVectd \to \Vect \to 0 .
+0 \to \hOmega^{d+1}_{n,cl}[d-1] \to \TVectd \xto{\pi_{n,d}} \Vect \to 0 .
 \een
-We need a slightly more homotopy coherent version of this extension.
-Instead of working over the formal holomorphic disk $\hD^n$ as we have this entire chapter thus far, we we ill work with the formal complex disk $(\hD^n)^{\CC}$ whose ring of functions is $\hO_n^{\CC} = \CC[[t_1,\ldots,t_n,\Bar{t}_1,\ldots,\Bar{t}_n]]$. 
-Similarly, we have the formal Dolbeualt complex $\hOmega^{*,*}_n$ with differential $\d_{dR} = \partial + \dbar$. 
-Let $\hOmega^{\geq d+1, *}$ be the formal version of the truncated de Rham complex in Equation (\ref{truncated}). 
-By the formal $\dbar$-Poincar\'e lemma we see that this truncated complex is quasi-isomorphic to $\hOmega^{d+1}_{n,cl}$, in our previous holomorphic notation. 
-We use this resolution to define a homotopy equivalent extension. 
+If we resolve $\hOmega^{d+1}_{n,cl}[d-1]$ we obtain an extension
 \ben
-0 \to \hOmega^{\geq d+1, *}_n[d-1] \to \TVectd' \to \Vect \to 0
+0 \to \hOmega^{\geq d+1}_{n,cl}[d-1] \to \TVectd ' \xto{\pi'_{n,d}} \Vect \to 0
 \een
-
-We tensor this exact sequence with the commutative dg algebra $\Omega^*(\Fr_X)$ to obtain an exact sequence of $L_\infty$-algebras
+where $\TVectd '$ is quasi-isomorphic to $\TVectd$. 
+Let us tensor this exact sequence with the commutative dg algebra$\Omega^*(\Fr_X)$ to obtain an exact sequence of $L_\infty$ algebras
 \ben
-0 \to \Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1, *}_n[d-1] \to \Omega^*(\Fr_X) \tensor \TVectd' \to \Omega^*(\Fr_X) \tensor \Vect \to 0 .
+0 \to \Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1}_n[d-1] \to \Omega^*(\Fr_X) \tensor \TVectd' \to \Omega^*(\Fr_X) \tensor \Vect \to 0 .
 \een
-We want to produce a Maurer-Cartan element in the middle $L_\infty$ algebra of this short exact sequence.
-Now, $\hOmega^{\geq d+1, *}$ is a $(\Vect,\GL_n)$-module whose descent is equal to the $D_X$-module $J \Omega^{\geq d+1,*}_X$.
-The trivialization $\alpha \in \Omega^{d+1,d}(X)$ determines a flat section in the de Rham complex of this $D_X$-module
-\ben
-j_\infty \alpha \in \Omega^*(X , J \Omega^{\geq d+1,*}_X) .
-\een
-This de Rham complex is equivalent to
-\be\label{alpha1}
-\left(\left(\Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1, *}_n \right)_{bas}, \d_{dR} + \omega_\sigma \right) .
-\ee
-Here, $\d_{dR} + \omega_\sigma$ is the usual flat connection on the jet bundle.
-%and $\Hat{d}$ is the internal differential in $\hOmega^{\geq d+1, *}_n$.
-In particular, $j_\infty\alpha$ determines an element of degree $+1$ in $\Omega^*(\Fr_X) \tensor \hOmega^{d+1}_{n,cl} \hOmega^{\geq d+1, *} [d-1]$.
-We claim that the element 
-\ben
-\Tilde{\omega}_{\sigma , \alpha} = \omega_\sigma + j_\infty\alpha \in \Omega^*(\Fr_X) \tensor \TVectd '
-\een
-satisfies the Maurer-Cartan equation in $\Omega^*(\Fr_X) \tensor \TVectd '$.
-Thus, we must show
+The Gelfand-Kazhdan structure defines a $\GL_n$-invariant Maurer-Cartan element $\omega \in \Omega^*(\Fr_X) \tensor \Vect$. 
+Using the quasi-isomorphism (\ref{alpha de rham}) we see that the trivialization $\alpha$ determines an element of degree $+1$ in $\Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1}_n[d-1]$. 
+We claim that $\Tilde{\omega}_{\alpha} = \omega + \alpha$ is a $\GL_n$-invariant Maurer-Cartan element in the $L_\infty$ algebra $\Omega^*(\Fr_X) \tensor \TVectd'$.
+The Maurer-Cartan equation is of the form
 \ben
 \d_{dR} (\omega_\sigma + j_\infty\alpha) + \Hat{d} (\omega_\sigma + j_\infty\alpha) + \sum_{k \geq 2} \frac{1}{k!} \ell_k(\omega_\sigma + j_\infty\alpha) = 0 .
 \een
-By the nature of the bracket defining $\TVectd'$ only the $k=2,d+1$ terms are nonzero in the above expression. 
-First, note that the factor $\d_{dR} \omega + \frac{1}{2}[\omega_\sigma,\omega_\sigma] = 0$ since $\omega_\sigma$ is a Maurer-Cartan element defining the non-extended Gelfand-Kazhdan structure. 
-The remaining terms are
+Where $\ell_k$ is the $k$-ary structure map. 
+The only nonzero terms on the left-hand side are
 \ben
-\d_{dR} j_\infty\alpha + [\omega_\sigma, j_\infty\alpha] + \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
-)
+\left(\d \omega + \frac{1}{2}[\omega,\omega]\right) + \left(\d + [\omega,-]\right) \alpha + \frac{1}{(d+1)!} \ell_{d+1} (\omega,\ldots,\omega) .
 \een
-The term $\d_{dR} + [\omega_\sigma,-]$ is the flat connection for the $D_X$-module in 
-(\ref{alpha1}). 
-Since $\alpha$ is flat $\partial \alpha + [\omega_\sigma,\alpha]=0$. 
-The remaining terms are
-\ben
-\Hat{d} \alpha + \frac{1}{(d+1)!} \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
-) 
-\een
-By assumption, $\Hat{d} \alpha = \dbar \alpha = j_\infty \ch_{d+1}(T_X^{1,0})$, but this precisely $\ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma}) = \ch_{d+1}^{\GF} (\hT_n)(\omega_\sigma,\ldots,\omega_\sigma) = j_\infty \ch_{d+1}(T_X^{1,0})$.
-So, up to changing factors, the Maurer-Cartan equation is satisfied.
-Finally, since $\TVectd' \simeq \TVectd$, we obtain a Maurer-Cartan element in $\Omega^*(\Fr_X) \tensor \TVectd$, as desired. 
+The first term is zero since $\omega$ is a flat connection one-form.
+The term $\d + [\omega,-]$ is the differential in the complex (\ref{alpha de rham}).
+Thus, by assumption, the second term is equal to $\ch_{d+1}(T_X^{1,0})$.
+The last term is also equal to
+
+%Next, suppose that $\ch_{d+1}(T_X^{1,0}) = 0$ and suppose $X$ is K\"ahler.
+%Also, let $\nabla$ be a smooth connection of type $(1,0)$ on $X$ for a
+%holomorphic vector bundle $E$. 
+%That is, an operator
+%\ben
+%\nabla : E \to \Omega^{1,0}(X, E) .
+%\een
+%Let $\nabla ' = \nabla + \dbar$, then $\nabla'$ is an ordinary
+%connection for $E$. The curvature of $\nabla '$ splits as
+%\ben
+%F_{\nabla'} = F_{\nabla '}^{2,0} + F_{\nabla '}^{1,1} \in \Omega^{2,0}(X
+%; \End(E)) \oplus \Omega^{1,1}(X ; \End(E)) .
+%\een 
+%According to the Dolbeault isomorphism 
+%$H^{p,q}_{\dbar} (X ; E) \cong H^q(X ;  \Omega^p_X \tensor \sE)$, 
+%one has the following fact about the $(1,1)$-component of the curvature. 
+%
+%\begin{prop} (Proposition 4 in \cite{atiyah})
+%The $(1,1)$-form $F_{\nabla'}^{1,1}$ is $\dbar$-closed  and is independent, in Dolbeault cohomology, of the choice of $\nabla$. 
+%Moreover, the cohomology class $[F_{\nabla'}^{(1,1)}]_{\dbar} \in H^{1,1}(X ; \End(E))$ is a Dolbeault representative for the Atiyah class ${\rm At}(E) \in H^1(X ; \Omega^{1,hol}_X \tensor_{\cO} \End(\sE))$.
+%\end{prop}
+%
+%As a corollary, we see that up to transcendental factors $\Tr \left((F_{\nabla'}^{(1,1)})^{d+1}\right)$ is closed for both $\partial$ and $\dbar$. 
+%Moreover, this $(k,k)$-form is a Dolbeault representative for the
+%$k$th component of the Chern character $\ch_{k}(E)$. 
+%In particular, trivializations for $\ch_{d+1}(T_X)$, as in the theorem, 
+%are equivalent to $\partial$-closed $\dbar$-trivializations $\alpha$ of the element $\Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right) \in \Omega^{d+1,d+1}(X)$.
+%
+%Suppose that $\alpha \in \Omega^{d,d-1}(X)$ satisfies $\partial \alpha = 0$ and $\dbar \alpha = \Tr\left( (F_{\nabla '}^{(1,1)})^{d+1} \right)$.
+%We will view $\alpha$ as an element of the following truncated de Rham complex
+%\be\label{truncated}
+%\Omega^{\geq d+1, *}_X = \Omega^{d+1,*}_X \xto{\partial} \Omega^{d+2,*} \to \cdots
+%\ee
+%where the internal differential $\dbar$ is implicit.
+%As a sheaf, $\Omega^{\geq d+1,*}_X$ is equivalent to $\Omega^{d+1,hol}_{X,cl}$. 
+%
+%Consider the defining exact sequence for $\TVectd$: 
+%\ben
+%0 \to \hOmega^{d+1}_{n,cl}[d-1] \to \TVectd \to \Vect \to 0 .
+%\een
+%We need a slightly more homotopy coherent version of this extension.
+%Instead of working over the formal holomorphic disk $\hD^n$ as we have this entire chapter thus far, we we ill work with the formal complex disk $(\hD^n)^{\CC}$ whose ring of functions is $\hO_n^{\CC} = \CC[[t_1,\ldots,t_n,\Bar{t}_1,\ldots,\Bar{t}_n]]$. 
+%Similarly, we have the formal Dolbeualt complex $\hOmega^{*,*}_n$ with differential $\d_{dR} = \partial + \dbar$. 
+%Let $\hOmega^{\geq d+1, *}$ be the formal version of the truncated de Rham complex in Equation (\ref{truncated}). 
+%By the formal $\dbar$-Poincar\'e lemma we see that this truncated complex is quasi-isomorphic to $\hOmega^{d+1}_{n,cl}$, in our previous holomorphic notation. 
+%We use this resolution to define a homotopy equivalent extension. 
+%\ben
+%0 \to \hOmega^{\geq d+1, *}_n[d-1] \to \TVectd' \to \Vect \to 0
+%\een
+%
+%We tensor this exact sequence with the commutative dg algebra $\Omega^*(\Fr_X)$ to obtain an exact sequence of $L_\infty$-algebras
+%\ben
+%0 \to \Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1, *}_n[d-1] \to \Omega^*(\Fr_X) \tensor \TVectd' \to \Omega^*(\Fr_X) \tensor \Vect \to 0 .
+%\een
+%We want to produce a Maurer-Cartan element in the middle $L_\infty$ algebra of this short exact sequence.
+%Now, $\hOmega^{\geq d+1, *}$ is a $(\Vect,\GL_n)$-module whose descent is equal to the $D_X$-module $J \Omega^{\geq d+1,*}_X$.
+%The trivialization $\alpha \in \Omega^{d+1,d}(X)$ determines a flat section in the de Rham complex of this $D_X$-module
+%\ben
+%j_\infty \alpha \in \Omega^*(X , J \Omega^{\geq d+1,*}_X) .
+%\een
+%This de Rham complex is equivalent to
+%\be\label{alpha1}
+%\left(\left(\Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1, *}_n \right)_{bas}, \d_{dR} + \omega_\sigma \right) .
+%\ee
+%Here, $\d_{dR} + \omega_\sigma$ is the usual flat connection on the jet bundle.
+%%and $\Hat{d}$ is the internal differential in $\hOmega^{\geq d+1, *}_n$.
+%In particular, $j_\infty\alpha$ determines an element of degree $+1$ in $\Omega^*(\Fr_X) \tensor \hOmega^{d+1}_{n,cl} \hOmega^{\geq d+1, *} [d-1]$.
+%We claim that the element 
+%\ben
+%\Tilde{\omega}_{\sigma , \alpha} = \omega_\sigma + j_\infty\alpha \in \Omega^*(\Fr_X) \tensor \TVectd '
+%\een
+%satisfies the Maurer-Cartan equation in $\Omega^*(\Fr_X) \tensor \TVectd '$.
+%Thus, we must show
+%\ben
+%\d_{dR} (\omega_\sigma + j_\infty\alpha) + \Hat{d} (\omega_\sigma + j_\infty\alpha) + \sum_{k \geq 2} \frac{1}{k!} \ell_k(\omega_\sigma + j_\infty\alpha) = 0 .
+%\een
+%By the nature of the bracket defining $\TVectd'$ only the $k=2,d+1$ terms are nonzero in the above expression. 
+%First, note that the factor $\d_{dR} \omega + \frac{1}{2}[\omega_\sigma,\omega_\sigma] = 0$ since $\omega_\sigma$ is a Maurer-Cartan element defining the non-extended Gelfand-Kazhdan structure. 
+%The remaining terms are
+%\ben
+%\d_{dR} j_\infty\alpha + [\omega_\sigma, j_\infty\alpha] + \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
+%)
+%\een
+%The term $\d_{dR} + [\omega_\sigma,-]$ is the flat connection for the $D_X$-module in 
+%(\ref{alpha1}). 
+%Since $\alpha$ is flat $\partial \alpha + [\omega_\sigma,\alpha]=0$. 
+%The remaining terms are
+%\ben
+%\Hat{d} \alpha + \frac{1}{(d+1)!} \ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma} 
+%) 
+%\een
+%By assumption, $\Hat{d} \alpha = \dbar \alpha = j_\infty \ch_{d+1}(T_X^{1,0})$, but this precisely $\ell_{d+1}(\omega_\sigma,\ldots,\omega_{\sigma}) = \ch_{d+1}^{\GF} (\hT_n)(\omega_\sigma,\ldots,\omega_\sigma) = j_\infty \ch_{d+1}(T_X^{1,0})$.
+%So, up to changing factors, the Maurer-Cartan equation is satisfied.
+%Finally, since $\TVectd' \simeq \TVectd$, we obtain a Maurer-Cartan element in $\Omega^*(\Fr_X) \tensor \TVectd$, as desired. 
 \end{proof}
 
+Gelfand-Kazhdan descent is a procedure that produces global objects on arbitrary manifolds from the data of a module for the pair $(\Vect, \GL_n)$. 
+There is a completely analogous theory of modules for the pair $(\TVectd, \GL_n)$. 
+
+Given the data of a $d$-extension of a GK structure $(X, \sigma)$, which is prescribed by a trivialization of $\ch_{d+1}(T_X^{1,0})$, we denote the corresponding descent functor by
+\ben
+\Tilde{\desc}_{X, \sigma, \alpha} : \Mod_{(\TVectd, \GL_n)} \to {\rm Pro}(VB)^{flat} .
+\een
+The $d$-extension gives us a $(\TVectd,\GL_n)$-bundle $(\Fr_X, \Tilde{\omega}_{\sigma,\alpha})$ and hence, in the notation of Definition \ref{dfn: htpy descent} we have $\Tilde{\desc}_{X, \sigma, \alpha} = \desc((\Fr_X, \Tilde{\omega}_{\sigma, \alpha}), -)$.
+When the formal exponential $\sigma$ is understood, we denote this by $\Tilde{\desc}_{X,\alpha}$. 
+Our main example of a module for the pair $(\TVectd, \GL_n)$ that is {\em not} a module for $(\Vect, \GL_n)$ will come from the quantization of the holomorphic $d$-dimensional $\sigma$-model.
 
 \section{The classical holomorphic $\sigma$-model}
 
@@ -1587,7 +1670,7 @@ The action functional is of the form
 \ben
 S(\beta,\gamma) = \int_Y \<\beta, \dbar \gamma\>_{T^{1,0}X}
 \een
-where $\<-,-\>$ denotes the pairing between the holomorphic tangent bundle and its dual.
+where $\<-,-\>_{T^{1,0}X}$ denotes the pairing between the holomorphic tangent bundle and its dual.
 One can immediately read off the equations of motion which state $\dbar \gamma = 0$ and $\dbar \beta = 0$.
 Thus, on-shell the solutions to the equations of motion state the $\gamma : Y \to X$ is a holomorphic map, and $\beta$ determines an element in the cohomology $H^{d-1}(Y , \Omega^{d,hol} \tensor \gamma^* T_X^{1,0})$. 
 The field $\beta$ appears linearly in the action functional, and in a way its dynamics are completely determined by $\gamma$. 
@@ -1622,6 +1705,10 @@ Note that the gauge symmetry $\beta \to \beta + \dbar \beta'$, where $\beta' \in
 Moreover, there are ghosts for ghosts $\beta'' \in \Omega^{d,d-3}(Y , V^*)$, and so on.
 Together with all of the antifields and antighosts, this makes up our full theory $\sE_V$. 
 
+The theory $\sE_V$ is a cotangent theory to the elliptic moduli problem $\Omega^{0,*}(Y, V)$ which describes holomorphic maps $Y \to V$.
+If $\sE$ is any elliptic moduli problem on $Y$, its cotangent theory is defined by $T^*[-1] \sE = \sE \oplus \sE^![-1]$. 
+\brian{what else to say?}
+
 \subsubsection{The formal $\beta\gamma$ system}
 
 In the case that $V = \CC^n$ we will see how the free $\beta\gamma$ system is an equivariant BV theory for the Harish-Chandra pair consisting of the group of linear automorphisms and the Lie algebra of formal vector fields on the $n$-disk.
@@ -1649,8 +1736,18 @@ I^\fh \in \clie^*(\fh) \tensor \oloc(\sE)[-1],
 \een
 which is equivalent to a map of $L_\infty$ algebras $I^\fh : \fh \rightsquigarrow \oloc(\sE)[-1]$. 
 
-To define this...\brian{...}
+Before considering the action of $\Vect$ on the field theory, consider first the cotangent bundle of a vector space $T^*V$. 
+We can write the algebraic functions on $T^*V$ as $\sO(T^*V) = \sO(V) \tensor \Sym(V)$. 
+The derivations of $\sO(V)$, or vector fields on $V$, have a similar decomposition ${\rm Vect}(V) = \sO(V) \tensor V$. 
+Note that there is an obvious embedding of vector fields on $V$ inside of functions on $T^*V$ via:
+\ben
+{\rm Vect}(V) = \sO(V) \tensor V \to \sO(V) \tensor \Sym(V) = \sO(T^*V) .
+\een
+This map is compatible with the Lie bracket of vector fields and the standard Poisson bracket on $T^*V$. 
+Thus, this embedding defines a Hamiltonian action of vector fields on $T^*V$.  
 
+Note that our theory is expressed as a shifted cotangent bundle of an elliptic moduli problem.
+The construction of our Hamiltonian action is formally similar to the above general construction.
 Suppose that we have a formal vector field
 \ben
 X = \sum_{j = 1}^n \;\;\sum_{\vec{m} = (m_1,\ldots,m_n) \in \NN^n} a_{j, \vec{m}} t_1^{m_1} \cdots t_n^{m_n} \partial_j \in \Vect .
@@ -1660,13 +1757,25 @@ Define the local functional $I^{\rm W}_X \in \oloc(\sE_V)$ via the formula
 I^{\rm W}_X(\gamma, \beta) = \sum_{j = 1}^n \sum_{\vec{m} \in \NN^n} a_{j, \vec{m}} \int_S  \gamma^{\wedge m_1}_1 \wedge \cdots \wedge \gamma^{\wedge m_n}_n \wedge \beta_j .
 \ee
 
+Following definition Definition \ref{from chap1??}, the space of local functionals on $\sE_n$ is defined by
+\be\label{local en}
+\oloc(\sE_n) = {\rm Dens}_Y \tensor_{D_Y} \cred^*(J \sE_n) .
+\ee
+Here $J \sE_n$ denotes the $\infty$-jet bundle of the graded vector bundle defining $\sE_n$.
+The Dolbeault operator $\dbar$ defining the classical theory extends to a degree $+1$ operator $\dbar : \oloc(\sE_n) \to \oloc(\sE_n)[-1]$. 
+The following lemma describes the key properties of the functional $I^{\rm W}$. 
+
 \begin{lem}
 The map $I^{\rm W} : \Vect \to \oloc(\sE_n)[-1]$ sending $X \mapsto I^{\rm W}_X$ is a map of dg Lie algebras.
 Hence, 
 \ben
 I^{\rm W} \in \clie^*(\Vect) \tensor \oloc(\sE_n)[-1]
 \een
-satisfies the equivariant classical master equation $(\d_{\rm W} + \dbar) I^{\rm W} + \frac{1}{2} \{I^{\rm W}, I^{\rm W}\} = 0$ and gives $\sE_V$ the structure of a $\Vect$-equivariant classical BV theory.
+satisfies the equivariant classical master equation 
+\be\label{ecmw}
+(\d_{\rm W} + \dbar) I^{\rm W} + \frac{1}{2} \{I^{\rm W}, I^{\rm W}\} = 0 .
+\ee
+In particular, $I^{\rm W}$ endows $\sE_n$ with the structure of a $\Vect$-equivariant classical BV theory.
 \end{lem}
 
 \begin{rmk}
@@ -1677,16 +1786,23 @@ We develop this reasoning more fully in Section \ref{sec comparison}.
 In particular, in the next section we will show that this theory descends to the classical curved $\beta\gamma$ system where the target is a complex manifold $X$; more precisely, we will identify this theory with the theory defined by Costello in \cite{WG2}.
 \end{rmk}
 
+The deformation complex of the formal $\beta\gamma$ system is simply the space of local functionals equipped with its linearized BRST differential:
+\ben
+\Def_n = \left(\oloc(\sE_n), \dbar\right) .
+\een
 Following the perspective of equivariant BV formalism, the functional $I^{\rm W}$ allows us to define the $\Vect$-equivariant deformation complex
 \ben
 \Def^{\rm W}_n = \left(\clie^*(\Vect) \tensor \oloc(\sE_n), \d_{\rm W} + \dbar + \{I^{\rm W},-\} \right).
 \een
 This is the complex controlling $\Vect$-equivariant deformations of the formal $\beta\gamma$ system on $Y$ with target $\hD^n$. 
+The fact that the operator $\d_{\rm W} + \dbar + \{I^{\rm W},-\}$ is square zero is equivalent to the equivariant classical master equation (\ref{ecmw}). 
 
 %\begin{rmk}
 %In Section \ref{sec: equivariant BV} the equivariant deformation complex was stated for just a Lie (or local Lie) algebra.
 %Since Gelfand-Kazhdan formal geometry requires the compatible data of the group $\GL_n$, we have included in the definition.
 %\end{rmk}
+
+In the next section we will show how the formal $\beta\gamma$ system, which is the theory of holomorphic maps $Y \to \hD^n$, together with the action of $(\Vect, \GL_n)$ allows us to define a general $\sigma$-model of maps $Y \to X$ where $X$ is any complex manifold.
 
 \begin{prop}\label{prop: formal to global1}
 The formal $\beta\gamma$ system $\sE_n$ has an action by the Harish-Chandra pair $(\Vect, \GL_n)$. 
@@ -1701,15 +1817,18 @@ We will relate it to our description above using formal geometry.
 
 The language of $L_\infty$ spaces allows one to incorporate many natural geometries in the language of Lie theory.
 Of course, $L_\infty$ spaces are much more flexible than ordinary manifolds, and so also provide a nice geometric description of stacky-like objects as well.
-It is a general result of Costello \cite{CostelloHolomorphic, WG2} that $\sigma$-models in the BV formalism can be represented as maps from a elliptic ringed space to an $L_\infty$ space.
+The key aspect of the formalism we will utilize is based on a general result of Costello \cite{CostelloHolomorphic, WG2} that states $\sigma$-models in the BV formalism can be represented as maps from a elliptic ringed space to an $L_\infty$ space.
 An elliptic ringed space is a pair $(Y, \sA)$ where $Y$ is a manifold and $\sA$ is a sheaf of commutative dg algebras defined over $\Omega^*_Y$ satisfying some conditions. 
+For a precise definition see Definition ?? of \cite{CostelloHolomorphic}.
 The most important condition for us is that underlying sheaf of cochain complexes is elliptic.
 For us, the elliptic ringed space representing the source of the $\sigma$-model is always of the form
 \ben
 Y_{\dbar} = (Y, \Omega^{0,*}_Y) .
 \een
+We refer to this as the {\em Dolbeualt space} of the complex manifold $Y$. 
+Of course, $\Omega^{0,*}_Y \simeq \sO^{hol}_Y$ as sheaves, but the resolution is necessary since holomorphic functions are not the smooth sections of any vector bundle. 
 
-By definition, an $L_\infty$ space is a manifold $X$ with a sheaf of curved $L_\infty$ algebras $\fg$ defined over the de Rham complex $\Omega^*_X$. 
+By definition, an $L_\infty$ space is a manifold $X$ together with a sheaf of curved $L_\infty$ algebras $\fg$ defined over the de Rham complex $\Omega^*_X$. 
 The most important $L_\infty$ space for us exists on any complex manifold $X$. 
 In \cite{WG2} it is shown that there exists an $L_\infty$ space $(X, \fg_{X_{\dbar}})$ which is uniquely characterized by the fact that its Chevalley-Eilenberg cochains is isomorphic to the de Rham complex of holomorphic jets of the trivial bundle:
 \ben
@@ -1785,11 +1904,14 @@ Moreover, this subspace is represented by the $L_\infty$ space
 \een
 \end{prop}
 
+The derived space of maps from a ringed space to an $L_\infty$ space is a huge object, and in general will not be represented by an $L_\infty$ space. 
+What this proposition says that there is a formal completion inside of this mapping space near the constant maps that is described by the $L_\infty$ space $(X, \Omega^{0,*}(Y) \tensor \fg_{X_{\dbar}})$.
+
 We have the following interpretation of the $L_\infty$ algebra $\Omega^{0,*}(Y) \tensor \fg_X$ via formal geometry.
 This follows immediately from Lemma \ref{lem: comparison} above.
 
 \begin{lem}
-The Gelfand-Kazhdan descent $\desc_X(\Omega^{0,*}(Y) \tensor \fg_n)$ has the structure of a curved $L_\infty$ algebra over $\Omega^*_X$ and is equivalent to $\Omega^{0,*}_Y \tensor \fg_{X_{\dbar}}$.
+The Gelfand-Kazhdan descent $\desc_X(\Omega^{0,*}(Y) \tensor \fg_n)$ has the structure of a curved $L_\infty$ algebra over $\Omega^*_X$ and is equivalent to $\Omega^{0,*}_Y \tensor \fg_{X_{\dbar}}$ as in Proposition \ref{prop: constant def}.
 \end{lem}
 
 As a corollary of Proposition \ref{prop: constant def} and this lemma we see that the Gelfand-Kazhdan descent along $X$ of $\Omega^{0,*}_Y \tensor \fg_n$ is the curved $L_\infty$ algebra controlling deformations of constant maps inside of all holomorphic maps $Y \to X$.
@@ -1801,15 +1923,22 @@ Explicitly, the cotangent theory to the moduli problem described by $\Omega^{0,*
 \een
 where $\fg_X^{\vee}$ denotes the $\Omega^*_X$-linear dual.
 The theory is described by some interaction $I_{Y \to X} \in \oloc(\sE_{Y \to X})$.
+Local functionals $\oloc(\sE_{Y\to X})$ are defined similarly to the usual way, such as Equation (\ref{local en}), except the Chevalley-Eilenberg chains $\cred^*(J \sE_{Y \to X})$ is understood to be taken over the dg ring $\Omega^*_X$. 
+
 As a result of the above discussion we see that the space of fields is exactly the Gelfand-Kazhdan descent of the formal theory $\sE_{Y \to X} = \desc_X(\sE_n)$. 
 Moreover, under the characteristic map 
 \ben
-{\rm char} : \clie^*(\Vect , \GL_n ; \oloc(\sE_n)) \to \oloc(\sE_{Y \to X})
+{\rm char}_X : \clie^*(\Vect , \GL_n ; \oloc(\sE_n)) \to \oloc(\sE_{Y \to X})
 \een
 the interaction $I^{\rm W} \mapsto I_{Y \to X}$. 
 This proves Proposition \ref{prop: formal to global1}.
 
-\brian{finish this}
+Note that using $L_\infty$ spaces one can make sense of the $\sigma$-model of maps $(X, \fg)$ where $\fg$ is {\em any} curved $L_\infty$ algebra on $X$. 
+We will denote this theory by $\sE_{Y \to B \fg}$
+\ben
+\sE_{Y \to B \fg} =  \Omega^{0,*}(Y) \tensor \fg[1] \oplus \Omega^{d,*}(Y) \tensor \fg^\vee [-2] .
+\een
+The classical interaction defining the theory is $I_{Y \to B \fg} \in \oloc(\sE_{Y \to B \fg})$.
 
 \section{Deformations of the holomorphic $\sigma$-model}
 
@@ -1874,17 +2003,38 @@ This amounts to looking just at local functionals of the $\gamma$-field.
 \begin{dfn} 
 The {\em deformation complex for cotangent quantizations} of the holomorphic $\sigma$-model of maps $Y \to B \fg$ is the cochain complex 
 \ben
-\Def^{\rm cot}_{Y \to B\fg} = \cloc^*(\Omega^{0,*}_Y \tensor \fg) .
+\Def^{\rm cot}_{Y \to B\fg} = \left(\oloc(\Omega^{0,*}_Y \tensor \fg), \dbar + \{I_{Y \to B \fg}, -\}\right)
 \een
-This is simply the local cochains of the local Lie algebra $\Omega^{0,*}_Y \tensor \fg$ on $Y$. 
+Here, $I_{Y \to B\fg}$ is the restriction of the interaction defining the classical theory of maps $Y_{\dbar} \to B \fg$.
 \end{dfn}
+
+The right-hand side is simply the local cochains of the local Lie algebra $\Omega^{0,*}_Y \tensor \fg$ on $Y$:
+\ben
+\left(\oloc(\Omega^{0,*}_Y \tensor \fg), \dbar + \{I_{Y \to B \fg}, -\}\right) = \cloc^*(\Omega^{0,*}_Y \tensor \fg) .
+\een
+We defined $\cloc^*(\sL)$ of a local Lie algebra in Section \ref{sec: equivariant??}.
 
 We will be most interested in seeing how both the anomaly and the resulting quantum correction induced by the anomaly are realized inside the complex $\Def_{Y \to Bg}^{\rm cot}$. 
 Before doing this, we'd like to restrict ourselves to looking at quantizations preserving further symmetries. 
 
-\brian{do this}
+We now specialize to the case that the source is $d$-dimensional affine space $Y = \CC^d$.
+On $\CC^d$ there is the natural action of the affine group $U(d) \ltimes \CC^d$. 
+Here, $U(d)$ acts on $\CC^d$ via the defining representation, and $\CC^d$ acts via translations. 
+The group $U(d) \ltimes \CC^d$ act as automorphisms on any tensor bundle on $\CC^d$ and hence acts on sections via the pull back. 
+In particular, it acts on the elliptic complex $\Omega^{0,*}(\CC^d) \tensor \fg$ where $\fg$ is any curved $L_\infty$ algebra defined over some dg ring $R$. 
+The action is by the identity on $\fg$, so that the $L_\infty$ structure maps are compatible with this action of the affine group. 
+As with a group action on any elliptic moduli problem, this extends to one on the cotangent theory in a way that preserves the $(-1)$-shifted symplectic pairing. 
+Thus, we have the following.
 
-\subsection{Forms as local functionals}
+\begin{lem}
+The classical theory of holomorphic maps $\CC^d \to B \fg$, $\sE_{\CC^d \to B \fg} = T^*[-1](\Omega^{0,*}(\CC^d) \tensor \fg[1])$ is equivariant for the group of affine symmetries $U(d) \ltimes \CC^d$.
+When $\fg = \CC^n[-1]$ the action of $U(d) \ltimes \CC^d$ on $\sE_n$ is compatible with the action of the Harish-Chandra pair $(\Vect, \GL_n)$. 
+\end{lem}
+
+The second statement of the lemma is immediate since the actions of $U(d) \ltimes \CC^d$ and $(\Vect, \GL_n)$ commute.
+In what follows, we will consider deformations that are also invariant for this group of symmetries. 
+
+\subsection{Forms as local functionals} \label{sec: forms to local}
 
 Before we compute the possible deformations of the holomorphic $\sigma$-model, we describe how certain differential forms on the formal stack $B \fg$ yield local functionals of the holomorphic $\sigma$-model of maps $Y \to B \fg$. 
 Indeed, we will define a map of cochain complexes
@@ -2002,7 +2152,7 @@ Indeed, if $\alpha,\alpha' \in \sO(B \fg)$ then $\partial((\alpha\alpha')^Y) = \
 
 \subsubsection{Computing the deformation complex}
 
-\begin{thm}
+\begin{thm}\label{thm: local def}
 Consider the deformation complex for cotangent quantizations of the holomorphic $\sigma$-model of maps $\CC^d \to B \fg$. 
 There is a quasi-isomorphism of the $\CC^d \ltimes U(d)$ invariant subcomplex with the complex of closed $(d+1)$-forms on $B\fg$:
 \ben
@@ -2294,8 +2444,10 @@ That is
 I^{\rm W}[\epsilon]) .
 \een
 Thus, to prove the lemma we must show that only the $(d+1)$-vertex wheels contribute to the $\epsilon \to 0$ limit. 
+Both of these 
+First, we have 
 It is here that we must recall the explicit form of the heat kernel and propagator:
-\brian{do this}
+
 \end{proof}
 
 
@@ -2440,17 +2592,17 @@ Then, we have an identification $\Theta_{\Gamma,e}(X_0,\ldots,X_{d}) = a J^{\rm 
 %\end{prop}
 
 \begin{proof}
-We simplify further by setting
-\[
-X_\alpha = t_1^{k^\alpha_1} \cdots t_n^{k^\alpha_n} \partial_{i_\alpha}
-\]
-with $k^\alpha =\sum_{j=1}^d k_j^\alpha$, $\alpha = 0,\ldots,d$. 
-Here, $i_\alpha \in \{1,\ldots,d\}$.
-Ignoring the analytic factors momentarily, 
-we observe that in computing the weight of the graph $\Gamma$,
-we contract $\beta$ legs with $\gamma$ legs.
-In our case, the $X_\alpha$-vertex contributes a $\beta_{i_\alpha}$ leg,
-which then contracts with the $k^\alpha_i$ different $\gamma$ legs from the $Y$-vertex.
+%We simplify further by setting
+%\[
+%X_\alpha = t_1^{k^\alpha_1} \cdots t_n^{k^\alpha_n} \partial_{i_\alpha}
+%\]
+%with $k^\alpha =\sum_{j=1}^d k_j^\alpha$, $\alpha = 0,\ldots,d$. 
+%Here, $i_\alpha \in \{1,\ldots,d\}$.
+%Ignoring the analytic factors momentarily, 
+%we observe that in computing the weight of the graph $\Gamma$,
+%we contract $\beta$ legs with $\gamma$ legs.
+%In our case, the $X_\alpha$-vertex contributes a $\beta_{i_\alpha}$ leg,
+%which then contracts with the $k^\alpha_i$ different $\gamma$ legs from the $Y$-vertex.
 %These contractions explain the terms $(\partial_j a^i)^S(\gamma)$ and $(\partial_i b^j)^S(\gamma)$ in the integrand.
 
 Let us introduce the following notation. 
@@ -2777,25 +2929,54 @@ This completes the proof of Theorem \ref{thm: extended quantization}.
 
 We now show how our results in the last section allow us to construct the quantization of the holomorphic $\sigma$-model on general target complex manifolds satisfying the condition $\ch_{d+1}(T_X^{1,0}) = 0$.
 
-We have already seen how formal geometry allows us to descend the classical $(\Vect,\GL_n)$-equivariant formal $\beta\gamma$ system $\sE_n$ to the holomorphic $\sigma$-model with arbitrary complex target. 
-When we quantize, we found that there is an obstruction to having a $(\Vect,\GL_n)$-equivariance, but we have an action by the bigger $L_\infty$ pair $(\TVectd, \GL_n)$. 
+We have already seen how formal geometry allows us to descend the classical $(\Vect,\GL_n)$-equivariant formal $\beta\gamma$ system $\sE_n$ to the holomorphic $\sigma$-model with arbitrary complex target $X$.
+The global holomorphic $\sigma$-model of maps $\CC^d \to X$ infinitesimally close to the constant maps is described by the (curved) elliptic $L_\infty$ algebra $\sE_{\CC^d \to X} [-1]$, which is defined over the de Rham complex $\Omega^*_X$. 
+In terms of the formal $\beta\gamma$ system we saw that 
+\be\label{L_infty}
+\sE_{\CC^d \to X} [-1] = \ddesc_X(\sE_n[-1])
+\ee
+as elliptic $L_\infty$ algebras defined over $\Omega^*_X$.
+Likewise, there is a relationship between the deformation complexes $\Def_{\CC^d \to X} = \desc_X(\Def_n)$. 
+The characteristic map is of the form
+\ben
+{\rm char}_X : \clie^*(\Vect, \GL_n ; \Def_n) \to \Def_{\CC^d \to X}
+\een
+Note that $\clie^*(\Vect, \GL_n ; \Def_n) \subset \Def_n^{\rm W}$ and $I^{\rm W}$ lies in this subcomplex. 
+Under the characteristic map ${\rm char}_X(I^{\rm W}) \in \Def_{\CC^d \to X}$ determines a solution to the $\Omega^*_X$-linear classical master equation.
+This is equivalent to the data involved in the identification (\ref{L_infty}).
+ 
+ When we quantize, we found that there is an obstruction to having a $(\Vect,\GL_n)$-equivariance, but we have an action by the bigger $L_\infty$ pair $(\TVectd, \GL_n)$. 
+Equivalently, the naive RG flow of $I^{\rm W}$ does not satisfy the quantum master equation, but we can found a modification of it that does. 
 
 Every complex manifold $X$ admits a bundle of coordinates, a Gelfand-Kazhdan structure, which allows us to construct global objects using the data of a $(\Vect,\GL_n)$-module.
 We saw in Section \ref{sec: extended geometry} that not every complex manifold admits bundle of coordinates with a $(\TVectd, \GL_n)$-action.
 However, for every trivialization of the characteristic class $\ch_{d+1}(T_X^{1,0})$ we found that there did exist an extended Gelfand-Kazhdan structure, which one can think of as a reduction of the original bundle of coordinates to the pair $(\TVectd, \GL_n)$. 
 
-Forgetting analytic difficulties for a moment, we can exhibit why our formal quantization produces one ...
 Let us fix an extended Gelfand-Kazhdan structure as in Section \ref{sec: extended geometry}.
-This was given by a complex manifold $X$ and a trivialization $\alpha$ of $\ch_{d+1}(T_X^{1,0})$.
+This was given by an ordinary GK structure, so a manifold $X$ and a formal exponential $\sigma$, together with a trivialization $\alpha$ of $\ch_{d+1}(T_X^{1,0})$.
+As usual, we will omit the data of a formal exponential in the below.
 We denote the de Rham complex of the corresponding descent functor by
 \ben
 \Tilde{\ddesc}_{X,\alpha} : {\rm Mod}_{(\TVectd, \GL_n)} \to {\rm Mod}_{\Omega^*_X} .
 \een
-In the $L \to 0$ limit the one-loop $\TVectd$-equivariant quantization of Theorem \ref{thm: extended quantization} defines the structure of a $(\TVectd,\GL_n)$-module on 
+
+An immediate corollary of our main result in the previous section, Theorem \ref{thm: extended quantization}, is the following
+
+\begin{thm}
+Let $\alpha$ be a trivialization of $\ch_{d+1}(T_X^{1,0})$. 
+Then, the family $\{I_{X, \alpha}[L]\}_{L > 0}$
 \ben
-\Def_n [-1] [[\hbar]] / \hbar^2 
+I_{X,\alpha} [L] = \Tilde{\rm char}_{X,\alpha}\left(I^{\rm W}[L] + \hbar \Tilde{J}[L]\right) \in \sO(\sE_{\CC^d \to X})[[\hbar]]
 \een
-that is equivariant for the $L_\infty$
+defines a quantization of the holomorphic $\sigma$-model of maps $\CC^d \to X$.
+\end{thm}
+
+%
+%In the $L \to 0$ limit the one-loop $\TVectd$-equivariant quantization of Theorem \ref{thm: extended quantization} defines the structure of a $(\TVectd,\GL_n)$-module on
+%\ben
+%\Def_n [-1] [[\hbar]] / \hbar^2 
+%\een
+%that is equivariant for the $L_\infty$
 
 
 \section{The local operators}
@@ -3646,6 +3827,7 @@ Similarly, the quotient $\sA_{V,-}$ is the collection of "creation operators".
 \subsection{A formula for the character}
 
 In this section we compute the character of the action of $U(d) \times U(1)_f$ on the local observables of the free $\beta\gamma$ system with values in $V$. 
+We have already seen that the quantum theory is equivariant for this group, so it makes sense to compute such a character.
 By definition, the character is conjugation invariant, so it is completely determined by its value on the subgroup $T^d \times U(1)_f \subset U(d) \times U(1)_f$. 
 Choose the following basis for the maximal torus of $U(d)$: 
 \ben
@@ -3655,11 +3837,12 @@ We label the coordinate on $U(1)_f$ by $u$.
 \brian{something about filtrations. I.e., why does the "formal character" make sense?} 
 We conclude that the character is valued in the power series ring $\CC[[q_i^{\pm}, u^{\pm q_f}]]$. 
 
-We now turn to the case that the complex dimension $d = 2$, with an aim to compare to the formula for the character of the $\cN = 1$ supersymmetric chiral multiplet on $\RR^4$. 
+We will perform the detailed calculation in the case that the complex dimension $d = 2$, with an aim to compare to the formula for the character of the $\cN = 1$ supersymmetric chiral multiplet on $\RR^4$. 
+The higher dimensional calculation is similar.
 
-The local operators of the theory are equal to the observables on a complex $2$-disk $D^2 \subset \CC^2$. 
-By translation invariance it suffices to consider a disk centered at the origin $0 \in \CC^2$. 
-When $d=2$ we use Proposition \ref{} to read off the cohomology of the disk observables $H^*\Obs^q (D^2)$:
+By the local operators of the theory we mean those supported on the disk $D^2 \subset \CC^2$. 
+Since the theory is translation invariant it suffices to consider a disk centered at the origin $0 \in \CC^2$. 
+When $d=2$ we use Proposition \ref{} to read off the cohomology of the disk observables $H^*\Obs^\q_V (D^2)$:
 \ben
 \Sym\left((\sO^{hol}(D^2) \tensor V)^\vee \right) \tensor \Sym \left( (\Omega^{2,hol}(D^2) \tensor V^*)^\vee [-1] \right) .
 \een 
@@ -3670,8 +3853,8 @@ When $d=2$ we use Proposition \ref{} to read off the cohomology of the disk obse
 \een
 \end{prop}
 \begin{proof}
-We will write down a basis for a dense subspace of the observables on a $2$-disk.
-For integers $n_1,n_2 \geq 0$ and elements $v \in V$, $v^* \in V^*$ consider the following linear observables on the $2$-disk:
+We recall the basis for a dense subspace of the observables on a $2$-disk that we described in Section \ref{sec: disk observables}.
+Fix non-negative integers $n_1,n_2 \geq 0$ and elements $v \in V$, $v^* \in V^*$ consider the following linear observables on the $2$-disk:
 \ben
 \begin{array}{ccclll} 
 O_{\gamma} (n_1,n_2 ; v^*) & : & \gamma \tensor w & \in \sO^{hol}(D^2) \tensor V & \mapsto & \ev(v^*, w) \frac{\partial^{n_1}}{\partial z_1^{n_1}} \frac{\partial^{n_2}}{\partial z_2^{n_2}} \gamma (0) \\
@@ -3679,7 +3862,7 @@ O_{\beta} (n_1+1,n_2+1; v) & : & \beta \d z_1 \d z_2 \tensor w^* & \in \Omega^{2
 \end{array} 
 \een
 
-Since the field $\gamma \tensor w \in \sO^{hol} \tensor V$ has $U(2)$ weight zero, we see that the 
+Since the field $\gamma \tensor w \in \sO^{hol} \tensor V$ has $U(2)$ weight zero, we see that the \brian{what?}
 
 For fixed $n_1,n_2 \geq 0$, let $V^*_{n_1,n_2}$ denote the linear span of operators $O_{\gamma}(n_1, n_2; v^*)$. 
 As a vector space $V_{n_1,n_2}^* \cong V^*$, but we want to remember the weights under $U(2)$. 
