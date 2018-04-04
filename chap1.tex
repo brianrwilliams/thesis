@@ -4,7 +4,7 @@
 
 \linespread{1.25}
 
-\usepackage{tikz}
+\usepackage{tikz,tikz-cd}
 \usetikzlibrary{arrows,shapes}
 \usetikzlibrary{trees}
 \usetikzlibrary{matrix,arrows}
@@ -12,6 +12,9 @@
 \usetikzlibrary{calc,through}
 \usetikzlibrary{decorations.pathreplacing}
 \usepackage{pgffor}
+
+\def\cl{{\rm cl}}
+\def\Obs{{\rm Obs}}
 
 \title{Holomorphic theories and renormalization}
 
@@ -90,9 +93,291 @@ quantizations, but the higher loop behavior remains a very interesting and subtl
 
 \section{The definition of a quantum field theory}
 
+The goal of this section is to review the classical and quantum Batalin-Vilkovisky formalisms.
+We will also set up the requisite conventions and notations that we will use throughout the thesis. 
+
 \subsection{Classical field theory}
 
-Classical field theory is a re
+Classical field theory is a formalism for describing a physical system in terms of objects called {\em fields}. 
+Mathematically, the space of fields is a (most often infinite dimensional) vector space $\sE$. 
+Classical physics is described by the critical locus of a (usually real or complex valued) linear functional on the space of fields 
+\be\label{actionfnl}
+S : \sE \to \RR \;\; {\rm or} \;\; \CC,
+\ee
+called the {\em action functional}. 
+The critical locus is the locus of fields that have zero variation
+\be
+{\rm Crit}(S) := \{\varphi \in \sE \; | \; \d S (\varphi) = 0\} .
+\ee
+A field $\varphi$ satisfying the equation $\d S (\varphi) = 0$ is said to be a {\em solution to the classical equations of motion}. 
+
+Even in the finite dimensional case, if the functional $S$ is not sufficiently well-behaved the critical locus can be still be highly singular. 
+The starting point of the {\em classical Batalin-Vilkovisky} formalism is to instead consider the {\em derived} critical locus.
+To get a feel for this, we review the finite dimensional situation.
+Let $M$ be a manifold, which is our ansatz for $\sE$ at the moment, and suppose $S : M \to \RR$ is a smooth map.
+The critical locus is the intersection of the graph of $\d S$ in $T^*M$ with the zero section $0 : M \to T^*M$.
+Thus, functions on the critical locus are of the form
+\ben
+\sO({\rm Crit}(S)) = \sO(\Gamma(\d S)) \tensor_{\sO(T^*M)} \sO(M) .
+\een
+The derived critical locus is a derived space whose dg ring of functions is 
+\ben
+\sO({\rm Crit}^{h}(S)) = \sO(\Gamma(\d S)) \tensor^{\LL}_{\sO(T^*M)} \sO(M).
+\een
+We have replaced the strict tensor product with the derived one.
+Using the Koszul resolution of $\sO(M)$ as a $\sO(T^*M)$-module one can write this derived tensor product as a complex of polyvector fields equipped with some differential:
+\ben
+\sO({\rm Crit}^h(S)) \simeq \left({\rm PV}^{-*}(M), \iota_{\d S}\right) .
+\een
+In cohomological degree $-i$ we have ${\rm PV}^{-i} (M) = \Gamma(M, \wedge^i TM)$ and $\iota_{\d S}$ denotes contraction with the one-form $\d S$ (which raises cohomological degree with our regrading convention).
+With our grading convention we have $\sO(T^*[-1] M) = {\rm PV}^{-*}(M)$. 
+The space $\sO(T^*[-1]M)$ has natural shifted Poisson structure, which takes the form of the familiar Schouten-Nijenhuis bracket of polyvector fields.
+
+The takeaway is that the derived critical locus of a functional $S : M \to \RR$ has the structure of a $(-1)$-symplectic space.
+This will be the starting point for our definition of a theory in the BV formalism in the general setting.
+ 
+In all non-trivial examples the space of fields $\sE$ is infinite dimensional and we must be careful with what functionals $S$ we allow.
+The space of fields we consider will always have a natural topology, and we will choose functionals that are continuous with respect to it. 
+We divert for a moment to discuss these issues of infinite dimensional linear algebra.
+
+\subsubsection{Some functional analysis}
+Homological algebra will play a paramount role in our approach to perturbative field theory.
+A problem with this is that the category of topological vector spaces is not an abelian category.
+It is therefore advantageous to enlarge this to the category of {\em differentiable vector spaces}.
+The details of this setup are carried out in the Appendix of \cite{CG1}, but we will recall some key points.
+
+Let ${\rm Mfld}$ be the site of smooth manifolds.
+The covers defining the Grothendieck topology are given by surjective local diffeomorphisms.
+There is a natural sheaf on this site given by smooth functions $C^\infty : M \mapsto C^\infty(M)$. 
+By definition, a $C^\infty$-module is a module sheaf over $C^\infty$ on ${\rm Mfld}$. 
+
+For any $p$ the assignment $\Omega^p : M \mapsto \Omega^p (M)$ defines a $C^\infty$-module.
+Similarly, if $F$ is any $C^\infty$-module we have the $C^\infty$-module of $p$-forms with values on $F$ defined by the assignment 
+\ben
+\Omega^1(F) : M \in {\rm Mfld} \mapsto \Omega^p(M, F) = \Omega^p(M) \tensor_{C^\infty(M)} F(M) .
+\een
+
+\begin{dfn}
+A {\em differentiable vector space} is a $C^\infty$-module equipped with a map of sheaves on ${\rm Mfld}$
+\ben
+\nabla : F \to \Omega^1(F) 
+\een 
+such that for each $M$, $\nabla(M)$ defines a flat connection on the $C^\infty(M)$-module $F(M)$. 
+A map of differentiable vector spaces is one of $C^\infty$-modules that intertwines the flat connections. 
+This defines a category that we denote ${\rm DVS}$ 
+\end{dfn}
+
+Our favorite example of differentiable vector spaces are imported directly from geometry.
+
+\begin{eg}
+Suppose $E$ is a vector bundle on a manifold $X$. 
+Let $\sE(X)$ denote the space of smooth global sections.
+Let $C^\infty(M, \sE(X))$ be the space of sections of the bundle $\pi_X^*E$ on $M \times X$ where $\pi_X : M \times X \to X$ is projection. 
+The assignment $M \mapsto C^\infty(M , \sE(X))$ is a $C^\infty$-module with flat connection, so defines a differentiable vector space.
+Similarly, the space of compactly supported sections $\sE_c(X)$ is a DVS. 
+\end{eg}
+
+Many ordinary categories of topological vector spaces embed inside the category of differentiable vector spaces. 
+Consider the category of locally convex topological vector spaces ${\rm LCTVS}$.
+If $V$ is such a vector space, there is a notion of a smooth map $f : U \subset \RR^n \to V$.
+One can show, Proposition B.3.0.6, that this defines a functor ${\rm dif}_t : {\rm LCTVS} \to DVS$ sending $V$ to the $C^\infty$-module $M \mapsto C^\infty(M, V)$.
+If ${\rm BVS} \subset {\rm LCTVS}$ is the subcategory with the same objects but whose morphisms are bounded, this functor restricts to embed ${\rm BVS}$ as a full subcategory ${\rm BVS} \subset {\rm DVS}$. 
+
+There is a notion of completeness that is useful when discussing tensor products. 
+A topological vector space $V \in {\rm BVS}$ is {\em complete} if every smooth map $c : \RR \to V$ has an anti-derivative \cite{KM97}.
+
+We let ${\rm Ch}({\rm DVS})$ denote the category of cochain complexes in differentiable vector spaces (we will refer to objects as differentiable vector spaces). 
+It is enriched over the category of differential graded vector spaces in the usual way.
+We say that a map of differentiable cochain complexes $f : V \to W$ is a quasi-isomorphism if and only if for each $M$ the map $f : C^\infty(M, V) \to C^\infty(M,W)$ is a quasi-isomorphism.
+
+\begin{thm}[Appendix B \cite{CG1}]
+The full subcategory ${\rm dif}_c : {\rm CVS} \subset {\rm DVS}$ is closed under limit, countable coproducts, and sequential colimits of closed embeddings. 
+Furthermore, {\rm CVS} has the structure of a symmetric monoidal category with respect to the completed tensor product $\Hat{\tensor}_{\beta}$. 
+\end{thm}
+
+We will not define the tensor product here, but refer the reader the cited reference for a complete exposition.
+Often times we will write $\tensor$ for $\Hat{\tensor}_\beta$ where there is no potential conflict of notation. 
+The fundamental property of the tensor product that we use is the following.
+Suppose that $E,F$ are vector bundles on manifolds $X,Y$ respectively.
+Then, $\sE(X), \sF(Y)$ lie in ${\rm CVS}$, so it makes sense to take their tensor product using $\Hat{\tensor}_\beta$. 
+There is an isomorphism
+\be\label{tensor1}
+\sE(X) \Hat{\tensor}_\beta \sF(Y) \cong \Gamma(X \times Y, E \boxtimes F)
+\ee
+where $E \boxtimes F$ denotes the external product of bundles, and $\Gamma$ is smooth sections. 
+
+If $E$ is a vector bundle on a manifold $X$, then the spaces $\sE(X), \sE_c(X)$ both lie in the subcategory ${\rm CVS} \subset {\rm DVS}$. 
+The differentiable structure arises from the natural topologies on the spaces of sections. 
+
+We will denote by $\Bar{\sE}(X)$ ($\Bar{\sE}_c(X)$) the space of (compactly supported) distributional sections.
+It is useful to bear in mind the following inclusions
+\ben
+\begin{tikzcd}        
+    \sE_c(X)  \arrow[hook]{r} \arrow[hook]{rd} & \Bar{\sE}_c(X) \arrow[hook]{r} & \Bar{\sE}(X) \\
+    & \sE(X) \arrow[hook]{ru} & .
+\end{tikzcd}
+\een
+
+Denote by $E^\vee$ the dual vector bundle whose fiber over $x \in X$ is the linear dual of $E_x$. 
+Let $E^!$ denote the vector bundle $E^\vee \tensor {\rm Dens}_X$, where ${\rm Dens}_X$ is the bundle of densities. 
+In the case $X$ is oriented, ${\rm Dens}_X$ is isomorphic to the top wedge power of $T^*X$. 
+Let $\sE^!(X)$ denote the space of sections of $E^!$. 
+The natural pairing 
+\ben
+\sE_c(X) \tensor \sE^!(X) \to \CC
+\een
+that pairs sections of $E$ with the evaluation pairing and integrates the resulting compactly supported top form exhibits $\Bar{\sE}_c(X)$ as the continuous dual to $\sE^!(X)$. 
+Likewise, $\sE_c(X)$ is the continuous dual to $\Bar{\sE}^!(X)$. 
+In this way, the topological vector spaces $\Bar{\sE}(X)$ and $\Bar{\sE}_c(X)$ obtain a natural differentiable structure.
+
+If $V$ is any differentiable vector space then we define the space of linear functionals on $V$ to be the space of maps $V^* = {\rm Hom}_{\rm DVS}(V, \RR)$. 
+Since ${\rm DVS}$ is enriched over itself this is again a differentiable vector space. 
+Similarly, we can define the polynomial functions of homogeneous degree $n$ to be the space
+\ben
+\Sym^n(V^*) = {\rm Hom}^{multi}_{\rm DVS}(V \times \cdots \times V, C^\infty)_{S_n}
+\een
+where the hom-space denotes multi-linear maps, and we have taken $S_n$-coinvariants on the right-hand side.
+The algebra of functions on $V$ is defined by
+\ben
+\sO(V) = \prod_{n} \Sym^n(V^*) .
+\een
+
+As an application of Equation (\ref{tensor1}) we have the following identification.
+
+\begin{lem}\label{lem: fnls}
+Let $E$ be a vector bundle on $X$. 
+Then, there is an isomorphism
+\ben
+\sO(\sE(X)) \cong \prod_{n} \sD_c(X^n , (E^!)^{\boxtimes n})
+\een
+where $\sD_c(X^n , (E^!)^{\boxtimes n})$ is the space of compactly supported distributional sections of the vector bundle $(E^!)^{\boxtimes n}$.
+\end{lem}
+
+\subsubsection{Local functionals}
+
+In our approach, the space of fields will always be equal to the space of smooth sections of a $\ZZ$-graded vector bundle $E\to X$ on a manifold $\sE = \Gamma(X, E)$. 
+The class of functionals $S : \sE \to \RR$ defining the classical theory we consider are required to be {\em local}, or given by the integral of a Lagrangian density. 
+
+Let $D_X$ denote the sheaf of differential operators on $X$. 
+The $\infty$-jet bundle ${\rm Jet}(E)$ of a vector bundle $E$ is the vector bundle whose fiber over $x \in X$ is the space of formal germs at $x$ of sections of $E$. 
+It is a standard fact that ${\rm Jet}(E)$ is equipped with a flat connection giving its space of sections $J(E) = \Gamma(X, {\rm Jet}(E))$ the structure of a $D_X$-module.
+
+Above, we have defined the algebra of functions $\sO(\sE(X))$ on the space of sections $\sE(X)$.
+Similarly, let $\sO_{red}(\sE(X)) = \sO(\sE(X)) / \RR$ be the quotient by the constant polynomial functions. 
+The space $\sO_{red}(J(E))$ inherits a natural $D_X$-module structure from $J(E)$. 
+We refer to $\sO_{red}(J(E))$ as the space of {\em Lagrangians} on the space of sections $\sE(X)$. 
+Indeed, every element $F \in \sO_{red}(J(E))$ can be expanded as $F = \sum_n F_n$ where each $F_n$ is an element 
+\ben
+F_n \in {\rm Hom}_{C^\infty_X} (J(E)^{\tensor n}, C^\infty_X)_{S_n} \cong {\rm PolyDiff}(\sE^{\tensor n}, C^\infty(X))
+\een
+where the right-hand side is the space of polydifferential operators.
+The proof of the isomorphism on the right-hand side can be found in Chapter 5 of \cite{CostelloRenormalization}.
+
+A local functional is given by a Lagrangian densities modulo total derivatives.
+The mathematical definition is the following.
+
+\begin{dfn}
+Let $E$ be a graded vector bundle on $X$.
+Define the sheaf of {\em local functionals} on $X$ to be
+\ben
+\oloc(\sE) = {\rm Dens}_X \tensor_{D_X} \sO_{red}(J(E)),
+\een
+where we use the natural right $D_X$-module structure on densities.
+\end{dfn}
+
+From the expression for functionals in Lemma \ref{lem: fnls} we see that integration defines an inclusion of sheaves
+\be\label{local inclusion}
+i : \oloc(\sE) \hookrightarrow \sO_{red}(\sE_c) .
+\ee
+Often times when we describe a local functional we will write down its value on test compactly supported sections, then check that it is given by integrating a Lagrangian density.
+
+\subsubsection{The definition of a classical field theory}
+
+Before giving the definition, we need to recall what the proper notion of a shifted symplectic structure is in the infinite dimensional setting that we work in.
+
+\begin{dfn}
+Let $E$ be a graded vector bundle on $X$.
+A $(-1)$-{\em shifted symplectic structure} is an isomorphism of graded vector spaces
+\ben
+E \cong_{\omega} E^![-1] = \left({\rm Dens}_X \tensor E^\vee\right)[-1]
+\een
+that is graded anti-symmetric.
+\end{dfn}
+
+In general, $\omega$ does {\em not} induces a Poisson structure on the space of all functionals $\sO(\sE)$. 
+This is because, as we have seen above, elements of this space are given by distributional sections and hence we cannot pair elements with overlapping support.
+The symplectic structure does, however, induce a Poisson bracket on {\em local} functionals. \footnote{Note that $\oloc(\sE)$ is not a shifted Poisson algebra since there is no natural commutative product.}
+We will denote the bracket induced by a shifted symplectic structure by $\{-,-\}$. 
+
+We are now ready to give the precise definition of a classical field theory.
+
+\begin{dfn}
+A {\em classical field theory} on a smooth manifold $X$ is a $\ZZ$-graded vector bundle $E$ equipped with a $(-1)$-shifted symplectic structure together with a local functional $S \in \oloc(\sE)$ such that:
+\begin{enumerate}
+\item the functional $S$ satisfies the {\em classical master equation} 
+\ben
+\{S, S\} = 0;
+\een
+\item $S$ is at least quadratic, so we can write it (in a unique way) as 
+\ben
+S(\varphi) = \omega(\varphi, Q \varphi) + I(\varphi)
+\een
+where $Q$ is a linear differential operator such that $Q^2 = 0$, and  $I \in \oloc(\sE)$ is at least cubic;
+\item the complex $(\sE, Q)$ is elliptic.
+\end{enumerate}
+\end{dfn}
+
+In the physics literature, the operator $Q$ is known as the linearized BRST operator, and $\{S,-\} = Q + \{I,-\}$ is the full BRST operator.
+Ellipticity of the complex $(\sE,Q)$ is a technical requirement that will be very important in our approach to the issue of renormalization in perturbative quantum field theory.
+
+A {\em free theory} is a classical theory with $I = 0$ in the notation above. 
+Thus, a free theory is a simply an elliptic complex equipped with a shifted symplectic pairing. 
+
+Although the space $\sO(\sE)$ does not have a well-defined shifted Possoin bracket induced from the symplectic pairing, the operator $\{S,-\} : \sO(\sE) \to \sO(\sE)[1]$ {\em is} well-defined. 
+By assumption, it is also square zero. 
+The complex of global observables of the theory is defined by
+\ben
+\Obs^{\cl}_{\sE}(X) = (\sO(\sE(X)), \{S,-\}) .
+\een
+This complex is the general replacement for functions on the derived locus from the beginning of this section.
+Although it does not have a $P_0$-structure, there is a subspace that does. 
+
+\subsubsection{A description using $L_\infty$ algebras}
+
+There is a completely equivalent way to describe a classical field theory that helps to illuminate the mathematical meaningfulness of the definition given above. 
+The requisite concept we need to introduce is that of a {\em local Lie algebra} (or local $L_\infty$ algebra).
+
+First, recall that an $L_\infty$ algebra is a modest generalization of a dg Lie algebra where the Jacobi identity is only required to hold up to homotopy.
+The data of an $L_\infty$ algebra is a graded vector space $V$ with, for each $k \geq 1$, a $k$-ary bracket
+\ben
+\ell_k : V^{\tensor k} \to V[2-k]
+\een
+of cohomological degree $2-k$. 
+These maps are required to satisfy a series of conditions, the first of which says $\ell_1^2 = 0$.
+The next says that $\ell_2$ is a bracket satisfying the Jacobi identity up to a homotopy given by $\ell_3$.
+For a detailed definition see we refer the reader to \cite{StasheffDG, GetlzerLie}.
+
+We now give the definition of a local $L_\infty$ algebra on a manifold $X$.
+This has appeared in Chapter 4 of \cite{CG2}. 
+
+\begin{dfn} 
+A {\em local $L_\infty$ algebra} on $X$ is the following data:
+\begin{itemize}
+\item[(i)] a $\ZZ$-graded vector bundle $L$ on $X$, whose sheaf of smooth sections we denote $\sL^{sh}$, and
+\item[(ii)] for each positive integer $n$, a polydifferential operator in $n$ inputs
+\ben
+\ell_n : \underbrace{\sL \times \cdots \times \sL}_{\text{$n$ times}} \to \sL[2-n]
+\een
+\end{itemize}
+such that the collection $\{\ell_n\}_{n \in \NN}$ satisfy the conditions of an $L_\infty$ algebra.
+In particular, $\sL$ is a sheaf of $L_\infty$ algebras. 
+\end{dfn}
+
+In practice, we prefer to work with the compactly supported sections of $L$,
+as explained in \brian{cross ref}, for which we reserve the more succinct notation~$\sL$.
+
+
+%The functionals we consider are required to be continuous with a certain topology on the topological vector space $\sE$. 
 
 \subsection{Renormalization}
 
@@ -133,7 +418,7 @@ when it becomes relevant, in the context of factorization algebras, we switch to
 
 \subsection{The quantum master equation}
 
-\section{Holomorphic field theories}
+\section{Holomorphic field theories} \label{sec: hol theory}
 
 The goal of this section is to define the notion of a holomorphic field theory. 
 This is a variant of Costello's definition of a BV theory, see the previous section, and we will take for granted that the reader is familiar with the general format.
@@ -285,6 +570,19 @@ When $d = 1$ this reduces to the ordinary chiral $\beta\gamma$ system from confo
 We will discuss this higher dimensional version further in Section \brian{}.
 For instance, we will see how this theory is the starting block for constructing general holomorphic $\sigma$-models. 
 \end{eg}
+
+Of course, there are many variants of the $\beta\gamma$ system that we can consider.
+For instance, if $E$ is {\em any} holomorphic vector bundle on $X$ we can take 
+\ben
+V = E \oplus K_{\CC^d} \tensor E^\vee
+\een
+where $E^\vee$ is the linear dual bundle. 
+The pairing is constructed as in the case above where we also use the evaluation pairing between $E$ and $E^\vee$.
+In thise case, the fields are $\gamma \in \Omega^{0,*}(X, E)$ and $\beta \in \Omega^{d,*}(X, E^\vee)[d-1]$. 
+The action functional is simply
+\ben
+S(\gamma, \beta) = \int {\rm ev}_E(\beta \wedge \dbar \gamma) .
+\een
 
 \begin{eg}
 {\em The free chiral scalar}.
@@ -545,6 +843,8 @@ When working on affine space $\RR^n$ one can ask for a theory to be invariant wi
 In this section, we consider the affine manifold $\CC^d = \RR^{2d}$ equipped with its standard complex structure and define what a {\em holomorphically translation invariant} theory is on it. 
 It will be a very special case of a general holomorphic theory as defined above. 
 
+%The definition we give of a holomorphically translation invariant %theory is slightly different than the structure of the last %section. 
+
 Let $V$ be a holomorphic vector bundle on $\CC^n$ and suppose we fix an identification of bundles 
 \ben
 V \cong \CC^d \times V_0
@@ -593,6 +893,7 @@ Q^{hol} = \sum_I \frac{\partial}{\partial z^I} \mu_I
 where $I$ is some multi-index and $\mu_I : V \to V$ is a linear map of cohomological degree $+1$. 
 Note that we have automatically written $Q^{hol}$ in a way that it is translation invariant.
 Of course, for this differential to define a free theory there needs to be some compatibility with the pairing on $V$. 
+
 We can summarize this in the following definition, which should be viewed as a slight modification of a free theory to this translation invariant holomorphic setting. 
 
 \begin{dfn} A {\em holomorphically translation invariant free BV theory} is the data of a holomorphic vector bundle $V$ together with
@@ -604,9 +905,9 @@ We can summarize this in the following definition, which should be viewed as a s
 such that the following conditions hold
 \begin{enumerate}
 \item the induced $\CC$-valued pairing $\int \circ (-,-)_V$ is non-degenerate;
-\item the operator $Q^{hol}$ satisfies $(\dbar + Q^{hol})^2 = 0$ and
+\item the operator $Q^{hol}$ satisfies $(\dbar + Q^{hol})^2 = 0$ and is skew self-adjoint for the pairing:
 \ben
-\int (Q^{hol} v, v')_V = \pm \int (v, Q^{hol} v') .
+\int (Q^{hol} v, v')_V = \pm \int (v, Q^{hol} v').
 \een
 \end{enumerate}
 \end{dfn}
@@ -623,7 +924,7 @@ In the usual way, we obtain the action functional via
 S(\varphi) = \int (\varphi, (\dbar + Q^{hol}) \varphi\>_V .
 \een 
 
-Before going further, we will list some familiar examples.
+Before going further, we will give a familiar example from the last section.
 
 \begin{eg}\label{eg bg affine} {\em The free $\beta\gamma$ system on $\CC^d$}.
 Suppose that 
@@ -651,19 +952,32 @@ We will discuss this higher dimensional version further in Section \brian{}.
 For instance, we will see how this theory is the starting block for constructing general holomorphic $\sigma$-models. 
 \end{eg}
 
-Of course, there are many variants of the $\beta\gamma$ system that we can consider.
-For instance, if $E$ is {\em any} holomorphic vector bundle we can take 
-\ben
-V = E \oplus K_{\CC^d} \tensor E^\vee
-\een
-where $E^\vee$ is the linear dual bundle. 
-The pairing is constructed as in the case above where we also use the evaluation pairing between $E$ and $E^\vee$, ${\rm ev}_E : E \tensor E^\vee \to \CC$.
-In thise case, the fields are $\gamma \in \Omega^{0,*}(\CC^d, E)$ and $\beta \in \Omega^{d,*}(\CC^d, E^\vee)[d-1]$. 
-The action functional is simply
-\ben
-S(\gamma, \beta) = \int_{\CC^d} {\rm ev}_E(\beta \wedge \dbar \gamma) .
-\een
 
+\subsubsection{Translation invariant interactions}
+
+Let's fix a general free holomorphically translation invariant theory as above.
+We now define what a holomorphically translation invariant interacting theory is.
+
+Let $\Bar{\eta}_i$ denote the operator on Dolbeault forms given by contraction with the antiholomorphic vector field $\frac{\partial}{\partial \zbar_i}$. 
+Note that $\eta_i$ acts on the Dolbeault complex on $\CC^d$ with values in any vector bundle.
+In particular it acts on the fields of a free holomorphically translation invariant theory as above, in addition to functionals on fields.
+
+Of course, to be holomorphically translation invariant, it is necessary to look at local functionals that are translation invariant.
+The extra bit of holomorphicity we take into account on local functionals $I \in \oloc(\sE_V)$ is the following.
+
+\begin{dfn}
+A {\em holomorphically translation invariant} local functional is a translation invariant local functional $I \in \oloc(\sE_V)^{\CC^d}$ such that $\eta_i I = 0$ for all $1 \leq i \leq d$. 
+\end{dfn}
+
+Any translation invariant local functional is a sum of functionals of the form
+\ben
+\varphi \mapsto \int_{\CC^d} F(D_1\varphi, \ldots, D_k \varphi)
+\een
+where $F : V^{\tensor k} \to \CC \cdot \d^d z$ is a linear map and each $D_\alpha$ is an operator in the space 
+\ben
+\CC \left[\d \zbar_i, \eta_i, \frac{\partial}{\partial z_i}, \frac{\partial}{\partial \zbar_i} \right] .
+\een
+The condition $\eta_i I = 0$ means that none of the $D_i$'s have any $\d \zbar_j$-dependence. 
 
 %\subsubsection{Interacting holomorphic theories}
 %
@@ -740,12 +1054,83 @@ S(\gamma, \beta) = \int_{\CC^d} {\rm ev}_E(\beta \wedge \dbar \gamma) .
 
 \subsubsection{Holomorphic translation invariant deformations}
 
-Any local Lie algebra on a manifold endows the structure of an $L_\infty$ algebra on its fibers. 
-In particular, if $L$ the graded vector bundle associated to local Lie algebra on $\CC^d$, its fiber over $0$, $L_0$, is equipped with the structure of an $L_\infty$ algebra. 
+In this thesis we will often encounter theories that are holomorphically translation invariant.
+The first step in understanding their quantizations is to describe the deformations. 
+Of course, it is completely natural to look for deformations that are also translation invariant. 
+For holomorpically translation invariant theories, we can provide a general characterization of the deformation complex that we will be necessary at various stages in this work.
 
-Suppose $\sL$ is a holomorphically translation invariant local Lie algebra on $\CC^d$ of the form $\Omega^{0,*}(\CC^d, L)$ where $L$ is a graded holomorphic vector bundle.
-In this situation, we are interested in studying the local cochains of $\sL$ that are translation invariant.
-We will use the following result over and over again throughout this work.
+Let $(V,Q^{hol},(-,-)_V, I)$ be the data of an interacting holomorphically translation invariant theory on $\CC^d$.
+We have already encountered the space of local functionals $\oloc(\sE_V)$ and the deformation complex of the interacting BV theory is
+\ben
+\Def_{\sE_V} = \left(\oloc(\sE_V), \dbar + Q^{hol} + \{I,-\}\right) .
+\een
+There is an induced action of translations $\CC^{2d}$ on this cochain complex. 
+The condition of translation invariance was not the only one required to have a holomorphically translation invariant local functional.
+We also require that $\eta_i I = 0$.
+The abelian Lie alegebra spanned by the odd elements $\{\eta_i\}$ is $d$-dimensional and we denote it by $\CC^d[1]$.
+We want to consider deformations that are invariant for the action by the total Lie algebra $\CC^{2d} \oplus \CC^d[1]$.
+We let $(\Def_{\sE_V})^{\CC^d \oplus \CC^d[1]}$ be the space of such invariant deformations.
+
+Recall, in the definition of the local functionals on a graded vector bundle one considers (reduced) functionals on the jet bundle $JV$.
+In the holomorphic case there is also a holomorphic jet bundle $J^{hol}V$.
+The fiber at zero of this jet bundle may be identified as $J^{hol}_0 V = V_0 [[z_1,\ldots,z_d]]$ where the $z_i$'s denote the formal jet coordinate. 
+
+\begin{lem}
+Suppose that $Q^{hol} = 0$.
+Then, there is a quasi-isomorphism
+\ben
+\left(\Def_{\sE_V}\right)^{\CC^{2d} \oplus \CC^d[1]} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \sO_{red}(V_0[[z_1,\ldots,z_d]])[d].
+\een
+Here, $\partial_{z_i} = \frac{\partial}{\partial z_i}$ and $\CC \cdot \d^d z$ denotes the trivial right $\CC[\partial_{z_i}]$-module. 
+\end{lem}
+
+The local functional $I$ defining the classical holomorphic theory endows $J^{hol}V[-1]$ the structure of a $L_\infty$ algebra in $D_{\CC^d}$-modules. 
+Repackaging the statement using Lie algebraic data we can rewrite the equivalence in the lemma as
+\ben
+\left(\Def_{\sE_V}\right)^{\CC^{2d} \oplus \CC^d[1]}\simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \cred^*\left(V_0[[z]][-1])\right) [d].
+\een
+
+\begin{proof}
+By Lemma 6.7.1 we know that we can identify the translation invariant deformations as:
+\ben
+\left(\Def_{\sE_V}\right)^{\CC^{2d}} \simeq \CC \cdot \d^d z \d^d \zbar \tensor^{\LL}_{\CC[\partial_{z_1}, \partial_{\zbar_i}]} \sO_{red}(J_0 \sE_V).
+\een
+Here $J_0 \sE_V$ is the fiber at zero of the bundle of jets of the Dolbeault complex.
+Hence, we have an identification
+\ben
+J_0 \sE_V = V_0[[z_1,\ldots,z_d, \zbar_1,\ldots,z_d]][d \zbar_1,\ldots, \d \zbar_d] .
+\een
+Now, consider the filtration on $V$ by cohomological degree, and consider the spectral sequence computing the cohomology of the translation invariant deformations.
+Since $Q^{hol} = 0$ by assumption, the differential on the first page is simply $\dbar$.
+By the formal Poincar\'{e} lemma for the Dolbeault operator, we see that the first page is quasi-isomorphic to
+\ben
+\CC \cdot \d^d z \d^d \zbar \tensor^{\LL}_{\CC[\partial_{z_1}, \partial_{\zbar_i}]} \sO_{red}(V_0[[z_1,\ldots,z_d]]) .
+\een
+
+Now, consider the resolution of the trivial $\CC[\partial_{\zbar_i}]$-module $\CC \cdot \d^d \zbar$ given by
+\ben
+\CC[\d \zbar_i] \tensor \CC[\partial_{\zbar_i}][d]
+\een
+where the differential sends $1 \mapsto \d \zbar_i \partial_{\zbar_i}$.  
+This is a formal version of the Spencer resolution.
+Taking the $\CC^d[1] = \CC\{\Bar{\eta}_1,\ldots,\Bar{\eta}_d\}$ invariants, we see that the deformation complex becomes
+\ben
+\CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_i}, \partial_{\zbar_i}, \Bar{\eta}_i]} \sO_{red}(V_0[[z_1,\ldots,z_d]]) [d].
+\een
+The lemma follows once we observe that there is a quasi-isomorphism of algebras 
+\ben
+\CC[\partial_{z_i}] \hookrightarrow \CC[\partial_{z_i}, \partial_{\zbar_i}, \Bar{\eta}_i].
+\een
+
+\end{proof}
+
+
+%Any local Lie algebra on a manifold endows the structure of an $L_\infty$ algebra on its fibers. 
+%In particular, if $L$ the graded vector bundle associated to local Lie algebra on $\CC^d$, its fiber over $0$, $L_0$, is equipped with the structure of an $L_\infty$ algebra. 
+
+%Suppose $\sL$ is a holomorphically translation invariant local Lie algebra on $\CC^d$ of the form $\Omega^{0,*}(\CC^d, L)$ where $L$ is a graded holomorphic vector bundle.
+%In this situation, we are interested in studying the local cochains of $\sL$ that are translation invariant.
+%We will use the following result over and over again throughout this work.
 
 %\begin{lem} Let $\sL_0$ denote the fiber of $\sL$ over $0 \in \CC^d$. 
 %Then, if $\ell_1 = \dbar$, there is an equivalence of $L_\infty$ algebras
@@ -755,17 +1140,17 @@ We will use the following result over and over again throughout this work.
 %where $L_0$ is the fiber of the holomorphic bundle $L$ over $0 \in \CC^d$. 
 %\end{lem}
 
-\begin{prop} Suppose $\sL$ is a holomorphically translation invariant local Lie algebra on $\CC^d$ such that $\ell_1 = \dbar$.
-Then, one has
-\ben
-\cloc^*(\sL)^{\CC^d} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\frac{\partial}{\partial z_i}]} \cred^*(L_0 [[z_1,\ldots,z_d]]) [d] .
-\een
-\end{prop}
+%\begin{prop} Suppose $\sL$ is a holomorphically translation invariant local Lie algebra on $\CC^d$ such that $\ell_1 = \dbar$.
+%Then, one has
+%\ben
+%\cloc^*(\sL)^{\CC^d} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\frac{\partial}{\partial z_i}]} \cred^*(L_0 [[z_1,\ldots,z_d]]) [d] .
+%\een
+%\end{prop}
 
-For instance, if $L = \ul{\fg}$ is the constant bundle on $\CC^d$ where $\fg$ is an ordinary Lie (or $L_\infty$) algebra one has $L_0 = \fg$ so that
-\ben
-\cloc^*(\Omega^{0,*}(\CC^d, \fg))^{\CC^d} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\frac{\partial}{\partial z_i}]} \cred^*(\fg [[z_1,\ldots,z_d]]) .
-\een
+%For instance, if $L = \ul{\fg}$ is the constant bundle on $\CC^d$ where $\fg$ is an ordinary Lie (or $L_\infty$) algebra one has $L_0 = \fg$ so that
+%\ben
+%\cloc^*(\Omega^{0,*}(\CC^d, \fg))^{\CC^d} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\frac{\partial}{\partial z_i}]} \cred^*(\fg [[z_1,\ldots,z_d]]) .
+% \een
 
 %\subsubsection{Holomorphic deformations on an arbitrary complex manifold}
 %
@@ -1253,9 +1638,13 @@ The result will follow from two steps.
 Equivariant BV quantization is an enhancement of ordinary BV quantization where one takes into account the action of a group or Lie algebra. 
 We will heavily rely on techniques of equivariant BV quantization throughout this thesis, notably in the construction of the holomorphic $\sigma$-model in Chapter \ref{chap hol sig} and in the proof of a local version of the Grothendieck-Riemann-Roch theorem in Chapter \ref{chap symmetries} using Feynman diagrammatic expansions.
 
-\subsection{Classical equivariance}
+In this section we define the notion of an equivariance in our formalism through the lens of a central result of classical field theory: Noether's theorem.
+Roughly speaking, this states that symmetries of a theory are encoded by a conserved quantity. 
+For instance, a symmetry by translations gives rise to conservation of energy through the the stress-energy momentum tensor. 
+There is an enhancement of Noether's theorem using the language of factorization algebras proved in \cite{CG2} that we will not review here, but will recall in Chapter 3. 
+For us, the manifestation of Noether's theorem will come from a description of a symmetry through a functional satisfying a certain equivariant version of the classical or quantum master equations. 
 
-The equivariance that we consider is a direct analog of symmetries in ordinary Hamiltonian mechanics, which we briefly recall. 
+The symmetries of BV theories that we consider is a direct analog of symmetries in ordinary Hamiltonian mechanics, which we briefly recall. 
 Suppose that $\fh$ is a Lie algebra on $(M,\omega)$ is an ordinary symplectic manifold. 
 A symplectic action of $\fh$ on $X$ is a map of Lie algebras 
 \ben
@@ -1283,17 +1672,52 @@ A symplectic action of $\fh$ on the $(-1)$-shifted symplectic formal moduli spac
 \een
 Such a map $\rho$ is equivalent to a Maurer-Cartan element in the dg Lie algebra
 \ben
-\clie^*(\fh) \tensor \cred^*(\fg)[-1].
+I^{\fh} \in \clie^*(\fh) \tensor \cred^*(\fg)[-1].
 \een
 This is a cohomological degree $+1$ element $I^\fh$ such that $\d I^\fh + \frac{1}{2}\{I^\fh, I^\fh\} = 0$.
 Here $\{-,-\}$ is the bracket on $\cred^*(\fg)$ and $\d$ is the sum of the Chevalley-Eilenberg differentials on $\fh$ and $\fg$. 
+This is a version of the classical master equation over the base ring $\clie^*(\fh)$. 
 
-\brian{finish}
+\subsection{Classical equivariance}
+
+We proceed to mimic the above discussion to define the notion of equivariance for a general classical BV theory. 
+Again, let $\fh$ be an $L_\infty$ algebra.
+A classical field theory, in the BV formalism, is given by an elliptic formal moduli problem satisfying some conditions. 
+In the beginning of this chapter, we saw that this is encoded by a space of fields $\sE$, an action functional $S \in \oloc(\sE)$, and a $(-1)$-shifted symplectic structure. 
+
+We have just seen that we can express an action of $\fh$ using a Maurer-Cartan element that is a functional of both $\fh$ and $\fg$.
+The essential difference with this general situation is that we require our functionals to be {\em local} with respect to their dependence on the fields $\sE$. 
+Recall that the shifted symplectic structure induced a $P_0$-bracket on local functionals $\oloc(\sE)$.
+Thus, $\oloc(\sE)[-1]$ has the structure of a dg Lie algebra with differential given by $\{S,-\}$. 
+
+\begin{dfn}\label{dfn: fh equiv}
+An action of $\fh$ on a classical theory $(\sE, S, \omega)$ is a Maurer-Cartan element of the dg Lie algebra
+\ben
+I^\fh \in \cred^*(\fh) \tensor \oloc (\sE)[-1] .
+\een
+In other words, $I^{\fh}$ satisfies the {\em equivariant classical master equation}:
+\ben
+\d_{\fh} I^{\fh} + \{S, I^{\fh}\} + \frac{1}{2} \{I^{\fh}, I^{\fh}\} = 0 .
+\een
+\end{dfn}
+
+Analogous to the manipulations above, we see that such an $I^{\fh}$ defines a sequence of maps
+\ben
+\fh^{\tensor m} \tensor \sE(X)^{\tensor n} \to \sE(X)
+\een
+combining to give $\sE(X)$ the structure of an $L_\infty$-module over $\fh$. 
+The equivariant classical master equation exhibits $I^{\fh}$ as a conserved quantity encoding the symmetry by the Lie algebra $\fh$.
+This is the fundamental idea of Noether's theorem.
+
+\begin{rmk}
+There is a natural map $\clie^*(\fh) \to \cred^*(\fh)$. 
+An {\em inner} action of $\fh$ on $\sE$ is a lift of an action $I^{\fh}$ to an Maurer-Cartan element of the dg Lie algebra $\clie^*(\fh) \tensor \oloc(\sE)[-1]$. 
+Note that there is, in general, an obstruction to lifting which lives in the cohomology $H^1_{\rm Lie}(\fh)$.  
+\end{rmk}
 
 \subsection{Quantum equivariance}
 
 If we start with an $\fh$-equivariant classical BV theory with fields $\sE$ with action functional $S$ --- so that $\fh$ has an $\L8$ action on the fields that preserves the pairing and the action functional $S$ --- then we can encode the action of $\fh$ as a Maurer-Cartan element $I^\fh$ in $\clie^*(\fh) \otimes \oloc (\sE)$.
-(For the formal $\beta\gamma$ system, we did this in Lemma \ref{Noether}.)
 We then view the sum $S + I^\fh$ as the \emph{equivariant} action functional:
 the operator $\{S+ I^\fh,-\}$ is the twisted differential on $\clie^*(\fh) \otimes \oloc(\sE)$ with $I^\fh$ as the twisting cocycle,
 and this operator is square-zero because $\{S + I^\fh, S+ I^\fh\}$ is a ``constant'' (i.e., lives in $\clie^*(\fh)$ and hence is annihilated by the BV bracket).
@@ -1307,8 +1731,10 @@ where the first ``free'' term is a quadratic functional and the second ``interac
 In this situation, the effective action $S[L] = S_{\text{free}} + I[L]$, 
 i.e., only the interaction changes with the length scale.
 
+As in Section \ref{??} we let $\sO_{P,sm}^+(\sE)$ be the functionals that are at least cubic, have proper support, and have smooth first derivative. 
+
 \begin{dfn} \label{eqQFT} 
-An {\em $\fh$-equivariant BV quantization} is a collection of effective interactions $\{I^\fh[L]\}_{L \in (0\infty)}$
+An {\em $\fh$-equivariant BV quantization} is a collection of effective interactions $\{I^\fh[L]\}_{L \in (0\infty)} \subset \cred^*(\fh) \tensor \sO_{P,sm}^+(\sE)[[\hbar]]$
 satisfying
 \begin{enumerate}[(a)]
 \item the RG flow equation
@@ -1331,15 +1757,56 @@ A careful reading of those texts shows that the freedom to work over interesting
 %Note that our situation is particularly simple since the non-equivariant classical field theory is free and hence admits a very simple quantization,
 %with $I[L] = 0$ for all $L$.
 
-\subsection{The case of a local Lie algebra}
+\subsection{The case of a local Lie algebra}\label{sec: local equiv}
 
-The above formalism works equally well, with some slight modifications, if we replace the Lie algebra $\fh$ by a {\em local Lie algebra} $\sL$ on the manifold where the theory lives.
+The above formalism works equally well, with some slight modifications, if we replace the Lie algebra $\fh$ by a {\em local Lie algebra} $\sL$ on the manifold where the theory $\sE$ lives.
 This is done in detail in Chapter 11 of \cite{CG2}, and we refer the reader there for more details. 
 
-The data is essentially the same as above.
-By definition an \brian{finish}
+For the classical case, the first thing we must define is where the classical Noether current $I^{\fh} \leftrightarrow I^\sL$ lives.
+Naively, we expect this to live in the space
+\be\label{dgLie1}
+\cred^*(\sL_c(X)) \tensor \oloc(\sE)[-1] .
+\ee
+This is not quite good enough for our purposes since we have not taken into account the {\em locality} in the Lie algebra direction.
+Note that (\ref{dgLie1}) is a still a dg Lie algebra, just as above.
+The inclusion (\ref{local inclusion}) determines an inclusion of vector spaces
+\ben
+\oloc(\sL[1] \oplus \sE) \hookrightarrow \cred^*(\sL_c(X)) \tensor \oloc(\sE)
+\een
+We can further quotient this subspace by $\oloc(\sL[1]) \oplus \oloc(\sE) \subset \oloc(\sL[1] \oplus \sE)$ consisting of those local functionals that depend solely on $\sL$ or $\sE$ to obtain an inclusion of vector spaces 
+\ben
+{\rm Act}(\sL, \sE) := \oloc(\sL[1] \oplus \sE) / \oloc(\sL[1]) \oplus \oloc(\sE)\hookrightarrow \cred^*(\sL_c(X)) \tensor \oloc(\sE) .
+\een
+ 
+\begin{lem}[Chapter ?? \cite{CG2}]
+The differential and bracket defining the dg Lie algebra $\cred^*(\sL_c(X)) \tensor \oloc(\sE)[-1]$ in (\ref{dgLie1}) restricts to give a dg Lie algebra structure on the subspace ${\rm Act}(\sL,\sE)[-1]$. 
+\end{lem} 
 
-In the case of a local Lie algebra we are interested in a more refined version of an action of a Lie algebra on a QFT: that of an {\em inner action}.
+This lemma allows us to make the following definition.
+
+\begin{dfn}\label{dfn: sL equiv}
+Let $\sL$ be a local Lie algebra and $\sE$ a classical field theory.
+An $\sL$ action on $\sE$ is a Maurer-Cartan element
+\ben
+I^{\sL} \in {\rm Act}(\sL, \sE) [-1] .
+\een
+In other words, $I^{\sL}$ satisfies the equivariant classical master equation
+\ben
+\d_{\sL} I^{\sL} + \{S, I^{\sL}\} + \frac{1}{2} \{I^{\sL}, I^{\sL}\} = 0 .
+\een
+\end{dfn}
+
+\begin{rmk}
+Given any $L_\infty$ algebra $\fh$ one can define the local Lie algebra $\Omega^*_X \tensor \fh$ on $X$. 
+The data of an action of $\fh$ on a theory as in Definition \ref{dfn: fh equiv} is equivalent (up to homotopy) to the data of an action of the local Lie algebra $\Omega^*_X \tensor \fh$ in the definition above.
+In fact, there is an equivalence of dg Lie algebras $\cred^*(\fh) \tensor \oloc(\sE)[-1] \simeq {\rm Act}(\Omega^*_X \tensor \fh, \sE)$. 
+\end{rmk}
+
+\subsubsection{}
+
+The quantum story for an action by a local Lie algebra is also similar to the case of an ordinary Lie algebra.
+There are two spaces of functionals that appear when discussing actions of a local Lie algebra $\sL$ on a quantum field theory.
+Let $\sE$ be the underlying space of fields.
 
 
 \begin{lem}\label{lem: innner action}

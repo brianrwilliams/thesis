@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 MAR 2018 10:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 APR 2018 08:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -738,6 +738,26 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2014/10/30 v0.9e Commutative diagrams with tikz
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
+\pgfarrowinset=\dimen270
+\pgfarrowlength=\dimen271
+\pgfarrowwidth=\dimen272
+\pgfarrowlinewidth=\dimen273
+)))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
@@ -745,7 +765,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen270
+\arrowsize=\dimen274
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryshapes.code.tex
@@ -824,10 +844,6 @@ s/tikzlibrarytrees.code.tex
 File: tikzlibrarytrees.code.tex 2008/02/24 v3.0.1a (rcs-revision 1.2)
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarymatrix.code.tex
-File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
-)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
@@ -845,14 +861,14 @@ s/tikzlibrarydecorations.pathreplacing.code.tex
 s/tikzlibrarydecorations.code.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen271
-\pgfdecoratedremainingdistance=\dimen272
-\pgfdecoratedinputsegmentcompleteddistance=\dimen273
-\pgfdecoratedinputsegmentremainingdistance=\dimen274
-\pgf@decorate@distancetomove=\dimen275
+\pgfdecoratedcompleteddistance=\dimen275
+\pgfdecoratedremainingdistance=\dimen276
+\pgfdecoratedinputsegmentcompleteddistance=\dimen277
+\pgfdecoratedinputsegmentremainingdistance=\dimen278
+\pgf@decorate@distancetomove=\dimen279
 \pgf@decorate@repeatstate=\count149
-\pgfdecorationsegmentamplitude=\dimen276
-\pgfdecorationsegmentlength=\dimen277
+\pgfdecorationsegmentamplitude=\dimen280
+\pgfdecorationsegmentlength=\dimen281
 )
 \tikz@lib@dec@box=\box64
 )
@@ -860,76 +876,76 @@ s.code.tex
 brarydecorations.pathreplacing.code.tex)) (./chap1.aux)
 \openout1 = `chap1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 24.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 21.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 24.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 21.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 24.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 21.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 24.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 21.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 24.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 21.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 24.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-Package xypdf Info: Line width: 0.4pt on input line 21.
+Package xypdf Info: Line width: 0.4pt on input line 24.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count150
-\scratchdimen=\dimen278
+\scratchdimen=\dimen282
 \scratchbox=\box65
 \nofMPsegments=\count151
 \nofMParguments=\count152
 \everyMPshowfont=\toks50
 \MPscratchCnt=\count153
-\MPscratchDim=\dimen279
+\MPscratchDim=\dimen283
 \MPnumerator=\count154
 \makeMPintoPDFobject=\count155
 \everyMPtoPDFconversion=\toks51
@@ -985,7 +1001,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box66
-Package hyperref Info: Link coloring ON on input line 21.
+Package hyperref Info: Link coloring ON on input line 24.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -994,9 +1010,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count156
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
 
 (./chap1.out) (./chap1.out)
 \@outlinefile=\write5
@@ -1004,28 +1020,38 @@ LaTeX Info: Redefining \nameref on input line 21.
 
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 26.
  (./chap1.toc)
 \tf@toc=\write6
 \openout6 = `chap1.toc'.
 
 [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Reference `lem: hol renorm' on page 2 undefined on input line 60
+LaTeX Warning: Reference `lem: hol renorm' on page 2 undefined on input line 63
 .
 
-LaTeX Font Info:    Try loading font information for U+eus on input line 61.
+LaTeX Font Info:    Try loading font information for U+eus on input line 64.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 61.
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 64.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [2] [3]
-[4] <xymatrix 2x2 150>
-Overfull \hbox (12.96251pt too wide) in paragraph at lines 251--253
+
+LaTeX Warning: Citation `KM97' on page 4 undefined on input line 187.
+
+[4] [5] [6]
+
+LaTeX Warning: Citation `StasheffDG' on page 7 undefined on input line 358.
+
+
+LaTeX Warning: Citation `GetlzerLie' on page 7 undefined on input line 358.
+
+[7] [8] [9] <xymatrix 2x2 150> [10]
+Overfull \hbox (12.96251pt too wide) in paragraph at lines 536--538
 [][]\OT1/ppl/b/n/10 Definition/Lemma 1. []\OT1/ppl/m/n/10 A \OT1/ppl/m/it/10 fr
 ee holo-mor-phic the-ory \OT1/ppl/m/n/10 on a com-plex man-i-fold $\OML/zplm/m/
 it/10 X$ \OT1/ppl/m/n/10 is the data $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1
@@ -1033,17 +1059,17 @@ it/10 X$ \OT1/ppl/m/n/10 is the data $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1
 m/m/n/10 ^^@\OT1/ppl/m/n/10 , \OMS/zplm/m/n/10 ^^@\OT1/zplm/m/n/10 )[])$
  []
 
-[5]
 
-LaTeX Warning: Reference `chap: holsig' on page 6 undefined on input line 261.
+LaTeX Warning: Reference `chap: holsig' on page 11 undefined on input line 546.
 
-[6] <xymatrix 3x1 92>
-Overfull \hbox (61.85954pt too wide) detected at line 369
+
+[11] [12] <xymatrix 3x1 92>
+Overfull \hbox (61.85954pt too wide) detected at line 667
 []
  []
 
 
-Overfull \hbox (74.95895pt too wide) in paragraph at lines 369--373
+Overfull \hbox (74.95895pt too wide) in paragraph at lines 667--671
 \OT1/ppl/m/n/10 ply the eval-u-a-tion pair-ing. We sym-metrize this to ob-tain 
 an el-e-ment $\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 F\OT1/ppl/m/n/10 , \OML/zplm/
 m/it/10 F[]\OMS/zplm/m/n/10 g[] 2 [][]\OT1/zplm/m/n/10 ([][](\OML/zplm/m/it/10 
@@ -1051,28 +1077,28 @@ V\OT1/zplm/m/n/10 )[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 K[]\OT1/zplm/m/n/10 )[
 ]$\OT1/ppl/m/n/10 .
  []
 
-[7] [8] [9] [10] [11]
-Overfull \hbox (7.3265pt too wide) in paragraph at lines 842--844
+[13] [14] [15] [16] [17] [18]
+Overfull \hbox (7.3265pt too wide) in paragraph at lines 1227--1229
 []\OT1/ppl/m/n/10 Since the the-ory is holo-mor-phi-cally trans-la-tion in-vari
 -ant we have an iden-ti-fi-ca-tion $\OT1/zplm/m/n/10 
 [](\U/fplmbb/m/n/10 C[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 V\OT1/zplm/m/n/10 ) 
 []
  []
 
-[12] [13] [14]
+[19] [20] [21]
 
-LaTeX Warning: Reference `lem: hol renorm' on page 15 undefined on input line 9
-84.
+LaTeX Warning: Reference `lem: hol renorm' on page 22 undefined on input line 1
+369.
 
-[15] [16]
-Overfull \hbox (80.20438pt too wide) detected at line 1063
+[22]
+Overfull \hbox (80.20438pt too wide) detected at line 1448
 [] [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [] \OT1/zplm/m/n/10 ^^H(\
 OML/zplm/m/it/10 w[]\OT1/ppl/m/n/10 , [] , \OML/zplm/m/it/10 w[]\OT1/zplm/m/n/1
 0 ) [] [] [][] \OML/zplm/m/it/10 P[] [] \OT1/ppl/m/n/10 .
  []
 
-[17]
-Overfull \hbox (99.54366pt too wide) detected at line 1127
+[23]
+Overfull \hbox (99.54366pt too wide) detected at line 1512
 []\OMS/zplm/m/n/10 j\OML/zplm/m/it/10 W[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 ^^
 O\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 L\OT1/zplm/m/n/10 )\OMS/zplm/m/n/10 j ^^T 
 \OML/zplm/m/it/10 C [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [] \OT1/
@@ -1084,66 +1110,66 @@ ppl/m/n/10 d[]\OML/zplm/m/it/10 w[]\OT1/zplm/m/n/10 	(\OML/zplm/m/it/10 w[]\OT1
 10 )
  []
 
-
-Overfull \hbox (68.85329pt too wide) in paragraph at lines 1152--1152
+[24]
+Overfull \hbox (68.85329pt too wide) in paragraph at lines 1537--1537
 [] 
  []
 
-[18]
+[25]
 
-LaTeX Warning: Reference `sec: qme' on page 19 undefined on input line 1192.
+LaTeX Warning: Reference `sec: qme' on page 26 undefined on input line 1577.
 
-[19]
 
-LaTeX Warning: Reference `chap hol sig' on page 20 undefined on input line 1254
+LaTeX Warning: Reference `chap hol sig' on page 26 undefined on input line 1639
 .
 
 
-LaTeX Warning: Reference `chap symmetries' on page 20 undefined on input line 1
-254.
+LaTeX Warning: Reference `chap symmetries' on page 26 undefined on input line 1
+639.
 
-[20]
+[26] [27]
 
-LaTeX Warning: Reference `Noether' on page 21 undefined on input line 1296.
+LaTeX Warning: Reference `??' on page 28 undefined on input line 1734.
 
-
-Overfull \hbox (6.71468pt too wide) in paragraph at lines 1311--1313
-[][]\OT1/ppl/b/n/10 Definition 4.1. []\OT1/ppl/m/n/10 An $\U/euf/m/n/10 h$\OT1/
+[28]
+Overfull \hbox (17.84227pt too wide) in paragraph at lines 1737--1739
+[][]\OT1/ppl/b/n/10 Definition 4.3. []\OT1/ppl/m/n/10 An $\U/euf/m/n/10 h$\OT1/
 ppl/m/it/10 -equivariant BV quan-ti-za-tion \OT1/ppl/m/n/10 is a col-lec-tion o
 f ef-fec-tive in-ter-ac-tions $\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 I[]\OT1/zplm
-/m/n/10 [\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]\OMS/zplm/m/n/10 g[]$
+/m/n/10 [\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]\OMS/zplm/m/n/10 g[] ^^Z
  []
 
 
-LaTeX Warning: Citation `CosRenormalization' on page 21 undefined on input line
- 1328.
+LaTeX Warning: Citation `CosRenormalization' on page 29 undefined on input line
+ 1754.
 
-[21] (./chap1.bbl) [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1363.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1363.
+[29] (./chap1.bbl) [30]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1830.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1830.
  (./chap1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1363.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1363.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1830.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1830.
 
 Package rerunfilecheck Info: File `chap1.out' has not changed.
 (rerunfilecheck)             Checksum: F1DACA4738D7951FC1AEEA456A007FDB;1335.
 
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.43996pt have occurred.
+
+
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1363.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1830.
  ) 
 Here is how much of TeX's memory you used:
- 23304 strings out of 492995
- 441388 string characters out of 6132704
- 577895 words of memory out of 5000000
- 26069 multiletter control sequences out of 15000+600000
- 38412 words of font info for 126 fonts, out of 8000000 for 9000
+ 24353 strings out of 492995
+ 473197 string characters out of 6132704
+ 603927 words of memory out of 5000000
+ 27066 multiletter control sequences out of 15000+600000
+ 43642 words of font info for 144 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 55i,14n,67p,3238b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,82p,3238b,920s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1158,15 +1184,16 @@ xlive/2017/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/201
 7/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2017/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-public/xypic/xycmbt10.pfb>
-Output written on chap1.pdf (22 pages, 242200 bytes).
+7/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dist/font
+s/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
+e1/public/xypic/xycmbt10.pfb>
+Output written on chap1.pdf (30 pages, 287529 bytes).
 PDF statistics:
- 390 PDF objects out of 1000 (max. 8388607)
- 344 compressed objects within 4 object streams
- 109 named destinations out of 1000 (max. 500000)
+ 477 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
+ 146 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
