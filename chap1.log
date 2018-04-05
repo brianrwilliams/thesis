@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 APR 2018 22:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  5 APR 2018 12:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1039,11 +1039,37 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [2] [3]
 [4] [5] [6] [7] [8]
 
-LaTeX Warning: Reference `chap: holsig, chap: symmetries' on page 9 undefined o
-n input line 427.
+LaTeX Warning: Citation `??' on page 9 undefined on input line 463.
 
-[9] [10] <xymatrix 2x2 150>
-Overfull \hbox (12.96251pt too wide) in paragraph at lines 537--539
+[9]
+Overfull \hbox (24.07072pt too wide) in paragraph at lines 509--512
+[]\OT1/ppl/m/n/10 We in-tro-duce the for-mal vari-able $[]$ and con-sider $[]$-
+dependent func-tion-als $\U/eus/m/n/10 O\OT1/zplm/m/n/10 (\U/eus/m/n/10 E\OT1/z
+plm/m/n/10 )[[[]]]$\OT1/ppl/m/n/10 . Let $\U/eus/m/n/10 O[]\OT1/zplm/m/n/10 (\U
+/eus/m/n/10 E\OT1/zplm/m/n/10 )[[[]]] \OMS/zplm/m/n/10 ^^Z
+ []
+
+[10]
+Overfull \hbox (4.91206pt too wide) in paragraph at lines 578--580
+ \OT1/ppl/m/n/10 1.2.3.\OT1/ppl/m/it/10 Deformation the-ory for quan-ti-za-tion
+s.[] \OT1/ppl/m/n/10 There is a well-established de-for-ma-tion the-ory for stu
+dy-
+ []
+
+[11]
+Overfull \hbox (5.7792pt too wide) in paragraph at lines 607--610
+\OT1/ppl/m/n/10 The ob-struc-tion $\OT1/zplm/m/n/10 ^^B[\OML/zplm/m/it/10 L\OT1
+/zplm/m/n/10 ]$ \OT1/ppl/m/n/10 sat-is-fies the clas-si-cal mas-ter equa-tion a
+nd hence the limit $\OT1/zplm/m/n/10 ^^B[] = [][] ^^B[\OML/zplm/m/it/10 L\OT1/z
+plm/m/n/10 ]$
+ []
+
+
+LaTeX Warning: Reference `chap: holsig, chap: symmetries' on page 12 undefined 
+on input line 626.
+
+[12] [13] <xymatrix 2x2 150>
+Overfull \hbox (12.96251pt too wide) in paragraph at lines 736--738
 [][]\OT1/ppl/b/n/10 Definition/Lemma 1. []\OT1/ppl/m/n/10 A \OT1/ppl/m/it/10 fr
 ee holo-mor-phic the-ory \OT1/ppl/m/n/10 on a com-plex man-i-fold $\OML/zplm/m/
 it/10 X$ \OT1/ppl/m/n/10 is the data $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1
@@ -1052,31 +1078,32 @@ m/m/n/10 ^^@\OT1/ppl/m/n/10 , \OMS/zplm/m/n/10 ^^@\OT1/zplm/m/n/10 )[])$
  []
 
 
-LaTeX Warning: Reference `chap: holsig' on page 11 undefined on input line 547.
+LaTeX Warning: Reference `chap: holsig' on page 14 undefined on input line 746.
 
 
+[14]
 
-LaTeX Warning: Citation `Polchinski1' on page 11 undefined on input line 571.
-
-
-LaTeX Warning: Reference `chap: holsig' on page 11 undefined on input line 572.
+LaTeX Warning: Citation `Polchinski1' on page 15 undefined on input line 770.
 
 
-[11]
+LaTeX Warning: Reference `chap: holsig' on page 15 undefined on input line 771.
 
-LaTeX Warning: Citation `GriffithsGreen' on page 12 undefined on input line 612
+
+[15]
+
+LaTeX Warning: Citation `GriffithsGreen' on page 16 undefined on input line 811
 .
 
 
-LaTeX Warning: Citation `Wong' on page 12 undefined on input line 612.
+LaTeX Warning: Citation `Wong' on page 16 undefined on input line 811.
 
-[12] <xymatrix 3x1 92>
-Overfull \hbox (61.85954pt too wide) detected at line 672
+<xymatrix 3x1 92>
+Overfull \hbox (61.85954pt too wide) detected at line 871
 []
  []
 
-
-Overfull \hbox (74.95895pt too wide) in paragraph at lines 672--676
+[16]
+Overfull \hbox (74.95895pt too wide) in paragraph at lines 871--875
 \OT1/ppl/m/n/10 ply the eval-u-a-tion pair-ing. We sym-metrize this to ob-tain 
 an el-e-ment $\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 F\OT1/ppl/m/n/10 , \OML/zplm/
 m/it/10 F[]\OMS/zplm/m/n/10 g[] 2 [][]\OT1/zplm/m/n/10 ([][](\OML/zplm/m/it/10 
@@ -1084,23 +1111,23 @@ V\OT1/zplm/m/n/10 )[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 K[]\OT1/zplm/m/n/10 )[
 ]$\OT1/ppl/m/n/10 .
  []
 
-[13] [14] [15] [16] [17] [18]
-Overfull \hbox (7.3265pt too wide) in paragraph at lines 1211--1213
+[17] [18] [19] [20] [21] [22]
+Overfull \hbox (7.3265pt too wide) in paragraph at lines 1411--1413
 []\OT1/ppl/m/n/10 Since the the-ory is holo-mor-phi-cally trans-la-tion in-vari
 -ant we have an iden-ti-fi-ca-tion $\OT1/zplm/m/n/10 
 [](\U/fplmbb/m/n/10 C[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 V\OT1/zplm/m/n/10 ) 
 []
  []
 
-[19] [20] [21] [22]
-Overfull \hbox (80.20438pt too wide) detected at line 1432
+[23] [24] [25] [26]
+Overfull \hbox (80.20438pt too wide) detected at line 1632
 [] [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [] \OT1/zplm/m/n/10 ^^H(\
 OML/zplm/m/it/10 w[]\OT1/ppl/m/n/10 , [] , \OML/zplm/m/it/10 w[]\OT1/zplm/m/n/1
 0 ) [] [] [][] \OML/zplm/m/it/10 P[] [] \OT1/ppl/m/n/10 .
  []
 
-[23]
-Overfull \hbox (99.54366pt too wide) detected at line 1496
+[27]
+Overfull \hbox (99.54366pt too wide) detected at line 1696
 []\OMS/zplm/m/n/10 j\OML/zplm/m/it/10 W[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 ^^
 O\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 L\OT1/zplm/m/n/10 )\OMS/zplm/m/n/10 j ^^T 
 \OML/zplm/m/it/10 C [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [] \OT1/
@@ -1112,49 +1139,61 @@ ppl/m/n/10 d[]\OML/zplm/m/it/10 w[]\OT1/zplm/m/n/10 	(\OML/zplm/m/it/10 w[]\OT1
 10 )
  []
 
-[24]
-Overfull \hbox (68.85329pt too wide) in paragraph at lines 1523--1523
+
+Overfull \hbox (68.85329pt too wide) in paragraph at lines 1723--1723
 [] 
  []
 
-[25]
+[28]
 
-LaTeX Warning: Reference `sec: qme' on page 26 undefined on input line 1565.
+LaTeX Warning: Reference `sec: qme' on page 29 undefined on input line 1765.
 
-[26]
+[29]
 
-LaTeX Warning: Reference `chap hol sig' on page 27 undefined on input line 1627
+LaTeX Warning: Reference `chap hol sig' on page 30 undefined on input line 1827
 .
 
 
-LaTeX Warning: Reference `chap symmetries' on page 27 undefined on input line 1
-627.
+LaTeX Warning: Reference `chap symmetries' on page 30 undefined on input line 1
+827.
 
-[27] [28]
+[30] [31]
 
-LaTeX Warning: Reference `??' on page 29 undefined on input line 1722.
+LaTeX Warning: Reference `??' on page 32 undefined on input line 1922.
 
 
-Overfull \hbox (17.84227pt too wide) in paragraph at lines 1725--1727
+Overfull \hbox (17.84227pt too wide) in paragraph at lines 1925--1927
 [][]\OT1/ppl/b/n/10 Definition 4.3. []\OT1/ppl/m/n/10 An $\U/euf/m/n/10 h$\OT1/
 ppl/m/it/10 -equivariant BV quan-ti-za-tion \OT1/ppl/m/n/10 is a col-lec-tion o
 f ef-fec-tive in-ter-ac-tions $\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 I[]\OT1/zplm
 /m/n/10 [\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]\OMS/zplm/m/n/10 g[] ^^Z
  []
 
+[32]
 
-LaTeX Warning: Citation `CosRenormalization' on page 29 undefined on input line
- 1742.
+LaTeX Warning: Citation `CosRenormalization' on page 33 undefined on input line
+ 1942.
 
-[29] (./chap1.bbl [30]) [31]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1818.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1818.
+
+LaTeX Warning: Reference `dfn: qft' on page 33 undefined on input line 1998.
+
+[33]
+
+LaTeX Warning: Reference `dfn: qft' on page 34 undefined on input line 2014.
+
+
+LaTeX Warning: Reference `sec: obstruction' on page 34 undefined on input line 
+2040.
+
+[34] (./chap1.bbl) [35]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2074.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2074.
  (./chap1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1818.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1818.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2074.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2074.
 
 Package rerunfilecheck Info: File `chap1.out' has not changed.
-(rerunfilecheck)             Checksum: F1DACA4738D7951FC1AEEA456A007FDB;1335.
+(rerunfilecheck)             Checksum: 1A3B29C2ACA525C217238186ABB1AF44;1258.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1163,16 +1202,13 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1818.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2074.
  ) 
 Here is how much of TeX's memory you used:
- 24371 strings out of 492995
- 473427 string characters out of 6132704
- 604296 words of memory out of 5000000
- 27076 multiletter control sequences out of 15000+600000
+ 24397 strings out of 492995
+ 473657 string characters out of 6132704
+ 606321 words of memory out of 5000000
+ 27080 multiletter control sequences out of 15000+600000
  43642 words of font info for 144 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,15n,82p,3238b,920s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1196,10 +1232,10 @@ xmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
 e1/public/xypic/xycmbt10.pfb>
-Output written on chap1.pdf (31 pages, 289939 bytes).
+Output written on chap1.pdf (35 pages, 308972 bytes).
 PDF statistics:
- 500 PDF objects out of 1000 (max. 8388607)
- 443 compressed objects within 5 object streams
- 154 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 540 PDF objects out of 1000 (max. 8388607)
+ 479 compressed objects within 5 object streams
+ 176 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

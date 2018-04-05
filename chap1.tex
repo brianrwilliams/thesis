@@ -285,6 +285,9 @@ Define the sheaf of {\em local functionals} on $X$ to be
 where we use the natural right $D_X$-module structure on densities.
 \end{dfn}
 
+Note that we always consider local functionals coming from Lagrangians modulo constants. 
+We will not be concerned with local functions associated to constant Lagrangians. 
+
 From the expression for functionals in Lemma \ref{lem: fnls} we see that integration defines an inclusion of sheaves
 \be\label{local inclusion}
 i : \oloc(\sE) \hookrightarrow \sO_{red}(\sE_c) .
@@ -295,11 +298,11 @@ Often times when we describe a local functional we will write down its value on 
 
 Before giving the definition, we need to recall what the proper notion of a shifted symplectic structure is in the infinite dimensional setting that we work in.
 
-\begin{dfn}
+\begin{dfn}\label{dfn: symplectic}
 Let $E$ be a graded vector bundle on $X$.
-A $(-1)$-{\em shifted symplectic structure} is an isomorphism of graded vector spaces
+A $k$-{\em shifted symplectic structure} is an isomorphism of graded vector spaces
 \ben
-E \cong_{\omega} E^![-1] = \left({\rm Dens}_X \tensor E^\vee\right)[-1]
+E \cong_{\omega} E^![k] = \left({\rm Dens}_X \tensor E^\vee\right)[k]
 \een
 that is graded anti-symmetric.
 \end{dfn}
@@ -312,7 +315,7 @@ We will denote the bracket induced by a shifted symplectic structure by $\{-,-\}
 We are now ready to give the precise definition of a classical field theory.
 
 \begin{dfn}
-A {\em classical field theory} on a smooth manifold $X$ is a $\ZZ$-graded vector bundle $E$ equipped with a $(-1)$-shifted symplectic structure together with a local functional $S \in \oloc(\sE)$ such that:
+A {\em classical field theory} in the BV formalism on a smooth manifold $X$ is a $\ZZ$-graded vector bundle $E$ equipped with a $(-1)$-shifted symplectic structure together with a local functional $S \in \oloc(\sE)$ such that:
 \begin{enumerate}
 \item the functional $S$ satisfies the {\em classical master equation} 
 \ben
@@ -329,6 +332,10 @@ where $Q$ is a linear differential operator such that $Q^2 = 0$, and  $I \in \ol
 
 In the physics literature, the operator $Q$ is known as the linearized BRST operator, and $\{S,-\} = Q + \{I,-\}$ is the full BRST operator.
 Ellipticity of the complex $(\sE,Q)$ is a technical requirement that will be very important in our approach to the issue of renormalization in perturbative quantum field theory.
+The classical master equation is equivalent to
+\ben
+Q I + \frac{1}{2} \{I,I\} = 0 .
+\een
 
 A {\em free theory} is a classical theory with $I = 0$ in the notation above. 
 Thus, a free theory is a simply an elliptic complex equipped with a shifted symplectic pairing. 
@@ -373,27 +380,177 @@ such that the collection $\{\ell_n\}_{n \in \NN}$ satisfy the conditions of an $
 In particular, $\sL$ is a sheaf of $L_\infty$ algebras. 
 \end{dfn}
 
+Just as in the case of an ordinary graded vector bundle, we can discuss local functionals on a local Lie algebra $L$. 
+In this case, the $L_\infty$ structure maps give this the structure of a sheaf of complexes. 
+Indeed, the $\infty$-jet bundle $J L$ is an $L_\infty$ algebra object in $D_X$-modules and so we can define the $D_X$-module of reduced Chevalley-Eilenberg cochains $\cred^*(J L)$. 
+Mimicking the definition above, we arrive at the following local version of Lie algebra cohomology that will come up again and again in this thesis.
+
+\begin{dfn}
+Let $L$ be a local Lie algebra. 
+The local Chevalley-Eilenberg cochain complex is the sheaf of cochain complexes
+\ben
+\cloc^*(\sL) = {\rm Dens}_X \tensor_{D_X} \cred^*(L) .
+\een
+\end{dfn}
+
+It turns out that the definition of a classical field theory can be repackaged in terms of certain structures on a local $L_\infty$ algebra.
+The first piece of data we need to transport to the $L_\infty$ side is that of a symplectic pairing. 
+The underlying data of a local $L_\infty$ algebra $L$ is a graded vector bundle. 
+In Definition \ref{dfn: symplectic} we have already defined a $k$-shifted symplectic pairing. 
+On the local Lie algebra sign, we ask for $k=-3$ shifted symplectic structures that are also invariant for the $L_\infty$ structure maps. 
+
+Also, an important part of a classical field theory is ellipticity. 
+We say a local $L_\infty$ algebra is {\em elliptic} if the complex $(\sL, \d = \ell_1)$ is an elliptic complex.
+
+\begin{prop}
+The following are equivalent:
+\begin{enumerate}
+\item a classical field theory in the BV formalism $(\sE, \omega, S)$;
+\item an elliptic local Lie algebra structure on $L = E [1]$ equipped with a $(-3)$-shifted symplectic structure.
+\end{enumerate}
+\end{prop}
+
+\begin{proof} (Sketch) 
+The underlying graded vector bundle of the space of fields $\sE$ is $E$ and we obtain the bundle underlying the local $L_\infty$ algebra by shifting this down $L = E[1]$. 
+The $(-1)$-shifted symplectic structure on $E$ transports to a $(-3)$-shifted on on $L$. 
+The $L_\infty$ structure maps for $L$ come from the Taylor components of the action functional $S$. 
+The exterior derivative of $S$ is a section
+\ben
+\d S \in \cloc^*(\sL, \sL^![-1]),
+\een
+where on the right-hand side we have zero differential.
+The Taylor components are of the form $(\d S)_n : \sL^{\tensor n} \to \sL^![-1]$. 
+Using the shifted symplectic pairing we can identify these Taylor components with maps $(\d S)_n : \sL^{\tensor n} \to \sL[2]$. 
+Thus, $\d S$ can be viewed as a section of $\cloc^*(\sL, \sL[2])$. 
+This is precisely the space controlling deformations of $\sL$ as a local Lie algebra.
+One checks immediately that the classical master equation is equivalent to the fact that $\d S$ is a derivation, hence it determines the structure of a local Lie algebra. 
+The first Taylor component $\ell_1$ is precisely the operator $Q$ before, so ellipticity of $(\sE, Q)$ is equivalent to ellipticity of $(\sL, \ell_1)$. 
+\end{proof}
 
 %The functionals we consider are required to be continuous with a certain topology on the topological vector space $\sE$. 
 
-\subsection{Renormalization}
 
-In the BV formalism, as developed in \cite{CostelloRenormalization,CG1,CG2}, 
-a quantum BV theory consists of a space of fields and an effective action functional $\{S[L]\}_{L \in (0,\infty)} \subset \sO(\sE)[[\hbar]]$,
-which is a family of non-local functionals on the fields that are parametrized by a length scale $L$ 
-and satisfy
+\subsection{Quantum field theory}
+
+We now introduce the notion of a {\em quantum field theory} in the BV formalism.
+We follow the effective approach defined by Costello in \cite{CostelloRenormalization}.
+
+\subsubsection{Regularization}
+
+We have seen that part of the data of a classical field theory is that of a $(-1)$-shifted symplectic structure on the space of fields. 
+If $E$ is the graded vector bundle underlying the theory, the symplectic form determined an isomorphism of bundles $E \cong E^![-1]$. 
+We can represent the inclusion $\sE_c \hookrightarrow \Bar{\sE}$ via its integral kernel $K_0 \in \Bar{\sE} \tensor \Bar{\sE}^!$. 
+Using the symplectic pairing this is further identified with an element 
+\ben
+K_0 \in \Bar{\sE} \tensor \Bar{\sE} [-1] .
+\een
+That is, $K_0$ is a degree one element in $\Bar{\sE} \tensor \Bar{\sE}$.
+The na\"{i}ve BV Laplacian $\Delta = \Delta_{K_0}$ is ill-defined acting on functions on $\sE$, $\sO(\sE)$. 
+The point of regularization is to find a replacement for this operator.
+
+The first step in regularization is to find a replacement of $K_0$ as a smooth, i.e. non-distributional, section in the tensor product $\sE \tensor \sE$. 
+This is a reasonable thing to ask, since by ellipticity we know that the inclusion $\sE \tensor \sE \hookrightarrow \Bar{\sE} \tensor \Bar{\sE}$ is a quasi-isomorphism. 
+So, we can replace $K_0$ by such a smooth section up to homotopy.
+We refer to this as a {\em regularization} of the kernel.
+
+We use a systematic way of regularization using heat kernels, which can be found in \cite{CostelloRenormalization} or Chapter 8 of \cite{CG2}. 
+First, we fix the following data, that of a {\em gauge fixing} operator.
+This is an operator 
+\ben
+Q^{GF} : \sE \to \sE[-1]
+\een 
+of cohomological degree $-1$.
+We require that $D = [Q,Q^{GF}]$ is a generalized Laplacian in the sense of \cite{??}, in addition to other conditions that can be found in Definition 5.4.0.5 in \cite{CG2}. 
+
+The utility of introducing the gauge fixing operator is that it allows us to introduce the operator $e^{-t D}$ which has a kernel that we denote $K_t \in \Bar{\sE} \tensor \Bar{\sE}$ for any $t \geq 0$. 
+This kernel satisfies the usual conditions of a heat kernel:
+\begin{enumerate}
+\item $K_t$ satisfies the heat equation
+\ben
+\frac{\partial}{\partial t} K_t + D K_t = 0
+\een
+\item $K_0$ is the kernel for the identity operator as above.
+\end{enumerate}
+Moreover, when $t > 0$ the operator $e^{-t D}$ is {\em smoothing} so that $K_t \in \sE \tensor \sE \subset \Bar{\sE} \tensor \Bar{\sE}$. 
+
+The point of introducing this heat kernel is that it provides a regularization of $K_0$.
+Indeed, for any $\epsilon, L > 0$ introduce the {\em propagator} 
+\ben
+P_{\epsilon < L} = \int_{t = \epsilon}^L (Q^{GF} \tensor 1) K_t \d t .
+\een 
+Then, one immediately checks that
+\ben
+K_L - K_\epsilon = Q P_{\epsilon < L},
+\een
+so that $P_{\epsilon < L}$ is a homotopy between $K_L$ and $K_\epsilon$. 
+In particular, $P_{0<L}$ provides a homotopy between the identity kernel $K_0$ and $K_L$. 
+
+\begin{dfn}
+The scale $L > 0$ BV Laplacian is the order two operator
+\ben
+\Delta_{L} = \partial_{K_L} : \sO(\sE) \to \sO(\sE)
+\een
+given by contraction with the kernel $K_L \in \sE \tensor \sE$. 
+\end{dfn}
+
+We have already mentioned that the bracket $\{-,-\}$ is not defined on the whole space of functionals.
+The regularized BV operator allows us to define the following {\em scale $L$ bracket}:
+\ben
+\{I, J\}_L := \Delta_L(IJ) - \Delta_L(I) J - (-1)^{|I|} I \Delta_L(J) .
+\een
+This bracket is defined on all of $\sO(\sE)$. 
+
+\subsubsection{Effective BV quantization}
+
+Fix a free BV theory together with a gauge fixing operator.
+This is the data of an elliptic complex $(\sE, Q)$ with a $(-1)$-shifted symplectic form $\omega$.
+In addition, let $Q^{GF}$ be a gauge fixing operator so that the regularized heat kernels $K_L$ and propagators $P_{\epsilon < L}$ are defined. 
+
+We introduce the formal variable $\hbar$ and consider $\hbar$-dependent functionals $\sO(\sE)[[\hbar]]$. 
+Let $\sO^+(\sE)[[\hbar]] \subset \sO(\sE)[[\hbar]]$ be the subset of functionals that are at least cubic modulo $\hbar$.
+We define a map
+\ben
+W(P_{\epsilon < L}, -) : \sO^+(\sE)[[\hbar]] \to \sO^+(\sE)[[\hbar]],
+\een
+{\em renormalization group flow}. 
+Formally, $W(P_{\epsilon<L},I)$ is defined by the formula
+\ben
+e^{W(P_{\epsilon<L},I)/\hbar} = e^{\hbar \partial_{P_{\epsilon < L}}} e^{I / \hbar} .
+\een
+Concretely, $W(P_{\epsilon<L},I)$ can be written as a sum over graphs $\Gamma$
+\ben
+W(P_{\epsilon < L} , I) = \sum_{\Gamma} \frac{\hbar^{g(\Gamma)}}{|{\rm Aut}(\Gamma)|}W_\Gamma(P_{\epsilon<L},I),
+\een
+where $W_\Gamma(P_{\epsilon<L},I)$ is the weight of the graph $\Gamma$ whose edges are labeled by $P_{\epsilon < L}$ and vertices labeled by $I$.
+This is our mathematical definition of the Feynman weight of the graph $\Gamma$, and the precise definition can be found in Chapter 2 of \cite{CostelloRenormalization}. 
+
+In the BV formalism, as developed in \cite{CostelloRenormalization,CG1,CG2}, one has the following definition of a quantum field theory.
+
+\begin{dfn}
+A {\em quantum field theory} in the BV formalism consists of a free BV theory $(\sE, Q, \omega)$ and an effective family of functionals
+\ben
+\{I[L]\}_{L \in (0,\infty)} \subset \sO^+_{P,sm}(\sE)[[\hbar]]
+\een
+that satisfy:
 \begin{enumerate}[(a)]
 \item the exact renormalization group (RG) flow equation
 \ben
-I[L'] = W(P_{L<L'}, I[L])
+I[L'] = W(P_{L<L'}, I[L]);
 \een
 \item the scale $L$ quantum master equation (QME) at every length scale $L$:
 \ben
-??
+(Q + \hbar \Delta_L) e^{I[L]/\hbar} = 0.
 \een
-and
+Equivalently,
+\ben
+Q I[L] + \hbar \Delta_L I[L] + \frac{1}{2} \{I[L], I[L]\}_L = 0 ;
+\een
 \item as $L \to 0$, the functional $S[L]$ has an asymptotic expansion that is local.
 \end{enumerate}
+\end{dfn}
+
+The subspace $\sO_{P,sm}^+(\sE)[[\hbar]] \subset \sO(\sE)[[\hbar]]$ is of smooth and proper functionals that are at least cubic modulo $\hbar$. 
+Smooth and properness is a technical condition that we will not delve into in this work, but refer to the original reference of Costello and Gwilliam.
 The first condition ensures that the scale $L$ action functional $S[L]$ determines the functional at every other scale.
 The second can be interpreted as saying that we have a proper path integral measure at scale $L$ 
 (i.e., the QME can be seen as a definition of the measure).
@@ -402,7 +559,7 @@ since a defining property of a classical theory is that its action functional is
 (A full definition is available in Section 8.2 of \cite{CG2}.)
 
 \begin{rmk}
-The length scale is associated with a choice of Riemannian metric on the underlying manifold,
+The length scale is often associated with a choice of Riemannian metric on the underlying manifold,
 but the formalism of \cite{CostelloRenormalization} keeps track of how the space of quantum BV theories depends upon such a choice 
 (and other choices that might go into issues like renormalization).
 Hence, when the choices should not be essential --- such as with a topological field theory --- one can typically show rigorously that different choices give equivalent answers.
@@ -410,10 +567,52 @@ The length scale is also connected with the use of heat kernels in \cite{Costell
 but one can work with more general parametrices (and hence more general notions of ``scale''),
 as explained in Chapter 8 of \cite{CG2}.
 We use a natural length scale in this section; 
-when it becomes relevant, in the context of factorization algebras, we switch to general parametrices.
+when it becomes relevant, in the context of factorization algebras, one must switch to general parametrices.
 \end{rmk}
 
-\subsection{The quantum master equation}
+The locality condition ensures that the limit $I^{cl} = \lim_{L \to 0} I[L] \mod \hbar$ exists and is a local functional.
+The QME modulo $\hbar$ implies that $I^{cl}$ satisfying the CME, so that $(\sE, Q, \omega, I^{cl})$ defines a classical theory in the BV formalism.
+
+\subsubsection{Deformation theory for quantizations}
+
+There is a well-established deformation theory for studying quantizations of a fixed classical field theory.
+If $(\sE, Q, \omega, I)$ is a fixed classical theory, one would like to study the problem of finding quantizations which modulo $\hbar$ are equal to this classical theory. 
+
+According to the definition of a QFT there are two main steps. 
+
+\begin{enumerate}
+\item Find an effective family $\{I[L]\}$ which, modulo $\hbar$, agrees with the classical theory $I$, and satisfies the RG flow equation. 
+The main result of \cite{CostelloRenormalization} is that this step always has a solution. 
+Naively, the proposed family is of the form $I[L] = W(P_{0<L}, I)$, but since $P_{0<L}$ is distributional this functional may not be well-defined. (This is the problem of UV divergence in QFT)
+The key fact is that there exists a family of counterterms $I^{CT}(\epsilon) \in \sO(\sE)[[\hbar]]$ such that the limit
+\ben
+I[L] = \lim_{\epsilon \to 0} W(P_{\epsilon < L}, I - I^{CT}(\epsilon))
+\een
+does exist.
+Moreover, it automatically satisfies the RG flow equation.
+\item Once we have the effective family $\{I[L]\}$, the remaining condition to defining a QFT is the quantum master equation.
+In general this equation is not satisfied, and there may in fact be obstructions to having a solution.
+\end{enumerate}
+
+For holomorphic theories we will study both problems above.
+We will show that the analysis involved in finding counterterms for holomorphic theories is extremely well-behaved. 
+In fact, the counterterms for holomorphic theories on $\CC^d$ are all zero.
+Using this, we will show how solving the QME for holomorphic theories can be done a systematic way.
+
+To study the problem of solving the quantum master equation in general, we work order by order in the formal parameter $\hbar$.
+Suppose that $I[L]$ is defined modulo $\hbar^{n+2}$ and sastisfies the QME modulo $\hbar^{n+1}$.
+The obstruction to satisfying the QME at scale $L$ modulo $\hbar^{n+2}$ is the functional
+\ben
+\Theta_{n+1} [L] = \hbar^{-n-1} (Q I[L] + \frac{1}{2}\{I[L], I[L]\}_L + \hbar \Delta_L) .
+\een
+The obstruction $\Theta[L]$ satisfies the classical master equation and hence the limit $\Theta_{n+1} = \lim_{L \to 0} \Theta[L]$ is a local functional and is closed for the differential $Q + \{I, -\}$. 
+It is thus a closed element of degree one of the {\em deformation complex}
+\ben
+\Def_{\sE} = \left(\oloc(\sE), Q + \{I,-\}\right) .
+\een
+If $\Theta_{n+1}$ is cohomologically trivial in $H^1(\Def_{\sE})$, the space of possible lifts of $\{I[L]\}$ to a solution of the QME modulo $\hbar^{n+2}$ is a torsor for $H^0(\Def_{\sE})$. 
+
+%\subsection{The quantum master equation}
 
 \section{Holomorphic field theories} \label{sec: hol theory}
 
@@ -1225,12 +1424,12 @@ where each $D_{i,j}$ is a translation invariant holomorphic differential operato
 \subsection{Holomorphic gauge fixing}
 
 To begin the process of renormalization we must fix the data of a gauge fixing operator. 
-A gauge fixing operator is an operator on fields
+Recall, a gauge fixing operator is an operator on fields
 \ben
-Q^{GF} : \sE_V \to \sE_V[1]
+Q^{GF} : \sE_V \to \sE_V[-1]
 \een
 of cohomological degree $-1$ such that $[Q, Q^{GF}]$ is a generalized Laplacian on $\sE$ where $Q$ is the linearized BRST operator. 
-For a full definition of this see Definition 5.4.0.5 in \cite{CG2}. 
+
 
 For holomorphic theories there is a convenient choice for a gauge fixing operator. 
 To construct it we fix the standard flat metric on $\CC^d$. 
@@ -1766,12 +1965,13 @@ We can further quotient this subspace by $\oloc(\sL[1]) \oplus \oloc(\sE) \subse
 \ben
 {\rm Act}(\sL, \sE) := \oloc(\sL[1] \oplus \sE) / \oloc(\sL[1]) \oplus \oloc(\sE)\hookrightarrow \cred^*(\sL_c(X)) \tensor \oloc(\sE) .
 \een
- 
+Thus, ${\rm Act}(\sL, \sE)$ consists of functionals on $\sL [1] \oplus \sE$ that are local as both a function of $\sL[1]$ and $\sE$ and do not depend solely on $\sL[1]$ and $\sE$. 
+
 \begin{lem}[Chapter ?? \cite{CG2}]
 The differential and bracket defining the dg Lie algebra $\cred^*(\sL_c(X)) \tensor \oloc(\sE)[-1]$ in (\ref{dgLie1}) restricts to give a dg Lie algebra structure on the subspace ${\rm Act}(\sL,\sE)[-1]$. 
 \end{lem} 
 
-This lemma allows us to make the following definition.
+Using this lemma, the following definition is well-posed.
 
 \begin{dfn}\label{dfn: sL equiv}
 Let $\sL$ be a local Lie algebra and $\sE$ a classical field theory.
@@ -1795,12 +1995,67 @@ In fact, there is an equivalence of dg Lie algebras $\cred^*(\fh) \tensor \oloc(
 
 The quantum story for an action by a local Lie algebra is also similar to the case of an ordinary Lie algebra.
 There are two spaces of functionals that appear when discussing actions of a local Lie algebra $\sL$ on a quantum field theory.
-Let $\sE$ be the underlying space of fields.
+We will fix a quantum field theory as in Definition \ref{dfn: qft}.
+This is the data of a free BV theory $(\sE, Q, \omega)$ together with a family of functionals $\{I[L]\}$ satisfying RG flow and the QME (plus a locality condition). 
 
+\begin{dfn}
+An $\sL$-action on the quantum field theory $(\sE, Q, \omega, \{I[L]\})$ is the data of a family of functionals
+\ben
+\{I^\sL[L]\} \subset \sO_{P, sm}^+(\sL[1] \oplus \sE) / \sO_{P,sm} (\sL[1]) [[\hbar]]
+\een
+satisfying the following properties:
+\begin{enumerate}[(a)]
+\item The RG equation $W(P_{L<L'}, I^\sL[L]) = I^{\sL} [L']$;
+\item The equivariant quantum master equation at scale $L$:
+\ben
+\d_\sL I^\sL[L] + Q I^\sL[L] + \frac{1}{2} \{I^\sL[L], I^\sL[L]\}_L + \hbar \Delta_L I^{\sL}[L] = 0
+\een
+where $\d_\sL$ is the Chevalley-Eilenberg differential on $\sL$;
+\item the locality axiom as in Definition \ref{dfn: qft};
+\item under the natural quotient map
+\ben
+\sO_{P, sm}^+(\sL[1] \oplus \sE) / \sO_{P,sm} (\sL[1]) [[\hbar]] \to \sO^+_{P,sm}(\sE)[[\hbar]] 
+\een
+sends $I^{\sL}[L] \mapsto I[L]$ for each $L > 0$. 
+\end{enumerate}
+\end{dfn}
+
+In the definition above we require $I^{\sL}[L]$ to be an element in $\sO_{P, sm}^+(\sL[1] \oplus \sE) / \sO_{P,sm} (\sL[1]) [[\hbar]]$, which is the space of smooth and proper functionals on $\sL[1] \oplus \sE$ that are at least cubic modulo $\hbar$ and do not depend solely on $\sL$. 
+A stricter definition is that of an {\em inner} action, where we allow the functionals that depend solely on $\sL[1]$. 
+
+\begin{dfn}
+An {\em inner} action of $\sL$ on the QFT $(\sE, Q, \omega, \{I[L]\})$ is an effective family
+\ben
+\{I^\sL[L]\} \subset \sO_{P, sm}^+(\sL[1] \oplus \sE)
+\een
+satisfying conditions (a)-(c) above and under the natural map
+\ben
+\sO_{P, sm}^+(\sL[1] \oplus \sE) [[\hbar]] \to \sO^+_{P,sm}(\sE)[[\hbar]] 
+\een
+we have $I^{\sL}[L] \mapsto I[L]$ for each $L > 0$. 
+\end{dfn}
+
+Every inner action clearly defines an ordinary action on a QFT.
+In practice, we will study the problem of {\em lifting} an ordinary action to an inner action. 
+Just as in the obstruction theory discussed in Section \ref{sec: obstruction} there is a deformation complex controlling this lifting problem. 
+Indeed, suppose $I^{\sL}[L] \in \sO_{P, sm}^+(\sL[1] \oplus \sE) / \sO_{P,sm} (\sL[1]) [[\hbar]]$ is a family satisfying the condition of having an action by $\sL$. 
+We can lift this to a family of functionals
+\ben
+\Tilde{I}^{\sL}[L] \in \sO_{P, sm}^+(\sL[1] \oplus \sE) [[\hbar]] 
+\een
+that satisfy RG flow and the locality axioms, but in general they do not satisfy the equivariant quantum master equation. 
+The obstruction is an element 
+\ben
+\Theta[L] = \d_{\sL} \Tilde{I}^{\sL}[L] + Q \Tilde{I}^{\sL}[L] + \frac{1}{2} \{\Tilde{I}^{\sL}[L], \Tilde{I}^{\sL}[L]\}_L + \hbar \Delta_L \Tilde{I}^{\sL}[L]  .
+\een
+Since the right-hand side is zero modulo $\sO(\sL[1])[[\hbar]]$, by assumption, we must have $\Theta[L] \in \sO(\sL[1])[[\hbar]]$. 
+By homotopy RG flow it suffices to solve this equation at any scale $L$.
+Moreover, by the locality axiom the limit $\lim_{L \to 0} \Theta[L]$ exists and is a local functional of $\sL[1]$. 
+Thus we arrive at the following.
 
 \begin{lem}\label{lem: innner action}
-Suppose $\{I^{\sL}[L]\}$ is an effective family satisfying the $\sL$-equivariant quantum master equation modulo $\cloc^*(\sL)$.
-Then, the obstruction to lifting this action to an inner action, that is the anomaly to solving the quantum master equation, is a degree $+1$ cocycle in $\cloc^*(\sL)$. 
+Suppose $\{I^{\sL}[L]\}$ is an effective family defining an action of $\sL$ on a QFT.
+Then, the obstruction to lifting this action to an inner action, that is the anomaly to solving the equvariant quantum master equation, is the degree $+1$ cocycle in $\Theta = \lim_{L \to 0} \Theta[L] \in \cloc^*(\sL)$. 
 \end{lem}
 
 
