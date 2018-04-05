@@ -60,7 +60,7 @@ The complication here is that even very natural field theories can have a very c
 For instance, the naive quantization of Chern-Simons theory on a three-manifold has counterterms even at one-loop. 
 For holomorphic theories, however, we will show how the situation becomes much simpler at least at the level of one-loop.  
 
-\begin{lem}\ref{lem: hol renorm}
+\begin{lem}\label{lem: hol renorm}
 Let $\sE$ be a holomorphic theory on $\CC^d$ with classical interaction $I^{cl}$.  
 Then, there exists a one-loop prequantization $\{I[L] \; | \; L > 0\}$ of $I^{cl}$ involving no counterterms. 
 That is, we can find a propagator $P_{\epsilon < L}$ for which the $\epsilon \to 0$ limit of
@@ -355,7 +355,7 @@ The data of an $L_\infty$ algebra is a graded vector space $V$ with, for each $k
 of cohomological degree $2-k$. 
 These maps are required to satisfy a series of conditions, the first of which says $\ell_1^2 = 0$.
 The next says that $\ell_2$ is a bracket satisfying the Jacobi identity up to a homotopy given by $\ell_3$.
-For a detailed definition see we refer the reader to \cite{StasheffDG, GetlzerLie}.
+For a detailed definition see we refer the reader to \cite{StasheffDG, GetzlerLie}.
 
 We now give the definition of a local $L_\infty$ algebra on a manifold $X$.
 This has appeared in Chapter 4 of \cite{CG2}. 
@@ -372,9 +372,6 @@ A {\em local $L_\infty$ algebra} on $X$ is the following data:
 such that the collection $\{\ell_n\}_{n \in \NN}$ satisfy the conditions of an $L_\infty$ algebra.
 In particular, $\sL$ is a sheaf of $L_\infty$ algebras. 
 \end{dfn}
-
-In practice, we prefer to work with the compactly supported sections of $L$,
-as explained in \brian{cross ref}, for which we reserve the more succinct notation~$\sL$.
 
 
 %The functionals we consider are required to be continuous with a certain topology on the topological vector space $\sE$. 
@@ -424,6 +421,10 @@ The goal of this section is to define the notion of a holomorphic field theory.
 This is a variant of Costello's definition of a BV theory, see the previous section, and we will take for granted that the reader is familiar with the general format.
 In summary, we modify the definition of a theory by inserting the word ``holomorphic" in front of most objects (bundles, differential operators, etc..).
 By applying the Dolbeault complex in appropriate locations, we will recover Costello's definition of a theory, but with a holomorphic flavor, see Table \ref{table: holtoBV}. 
+
+There are many references in the physics literature to codify the concept of a holomorphic field theory.
+See, most closely related to our approach, special cases of this in the work of Nekrasov and collaborators in \cite{NekThesis, NekChiral, NekCFT}. 
+We will discuss in more detail the relationship of our analysis of holomorphic theories to this work in Chapters \ref{chap: holsig, chap: symmetries}. 
 
 \subsection{The definition of a holomorphic theory}
 
@@ -500,9 +501,9 @@ Here, $K_X$ is the canonical bundle on $X$.
 \end{itemize}
 
 The definition of the fields of an ordinary field theory are the {\em smooth} sections of the vector bundle $V$. 
-In our situation this is a silly thing to do since we lose all of the data of the complex structure we used to define the objects above. Dolbeault
-The more natural thing to do is take the {\em holomorphic} sections of the vector bundle $V$. 
-By construction, the operator $Q^{hol}$ and the pairing $(-,-)_V$ are defined on holomorphic sections, so on the surface this seems reasonable. 
+In our situation this is a silly thing to do since we lose all of the data of the complex structure we used to define the objects above.
+The more natural thing to do is to take the {\em holomorphic} sections of the vector bundle $V$. 
+By construction, the operator $Q^{hol}$ and the pairing $(-,-)_V$ are defined on holomorphic sections, so on the surface this seems reasonable.
 \brian{what should I say the problem is with doing things in the analytic category?}
 
 The solution to this problem is in the existence of a resolution for the holomorphic sections of a vector bundle by smooth sections of bundles. 
@@ -540,7 +541,7 @@ The triple $(\sE_V, Q_V = \dbar + Q^{hol}, \omega_V)$ defines a free BV theory i
 The usual prescription for writing down the associated action functional holds in this case.
 If $\varphi \in \Omega^{0,*}(X , V)$ denotes a field the action is
 \ben
-S(\varphi) = \int_X \left(\varphi, (\dbar + Q^{hol}) \varphi)\right)_V .
+S(\varphi) = \int_X \left(\varphi, (\dbar + Q^{hol}) \varphi \right)_V .
 \een
 
 The first example we explain is related to the subject of Chapter \ref{chap: holsig} and will serve as the fundamental example of a holomorphic theory. 
@@ -566,8 +567,9 @@ The action functional reads
 \ben
 S(\gamma + \beta, \gamma'+\beta') = \int_{X} \beta \wedge \dbar \gamma' + \beta' \wedge \dbar \gamma .
 \een 
-When $d = 1$ this reduces to the ordinary chiral $\beta\gamma$ system from conformal field theory \brian{ref}. 
-We will discuss this higher dimensional version further in Section \brian{}.
+When $d = 1$ this reduces to the ordinary chiral $\beta\gamma$ system from conformal field theory. 
+The $\beta\gamma$ system is a bosonic version of the ghost $bc$ system that appears in the quantization of the bosonic string, see Chapter ?? of \cite{Polchinski1}.
+We will discuss this higher dimensional version further in Section \ref{chap: holsig}.
 For instance, we will see how this theory is the starting block for constructing general holomorphic $\sigma$-models. 
 \end{eg}
 
@@ -583,10 +585,13 @@ The action functional is simply
 \ben
 S(\gamma, \beta) = \int {\rm ev}_E(\beta \wedge \dbar \gamma) .
 \een
+When $E$ is a tensor bundle of type $(r,s)$ this theory is a bosonic version of the $bc$ ghost system of spin $(r,s)$. 
+For a general bundle $E$ we will refer to it as the $\beta\gamma$ system with coefficients in the bundle $E$. 
 
 \begin{eg}
 {\em The free chiral scalar}.
 Another basic example is the free chiral scalar. 
+This is a bit outside\brian{finish}
 Let $X$ be a complex manifold with Hermitian metric $g$. 
 Let $V = \ul{\CC}$, the trivial vector bundle. 
 \brian{do this}
@@ -604,7 +609,7 @@ Recall, the sheaf of local functionals on $\sE = \Gamma(E)$ is defined as the sh
 \een
 In the expression above $JE$ stands for the sheaf of smooth sections of the $\infty$-jet bundle ${\rm Jet}(E)$ which has the structure of a $D_X$-module.
 
-If $V$ is a holomorphic vector bundle we can define the bundle of holomorphic $\infty$-jets ${\rm Jet}^{hol}(V)$. 
+If $V$ is a holomorphic vector bundle we can define the bundle of holomorphic $\infty$-jets ${\rm Jet}^{hol}(V)$, \cite{GriffithsGreen, Wong}. 
 This is a pro-vector bundle that is holomorphic in a natural way.
 The fibers of this infinite rank bundle ${\rm Jet}^{hol}(V)$ are isomorphic to 
 \ben
@@ -921,35 +926,15 @@ and that $Q$ is skew self-adjoint for the symplectic structure.
 Thus, in particular, $\sE_V$ together with the pairing define a free BV theory in the ordinary sense. 
 In the usual way, we obtain the action functional via
 \ben
-S(\varphi) = \int (\varphi, (\dbar + Q^{hol}) \varphi\>_V .
+S(\varphi) = \int (\varphi, (\dbar + Q^{hol}) \varphi)_V .
 \een 
 
 Before going further, we will give a familiar example from the last section.
 
 \begin{eg}\label{eg bg affine} {\em The free $\beta\gamma$ system on $\CC^d$}.
-Suppose that 
-\ben
-V = \ul{\CC} \oplus K_{\CC^d} [d - 1] .
-\een
-Let $(\;,\;\>_V$ be the pairing
-\ben
-(\ul{\CC} \oplus K_{\CC^d}) \tensor (\ul{\CC} \oplus K_{\CC^d}) \to K_{\CC^{d}} \oplus K_{\CC^d} \to K_{\CC^d} 
-\een 
-sending $(\lambda, \mu) \tensor (\lambda',\mu') \mapsto (\lambda \mu', \lambda'\mu) \mapsto \lambda\mu' + \lambda' \mu$.
-Finally, let $Q^{hol} = 0$. 
-One immediately checks that this is a holomorphically translation invariant free theory as above.
-The space of fields can be written as
-\ben
-\Omega^{0,*}(\CC^d) \oplus \Omega^{d,*}(\CC^d)[d - 1] .
-\een 
-We write $\gamma$ for a field in the first component, and $\beta$ for a field in the second component. 
-The action functional reads
-\ben
-S(\gamma + \beta, \gamma'+\beta') = \int_{\CC^d} \beta \wedge \dbar \gamma' + \beta' \wedge \dbar \gamma .
-\een 
-When $d = 1$ this reduces to the ordinary chiral $\beta\gamma$ system from conformal field theory \brian{ref}. 
-We will discuss this higher dimensional version further in Section \brian{}.
-For instance, we will see how this theory is the starting block for constructing general holomorphic $\sigma$-models. 
+Consider the $\beta\gamma$ system with coefficients in any holomorphic vector bundle from Example \ref{eg bg} (and the remarks after it) specialized to the manifold $X = \CC^d$.
+One immediately checks that this is a holomorphically translation invariant free theory.
+%where the operators $\eta_i = \frac{\partial}{\partial (\d z_i)}$ act in the natural way.
 \end{eg}
 
 
@@ -1068,8 +1053,8 @@ There is an induced action of translations $\CC^{2d}$ on this cochain complex.
 The condition of translation invariance was not the only one required to have a holomorphically translation invariant local functional.
 We also require that $\eta_i I = 0$.
 The abelian Lie alegebra spanned by the odd elements $\{\eta_i\}$ is $d$-dimensional and we denote it by $\CC^d[1]$.
-We want to consider deformations that are invariant for the action by the total Lie algebra $\CC^{2d} \oplus \CC^d[1]$.
-We let $(\Def_{\sE_V})^{\CC^d \oplus \CC^d[1]}$ be the space of such invariant deformations.
+We want to consider deformations that are invariant for the action by the total {\em super} Lie algebra $\CC^{2d|d} = \CC^{2d} \oplus \CC^d[1]$.
+We denote by $(\Def_{\sE_V})^{\CC^{2d|d}}$ the space of such deformations.
 
 Recall, in the definition of the local functionals on a graded vector bundle one considers (reduced) functionals on the jet bundle $JV$.
 In the holomorphic case there is also a holomorphic jet bundle $J^{hol}V$.
@@ -1079,7 +1064,7 @@ The fiber at zero of this jet bundle may be identified as $J^{hol}_0 V = V_0 [[z
 Suppose that $Q^{hol} = 0$.
 Then, there is a quasi-isomorphism
 \ben
-\left(\Def_{\sE_V}\right)^{\CC^{2d} \oplus \CC^d[1]} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \sO_{red}(V_0[[z_1,\ldots,z_d]])[d].
+\left(\Def_{\sE_V}\right)^{\CC^{2d|d}} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \sO_{red}(V_0[[z_1,\ldots,z_d]])[d].
 \een
 Here, $\partial_{z_i} = \frac{\partial}{\partial z_i}$ and $\CC \cdot \d^d z$ denotes the trivial right $\CC[\partial_{z_i}]$-module. 
 \end{lem}
@@ -1087,7 +1072,7 @@ Here, $\partial_{z_i} = \frac{\partial}{\partial z_i}$ and $\CC \cdot \d^d z$ de
 The local functional $I$ defining the classical holomorphic theory endows $J^{hol}V[-1]$ the structure of a $L_\infty$ algebra in $D_{\CC^d}$-modules. 
 Repackaging the statement using Lie algebraic data we can rewrite the equivalence in the lemma as
 \ben
-\left(\Def_{\sE_V}\right)^{\CC^{2d} \oplus \CC^d[1]}\simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \cred^*\left(V_0[[z]][-1])\right) [d].
+\left(\Def_{\sE_V}\right)^{\CC^{2d|d}}\simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \cred^*\left(V_0[[z]][-1])\right) [d].
 \een
 
 \begin{proof}
@@ -1119,7 +1104,7 @@ Taking the $\CC^d[1] = \CC\{\Bar{\eta}_1,\ldots,\Bar{\eta}_d\}$ invariants, we s
 \een
 The lemma follows once we observe that there is a quasi-isomorphism of algebras 
 \ben
-\CC[\partial_{z_i}] \hookrightarrow \CC[\partial_{z_i}, \partial_{\zbar_i}, \Bar{\eta}_i].
+\CC[\partial_{z_i}] \xto{\simeq} \CC[\partial_{z_i}, \partial_{\zbar_i}, \Bar{\eta}_i].
 \een
 
 \end{proof}
@@ -1229,7 +1214,7 @@ Further, we can write the $(-1)$-shifted symplectic structure defining the class
 \ben
 \omega_V(\alpha \tensor v, \beta \tensor w) = (v,w)_{V_0} \int \d^d z (\alpha \wedge \beta)
 \een
-where $(-,-)_{V_0}$ is a degree $(d-1)$-shifted \brian{check} pairing on the finite dimensional vector space $V_0$. 
+where $(-,-)_{V_0}$ is a degree $(d-1)$-shifted pairing on the finite dimensional vector space $V_0$. 
 
 We will assume that the holomorphic Lagrangian $I^{hol}$ is also translation invariant and so defines an interaction of the form $I = \sum_k I_k$ where $I_k$ is symmetric degree $k$ and
 \ben
@@ -1531,14 +1516,18 @@ After some straightforward linear algebra we find that
 \ben
 \det(M_{\alpha\beta})^{-1} = \frac{t_1\cdots t_k}{t_1+\cdots+t_k} .
 \een 
-Thus, after performing the Gaussian integration over $(w^1,\ldots,w^{k-1})$ the inequality in (\ref{weight bound1}) becomes
+We now perform a Wick expansion for the Gaussian integral in the variables $(w^1,\ldots,w^{k-1})$.
+For a reference similar to the notation used here see the Appendix of \cite{EWY}.
+The inequality in (\ref{weight bound1}) becomes
 \begin{align}\label{weight bound2}
-|W_{k,(\vec{n})}^\Phi (\epsilon, L)| & \leq C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1\cdots t_k)^d}\left(\frac{t_1\cdots t_k}{t_1+\cdots+t_k}\right)^d + O(\epsilon) \\ & = C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1+\cdots+t_k)^d}
+|W_{k,(\vec{n})}^\Phi (\epsilon, L)| & \leq C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1\cdots t_k)^d}\left(\frac{t_1\cdots t_k}{t_1+\cdots+t_k}\right)^d + O(\epsilon) \\ & = C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1+\cdots+t_k)^d} + O(\epsilon) .
 \end{align}
+The first term in the Wick expansion is written out explicitly. 
+The $O(\epsilon)$ refers to higher terms in the Wick expansion, which one can show all have order $\epsilon$, so disappear in the $\epsilon \to 0$ limit.
 The expression $\Psi(0, \ldots, 0, w^k)$ means that we have evaluate the function $\Psi(w^1,\ldots, w^k)$ at $w^1=\ldots=w^{k-1} =0$ leaving it as a function only of $w^k$. 
 In the original coordinates this is equivalent to setting $z^1=\cdots=z^{k-1} = z^k$.
 
-Our goal is to show that $\epsilon \to 0$ limit exists. 
+Our goal is to show that $\epsilon \to 0$ limit of the right-hand side exists. 
 The only $\epsilon$ dependence on the right hand side of (\ref{weight bound2}) is in the integral over the regulation parameters $t_1,\ldots, t_k$. 
 Thus, it suffices to show that the $\epsilon \to 0$ limit of 
 \ben

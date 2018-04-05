@@ -1,4 +1,4 @@
-\begin{thebibliography}{Cos11}
+\begin{thebibliography}{LMNS97}
 
 \bibitem[CG]{CG2}
 Kevin Costello and Owen Gwilliam.
@@ -22,15 +22,55 @@ Kevin Costello.
   Mathematical Surveys and Monographs}.
 \newblock American Mathematical Society, Providence, RI, 2011.
 
+\bibitem[EWY18]{EWY}
+Chris Elliott, Brian Williams, and Philsang Yoo.
+\newblock Asymptotic freedom in the {BV} formalism.
+\newblock {\em J. Geom. Phys.}, 123:246--283, 2018.
+
+\bibitem[Get09]{GetzlerLie}
+Ezra Getzler.
+\newblock Lie theory for nilpotent {$L_\infty$}-algebras.
+\newblock {\em Ann. of Math. (2)}, 170(1):271--301, 2009.
+
 \bibitem[Joh94]{johansen1}
 A.~Johansen.
 \newblock Twisting of {N}=1 susy gauge theories and heterotic topological
   theories.
 \newblock arXiv:hep-th/9403017, 1994.
 
+\bibitem[KM97]{KM97}
+Andreas Kriegl and Peter~W. Michor.
+\newblock {\em The convenient setting of global analysis}, volume~53 of {\em
+  Mathematical Surveys and Monographs}.
+\newblock American Mathematical Society, Providence, RI, 1997.
+
 \bibitem[Li]{LiVertex}
 Si~Li.
 \newblock {V}ertex algebras and quantum master equation.
 \newblock available at \url{https://arxiv.org/abs/1612.01292}.
+
+\bibitem[LMNS96]{NekCFT}
+Andrei Losev, Gregory Moore, Nikita Nekrasov, and Samson Shatashvili.
+\newblock Four-dimensional avatars of two-dimensional {RCFT}.
+\newblock {\em Nuclear Phys. B Proc. Suppl.}, 46:130--145, 1996.
+\newblock $S$-duality and mirror symmetry (Trieste, 1995).
+
+\bibitem[LMNS97]{NekChiral}
+Andrei Losev, Gregory Moore, Nikita Nekrasov, and Samson Shatashvili.
+\newblock Chiral {L}agrangians, anomalies, supersymmetry, and holomorphy.
+\newblock {\em Nuclear Phys. B}, 484(1-2):196--222, 1997.
+
+\bibitem[Nek96]{NekThesis}
+Nikita~Alex Nekrassov.
+\newblock {\em Four-dimensional holomorphic theories}.
+\newblock ProQuest LLC, Ann Arbor, MI, 1996.
+\newblock Thesis (Ph.D.)--Princeton University.
+
+\bibitem[Sta92]{StasheffDG}
+Jim Stasheff.
+\newblock Differential graded {L}ie algebras, quasi-{H}opf algebras and higher
+  homotopy algebras.
+\newblock In {\em Quantum groups ({L}eningrad, 1990)}, volume 1510 of {\em
+  Lecture Notes in Math.}, pages 120--137. Springer, Berlin, 1992.
 
 \end{thebibliography}

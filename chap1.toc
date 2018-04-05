@@ -16,8 +16,8 @@
 \contentsline {section}{\tocsection {}{3}{Renormalization of holomorphic theories}}{19}{section.3}
 \contentsline {subsection}{\tocsubsection {}{3.1}{Holomorphic gauge fixing}}{19}{subsection.3.1}
 \contentsline {subsection}{\tocsubsection {}{3.2}{One-loop weights}}{21}{subsection.3.2}
-\contentsline {subsection}{\tocsubsection {}{3.3}{A general fact about chiral anomalies}}{25}{subsection.3.3}
-\contentsline {subsection}{\tocsubsection {}{3.4}{Relation to renormalization of topological theories}}{26}{subsection.3.4}
+\contentsline {subsection}{\tocsubsection {}{3.3}{A general fact about chiral anomalies}}{26}{subsection.3.3}
+\contentsline {subsection}{\tocsubsection {}{3.4}{Relation to renormalization of topological theories}}{27}{subsection.3.4}
 \contentsline {section}{\tocsection {}{4}{Equivariant BV quantization}}{27}{section.4}
 \contentsline {subsection}{\tocsubsection {}{4.1}{Classical equivariance}}{28}{subsection.4.1}
 \contentsline {subsection}{\tocsubsection {}{4.2}{Quantum equivariance}}{28}{subsection.4.2}
