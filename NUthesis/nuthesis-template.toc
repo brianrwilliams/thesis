@@ -1,0 +1,126 @@
+\contentsline {chapter}{\tocchapter {Chapter}{}{ABSTRACT}}{3}{chapter*.1}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Acknowledgements}}{4}{chapter*.3}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Preface}}{5}{chapter*.5}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Table of Contents}}{6}{section*.6}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Tables}}{8}{section*.7}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{9}{section*.8}
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Holomorphic quantum field theory}}{10}{chapter.1}
+\contentsline {section}{\tocsection {}{1.1}{The definition of a quantum field theory}}{13}{section.1.1}
+\contentsline {subsection}{\tocsubsection {}{1.1.1}{Classical field theory}}{13}{subsection.1.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.1.1.1}{Some functional analysis}}{15}{subsubsection.1.1.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.1.1.2}{Local functionals}}{19}{subsubsection.1.1.1.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.1.1.3}{The definition of a classical field theory}}{20}{subsubsection.1.1.1.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.1.1.4}{A description using $L_\infty $ algebras}}{22}{subsubsection.1.1.1.4}
+\contentsline {subsection}{\tocsubsection {}{1.1.2}{Quantum field theory}}{25}{subsection.1.1.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.1.2.1}{Regularization}}{25}{subsubsection.1.1.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.1.2.2}{Effective BV quantization}}{28}{subsubsection.1.1.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.1.2.3}{Deformation theory for quantizations}}{30}{subsubsection.1.1.2.3}
+\contentsline {section}{\tocsection {}{1.2}{Holomorphic field theories}}{32}{section.1.2}
+\contentsline {subsection}{\tocsubsection {}{1.2.1}{The definition of a holomorphic theory}}{33}{subsection.1.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.2.1.1}{Free holomorphic theories}}{33}{subsubsection.1.2.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.2.1.2}{Interacting holomorphic theories}}{38}{subsubsection.1.2.1.2}
+\contentsline {subsection}{\tocsubsection {}{1.2.2}{Holomorphically translation invariant theories}}{45}{subsection.1.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.2.2.1}{Translation invariant interactions}}{48}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.2.2.2}{Holomorphic translation invariant deformations}}{49}{subsubsection.1.2.2.2}
+\contentsline {section}{\tocsection {}{1.3}{Renormalization of holomorphic theories}}{52}{section.1.3}
+\contentsline {subsection}{\tocsubsection {}{1.3.1}{Holomorphic gauge fixing}}{53}{subsection.1.3.1}
+\contentsline {subsection}{\tocsubsection {}{1.3.2}{One-loop weights}}{56}{subsection.1.3.2}
+\contentsline {subsection}{\tocsubsection {}{1.3.3}{A general fact about chiral anomalies}}{65}{subsection.1.3.3}
+\contentsline {subsection}{\tocsubsection {}{1.3.4}{Relation to renormalization of topological theories}}{67}{subsection.1.3.4}
+\contentsline {section}{\tocsection {}{1.4}{Equivariant BV quantization}}{68}{section.1.4}
+\contentsline {subsection}{\tocsubsection {}{1.4.1}{Classical equivariance}}{70}{subsection.1.4.1}
+\contentsline {subsection}{\tocsubsection {}{1.4.2}{Quantum equivariance}}{71}{subsection.1.4.2}
+\contentsline {subsection}{\tocsubsection {}{1.4.3}{The case of a local Lie algebra}}{73}{subsection.1.4.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{1.4.3.1}{}}{74}{subsubsection.1.4.3.1}
+\contentsline {chapter}{\tocchapter {Chapter}{2}{The holomorphic $\sigma $-model}}{78}{chapter.2}
+\contentsline {section}{\tocsection {}{2.1}{Gelfand-Kazhdan formal geometry}}{83}{section.2.1}
+\contentsline {subsection}{\tocsubsection {}{2.1.1}{A Harish-Chandra pair for the formal disk}}{84}{subsection.2.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.1.1}{Formal automorphisms}}{85}{subsubsection.2.1.1.1}
+\contentsline {subsection}{\tocsubsection {}{2.1.2}{The coordinate bundle}}{87}{subsection.2.1.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.2.1}{}}{87}{subsubsection.2.1.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.2.2}{The Grothendieck connection}}{88}{subsubsection.2.1.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.2.3}{A Harish-Chandra structure on the frame bundle}}{90}{subsubsection.2.1.2.3}
+\contentsline {subsection}{\tocsubsection {}{2.1.3}{The category of formal vector bundles}}{94}{subsection.2.1.3}
+\contentsline {subsection}{\tocsubsection {}{2.1.4}{Gelfand-Kazhdan descent}}{99}{subsection.2.1.4}
+\contentsline {subsection}{\tocsubsection {}{2.1.5}{Formal characteristic classes}}{102}{subsection.2.1.5}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.5.1}{Recollection}}{102}{subsubsection.2.1.5.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.5.2}{The formal Atiyah class}}{105}{subsubsection.2.1.5.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.5.3}{The formal Atiyah sequence}}{106}{subsubsection.2.1.5.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.5.4}{An explicit formula}}{110}{subsubsection.2.1.5.4}
+\contentsline {subsection}{\tocsubsection {}{2.1.6}{A family of extended pairs}}{114}{subsection.2.1.6}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.6.1}{An $L_\infty $ extension}}{115}{subsubsection.2.1.6.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.1.6.2}{$L_\infty $ pairs}}{116}{subsubsection.2.1.6.2}
+\contentsline {section}{\tocsection {}{2.2}{Descent for extended pairs}}{118}{section.2.2}
+\contentsline {subsection}{\tocsubsection {}{2.2.1}{General theory of descent for $L_\infty $ pairs}}{118}{subsection.2.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.1.1}{Basic forms}}{120}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.2.1.2}{Semi-strict descent}}{122}{subsubsection.2.2.1.2}
+\contentsline {subsection}{\tocsubsection {}{2.2.2}{The flat connection from the extended pair}}{124}{subsection.2.2.2}
+\contentsline {section}{\tocsection {}{2.3}{The classical holomorphic $\sigma $-model}}{129}{section.2.3}
+\contentsline {subsection}{\tocsubsection {}{2.3.1}{The free $\beta \gamma $ system}}{130}{subsection.2.3.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.3.1.1}{The formal $\beta \gamma $ system}}{131}{subsubsection.2.3.1.1}
+\contentsline {subsection}{\tocsubsection {}{2.3.2}{A description using $L_\infty $ spaces}}{135}{subsection.2.3.2}
+\contentsline {section}{\tocsection {}{2.4}{Deformations of the holomorphic $\sigma $-model}}{140}{section.2.4}
+\contentsline {subsection}{\tocsubsection {}{2.4.1}{Forms as local functionals}}{145}{subsection.2.4.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.4.1.1}{Computing the deformation complex}}{149}{subsubsection.2.4.1.1}
+\contentsline {section}{\tocsection {}{2.5}{BV quantization of the holomorphic $\sigma $-model}}{154}{section.2.5}
+\contentsline {subsection}{\tocsubsection {}{2.5.1}{The ${{\rm W}_n}$-equivariant quantization}}{155}{subsection.2.5.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.5.1.1}{A reminder of the propagator}}{155}{subsubsection.2.5.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.5.1.2}{The prequantization}}{157}{subsubsection.2.5.1.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.5.1.3}{The one-loop anomaly}}{158}{subsubsection.2.5.1.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.5.1.4}{The extended theory}}{167}{subsubsection.2.5.1.4}
+\contentsline {subsection}{\tocsubsection {}{2.5.2}{Quantization on general manifolds via formal geometry}}{172}{subsection.2.5.2}
+\contentsline {section}{\tocsection {}{2.6}{The local operators}}{175}{section.2.6}
+\contentsline {subsection}{\tocsubsection {}{2.6.1}{The factorization algebra of observables}}{177}{subsection.2.6.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.6.1.1}{The classical observables}}{177}{subsubsection.2.6.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.6.1.2}{The quantum observables}}{179}{subsubsection.2.6.1.2}
+\contentsline {subsection}{\tocsubsection {}{2.6.2}{The observables on the $d$-disk}}{180}{subsection.2.6.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.6.2.1}{The cohomology of the observables}}{180}{subsubsection.2.6.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.6.2.2}{An explicit characterization}}{180}{subsubsection.2.6.2.2}
+\contentsline {subsection}{\tocsubsection {}{2.6.3}{The sphere observables}}{186}{subsection.2.6.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.6.3.1}{Nesting spherical shells}}{190}{subsubsection.2.6.3.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.6.3.2}{Using the Moyal formula}}{193}{subsubsection.2.6.3.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.6.3.3}{Using smoothed observables}}{199}{subsubsection.2.6.3.3}
+\contentsline {subsection}{\tocsubsection {}{2.6.4}{The disk as a module}}{203}{subsection.2.6.4}
+\contentsline {subsection}{\tocsubsection {}{2.6.5}{A formula for the character}}{207}{subsection.2.6.5}
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Local symmetries of holomorphic theories}}{211}{chapter.3}
+\contentsline {section}{\tocsection {}{3.1}{The current algebra on complex manifolds}}{215}{section.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.1.1}{Definitions}}{215}{subsection.3.1.1}
+\contentsline {subsection}{\tocsubsection {}{3.1.2}{Factorization Lie algebras}}{218}{subsection.3.1.2}
+\contentsline {subsection}{\tocsubsection {}{3.1.3}{Local cohomology}}{222}{subsection.3.1.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.1.3.1}{The $J$ functional}}{224}{subsubsection.3.1.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.1.4}{The Kac-Moody factorization algebra}}{228}{subsection.3.1.4}
+\contentsline {section}{\tocsection {}{3.2}{Local structures of the Kac-Moody factorization algebra}}{229}{section.3.2}
+\contentsline {subsection}{\tocsubsection {}{3.2.1}{The higher sphere algebras}}{232}{subsection.3.2.1}
+\contentsline {subsection}{\tocsubsection {}{3.2.2}{The strategy}}{235}{subsection.3.2.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.2.1}{The case of zero level}}{235}{subsubsection.3.2.2.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.2.2}{The case of non-zero level}}{237}{subsubsection.3.2.2.2}
+\contentsline {subsection}{\tocsubsection {}{3.2.3}{An $E_d$ algebra from tori}}{244}{subsection.3.2.3}
+\contentsline {subsection}{\tocsubsection {}{3.2.4}{The disk as a module}}{247}{subsection.3.2.4}
+\contentsline {section}{\tocsection {}{3.3}{The Kac-Moody factorization algebra on general manifolds}}{247}{section.3.3}
+\contentsline {subsection}{\tocsubsection {}{3.3.1}{The $P_0$-structure}}{247}{subsection.3.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.3.2}{Factorization homology along Hopf surfaces}}{249}{subsection.3.3.2}
+\contentsline {subsection}{\tocsubsection {}{3.3.3}{A variant of the factorization algebra}}{253}{subsection.3.3.3}
+\contentsline {section}{\tocsection {}{3.4}{Universal Grothendieck-Riemann-Roch from BV quantization}}{256}{section.3.4}
+\contentsline {subsection}{\tocsubsection {}{3.4.1}{The classical family}}{260}{subsection.3.4.1}
+\contentsline {subsection}{\tocsubsection {}{3.4.2}{BV quantization in families}}{261}{subsection.3.4.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.4.2.1}{The anomaly calculation}}{263}{subsubsection.3.4.2.1}
+\contentsline {subsection}{\tocsubsection {}{3.4.3}{Local to global}}{268}{subsection.3.4.3}
+\contentsline {subsection}{\tocsubsection {}{3.4.4}{A module for the higher Kac-Moody}}{272}{subsection.3.4.4}
+\contentsline {section}{\tocsection {}{3.5}{Holomorphic diffeomorphisms}}{274}{section.3.5}
+\contentsline {subsection}{\tocsubsection {}{3.5.1}{Holomorphic vector fields}}{274}{subsection.3.5.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.5.1.1}{The local Lie algebra}}{275}{subsubsection.3.5.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.5.1.2}{Holomorphically covariant theories}}{276}{subsubsection.3.5.1.2}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.5.1.3}{Higher central charges}}{278}{subsubsection.3.5.1.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.5.1.4}{Chiral conformal field theory}}{279}{subsubsection.3.5.1.4}
+\contentsline {subsection}{\tocsubsection {}{3.5.2}{Gelfand-Fuks cohomology}}{282}{subsection.3.5.2}
+\contentsline {subsection}{\tocsubsection {}{3.5.3}{The local cohomology of holomorphic vector fields}}{288}{subsection.3.5.3}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.5.3.1}{An explicit description of the local cocycles}}{293}{subsubsection.3.5.3.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.5.3.2}{A comparison to other cocycles}}{296}{subsubsection.3.5.3.2}
+\contentsline {subsection}{\tocsubsection {}{3.5.4}{The holomorphic anomaly for $\sigma $-models}}{297}{subsection.3.5.4}
+\contentsline {section}{\tocsection {}{.1}{The dg model for punctured affine space}}{297}{section.Alph0.1}
+\contentsline {chapter}{\tocappendix {Appendix}{}{References}}{301}{appendix*.9}
+\contentsline {chapter}{\tocappendix {Appendix}{A}{Title of Appendix}}{307}{appendix.A}
+\contentsline {section}{\tocsection {}{A.1}{First section of Appendix}}{307}{section.A.1}
+\contentsline {subsection}{\tocsubsection {}{A.1.1}{First subsection of Appendix}}{307}{subsection.A.1.1}
+\contentsline {subsubsection}{\tocsubsubsection {}{A.1.1.1}{First subsubsection of Appendix}}{307}{subsubsection.A.1.1.1}
+\contentsline {chapter}{\tocchapter {Appendix}{}{Vita}}{308}{appendix*.11}

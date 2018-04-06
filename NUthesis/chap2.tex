@@ -1,30 +1,4 @@
-\documentclass[10pt]{amsart}
-
-\usepackage{macros,slashed}
-
-\linespread{1.25}
-
-\usepackage{tikz,tikz-cd}
-\usetikzlibrary{arrows,shapes}
-\usetikzlibrary{trees}
-\usetikzlibrary{matrix,arrows}
-\usetikzlibrary{positioning}
-\usetikzlibrary{calc,through}
-\usetikzlibrary{decorations.pathreplacing}
-\usepackage{pgffor}
-
-
-
-\def\Jac{{\rm Jac}}
-\def\Bar{\overline}
-
-\title{The higher dimensional holomorphic $\sigma$-model}
-
-\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
-
-\begin{document}
-\maketitle
-\tableofcontents
+\chapter{The holomorphic $\sigma$-model}
 
 This chapter contains a detailed analysis of one of the most fundamental holomorphic field theories: the holomorphic $\sigma$-model.
 This theory is appealing from both the perspective of mathematics and physics.
@@ -2198,13 +2172,13 @@ Indeed, if $\alpha,\alpha' \in \sO(B \fg)$ then $\partial((\alpha\alpha')^Y) = \
 
 In this section we specialize the functional $J$ to the space $Y = \CC^d$ and use it to completely characterize the $U(d)$-invariant, holomorphically translation invariant deformation complex.
 
-\begin{thm}\label{thm: local def}
+\begin{prop}\label{prop: local def}
 The map $J : \Omega^{d+1}_{cl}(B \fg) [d] \to \Def_{\CC^d \to B \fg}^{\rm cot}$ factors through the holomorphically translation invariant deformation complex:
 \ben
 J : \Omega^{d+1}_{cl}(B \fg) [d] \to \left(\Def^{\rm cot}_{\CC^d \to B \fg}\right)^{\CC^{2d|d}} .
 \een
 Furthermore, $J$ defines a quasi-isomorphism into the $U(d)$-invariant subcomplex of the right-hand side.
-\end{thm}
+\end{prop}
 
 To compute the translation invariant deformation complex we will invoke Proposition \brian{hol trans invt def} from Section \brian{ref}.
 Note that the deformation complex is simply the (reduced) local cochains on the local Lie algebra $\Omega^{0,*}_{\CC^d} \tensor \fg$. 
@@ -2886,7 +2860,7 @@ Our main result of this section is the following.
 The effective family $\{I^{\rm W}[L] + \hbar \Tilde{J} [L]\}_{L>0}$ defines a $\TVectd$-equivariant quantization of the $n$-dimensional formal $\beta\gamma$ system on $\CC^d$ such that:
 \begin{enumerate}
 \item in addition, it is equivariant for the group $\GL_n$ in a way that is compatible with the Lie algebra map ${\rm Lie}(\GL_n) = \gl_n \hookrightarrow \TVectd$;
-\item this quantization is invariant for the affine group $U(d) \ltimes \CC^d$ and is the unique one of this type up to homotopy.
+\item this quantization is both holomorphically translation invariant and invariant for the group $U(d)$.
 \end{enumerate}
 \end{thm}
 
@@ -4150,7 +4124,5 @@ Without much more difficulty, one can obtain the formula for the character of th
 \end{prop}
 
 %\brian{Do general case. Relate to elliptic gamma functions. Relate to Witten index, which is the parition function on $S^3 \times S^1$.}
-
-\end{document}
 
 
