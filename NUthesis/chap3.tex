@@ -1125,6 +1125,8 @@ It is immediate to see that identifications above are natural with respect to ma
 This completes the proof.
 \end{proof}
 
+\brian{relate to nekrasov}
+
 
 \section{Universal Grothendieck-Riemann-Roch from BV quantization}
 
@@ -1893,7 +1895,7 @@ If $V$ is spanned by vectors $\{v_i\}$ we will use the shorthand $\CC[v_i]$ for 
 
 \begin{thm}[\cite{GFnontrivial}] \label{thm nontrivial coeff} The bigraded commutative algebra $H^*(\W_d ; \hOmega_d^{\#})$ is isomorphic to the bigraded commutative algebra 
 \ben
-\left. \left(\CC[a_1,\ldots, a_{2d-1}, \tau_1,\ldots,\tau_d]\right) \right/ \left(c_1^{j_1}\cdots c_d^{j_d} \right),
+\left. \left(\CC[a_1,\ldots, a_{2d-1}, \tau_1,\ldots,\tau_d]\right) \right/ \left(\tau_1^{j_1}\cdots \tau_d^{j_d} \right),
 \een
 where the quotient is over all indices $\{j_1,\ldots,j_d\}$ that satisfiy $j_1 + 2j_2 + \cdots + d j_d > d$. 
 Here $a_{2i-1}$ is in bidegree $(2i-1,0)$ and $\tau_j$ is in bidegree $(j,j)$. 
@@ -2166,11 +2168,11 @@ Similarly, the product is $\Tilde{a}_1 \Tilde{\tau}_1$ is the bilinear functiona
 This is a density precisely when $|\alpha_1|+|\alpha_2| = 1$.
 Thus, $\Tilde{a}_1 \Tilde{\tau}_1$ determines a degree $+1$ density valued cochain on $J \sT_\CC$; in other other words an element of $\cloc^*(\sT_\CC)$ that we write as
 \ben
-\int_\CC \partial_z \alpha_1(z,\zbar)  \partial (\partial_z \alpha_2(z,\zbar)) .
+\int_\CC \partial_z \alpha_1(z,\zbar)  \partial (\partial_z \alpha_2(z,\zbar)),
 \een
-If we integrate by parts, we can put this local functional in the form $\int f \partial^3_z g \d z \d \zbar$. 
-If one restricts this local functional to the annulus and performs the radial integration, we recover the usual formula for the generator of $H^2({\rm Vect}(S^1))$ \brian{citation} defining the central extension of the Virasoro Lie algebra. 
-In fact, in \cite{BWVir} \brian{finish}
+which is the local cocycle we denoted $\omega_{Vir}$ above.
+If we integrate by parts, we can put this local functional in the form $\int f \partial^3_z g \d z \d \zbar$.
+If one restricts this local functional to the annulus and performs the radial integration, we recover the usual formula for the generator of $H^2({\rm Vect}(S^1))$ \brian{citation} defining the central extension of the Virasoro Lie algebra.
 
 
 %\ben

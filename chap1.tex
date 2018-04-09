@@ -1,4 +1,30 @@
-\part{Holomorphic quantum field theory}
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\usetikzlibrary{trees}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc,through}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{pgffor}
+
+\def\sAd{\sA{\rm d}}
+
+\title{Holomorphic quantum field theory}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%\chapter{Holomorphic quantum field theory}
 
 Our main objective in this chapter is two-fold. 
 First we will define the concept of a holomorphic field theory and set up notation and terminology that we will use throughout the text. 
@@ -29,8 +55,7 @@ The family $\{I[L]\}$ defines a prequantization.
 For each $L$ we require that $I[L]$ satisfy the scale $L$ quantum master equation....
 \end{itemize}
 
-
-In this section we are concerned with the first step, that of renormalization. 
+In this section we are concerned with the first step: renormalization. 
 The complication here is that even very natural field theories can have a very complicated collections of counterterms. 
 For instance, the naive quantization of Chern-Simons theory on a three-manifold has counterterms even at one-loop. 
 For holomorphic theories, however, we will show how the situation becomes much simpler at least at the level of one-loop.  
@@ -152,25 +177,28 @@ The assignment $M \mapsto C^\infty(M , \sE(X))$ is a $C^\infty$-module with flat
 Similarly, the space of compactly supported sections $\sE_c(X)$ is a DVS. 
 \end{eg}
 
-Many ordinary categories of topological vector spaces embed inside the category of differentiable vector spaces. 
+Many familiar categories of topological vector spaces embed inside the category of differentiable vector spaces. 
 Consider the category of locally convex topological vector spaces ${\rm LCTVS}$.
 If $V$ is such a vector space, there is a notion of a smooth map $f : U \subset \RR^n \to V$.
-One can show, Proposition B.3.0.6, that this defines a functor ${\rm dif}_t : {\rm LCTVS} \to DVS$ sending $V$ to the $C^\infty$-module $M \mapsto C^\infty(M, V)$.
-If ${\rm BVS} \subset {\rm LCTVS}$ is the subcategory with the same objects but whose morphisms are bounded, this functor restricts to embed ${\rm BVS}$ as a full subcategory ${\rm BVS} \subset {\rm DVS}$. 
+One can show, Proposition B.3.0.6 of \cite{CG1}, that this defines a functor ${\rm dif}_t : {\rm LCTVS} \to {\rm DVS}$ sending $V$ to the $C^\infty$-module $M \mapsto C^\infty(M, V)$.
+If ${\rm BVS} \subset {\rm LCTVS}$ is the subcategory with the same objects but whose morphisms are bounded linear maps, this functor restricts to embed ${\rm BVS}$ as a full subcategory ${\rm BVS} \subset {\rm DVS}$. 
 
 There is a notion of completeness that is useful when discussing tensor products. 
 A topological vector space $V \in {\rm BVS}$ is {\em complete} if every smooth map $c : \RR \to V$ has an anti-derivative \cite{KM97}.
+There is a full subcategory ${\rm CVS} \subset {\rm BVS}$ of complete topological vector spaces.
+The most familiar example of a complete topological vector space will be the smooth sections $\sE(X)$ of a vector bundle $E \to X$.
 
 We let ${\rm Ch}({\rm DVS})$ denote the category of cochain complexes in differentiable vector spaces (we will refer to objects as differentiable vector spaces). 
 It is enriched over the category of differential graded vector spaces in the usual way.
 We say that a map of differentiable cochain complexes $f : V \to W$ is a quasi-isomorphism if and only if for each $M$ the map $f : C^\infty(M, V) \to C^\infty(M,W)$ is a quasi-isomorphism.
 
 \begin{thm}[Appendix B \cite{CG1}]
-The full subcategory ${\rm dif}_c : {\rm CVS} \subset {\rm DVS}$ is closed under limit, countable coproducts, and sequential colimits of closed embeddings. 
+The full subcategory ${\rm dif}_c : {\rm CVS} \subset {\rm DVS}$ is closed under limits, countable coproducts, and sequential colimits of closed embeddings. 
 Furthermore, {\rm CVS} has the structure of a symmetric monoidal category with respect to the completed tensor product $\Hat{\tensor}_{\beta}$. 
 \end{thm}
 
-We will not define the tensor product here, but refer the reader the cited reference for a complete exposition.
+We will not define the tensor product $\Hat{\tensor}_\beta$here, but refer the reader the cited reference for a complete exposition.
+We will recall its key properties below.
 Often times we will write $\tensor$ for $\Hat{\tensor}_\beta$ where there is no potential conflict of notation. 
 The fundamental property of the tensor product that we use is the following.
 Suppose that $E,F$ are vector bundles on manifolds $X,Y$ respectively.
@@ -209,7 +237,7 @@ If $V$ is any differentiable vector space then we define the space of linear fun
 Since ${\rm DVS}$ is enriched over itself this is again a differentiable vector space. 
 Similarly, we can define the polynomial functions of homogeneous degree $n$ to be the space
 \ben
-\Sym^n(V^*) = {\rm Hom}^{multi}_{\rm DVS}(V \times \cdots \times V, C^\infty)_{S_n}
+\Sym^n(V^*) = {\rm Hom}^{multi}_{\rm DVS}(V \times \cdots \times V, \RR)_{S_n}
 \een
 where the hom-space denotes multi-linear maps, and we have taken $S_n$-coinvariants on the right-hand side.
 The algebra of functions on $V$ is defined by
@@ -223,15 +251,17 @@ As an application of Equation (\ref{tensor1}) we have the following identificati
 Let $E$ be a vector bundle on $X$. 
 Then, there is an isomorphism
 \ben
-\sO(\sE(X)) \cong \prod_{n} \sD_c(X^n , (E^!)^{\boxtimes n})
+\sO(\sE(X)) \cong \prod_{n} \sD_c(X^n , (E^!)^{\boxtimes n})_{S_n}
 \een
 where $\sD_c(X^n , (E^!)^{\boxtimes n})$ is the space of compactly supported distributional sections of the vector bundle $(E^!)^{\boxtimes n}$.
+Again, we take $S_n$-coinvariants on the right hand side.
 \end{lem}
 
 \subsubsection{Local functionals}
 
 In our approach, the space of fields will always be equal to the space of smooth sections of a $\ZZ$-graded vector bundle $E\to X$ on a manifold $\sE = \Gamma(X, E)$. 
-The class of functionals $S : \sE \to \RR$ defining the classical theory we consider are required to be {\em local}, or given by the integral of a Lagrangian density. 
+The class of functionals $S : \sE \to \RR$ defining the classical theories we consider are required to be {\em local}, or given by the integral of a Lagrangian density. 
+We define this concept now.
 
 Let $D_X$ denote the sheaf of differential operators on $X$. 
 The $\infty$-jet bundle ${\rm Jet}(E)$ of a vector bundle $E$ is the vector bundle whose fiber over $x \in X$ is the space of formal germs at $x$ of sections of $E$. 
@@ -240,10 +270,10 @@ It is a standard fact that ${\rm Jet}(E)$ is equipped with a flat connection giv
 Above, we have defined the algebra of functions $\sO(\sE(X))$ on the space of sections $\sE(X)$.
 Similarly, let $\sO_{red}(\sE(X)) = \sO(\sE(X)) / \RR$ be the quotient by the constant polynomial functions. 
 The space $\sO_{red}(J(E))$ inherits a natural $D_X$-module structure from $J(E)$. 
-We refer to $\sO_{red}(J(E))$ as the space of {\em Lagrangians} on the space of sections $\sE(X)$. 
+We refer to $\sO_{red}(J(E))$ as the space of {\em Lagrangians} on the space of sections of the vector bundle $E$. 
 Indeed, every element $F \in \sO_{red}(J(E))$ can be expanded as $F = \sum_n F_n$ where each $F_n$ is an element 
 \ben
-F_n \in {\rm Hom}_{C^\infty_X} (J(E)^{\tensor n}, C^\infty_X)_{S_n} \cong {\rm PolyDiff}(\sE^{\tensor n}, C^\infty(X))
+F_n \in {\rm Hom}_{C^\infty_X} (J(E)^{\tensor n}, C^\infty_X)_{S_n} \cong {\rm PolyDiff}(\sE^{\tensor n}, C^\infty(X))_{S_n}
 \een
 where the right-hand side is the space of polydifferential operators.
 The proof of the isomorphism on the right-hand side can be found in Chapter 5 of \cite{CostelloRenormalization}.
@@ -267,11 +297,11 @@ From the expression for functionals in Lemma \ref{lem: fnls} we see that integra
 \be\label{local inclusion}
 i : \oloc(\sE) \hookrightarrow \sO_{red}(\sE_c) .
 \ee
-Often times when we describe a local functional we will write down its value on test compactly supported sections, then check that it is given by integrating a Lagrangian density.
+Often times when we describe a local functional we will write down its value on test compactly supported sections, then check that it is given by integrating a Lagrangian density, which amounts to lifting the functional along $i$. 
 
 \subsubsection{The definition of a classical field theory}
 
-Before giving the definition, we need to recall what the proper notion of a shifted symplectic structure is in the infinite dimensional setting that we work in.
+Before giving the definition, we need to recall what the proper notion of a shifted symplectic structure is in the geometric setting that we work in.
 
 \begin{dfn}\label{dfn: symplectic}
 Let $E$ be a graded vector bundle on $X$.
@@ -282,6 +312,7 @@ E \cong_{\omega} E^![k] = \left({\rm Dens}_X \tensor E^\vee\right)[k]
 that is graded anti-symmetric.
 \end{dfn}
 
+If $\omega^*$ is the formal adjoint of the isomorphism $\omega^* : E \cong E^![k]$, anti-symmetry amounts to the condition $\omega^* = - \omega$. 
 In general, $\omega$ does {\em not} induces a Poisson structure on the space of all functionals $\sO(\sE)$. 
 This is because, as we have seen above, elements of this space are given by distributional sections and hence we cannot pair elements with overlapping support.
 The symplectic structure does, however, induce a Poisson bracket on {\em local} functionals. \footnote{Note that $\oloc(\sE)$ is not a shifted Poisson algebra since there is no natural commutative product.}
@@ -313,16 +344,17 @@ Q I + \frac{1}{2} \{I,I\} = 0 .
 \een
 
 A {\em free theory} is a classical theory with $I = 0$ in the notation above. 
-Thus, a free theory is a simply an elliptic complex equipped with a shifted symplectic pairing. 
+Thus, a free theory is a simply an elliptic complex equipped with a $(-1)$-shifted symplectic pairing where the differential in the elliptic complex is graded skew-self adjoint for the pairing.  
 
-Although the space $\sO(\sE)$ does not have a well-defined shifted Possoin bracket induced from the symplectic pairing, the operator $\{S,-\} : \sO(\sE) \to \sO(\sE)[1]$ {\em is} well-defined. 
+Although the space $\sO(\sE)$ does not have a well-defined shifted Possoin bracket induced from the symplectic pairing, the operator $\{S,-\} : \sO(\sE) \to \sO(\sE)[1]$ {\em is} well-defined since $S$ is local by assumption. 
 By assumption, it is also square zero. 
-The complex of global observables of the theory is defined by
+The complex of global classical observables of the theory is defined by
 \ben
 \Obs^{\cl}_{\sE}(X) = (\sO(\sE(X)), \{S,-\}) .
 \een
 This complex is the general replacement for functions on the derived locus from the beginning of this section.
 Although it does not have a $P_0$-structure, there is a subspace that does. 
+This is sometimes referred to as the {\em BRST} complex in the physics literature.
 
 \subsubsection{A description using $L_\infty$ algebras}
 
@@ -404,6 +436,9 @@ The first Taylor component $\ell_1$ is precisely the operator $Q$ before, so ell
 
 %The functionals we consider are required to be continuous with a certain topology on the topological vector space $\sE$. 
 
+\subsubsection{Moduli problems and Koszul duality}
+
+\brian{add this}
 
 \subsection{Quantum field theory}
 
@@ -435,7 +470,7 @@ This is an operator
 Q^{GF} : \sE \to \sE[-1]
 \een 
 of cohomological degree $-1$.
-We require that $D = [Q,Q^{GF}]$ is a generalized Laplacian in the sense of \cite{??}, in addition to other conditions that can be found in Definition 5.4.0.5 in \cite{CG2}. 
+We require that $D = [Q,Q^{GF}]$ is a generalized Laplacian acting on sections $\sE$ in the sense of \cite{GetzlerDirac}, in addition to other conditions that can be found in Definition 5.4.0.5 in \cite{CG2}. ]
 
 The utility of introducing the gauge fixing operator is that it allows us to introduce the operator $e^{-t D}$ which has a kernel that we denote $K_t \in \Bar{\sE} \tensor \Bar{\sE}$ for any $t \geq 0$. 
 This kernel satisfies the usual conditions of a heat kernel:
@@ -449,9 +484,9 @@ This kernel satisfies the usual conditions of a heat kernel:
 Moreover, when $t > 0$ the operator $e^{-t D}$ is {\em smoothing} so that $K_t \in \sE \tensor \sE \subset \Bar{\sE} \tensor \Bar{\sE}$. 
 
 The point of introducing this heat kernel is that it provides a regularization of $K_0$.
-Indeed, for any $\epsilon, L > 0$ introduce the {\em propagator} 
+Indeed, for any $\epsilon, L \geq 0$ introduce the {\em propagator} 
 \ben
-P_{\epsilon < L} = \int_{t = \epsilon}^L (Q^{GF} \tensor 1) K_t \d t .
+P_{\epsilon < L} = \int_{t = \epsilon}^L (Q^{GF} \tensor 1) K_t \d t \in \Bar{\sE} \tensor \Bar{\sE} .
 \een 
 Then, one immediately checks that
 \ben
@@ -473,7 +508,7 @@ The regularized BV operator allows us to define the following {\em scale $L$ bra
 \ben
 \{I, J\}_L := \Delta_L(IJ) - \Delta_L(I) J - (-1)^{|I|} I \Delta_L(J) .
 \een
-This bracket is defined on all of $\sO(\sE)$. 
+For $L > 0$ this bracket is defined on all of $\sO(\sE)$, just as $\Delta_L$ is.
 
 \subsubsection{Effective BV quantization}
 
@@ -1116,6 +1151,8 @@ One immediately checks that this is a holomorphically translation invariant free
 
 Let's fix a general free holomorphically translation invariant theory as above.
 We now define what a holomorphically translation invariant interacting theory is.
+Recall, translations span a $2d$-dimensional abelian Lie algebra $\CC^{2d} = \CC\left\{\frac{\partial}{\partial z_i}, \frac{\partial}{\partial \zbar_i}\right\}$. 
+The first condition that an interaction be holomorphically translation invariant is that it be translation invariant, so invariant for this Lie algebra.
 
 Let $\Bar{\eta}_i$ denote the operator on Dolbeault forms given by contraction with the antiholomorphic vector field $\frac{\partial}{\partial \zbar_i}$. 
 Note that $\eta_i$ acts on the Dolbeault complex on $\CC^d$ with values in any vector bundle.
@@ -1125,8 +1162,20 @@ Of course, to be holomorphically translation invariant, it is necessary to look 
 The extra bit of holomorphicity we take into account on local functionals $I \in \oloc(\sE_V)$ is the following.
 
 \begin{dfn}
-A {\em holomorphically translation invariant} local functional is a translation invariant local functional $I \in \oloc(\sE_V)^{\CC^d}$ such that $\eta_i I = 0$ for all $1 \leq i \leq d$. 
+A {\em holomorphically translation invariant} local functional is a translation invariant local functional $I \in \oloc(\sE_V)^{\CC^{2d}}$ such that $\eta_i I = 0$ for all $1 \leq i \leq d$. 
 \end{dfn}
+
+There is a succinct way of expressing holomorphic translation invariance as the Lie algebra invariants of a certain super Lie algebra.
+Let the abelian $d$-dimensional Lie alegebra spanned by the odd elements $\{\eta_i\}$ be denoted by $\CC^d[1]$.
+We want to consider deformations that are invariant for the action by the total {\em dg} Lie algebra $\CC^{2d|d} = \CC^{2d} \oplus \CC^d[1]$.
+The differential sends $\eta_i \mapsto \frac{\partial}{\partial \zbar_i}$.
+The space of holomorphically translation invariant local functionals are denoted by $\oloc(\sE_V)^{\CC^{2d|d}}$.
+The enveloping algebra of $\CC^{2d|d}$ is of the form
+\ben
+U(\CC^{2d|d}) = \CC \left[\frac{\partial}{\partial z_i},  \frac{\partial}{\partial \zbar_i}, \eta_i \right]
+\een
+with differential induced from that in $\CC^{2d|d}$. 
+Note that this algebra is quasi-isomorphic to the algebra of constant coefficient holomorphic differential operators $\CC[\partial / \partial z_i] \xto{\simeq} U(\CC^{2d|d})$. 
 
 Any translation invariant local functional is a sum of functionals of the form
 \ben
@@ -1134,9 +1183,103 @@ Any translation invariant local functional is a sum of functionals of the form
 \een
 where $F : V^{\tensor k} \to \CC \cdot \d^d z$ is a linear map and each $D_\alpha$ is an operator in the space 
 \ben
-\CC \left[\d \zbar_i, \eta_i, \frac{\partial}{\partial z_i}, \frac{\partial}{\partial \zbar_i} \right] .
+\CC \left[\d \zbar_i, \frac{\partial}{\partial z_i}, \frac{\partial}{\partial \zbar_i}, \eta_i \right] .
 \een
 The condition $\eta_i I = 0$ means that none of the $D_i$'s have any $\d \zbar_j$-dependence. 
+Using this description we can exhibit the space of holomorphically translation functionals as follows.
+Note that if $E$ is any vector bundle on $\CC^d$ we can consider the fiber at zero of its jet bundle that we denote $J_0 E$. 
+
+\begin{lem}\label{lem: hol trans local}
+Let $V$ be a holomorphic vector bundle on $\CC^d$ and denote $\sE_V = \Omega^{0,*}(X, V)$. 
+Then
+\ben
+\oloc(\sE_V)^{\CC^{2d|d}} \cong \CC \cdot \d^d z \tensor_{U(\CC^{2d|d})} \sO_{red} (J_0 E_V)
+\een
+where $E_V$ is the vector bundle on $\CC^d$ such that $\sE_V = \Gamma(E_V)$.
+\end{lem}
+
+This description of holomorphically translation invariant local functionals allows us to give a convenient description of deformations of holomorphically translation invariant theories. 
+Suppose $(V,Q^{hol},(-,-)_V, I)$ be the data of an interacting holomorphically translation invariant theory on $\CC^d$.
+We have already encountered the space of local functionals $\oloc(\sE_V)$ and the deformation complex of the interacting BV theory is
+\ben
+\Def_{\sE_V} = \left(\oloc(\sE_V), \dbar + Q^{hol} + \{I,-\}\right) .
+\een
+We'd like to characterize deformations that preserve holomorphically translation invariance. 
+
+Recall that in the holomorphic case there is the holomorphic jet bundle $J^{hol}V$.
+The fiber at zero of this jet bundle may be identified as $J^{hol}_0 V = V_0 [[z_1,\ldots,z_d]]$ where the $z_i$'s denote the formal jet coordinate. 
+
+\begin{cor}
+Suppose that $Q^{hol} = 0$.
+Then, there is a quasi-isomorphism
+\ben
+\left(\Def_{\sE_V}\right)^{\CC^{2d|d}} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \sO_{red}(V_0[[z_1,\ldots,z_d]])[d].
+\een
+Equipped with differential $\{I^{hol},-\}$ where $I^{hol}$ only depends on holomorphic differential operators.
+Here, $\partial_{z_i} = \frac{\partial}{\partial z_i}$ and $\CC \cdot \d^d z$ denotes the trivial right $\CC[\partial_{z_i}]$-module. 
+\end{cor}
+
+The local functional $I$ defining the classical holomorphic theory endows $J^{hol}V[-1]$ the structure of a $L_\infty$ algebra in $D_{\CC^d}$-modules. 
+Repackaging the statement using Lie algebraic data we can rewrite the equivalence in the lemma as
+\ben
+\left(\Def_{\sE_V}\right)^{\CC^{2d|d}}\simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \cred^*\left(V_0[[z]][-1])\right) [d].
+\een
+
+\begin{proof}
+
+By Lemma \ref{lem: hol trans local} we have an expression for the holomorphically translation local functionals
+\ben
+\left(\Def_{\sE_V}\right)^{\CC^{2d|d}} = \left(\CC \cdot \d^d z \tensor_{U(\CC^{2d|d})} \sO_{red} (J_0 E_V)[d] , \dbar + \{I,-\}\right) .
+\een
+Since $\sO_{red}(J_0 E_V)$ is flat as a $U(\CC^{2d|d})$-module, it follows that we can replaces the tensor product by the derived tensor product $\tensor^{\LL}$ up to quasi-isomorphism so that
+\ben
+\left(\Def_{\sE_V}\right)^{\CC^{2d|d}} \simeq \left(\CC \cdot \d^d z \tensor^{\LL}_{U(\CC^{2d|d})} \sO_{red} (J_0 E_V) [d] , \dbar + \{I,-\}\right) .
+\een
+Consider the complex $\left(\sO_{red}(J_0 E_V) , \dbar + \{I,-\}\right)$.
+This complex is graded by symmetric degree, and the associated spectral sequence has first page the associated graded of $\sO_{red}(J_0 E_V)$ equipped with the $\dbar$ differential.
+Moreover, at the $E_1$-page, we have the quasi-isomorphism
+\ben
+\left(\sO(J_0 E_V), \dbar\right)= \left(\sO_{red}(V_0 [[z_i, \zbar_i]][\d \zbar_i]), \dbar\right) \simeq \sO_{red}(V_0[[z_i]]) .
+\een
+
+Finally, we have already remarked that there is a quasi-isomorphism of algebras $U(\CC^{2d|d}) \simeq U(\CC^d)$ where the right-hand site is generated by the constant holomorphic vector fields. 
+The proof of the claim follows. 
+
+\end{proof}
+
+%\begin{proof}
+%By Lemma 6.7.1 we know that we can identify the translation invariant deformations as:
+%\ben
+%\left(\Def_{\sE_V}\right)^{\CC^{2d}} \simeq \CC \cdot \d^d z \d^d \zbar \tensor^{\LL}_{\CC[\partial_{z_1}, \partial_{\zbar_i}]} \sO_{red}(J_0 \sE_V).
+%\een
+%Here $J_0 \sE_V$ is the fiber at zero of the bundle of jets of the Dolbeault complex.
+%Hence, we have an identification
+%\ben
+%J_0 \sE_V = V_0[[z_1,\ldots,z_d, \zbar_1,\ldots,z_d]][d \zbar_1,\ldots, \d \zbar_d] .
+%\een
+%Now, consider the filtration on $V$ by cohomological degree, and consider the spectral sequence computing the cohomology of the translation invariant deformations.
+%Since $Q^{hol} = 0$ by assumption, the differential on the first page is simply $\dbar$.
+%By the formal Poincar\'{e} lemma for the Dolbeault operator, we see that the first page is quasi-isomorphic to
+%\ben
+%\CC \cdot \d^d z \d^d \zbar \tensor^{\LL}_{\CC[\partial_{z_1}, \partial_{\zbar_i}]} \sO_{red}(V_0[[z_1,\ldots,z_d]]) .
+%\een
+%
+%Now, consider the resolution of the trivial $\CC[\partial_{\zbar_i}]$-module $\CC \cdot \d^d \zbar$ given by
+%\ben
+%\CC[\d \zbar_i] \tensor \CC[\partial_{\zbar_i}][d]
+%\een
+%where the differential sends $1 \mapsto \d \zbar_i \partial_{\zbar_i}$.  
+%This is a formal version of the Spencer resolution.
+%Taking the $\CC^d[1] = \CC\{\Bar{\eta}_1,\ldots,\Bar{\eta}_d\}$ invariants, we see that the deformation complex becomes
+%\ben
+%\CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_i}, \partial_{\zbar_i}, \Bar{\eta}_i]} \sO_{red}(V_0[[z_1,\ldots,z_d]]) [d].
+%\een
+%The lemma follows once we observe that there is a quasi-isomorphism of algebras 
+%\ben
+%\CC[\partial_{z_i}] \xto{\simeq} \CC[\partial_{z_i}, \partial_{\zbar_i}, \Bar{\eta}_i].
+%\een
+%
+%\end{proof}
 
 %\subsubsection{Interacting holomorphic theories}
 %
@@ -1211,77 +1354,11 @@ The condition $\eta_i I = 0$ means that none of the $D_i$'s have any $\d \zbar_j
 %is compatible with translations. 
 %\end{dfn}
 
-\subsubsection{Holomorphic translation invariant deformations}
 
-In this thesis we will often encounter theories that are holomorphically translation invariant.
-The first step in understanding their quantizations is to describe the deformations. 
-Of course, it is completely natural to look for deformations that are also translation invariant. 
-For holomorpically translation invariant theories, we can provide a general characterization of the deformation complex that we will be necessary at various stages in this work.
-
-Let $(V,Q^{hol},(-,-)_V, I)$ be the data of an interacting holomorphically translation invariant theory on $\CC^d$.
-We have already encountered the space of local functionals $\oloc(\sE_V)$ and the deformation complex of the interacting BV theory is
-\ben
-\Def_{\sE_V} = \left(\oloc(\sE_V), \dbar + Q^{hol} + \{I,-\}\right) .
-\een
-There is an induced action of translations $\CC^{2d}$ on this cochain complex. 
-The condition of translation invariance was not the only one required to have a holomorphically translation invariant local functional.
-We also require that $\eta_i I = 0$.
-The abelian Lie alegebra spanned by the odd elements $\{\eta_i\}$ is $d$-dimensional and we denote it by $\CC^d[1]$.
-We want to consider deformations that are invariant for the action by the total {\em super} Lie algebra $\CC^{2d|d} = \CC^{2d} \oplus \CC^d[1]$.
-We denote by $(\Def_{\sE_V})^{\CC^{2d|d}}$ the space of such deformations.
-
-Recall, in the definition of the local functionals on a graded vector bundle one considers (reduced) functionals on the jet bundle $JV$.
-In the holomorphic case there is also a holomorphic jet bundle $J^{hol}V$.
-The fiber at zero of this jet bundle may be identified as $J^{hol}_0 V = V_0 [[z_1,\ldots,z_d]]$ where the $z_i$'s denote the formal jet coordinate. 
-
-\begin{lem}
-Suppose that $Q^{hol} = 0$.
-Then, there is a quasi-isomorphism
-\ben
-\left(\Def_{\sE_V}\right)^{\CC^{2d|d}} \simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \sO_{red}(V_0[[z_1,\ldots,z_d]])[d].
-\een
-Here, $\partial_{z_i} = \frac{\partial}{\partial z_i}$ and $\CC \cdot \d^d z$ denotes the trivial right $\CC[\partial_{z_i}]$-module. 
-\end{lem}
-
-The local functional $I$ defining the classical holomorphic theory endows $J^{hol}V[-1]$ the structure of a $L_\infty$ algebra in $D_{\CC^d}$-modules. 
-Repackaging the statement using Lie algebraic data we can rewrite the equivalence in the lemma as
-\ben
-\left(\Def_{\sE_V}\right)^{\CC^{2d|d}}\simeq \CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_1}, \ldots, \partial_{z_d}]} \cred^*\left(V_0[[z]][-1])\right) [d].
-\een
-
-\begin{proof}
-By Lemma 6.7.1 we know that we can identify the translation invariant deformations as:
-\ben
-\left(\Def_{\sE_V}\right)^{\CC^{2d}} \simeq \CC \cdot \d^d z \d^d \zbar \tensor^{\LL}_{\CC[\partial_{z_1}, \partial_{\zbar_i}]} \sO_{red}(J_0 \sE_V).
-\een
-Here $J_0 \sE_V$ is the fiber at zero of the bundle of jets of the Dolbeault complex.
-Hence, we have an identification
-\ben
-J_0 \sE_V = V_0[[z_1,\ldots,z_d, \zbar_1,\ldots,z_d]][d \zbar_1,\ldots, \d \zbar_d] .
-\een
-Now, consider the filtration on $V$ by cohomological degree, and consider the spectral sequence computing the cohomology of the translation invariant deformations.
-Since $Q^{hol} = 0$ by assumption, the differential on the first page is simply $\dbar$.
-By the formal Poincar\'{e} lemma for the Dolbeault operator, we see that the first page is quasi-isomorphic to
-\ben
-\CC \cdot \d^d z \d^d \zbar \tensor^{\LL}_{\CC[\partial_{z_1}, \partial_{\zbar_i}]} \sO_{red}(V_0[[z_1,\ldots,z_d]]) .
-\een
-
-Now, consider the resolution of the trivial $\CC[\partial_{\zbar_i}]$-module $\CC \cdot \d^d \zbar$ given by
-\ben
-\CC[\d \zbar_i] \tensor \CC[\partial_{\zbar_i}][d]
-\een
-where the differential sends $1 \mapsto \d \zbar_i \partial_{\zbar_i}$.  
-This is a formal version of the Spencer resolution.
-Taking the $\CC^d[1] = \CC\{\Bar{\eta}_1,\ldots,\Bar{\eta}_d\}$ invariants, we see that the deformation complex becomes
-\ben
-\CC \cdot \d^d z \tensor^{\LL}_{\CC[\partial_{z_i}, \partial_{\zbar_i}, \Bar{\eta}_i]} \sO_{red}(V_0[[z_1,\ldots,z_d]]) [d].
-\een
-The lemma follows once we observe that there is a quasi-isomorphism of algebras 
-\ben
-\CC[\partial_{z_i}] \xto{\simeq} \CC[\partial_{z_i}, \partial_{\zbar_i}, \Bar{\eta}_i].
-\een
-
-\end{proof}
+%In this thesis we will often encounter theories that are holomorphically translation invariant.
+%The first step in understanding their quantizations is to describe the deformations. 
+%Of course, it is completely natural to look for deformations that are also translation invariant. 
+%For holomorpically translation invariant theories, we can provide a general characterization of the deformation complex that we will be necessary at various stages in this work.
 
 
 %Any local Lie algebra on a manifold endows the structure of an $L_\infty$ algebra on its fibers. 
@@ -1506,36 +1583,39 @@ This motivates the following definition.
 \begin{dfn}
 Let $\epsilon , L > 0$. 
 In addition, fix the following data.
-\begin{enumerate}
+\begin{enumerate}[(a)]
 \item An integer $k \geq 1$ that will be the number of vertices of the graph.
 \item For each $\alpha = 1, \ldots, k$ a sequence of integers
 \ben
 \vec{n}^\alpha = (n_1^\alpha, \ldots, n_d^{\alpha}) .
 \een
 We denote by $(\vec{n}) = (n_{i}^j)$ the corresponding $d \times k$ matrix of integers. 
-\item A smooth compactly supported function $\Phi \in C_c^\infty((\CC^d)^k) = C_c^\infty(\CC^{dk})$.
 \end{enumerate}
-The analytic weight associated to the triple $(k, (\vec{n}), \Phi)$ is
+The analytic weight associated to the pair $(k, (\vec{n}))$ is the smooth distribution
+\ben
+W_{\epsilon < L}^{k, (n)} : C_c^\infty((\CC^d)^k) \to \CC,
+\een
+that sends a smooth compactly supported function $\Phi \in C_c^\infty((\CC^d)^k) = C_c^\infty(\CC^{dk})$ to
 \be\label{weight1}
-W_{k,(\vec{n})}^\Phi (\epsilon, L) = \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha) \prod_{\alpha = 1}^k \left(\frac{\partial}{\partial z^i}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^\alpha, z^{\alpha+1}) .
+W_{\epsilon < L}^{k, (n)} (\Phi) = \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha) \prod_{\alpha = 1}^k \left(\frac{\partial}{\partial z^i}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^\alpha, z^{\alpha+1}) .
 \ee
 In the above expression, we use the convention that $z^{k+1} = z^1$. 
 \end{dfn}
 
-We will refer to the collection of data $(k, (\vec{n}), \Phi)$ in the definition as {\em wheel data}.
-The motivation for this is that the weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ is the analytic part of the full weight $W_{\Gamma}(P^V_{\epsilon<L}, I)$ where $\Gamma$ is a wheel with $k$ vertices. 
+We will refer to the collection of data $(k, (\vec{n}))$ in the definition as {\em wheel data}.
+The motivation for this is that the weight $W_{\epsilon < L}^{k, (n)}$ is the analytic part of the full weight $W_{\Gamma}(P^V_{\epsilon<L}, I)$ where $\Gamma$ is a wheel with $k$ vertices. 
 
-We have reduced the proof of Lemma \ref{lem: hol renorm} to showing that the $\epsilon \to 0$ limit of the analytic weight $W_{k,(\vec{n})}^\Phi (\epsilon, L)$ exists for any tripe of wheel data $(k, (\vec{n}), \Phi)$.
+We have reduced the proof of Lemma \ref{lem: hol renorm} to showing that the $\epsilon \to 0$ limit of the analytic weight $W_{\epsilon < L}^{k, (n)}(\Phi)$ exists for any choice of wheel data $(k, (\vec{n}))$.
 To do this, there are two steps. 
 First, we show a vanishing result that says when $k \geq d$ the  weights vanish for purely algebraic reasons. 
 The second part is the most technical aspect of the chapter where we show that for $k > d$ the weights have nice asymptotic behavior as a function of $\epsilon$.
 
-\begin{lem} Let $(k, (\vec{n}), \Phi)$ be a triple of wheel data.
+\begin{lem} Let $(k, (\vec{n}))$ be a pair of wheel data.
 If the number of vertices $k$ satisfies $k \leq d$ then
 \ben
-W_{k, (\vec{n})}^{\Phi}(\epsilon , L) = 0
+W_{\epsilon < L}^{k, (n)}  = 0
 \een
-for any $\epsilon,L > 0$. 
+as a distribution on $\CC^{dk}$ for any $\epsilon,L > 0$. 
 \end{lem}
 \begin{proof}
 In the integral expression for the weight (\ref{weight1}) there is the following factor involving the product over the edges of the propagators:
@@ -1589,19 +1669,19 @@ This completes the proof for $k=d$.
 \end{proof}
 
 \begin{lem}
-Let $(k, (\vec{n}), \Phi)$ be a triple of wheel data such that $k > d$.
+Let $(k, (\vec{n}))$ be a pair of wheel data such that $k > d$.
 Then the $\epsilon \to 0$ limit of the analytic weight
 \ben
-\lim_{\epsilon \to 0} W_{k,(\vec{n})}^\Phi (\epsilon, L) 
+\lim_{\epsilon \to 0} W_{\epsilon < L}^{k, (n)}
 \een
-exists.
+exists as a distribution on $\CC{dk}$. 
 \end{lem}
 
 \begin{proof}
 
 We will bound the absolute value of the weight in Equation (\ref{weight1}) and show that it has a well-defined $\epsilon\to 0$ limit.
 First, consider the change of coordinates as in Equations (\ref{coords1}),(\ref{coords2}).
-The weight can be written as
+The weight applied to the compactly supported function $\Phi$ can be written as
 \be\label{weight2}
 \int_{w^k \in \CC^d} \d^{d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \left(\prod_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^\alpha}P^{an}_{\epsilon < L} (w^\alpha) \right) \sum_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^k} P^{an} \left(\sum_{\alpha=1}^{k-1} w^\alpha\right) .
 \ee
@@ -1667,7 +1747,7 @@ Thus, we can integrate by parts iteratively to obtain the following expression f
 
 Thus, the absolute value of the weight is bounded by 
 \be\label{weight bound1}
-|W_{k,(\vec{n})}^\Phi (\epsilon, L)| \leq C \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w^1,\ldots,w^{k-1}} \prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha \Psi(w^1,\ldots,w^{k-1},w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{t^d_1\cdots t^d_k} \times E(w,t)
+|W_{\epsilon < L}^{k, (n)}(\Phi)| \leq C \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w^1,\ldots,w^{k-1}} \prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha \Psi(w^1,\ldots,w^{k-1},w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{t^d_1\cdots t^d_k} \times E(w,t)
 \ee
 To compute the right hand side we will perform a Gaussian integration with respect to the variables $(w^1,\ldots,w^{k-1})$. 
 To this end, notice that the exponential can be written as
@@ -1694,7 +1774,7 @@ We now perform a Wick expansion for the Gaussian integral in the variables $(w^1
 For a reference similar to the notation used here see the Appendix of \cite{EWY}.
 The inequality in (\ref{weight bound1}) becomes
 \begin{align}\label{weight bound2}
-|W_{k,(\vec{n})}^\Phi (\epsilon, L)| & \leq C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1\cdots t_k)^d}\left(\frac{t_1\cdots t_k}{t_1+\cdots+t_k}\right)^d + O(\epsilon) \\ & = C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1+\cdots+t_k)^d} + O(\epsilon) .
+|W_{\epsilon < L}^{k, (n)}(\Phi)| & \leq C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1\cdots t_k)^d}\left(\frac{t_1\cdots t_k}{t_1+\cdots+t_k}\right)^d + O(\epsilon) \\ & = C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1+\cdots+t_k)^d} + O(\epsilon) .
 \end{align}
 The first term in the Wick expansion is written out explicitly. 
 The $O(\epsilon)$ refers to higher terms in the Wick expansion, which one can show all have order $\epsilon$, so disappear in the $\epsilon \to 0$ limit.
@@ -1736,34 +1816,41 @@ In this section we will study the first step, which is to promote a classical th
 
 As above, $\sE$ will be a holomorphically translation invariant theory on $\CC^d$ and $I$ will be the holomorphic interaction. 
 The linearized BRST operator is of the form $Q = \dbar + Q^{hol}$ where $Q^{hol}$ is a holomorphic differential operator. 
+For this section, it will be most convenient to set $Q^{hol} = 0$. 
 
+Define $I[L] = W(P_{\epsilon<L}, I) \mod \hbar^2$ as in the last section.
 Recall, from Section \ref{sec: qme} that the regularized quantum master equation at scale $L$ is 
 \ben
 Q I [L] + \hbar \Delta_L I[L] + \frac{1}{2} \{I[L], I[L]\}_L = 0 .
 \een
 This is equivalent to the equation $(Q + \hbar \Delta_L) e^{I[L]/\hbar} = 0$. 
-Therefore, the obstruction to satisfying the quantum master equation at scale $L$ is
+Therefore, the obstruction to satisfying the quantum master equation modulo $\hbar^2$ at scale $L$ is
 \ben
 \Theta[L] = \hbar^{-1} \left(Q I [L] + \hbar \Delta_L I[L] + \frac{1}{2} \{I[L], I[L]\}_L \right),
 \een
 or, equivalently $\Theta[L] = e^{-I[L]/\hbar} (Q + \hbar\Delta_L)e^{I[L]/\hbar}$. 
-By definition, $I[L] = \lim_{\epsilon \to 0} W(P_{\epsilon<L}, I)$ which is equivalent to $e^{I[L]/\hbar} = \lim_{\epsilon \to 0} e^{\hbar \partial_{P_{\epsilon<L}}} e^{I / \hbar}$ as a formal series in $\hbar$. 
+By definition, $I[L] = \lim_{\epsilon \to 0} W(P_{\epsilon<L}, I)$ which is equivalent to $e^{I[L]/\hbar} = \lim_{\epsilon \to 0} e^{\hbar \partial_{P_{\epsilon<L}}} e^{I / \hbar} \mod \hbar^2$ as a formal series in $\hbar$. 
 Thus, we can rewrite
 \ben
 (Q + \hbar \Delta_L) e^{I[L]/\hbar} = \lim_{\epsilon \to 0} (Q + \hbar \Delta_L)  \left(e^{\hbar \partial_{P_{\epsilon<L}}} e^{I / \hbar}\right) .
 \een
-Now, the operator $Q$ commutes with $e^{\hbar \partial_{P_{\epsilon < L}}}$ and $\Delta_L e^{\hbar \partial_{P_{\epsilon < L}}} = e^{\hbar \partial_{P_{\epsilon < L}}} \Delta_\epsilon$ acting on functionals. 
+Now, the operator $Q$ commutes with $e^{\hbar \partial_{P_{\epsilon < L}}}$.
+Moreover, $\Delta_L e^{\hbar \partial_{P_{\epsilon < L}}} = e^{\hbar \partial_{P_{\epsilon < L}}} \Delta_\epsilon$ acting on functionals. 
 Thus, 
 \ben
 \lim_{\epsilon \to 0} (Q + \hbar \Delta_L)  \left(e^{\hbar \partial_{P_{\epsilon<L}}} e^{I / \hbar}\right) = \lim_{\epsilon \to 0}  e^{\hbar \partial_{P_{\epsilon < L}}} (Q + \hbar \Delta_\epsilon) e^{I / \hbar} .
 \een
-Since $\Delta_\epsilon$ is a BV operator, we can rewrite the right-hand side as
+Since $\Delta_\epsilon$ is a BV operator for the bracket $\{-,-\}_{\epsilon}$, we can rewrite the right-hand side as
 \ben
-\frac{1}{\hbar} \lim_{\epsilon \to 0} e^{\hbar P_{\epsilon < L}} (Q I + \hbar \Delta_\epsilon I + \{I, I\}_\epsilon) e^{I / \hbar}.
+\frac{1}{\hbar} \lim_{\epsilon \to 0} e^{\hbar P_{\epsilon < L}} (Q I + \hbar \Delta_\epsilon I + \frac{1}{2}\{I, I\}_\epsilon) e^{I / \hbar}.
 \een
 For every $\epsilon > 0$ we have $\Delta_\epsilon I = 0$.
-Moreover, since $I$ is holomorphic $\dbar I = 0$. 
-\brian{finish}
+Moreover, since $I$ is holomorphic (and since $Q^{hol} = 0$) we have $Q I = \dbar I = 0$.
+
+We conclude that the one-loop anomaly is 
+\ben
+\Theta = \lim_{L \to 0} \Theta[L] = \frac{1}{2} \lim_{L \to 0} \lim_{\epsilon \to 0} e^{-I/\hbar} e^{\hbar \partial_{P_{\epsilon < L}}} \left(\{I,I\}_\epsilon e^{I/\hbar}\right) \mod \hbar^2
+\een
 
 The main result of this section is the following.
 
@@ -1776,12 +1863,34 @@ where the sum is over all wheels with $(d+1)$-vertices.
 \end{lem}
 
 \begin{proof}
+
+Like the proof of the non-existence of counterterms for holomorphic theories, the proof of this result will be the consequence of an explicit calculations and bounds of certain Feynman diagrams. 
+
+If we expand the quantity 
+\be\label{graph exp}
+\lim_{\epsilon \to 0} e^{-I/\hbar} e^{\hbar \partial_{P_{\epsilon < L}}} \left(\{I,I\}_\epsilon e^{I/\hbar}\right) \mod \hbar^2
+\ee
+over a sum of graphs, we see that the following two types of weights occur. 
+Note that, by assumption, we are only looking at graphs of genus one which look like wheels with possible trees attach.
+Graphically, the quantity $\{I,I\}_\epsilon$ is the graph of two vertices with a separating edge labeled by the heat kernel $K_\epsilon$.
+Thus, all weights appearing in the expansion of (\ref{graph exp}) attach the propagator $P_{\epsilon<L}$ to all edges besides a single distinguished edge $e$, which is labeled by $K_\epsilon$. 
+The two types of weights are the following:
+\begin{enumerate}
+\item the distinguished edge $e$ is separating;
+\item the distinguished edge $e$ is {\em not} separating, and so appears as the internal edge of the wheel portion of the graph.
+\end{enumerate}
+
+By the classical master equation, we see that the $\epsilon \to 0$ limit of weights of Type (1) go to zero.
+Thus, we must only consider the weights of Type (2). 
+
 The result will follow from two steps.
 \begin{enumerate}
 \item If $\Gamma$ is a wheel with $k < d+1$ vertices, then $ W_\Gamma(P_{\epsilon < L}, K_\epsilon,I)
  = 0$ identically. 
 \item If $\Gamma$ is a wheel with $k > d+1$ vertices, then $\lim_{\epsilon \to 0} W_\Gamma(P_{\epsilon < L}, K_\epsilon,I) =0$.
 \end{enumerate} 
+
+The proof of (1) follows a similar to 
 \end{proof}
 %By the compatibility between the QME and RG flow, it suffices to solve this equation at any scale $L$. 
 %Thus, $(Q + \hbar \Delta_L)e^{I[L] / \hbar} = 0$ if and only if 
@@ -1876,6 +1985,8 @@ This is the fundamental idea of Noether's theorem.
 There is a natural map $\clie^*(\fh) \to \cred^*(\fh)$. 
 An {\em inner} action of $\fh$ on $\sE$ is a lift of an action $I^{\fh}$ to an Maurer-Cartan element of the dg Lie algebra $\clie^*(\fh) \tensor \oloc(\sE)[-1]$. 
 Note that there is, in general, an obstruction to lifting which lives in the cohomology $H^1_{\rm Lie}(\fh)$.  
+Thus, if $\fh$ is semi-simple we see that actions always lift to inner actions.
+We will be more interested in this problem in the case that $\fh$ is a {\em local} Lie algebra, where the obstruction theory is more interesting.
 \end{rmk}
 
 \subsection{Quantum equivariance}
@@ -2044,3 +2155,4 @@ This should not be confused with {\em gauging} a theory by $\sL$, which involves
 
 
 
+\end{document}

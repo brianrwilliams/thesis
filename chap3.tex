@@ -24,6 +24,9 @@
 \maketitle
 \tableofcontents
 
+%\chapter{Local symmetries of holomorphic theories}
+
+
 In this chapter we investigate the symmetries that generic holomorphic quantum field theories possess.
 Our overarching goal is to develop tools for understanding such symmetries that provide a systematic generalization of methods used in chiral conformal field theory on Riemann surfaces, especially for the Kac-Moody and Virasoro vertex algebras.
 We will utilize the tools of BV quantization and factorization algebras that has already heavily percolated this thesis.
@@ -391,8 +394,8 @@ We observe that
 \d_{CE} J_X(\theta) & = 0 .
 \end{align*}
 The first line follows from the fact that $\dbar$ and $\partial$ are graded commutative. 
-The differential $\d_{CE}$ is obtained from the differential in the Chevalley--Eilenberg complex of $\fg$ in a natural way. 
-The second line follows from the fact that the homogenous polynomial $\theta : \fg \times \cdots \times \fg \to \CC$ is closed in the Chevalley--Eilenberg complex for $\fg$.
+The differential $\d_{CE}$ is obtained from the differential in the Chevalley-Eilenberg complex of $\fg$ in a natural way. 
+The second line follows from the fact that the homogenous polynomial $\theta : \fg \times \cdots \times \fg \to \CC$ is closed in the Chevalley-Eilenberg complex for $\fg$.
 \end{proof}
 
 Having the fundamental construction of the cocycle down, we discuss two modest extensions of the construction. 
@@ -438,14 +441,15 @@ Indeed, when $\fg$ is an ordinary Lie algebra we have $H^{d+1} (\Omega^{d+1}_{cl
 %\een
 
 On $X=\CC^d$ the functional $J_{\CC^d}$ gives us the following complete description of a natural subcomplex of local cochains.
-On $\CC^d$ exists a natural action by the group $U(d) \ltimes \CC^d$, where $\CC^d$ acts by translations and $U(d)$ acts in the defining way on $\CC^d$. 
-For each $\theta \in \Sym^{d+1}(\fg^*)^\fg$ the functional $J_{\CC^d}(\theta)$ is invariant for this group.
+On $\CC^d$ exists a natural action by the group $U(d)$, where $U(d)$ acts in the defining way on $\CC^d$.
+Moreover, there since $\sG_{\CC^d}$ is built from the Dolbeault complex on $\CC^d$ there is an action of the dg Lie algebra $\CC^{2d|d}$ controling holomorphic translations, see Section \ref{sec: hol trans}. 
+For each $\theta \in \Sym^{d+1}(\fg^*)^\fg$ the functional $J_{\CC^d}(\theta)$ is invariant for $U(d)$ and $\CC^{2d|d}$.
 In fact, this describes up to quasi-isomorphism all such functionals.
 
 \begin{prop}
-The map $J_{\CC^d} :  \Sym^{d+1}(\fg^*)^\fg [-1] \to \cloc^*(\sG_{\CC^d})$ factors through the subcomplex of local cochains that are invariant for the group $U(d) \ltimes \CC^d$ to define a quasi-isomorphism
+The map $J_{\CC^d} :  \Sym^{d+1}(\fg^*)^\fg [-1] \to \cloc^*(\sG_{\CC^d})$ factors through the subcomplex of local cochains that are holomorphically translation invariant and invariant for the group $U(d)$ to define a quasi-isomorphism
 \ben
-J_{\CC^d} : \Sym^{d+1}(\fg^*)^\fg [-1] \xto{\simeq} \cloc^*(\sG({\CC^d}))^{U(d) \ltimes \CC^d}
+J_{\CC^d} : \Sym^{d+1}(\fg^*)^\fg [-1] \xto{\simeq} \left(\cloc^*(\sG({\CC^d}))^{\CC^{2d|d}}\right)^{U(d)}
 \een
 \end{prop}
 
@@ -476,7 +480,7 @@ We will not explore this type of {\em universal} factorization algebra here, but
 \end{rmk}
 
 
-\section{Local structures of the Kac-Moody factorization algebra}
+\section{Local structures of the Kac-Moody factorization algebra} \label{sec: sphere ops}
 
 The theory of factorization algebras we study here, and whose foundations have been layed out in \cite{CG1}, is largely motivated by the study of chiral algebras due to Beilinson and Drinfeld \cite{BD}.
 Part of their original goal was to develop a geometric counterpart to the algebraic theory of vertex algebras. 
@@ -529,13 +533,13 @@ The degree zero part of $\Omega_b^{0,*}(S^{2d-1})$ is $C^\infty(S^{2d-1})$, so w
 
 The model $A_d$, by definition, has cohomology equal to the cohomology of $\RR \Gamma(\AA^{d \times}, \sO)$. 
 In \cite{FHK} they have studied a class of cocycles associated to elements $\theta \in \Sym^{d+1}(\fg^*)^\fg$ that are algebraic analogs of the local cocycles we introduced in the previous section. 
-The cocycle is of total cohomological degree $+2$ and so determines a central extension of $A_d \tensor \fg$ that we denote $\fg_{d,\theta}$. 
+The cocycle is of total cohomological degree $+2$ and so determines a central extension of $A_d \tensor \fg$ that we denote $\Hat{\fg}_{d,\theta}$. 
 Our first main result is that our ``higher annular algebra" of the Kac-Moody factorization algebra from the discussion above recovers this Lie algebra extension.
 
 \begin{thm}\label{thm sphere alg}
 Let $\sF_{1d}$ be the one-dimensional factorization algebra obtained by the reduction of the Kac-Moody factorization algebra $\UU_\alpha\left(\sG_{\CC^{d} \setminus \{0\}} \right)$ along the sphere $S^{2d-1} \subset \CC^{d} \setminus \{0\}$.
 There is a dense subfactorization algebra $\sF^{lc}_{1d} \subset \sF_{1d}$ that is locally constant. 
-As a one-dimensional locally constant factorization algebra, $\sF^{lc}_{1d}$ is equivalent to the $A_\infty$-algebra $U(\fg_{d,\theta})$ of \cite{FHK}.
+As a one-dimensional locally constant factorization algebra, $\sF^{lc}_{1d}$ is equivalent to the $A_\infty$-algebra $U(\Hat{\fg}_{d,\theta})$ of \cite{FHK}.
 \end{thm}
 
 %\begin{thm}\label{thm sphere alg} The associative algebra $U(\Hat{\fg}_{d,\theta})$ determines a locally constant factorization algebra on the real one-manifold $\RR$ that we denote $U(\Hat{\fg}_{d,\theta})^{fact}$. 
@@ -543,7 +547,7 @@ As a one-dimensional locally constant factorization algebra, $\sF^{lc}_{1d}$ is 
 %\ben
 %\Phi^{S^{2d-1}} : \left(U \Hat{\fg}_{d,\theta} \right)^{fact} \to \rho_*\left(\sF^{\CC^d \setminus \{0\}}_{\fg,\theta} \right)  .
 %\een
-%where the right-hand side is the push-forward of the Kac--Moody factorization algebra on $\CC^{d}\setminus \{0\}$ along the radial projection map.
+%where the right-hand side is the push-forward of the Kac-Moody factorization algebra on $\CC^{d}\setminus \{0\}$ along the radial projection map.
 %\end{thm}
 
 In the final part of this section we specialize to the manifold $X = (\CC \setminus \{0\})^d$. 
@@ -712,7 +716,7 @@ To prove the theorem we will construct a sequence of maps of factorization Lie a
 }
 \een
 The factorization envelope of $\sG_0$ is equivalent to the factorization algebra $U (\Hat{\fg}_{d,\theta})^{fact}$. 
-Moreover, the factorization envelope of $\sG_2$ is the push-forward of of the higher Kac--Moody factorization algebra $\rho_* \UU \sG$. 
+Moreover, the factorization envelope of $\sG_2$ is the push-forward of of the higher Kac-Moody factorization algebra $\rho_* \UU \sG$. 
 Hence, the desired map of factorization algebras is produced by applying the factorization envelope functor to the above composition of factorization Lie algebras. 
 
 First, we introduce the factorization Lie algebra $\sG_0$. 
@@ -882,7 +886,7 @@ In this situation, the enveloping algebra $U^{E^d}$ agrees with the ordinary uni
 When the twisting cocycle defining the Kac-Moody factorization algebra is zero we will see that the $E_d$ algebra coming from the product of polyannuli is equivalent to $U^{E_d} (L^d \fg)$.
 When we turn on a twisting cocycle we will find the $E_d$-enveloping algebra of a central extension of the iterated loop algebra. 
 
-The Kac--Moody factorization algebra on the $d$-fold $(\CC^\times)^d$ determines a real $d$-dimensional factorization algebra by considering the radius in each complex direction. 
+The Kac-Moody factorization algebra on the $d$-fold $(\CC^\times)^d$ determines a real $d$-dimensional factorization algebra by considering the radius in each complex direction. 
 We denote this factorization algebra on $\RR^d$ by $\vec{\rho}_*\left(\sG_{\CC^{\times d}}\right)$. 
 
 To state our result precisely, let $\vec{\rho} : (\CC^\times)^d \to (\RR_{>0})^d$ be the projection $(z_1,\ldots,z_d) \mapsto (|z_1|, \cdots, |z_d|)$. 
@@ -903,13 +907,15 @@ This cocycle determines a shifted Lie algebra extension of the iterated loop alg
 \een
 that appears in the theorem below. 
 
-\begin{thm}
+The following can be proved in exact analogy as the above result for sphere algebras and we omit the proof here.
+
+\begin{prop}
 Fix $\theta \in \Sym^{d+1}(\fg^*)^\fg$ and let $\vec{\rho}_* \UU_\theta \sG_{(\CC^\times)^d}$ be the factorization algebra on $(\RR_{>0})^d$ obtained by reducing the Kac-Moody factorization algebra along the $d$-torus.
 There exists a dense $d$-dimensional subfactorization algebra $\sF^{lc}$ that is locally constant and is equivalent, as $E_d$-algebras, to
 \ben
 U^{E_d} \left( \Hat{L^d \fg}_{\theta} \right) .
 \een
-\end{thm}
+\end{prop}
 
 %\begin{thm} There is a dense injective map of factorization algebras on $\RR^d$: 
 %\ben
@@ -1145,6 +1151,8 @@ It is immediate to see that identifications above are natural with respect to ma
 This completes the proof.
 \end{proof}
 
+\brian{relate to nekrasov}
+
 
 \section{Universal Grothendieck-Riemann-Roch from BV quantization}
 
@@ -1160,7 +1168,7 @@ We will arrive at the result in a way that is local-to-global on spacetime which
 The main them of Costello and Gwilliam's approach to QFT is that the observables of a QFT determine a factorization algebra. 
 We study the associated family of factorization algebras associated to the family of QFT's over the moduli space of $G$-bundles.
 We will recollect a formulation of Noether's theorem for symmetries of a theory in terms of factorization algebras developed in Chapter 11 of \cite{CG2}. 
-The central object in this discussion is a ``local index" which describes how the Kac--Moody factorization algebra acts on the observables of the QFT. 
+The central object in this discussion is a ``local index" which describes how the Kac-Moody factorization algebra acts on the observables of the QFT. 
 Locally on spacetime we see how Noether's theorem provides a {\em free field realization} of the Kac-Moody factorization algebra generalizing that of the Kac-Moody vertex algebra in chiral conformal field theory \cite{FrenkelFree}. 
 
 We now give a brief summary of the results, with a background for the situation we consider.
@@ -1713,20 +1721,21 @@ Recall that the data of an action of a local Lie algebra $\sL$ on a theory $\sE$
 This is a sub dg Lie algebra of $\cred^*(\sL(X)) \tensor \oloc(\sE)[-1]$ where the dependence on the local Lie algebra must also be local.
 
 \begin{eg}
-Consider the $\beta\gamma$ system on a complex manifold $X$ with values in a vector space $W$.  
-The fields $\sE_W$ consist of elements $\gamma \in \Omega^{0,*}(X,W)$ together with their conjugates. 
-The dg Lie algebra $\sT(X)$ acts on the cochain complex $\Omega^{0,*}(X,W)$ via Lie derivative: if $\xi \in \sT(X)$ of degree $k$ and $\gamma \in \Omega^{0,l}(X)$ then $L_\xi \gamma \in \Omega^{0,k+l}(X, W)$ is defined. 
+Consider the $\beta\gamma$ system on a complex manifold $X$ with values in a vector space $V$.  
+We consider this theory extensively in Section \ref{sec: local obs}.
+The fields $\sE_V$ consist of elements $\gamma \in \Omega^{0,*}(X,V)$ together with their conjugates. 
+The dg Lie algebra $\sT(X)$ acts on the cochain complex $\Omega^{0,*}(X,V)$ via Lie derivative: if $\xi \in \sT(X)$ of degree $k$ and $\gamma \in \Omega^{0,l}(X)$ then $L_\xi \gamma \in \Omega^{0,k+l}(X, V)$ is defined. 
 It is immediate to see that this is compatible with the $\dbar$ operator.
 The classical Noether current defining the classical action is
 \ben
-I^{\sT}(\xi, \beta,\gamma) = \int \<\beta, L_\xi \gamma\>_W ,
+I^{\sT}(\xi, \beta,\gamma) = \int \<\beta, L_\xi \gamma\>_V ,
 \een
-where $\<-,-\>$ is, as usual, the pairing between $W$ and its dual.
+where $\<-,-\>$ is, as usual, the pairing between $V$ and its dual.
 This functional defines a Maurer-Cartan element in
 \ben
-I^{\sT} \in {\rm Act}(\sT, \sE_W) [-1] \subset \cred^*(\sT(X)) \tensor \oloc(\sE_W)[-1]
+I^{\sT} \in {\rm Act}(\sT, \sE_V) [-1] \subset \cred^*(\sT(X)) \tensor \oloc(\sE_V)[-1]
 \een
-and hence we have a classical action of $\sT_X$ on $\sE_W$. 
+and hence we have a classical action of $\sT_X$ on $\sE_V$. 
 \end{eg}
 
 There is a variation of this example that plays an important role for us.
@@ -1754,21 +1763,19 @@ Hence, it is a holomorphically covariant theory.
 \subsubsection{Higher central charges}
 
 Just as in the case of the current algebra, we can apply the factorization enveloping algebra to $\sT_X$ to obtain a factorization algebra $\UU (\sT_X)$ on any complex manifold $X$. 
-The interesting deformations of this factorization algebra come from local cocycles on $\sT_X$ which allow us to define the twisted enveloping algebra.
+The interesting deformations of this factorization algebra come from local cocycles on $\sT_X$ which define the twisted enveloping algebras.
 
 \begin{dfn}
 Let $\alpha \in H^1_{loc}(\sT_X)$.
-The {\em Virasoro factorization algebra} on $X$ of central charge $\alpha$ is the twisted factorization enveloping algebra
-$\UU_\alpha(\sT_X)$. 
+The {\em Virasoro factorization algebra} on $X$ of central charge $\alpha$ is the twisted factorization enveloping algebra $\UU_\alpha(\sT_X)$. 
 \end{dfn}
 
 The motivation for the term {\em central charge} will become clear momentarily. 
-
 For a complex manifold of dimension one, we have shown in \cite{BWvir} that $H^*_{loc}(\sT_\Sigma) = \Omega^*(\Sigma) [1]$.
 Thus, on a connected Riemann surface there is a unique, up to scale, local cohomology class of degree one that we normalize by $H^1_{loc}(\sT_\Sigma) = \CC \cdot \omega_{Vir}$.
 This cocycle $\omega_{Vir}$, which we will recall below, is related to the cocycle defining the usual extension of the one-dimensional Witt algebra.  
 Moreover, in \cite{BWvir}, we have shown that locally this twisted factorization envelope recovers the Virasoro vertex algebra.
-Implicit in the statement below is the relationship between one-dimensional holomorphic factorization algebras and vertex algebras that we recalled at the beginning of Section \ref{??}.
+Implicit in the statement below is the relationship between one-dimensional holomorphic factorization algebras and vertex algebras that we recalled at the beginning of Section \ref{sec: sphere ops}.
 
 \begin{thm}[\cite{BWvir}]
 Let $c \in \CC$. 
@@ -1796,6 +1803,8 @@ This is an element
 \fc_\sE \in H^1_{\rm loc}(\sT_X) [[\hbar]] .
 \een
 \end{dfn}
+
+In complex dimension one, this definition agrees with the usual definition of the central charge in chiral conformal field theory.
 
 \subsubsection{Chiral conformal field theory}
 
@@ -1834,22 +1843,35 @@ Define the two-term complex
 \ben
 {\rm Conf}(\Sigma, g_0) = \Gamma(\Sigma, T\Sigma) \oplus C^\infty(\Sigma) \xto{D_{g_0}} \Sym^2(T^*\Sigma) [-1] .
 \een
-The differential is defined by
-\ben
-D_{g_0}(X, f) = L_X g_0 + f g_0 .
-\een
+The differential is defined by $D_{g_0}(X, f) = L_X g_0 + f g_0$.
 The second term encodes the infinitesimal action of the conformal group. 
 The Lie bracket of vector fields combined with the obvious action of vector fields on functions gives the above complex the structure of a local Lie algebra.
 Of course, every Riemannian structure defines a conformal structure, so there is a map of local Lie algebras $\Riem(\Sigma, g_0) \to \Conf(\Sigma, g_0)$. 
 
 Thus, we obtain a composition
-\ben
+\be\label{local Lie seq}
 \sT_\Sigma \to \Riem(\Sigma, g_0) \to \Conf(\Sigma,g_0) .
+\ee
+Every conformal field theory (in perturbation theory around the metric $g_0$) is hence a holomorphically covariant theory in our sense. 
+
+For conformal field theories, the Weyl, or trace, anomaly is the quantity that measures the central charge.
+At the level of the Lie algebra $\Conf(\Sigma, g_0)$ the Weyl anomaly is represented by the local $1$-cocycle 
+\ben
+\phi^{g_0}_{\rm Weyl}(X, f, \alpha) = \int_\Sigma f R_{g_0 + \alpha} {\rm dvol}_{g_0 + \alpha} + \int_{\Sigma} {\rm Jac}(X) R_{g_0 + \alpha} {\rm dvol}_{g_0 + \alpha},
 \een
+where $R_{g_0 + \alpha}$ is the scalar curvature of the metric $g_0 + \alpha$ expanded formally in the variable $\alpha$.
+One immediately checks that $\phi_{\rm Weyl}^{g_0} \in \cloc^*(\Conf(\Sigma, g_0))$ is a cocycle of cohomological degree one.
+Moreover, under the map of local Lie algebras, one checks that $\phi_{\rm Weyl}^{g_0}$ pulls back to the cocycle $\omega_{\rm Vir} \in \cloc^*(\sT_\Sigma)$ defined by
+\ben
+\omega_{\rm Vir}(\xi_1, \xi_2 \d \zbar) = \int_\Sigma {\rm Jac}(\xi_1) \partial({\rm Jac}(\xi_2)) \d \zbar
+\een
+We have already remarked that $\omega_{\rm Vir}$ is the generator of the cohomology $H^1_{\rm loc}(\sT_\Sigma)$ for any Riemann surface.
+Thus, in complex dimension one we see that our definition of central charge agrees with the usual one from CFT.
+We have verified an explicit calculation of the central charge in the BV formalism in Section \ref{??} of \cite{BWvir}.
 
 \subsection{Gelfand-Fuks cohomology}
 
-Our aim is to classify the space of central charges of a holomorphically covariant quantum field theory.
+Our aim is to classify the space of central charges of a holomorphically covariant quantum field theory in any dimension.
 The description we give will be in terms of a certain cohomology of vector fields on the disk, called {\em Gelfand-Fuks} cohomology. 
 In this section we recall some facts about the Lie algebra cohomology of formal vector fields $\W_d$ on the $d$-disk with values in certain non-trivial modules. 
 We refer to Section \ref{sec: gk formal geometry} for the requisite notation for objects living on the formal disk.
@@ -1899,7 +1921,7 @@ If $V$ is spanned by vectors $\{v_i\}$ we will use the shorthand $\CC[v_i]$ for 
 
 \begin{thm}[\cite{GFnontrivial}] \label{thm nontrivial coeff} The bigraded commutative algebra $H^*(\W_d ; \hOmega_d^{\#})$ is isomorphic to the bigraded commutative algebra 
 \ben
-\left. \left(\CC[a_1,\ldots, a_{2d-1}, \tau_1,\ldots,\tau_d]\right) \right/ \left(c_1^{j_1}\cdots c_d^{j_d} \right),
+\left. \left(\CC[a_1,\ldots, a_{2d-1}, \tau_1,\ldots,\tau_d]\right) \right/ \left(\tau_1^{j_1}\cdots \tau_d^{j_d} \right),
 \een
 where the quotient is over all indices $\{j_1,\ldots,j_d\}$ that satisfiy $j_1 + 2j_2 + \cdots + d j_d > d$. 
 Here $a_{2i-1}$ is in bidegree $(2i-1,0)$ and $\tau_j$ is in bidegree $(j,j)$. 
@@ -2015,7 +2037,7 @@ H^k_{\rm loc}(\sT_X) \; \cong \; \bigoplus_{i=0}^{2d} H^i_{dR}(X) \tensor H^{2d 
 \een
 In particular, if the manifold is connected the space of anomalies for holomorphic diffeomorphisms for a theory defined on $X$ is:
 \ben
-H^{1}_{\rm loc}(\sT_X) =  H^{2d+1}_{\rm Lie}(\W_d),
+H^{1}_{\rm loc}(\sT_X) =  H^{2d+1}_{\rm Lie}(\W_d) = H^{2d+2}(BU(d)) ,
 \een
 which is independent of the complex manifold.
 \end{cor}
@@ -2172,11 +2194,11 @@ Similarly, the product is $\Tilde{a}_1 \Tilde{\tau}_1$ is the bilinear functiona
 This is a density precisely when $|\alpha_1|+|\alpha_2| = 1$.
 Thus, $\Tilde{a}_1 \Tilde{\tau}_1$ determines a degree $+1$ density valued cochain on $J \sT_\CC$; in other other words an element of $\cloc^*(\sT_\CC)$ that we write as
 \ben
-\int_\CC \partial_z \alpha_1(z,\zbar)  \partial (\partial_z \alpha_2(z,\zbar)) .
+\int_\CC \partial_z \alpha_1(z,\zbar)  \partial (\partial_z \alpha_2(z,\zbar)),
 \een
-If we integrate by parts, we can put this local functional in the form $\int f \partial^3_z g \d z \d \zbar$. 
-If one restricts this local functional to the annulus and performs the radial integration, we recover the usual formula for the generator of $H^2({\rm Vect}(S^1))$ \brian{citation} defining the central extension of the Virasoro Lie algebra. 
-In fact, in \cite{BWVir} \brian{finish}
+which is the local cocycle we denoted $\omega_{Vir}$ above.
+If we integrate by parts, we can put this local functional in the form $\int f \partial^3_z g \d z \d \zbar$.
+If one restricts this local functional to the annulus and performs the radial integration, we recover the usual formula for the generator of $H^2({\rm Vect}(S^1))$ \brian{citation} defining the central extension of the Virasoro Lie algebra.
 
 
 %\ben
@@ -2260,6 +2282,19 @@ Since it is given by the integral of a some multi-differential operators against
 
 \subsubsection{A comparison to other cocycles}
 
+We have already seen in Section \ref{sec: conformal} that when $d=1$ the unique local cocycle associated to the generator in $H^3(\W_1)$ agrees with the Weyl anomaly in CFT. 
+There has been an extensive effort in both the physics and math community to classify cocycles pertaining to conformal anomalies in any dimension. 
+In real dimensions 4 and 6 see \cite{Bonora, KMM} and for conjectures in higher dimensions see \cite{DeserSchwimmer}. 
+Our results above classify holomorphic versions of these conformal anomalies in arbitrary even dimensions. 
+
+In complex dimensions 2 and 3 the dimension of the space of the degree one local cohomology $H^1_{\rm loc}(\sT_X)$ agrees with dimension of the space of non-equivalent cocycles for the higher conformal anomalies studied in \cite{Bonora, DeserSchwimmer}. 
+Specifically, in complex dimension $2$ (so real dimension $4$) this space is $2$-dimensional corresponding to the characteristic classes $c_1^3, c_1c_2 \in H^6(BU(2))$. 
+In complex dimension $3$ this space is $4$-dimensional corresponding to the classes $c_1^4, c_1^2c_2, c_1c_3, c_2^2$. 
+It would be interesting to directly relate our local cocycles to theirs. 
+
+These references describe two classes of cocycles: Type a and type b-cocycles.
+In any dimension, there is a single type a-cocycle, and the remaining cocycles are of type b.
+Using the isomorphism $H^{2d+1}(\W_d) \cong H^{2d+2}(BU(d))$ we conjecture that the type $a$-cocycle corresponds to the characteristic class $c_1c_{d} \in H^{2d+2}(BU(d))$.
 
 \subsection{The holomorphic anomaly for $\sigma$-models}
 

@@ -13,7 +13,7 @@ In consequence, the curved $\beta\gamma$ system exhibits many features of these 
 In complex dimension two, we will see, in a similar vein, how the holomorphic $\sigma$-model arises as a twist of $\cN = 1$ supersymmetry in four real dimensions. 
 There is a similar relationship in dimension six.
 
-In mathematics, the complex dimension one version of this theory has appeared in a hidden form in the work of Beilinson-Drinfeld and Malikov-Schechtman-Vaintrob \cite{BD,MSV}, and it was subsequently developed by many mathematicians (see \cite{KV,Cheung,Bressler} among much else). The {\em chiral differential operators} (CDOs) on a complex $n$-manifold $X$ are a sheaf of vertex algebras locally resembling a vertex algebra of $n$ free bosons, and the name indicates the analogy with the differential operators, a sheaf of associative algebras on $X$ locally resembling the Weyl algebra for $T^*\CC^n$. Unlike the situation for differential operators, which exist on any manifold $X$, such a sheaf of vertex algebras exists only if $\ch_2(X) = 0$ in $H^2(X, \Omega^2_{cl})$, and each choice of trivialization $\alpha$ of this characteristic class yields a different sheaf $\CDO_{X,\alpha}$. In other words, there is a gerbe of vertex algebras over $X$, \cite{GMS}. The appearance of this topological obstruction (essentially the first Pontryagin class, but non-integrally) was surprising, and even more surprising was that the character of this vertex algebra was the Witten genus of $X$, up to a constant depending only on the dimension of $X$ \cite{BorLib}. These results exhibited the now-familiar rich connections between conformal field theory, geometry, and topology, but arising from a mathematical process rather than a physical argument. 
+In complex dimension one, this theory has appeared in a hidden form in the work of Beilinson-Drinfeld and Malikov-Schechtman-Vaintrob \cite{BD,MSV}, and it was subsequently developed by many mathematicians (see \cite{KV,Cheung,Bressler} among much else). The {\em chiral differential operators} (CDOs) on a complex $n$-manifold $X$ are a sheaf of vertex algebras locally resembling a vertex algebra of $n$ free bosons, and the name indicates the analogy with the differential operators, a sheaf of associative algebras on $X$ locally resembling the Weyl algebra for $T^*\CC^n$. Unlike the situation for differential operators, which exist on any manifold $X$, such a sheaf of vertex algebras exists only if $\ch_2(X) = 0$ in $H^2(X, \Omega^2_{cl})$, and each choice of trivialization $\alpha$ of this characteristic class yields a different sheaf $\CDO_{X,\alpha}$. In other words, there is a gerbe of vertex algebras over $X$, \cite{GMS}. The appearance of this topological obstruction (essentially the first Pontryagin class, but non-integrally) was surprising, and even more surprising was that the character of this vertex algebra was the Witten genus of $X$, up to a constant depending only on the dimension of $X$ \cite{BorLib}. These results exhibited the now-familiar rich connections between conformal field theory, geometry, and topology, but arising from a mathematical process rather than a physical argument. 
 
 Witten \cite{WittenCDO} explained how CDOs on $X$ arise as the perturbative piece of the chiral algebra of the curved $\beta\gamma$ system, by combining standard methods from physics and mathematics. (In elegant lectures on the curved $\beta\gamma$ system \cite{Nek}, with a view toward Berkovit's approach to the superstring, Nekrasov also explains this relationship.  Kapustin \cite{KapCDR} gave a similar treatment of the closely-related chiral de Rham complex.) This approach also gave a different understanding of the surprising connections with topology, in line with anomalies and elliptic genera as seen from physics. 
 Let us emphasize that only the perturbative sector of the theory appears (i.e., one works near the constant maps from $\Sigma$ to $T^*X$, ignoring the nonconstant holomorphic maps); the instanton corrections are more subtle and not captured just by CDOs (see \cite{KapOrlov} for a treatment of the instanton corrections for complex tori).
@@ -33,11 +33,11 @@ The higher dimensional theory of vertex algebras has not been fully developed, b
 
 Let us explain a little about our methods before stating our theorems precisely. 
 The main technical challenge is to encode the nonlinear $\sigma$-model in a way so that the BV formalism of \cite{CostelloRenormalization} applies. 
-In \cite{WG2}, Costello introduces a sophisticated approach by which he recovers the anomalies and the Witten genus as partition function, but it seems difficult to relate CDOs directly to the factorization algebra of observables of his quantization. 
+In \cite{WG2}, Costello introduces a sophisticated approach by which he recovers the anomalies and the Witten genus as partition function, but it seems difficult to relate the local operators (e.g. CDO's in dimension one) directly to the factorization algebra of observables of his quantization. 
 Instead, we use formal geometry {\it \`a la} Gelfand and Kazhdan \cite{GK}, as applied to the Poisson $\sigma$-model by Kontsevich \cite{KonDQ} and Cattaneo-Felder \cite{CF}.
-The basic idea of Gelfand-Kazhdan formal geometry is that every $n$-manifold $X$ looks, very locally, like the formal $n$-disk, and so any representation $V$ of the formal vector fields and formal diffeomorphisms determines a vector bundle $\cV \to X$, by a sophisticated variant of the associated bundle construction. (Every tensor bundle arises in this way, for instance.) In particular, the Gelfand-Kazhdan version of characteristic classes for $V$ live in the Gelfand-Fuks cohomology $H^*_{GF}(\Vect)$ and map to the usual characteristic classes for $\cV$. There is, for instance, a Gelfand-Fuks version of the Witten class for every tensor bundle.
+The basic idea of Gelfand-Kazhdan formal geometry is that every $n$-manifold $X$ looks, very locally, like the formal $n$-disk, and so any representation $\sV$ of the formal vector fields and formal diffeomorphisms determines a vector bundle $\sV \to X$, by a sophisticated variant of the associated bundle construction. (Every tensor bundle arises in this way, for instance.) In particular, the Gelfand-Kazhdan version of characteristic classes for $\sV$ live in the Gelfand-Fuks cohomology $H^*_{\rm Lie}(\Vect)$ and map to the usual characteristic classes for $\sV$. There is, for instance, a Gelfand-Fuks version of the Witten class for every tensor bundle.
 
-Thus, we start with the $\beta\gamma$ system on $\CC^d$ with target the formal $n$-disk $\widehat{D}^n = \rm{Spec}\,\CC[[t_1,\ldots,t_n]]$ and examine whether it quantizes \emph{equivariantly} with respect to the actions of formal vector fields $\Vect$ and formal diffeomorphisms on the formal $n$-disk. (These actions are compatible, so that we have a representation of a Harish-Chandra pair.) We call this theory the \emph{equivariant formal $\beta\gamma$ system of rank $n$}.
+Thus, we start with the $\beta\gamma$ system on $\CC^d$ with target the formal $n$-disk $\widehat{D}^n = \rm{Spec}\,\CC[[t_1,\ldots,t_n]]$ and examine whether it quantizes \emph{equivariantly} with respect to the actions of formal vector fields $\Vect$ and formal diffeomorphisms on the formal $n$-disk.\footnote{In fact, we will see that it is enough to consider formal vector fields along with the finite dimensional Lie group of linear changes of frame $\GL_n$} (These actions are compatible, so that we have a representation of a Harish-Chandra pair.) We call this theory the \emph{equivariant formal $\beta\gamma$ system of rank $n$}.
 
 \begin{thm}
 The $\Vect$-equivariant formal $\beta\gamma$ system on $\CC^d$ of rank $n$ has an anomaly given by a cocycle $\ch_{d+1} (\widehat{D}^n)$ in the Gelfand-Fuks  complex $\clie^*(\Vect ; \widehat{\Omega}^{d+1}_{n,cl})$. 
@@ -58,7 +58,7 @@ The holomorphic $\sigma$-model of maps $\CC^d \to X$ admits a BV quantization if
 \ch_{d+1} (T^{1,0}X) \in H^{d+1}(X ; \Omega^{d+1}_{cl}) \hookrightarrow H^{2d+2}_{dR}(X),
 \een
 vanishes.
-Moreover, for every choice of trivialization of this class this is the unique (up to homotopy) $U(d)$-invariant, holomorphically translation invariant, cotangent quantization of the holomorphic $\sigma$-model. 
+Moreover, for every choice of trivialization of this class there is a unique (up to homotopy) $U(d)$-invariant, holomorphically translation invariant, cotangent quantization of the holomorphic $\sigma$-model. 
 \end{thm}
 
 When $d=1$ we showed in \cite{GGW} how the resulting factorization algebra produced by this result recovers CDO's. 
@@ -66,7 +66,7 @@ Further, when we place the theory on an elliptic curve we recover the Witten gen
 In higher dimensions we provide a detailed analysis of the local operators in this theory that is similar in nature to the operators of a chiral CFT. 
 Indeed, we show how the state space is a natural module for the operators on higher dimensional annuli (neighborhoods of spheres). 
 A full theory of higher dimensional vertex algebras has not been fully developed. 
-It is an interesting question to relate our higher dimensional holomorphic factorization algebras to the more algebro-geometric theory of higher dimensional chiral algebras as in Francis Gaitsgory \cite{FrancisGaitsgory}. 
+It is an interesting question to relate our higher dimensional holomorphic factorization algebras to the more algebro-geometric theory of higher dimensional chiral algebras as in Francis-Gaitsgory \cite{FrancisGaitsgory}. 
 
 %We also show how our construction yields a quantization on source manifolds that have interesting topology. 
 %We focus primarily on the case of Hopf manifolds, which are complex manifolds that are homeomorphic to $S^{2d-1} \times S^1$. 
@@ -87,7 +87,7 @@ In general we get a more sensitive obstruction, which is still satisfied so long
 In this section we review the theory of Gelfand-Kazhdan formal geometry and its use in natural constructions in differential geometry, organized in a manner somewhat different from the standard approaches.
 We emphasize the role of the frame bundle and jet bundles.
 We conclude with a treatment of the Atiyah class, which may be our only novel addition (although unsurprising) to the formalism.
-We refer to our treatment of Harish-Chandra pairs given in Part I of \cite{GGW}.
+We refer to our treatment of Harish-Chandra pairs and Harish-Chandra geometry given in Part I of \cite{GGW}.
 
 We remark that from hereon we will work with complex manifolds and holomorphic vector bundles.
  
@@ -136,7 +136,7 @@ Jac(\phi) = (\partial \phi_i/\partial t_j) \in {\rm Mat}_n(\hO_n)
 \]
 is invertible over $\hO_n$, by a version of the inverse function theorem.
 
-Note that this group is far from being finite-dimensional, so it does not fit immediately into the setting of HC-pairs described above. 
+Note that this group is far from being finite-dimensional, so it does not fit immediately into the setting of Harish-Chandra pairs described above. 
 It is, however, a {\em pro}-Lie group in the following way. 
 As each $\phi \in \Aut_n$ preserves the filtration on $\hO_n$, it induces an automorphism of each partial quotient $\hO_n/\fm_n^k$.
 Let $\Aut_{n,k}$ denote the image of $\Aut_n$ in $\Aut(\hO_n/\fm_n^k)$; this group $\Aut_{n,k}$ is clearly a quotient of $\Aut_n$.
@@ -171,7 +171,7 @@ We record these compatibilities in the following statement.
 \begin{lem} 
 The pair $(\Vect, \GL_n)$ form a Harish-Chandra pair.
 \end{lem}
-\begin{proof} The only thing to check is that the differential of the
+\begin{proof} The only thing to check is that the derivative of the
   action of $\GL_n$ corresponds with the adjoint action of $\fgl_n
   \subset \Vect$ on formal vector fields. This is by construction. 
 \end{proof}
@@ -242,8 +242,9 @@ In the limit $k \to \infty$ we obtain an isomorphism $\Vect \cong T_{(x,[\varphi
 There exists a canonical action of $\Vect$ on $X^{coor}$ by
 holomorphic vector fields, i.e., there is a Lie algebra homomorphism
 \ben
-\theta : \Vect \to \cX^{hol}(X^{coor}) .
+\theta : \Vect \to \cX^{hol}(X^{coor}) ,
 \een
+where $\cX^{hol}(X^{coor})$ is the Lie algebra of holomorphic vector fields.
 Moreover, this action induces the isomorphism $\Vect \cong
 T_{(x,[\phi]_\infty)} X^{coor}$ at each point.
 \end{prop}
@@ -262,12 +263,16 @@ As $\theta$ is a Lie algebra homomorphism, $\omega^{coor}$ satisfies the Maurer-
 Note that the proposition ensures that this connection is universal on all complex manifolds of dimension $n$ 
 and indeed pulls back along local biholomorphisms.
 
+\begin{rmk}
+We can view $\omega^{coor}$ as an element of the full de Rham complex $\omega^{coor} \in \Omega^1(X^{coor} ; \Vect)$ where the Maurer-Cartan equation reads $\d \omega + \frac{1}{2} [\omega^{coor}, \omega^{coor}] = 0$.
+\end{rmk}
+
 \begin{rmk} 
 Both the pair $(\Vect, \Aut)$ and the bundle $X^{coor} \to X$ together
 with $\omega^{coor}$ do not fit in the finite dimensional models for
 Harish-Chandra geometry.
 They are, however, objects in a larger category of pro-Harish-Chandra pairs and pro-Harish-Chandra bundles, respectively. 
-We do not develop this theory here, but it is inherent in the work of
+We do not fully develop this theory here, but it is inherent in the work of
 \cite{BK}.  
 Indeed, by working with well-behaved representations for the pair $(\Vect,\Aut)$, 
 Gelfand, Kazhdan, and others use this universal construction to produce many of the natural constructions in differential geometry.
@@ -356,22 +361,22 @@ where ${\rm W}_n^3 \subset \Vect$ is the subspace of formal vector fields whose 
 In particular, every torsion-free affine connection determines a formal exponential. The familiar case above that produces a formal coordinate from a connection corresponds to choosing the zero vector field. 
 \end{rmk}
 
-%Given a formal exponential $\sigma$ we now construct a formal vector field valued connection one-form $\omega^\sigma \in \Omega^1(\Fr_X; \Vect)$ satisfying the Maurer-Cartan equation. Hence, a $(\Vect,\GL_n)$-structure on $\Fr_X$. 
+%Given a formal exponential $\sigma$ we now construct a formal vector field valued connection one-form $\omega_\sigma \in \Omega^1(\Fr_X; \Vect)$ satisfying the Maurer-Cartan equation. Hence, a $(\Vect,\GL_n)$-structure on $\Fr_X$. 
 %
-%Let $(x, \mathbf{y}) \in \Fr_X$. Define $\omega^\sigma_{(x, \mathbf{y})} : T_{(x, \mathbf{y})} \Fr_X \to \Vect$
+%Let $(x, \mathbf{y}) \in \Fr_X$. Define $\omega_\sigma_{(x, \mathbf{y})} : T_{(x, \mathbf{y})} \Fr_X \to \Vect$
 %as the composition 
 %\ben
 %\xymatrix{
 %T_{(x, \mathbf{y})} \Fr_X \ar[r]^-{D \sigma} & T_{(x, \sigma(\mathbf{y}))} X^{coor} \ar[r]^-{\omega^{coor}} & \Vect .
 %}
 %\een 
-%This defines $\omega^\sigma \in \Omega^1(\Fr_X; \Vect)$. The fact that $\omega^\sigma$ is $\GL_n$-invariant follows from the fact that $D \sigma|_0$ is the identity. 
+%This defines $\omega_\sigma \in \Omega^1(\Fr_X; \Vect)$. The fact that $\omega_\sigma$ is $\GL_n$-invariant follows from the fact that $D \sigma|_0$ is the identity. 
 %
 %\brian{MC equation, gauge equivalence for different choices of splitting}
 
 \begin{dfn}
 A {\em Gelfand-Kazhdan structure} is a complex manifold $X$ of dimension $n$ together with a formal exponential $\sigma$, 
-which makes the frame bundle $\Fr_X$ into a flat $(\Vect,\GL_n)$-bundle with connection one-form $\omega^\sigma$, 
+which makes the frame bundle $\Fr_X$ into a flat $(\Vect,\GL_n)$-bundle with connection one-form $\omega_\sigma$, 
 the pullback of $\omega^{coor}$ along the $\GL_n$-equivariant lift $\tilde{\sigma} : \Fr_X \to X^{coor}$.
 \end{dfn}
 
@@ -381,7 +386,7 @@ There are thus natural holomorphic coordinates $\{z_1,\ldots,z_n\}$ on $U$.
 These coordinates provides a natural choice of a formal exponential. 
 Moreover, with respect to the isomorphism
 \ben
-\Omega^1_{hol}(\Fr_U ; \Vect)^{\GL_n} \cong \Omega^1_{hol}(U ; \Vect),
+\Omega^1_{hol}(\Fr_U ; \Vect)^{\GL_n} \cong \Omega^1_{hol}(U ; \Vect) \cong \sO^{hol}(U) [\d z_i] \tensor \Vect ,
 \een
 we find that the connection 1-form has the form
 \ben
@@ -645,11 +650,11 @@ and the functor $\overline{\desc}((X,\sigma),-)$ is symmetric monoidal.
 As before, we let $\sdesc$ denote the associated local system obtained from $\desc$ by taking horizontal sections. This functor is well-known: it recovers the tensor bundles on $X$.
 
 If $E \to X$ is a holomorphic vector bundle on $X$ we denote by
-$J^{hol}(E)$ the holomorphic $\infty$-jet bundle of $E$. If
-$E_0$ is the fiber of $E$ over a point $x \in X$, then the fiber of
+${\rm Jet}^{hol}(E)$ the holomorphic $\infty$-jet bundle of $E$. If
+$E_x$ is the fiber of $E$ over a point $x \in X$, then the fiber of
 this pro-vector bundle over $x$ can be identified with
 \ben
-J^{hol} (E)|_{x} \cong E_0 \times \CC [[ t_1,\ldots,t_n]] .
+{\rm Jet}^{hol} (E)|_{x} \cong E_x \times \CC [[ t_1,\ldots,t_n]] .
 \een
 This pro-vector bundle has a canonical flat connection.
 
@@ -657,7 +662,7 @@ This pro-vector bundle has a canonical flat connection.
 For $\cV \in \VB_n$ corresponding to the $\GL_n$-representation $V$,
 there is a natural isomorphism of flat pro-vector bundles
 \[
-\desc((X, \sigma),\cV) \cong J^{hol}(\Fr_X
+\desc((X, \sigma),\cV) \cong {\rm Jet}^{hol}(\Fr_X
 \times^{\GL_n} V)
 \]
 In other words, the functor of descent along the frame bundle is
@@ -696,7 +701,7 @@ exact sequence holomorphic vector bundles given by
 0 \to E \tensor T^* X \to J^1(E) \to E \to 0,
 \]
 where $J^1(E)$ the bundle of {\em first-order} jets of $E$
-The {\em Atiyah class} is the element $\At(E) \in {\rm H}^1(X, \Omega^1_X
+The {\em Atiyah class} is the element $\At(E) \in H^1(X, \Omega^1_X
 \tensor \End_{\cO_X} (\cE))$ associated to the extension above. 
 \end{dfn}
 
@@ -743,7 +748,7 @@ where $S_k$ is the $k$th elementary symmetric polynomial, and hence only depends
 This assertion follows from the degeneracy of the Hodge-to-de Rham
 spectral sequence. More generally, the term $(2\pi i)^{-k}
 S_k(\At(E))$ agrees with the image of the $k$th Chern class in the
-Hodge cohomology $H^k(X ; \Omega^k_{hol})$.
+Hodge cohomology $H^k(X ; \Omega^{k,hol})$.
 
 The functoriality of the Atiyah class means that it makes sense not just on a fixed complex manifold, but also on the larger sites $\Hol_n$ and $\GK_n$. 
 We thus immediately obtain from Atiyah the following notion.
@@ -756,7 +761,7 @@ Moreover, we have the following.
 
 \begin{lem}
 The cohomology class of $(2\pi i)^{-k} S_k(\At(V))$ provides a section
-of the sheaf $H^k(X ; \Omega^k_{hol})$. On any compact K\"ahler manifold, it agrees with $c_k(V)$.
+of the sheaf $H^k(X ; \Omega^{k,hol})$. On any compact K\"ahler manifold, it agrees with $c_k(V)$.
 \end{lem}
 desc
 \subsubsection{The formal Atiyah class}
@@ -2081,7 +2086,7 @@ If we identify $t_i^\vee \leftrightarrow \d t_i$, this is the usual definition o
 Let $\partial : \Omega^{k}(B\fg) \to \Omega^{k+1}(B\fg)$ be the de Rham operator for $B\fg$. 
 We use $\partial$ to denote the de Rham differential on $B \fg$. 
 This is because our two main examples of $B \fg$ will be the formal holomorphic disk $\hD^n$ or the formal moduli space associated to any complex manifold $X$. 
-In each of these cases, the differential above is the holomorphic Dolbeualt operator $\partial : \Omega^k_{hol} \to \Omega^{k+1}_{hol}$.
+In each of these cases, the differential above is the holomorphic Dolbeualt operator $\partial : \Omega^{k,hol} \to \Omega^{k+1,hol}$.
 The space of closed $k$-forms is
 \ben
 \hOmega^{k}_{cl}(B \fg) = \left( \Omega^k(B\fg) \xto{\partial} \Omega^{k+1}(B \fg)[-1] \to \cdots \right).
