@@ -13,7 +13,31 @@
 \usetikzlibrary{decorations.pathreplacing}
 \usepackage{pgffor}
 
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\tikzset{
+	% >=stealth', %%  Uncomment for more conventional arrows
+    vector/.style={decorate, decoration={snake}, draw},
+	provector/.style={decorate, decoration={snake,amplitude=2.5pt}, draw},
+	antivector/.style={decorate, decoration={snake,amplitude=-2.5pt}, draw},
+    fermion/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+    fermionbar/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    fermionnoarrow/.style={draw=black},
+    gluon/.style={decorate, draw=black,
+        decoration={coil,amplitude=4pt, segment length=5pt}},
+    scalar/.style={dashed,draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+    scalarbar/.style={dashed,draw=black, postaction={decorate},
+        dwecoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    scalarnoarrow/.style={dashed,draw=black},
+    electron/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+	bigvector/.style={decorate, decoration={snake,amplitude=4pt}, draw},
+}
 
+\usepackage[final]{pdfpages}
 
 \def\Jac{{\rm Jac}}
 \def\Bar{\overline}
@@ -1786,7 +1810,7 @@ The following lemma describes the key properties of the functional $I^{\rm W}$.
 The map $I^{\rm W} : \Vect \to \oloc(\sE_n)[-1]$ sending $X \mapsto I^{\rm W}_X$ is a map of dg Lie algebras.
 Hence, 
 \ben
-I^{\rm W} \in \clie^*(\Vect) \tensor \oloc(\sE_n)[-1]
+I^{\rm W} \in \clie^*(\Vect) \tensor \oloc(\sE_n)
 \een
 satisfies the equivariant classical master equation 
 \be\label{ecmw}
@@ -1843,7 +1867,7 @@ The key aspect of the formalism we will utilize is based on a general result of 
 An elliptic ringed space is a pair $(Y, \sA)$ where $Y$ is a manifold and $\sA$ is a sheaf of commutative dg algebras defined over $\Omega^*_Y$ satisfying some conditions. 
 For a precise definition see Definition ?? of \cite{CostelloHolomorphic}.
 The most important condition for us is that underlying sheaf of cochain complexes is elliptic.
-For us, the elliptic ringed space representing the source of the $\sigma$-model is always of the form
+For us, the elliptic ringed space representing the source of the $\sigma$-model is of the form
 \ben
 Y_{\dbar} = (Y, \Omega^{0,*}_Y) .
 \een
@@ -1875,7 +1899,7 @@ We can summarize this in the following way.
 
 \begin{lem}\label{lem: comparison}
 Let $\fg_n = \CC^n[-1]$.
-Then, the Gelfand-Kazhdan descent $\desc_X(\fg_n)$ has the structure of a curved $L_\infty$ algebra defined over $\Omega^*_X$. 
+Then, the Gelfand-Kazhdan descent $\bdesc_X(\fg_n)$ has the structure of a curved $L_\infty$ algebra defined over $\Omega^*_X$. 
 Moreover, it is equivalent to Costello's $L_\infty$ algebra $\fg_{X_{\dbar}}$.
 \end{lem}
 
@@ -1944,7 +1968,7 @@ Explicitly, the cotangent theory to the moduli problem described by $\Omega^{0,*
 \sE_{Y \to X} = \Omega^{0,*}(Y) \tensor \fg_{X_{\dbar}} [1] \oplus \Omega^{d,*}(Y) \tensor \fg_{X_{\dbar}}^\vee [-2]
 \een
 where $\fg_X^{\vee}$ denotes the $\Omega^*_X$-linear dual.
-The theory is described by some interaction $I_{Y \to X} \in \oloc(\sE_{Y \to X})$.
+The theory is described by a local functional $I_{Y \to X} \in \oloc(\sE_{Y \to X})$.
 Local functionals $\oloc(\sE_{Y\to X})$ are defined similarly to the usual way, such as Equation (\ref{local en}), except the Chevalley-Eilenberg chains $\cred^*(J \sE_{Y \to X})$ is understood to be taken over the dg ring $\Omega^*_X$. 
 
 \begin{dfn}
@@ -1968,9 +1992,9 @@ This proves Proposition \ref{prop: formal to global1}.
 \begin{rmk}
 Note that using $L_\infty$ spaces one can make sense of the $\sigma$-model of maps $(X, \fg)$ where $\fg$ is {\em any} curved $L_\infty$ algebra on $X$. 
 We will denote this theory by $\sE_{Y \to B \fg}$
-\ben
+\be\label{Linftytarget}
 \sE_{Y \to B \fg} =  \Omega^{0,*}(Y) \tensor \fg[1] \oplus \Omega^{d,*}(Y) \tensor \fg^\vee [-2] .
-\een
+\ee
 The classical interaction defining the theory is $I_{Y \to B \fg} \in \oloc(\sE_{Y \to B \fg})$.
 \end{rmk}
 
@@ -1992,7 +2016,7 @@ Thus, $\fg$ is part of an $L_\infty$ space $(X, \fg)$ over $X$ in the terminolog
 We have discussed how these two cases are related.
 Indeed, through Gelfand-Kazhdan descent along a complex manifold we can patch together the case (1) to the situation in (2) where $\fg = \fg_{X_{\dbar}}$, the curved $L_\infty$ algebra encoding the complex structure. 
 
-The theory we are studying is a cotangent theory of the form $T^*[-1] (\Omega^{0,*}(Y, \fg[1]))$. 
+The holomorphic $\sigma$-model with target $B\fg$, see (\ref{Linftytarget}), is a cotangent theory of the form $T^*[-1] (\Omega^{0,*}(Y, \fg[1]))$. 
 In particular, there is an action of the abelian group $\CC^\times_{cot}$ which assigns the base direction a weight of zero and the fiber a weight of $+1$. 
 Thus, if $(\gamma, \beta) \in \Omega^{0,*}(Y, \fg) [1] \oplus \Omega^{d,*}(Y, \fg^\vee)[d-1]$, then an element $\lambda \in \CC^\times_{cot}$ acts by
 \ben
@@ -2010,7 +2034,7 @@ In the case that the theory is free, we have seen that the factorization product
 \cO \star \cO' = e^{-\hbar \partial_P} \left(e^{\hbar \partial_P} \cO \cdot e^{\hbar \partial_P} \cO' \right) .
 \een
 Since the symplectic pairing is $\CC^\times_{cot}$-weight $(-1)$ we observe that the propagator is also $\CC^\times_{cot}$-weight $(+1)$.
-\footnote{This actually requires that we also take the gauge fixing operator to be of $\CC^\times_{cot}$-weight zero, which is the natural thing to do for cotangent theories.}
+\footnote{This actually requires that we also take the gauge fixing operator to be of $\CC^\times_{cot}$-weight zero, which is the natural thing to do for cotangent theories and will be the case for us.}
 For the product to have weight zero we are then forced to take $\hbar$ to have opposite weight to $P$.
 
 The other, related reason, we choose this weight for $\hbar$ is that we would like to require our BV complex to be equivariant for rescaling the fibers as well. 
@@ -2037,14 +2061,14 @@ This amounts to looking just at local functionals of the $\gamma$-field.
 \begin{dfn} 
 The {\em deformation complex for cotangent quantizations} of the holomorphic $\sigma$-model of maps $Y \to B \fg$ is the cochain complex 
 \ben
-\Def^{\rm cot}_{Y \to B\fg} = \left(\oloc(\Omega^{0,*}_Y \tensor \fg), \dbar + \{I_{Y \to B \fg}, -\}\right)
+\Def^{\rm cot}_{Y \to B\fg} = \left(\oloc(\Omega^{0,*}_Y \tensor \fg[1]), \dbar + \{I_{Y \to B \fg}, -\}\right)
 \een
 Here, $I_{Y \to B\fg}$ is the restriction of the interaction defining the classical theory of maps $Y_{\dbar} \to B \fg$.
 \end{dfn}
 
 The right-hand side is simply the local cochains of the local Lie algebra $\Omega^{0,*}_Y \tensor \fg$ on $Y$:
 \ben
-\left(\oloc(\Omega^{0,*}_Y \tensor \fg), \dbar + \{I_{Y \to B \fg}, -\}\right) = \cloc^*(\Omega^{0,*}_Y \tensor \fg) .
+\left(\oloc(\Omega^{0,*}_Y \tensor \fg[1]), \dbar + \{I_{Y \to B \fg}, -\}\right) = \cloc^*(\Omega^{0,*}_Y \tensor \fg) .
 \een
 We defined local cochains $\cloc^*(\sL)$ of a local Lie algebra in Section \ref{sec: equivariant??}.
 
@@ -2054,6 +2078,7 @@ Before doing this, we'd like to restrict ourselves to looking at quantizations p
 We now specialize to the case that the source is $d$-dimensional affine space $Y = \CC^d$.
 On $\CC^d$ there is the natural action of Lie group of translations. 
 This is a real Lie group of real dimension $2d$ whose complexified Lie algebra $\CC^{2d}$ is generated by the constant vector fields $\frac{\partial}{\partial z_i}, \frac{\partial}{\partial \zbar_i}$.
+This Lie algebra clearly acts on the theory of holomorphic maps $\CC^{d} \to B \fg$.
 In fact, this action lifts to an action of the dg Lie algebra
 \ben
 \CC^{2d|d} = \CC^{2d} \oplus \CC^d[1]
@@ -2091,7 +2116,7 @@ In what follows, we will consider deformations that are also invariant for this 
 Before we compute the possible deformations of the holomorphic $\sigma$-model, we describe how certain differential forms on the formal stack $B \fg$ yield local functionals of the holomorphic $\sigma$-model of maps $Y \to B \fg$. 
 Indeed, we will define a map of cochain complexes
 \ben
-J : \Omega^{d+1}_{cl}(B \fg) \to \left(\Def^{\rm cot}_{\CC^d \to B \fg}\right)^{\CC^{2d|d}} .
+J : \Omega^{d+1}_{cl}(B \fg) \to \left(\Def^{\rm cot}_{\CC^d \to B \fg}\right)^{\CC^{2d|d}} \;\;  , \;\; \omega \mapsto J_\omega .
 \een
 Recall, the right-hand side consists of the holomorphically translation invariant deformations.
 Moreover, for each $\omega \in \Omega^{d+1}_{cl}$ the functional $J_\omega$ is $U(d)$-invariant. 
@@ -2122,7 +2147,7 @@ The space of closed $k$-forms is
 
 With the requisite notation set up we are now ready to define the map $J$. 
 For now, let $Y$ be any complex manifold.
-Observe that any function on $B\fg$, $a \in \sO(B \fg)$ can be extended to a $\Omega^{0,*}(Y)$-valued functional
+Observe that any function on $B\fg$, $a \in \sO(B \fg)$ can be extended to a $\Omega^{0,*}(Y)$-valued functional on $\Omega^{0,*}(Y) \tensor \fg[1]$:
 \ben
 a^Y : \Sym\left(\Omega^{0,*}(Y) \tensor \fg [1]\right) \to \Omega^{0,*}(Y) .
 \een
@@ -2144,7 +2169,7 @@ J^k : \Omega^k(B \fg)[k] \to \oloc (\Omega^{0,*}(Y) \tensor \fg[1]) \;\; , \;\; 
 \een
 by the formula
 \ben
-J^k_\omega (\gamma) = \int \<\omega(\gamma), \partial \gamma \cdots \partial \gamma\>_\fg,
+J^k_\omega (\gamma) = \int \<\omega^Y (\gamma), \partial \gamma \cdots \partial \gamma\>_\fg,
 \een
 where $\<-,-\>$ denotes the pairing between $\fg$ and its dual.
 \end{dfn}
@@ -2173,7 +2198,7 @@ Since the middle term is acyclic, it follows that the connecting map (which is d
 Let $d = \dim_\CC Y$.
 The map $J^d$ determines a map of cochain complexes 
 \ben
-J = J^d : \Omega^{d+1}_{cl}(B\fg)[d] \to \Def_{Y \to B \fg} .
+J = J^d : \Omega^{d+1}_{cl}(B\fg)[d] \to \Def^{\rm cot}_{Y \to B \fg} .
 \een
 \end{lem}
 \begin{proof}
@@ -2213,9 +2238,10 @@ J : \Omega^{d+1}_{cl}(B \fg) [d] \to \left(\Def^{\rm cot}_{\CC^d \to B \fg}\righ
 Furthermore, $J$ defines a quasi-isomorphism into the $U(d)$-invariant subcomplex of the right-hand side.
 \end{prop}
 
-To compute the translation invariant deformation complex we will invoke Proposition \brian{hol trans invt def} from Section \brian{ref}.
+\begin{proof}
+To compute the translation invariant deformation complex we will invoke Proposition \ref{cor: hol trans invt def} from Section \ref{sec: hol trans}.
 Note that the deformation complex is simply the (reduced) local cochains on the local Lie algebra $\Omega^{0,*}_{\CC^d} \tensor \fg$. 
-Thus, in the notation of Section \brian{same ref} the bundle $L$ is simply the trivial bundle $\fg$.
+Thus, in the notation of Section \ref{sec: hol trans} the bundle $V$ is simply the trivial bundle $\fg$.
 Thus, we see that the translation invariant deformation complex is quasi-isomorphic to the following cochain complex
 \ben
 \left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^{2d|d}} \; \simeq \; \CC \cdot \d^d z \tensor^{\LL}_{\CC\left[\frac{\partial}{\partial z_i}\right]} \cred^*(\fg[[z_1,\ldots,z_d]])  [d] .
@@ -2231,7 +2257,7 @@ Since $\CC \cdot \d^d z$ is the trivial module, this is precisely the Chevalley-
 \ben
 \left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^d} \; \simeq  \; \clieu_*\left(\CC^d ; \cred^*(\fg[[z_1,\ldots,z_d]]) \d^d z\right) [d] .
 \een
-We will keep $\d^d z$ in the notation since below we are interested in computing the $U(d)$-invariants.
+We will keep $\d^d z$ in the notation since below we are interested in computing the $U(d)$-invariants, and it has non-trivial weight under the action of this group.
 
 To compute the cohomology of this complex, we will first describe the differential explicitly. 
 There are two components to the differential.
@@ -2327,6 +2353,7 @@ We conclude that the $E_2$ page of this spectral sequence is quasi-isomorphic to
 This is precisely a shifted version of the complex we had in (\ref{truncated de rham1}).
 We saw that it was quasi-isomorphic, through the de Rham differential, to $\Omega^{d+1}_{cl}[d]$. 
 This completes the proof.
+\end{proof}
 
 %Consider the full de Rham complex 
 %\ben
@@ -2382,7 +2409,7 @@ J^X : \Omega^{d+1}_{X,cl}[d] \xto{\simeq}  \left(\left(\Def^{\rm cot}_{\CC^d \to
 
 \section{BV quantization of the holomorphic $\sigma$-model}
 
-As we have already discussed, the formalism of BV quantization of any theory consists of two steps: I) renormalization, and II) solving the quantum master equation. 
+As we have already discussed, the formalism of BV quantization of any theory consists of two steps: a) renormalization, and b) solving the quantum master equation. 
 For holomorphic theories, as the one we are studying in this section, we have proved a general result about the one-loop renormalization theory on flat space $\CC^d$. 
 We will leverage this result to turn the problem of quantization to studying solutions of the quantum master equation.
 
@@ -2390,7 +2417,7 @@ The formal $\beta\gamma$ system $\sE_n$ is a free BV theory and hence admits a n
 (See Chapter 6 of \cite{GwThesis} for an extensive development.)  
 To study the general holomorphic $\sigma$-model we want to quantize \emph{equivariantly} with respect to the action of $\Vect$.
 We will find that there is an obstruction to quantizing equivariantly, 
-given by the Gelfand-Fuks Chern class $\ch_{d+1}^{\GF}(\hT_n)$ defined in Section \ref{sec gk cc}. 
+given by the Gelfand-Fuks-Chern class $\ch_{d+1}^{\GF}(\hT_n)$ defined in Section \ref{sec gk cc}. 
 This obstruction is a very local avatar of the anomaly described by Witten and Nekrasov \cite{WittenCDO,Nek} in the complex one-dimensional holomorphic $\sigma$-model.
 We will refer to Chapter \ref{chap1} for notations and terminology of equivariant BV quantization.
 
@@ -2400,6 +2427,8 @@ Then we show how Gelfand-Kazhdan formal geometry intertwines with BV quantizatio
 \subsection{The $\Vect$-equivariant quantization}
 
 In this section we construct the prequantization of the holomorphic $\sigma$-model.
+The technique is based on our general regularization technique for regularization of holomorphic theories spelled out in Section \ref{sec: hol renorm}. 
+We will recall the key points.
 
 \subsubsection{A reminder of the propagator}
 
@@ -2430,7 +2459,7 @@ and normalized so that
 where $\varphi \in \sE$ and $\<-,-\>$ is the $(-1)$-symplectic pairing. 
 Using the standard formula for the heat kernel for the flat Laplacian on $\CC^d$ we have the expression for our heat kernel, including the correct differential form factors
 \ben
-K_t(z,w) = \frac{1}{(4 \pi t)^d} e^{-|z-w|^2/ 4t} \left((\d^d z - \d^d w) \wedge \prod_{i=1}^d (\d \zbar_i - \d \Bar{w}_i) \right)
+K_t(z,w) = \frac{1}{(4 \pi i t)^d} e^{-|z-w|^2/ 4t} \left((\d^d z - \d^d w) \wedge \prod_{i=1}^d (\d \zbar_i - \d \Bar{w}_i) \right)
 \een
 
 The effective propagator is defined for $0 < \epsilon, L$ and given by
@@ -2439,15 +2468,14 @@ P_{\epsilon<L} (z,w) = \int_{t = \epsilon}^L \d t (\dbar^* \tensor 1) K_t(z,w) .
 \een 
 We can compute this propagator directly
 \bestar
-P_{\epsilon}(z,w) & = &  \frac{1}{(4 \pi)^d} \int_{t = \epsilon}^L \d t e^{- |z-w|^2 / 4t} \frac{1}{(4 \pi t)^d} \sum_{j = 1}^d (-1)^{j-1} \frac{\zbar_j - \wbar_j}{4t} (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \d \wbar_i) \\ & = & \frac{1}{(4 \pi)^d} \frac{1}{|z-w|^{2d}} \sum_{j} (-1)^{j-1} (\zbar_j - \wbar_j) (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \wbar_i) \int_{u = |z-w|^2/L}^{|z-w|^2/\epsilon} \d u u^{d-1} e^{-u} .
+P_{\epsilon}(z,w) & = & \int_{t = \epsilon}^L \d t e^{- |z-w|^2 / 4t} \frac{1}{(4 \pi i t)^d} \sum_{j = 1}^d (-1)^{j-1} \frac{\zbar_j - \wbar_j}{4t} (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \d \wbar_i) \\ & = & \frac{1}{(4 \pi)^d} \frac{1}{|z-w|^{2d}} \sum_{j} (-1)^{j-1} (\zbar_j - \wbar_j) (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \wbar_i) \int_{u = |z-w|^2/L}^{|z-w|^2/\epsilon} \d u u^{d-1} e^{-u} .
 \eestar
-In the second line we have made the substitution $u = |z-w|^2 / t$. 
-\brian{work out factors}
-We see that the differential form part above is precisely the Bochner-Martinelli kernel $\omega_{BM} \in \Omega^*(\CC^d \times \CC^d \setminus \Delta)$ 
+In the second line we have made the substitution $u = |z-w|^2 / 4t$. 
+We see that the differential form part above is proportional to the Bochner-Martinelli kernel $\omega_{BM} \in \Omega^*(\CC^d \times \CC^d \setminus \Delta)$ 
 \ben
-\omega_{BM}(z,w) = C_n \frac{1}{|z-w|^{2d}} \sum_{j} (-1)^{j-1} (\zbar_j - \wbar_j) (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \wbar_i) .
+\omega_{BM}(z,w) = C_d \frac{1}{|z-w|^{2d}} \sum_{j} (-1)^{j-1} (\zbar_j - \wbar_j) (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \wbar_i) .
 \een
-
+where $C_d = (d-1)! / (2 \pi i)^d$ is a constant depending only on the dimension $d$.
 A simple corollary of the above calculation is the following fact that we will use later on in Section \ref{sec: local obs}.
 
 \begin{lem} \label{lem: bm}
@@ -2510,7 +2538,7 @@ such that
 \[
 \Theta_{d,n}  = a J^{\rm W}(\ch^{\GF}_{d+1}(\hT_n))
 \]
-for some non-zero number $a$, where $J^{\rm W}$ is the quasi-isomorphism of Equation (\ref{j w map})
+for some non-zero constant $a$, where $J^{\rm W}$ is the quasi-isomorphism of Equation (\ref{j w map})
 and $\ch^{\GF}_{d+1}(\hT_n)$ is the component of the Gelfand-Fuks-Chern character living in~$\clie^{d+1}(\Vect, \GL_n; \hOmega_{n,cl}^{d+1}).$ 
 \end{prop}
 
@@ -2636,12 +2664,58 @@ By the nature of the graph, this functional is of the form
 \Theta_{\Gamma,e} : {\rm W}_n^{\tensor (d+1)} \tensor \Sym(\Omega^{0,*}_c
 \tensor \fg_n [1] ) \to \CC .
 \een
-Given formal vector fields $X_1,\ldots,X_d$, let $\Theta_{\Gamma,e}(X_1,\ldots,X_d)$ denote the associated local functional in~$\oloc(\sE_n)$. 
+Given formal vector fields $X_1,\ldots,X_d$, let $\Theta_{\Gamma,e}(X_0,\ldots,X_d) = \lim_{\epsilon \to 0} \Theta_{\Gamma,e}[L] (X_0,\ldots,X_d)$ denote the associated local functional in~$\oloc(\sE_n)$. 
+In fact, it is a functional only of the $\gamma$ variable.
+We view $\Theta_{\Gamma,e}[L](X_0,\ldots,X_d)$ itself as being the $\epsilon \to 0$ limit of the weight of a graph where the vertices are labeled by the Noether currents $I_{X_0}^{\rm W}, \ldots, I_{X_d}^{\rm W}$ associated to the formal vector fields $X_0,\ldots X_d$.
+The weight is evaluated by inserting the propagator on all internal edges besides the edge labeled $e$, where $K_\epsilon$ is inserted.
+See Figure \ref{fig:chernwheel}. 
 
 Due to linear dependence on the vector fields, it suffices to assume that $X_\alpha$ are of the form $X_\alpha = a^{i}_\alpha \partial_i$, for $\alpha = 1,\ldots, d+1$, where the coefficient $a^i_\alpha \in \hO_n$ is homogeneous of degrees $k_\alpha$.
 In this case, up to permutations of vertices there is only one graph $\Gamma$ whose functional $\Theta_{\Gamma,e}(X_1,\ldots,X_{d+1})$ is nonzero.
 Choose an ordering of the vertices $v_1,\ldots,v_{d+1}$. 
-The vertex $v_\alpha$ has valency $k_\alpha + 1$, namely \brian{picture}
+The vertex $v_\alpha$ has valency $k_\alpha + 1$ and so each vertex has $k_\alpha - 1$ incoming edges, see Figure \ref{fig:chernwheel}.
+
+\begin{figure}
+\begin{tikzpicture}[line width=.2mm, scale=1.5]
+
+%\pgfmathsetmacro{\ex}{0}
+%\pgfmathsetmacro{\ey}{1}
+
+%\draw (\ex,\ey) ++(45:.8) arc (45:-45:.8);
+
+		\draw[fill=black] (0,0) circle (1cm);
+		%\draw[fill=red] (0,0) arc (145:215:1);
+		\draw[fill=white] (0,0) circle (0.99cm);
+		\draw[line width=0.35mm,red] ++(145:0.995) arc (145:215:0.995);
+		%\draw[red] (0,0) arc (30:60:3);
+
+		\draw[fermion](140:2) -- (145:1);
+		\draw[fermion](145:2) -- (145:1);
+		\draw[fermion](150:2) -- (145:1);
+			\node at (145:0.85) {$v_0$};
+		\node at (90:1.15) {$\cdots$};
+		%\node at (90:0.8) {$P_{\epsilon<L}$};
+		\draw[fermion](210:2) -- (215:1cm);
+		\draw[fermion](220:2) -- (215:1cm);
+			\node at (215:0.85) {$v_{d}$};
+		\node[red] at (180:0.8) {$e$};
+		\draw[fermion](27.5:2) -- (35:1);
+		\draw[fermion](32.5:2) -- (35:1);
+		\draw[fermion](37.5:2) -- (35:1);
+		\draw[fermion](42.5:2) -- (35:1);
+			\node at (35:0.85) {$v_{\alpha}$};
+		\draw[fermion](-35:2) -- (-35:1cm);
+			\node at (-35:0.85) {$v_{\beta}$};
+		\node at (0:1.15) {$\vdots$};
+		%\node at (0:0.8) {$P_{\epsilon<L}$};
+		\node at (270:1.15) {$\cdots$};
+		%\node at (270:0.8) {$P_{\epsilon<L}$};
+	    	\clip (0,0) circle (1cm);
+\end{tikzpicture}
+\caption{The $(d+1)$-vertex wheel contributing to the anomaly. The vertices are given by $v_0,\ldots,v_d$ which are labeled by a formal vector field $X_\alpha$. On the black internal edges are we place the propagator $P_{\epsilon < L}$. On the red edge labeled by $e$ we place the heat kernel $K_\epsilon$.}
+\label{fig:chernwheel}
+\end{figure}
+
 %\begin{center}
 %\begin{tikzpicture}[decoration={markings,mark=at position 1.7cm with {\arrow[black,line width=.4mm]{stealth}}}];
 %
@@ -2691,8 +2765,8 @@ as it will agree on the nose with~$J^{\rm W}(\ch_{d+1}^{\GF}(\hT_n))$.
 %and write $\Omega_c^{0,*}(\CC) = \Omega_c^{0,0}(\CC) [\d\zbar]$. 
 
 \begin{lem}
-For $\alpha=0,\ldots,d$, let $X_\alpha = a^i_\alpha \partial_i \in \Vect$ be homogeneous of degree $k^\alpha$. 
-Let $\Gamma$ be the $(d+1)$-vertex wheel with ordered vertices of valencies $k^0+1, \ldots, k^{d} + 1$, and mark one internal edge as distinguished.
+For $\alpha=0,\ldots,d$, let $X_\alpha = a^i_\alpha \partial_i \in \Vect$ be homogeneous of degree $k_\alpha$. 
+Let $\Gamma$ be the $(d+1)$-vertex wheel with ordered vertices of valencies $k_0+1, \ldots, k_{d} + 1$, and mark one internal edge as distinguished.
 Then, we have an identification $\Theta_{\Gamma,e}(X_0,\ldots,X_{d}) = a J^{\rm W}_{\ch_{d+1}^\GF (\hT_n)}(X_1,\ldots,X_{d+1})$ for some nonzero number $a$. 
 \end{lem}
  
@@ -2729,13 +2803,13 @@ a : \Sym(\Omega^{0,*}(\CC^d) \tensor \CC^n) \to \Omega^{0,*}(\CC^d) \;\; , \;\; 
 Given a formal vector field $X$, we will use $\Jac(X)(\gamma)$ to denote the matrix of Dolbeualt forms by applying this to each entry in the Jacobian.
 
 Ignoring the analytic factors momentarily, 
-we observe that in computing the weight of the graph $\Gamma$,
+we observe that in computing the weight of the graph $\Gamma$, see Figure \ref{fig:chernwheel},
 we contract $\beta$ legs with $\gamma$ legs.
 In our case, the $X_\alpha$-vertex contributes a single $\beta$ leg,
-which then contracts with the $k^\alpha$ different $\gamma$ legs from the $Y$-vertex.
+which then contracts with the $k_\alpha$ different $\gamma$ legs from the $Y$-vertex.
 This contributes a factor of the Jacobian ${\rm Jac}(X_\alpha)(\gamma)$ at each vertex.
 Since we are computing a wheel, the total contribution is the trace of the product of the Jacobians. 
-Putting in the analytic factors we see that the weight of the diagram is of the form
+Putting in the analytic factors in we see that the weight of the weight of the diagram is of the form
 \begin{align*}
 \Theta_{\Gamma,e}(X_\alpha) (\gamma) = \lim_{\epsilon \to 0} & \int_{(z^1,\ldots, z^{d+1}) \in (\CC^d)^{d+1}} \left(\prod_{\alpha=0}^d \d^d z^\alpha\right) \Tr\left(\Jac(X_0) (\gamma)(z_0) \cdots \Jac(X_{d+1})(\gamma)(z_{d+1})\right) \times \\
 &  K^{an}_\epsilon(z_0,z_d) \prod_{\alpha = 1}^{d} P_{\epsilon < L}^{an}(z^{\alpha-1}, z^{\alpha}) 
@@ -2883,9 +2957,10 @@ The Gelfand-Fuks-Chern character determines an extension of $L_\infty$ algebras
 \een
 We have already seen that there is a map of cochain complexes
 \ben
-J : \hOmega^{d+1}_{n,cl}[d] \to \Def_{n} = \clie^*(\Vect) \tensor \Def_n .
+J : \hOmega^{d+1}_{n,cl}[d] \to \Def_n .
 \een
-We will view $J$ as an element $\Tilde{J} \in \clie^1(\hOmega^{d+1}_{n,cl} \tensor \Def_n \subset \clie^*(\TVectd) \tensor \Def_n$.
+This map $J$ determines an element in the vector space $\Tilde{J} \in \left(\hOmega^{d+1}_{n,cl} [d]\right)^\vee \tensor \Def_n \subset \clie^*(\TVectd ; \Def_n)$.
+Further, using homotopy RG flow we will see below how $\Tilde{J}$ determines a family of functionals $\{\Tilde{J}[L]\}$ for $L > 0$.
 
 Our main result of this section is the following. 
 
@@ -3134,7 +3209,7 @@ For example, in the $d=1$ $\beta\gamma$ system, there are two primary operators:
 where $C_w$ is any closed contour surrounding $w$. 
 (The indices $0,-1$ are to indicate the conformal weight.)
 Consider the operators placed at $w=0$.
-We notice that each of these operators are annihilated by the positive half of the Virasoro $L_n = z^{n+1} \partial_z$, $n \geq 0$.
+We notice that each of these operators are annihilated by the positive half of the Virasoro generated by $L_n = z^{n+1} \partial_z$, $n \geq 0$.
 The descendants are obtained by iteratively applying the raising operator $L_{-1} = \partial_z$, which in this case is just the infinitesimal translations. 
 Indeed, for each $n \geq 0$ we obtain
 \begin{align*}
@@ -3555,7 +3630,23 @@ We consider the factorization product structure map for $\Obs^{\q}_{V}$ correspo
 \be\label{fact product 1}
 N_{r_1, \epsilon_1} \sqcup N_{r_2, \epsilon_2} \hookrightarrow N_{r, \epsilon}  ,
 \ee
-shown schematically in Figure \brian{figure}. 
+shown schematically in Figure \ref{fig:nesting}. 
+
+
+%\begin{figure}
+%\includepdf[pages=-,pagecommand={},width=\textwidth]{nesting.pdf}
+%\end{figure}
+
+
+\begin{figure}[h]
+   \centering
+   \begin{tabular}{@{}c@{\hspace{.5cm}}c@{}}
+       \includegraphics[page=1,width=.45\textwidth]{nesting.pdf} & 
+   \end{tabular}
+ \caption{Nesting spherical shells. The blue and green shaded regions represent the spherical shells $N_{r_1,\epsilon_1}$ and $N_{r_2,\epsilon_2}$, respectively. The black spheres denote the inner and outer boundaries of the closure of the neighborhood $N_{r,\epsilon}$.}
+ \label{fig:nesting}
+\end{figure}
+
 The factorization structure map for this embedding of disjoint open sets is of the form 
 \be\label{fact product 2}
 \Obs^{\q}_{V}(N_{r_1, \epsilon_1}) \tensor \Obs^{\q}_{V}(N_{r_2, \epsilon_2}) \to \Obs^{\q}_{V}(N_{r,\epsilon}) .
@@ -4143,10 +4234,32 @@ The character of the symmetric algebra $\Sym(V^*_{n_1,n_2})$ is equal to $(1-u^{
 The formula for character in the statement of the proposition follows from the fact that the character of a tensor product is the product of the characters. 
 \end{proof}
 
-We have seen in Proposition \brian{ref} that when the complex dimension $d = 2$, the free $\beta\gamma$ system is equivalent to the holomorphic twist of the free $\cN=1$ chiral multiplet in four dimensions. 
-In \cite{Closset1} Equation 5.58 the index for the $\cN=1$ chiral multiplet is computed, and our answer is easily seen to agree with theirs. 
-We conclude that in this instance that under the holomorphic twist the superconformal index was sent to the character of the local observables of the holomorphic theory. 
-We will see \brian{ref} that this is a general fact about superconformal indices.
+Our expression for the character of the local operators of the $\beta\gamma$ system on $\CC^2$ agrees with the partition function of the $\cN = 1$ supersymmetric chiral multiplet on the manifold $S^3 \times S^1$, computed in \cite{Closset1}.
+There is the following mathematical explanation for this.
+The free $\beta\gamma$ system on $\CC^2$ is equivalent to the holomorphic twist of the free $\cN=1$ chiral multiplet in four dimensions. 
+We will prove this fact below in a subsequent publication.
+Recall that the data of a twist of a supersymmetric theory, as explained in \cite{CostelloHolomorphic} is that of a supercharge $Q$ that satisfies $Q^2 = 0$. 
+
+\begin{prop}\label{prop: twist}
+Consider the $\cN = 1$ chiral multiplet on $\RR^4$.
+There is a unique (up to rotation) nontrivial $SU(2)$-invariant supercharge $Q$ satisfying $Q^2 = 0$. 
+The twist of the $\cN=1$ chiral multiplet with respect to $Q$ is equivalent to the free $\beta\gamma$ system on $\CC^2$.
+If one turns on a $\CC^\times$-invariant superpotential $V$, the twist is equivalent to the holomorphic $\sigma$-model with target the critical locus of $V$.
+\end{prop}
+
+\begin{rmk}
+One should compare this to the standard situation for two-dimensional supersymmetric $\sigma$-models.
+The two-dimensional $\cN = (2,0)$ theory admits a unique nontrivial holomorphic twist which is equivalent to the curved $\beta\gamma$ system on Riemann surfaces. 
+There are many verifications of this in the physics literature, see \cite{WittenCDO} for the original discussion. 
+For a mathematical proof, see the forthcoming paper \cite{GSW}.\footnote{In fact, Proposition \ref{prop: twist} implies this.}
+It is the $\cN = (2,2)$ $\sigma$-model that admits two further topological twists, these are the $A$ and $B$-models.
+\end{rmk}
+
+The supersymmetric partition function of the $\cN=1$ is closed for the supercharge $Q$, thus one expects it to survive under the holomorphic twist.
+This is, indeed, exactly what we find.
+In \cite{Closset1} Equation 5.58 the partition function for the $\cN=1$ chiral multiplet on $S^3 \times S^1$ is computed, and our answer of the local character of the holomorphic twist is easily seen to agree with theirs. 
+We conclude that in this instance that under the holomorphic twist the supersymmetric partition function on $S^3 \times S^1$ was sent to the character of the local observables of the holomorphic theory. 
+In future work our goal is to show that this is a general phenomena of superconformal indices.
 
 Without much more difficulty, one can obtain the formula for the character of the holomorphic $\sigma$-model of maps $\CC^d \to V$ for any $d$.
 
@@ -4157,6 +4270,11 @@ Without much more difficulty, one can obtain the formula for the character of th
 \end{prop}
 
 %\brian{Do general case. Relate to elliptic gamma functions. Relate to Witten index, which is the parition function on $S^3 \times S^1$.}
+
+\begin{rmk}
+The holomorphic twist of the $\cN=(1,0)$ hypermultiplet in real six dimensions is equivalent to the $\beta\gamma$ system on $\CC^3$. 
+It would be interesting to compare the calculation of the partition function on $S^5 \times S^1$ to our formula for the local character above.
+\end{rmk}
 
 
 \end{document}
