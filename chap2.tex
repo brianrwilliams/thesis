@@ -1,56 +1,53 @@
-\documentclass[10pt]{amsart}
+%\documentclass[10pt]{amsart}
+%
+%\usepackage{macros,slashed}
+%
+%\linespread{1.25}
+%
+%\usepackage{tikz,tikz-cd}
+%\usetikzlibrary{arrows,shapes}
+%\usetikzlibrary{trees}
+%\usetikzlibrary{matrix,arrows}
+%\usetikzlibrary{positioning}
+%\usetikzlibrary{calc,through}
+%\usetikzlibrary{decorations.pathreplacing}
+%\usepackage{pgffor}
+%
+%\usetikzlibrary{decorations.pathmorphing}
+%\usetikzlibrary{decorations.markings}
+%\tikzset{
+%	% >=stealth', %%  Uncomment for more conventional arrows
+%    vector/.style={decorate, decoration={snake}, draw},
+%	provector/.style={decorate, decoration={snake,amplitude=2.5pt}, draw},
+%	antivector/.style={decorate, decoration={snake,amplitude=-2.5pt}, draw},
+%    fermion/.style={draw=black, postaction={decorate},
+%        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+%    fermionbar/.style={draw=black, postaction={decorate},
+%        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+%    fermionnoarrow/.style={draw=black},
+%    gluon/.style={decorate, draw=black,
+%        decoration={coil,amplitude=4pt, segment length=5pt}},
+%    scalar/.style={dashed,draw=black, postaction={decorate},
+%        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+%    scalarbar/.style={dashed,draw=black, postaction={decorate},
+%        dwecoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+%    scalarnoarrow/.style={dashed,draw=black},
+%    electron/.style={draw=black, postaction={decorate},
+%        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+%	bigvector/.style={decorate, decoration={snake,amplitude=4pt}, draw},
+%}
+%
+%\usepackage[final]{pdfpages}
+%
+%\title{The higher dimensional holomorphic $\sigma$-model}
+%
+%\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+%
+%\begin{document}
+%\maketitle
+%\tableofcontents
 
-\usepackage{macros,slashed}
-
-\linespread{1.25}
-
-\usepackage{tikz,tikz-cd}
-\usetikzlibrary{arrows,shapes}
-\usetikzlibrary{trees}
-\usetikzlibrary{matrix,arrows}
-\usetikzlibrary{positioning}
-\usetikzlibrary{calc,through}
-\usetikzlibrary{decorations.pathreplacing}
-\usepackage{pgffor}
-
-\usetikzlibrary{decorations.pathmorphing}
-\usetikzlibrary{decorations.markings}
-\tikzset{
-	% >=stealth', %%  Uncomment for more conventional arrows
-    vector/.style={decorate, decoration={snake}, draw},
-	provector/.style={decorate, decoration={snake,amplitude=2.5pt}, draw},
-	antivector/.style={decorate, decoration={snake,amplitude=-2.5pt}, draw},
-    fermion/.style={draw=black, postaction={decorate},
-        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
-    fermionbar/.style={draw=black, postaction={decorate},
-        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
-    fermionnoarrow/.style={draw=black},
-    gluon/.style={decorate, draw=black,
-        decoration={coil,amplitude=4pt, segment length=5pt}},
-    scalar/.style={dashed,draw=black, postaction={decorate},
-        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
-    scalarbar/.style={dashed,draw=black, postaction={decorate},
-        dwecoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
-    scalarnoarrow/.style={dashed,draw=black},
-    electron/.style={draw=black, postaction={decorate},
-        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
-	bigvector/.style={decorate, decoration={snake,amplitude=4pt}, draw},
-}
-
-\usepackage[final]{pdfpages}
-
-\def\Jac{{\rm Jac}}
-\def\Bar{\overline}
-
-\title{The higher dimensional holomorphic $\sigma$-model}
-
-\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
-
-\begin{document}
-\maketitle
-\tableofcontents
-
-%\chapter{The holomorphic $\sigma$-model}
+\chapter{The holomorphic $\sigma$-model}\label{chap: holsig}
 
 This chapter contains a detailed analysis of one of the most fundamental holomorphic field theories: the holomorphic $\sigma$-model.
 This theory is appealing from both the perspective of mathematics and physics.
@@ -59,11 +56,13 @@ Thus, from a purely mathematical perspective, it is a compelling example to stud
 because the classical theory naturally involves complex geometry and so must the quantization, although the meaning is less familiar. 
 
 From a physical perspective, this class of theories is intimately related to supersymmetric field theories in various dimensions.
-In complex dimension one this theory is known as the curved $\beta\gamma$ system.
-It arises naturally as a close cousin of more central theories: it is a half-twist of the $\cN = (0,2)$-supersymmetric $\sigma$-model \cite{WittenCDO}, and it is also the chiral part of the infinite volume limit of the usual (non-supersymmetric) $\sigma$-model. 
-In consequence, the curved $\beta\gamma$ system exhibits many features of these theories while enjoying the flavor of complex geometry, rather than super- or Riemannian geometry.
+The most familiar supersymmetric $\sigma$-model is the two-dimensional $\cN=(2,2)$ theory which admits two topological twists, the $A$ and $B$-twists.
+In two dimensions, the theory we consider arises naturally as a close cousin: it is a half-twist of the $\cN = (0,2)$, see for instance \cite{WittenCDO}.
+The $\cN = (0,2)$ does {\em not} admit a twist that is topological, but does twist to a complex one-dimensional holomorphic theory more commonly referred to as the curved $\beta\gamma$ system.
 In complex dimension two, we will see, in a similar vein, how the holomorphic $\sigma$-model arises as a twist of $\cN = 1$ supersymmetry in four real dimensions. 
-There is a similar relationship in dimension six.
+There is a similar result in dimension six.
+In a different direction, we show in \cite{GGW} that the holomoprhic $\sigma$-model is the chiral sector of the infinite volume limit of the usual (non-supersymmetric) $\sigma$-model. 
+%In consequence, the curved $\beta\gamma$ system exhibits many features of these theories while enjoying the flavor of complex geometry, rather than super- or Riemannian geometry.
 
 In complex dimension one, this theory has appeared in a hidden form in the work of Beilinson-Drinfeld and Malikov-Schechtman-Vaintrob \cite{BD,MSV}, and it was subsequently developed by many mathematicians (see \cite{KV,Cheung,Bressler} among much else). The {\em chiral differential operators} (CDOs) on a complex $n$-manifold $X$ are a sheaf of vertex algebras locally resembling a vertex algebra of $n$ free bosons, and the name indicates the analogy with the differential operators, a sheaf of associative algebras on $X$ locally resembling the Weyl algebra for $T^*\CC^n$. Unlike the situation for differential operators, which exist on any manifold $X$, such a sheaf of vertex algebras exists only if $\ch_2(X) = 0$ in $H^2(X, \Omega^2_{cl})$, and each choice of trivialization $\alpha$ of this characteristic class yields a different sheaf $\CDO_{X,\alpha}$. In other words, there is a gerbe of vertex algebras over $X$, \cite{GMS}. The appearance of this topological obstruction (essentially the first Pontryagin class, but non-integrally) was surprising, and even more surprising was that the character of this vertex algebra was the Witten genus of $X$, up to a constant depending only on the dimension of $X$ \cite{BorLib}. These results exhibited the now-familiar rich connections between conformal field theory, geometry, and topology, but arising from a mathematical process rather than a physical argument. 
 
@@ -71,15 +70,15 @@ Witten \cite{WittenCDO} explained how CDOs on $X$ arise as the perturbative piec
 Let us emphasize that only the perturbative sector of the theory appears (i.e., one works near the constant maps from $\Sigma$ to $T^*X$, ignoring the nonconstant holomorphic maps); the instanton corrections are more subtle and not captured just by CDOs (see \cite{KapOrlov} for a treatment of the instanton corrections for complex tori).
 
 In this paper we construct mathematically the perturbative sector of the holomorphic $\sigma$-model where the source is allowed to have arbitrary complex dimension.
-We use the approach to quantum field theory developed in \cite{CosBook, CG}, thus providing a rigorous construction of the path integral for the holomorphic $\sigma$-model. That means we work in the homotopical framework for field theory known as the Batalin-Vilkovisky (BV) formalism, in conjunction with Feynman diagrams and renormalization methods. 
+We use the approach to quantum field theory developed in \cite{CosttelloRenormalization, CG1,CG2}, thus providing a rigorous construction of the path integral for the holomorphic $\sigma$-model. That means we work in the homotopical framework for field theory known as the Batalin-Vilkovisky (BV) formalism, in conjunction with Feynman diagrams and renormalization methods. 
 Just as CDO's have an anomaly we find that the higher dimensional theory admits a quantized action satisfying the quantum master equation only if the target manifold $X$ has $\ch_{d+1}(X) = 0$, where $\ch_{d+1}(X)$ is the $(d+1)$st component of the Chern character.
 
-One key feature of the framework in \cite{CG} is that every BV theory yields a factorization algebra of observables. (We mean here the version of factorization algebras developed in \cite{CG}, not the version of Beilinson and Drinfeld \cite{BD}.)
+One key feature of the framework in \cite{CG2} is that every BV theory yields a factorization algebra of observables. (We mean here the version of factorization algebras developed in \cite{CG1}, not the version of Beilinson and Drinfeld \cite{BD}.)
 In our situation, locally speaking the theory produces a factorization algebra living on the source manifold $\CC^d$.
-When $d=1$ the machinery of \cite{CG} allows one to extract a vertex algebra from this factorization algebra.
+When $d=1$ the machinery of \cite{CG1} allows one to extract a vertex algebra from this factorization algebra.
 It is the main result of our work in \cite{GGW} that this vertex algebra is precisely the sheaf of CDOs.
 One can interpret this as showing that in a wholly mathematical setting, one can start with the action functional for the curved $\beta\gamma$ system
-and recover the sheaf $\CDO_{X,\alpha}$ of vertex algebras on $X$ via the algorithms of \cite{CosBook, CG}.
+and recover the sheaf $\CDO_{X,\alpha}$ of vertex algebras on $X$ via the algorithms of \cite{CostelloRenormalization, CG1, CG2}.
 In higher dimensions we take the sheaf on $X$ of factorization algebras on $\CC^d$ produced via our work as a definition of higher dimensional chiral differential operators.
 The higher dimensional theory of vertex algebras has not been fully developed, but we still show how to extract sensitive algebraic objects from this factorization algebras, such as an $A_\infty$-algebra which one can view as a deformation quantization of the mapping space ${\rm Map}(S^{2d-1}, X)$. 
 
@@ -128,11 +127,9 @@ It is an interesting question to relate our higher dimensional holomorphic facto
 
 Our techniques for assembling BV theories in families --- and their factorization algebras in families --- apply to many $\sigma$-models already constructed , such as the topological $B$-model \cite{LiLi}, Rozansky-Witten theory \cite{CLL}, and topological quantum mechanics \cite{GG1, GLL}. 
 They also allow us to recover quickly nearly all the usual variants on CDOs and structures therein, such as the chiral de Rham complex and the Virasoro actions.
-In Chapter \ref{??} of this thesis we study the problem of quantizing a higher dimensional version of the Virasoro action. 
-In complex dimension one we recover the usual requirement that the target be Calabi-Yau. 
-In general we get a more sensitive obstruction, which is still satisfied so long as the target admits a flat connection.
-
-
+In complex dimension one we recover the usual requirement that the target be Calabi-Yau.
+One can also study the problem of quantizing a higher dimensional version of the Virasoro action, which we leave to a later publication. 
+In general there is a more sensitive obstruction, which is still satisfied so long as the target admits a flat connection.
 
 \section{Gelfand-Kazhdan formal geometry}
 
@@ -1263,7 +1260,7 @@ We would like to have an an analog of Lemma \ref{lem d=1 pair} for $\TVectd$ and
 Indeed, it turns out that $\TVectd$ is also part of a Harish-Chandra pair.
 To make this possible, we need to slightly enlarge our category of pairs to include the data of an $L_\infty$ algebra, instead of an ordinary Lie algebra. 
 
-\subsubsection{$L_\infty$ pairs}
+\subsubsection{$L_\infty$ pairs}\label{sec: extended pair}
 
 The concept of an ordinary Harish-Chandra pair involves a Lie group $K$, a Lie algebra $\fg$ with an action by $K$, together with an embedding of Lie algebras $\Lie(K) \to \fg$. 
 There is a natural way to relax this to include $L_\infty$ algebras.
@@ -1424,10 +1421,10 @@ In fact, $\Omega^{\#}(P; \ul{V})_{bas}$ forms a graded subalgebra of $\Omega^{\#
 
 It is manifest that this construction of basic forms is natural in maps of $(\fg,K)$-bundles: basic forms pull back to basic forms along maps of bundles.
 
-\subsubsection{Semi-strict descent}
+\subsubsection{Semi-strict descent} \label{sec: extended descent}
 
 Starting with the data:
-\begin{enumerate}
+\begin{enumerate}[(a)]
 \item an $L_\infty$ Harish-Chandra pair $(\fg,K)$;
 \item a principal $(\fg,K)$ bundle $(P \to X, \omega)$;
 \item a semi-strict $(\fg,K)$-module $V$;
@@ -1484,7 +1481,7 @@ Its associated de Rham complex is denoted $\bdesc((P \to X, \omega), V)$.
 %This construction of descent enjoys a number of nice functorial properties. \brian{..finish}.
 %\end{rmk}
 
-\subsection{The flat connection from the extended pair}
+\subsection{The flat connection from the extended pair} \label{sec: extended gk}
 
 In Section \ref{sec: extended pair} we have introduced the $L_\infty$ pair $(\TVectd, \GL_n)$ extending the pair $(\Vect, \GL_n)$.
 A Gelfand-Kazhdan structure is a natural $(\Vect,\GL_n)$-bundle whose underlying principal bundle is the frame bundle of $X$, and whose $\Vect$-valued connection comes from the natural flat connection on the coordinate bundle. 
@@ -1532,7 +1529,7 @@ It follows that the component of the Chern character $\ch_{d+1}(T_X^{1,0})$ is t
 Suppose now we fix a trivialization $\alpha$ of the component of the Chern character $\ch_{d+1}(T_X^{1,0}) \in H^{d+1}(X, \Omega^{d+1, hol}_{cl})$.
 We will resolve $\Omega^{d+1}_{cl}$ by holomorphic vector bundles via the complex
 \ben
-\Omega^{\geq d+1,hol}_X = \Omega^{d +1,hol}_X \xto{\Hat{\partial}} \Omega^{d+2,hol}_X[-1] \cdots .
+\Omega^{\geq d+1,hol}_X = \Omega^{d +1,hol}_X \xto{\Hat{\partial}} \Omega^{d+2,hol}_X[-1] \to \cdots .
 \een
 For now, we put the $\Hat{\partial}$ for the formal holomorphic de Rham differential to not confuse it with the de Rham differential on $X$.
 Suppose we have a trivialization of $\ch_{d+1}(T_X^{1,0})$.
@@ -1546,7 +1543,7 @@ Moreover, the de Rham complex is a model for the derived sections of this sheaf:
 \een
 We consider the complex of formal vector bundles
 \ben
-\hOmega^{\geq d+1}_n = \hOmega^{d +1}_n \xto{\partial} \hOmega^{d+2}_n[-1] \cdots .
+\hOmega^{\geq d+1}_n = \hOmega^{d +1}_n \xto{\partial} \hOmega^{d+2}_n[-1] \to \cdots .
 \een 
 Descent yields a quasi-isomorphism
 \be\label{alpha de rham}
@@ -1694,7 +1691,10 @@ Given the data of a $d$-extension of a GK structure $(X, \sigma)$, which is pres
 \ben
 \Tilde{\desc}_{X, \sigma, \alpha} : \Mod_{(\TVectd, \GL_n)} \to {\rm Pro}(VB)^{flat} .
 \een
-The $d$-extension gives us a $(\TVectd,\GL_n)$-bundle $(\Fr_X, \Tilde{\omega}_{\sigma,\alpha})$ and hence, in the notation of Definition \ref{dfn: htpy descent} we have $\Tilde{\desc}_{X, \sigma, \alpha} = \desc((\Fr_X, \Tilde{\omega}_{\sigma, \alpha}), -)$.
+The $d$-extension gives us a $(\TVectd,\GL_n)$-bundle $(\Fr_X, \Tilde{\omega}_{\sigma,\alpha})$ and hence, in the notation of Definition \ref{dfn: htpy descent}, we have the descent functor
+\ben
+\Tilde{\desc}_{X, \sigma, \alpha} = \desc((\Fr_X, \Tilde{\omega}_{\sigma, \alpha}), -) .
+\een
 When the formal exponential $\sigma$ is understood, we denote this by $\Tilde{\desc}_{X,\alpha}$. 
 Our main example of a module for the pair $(\TVectd, \GL_n)$ that is {\em not} a module for $(\Vect, \GL_n)$ will come from the quantization of the holomorphic $d$-dimensional $\sigma$-model.
 
@@ -1727,7 +1727,8 @@ For this reason, we first consider the case of a flat target.
 
 \subsection{The free $\beta\gamma$ system}
 
-In Section \ref{sec ??} we have provided a description, using the language of holomorphic field theories, of the $\beta\gamma$ system.
+In Example \ref{eg bg} we have already encountered the free $\beta\gamma$ system.
+We formulated this theory using the language of holomorphic field theory.
 It is not much different to define the $\beta\gamma$ system with target a complex vector space $V$. 
 The fields together with their linearized BRST operator are
 \ben
@@ -1742,7 +1743,7 @@ The action functional for this free theory is thus of the form
 \ben
 S_V (\beta,\gamma) = \int_Y \<\beta, \dbar \gamma\>_{V} .
 \een
-One can immediately check that $\sE_V$ arises as the BV theory associated to a free holomorphic theory in the terminology of Chapter \ref{chap1} where $Q^{hol} = 0$. 
+One can immediately check that $\sE_V$ arises as the BV theory associated to a free holomorphic theory in the terminology of Chapter \ref{chap: holtheory} where $Q^{hol} = 0$. 
 
 Note that the gauge symmetry $\beta \to \beta + \dbar \beta'$, where $\beta' \in \Omega^{d,d-2} (Y, V^*)$ has naturally been incorporated into our BRST complex (which only consists of a linear operator since the theory is free). 
 Moreover, there are ghosts for ghosts $\beta'' \in \Omega^{d,d-3}(Y , V^*)$, and so on.
@@ -1758,7 +1759,7 @@ We will refer to this as the {\em formal} $\beta\gamma$ system, which one should
 In the remainder of the chapter we will use the notation $\sE_{\CC^n} = \sE_n$ and $S_{\CC^n} = S_n$.
 The group $\GL_n = \GL_n(\CC)$ acts on $V = \CC^n$ in the natural way which extends to an action on the Dolbeualt complex $\Omega^{0,*}(Y , \CC^n)$. 
 
-\begin{lem}
+\begin{lem}\label{lem: GLaction}
 The group $\GL_n$ acts on the theory $\sE_n$.
 That is, $\GL_n$ is a symmetry of the action functional $S_n$.
 \end{lem}
@@ -1768,9 +1769,9 @@ $V = \CC^n$ and the coadjoint action on $V^* =
 (\CC^n)^*$, so the pairing is preserved by definition.
 \end{proof}
 
-This is the first piece of data needed for Gelfand-Kazhdan formal geometry.
+This Lemma provides the first piece of data needed for Gelfand-Kazhdan formal geometry.
 The next piece is the action by the Lie algebra of formal vector fields. 
-Recall, from Section \ref{sec: equivariant} that to prescribe an action of a Lie algebra $\fh$ on 
+Recall, from Section \ref{sec: equiv BV} that to prescribe an action of a Lie algebra $\fh$ on 
 a BV theory $\sE$ we must prescribe a Noether current, that is, a Maurer-Cartan element
 \ben
 I^\fh \in \clie^*(\fh) \tensor \oloc(\sE)[-1],
@@ -1798,7 +1799,7 @@ Define the local functional $I^{\rm W}_X \in \oloc(\sE_V)$ via the formula
 I^{\rm W}_X(\gamma, \beta) = \sum_{j = 1}^n \sum_{\vec{m} \in \NN^n} a_{j, \vec{m}} \int_S  \gamma^{\wedge m_1}_1 \wedge \cdots \wedge \gamma^{\wedge m_n}_n \wedge \beta_j .
 \ee
 
-Following definition Definition \ref{from chap1??}, the space of local functionals on $\sE_n$ is defined by
+Following definition Definition \ref{dfn: local fnl}, the space of local functionals on $\sE_n$ is defined by
 \be\label{local en}
 \oloc(\sE_n) = {\rm Dens}_Y \tensor_{D_Y} \cred^*(J \sE_n) .
 \ee
@@ -1816,14 +1817,14 @@ satisfies the equivariant classical master equation
 \be\label{ecmw}
 (\d_{\rm W} + \dbar) I^{\rm W} + \frac{1}{2} \{I^{\rm W}, I^{\rm W}\} = 0 .
 \ee
-In particular, $I^{\rm W}$ endows $\sE_n$ with the structure of a $\Vect$-equivariant classical BV theory, see Section \ref{sec: lie equiv}.
+In particular, $I^{\rm W}$ endows $\sE_n$ with the structure of a $\Vect$-equivariant classical BV theory, see Section \ref{sec: equiv BV}.
 \end{lem}
 
 \begin{rmk}
 When restricted to linear vector fields, the action of $\Vect$ on $\beta\gamma$ system with target $\hD^n$ 
-agrees with the action of $\GL_n$ described in Lemma \ref{GLaction}. In this sense, we have described an action of the Harish-Chandra pair $(\Vect, \GL_n)$ on the classical $\beta\gamma$ system. 
+agrees with the action of $\GL_n$ described in Lemma \ref{lem: GLaction}. In this sense, we have described an action of the Harish-Chandra pair $(\Vect, \GL_n)$ on the classical $\beta\gamma$ system. 
 This theory can thus be treated by Gelfand-Kazhdan formal geometry.
-We develop this reasoning more fully in Section \ref{sec comparison}. 
+We develop this reasoning more fully in Section \ref{sec: comparison}. 
 In particular, in the next section we will show that this theory descends to the classical holomorphic $\sigma$-model of maps where the target is any complex manifold $X$.
 In complex dimension one we this is the theory studied by Costello in \cite{WG2}.
 \end{rmk}
@@ -1855,24 +1856,24 @@ If $X$ is any complex manifold, the Gelfand-Kazhdan descent $\desc_X(\sE_n)$ is 
 After setting up the appropriate terminology in the next section, we will refer to the cotangent theory of the formal completion of the derived space of holomorphic maps from $Y \to X$ simply as the {\em holomorphic $\sigma$-model}.
 \end{rmk}
 
-\subsection{A description using $L_\infty$ spaces}
+\subsection{A description using $L_\infty$ spaces} \label{sec: comparison}
 
 We now give a second description of the holomorphic $\sigma$-model.
-This approach is based on the geometry of $L_\infty$ spaces developed by Costello \cite{WG2} and Gwilliam-Grady \cite{GWCS, GWderived}.
+This approach is based on the geometry of $L_\infty$ spaces developed by Costello \cite{WG2} and Gwilliam-Grady \cite{GG1, GG2}.
 We will relate it to our description above using formal geometry.
 
 The language of $L_\infty$ spaces allows one to incorporate many natural geometries in the language of Lie theory.
 Of course, $L_\infty$ spaces are much more flexible than ordinary manifolds, and so also provide a nice geometric description of stacky-like objects as well.
 The key aspect of the formalism we will utilize is based on a general result of Costello \cite{CostelloHolomorphic, WG2} that states $\sigma$-models in the BV formalism can be represented as maps from a elliptic ringed space to an $L_\infty$ space.
 An elliptic ringed space is a pair $(Y, \sA)$ where $Y$ is a manifold and $\sA$ is a sheaf of commutative dg algebras defined over $\Omega^*_Y$ satisfying some conditions. 
-For a precise definition see Definition ?? of \cite{CostelloHolomorphic}.
+For a precise definition see Definition 4.0.5 of \cite{CostelloHolomorphic}.
 The most important condition for us is that underlying sheaf of cochain complexes is elliptic.
 For us, the elliptic ringed space representing the source of the $\sigma$-model is of the form
 \ben
 Y_{\dbar} = (Y, \Omega^{0,*}_Y) .
 \een
 We refer to this as the {\em Dolbeualt space} of the complex manifold $Y$. 
-Of course, $\Omega^{0,*}_Y \simeq \sO^{hol}_Y$ as sheaves, but the resolution is necessary since holomorphic functions are not the smooth sections of any vector bundle. 
+As complexes of sheaves $\Omega^{0,*}_Y \simeq \sO^{hol}_Y$, but the resolution is necessary since holomorphic functions are not the smooth sections of any vector bundle. 
 
 By definition, an $L_\infty$ space is a manifold $X$ together with a sheaf of curved $L_\infty$ algebras $\fg$ defined over the de Rham complex $\Omega^*_X$. 
 The most important $L_\infty$ space for us exists on any complex manifold $X$. 
@@ -1987,6 +1988,7 @@ Moreover, under the characteristic map
 {\rm char}_X : \clie^*(\Vect , \GL_n ; \oloc(\sE_n)) \to \oloc(\sE_{Y \to X})
 \een
 the interaction $I^{\rm W} \mapsto I_{Y \to X}$. 
+Thus, through descent of the formal theory we obtain the classical theory defined over the dg ring $\Omega^*_X$. 
 This proves Proposition \ref{prop: formal to global1}.
 
 \begin{rmk}
@@ -2010,7 +2012,7 @@ We will be most interested in the following two cases:
 \begin{enumerate}
 \item the simplest case where $R = \CC$ and $\fg = \CC^n[-1]$ is the trivial $L_\infty$ algebra with $\ell_k = 0$ for all $k \geq 0$; 
 \item when $X$ is a smooth manifold $R = \Omega^*_X$, and $\fg$ is a curved $L_\infty$ algebra over $\Omega^*_X$. 
-Thus, $\fg$ is part of an $L_\infty$ space $(X, \fg)$ over $X$ in the terminology of \cite{wg2, GradyGwilliamDerived}.
+Thus, $\fg$ is part of an $L_\infty$ space $(X, \fg)$ over $X$ in the terminology of \cite{WG2, GG2}.
 \end{enumerate}
 
 We have discussed how these two cases are related.
@@ -2030,9 +2032,9 @@ There are two compelling reasons for making this definition.
 The first deals with studying correlation functions for the theory. 
 If we require the observables of the theory to be equivariant for this rescaling of the cotangent fibers, this means that the factorization product must have $\CC^\times_{cot}$ weight zero.
 In the case that the theory is free, we have seen that the factorization product between two operators of the theory $\cO, \cO'$ is computed by a Moyal type formula
-\ben
+\be\label{moyal}
 \cO \star \cO' = e^{-\hbar \partial_P} \left(e^{\hbar \partial_P} \cO \cdot e^{\hbar \partial_P} \cO' \right) .
-\een
+\ee
 Since the symplectic pairing is $\CC^\times_{cot}$-weight $(-1)$ we observe that the propagator is also $\CC^\times_{cot}$-weight $(+1)$.
 \footnote{This actually requires that we also take the gauge fixing operator to be of $\CC^\times_{cot}$-weight zero, which is the natural thing to do for cotangent theories and will be the case for us.}
 For the product to have weight zero we are then forced to take $\hbar$ to have opposite weight to $P$.
@@ -2070,7 +2072,7 @@ The right-hand side is simply the local cochains of the local Lie algebra $\Omeg
 \ben
 \left(\oloc(\Omega^{0,*}_Y \tensor \fg[1]), \dbar + \{I_{Y \to B \fg}, -\}\right) = \cloc^*(\Omega^{0,*}_Y \tensor \fg) .
 \een
-We defined local cochains $\cloc^*(\sL)$ of a local Lie algebra in Section \ref{sec: equivariant??}.
+We defined local cochains $\cloc^*(\sL)$ of a local Lie algebra in Section \ref{sec: equiv BV}.
 
 We will be most interested in seeing how both the anomaly and the resulting quantum correction induced by the anomaly are realized inside the complex $\Def_{Y \to Bg}^{\rm cot}$. 
 Before doing this, we'd like to restrict ourselves to looking at quantizations preserving further symmetries. 
@@ -2239,9 +2241,9 @@ Furthermore, $J$ defines a quasi-isomorphism into the $U(d)$-invariant subcomple
 \end{prop}
 
 \begin{proof}
-To compute the translation invariant deformation complex we will invoke Proposition \ref{cor: hol trans invt def} from Section \ref{sec: hol trans}.
+To compute the translation invariant deformation complex we will invoke Corollary \ref{cor: hol trans invt def} from Section \ref{sec: hol trans}.
 Note that the deformation complex is simply the (reduced) local cochains on the local Lie algebra $\Omega^{0,*}_{\CC^d} \tensor \fg$. 
-Thus, in the notation of Section \ref{sec: hol trans} the bundle $V$ is simply the trivial bundle $\fg$.
+Thus, in the notation of Section \ref{sec: hol theory} the bundle $V$ is simply the trivial bundle $\fg$.
 Thus, we see that the translation invariant deformation complex is quasi-isomorphic to the following cochain complex
 \ben
 \left(\Def^{\rm cot}_{Y \to B\fg}\right)^{\CC^{2d|d}} \; \simeq \; \CC \cdot \d^d z \tensor^{\LL}_{\CC\left[\frac{\partial}{\partial z_i}\right]} \cred^*(\fg[[z_1,\ldots,z_d]])  [d] .
@@ -2417,9 +2419,9 @@ The formal $\beta\gamma$ system $\sE_n$ is a free BV theory and hence admits a n
 (See Chapter 6 of \cite{GwThesis} for an extensive development.)  
 To study the general holomorphic $\sigma$-model we want to quantize \emph{equivariantly} with respect to the action of $\Vect$.
 We will find that there is an obstruction to quantizing equivariantly, 
-given by the Gelfand-Fuks-Chern class $\ch_{d+1}^{\GF}(\hT_n)$ defined in Section \ref{sec gk cc}. 
+given by the Gelfand-Fuks-Chern class $\ch_{d+1}^{\GF}(\hT_n)$ defined in Section \ref{sec: formal atiyah}. 
 This obstruction is a very local avatar of the anomaly described by Witten and Nekrasov \cite{WittenCDO,Nek} in the complex one-dimensional holomorphic $\sigma$-model.
-We will refer to Chapter \ref{chap1} for notations and terminology of equivariant BV quantization.
+We will refer to Chapter \ref{chap: holtheory} for notations and terminology of equivariant BV quantization.
 
 The section splits up into two main parts, first we study the $\Vect$-equivariant quantization of the formal $\beta\gamma$ system.
 Then we show how Gelfand-Kazhdan formal geometry intertwines with BV quantization to define the quantization general target complex manifold. 
@@ -2430,9 +2432,9 @@ In this section we construct the prequantization of the holomorphic $\sigma$-mod
 The technique is based on our general regularization technique for regularization of holomorphic theories spelled out in Section \ref{sec: hol renorm}. 
 We will recall the key points.
 
-\subsubsection{A reminder of the propagator}
+\subsubsection{A reminder of the propagator} \label{sec: remind prop}
 
-We wrote down the general propagator for translation invariant holomorphic theories on $\CC^d$ in Section \ref{sec: holrenorm}.
+We wrote down the general propagator for translation invariant holomorphic theories on $\CC^d$ in Section \ref{sec: hol renorm}.
 In this section we recall the construction of the propagator for the theory we consider of holomorphic maps $\CC^d \to B \fg$. 
 
 The propagator is of the form $P_{\epsilon<L} = P_{\epsilon < L}^{an} {\rm Cas}_\fg$ where ${\rm Cas}_\fg \in \fg \tensor \fg^* \oplus \fg^* \tensor \fg$ is the quadratic Casimir of the $L_\infty$ algebra $\fg$.
@@ -2491,20 +2493,19 @@ The $\epsilon \to 0, L\to \infty$ limit of the propagator $P_{\epsilon<L}(z,w)$ 
 Our first step is to construct an equivariant effective prequantization.
 (i.e., effective actions satisfying the locality and RG flow conditions but not necessarily the QME condition)
 for the $\Vect$-equivariant formal $\beta\gamma$ system.
-We have already reviewed what a prequantization is in Section \ref{sec: renormalization}, but we briefly recall the main elements here.
+We have already reviewed what a prequantization is in Section \ref{sec: qme}, but we briefly recall the main elements here.
 Essentially, we try to run the RG flow from the classical theory by naively guessing
 \be\label{w prequant}
 I^{\rm W} [L] = \lim_{\epsilon \to 0} W(P_{\epsilon<L},I^{\rm W})
 \ee
 and then adding counterterms to deal with singularities that prevent this limit from existing.
-(One of the main theorems of \cite{CosBook} guarantees that we can construct such a prequantization.)
+(One of the main theorems of \cite{CostelloRenormalization} guarantees that we can construct such a prequantization.)
 
 In general, the limit Equation (\ref{w prequant}) may be ill-defined and counterterms would be necessary.
-The key in our situation is that the equivariant $\beta\gamma$ system is a holomorphic theory on $\CC^d$ so that we can apply Lemma \ref{lem: holrenorm}.
+The key in our situation is that the equivariant $\beta\gamma$ system is a holomorphic theory on $\CC^d$ so that we can apply Lemma \ref{lem: hol renorm}.
 The existence of the holomorphic gauge fixing operator $\dbar^*$ was the crucial tool in proving this well-behaved analyticity.
-The form of the propagators for the $\beta\gamma$ system are special cases of those used in Section \ref{sec: holrenorm}, and we recall their exact form below.
 
-As an immediate corollary of Lemma \ref{lem: holrenorm}, the following definition is well-defined. 
+As an immediate corollary of Lemma \ref{lem: hol renorm}, the following definition is well-defined. 
 
 \begin{dfn}
 For $L > 0$, let
@@ -2558,7 +2559,7 @@ Thus, we have
 and so $\Theta_{d,n}[L]$ only depends on $\gamma$ and hence is a degree one
 element of $\clie^*(\Vect ; \sO(\sE_n))$. 
 
-The first lemma we state is a consequence of the general characterization of anomalies for holomorphic theories on flat space $\CC^d$ proved in Section \ref{sec: anomalies} in Chapter \ref{chap: holrenorm}.
+The first lemma we state is a consequence of the general characterization of anomalies for holomorphic theories on flat space $\CC^d$ proved in Lemma \ref{lem: chiral anomaly}.
 It reduces the calculation of the anomaly to a Feynman diagrams that are wheels with certain edges that are marked.
 
 \begin{lem}\label{lem: obs1}
@@ -2653,8 +2654,8 @@ In the end, we want to recognize it as the local functional $J^{\rm W}(\ch^{\GF}
 %\end{proof}
 
 In the below calculation we write $\Theta = \Theta_{d,n}$ as the dimensions $d,n$ will be fixed.
-The limit in Lemma \ref{obslemma} can be moved inside the summation, 
-i.e., the weight for each 2-vertex wheel $\Gamma$ with edge $e$ has an $\epsilon \to 0$ limit.
+The limit in Lemma \ref{lem: obs1} can be moved inside the summation, 
+i.e., the weight for each $(d+1)$-vertex wheel $\Gamma$ with edge $e$ has an $\epsilon \to 0$ limit.
 We denote this summand by
 \ben
 \Theta_{\Gamma,e} = \lim_{\epsilon \to 0} W_{\Gamma,e}(P_\epsilon^1,K_\epsilon,I^{\rm W}[\epsilon]) .
@@ -2676,6 +2677,7 @@ Choose an ordering of the vertices $v_1,\ldots,v_{d+1}$.
 The vertex $v_\alpha$ has valency $k_\alpha + 1$ and so each vertex has $k_\alpha - 1$ incoming edges, see Figure \ref{fig:chernwheel}.
 
 \begin{figure}
+\begin{center}
 \begin{tikzpicture}[line width=.2mm, scale=1.5]
 
 %\pgfmathsetmacro{\ex}{0}
@@ -2693,19 +2695,23 @@ The vertex $v_\alpha$ has valency $k_\alpha + 1$ and so each vertex has $k_\alph
 		\draw[fermion](145:2) -- (145:1);
 		\draw[fermion](150:2) -- (145:1);
 			\node at (145:0.85) {$v_0$};
+			\node at (145:2.25) {$\gamma$};
 		\node at (90:1.15) {$\cdots$};
 		%\node at (90:0.8) {$P_{\epsilon<L}$};
 		\draw[fermion](210:2) -- (215:1cm);
 		\draw[fermion](220:2) -- (215:1cm);
 			\node at (215:0.85) {$v_{d}$};
+			\node at (215:2.25) {$\gamma$};
 		\node[red] at (180:0.8) {$e$};
 		\draw[fermion](27.5:2) -- (35:1);
 		\draw[fermion](32.5:2) -- (35:1);
 		\draw[fermion](37.5:2) -- (35:1);
 		\draw[fermion](42.5:2) -- (35:1);
 			\node at (35:0.85) {$v_{\alpha}$};
+			\node at (35:2.25) {$\gamma$};
 		\draw[fermion](-35:2) -- (-35:1cm);
 			\node at (-35:0.85) {$v_{\beta}$};
+			\node at (-35:2.25) {$\gamma$};
 		\node at (0:1.15) {$\vdots$};
 		%\node at (0:0.8) {$P_{\epsilon<L}$};
 		\node at (270:1.15) {$\cdots$};
@@ -2714,6 +2720,7 @@ The vertex $v_\alpha$ has valency $k_\alpha + 1$ and so each vertex has $k_\alph
 \end{tikzpicture}
 \caption{The $(d+1)$-vertex wheel contributing to the anomaly. The vertices are given by $v_0,\ldots,v_d$ which are labeled by a formal vector field $X_\alpha$. On the black internal edges are we place the propagator $P_{\epsilon < L}$. On the red edge labeled by $e$ we place the heat kernel $K_\epsilon$.}
 \label{fig:chernwheel}
+\end{center}
 \end{figure}
 
 %\begin{center}
@@ -2816,7 +2823,7 @@ Putting in the analytic factors in we see that the weight of the weight of the d
 \end{align*}
 
 We now turn to actually computing this weight.
-The method is very similar to our estimate of the weight of a diagram in a general holomorphically translation invariant theory on $\CC^d$ in Section \ref{sec: holrenorm}.
+The method is very similar to our estimate of the weight of a diagram in a general holomorphically translation invariant theory on $\CC^d$ in Section \ref{sec: hol renorm}.
 First, we simplify the expression above with some notation.
 Write
 \ben
@@ -2884,7 +2891,7 @@ We have used the expression for the determinant as a sum over indices $i_1,\ldot
 \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left. \left(\prod_{\alpha=1}^d \frac{1}{t_\alpha} \sum_{\beta=1}^d M_{\alpha\beta}^{-1} \frac{\partial}{\partial w_{i_\alpha}^{\beta}} \Psi \right)\right|_{w^1=\cdots=w^d=0} = \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left. \left(\prod_{\alpha=1}^d \frac{\partial}{\partial w^\alpha_{i_\alpha}} \Psi \right)\right|_{w^1=\cdots=w^d=0} \frac{1}{t_1\cdots t_d} \det(M)^{-1}
 \een
 The term $\det(M)^{-d}$ comes from performing the $d$-dimensional Gaussian integral. 
-A calculation we performed in Section \ref{sec: holrenorm} shows that 
+A calculation we performed in Section \ref{sec: hol renorm} shows that 
 \ben
 \det(M_{\alpha\beta}) = \frac{\epsilon + t_1+\cdots+t_d}{\epsilon t_1\cdots t_d}
 \een
@@ -2899,7 +2906,7 @@ Finally, plugging back in $\Psi = \sum_{I} \Phi_I$ we see that the obstruction c
 \ee
 where $C$ is some nonzero constant.
 
-We have expressed the components $\ch^{\GF}_{d+1}(\hT_n) \in \clie^*(\Vect ; \hOmega^{d+1}_{n,cl})$ of the Gelfand-Fuks-Chern character in Section \ref{??}.
+We have expressed the components $\ch^{\GF}_{d+1}(\hT_n) \in \clie^*(\Vect ; \hOmega^{d+1}_{n,cl})$ of the Gelfand-Fuks-Chern character in Section \ref{sec: formal atiyah}.
 Since these classes are valued in closed $(d+1)$-forms, we can express them as images under the de Rham operator of $\hOmega^d_{n}$ valued classes.
 Indeed, we did this in Equation (\ref{k to k-1}) where we found the class
 \ben
@@ -3140,10 +3147,10 @@ When we quantize, we found that there is an obstruction to having a $(\Vect,\GL_
 Equivalently, the naive RG flow of $I^{\rm W}$ does not satisfy the quantum master equation, but we can found a modification of it that does. 
 
 Every complex manifold $X$ admits a bundle of coordinates, a Gelfand-Kazhdan structure, which allows us to construct global objects using the data of a $(\Vect,\GL_n)$-module.
-We saw in Section \ref{sec: extended geometry} that not every complex manifold admits bundle of coordinates with a $(\TVectd, \GL_n)$-action.
+We saw in Section \ref{sec: extended gk} that not every complex manifold admits bundle of coordinates with a $(\TVectd, \GL_n)$-action.
 However, for every trivialization of the characteristic class $\ch_{d+1}(T_X^{1,0})$ we found that there did exist an extended Gelfand-Kazhdan structure, which one can think of as a reduction of the original bundle of coordinates to the pair $(\TVectd, \GL_n)$. 
 
-Let us fix an extended Gelfand-Kazhdan structure as in Section \ref{sec: extended geometry}.
+Let us fix an extended Gelfand-Kazhdan structure as in Section \ref{sec: extended gk}.
 This was given by an ordinary GK structure, so a manifold $X$ and a formal exponential $\sigma$, together with a trivialization $\alpha$ of $\ch_{d+1}(T_X^{1,0})$.
 As usual, we will omit the data of a formal exponential in the below.
 We denote the de Rham complex of the corresponding descent functor by
@@ -3187,19 +3194,43 @@ This completes the proof of the main theorem.
 %\een
 %that is equivariant for the $L_\infty$
 
+It is the main result of \cite{CG2} that the observables of a quantum field theory have the structure of a factorization algebra.
+An immediate corollary of our theorem is the existence of a sheaf of factorization algebras on $X$. 
+The construction of this factorization algebra is through formal geometry, just as above. 
+Indeed, the holomorphic $\sigma$-model of maps $\CC^d \to \hD^n$ defines a factorization algebra $\Obs^{\q}_{n,d}$ on $\CC^d$. 
+Theorem \ref{thm: extended quantization}, implies that this factorization algebra is equivariant for the pair $(\TVectd, \GL_n)$. 
+Precisely, it is a factorization algebra on $\CC^d$ taking values in Harish-Chandra modules for $(\TVectd,\GL_n)$. 
+For every trivialization $\alpha$ of $\ch_{d+1}(TX)$ the extended descent functor $\Tilde{\sdesc}_{X, \alpha}$ is symmetric monoidal.
+Thus, for every pair $(X, \alpha)$ we obtain a sheaf on $X$ of factorization algebras on $\CC^d$:
+\ben
+\Obs_{X,\alpha}^\q := \sdesc_{X,\alpha}(\Obs^\q_{n,d}) .
+\een
+By the second part of Theorem \ref{thm: extended quantization} this is a holomorphically translation invariant $U(d)$-equivariant factorization algebra. 
 
-\section{The local operators}
+When $d = 1$, it is the main result of \cite{GGW} that this sheaf is isomorphic to the sheaf of chiral differential operators.
+
+\begin{thm}[\cite{GGW}] 
+Let $\alpha$ be a trivialization of $\ch_{2}(TX)$.
+The cohomology of the sheaf of factorization algebras $\Obs_{X,\alpha}^\q$ determines a sheaf of vertex algebras $\Vert(\Obs^\q_{X,\alpha})$.
+This is isomorphic to the sheaf of chiral differential operators on $X$ associated to the trivialization $\alpha$.
+\end{thm}
+ 
+For general $d > 1$ we will not explore the full structure of this sheaf of factorization algebras, but we will focus on its local properties in the next section. 
+%On a global manifold $X$ with trivial $\ch_{d+1}(TX)$ 
+
+\section{The local operators} \label{sec: local obs}
 
 In this section we analyze the local operators of the holomorphic $\sigma$-model. 
 Our partial goal is exhibit the similarities present in the local operators of this higher dimensional holomorphic theory with the local operators of two-dimensional chiral conformal field theory.
 
-It is the main result of \cite{CG2} that the observables of a quantum field theory have the structure of a factorization algebra.
 By definition, the observables supported on an open set $U$ are equal to the completed symmetric algebra of functions on the fields supported on $U$. 
+The main result of \cite{CG2} is that this defines a factorization algebra on spacetime. 
 Throughout this section we will focus on the holomorphic $\sigma$-model of maps $\CC^d \to V$ where $V$ is a vector space.
 This theory is free, and its quantum observables admit a minimal description in terms of compactly supported functions (and Dolbeault forms) on $\CC^d$, which we will recall momentarily.
 
 In ordinary chiral conformal field theory, there is a collection of operators that, in some sense, generate all other operators. 
-These are called ``primary operators" (or primary fields), and are defined by those operators that are killed by the positive part of the Virasoro algebra \cite{polchinski}, that is, the ``lowering operators". 
+These are called ``primary operators" (or primary fields).
+ They are defined by those operators that are killed by the positive part of the Virasoro algebra.
 To obtain all of the operators one considers the descendants of the primary operators which are obtained by applying the negative part of the Virasoro algebra, or the ``raising operators", to the primaries. 
 For example, in the $d=1$ $\beta\gamma$ system, there are two primary operators:
 \begin{align*}
@@ -3288,12 +3319,11 @@ The BV formalism suggests that the quantum observables on $S$ should arise by
 This suggestion does not work because $\Delta$ is not defined on all of the observables;
 the naive formula involves an ill-defined pairing of distributions.
 There are two ways to circumvent this difficulty. 
-First, one can work with a smaller class of observables --- such as those arising from smooth functionals, not distributional ones --- and this approach is developed in detail for the free $\beta\gamma$ system in Chapter 5, Section 3 of \cite{CG1}.
-(We discuss this approach in Section \ref{noneqsec}, where we also show the two approaches agree.) 
+First, one can work with a smaller class of observables --- such as those arising from smooth functionals, not distributional ones --- and this approach is developed in detail for the free $\beta\gamma$ system in Chapter 5, Section 3 of \cite{CG1}. 
 Second, one can mollify $\Delta$ instead.
 This approach is developed in a very broad context of \cite{CG2}, and we have encountered it already in the scale $L$ BV Laplacians $\Delta_L$.
 These two approaches provide quasi-isomorphic factorization algebras, 
-as we show in Proposition ?? of \cite{GGW}. 
+as we show in Proposition 11.24 of \cite{GGW}. 
 For analyzing the free theory of holomorphic maps $\CC^d \to V$ it is most convenient to use the first approach, which we do here.
 
 A classical result of Atiyah-Bott, Proposition 6.1 in \cite{AB}, implies that for any complex manifold $U$ the subcomplex
@@ -3319,7 +3349,7 @@ The quantum observables supported on $U \subset \CC^d$ is the cochain complex
 \]
 \end{dfn}
 
-By Theorem 5.3.10 of \cite{GwilliamThesis} the assignment $U \mapsto \Obs^\q_V(U)$ defines a factorization algebra on $\CC^d$. 
+By Theorem 5.3.10 of \cite{GwThesis} the assignment $U \mapsto \Obs^\q_V(U)$ defines a factorization algebra on $\CC^d$. 
 This will be our main object of study for the remainder of this section.
 
 \subsection{The observables on the $d$-disk}\label{sec: disk obs}
@@ -3328,7 +3358,7 @@ In this section we give a description of the observables of the holomorphic $\si
 
 \subsubsection{The cohomology of the observables}
 
-\begin{lem}
+\begin{lem}\label{lem: disk cohomology}
 For any $d$-dimensional disk in $\CC^d$ there is an isomorphism
 \ben
 H^* \left(\Obs^{\q}_V(D(w,r))\right) \cong \Sym\left( \left(\sO^{hol}(D(w,r)\right)^\vee \tensor V^* \oplus \left(\Omega^{d,hol}(D(w,r))\right)^\vee\tensor V[-d+1] \right) [\hbar]
@@ -3423,7 +3453,7 @@ In particular, this implies that these operators are of the following homogenous
 \end{align*}
 
 \begin{rmk}
-The minus sign in $\cO_{\gamma, -\vec{n}}(w;v^*)$ is purely conventional, and meant to match up with the physics and vertex algebra literature see Chapter ?? of \cite{BZF}, for instance.
+The minus sign in $\cO_{\gamma, -\vec{n}}(w;v^*)$ is purely conventional, and meant to match up with the physics and vertex algebra literature see Chapter 2 of \cite{BZF}, for instance.
 One reason for using this convention is motivated by the state-operator correspondence by realizing the above operators as coming from residues over higher dimensional spheres.
 Note that for any $d$-disk $D(0,r)$ there is an embedding of topological vector spaces
 \ben
@@ -3496,7 +3526,7 @@ The two vertical maps are the inclusions of the $U(d)$-eigenspaces of the observ
 It follows from Lemma \ref{lem U(d) equivariance} that the factorization algebra is $U(d)$-equivariant, so in particular the factorization algebra structure map for the inclusion of disks $D(0,r) \hookrightarrow D(0,s)$ is a map of $U(d)$-representations. 
 Hence, the map restricts to each of the eigenspaces, yielding the diagram. 
 
-In \cite{fact1} it is shown in Corollary 5.3.6.4 that for the one-dimensional $\beta\gamma$ system, the lower map above is a quasi-isomorphism. 
+In \cite{CG1} it is shown in Corollary 5.3.6.4 that for the one-dimensional $\beta\gamma$ system, the lower map above is a quasi-isomorphism. 
 A completely similar argument applies to the $\beta\gamma$ system on $\CC^d$. 
 Indeed, consider the collection
 \ben
@@ -3504,7 +3534,7 @@ Indeed, consider the collection
 \een
 The collection runs over non-negative integers $k,l$ and sequences $\vec{n}_i = (n_{i,1},\ldots,n_{i,d})$, $n_{i,j} \geq 0$ and $\vec{m}_i = (m_{i,1},\ldots,m_{i,d})$, $m_{i,1} \geq 1$. 
 It also runs over vectors $v_i, v_j^*$ in $V$ and $V^*$, respectively. 
-Now, it follows from Lemma 5.3.6.2 of \cite{fact1} that the above collection form a basis for the cohomology
+Now, it follows from Lemma 5.3.6.2 of \cite{CG1} that the above collection form a basis for the cohomology
 \ben
 H^*\Obs^\cl_V(r)^{(\vec{N})} \subset H^*\Obs^\cl(D(0,r))
 \een
@@ -3548,6 +3578,23 @@ A_d \simeq \RR \Gamma(\AA^{d \times}, \sO^{alg}) .
 We refer the reader to the Appendix for a more detailed discussion.
 What we will use at the moment is the existence of a linear embedding of cochain complexes $A_d \hookrightarrow \Omega^{0,*}(\CC^d \setminus \{0\})$, which is dense at the level of cohomology.
 In particular, $A_d$ embedds inside the Dolbeault complex of any of the spherical shells $N_{\epsilon,r}$ we have just introduced.
+
+\begin{rmk}\label{rmk: Ad}
+When $d = 1$ the punctured line $\CC^\times$ is actually affine and $A_1 = \CC[z,z^{-1}]$ the polynomial Laurent series concentrated in degree zero.
+For $d > 1$ the punctured plane is no long affine and the sheaf cohomology of $\CC^{d \times}$ is concentrated in degrees zero and $d-1$. 
+The complex $A_d$ is a concentrated in degrees $0,\ldots,d-1$ and there is a \v{C}ech description of the cohomology as 
+\ben
+H^*(\AA^{d\times}, \sO^{alg}) = 
+\begin{cases} 0, & * \neq 0, d-1 \\ \CC[z_1,\ldots,z_d], & * = 0 \\ \CC[z_1^{-1},\ldots,z_d^{-1}] \frac{1}{z_1 \cdots z_d}, & * = d-1 \end{cases} .
+\een
+We will also use a Dolbeualt description of $H^{d-1}(A_d)$ which is best exhibited using the algebraic Bochner-Martinelli kernel $\omega^{alg}_{BM} \in A^{d,d-1}$ that we define in the appendix. 
+There is a $U(d)$-equivariant isomorphism
+\ben
+ \CC[z_1^{-1},\ldots,z_d^{-1}] \frac{1}{z_1 \cdots z_d} \cong \CC\left[\frac{\partial}{\partial z_1}, \ldots, \frac{\partial}{\partial z_d}\right] \omega^{alg}_{BM}, 
+ \een
+each of which are isomorphic to $H^{d-1}(A_d)$.
+The isomorphism sends $z_1^{-1} \cdots z_1^{-1} \leftrightarrow \omega^{alg}_{BM}$.
+\end{rmk}
 
 We have the following general fact about linear functionals on the Dolbeualt complex of $N_{r,\epsilon}(w)$. 
 This lemma will allow us to describe linear observables supported on these neighborhoods. 
@@ -3690,7 +3737,7 @@ In particular $\sF_{\sA_V}$ is locally constant, and hence determines the struct
 We would now like to identify this algebra structure. 
 
 We will proceed in two ways. 
-First, we will use the Moyal formula of Section \ref{??} as well as the explicit form of the propagator from Section \ref{?} to deduce the operator product expansion between cohomology classes of operators corresponding to $\sA_V$. 
+First, we will use the Moyal formula together with the explicit form of the propagator from Section \ref{sec: remind prop} to deduce the operator product expansion between cohomology classes of operators corresponding to $\sA_V$. 
 This will tell us what the algebra structure is on the cohomology $H^*(\sA_V)$. 
 Second, we will use the smoothed description of the observables as a factorization enveloping algebra to nail down the precise algebra structure at the cochain level. 
 
@@ -3836,13 +3883,14 @@ W_0^\infty : & \Obs^{\cl}_V(U) [\hbar]  & \to & \Obs^\q_V(U) \\
 \een
 that makes sense for any open set $U$.
 This is an isomorphism of cochain complexes, with inverse given by $(W_0^\infty)^{-1} = e^{-\hbar \partial_P}$. 
-By \ref{??} it determines the following formula for the factorization product. 
+It determines the following formula for the factorization product. 
 If $\cO,\cO'$ are observables supported on disjoint opens $U,U'$, and $V$ is and open set containing $U,U'$, then the factorization structure map is given by
 \ben
 \cO \star \cO' = e^{-\hbar \partial_P} \left(\left(e^{\hbar \partial_P}\cO\right) \cdot \left(e^{\hbar \partial_P} \cO'\right)\right) \in \Obs^\q(V) .
 \een 
 Here, the $\cdot$ refers to the symmetric product on classical observables.
-
+For a more in depth discussion of this Moyal type formula for factorization algebras see Section 4.3.2 of \cite{CG2}.
+For another account, which makes a connection to the usual Moyal formula from deformation quantization see Section 3.5 of \cite{GLL}.
 The calculation of the factorization product relies on the higher dimensional residue formula involving the Bochner-Martinelli form. 
 If $f$ is any any function in $C^\infty(U)$, where $U$ is a domain in $\CC^d$, then the residue formula states that for any $z \in D$ 
 \ben
@@ -3880,7 +3928,7 @@ It relies on interpreting the observables of the $\beta\gamma$ system as the {\e
 
 The linear smoothed observables, equipped with the linearized BRST differential, on any $U \subset \CC^d$ form the subcomplex 
 \ben
-\Omega^{d,*}_c(U) \tensor V^*[d] \oplus \Omega^{0,*} (U) \tensor V [1] \subset \Obs^{\cl}_V(U) .
+\Omega^{d,*}_c(U) \tensor V^*[d] \oplus \Omega_c^{0,*} (U) \tensor V [1] \subset \Obs^{\cl}_V(U) .
 \een
 Using the $P_0$ bracket restricted to the linear observables, we can form the central extension of dg Lie algebras
 \ben
@@ -3898,7 +3946,7 @@ An elementary observation identifies the smoothed quantum observables with the f
 Indeed, the right hand side assigns to each open $U$ the cochain complex $\clieu_*(\Tilde{\sH}_V(U)) = \left(\Sym(\sH_V'(U)), \dbar + \d_{CE}\right)$. 
 One checks directly that $\d_{CE}$ is precisely the BV Laplacian $\hbar \Delta$. 
 
-%We now introduce the following algebra, which is a deformation of the dg associative algebra $U(\sH_V)$ from the previous section.
+%We now introduce the following algebra, which is a deformation of the associative dg algebra $U(\sH_V)$ from the previous section.
 %Let $\Tilde{\sH}_V$ denote the following extension of dg Lie algebras
 %\ben
 %0 \to \CC \cdot \hbar \to \Tilde{\sH}_V \to A_d \tensor (V^*[d-1] \tensor V) \to 0
@@ -3951,7 +3999,7 @@ Recall that as a vector space $\Tilde{\sH}_V = A_d \tensor (V^*[d-1] \oplus V)$.
 Let $I \subset \RR_{>0}$ be an open subset, we will describe the map $\Phi(I)$.
 There is the natural map $\rho^* : \Omega^*_c(I) \to \Omega^*_c(\rho^{-1}(I))$ given by the pull back of differential forms. 
 We can post compose this with the natural projection ${\rm pr}_{\Omega^{0,*}} : \Omega^*_c \to \Omega^{0,*}_c$ to obtain a map of commutative algebras ${\rm pr}_{\Omega^{0,*}} \circ \rho^* : \Omega^*_c(I) \to \Omega^{0,*}_c(\rho^{-1}(I))$. 
-The map $j$ from Proposition \ref{prop fhk1} determines a map of dg commutative algebras $j : A_d \to \Omega^{0,*}(\rho^{-1}(I))$. 
+The map $j$ from Proposition \ref{prop: Ad} determines a map of dg commutative algebras $j : A_d \to \Omega^{0,*}(\rho^{-1}(I))$. 
 Thus, we obtain a map
 \ben
 \begin{array}{cccc}
@@ -3987,7 +4035,7 @@ The Lie bracket in $\sH_V$ of these elements is
 \ee
 Now, using the definition of the $(-1)$-shifted symplectic structure defining the free $\beta\gamma$ system, we have
 \begin{align*}
-[\Phi(I)(\varphi \tensor a \tensor v^*), \Phi(I)(\psi \tensor b \tensor v)]_{\sH_V'} & = \hbar \<v,v^*\> \int_{\rho^{-1}(I)} \phi(r) a(z,\zbar) \psi(r) b(z,\zbar)\d^d z \\  & = \hbar \<v,v*\> \int_{r \in I} \phi(r) \psi(r) \oint_{S^{2d-1}_r} a(z,\zbar) b(z,\zbar) \d^d z . 
+[\Phi(I)(\varphi \tensor a \tensor v^*), \Phi(I)(\psi \tensor b \tensor v)]_{\sH_V'} & = \hbar \<v,v^*\> \int_{\rho^{-1}(I)} \phi(r) a(z,\zbar) \psi(r) b(z,\zbar)\d^d z \\  & = \hbar \<v,v^*\> \int_{r \in I} \phi(r) \psi(r) \oint_{S^{2d-1}_r} a(z,\zbar) b(z,\zbar) \d^d z . 
 \end{align*}
 This is precisely the image of the right hand side of (\ref{bracket1}) under $\Phi(I)$. 
 Thus, $\Phi$ determines a map of cosheaves of Lie algebras.
@@ -4005,7 +4053,7 @@ By functoriality of the enveloping factorization algebra together with compatibi
 
 
 
-\subsection{The disk as a module}
+\subsection{The disk as a module}\label{sec: disk module}
 In the beginning of this section we extracted a subspace of the cohomology of the observables on the $d$-dimensional disk 
 \ben
 \sV_V \subset \Obs^{\q}_{V} (D(0,r))
@@ -4015,34 +4063,40 @@ We have also seen how the factorization product endows a subspace of the observa
 \ben
 \sA_V \subset \Obs^\q_V (N_{\epsilon,r})
 \een
-with the structure of a dg associative algebra.
-In this section we study a different piece of the factorization algebra that equips $\sV_V$ with the structure of a module over $\sA_V$. 
-Moreover, we will identify this module structure in a way that is reminiscent of the state space of a vertex algebra in the world of chiral CFT.
+with the structure of a associative dg algebra.
+In this section we study a different part of the factorization algebra structure that equips $\sV_V$ with the structure of a module over $\sA_V$. 
+Moreover, we will identify this module structure in a way that is reminiscent of the state space of a vertex algebra in the world of CFT.
 
 First, we describe the factorization structure map for a very simple configuration of open sets. 
 Suppose $R > r + \epsilon$ and consider the inclusion 
 \be\label{NtoD}
 N_{r,\epsilon} \hookrightarrow D(0, R) .
 \ee
-This configuration induces the following composition
+This configuration induces the following diagram
 \be\label{composition1}
-\sA_V \hookrightarrow \Obs^\q_V(N_{r,\epsilon}) \to \Obs^\q_V(D(0,R)) \xto{H^*(-)} H^*\left(\Obs^\q_V(D(0,R))\right).
+\begin{tikzcd}
+\sA_V \arrow[d, hook] \arrow[r, dashed] & \sV_V \arrow[d, hook] \arrow[r,"H^*(-)"] & H^*(\sV_V) \arrow[d, hook] \\
+\Obs^\q_V(N_{r,\epsilon}) \arrow[r,"\mu"] & \Obs^\q_V(D(0,R)) \arrow[r,"H^*(-)"] & H^*\left(\Obs^\q_V(D(0,R))\right).
+\end{tikzcd}
 \ee
-The first arrow is just the inclusion of the sphere algebra.
-The middle arrow is the factorization structure map associated to (\ref{NtoD}).
-The map $H^*(-)$ is projection onto cohomology.
-Usually this does not exist, but in the case of the observables on a disk the cohomology is concentrated in the top degree so that the map makes sense.
-Recall, the state space $\sV_V$ embeds inside the cohomology of the observables on a disk, we will see in the next lemma that the map above factors through $\sV_V$, hence we get a map $\sA_V \to \sV_V$.
+The bottom arrow is the factorization structure map from (\ref{NtoD}) followed by the projection $H^*(-)$ onto cohomology.
+Note that projection is well-defined since the cohomology is concentrated in the top degree. 
+The vertical arrows are all the inclusions of the $U(d)$-eigenspaces where we recall that the state space $\sV_V$ embeds inside the cohomology of the observables on a disk.
+We will see in the next lemma that the map $\mu$ factors through $\sV_V$, hence producing the dashed arrow $\sA_V \to \sV_V$.
 
 To state the lemma, recall the presentation for the cohomology of the commutative dg algebra $A_d$ in terms of the Bochner-Martinelli kernel.
-One has a $U(d)$-equivariant presentation
+Following Remark \ref{rmk: Ad}, we use the $U(d)$-equivariant presentation
 \ben
-H^{d-1}(A_d) = \CC\left[\frac{\partial}{\partial z_1}, \ldots, \frac{\partial}{\partial z_d}\right] \omega^{BM},
+H^{d-1}(A_d) = \CC\left[\frac{\partial}{\partial z_1}, \ldots, \frac{\partial}{\partial z_d}\right] \omega^{alg}_{BM} ,
 \een
 where, on the right hand side we take the cohomology class.
+This says that every cohomology class may be represented by some constant coefficient holomorphic differential operator applied to $\omega^{BM}$.
+%In the \v{C}ech notation, we express the cohomology $H^{d-1} (A_d) = z_1^{-1} \cdots z_d^{-1} \CC[z_1^{-1}, \ldots,z_d^{-1}]$. 
+%There is a $U(d)$-equivariant relationship between these two descriptions which sends $\omega^{BM} \leftrightarrow z_1^{-1} \cdots z_d^{-1}$. 
 
-\begin{lem}
-The above composition (\ref{composition}) factors through the cohomology of the state space $H^*\sV_V$ to define a map $\pi_- : \sA_V \to H^*\sV_V$. 
+\begin{lem}\label{lem: N to D}
+There exists a lift of $\mu$ making the diagram (\ref{composition1}) commutative.
+In particular there exists a map $\pi_- : \sA_V \to H^*\sV_V$ compatible with the factorization structure maps. 
 This is a map of symmetric algebras, further on linear elements $a \tensor v^*, b \tensor v \in A_d \tensor (V^*[d-1] \oplus V) \subset \sA_V$ the map is
 \ben
 \pi_-(a \tensor v^*) = 
@@ -4065,7 +4119,7 @@ Where, $a = (\frac{\partial}{\partial z})^{\vec{n}} \omega^{BM} \in A^{d-1}_d$ a
 The notation $\pi_-$ will become apparent momentarily.
 
 \begin{proof}
-For degree reasons it is automatic that in the composition in (\ref{composition}) is only nonzero on $a\tensor v^*, b \tensor v \in A_d\tensor (V^*[d-1] \oplus V)$ if $|a|=|b|=d-1$. 
+For degree reasons it is automatic that in the composition in (\ref{composition1}) is only nonzero on $a\tensor v^*, b \tensor v \in A_d\tensor (V^*[d-1] \oplus V)$ if $|a|=|b|=d-1$. 
 Since $\omega^{BM}$ is $U(d)$ invariant, it is clear that the element $a = \partial^{\vec n} \omega^{BM}$ it lives in the weight $-\vec{n}$ subspace and defines the observable 
 \ben
 \gamma \tensor v \mapsto \<v,v^*\> \oint_{S^{2d-1}} \gamma(z,\zbar) (\frac{\partial}{\partial z})^{\vec{n}} \omega^{BM} \d^d z .
@@ -4121,20 +4175,62 @@ In fact, this is a maximal commutative subalgebra of $\sA_V$.
 Using $A_{d,-}$ we can similarly define the cochain complex $\sH_{V,-} = A_{d,-} \tensor (V^*[d-1] \oplus V)$. 
 As cochain complexes there is a splitting $\sH_V = \sH_{V,+} \oplus \sH_{V,-}$.
 Hence, by the PBW theorem there is a splitting $\sA_{V} = \sA_{V,+} \tensor \sA_{V,-}$ as cochain complexes.
+The induction of the trivial $\sA_{V,+}$-module $\CC$ to a $\sA_V$-module is given by $\sA_V \tensor_{\sA_{V,+}} \CC$. 
+We will refer to this as the {\em vacuum} $\sA_V$-module. 
+There is a canonical element $|0\> = 1 \tensor 1 \in \sA_V \tensor_{\sA_{V,+}} \CC$.
 
 \begin{prop}
 The factorization product corresponding disks enclosed by the neighborhoods $N_{r,\epsilon}$ endows the state space $\sV_V$ the the structure of a module over the dg algebra $\sA_V$. 
 Moreover, as $\sA_V$-modules there is a quasi-isomorphism
 \ben
-\sV_V \simeq \sA_V \tensor_{\sA_{V,+}} \CC .
+\sV_V \simeq \sA_V \tensor_{\sA_{V,+}} \CC
 \een
+which sends the unit observable $1 \in \sV_V$ to the vacuum element $|0\>$. 
 \end{prop}
 
+\begin{proof}
+First, note that there is a map of cochain complexes $\sA_V \to \sV_V$ sending an element of the algebra $a$ to its action on the unit observable $a \cdot 1 \in \sV_V$. 
+By the unit axiom for factorization algebras, this maps fits into a commutative diagram
+\ben
+\begin{tikzcd}
+\sA_V \arrow[r] \arrow[d] & \Obs^\q_V(N_{\epsilon,r}) \arrow[d,"\mu"] \\
+\sV_V \arrow[r] & \Obs^\q_V(D(0,R)) .
+\end{tikzcd}
+\een
+By Lemma \ref{lem: N to D} we know that if $a \in \sA_{V,+}$ then $a \cdot 1$ is homotopically trivial in $\sV_V$. 
+Thus, $\sA_V \to \sV_V$ descends to a map of $\sA_V$-modules $\sA_V \tensor_{\sA_{V,+}} \CC \to \sV_V$.
+
+It remains to see that this is a quasi-isomorphism.
+It suffices to show that $H^*(\sA_{V,-}) \cong H^*(\sV_V)$.
+The map $\sA_V \to \sV_V$ preserves the filtration by symmetric degree, so it defines a map ${\rm Gr} H^*(\sA_V) \to {\rm Gr} H^*(\sV_V)$.
+The cohomology of the state space $\sV_V$ sits inside the cohomology of the disk observables as the $U(d)$-invariants. 
+At the level of the associated graded this embedding is
+\ben
+{\rm Gr} H^*(\sV_V) \subset \Sym\left( \left(\sO^{hol}(D(w,r)\right)^\vee \tensor V^* \oplus \left(\Omega^{d,hol}(D(w,r))\right)^\vee\tensor V[-d+1] \right) [\hbar] .
+\een
+The right-hand side is the associated graded of the cohomology of the disk observables which we computed in Lemma \ref{??}.
+Consider the topological vector space $\sO^{hol}(D(w,r))^\vee$. 
+Using the holomorphic volume form $\d^d z$ the higher residue pairing defines a map $H^{d-1}(A_d) \to \sO^{hol}(D(w,r))^\vee$ which is an isomorphism after taking $U(d)$-eigenspaces
+Similarly, residue pairing defines a map $H^{d-1}(A_d) \to (\Omega^{d,hol}(D(w,r)))^\vee$ which is an isomorphism at the level of $U(d)$-eigenspaces. 
+Thus, we can identify the map ${\rm Gr} H^*(\sA_V) \to {\rm Gr} H^*(\sV_V)$ with the map
+\ben
+\Sym(\d^d z H^*(A_d) \tensor V^*[d-1] \oplus H^*(A_d) \tensor V)[\hbar] \to \Sym(\d^d z H^{d-1}(A_d) \tensor V^* \oplus H^*(A_d)\tensor V [-d+1]) [\hbar] 
+\een
+induced by the projection $H^*(A_d) \to H^{d-1}(A_d) [-d+1] = \sA_{d,-}$ as desired.
+\end{proof}
+
+
+%Recall that $\sA_V$ is isomoprhic to the enveloping algebra of the Heisenberg dg Lie algebra 
+%\ben
+%\sH_V = A_d \tensor (V^*[d-1] \tensor V) \oplus \CC \cdot \hbar .
+%\een
+%Now, the cohomology of the dg Lie subalgebra $\sH_{V,-} \subset \sH_V$ is $H^{d-1}(A_d) 
 
 \begin{rmk}
 The subalgebra of sphere operators $\sA_{V,+}$ is the higher dimensional generalization of ``annihilation operators" in the context of CFT. 
 Repeated application of these operators kills any vector in $\sV_V$.
 Similarly, the quotient $\sA_{V,-}$ is the collection of "creation operators". 
+One obtains the entire $\sA_V$-module by applying elements of $\sA_{V,-}$ to the vacuum element $|0\>$. 
 \end{rmk}
 
 %\begin{lem} 
@@ -4185,7 +4281,7 @@ The higher dimensional calculation is similar, and the result is given following
 
 The local operators of the theory we are those supported on the disk $D^2 \subset \CC^2$. 
 Since the theory is translation invariant it suffices to consider a disk centered at the origin $0 \in \CC^2$. 
-When $d=2$ we use Proposition \ref{} to read off the cohomology of the disk observables $H^*\Obs^\q_V (D^2)$:
+When $d=2$ we use Lemma \ref{lem: disk cohomology} to read off the cohomology of the disk observables $H^*\Obs^\q_V (D^2)$:
 \ben
 \Sym\left((\sO^{hol}(D^2) \tensor V)^\vee \right) \tensor \Sym \left( (\Omega^{2,hol}(D^2) \tensor V^*)^\vee [-1] \right) .
 \een 
@@ -4196,10 +4292,10 @@ When $d=2$ we use Proposition \ref{} to read off the cohomology of the disk obse
 \een
 \end{prop}
 
-For an introduction to the elliptic $\Gamma$-function and other related hypergeometric series we refer to the reference \cite{Gasper}. 
+For an introduction to the elliptic $\Gamma$-function and other related hypergeometric series we refer to the textbook reference \cite{Gasper}. 
 
 \begin{proof}
-We recall the basis for a $U(2)$-eigenspaces of the observables on a $2$-disk that we described in Section \ref{sec: disk observables}.
+We recall the basis for a $U(2)$-eigenspaces of the observables on a $2$-disk that we described in Section \ref{sec: disk obs}.
 Fix non-negative integers $n_1,n_2 \geq 0$ and elements $v \in V$, $v^* \in V^*$ consider the following linear observables on the $2$-disk:
 \ben
 \begin{array}{ccclll} 
@@ -4237,7 +4333,6 @@ The formula for character in the statement of the proposition follows from the f
 Our expression for the character of the local operators of the $\beta\gamma$ system on $\CC^2$ agrees with the partition function of the $\cN = 1$ supersymmetric chiral multiplet on the manifold $S^3 \times S^1$, computed in \cite{Closset1}.
 There is the following mathematical explanation for this.
 The free $\beta\gamma$ system on $\CC^2$ is equivalent to the holomorphic twist of the free $\cN=1$ chiral multiplet in four dimensions. 
-We will prove this fact below in a subsequent publication.
 Recall that the data of a twist of a supersymmetric theory, as explained in \cite{CostelloHolomorphic} is that of a supercharge $Q$ that satisfies $Q^2 = 0$. 
 
 \begin{prop}\label{prop: twist}
@@ -4247,11 +4342,13 @@ The twist of the $\cN=1$ chiral multiplet with respect to $Q$ is equivalent to t
 If one turns on a $\CC^\times$-invariant superpotential $V$, the twist is equivalent to the holomorphic $\sigma$-model with target the critical locus of $V$.
 \end{prop}
 
+We will prove this proposition in a subsequent publication.
+
 \begin{rmk}
 One should compare this to the standard situation for two-dimensional supersymmetric $\sigma$-models.
 The two-dimensional $\cN = (2,0)$ theory admits a unique nontrivial holomorphic twist which is equivalent to the curved $\beta\gamma$ system on Riemann surfaces. 
 There are many verifications of this in the physics literature, see \cite{WittenCDO} for the original discussion. 
-For a mathematical proof, see the forthcoming paper \cite{GSW}.\footnote{In fact, Proposition \ref{prop: twist} implies this.}
+For a mathematical proof, see the forthcoming paper with Gwilliam and Szczesny \cite{GSW}.\footnote{In fact, Proposition \ref{prop: twist} implies this.}
 It is the $\cN = (2,2)$ $\sigma$-model that admits two further topological twists, these are the $A$ and $B$-models.
 \end{rmk}
 
@@ -4277,6 +4374,6 @@ It would be interesting to compare the calculation of the partition function on 
 \end{rmk}
 
 
-\end{document}
+%\end{document}
 
 

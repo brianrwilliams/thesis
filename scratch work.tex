@@ -1,0 +1,77 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\title{Introduction}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\title{scratch}
+
+\begin{document}
+\maketitle
+
+\begin{lem}
+Let $(k, (\vec{n}))$ be a pair of wheel data such that $k > d+1$.
+Then the $\epsilon \to 0$ limit of the analytic weight
+\ben
+\lim_{\epsilon \to 0} \Tilde{W}_{\epsilon < L}^{k, (n)} = 0
+\een
+is identically zero as a distribution on $\CC^{dk}$. 
+\end{lem}
+\begin{proof}
+The proof is very similar to the argument we gave in the proof of Lemma \ref{lem: tech 1}, so we will be a bit more concise.
+First, we make the familiar change of coordinates as in Equations (\ref{coords1}),(\ref{coords2}).
+Using the explicit form the heat kernel and propagator we see that for any $\Phi \in C^\infty_c(\CC^{dk})$ the weight is
+\ben
+\begin{array}{lll}
+\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) & = \displaystyle \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^{k-1}} \frac{1}{(4 \pi \epsilon)^d} \prod_{\alpha=1}^{k-1} \frac{\d t_\alpha}{(4 \pi t_\alpha)^d} \\
+& \displaystyle \times \sum_{i_1,\ldots,i_{k-1} =1}^d \epsilon_{i_1,\ldots,i_d} \left(\frac{\wbar^1_{i_1}}{t_1} \frac{(\wbar^1)^{n^1}}{t^{|n^1|}}\right) \cdots \left(\frac{\wbar^{k-1}_{i_{k-1}}}{t_{k-1}}\frac{(\wbar^{k-1})^{n^{k-1}}}{t^{|n^{k-1}|}}\right) \left(\frac{1}{t^{|n^k|}} \left(\sum_{\alpha=1}^{k-1} \wbar^\alpha\right)^{n^k}\right) \\
+& \displaystyle \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+\end{array}
+\een
+We will integrate by parts to eliminate the factors of $\wbar_i^\alpha$.
+
+For each $1 \leq \alpha < k$ and $i_\alpha$, define the $\epsilon$ and $t=(t_1,\ldots,t_{k-1})$-dependent holomorphic differential operator
+\ben
+D_{\alpha, i_\alpha}(t) := \left(\frac{\partial}{\partial w^\alpha_{i_\alpha}} - \sum_{\beta = 1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{i_\alpha}^{\beta}}\right)
+\prod_{j=1}^d \left(\frac{\partial}{\partial w_j^\alpha} - \sum_{\beta =1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{j}^\beta}\right)
+^{n_j^\alpha} .
+\een
+And the $\epsilon,t$-dependent holomorphic differential operator
+\ben
+D_{k}(t) = \prod_{j=1}^d \left(\frac{\partial}{\partial w_j^k} - \sum_{\beta =1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{j}^\beta}\right)^{n_j^k} .
+\een
+
+By a completely analogous version of Lemma \label{lem: diff applied E} the operators above allow us to integrate by parts and express the weight in the form
+\ben
+\begin{array}{lll}
+\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) & = \displaystyle \pm \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}}\left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \int_{(t_1,\ldots,t_{k-1}) \in [\epsilon,L]^{k-1}} \frac{1}{(4 \pi \epsilon)^d} \prod_{\alpha=1}^{k-1} \frac{\d t_\alpha}{(4 \pi t_\alpha)^d}  \\ 
+& \displaystyle \times\left( \sum_{i_1,\ldots, i_{k-1}} \epsilon_{i_1\cdots,i_d} D_{1, i_1}(t) \cdots D_{k-1,i_{k-1}} (t) D_k(t) \Phi(w^1,\ldots,w^k) \right) \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+\end{array}
+\een 
+Observe that the operators $D_{\alpha,i_\alpha}(t), D_k(t)$ are uniformly bounded in $t$.
+Thus, there exists a constant $C = C(\Phi) > 0$ depending only on the function $\Phi$ such that we can bound the weight as
+\be\label{anomaly bound 1}
+\begin{array}{lll}
+|\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi)| & \leq & \displaystyle C \int_{(w^1,\ldots,w^{k-1}} \prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha  \int_{(t_1,\ldots,t_{k-1}) \in [\epsilon,L]^{k-1}} \d t_1 \ldots \d t_k \frac{1}{\epsilon^d t^d_1\cdots t^d_{k-1}} \\
+& & \displaystyle \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+\end{array}
+\ee
+Thus, to show that the limit $\lim_{L \to 0} \lim_{\epsilon \to 0}  \Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) = 0$ it suffices to show that the limit of the right-hand side vanishes. 
+
+The Gaussian integral over the variables $w^\alpha_i$ contributes the following factor
+\ben
+\int_{(w^1,\ldots,w^{k-1}} \prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) = C' \left(\frac{\epsilon t_1 \cdots t_{k-1}}{\epsilon + t_1 + \cdots + t_{k-1}}\right)^{d} .
+\een
+Where $C'$ involves factors of $2$ and $\pi$.
+Plugging this back in to the right-hand side of (\ref{anomaly bound 1}) we see that 
+\ben
+|\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi)| \leq C C' \int_{[\epsilon,L]^{k-1}} \frac{\d t_1 \cdots \d t_{k-1}}{(\epsilon + t_1 + \cdots + t_{k-1})^d} \leq C C' \prod_{\alpha = 1}^{k-1} \int_{t_\alpha = \epsilon}^L \d t_\alpha t_\alpha^{-d/(k-1)} .
+\een
+In the second inequality we have used the fact that $\epsilon > 0$ and the AM-GM inequality.  
+It is immediate to see that the $\epsilon \to 0$ limit of the above exists provided $k > d+1$, which is the situation we are in, and that the $L \to 0$ limit vanishes. 
+\end{proof}
+\end{document}

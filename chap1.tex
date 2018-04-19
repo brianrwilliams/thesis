@@ -1,44 +1,47 @@
-\documentclass[10pt]{amsart}
+%\documentclass[10pt]{amsart}
+%
+%\usepackage{macros,slashed}
+%
+%\linespread{1.25}
+%
+%\usepackage{tikz}
+%\usetikzlibrary{arrows,shapes}
+%\usetikzlibrary{trees}
+%\usetikzlibrary{matrix,arrows}
+%\usetikzlibrary{positioning}
+%\usetikzlibrary{calc,through}
+%\usetikzlibrary{decorations.pathreplacing}
+%\usepackage{pgffor}
+%
+%\def\sAd{\sA{\rm d}}
+%
+%\title{Holomorphic quantum field theory}
+%
+%\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+%
+%
+%\begin{document}
+%\maketitle
+%\tableofcontents
 
-\usepackage{macros,slashed}
-
-\linespread{1.25}
-
-\usepackage{tikz}
-\usetikzlibrary{arrows,shapes}
-\usetikzlibrary{trees}
-\usetikzlibrary{matrix,arrows}
-\usetikzlibrary{positioning}
-\usetikzlibrary{calc,through}
-\usetikzlibrary{decorations.pathreplacing}
-\usepackage{pgffor}
-
-\def\sAd{\sA{\rm d}}
-
-\title{Holomorphic quantum field theory}
-
-\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
-
-
-\begin{document}
-\maketitle
-\tableofcontents
-
-%\chapter{Holomorphic quantum field theory}
+\chapter{Holomorphic quantum field theory} \label{chap: holtheory}
 
 Our main objective in this chapter is two-fold. 
 First we will define the concept of a holomorphic field theory and set up notation and terminology that we will use throughout the text. 
 Our next goal is more technical, but will provide the backbone for much of the analysis throughout the remainder of this thesis.
 We will show how certain holomorphic theories are surprisingly well-behaved when it comes to the problem of renormalization. 
 
-In \cite{CostelloRenormalization} Costello has provided a mathematical formulation of the Wilsonian approach to quantum field theory.
+The starting point of our work is Costello's \cite{CostelloRenormalization} mathematical formulation of the Wilsonian approach to perturbative quantum field theory.
 The main takeaway is that to construct a full quantum field theory it suffices to define the theory at each energy (or length) scale and to ask that these descriptions be compatible as we vary the scale.
+Concretely, this compatibility is through the {\em renormalization group (RG) flow} and is encoded by an operator $W(P_{\epsilon < L}, -)$ acting on the space of functionals. 
+The functional $W(P_{\epsilon < L},-)$ is defined as a sum over weights of graphs.
+This is how Feynman diagrams appear in Costello's formalism.
 The infamous infinities of quantum field theory arise due to studying behavior of theories at arbitrarily high energies (or small lengths). 
 In physics this is called the ultra-violet (UV) divergence. 
 Classically, a theory is defined by a {\em local functional} $I^{cl}$ which is a functional on the space of fields obtained by integrating a Lagrangian density.
 At each scale $L$ a theory is defined by an action functional $I[L]$, which is a function on the space of fields. 
 
-Summarizing, there are two main steps to construct a QFT in our formalism.
+In some broad generality, there are two main steps to construct a QFT in this formalism.
 \begin{itemize}
 \item[{\bf Renormalization:}] For each scale $L$ and regulator $\epsilon > 0$ consider the RG flow from scale $\epsilon$ to $L$:
 \be
@@ -50,7 +53,7 @@ W(P_{\epsilon<L} , I - I^{CT}(\epsilon))
 \een
 is well-defined. 
 Denote this limit by $I[L]$.
-The family $\{I[L]\}$ defines a prequantization.
+The family $\{I[L]\}$ defines what we call a {\em prequantization}.
 \item[{\bf Gauge consistency:}] We then ask if the family $\{I[L]\}$ defines a consistent quantization.
 For each $L$ we require that $I[L]$ satisfy the scale $L$ quantum master equation....
 \end{itemize}
@@ -72,31 +75,33 @@ Moreover, if $I$ is holomorphically translation invariant we can pick the family
 \end{lem}
 
 We will use this result repeatedly throughout this thesis. 
-This result tells us that the analytic difficulties are manageable and that the key focus will be on obstructions to satisfying the quantum master equation.
-In particular, a corollary of this result will give us a procedure for computing the one-loop obstruction explicitly in terms of Feynman diagrams. 
+This result tells us that the analytic difficulties encountered in QFT are manageable in the case of holomorphic theories on $\CC^d$.
+Thus, our main focus will be on obstructions to satisfying the quantum master equation.
+Indeed, a corollary of this result will give us a procedure for computing the one-loop obstruction explicitly in terms of Feynman diagrams. 
 We conjecture that an extension of this result should hold to all orders in $\hbar$ which would give a constructive way of analyzing the obstruction theory order by order in $\hbar$. 
 Nevertheless, we will leverage the one-loop behavior to formulate and prove index theorems in the context of holomorphic QFT.
 
 One surprising aspect of this comes from thinking about holomorphic theories in a different way. 
 Any supercharge $Q$ of a supersymmetric theory satisfying $Q^2 = 0$ allows one to construct a ``twist". 
 In some cases, where Clifford multiplication with $Q$ spans all translations such a twist becomes a topological theory (in the weak sense). 
-In any case, however, such a $Q$ defines a ``holomorphic twist", which results in the type of holomorphic theories we consider.
+In any case, however, such a $Q$ defines a ``holomorphic twist" \cite{CostelloHolomorphic}, which results in the type of holomorphic theories we consider.
+We will remark on numerous examples of this phenomena throughout the thesis.
 Regularization in supersymmetric theories, especially gauge theories, is notoriously difficult. 
 Our result implies that after twisting the analytic difficulties become much easier to deal with. 
-Consequently, phenomena such as anomalies can be cast in a more algebraic framework.
+Consequently, facets of these theories, such as their anomalies, can be cast in a more algebraic framework.
 We will see such an example of this in the case of the holomorphic $\sigma$-model in the next chapter. 
 
-Already, in \cite{LiVertex} Li has used a complex one-dimensional version of this fact to all orders in $\hbar$. 
+Already, in \cite{LiVertex} Li has proved a stronger complex one-dimensional version of this fact to all orders in $\hbar$. 
 He uses this to give an elegant interpretation of the quantum master equation for two-dimensional chiral conformal field theories using vertex algebras.
-We do not make any statements in this work past one-loop
-quantizations, but the higher loop behavior remains a very interesting and subtle problem that we hope to return to.
+Although we do not make any statements in this thesis past one-loop
+quantizations, the higher loop behavior remains a rich and subtle problem that we hope to return to.
 
 \section{The definition of a quantum field theory}
 
-The goal of this section is to review the classical and quantum Batalin-Vilkovisky formalisms.
+In this section we will give an expedient review of the classical and quantum Batalin-Vilkovisky formalisms.
 We will also set up the requisite conventions and notations that we will use throughout the thesis. 
 
-\subsection{Classical field theory}
+\subsection{Classical field theory} \label{sec: classical bv}
 
 Classical field theory is a formalism for describing a physical system in terms of objects called {\em fields}. 
 Mathematically, the space of fields is a (most often infinite dimensional) vector space $\sE$. 
@@ -148,8 +153,8 @@ The details of this setup are carried out in the Appendix of \cite{CG1}, but we 
 
 Let ${\rm Mfld}$ be the site of smooth manifolds.
 The covers defining the Grothendieck topology are given by surjective local diffeomorphisms.
-There is a natural sheaf on this site given by smooth functions $C^\infty : M \mapsto C^\infty(M)$. 
-By definition, a $C^\infty$-module is a module sheaf over $C^\infty$ on ${\rm Mfld}$. 
+There is a natural sheaf of algebras on this site given by smooth functions $C^\infty : M \mapsto C^\infty(M)$. 
+%By definition, a $C^\infty$-module is a module sheaf over $C^\infty$ on ${\rm Mfld}$. 
 
 For any $p$ the assignment $\Omega^p : M \mapsto \Omega^p (M)$ defines a $C^\infty$-module.
 Similarly, if $F$ is any $C^\infty$-module we have the $C^\infty$-module of $p$-forms with values on $F$ defined by the assignment 
@@ -164,7 +169,7 @@ A {\em differentiable vector space} is a $C^\infty$-module equipped with a map o
 \een 
 such that for each $M$, $\nabla(M)$ defines a flat connection on the $C^\infty(M)$-module $F(M)$. 
 A map of differentiable vector spaces is one of $C^\infty$-modules that intertwines the flat connections. 
-This defines a category that we denote ${\rm DVS}$ 
+This defines a category that we denote ${\rm DVS}$.
 \end{dfn}
 
 Our favorite example of differentiable vector spaces are imported directly from geometry.
@@ -215,11 +220,13 @@ The differentiable structure arises from the natural topologies on the spaces of
 We will denote by $\Bar{\sE}(X)$ ($\Bar{\sE}_c(X)$) the space of (compactly supported) distributional sections.
 It is useful to bear in mind the following inclusions
 \ben
-\begin{tikzcd}        
-    \sE_c(X)  \arrow[hook]{r} \arrow[hook]{rd} & \Bar{\sE}_c(X) \arrow[hook]{r} & \Bar{\sE}(X) \\
+\begin{tikzcd}      
+& \Bar{\sE}_c(X) \arrow[hook]{dr} & \\
+\sE_c(X)  \arrow[hook]{ur} \arrow[hook]{rd} & & \Bar{\sE}(X) \\
     & \sE(X) \arrow[hook]{ru} & .
 \end{tikzcd}
 \een
+When $X$ is compact the bottom left and top right arrows are equalities.
 
 Denote by $E^\vee$ the dual vector bundle whose fiber over $x \in X$ is the linear dual of $E_x$. 
 Let $E^!$ denote the vector bundle $E^\vee \tensor {\rm Dens}_X$, where ${\rm Dens}_X$ is the bundle of densities. 
@@ -270,8 +277,8 @@ It is a standard fact that ${\rm Jet}(E)$ is equipped with a flat connection giv
 Above, we have defined the algebra of functions $\sO(\sE(X))$ on the space of sections $\sE(X)$.
 Similarly, let $\sO_{red}(\sE(X)) = \sO(\sE(X)) / \RR$ be the quotient by the constant polynomial functions. 
 The space $\sO_{red}(J(E))$ inherits a natural $D_X$-module structure from $J(E)$. 
-We refer to $\sO_{red}(J(E))$ as the space of {\em Lagrangians} on the space of sections of the vector bundle $E$. 
-Indeed, every element $F \in \sO_{red}(J(E))$ can be expanded as $F = \sum_n F_n$ where each $F_n$ is an element 
+We refer to $\sO_{red}(J(E))$ as the space of {\em Lagrangians} on the vector bundle $E$. 
+Every element $F \in \sO_{red}(J(E))$ can be expanded as $F = \sum_n F_n$ where each $F_n$ is an element 
 \ben
 F_n \in {\rm Hom}_{C^\infty_X} (J(E)^{\tensor n}, C^\infty_X)_{S_n} \cong {\rm PolyDiff}(\sE^{\tensor n}, C^\infty(X))_{S_n}
 \een
@@ -281,7 +288,7 @@ The proof of the isomorphism on the right-hand side can be found in Chapter 5 of
 A local functional is given by a Lagrangian densities modulo total derivatives.
 The mathematical definition is the following.
 
-\begin{dfn}
+\begin{dfn} \label{dfn: local fnl}
 Let $E$ be a graded vector bundle on $X$.
 Define the sheaf of {\em local functionals} on $X$ to be
 \ben
@@ -352,7 +359,7 @@ The complex of global classical observables of the theory is defined by
 \ben
 \Obs^{\cl}_{\sE}(X) = (\sO(\sE(X)), \{S,-\}) .
 \een
-This complex is the general replacement for functions on the derived locus from the beginning of this section.
+This complex is the field theoretic replacement for functions on the derived locus of $S$ from the beginning of this section.
 Although it does not have a $P_0$-structure, there is a subspace that does. 
 This is sometimes referred to as the {\em BRST} complex in the physics literature.
 
@@ -387,6 +394,13 @@ such that the collection $\{\ell_n\}_{n \in \NN}$ satisfy the conditions of an $
 In particular, $\sL$ is a sheaf of $L_\infty$ algebras. 
 \end{dfn}
 
+The simplest example of a local Lie algebra starts with the data of an ordinary Lie algebra $\fg$. 
+We can then take the constant bundle $\ul{\fg}_X$ with fiber $\fg$. 
+The Lie bracket on $\fg$ extends to define the structure of a local Lie algebra. 
+Another important example of a local Lie algebra is given by the Lie algebra of vector fields ${\rm Vect}(X)$ on a smooth manifold. 
+The Lie bracket of vector fields is a bidifferential operator on the tangent bundle and this equips the sheaf of sections with the structure of a sheaf of Lie algebras.
+We will study the holomorphic version of this local Lie algebra in Chapter \ref{chap: symmetries}.
+
 Just as in the case of an ordinary graded vector bundle, we can discuss local functionals on a local Lie algebra $L$. 
 In this case, the $L_\infty$ structure maps give this the structure of a sheaf of complexes. 
 Indeed, the $\infty$-jet bundle $J L$ is an $L_\infty$ algebra object in $D_X$-modules and so we can define the $D_X$-module of reduced Chevalley-Eilenberg cochains $\cred^*(J L)$. 
@@ -399,6 +413,26 @@ The local Chevalley-Eilenberg cochain complex is the sheaf of cochain complexes
 \cloc^*(\sL) = {\rm Dens}_X \tensor_{D_X} \cred^*(L) .
 \een
 \end{dfn}
+
+The {\em local cohomology} of a local Lie algebra is the cohomology of the local CE complex.
+
+\begin{rmk}
+We have already remarked that for a graded vector bundle $E$ there is an embedding $\oloc(\sE) \hookrightarrow \sO_{red}(\sE)$.
+This translates to an embedding of sheaves of cochain complexes $\cloc^*(\sL) \hookrightarrow \cred^*(\sL_c)$ for any local Lie algebra $\sL$. 
+In the case of vector fields, there is a related cochain complex that has been studied extensively in the context of characteristic classes of foliations \cite{Fuks, Guillemin, LosikDiag, Bernstein}. 
+Suppose, for simplicity, that $X$ is a compact smooth manifold.
+If ${\rm Vect}(X)$ is the Lie algebra of vector fields on $X$ then the (reduced) {\em diagonal cochain complex} is the subcomplex 
+\ben
+{\rm C}^*_{\Delta,\rm red}({\rm Vect}(X)) \subset \cred^*({\rm Vect}(X))
+\een
+consisting of cochains $\varphi : {\rm Vect}(X)^{\tensor k} \to \CC$ satisfying $\varphi(X_1,\ldots,X_k) = 0$ if $\bigcap_{i=1}^k {\rm Supp}(X_i) = \emptyset$. 
+That is, the cocycle vanishes unless all of the supports of the inputs overlap nontrivially. 
+The inclusion of the local cochain complex $\cloc^*({\rm Vect}(X)) \subset \cred^*({\rm Vect}(X))$ factors through this subcomplex to give a sequence of inclusions
+\ben
+\cloc^*({\rm Vect}(X)) \hookrightarrow {\rm C}^*_{\Delta,\rm red}({\rm Vect}(X)) \hookrightarrow \cred^*({\rm Vect}(X)) .
+\een
+This is because the cochain of ${\rm Vect}(X)$ defined from a local cochain involves the integral of local operators applied to the inputs.
+\end{rmk}
 
 It turns out that the definition of a classical field theory can be repackaged in terms of certain structures on a local $L_\infty$ algebra.
 The first piece of data we need to transport to the $L_\infty$ side is that of a symplectic pairing. 
@@ -436,9 +470,63 @@ The first Taylor component $\ell_1$ is precisely the operator $Q$ before, so ell
 
 %The functionals we consider are required to be continuous with a certain topology on the topological vector space $\sE$. 
 
-\subsubsection{Moduli problems and Koszul duality}
+\subsubsection{Deformation theory}
 
-\brian{add this}
+There is a deep relationship to the way in which we formulate perturbative classical field theories and deformation theory. 
+We diverge a bit from our discussion of field theory to explain this.
+
+\begin{thm}
+There is an equivalence (of $\infty$-categories) between the category of formal (pointed) moduli problems and the category of dg Lie algebras.
+\end{thm}
+
+\begin{rmk} 
+Every $L_\infty$ algebra is equivalent (in a functorial way) to a dg Lie algebra.
+Often times this theorem is formulated in terms of $L_\infty$ algebras.
+\end{rmk}
+
+The ideas of deformation theory leading up to this theorem have been developed by many influential mathematicians in the past forty years including Quillen, Deligne, Kontsevich, Drinfeld, and Feigin. 
+The modern formulation of the theorem above and its proof is due to Lurie \cite{LurieDagX}.
+
+By definition, a {\em formal moduli problem} over $\CC$ (valued in simplicial sets) is a functor (of simplicially enriched categories) of the form
+\ben
+F : {\rm dgArt}_\CC \to {\rm sSets}
+\een
+where ${\rm dgArt}_{\CC}$ is the category of dg Artin algebras. 
+These are finite dimensional $\CC$-linear dg algebras $A$ concentrated in cohomological degrees $\leq 0$ such that $H^0 A$ is Artinian in the usual sense.
+One requires that $F$ satisfies the following conditions:
+\begin{enumerate}
+\item $F(\CC) \simeq *$ ($F$ is pointed);
+\item $F$ takes surjective maps of dg Artin algebras to fibrations of simplicial sets;
+\item $F$ preserves fiber products: $F(A \times_B C) \xto{\simeq} F(A) \times_{F(B)} F(C)$.
+\end{enumerate}
+
+The most important way in which formal moduli problems arise is through the {\em Maurer-Cartan} equation.
+Suppose $\fg$ is an $L_\infty$ algebra (over $\CC$) and $(R,\fm)$ a dg Artin algebra.
+Define the simplicial set
+\ben
+{\rm MC}(\fg \tensor \fm) \in {\rm sSet}
+\een
+which assigns to an $n$-simplex the set of Maurer-Cartan elements $\alpha \in \fg \tensor \fm \tensor \Omega^*(\Delta^n)$. 
+It is a classical result that ${\rm MC}(\fg) : (A, \fm) \mapsto {\rm MC}(\fg \tensor \fm)$ defines a formal moduli problem, see \cite{GetzlerLie}.
+In fact, the functor $\fg \mapsto {\rm MC}(\fg)$ is the one which provides the equivalence of the main theorem of deformation theory above. 
+Sometimes, we will use the notation $B \fg$ to denote this formal moduli problem associated to $\fg$.
+Since a Maurer-Cartan element of $\fg \tensor \fm$ is equivalent to a map of commutative dg algebras $\clie^*(\fg) \to A$ preserving the maximal ideals, we see that $\clie^*(\fg)$ is precisely the space of functions on $B \fg$.
+
+\begin{rmk} 
+There are many natural instances of formal moduli problems.
+For instance, if $X$ is any derived scheme then and $x \in X$ is a point, then the formal neighborhood $X^{\wedge}_x$ is a formal moduli problem.
+\end{rmk}
+
+Local Lie algebras, as we've introduced above, provide a natural ''sheafy" version of dg Lie, or $L_\infty$, algebras over smooth manifolds. 
+If $\sL$ is a local Lie algebra on a manifold $X$, then for each open $U \subset X$ one can define the Maurer-Cartan space $B(\sL(U))(A) = {\rm MC}(\sL(U) \tensor \fm)$ just as above.
+This defines a (homotopy) sheaf of formal moduli problems on $X$. 
+Motivated by the ordinary case we can make the following definition.
+
+\begin{dfn} 
+An {\em elliptic moduli problem} is a sheaf of formal moduli problems represented by an elliptic $L_\infty$ algebra $\sL$. 
+\end{dfn}
+
+According the previous section, we see that a classical theory in the BV formalism is simply a formal moduli problem that is equipped with the data of a shifted symplectic structure. 
 
 \subsection{Quantum field theory}
 
@@ -470,7 +558,7 @@ This is an operator
 Q^{GF} : \sE \to \sE[-1]
 \een 
 of cohomological degree $-1$.
-We require that $D = [Q,Q^{GF}]$ is a generalized Laplacian acting on sections $\sE$ in the sense of \cite{GetzlerDirac}, in addition to other conditions that can be found in Definition 5.4.0.5 in \cite{CG2}. ]
+We require that $D = [Q,Q^{GF}]$ is a generalized Laplacian acting on sections $\sE$ in the sense of \cite{GetzlerDirac}, in addition to other conditions that can be found in Definition 5.4.0.5 in \cite{CG2}.
 
 The utility of introducing the gauge fixing operator is that it allows us to introduce the operator $e^{-t D}$ which has a kernel that we denote $K_t \in \Bar{\sE} \tensor \Bar{\sE}$ for any $t \geq 0$. 
 This kernel satisfies the usual conditions of a heat kernel:
@@ -510,7 +598,7 @@ The regularized BV operator allows us to define the following {\em scale $L$ bra
 \een
 For $L > 0$ this bracket is defined on all of $\sO(\sE)$, just as $\Delta_L$ is.
 
-\subsubsection{Effective BV quantization}
+\subsubsection{Effective BV quantization} \label{sec: qme}
 
 Fix a free BV theory together with a gauge fixing operator.
 This is the data of an elliptic complex $(\sE, Q)$ with a $(-1)$-shifted symplectic form $\omega$.
@@ -536,7 +624,7 @@ This is our mathematical definition of the Feynman weight of the graph $\Gamma$,
 
 In the BV formalism, as developed in \cite{CostelloRenormalization,CG1,CG2}, one has the following definition of a quantum field theory.
 
-\begin{dfn}
+\begin{dfn}\label{dfn: qft}
 A {\em quantum field theory} in the BV formalism consists of a free BV theory $(\sE, Q, \omega)$ and an effective family of functionals
 \ben
 \{I[L]\}_{L \in (0,\infty)} \subset \sO^+_{P,sm}(\sE)[[\hbar]]
@@ -633,7 +721,7 @@ By applying the Dolbeault complex in appropriate locations, we will recover Cost
 
 There are many references in the physics literature to codify the concept of a holomorphic field theory.
 See, most closely related to our approach, special cases of this in the work of Nekrasov and collaborators in \cite{NekThesis, NekChiral, NekCFT}. 
-We will discuss in more detail the relationship of our analysis of holomorphic theories to this work in Chapters \ref{chap: holsig, chap: symmetries}. 
+We will discuss in more detail the relationship of our analysis of holomorphic theories to this work in Chapters \ref{chap: holsig} and \ref{chap: symmetries}. 
 
 \subsection{The definition of a holomorphic theory}
 
@@ -713,9 +801,8 @@ The definition of the fields of an ordinary field theory are the {\em smooth} se
 In our situation this is a silly thing to do since we lose all of the data of the complex structure we used to define the objects above.
 The more natural thing to do is to take the {\em holomorphic} sections of the vector bundle $V$. 
 By construction, the operator $Q^{hol}$ and the pairing $(-,-)_V$ are defined on holomorphic sections, so on the surface this seems reasonable.
-\brian{what should I say the problem is with doing things in the analytic category?}
+We will take a natural resolution of holomorphic sections in order to relate to the usual definition of a classical BV theory.
 
-The solution to this problem is in the existence of a resolution for the holomorphic sections of a vector bundle by smooth sections of bundles. 
 Given any holomorphic vector bundle $E$ we can define its {\em Dolbeault complex} $\Omega^{0,*}(X , E)$ with its Dolbeault operator 
 \ben
 \dbar : \Omega^{0,p}(X, E) \to \Omega^{0,p+1}(X, E) .
@@ -777,7 +864,7 @@ The action functional reads
 S(\gamma + \beta, \gamma'+\beta') = \int_{X} \beta \wedge \dbar \gamma' + \beta' \wedge \dbar \gamma .
 \een 
 When $d = 1$ this reduces to the ordinary chiral $\beta\gamma$ system from conformal field theory. 
-The $\beta\gamma$ system is a bosonic version of the ghost $bc$ system that appears in the quantization of the bosonic string, see Chapter ?? of \cite{Polchinski1}.
+The $\beta\gamma$ system is a bosonic version of the ghost $bc$ system that appears in the quantization of the bosonic string, see Chapter 6 of \cite{Polchinski1}.
 We will discuss this higher dimensional version further in Section \ref{chap: holsig}.
 For instance, we will see how this theory is the starting block for constructing general holomorphic $\sigma$-models. 
 \end{eg}
@@ -797,14 +884,14 @@ S(\gamma, \beta) = \int {\rm ev}_E(\beta \wedge \dbar \gamma) .
 When $E$ is a tensor bundle of type $(r,s)$ this theory is a bosonic version of the $bc$ ghost system of spin $(r,s)$. 
 For a general bundle $E$ we will refer to it as the $\beta\gamma$ system with coefficients in the bundle $E$. 
 
-\begin{eg}
-{\em The free chiral scalar}.
-Another basic example is the free chiral scalar. 
-This is a bit outside\brian{finish}
-Let $X$ be a complex manifold with Hermitian metric $g$. 
-Let $V = \ul{\CC}$, the trivial vector bundle. 
-\brian{do this}
-\end{eg}
+%\begin{eg}
+%{\em The free chiral scalar}.
+%Another basic example is the free chiral scalar. 
+%This is a bit outside\brian{finish}
+%Let $X$ be a complex manifold with Hermitian metric $g$. 
+%Let $V = \ul{\CC}$, the trivial vector bundle. 
+%\brian{do this}
+%\end{eg}
 
 \subsubsection{Interacting holomorphic theories}
 
@@ -818,7 +905,7 @@ Recall, the sheaf of local functionals on $\sE = \Gamma(E)$ is defined as the sh
 \een
 In the expression above $JE$ stands for the sheaf of smooth sections of the $\infty$-jet bundle ${\rm Jet}(E)$ which has the structure of a $D_X$-module.
 
-If $V$ is a holomorphic vector bundle we can define the bundle of holomorphic $\infty$-jets ${\rm Jet}^{hol}(V)$, \cite{GriffithsGreen, Wong}. 
+If $V$ is a holomorphic vector bundle we can define the bundle of holomorphic $\infty$-jets ${\rm Jet}^{hol}(V)$, \cite{GriffithsGreen, WongChandler}. 
 This is a pro-vector bundle that is holomorphic in a natural way.
 The fibers of this infinite rank bundle ${\rm Jet}^{hol}(V)$ are isomorphic to 
 \ben
@@ -887,9 +974,9 @@ In this way, we have produced a map
 \een
 Note that this bracket is of cohomological degree $-d+1$. 
 
-\begin{rmk}
-Note that the above still makes sense if $(-,-)_V$ is a polydifferential operator...\brian{should i say more?}
-\end{rmk}
+%\begin{rmk}
+%Note that the above still makes sense if $(-,-)_V$ is a polydifferential operator...\brian{should i say more?}
+%\end{rmk}
 
 We can now state the definition of a classical holomorphic theory. 
 
@@ -942,6 +1029,7 @@ The fact that $Q^{hol}I^{hol} + \frac{1}{2} \{I^{hol},I^{hol}\}^{hol} = 0$ impli
 Table \ref{table: holtoBV} is a useful summary showing how we are producing a BV theory from a holomorphic theory.
 
 \begin{table}
+\begin{center}
 \begin{tabular}{ |c|c|c| } 
  \hline
  Holomorphic theory & BV theory \\
@@ -954,6 +1042,7 @@ Holomorphic Lagrangian $I^{hol}$ & Local functional $I^{\Omega^{0,*}} \in \oloc(
 \end{tabular}
 \caption{From holomorphic to BV}
 \label{table: holtoBV}
+\end{center}
 \end{table}
 
 
@@ -962,8 +1051,9 @@ Holomorphic Lagrangian $I^{hol}$ & Local functional $I^{\Omega^{0,*}} \in \oloc(
 Let $\fg$ be a Lie algebra and $X$ any complex manifold.
 Consider the following holomorphic vector bundle on $X$:
 \ben
-V = \ul{\fg}_X \oplus K_X \tensor \fg^* [d-1] .
+V = \ul{\fg}_X [1] \oplus K_X \tensor \fg^* [d-2] .
 \een
+The notation $\ul{\fg}_X$ denotes the constant bundle with fiber $\fg$. 
 The pairing $V \tensor V \to K_X[d-1]$ is similar to the pairing for the $\beta\gamma$ system, except we use the evaluation pairing $\<-.-\>_\fg$ between $\fg$ and its dual. 
 In this example, $Q^{hol} = 0$.
 Write $f \in \sO^{hol}_X$ and $\beta \in K_X$ and consider
@@ -974,7 +1064,7 @@ where the $\cdots$ means that we symmetrize the inputs.
 This defines an element $I^{hol} \in \olochol(V)^+$ and the Jacobi identity ensures $\{I^{hol}, I^{hol}\}^{hol} = 0$. 
 The fields of the corresponding BV theory are
 \ben
-\sE_V = \Omega^{0,*}(X, \fg) \oplus \Omega^{d,*}(X, \fg^*) [d-1] .
+\sE_V = \Omega^{0,*}(X, \fg)[1] \oplus \Omega^{d,*}(X, \fg^*) [d-2] .
 \een
 The induced local functional $I^{\Omega^{0,*}}$ on $\sE_V$ is
 \ben
@@ -982,13 +1072,42 @@ I^{\Omega^{0,*}} (\alpha, \beta) = \int_X \<\beta, [\alpha,\alpha]\>_\fg .
 \een
 The total action is $S(\alpha,\beta) = \int \<\beta, \dbar \alpha\> + \<\beta,[\alpha,\alpha]\>_\fg$.
 This is formally similar to $BF$ theory (see below) and for that reason we refer to it as {\em holomorphic} BF theory.
-In \cite{johansen1}, or for a more mathematical treatment see \cite{CostelloYangian}, it is shown that this theory is a twist of $N=1$ supersymmetric Yang-Mills on $\RR^4$.
+The moduli problem this describes is the cotangent theory to the moduli space of holomorphic connections on the trivial $G$-bundle near the trivial bundle.
+There is an obvious enhancement that works near any holomorphic principal bundle.
+When $d = 2$, in \cite{johansen1}, or for a more mathematical treatment see \cite{CostelloYangian}, it is shown that this theory is a twist of $N=1$ supersymmetric Yang-Mills on $\RR^4$.
 \end{eg}
 
 \begin{eg} {\em Topological $BF$-theory}
-\brian{do this}
-
-In this case $Q^{hol} = \partial$. 
+This is a deformation of the previous example that has appeared throughout the physics literature.
+Suppose we take as our graded holomorphic vector bundle 
+\ben
+V = \left(\ul{\fg}_X \tensor \left(\oplus_{k = 0}^d \wedge^k T^{*1,0}X [1-k]\right)\right) \oplus \left(\ul{\fg^*}_X \tensor \left(\oplus_{k = 0}^d \wedge^k T^{*1,0}X [2(d-1)-k]\right)\right) .
+\een
+Here $\wedge^0 T^{*1,0}X$ is understood as the trivial bundle $\ul{\CC}_X$. 
+The pairing is given by combining the evaluation pairing between $\fg$ and $\fg^*$ and taking the wedge product and projecting onto the components isomorphic to $K_X$.
+Explicitly, the pairing is equal to the sum of bundle maps of the form
+\ben
+\ev_{\fg} \tensor \wedge : \left(\ul{\fg}_X \tensor \wedge^k T^{*1,0}X [1-k]\right) \tensor \left(\ul{\fg^*}_X \tensor \wedge^{d-k} T^{*1,0}X [d-1+k]\right) \to K_X [d-1] .
+\een
+The differential is of the form 
+\ben
+Q^{hol} = {\rm id}_\fg \tensor \partial + {\rm id}_{\fg^*} \tensor \partial,
+\een
+where $\partial$ is the holomorphic de Rham differential.
+The holomorphic interaction is given by combining the Lie algebra structure on $\fg$ with the wedge product of the holomorphic bundles $\wedge^k T^{*1,0}X$. 
+We observe that the associated BV theory has classical space of fields given by
+\ben
+(A,B) \in \sE_V = \Omega^*(X, \fg[1] \oplus \fg^*[2d-2]) 
+\een
+where $\Omega^*$ is now the {\em full} de Rham complex.
+The action functional is
+\ben
+S = \int_X \ev_{\fg}(B, \d A) + \frac{1}{3} \ev_{\fg}(B, [A,A]) .
+\een
+This is the well-known topological BF theory on the even dimensional {\em real} manifold $X$ (of real dimension $2d$). 
+It might seem silly that we have used the formalism of holomorphic field theory to describe a very simple topological theory.
+We will discuss advantages of this approach at the send of the next section.
+In particular, the theory of regularization for holomorphic theories we will employ has peculiar consequences for renormalizing certain classes of topological theories such as Topological BF theory.
 \end{eg}
 
 When we construct a BV theory from a holomorphic theory $V \rightsquigarrow \sE_V$ it is natural to expect that deformations of the theory must come from holomorphic data.
@@ -1051,7 +1170,7 @@ We will not do that here, but hope the idea of how to do so is clear.
 %Indeed, since each of the coefficients $a_I(z)$ are holomorphic we see that ${\rm Dol}(\ell_n^L)$ is compatible with $\dbar$. 
 %\end{proof}
 
-\subsection{Holomorphically translation invariant theories}
+\subsection{Holomorphically translation invariant theories} \label{sec: hol trans}
 
 When working on affine space $\RR^n$ one can ask for a theory to be invariant with respect to translations. 
 In this section, we consider the affine manifold $\CC^d = \RR^{2d}$ equipped with its standard complex structure and define what a {\em holomorphically translation invariant} theory is on it. 
@@ -1209,7 +1328,7 @@ We'd like to characterize deformations that preserve holomorphically translation
 Recall that in the holomorphic case there is the holomorphic jet bundle $J^{hol}V$.
 The fiber at zero of this jet bundle may be identified as $J^{hol}_0 V = V_0 [[z_1,\ldots,z_d]]$ where the $z_i$'s denote the formal jet coordinate. 
 
-\begin{cor}
+\begin{cor}\label{cor: hol trans invt def}
 Suppose that $Q^{hol} = 0$.
 Then, there is a quasi-isomorphism
 \ben
@@ -1445,7 +1564,7 @@ The proof of the claim follows.
 %
 %\end{proof}
 
-\section{Renormalization of holomorphic theories}
+\section{Renormalization of holomorphic theories} \label{sec: hol renorm}
 
 In this section we study the renormalization of holomorphically translation invariant field theories on $\CC^d$ for any $d \geq 1$. 
 We start with a classical interacting holomorphic theory on $\CC^d$ and consider one-loop homotopy RG flow from some finite scale $\epsilon$ to scale $L$.
@@ -1580,7 +1699,7 @@ D = \sum_{n_1,\ldots n_d} \frac{\partial^{n_1}}{\partial z_{1}^{n_1}}\cdots \fra
 applied to the propagator $P_{\epsilon<L}^{an}$.
 This motivates the following definition. 
 
-\begin{dfn}
+\begin{dfn}\label{dfn: analytic weight}
 Let $\epsilon , L > 0$. 
 In addition, fix the following data.
 \begin{enumerate}[(a)]
@@ -1597,7 +1716,7 @@ W_{\epsilon < L}^{k, (n)} : C_c^\infty((\CC^d)^k) \to \CC,
 \een
 that sends a smooth compactly supported function $\Phi \in C_c^\infty((\CC^d)^k) = C_c^\infty(\CC^{dk})$ to
 \be\label{weight1}
-W_{\epsilon < L}^{k, (n)} (\Phi) = \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha) \prod_{\alpha = 1}^k \left(\frac{\partial}{\partial z^i}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^\alpha, z^{\alpha+1}) .
+W_{\epsilon < L}^{k, (n)} (\Phi) = \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha) \prod_{\alpha = 1}^k \left(\frac{\partial}{\partial z^\alpha}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^\alpha, z^{\alpha+1}) .
 \ee
 In the above expression, we use the convention that $z^{k+1} = z^1$. 
 \end{dfn}
@@ -1625,7 +1744,7 @@ In the integral expression for the weight (\ref{weight1}) there is the following
 We will show that this expression is identically zero.
 To simplify the expression we first make the following change of coordinates on $\CC^{dk}$:
 \begin{align}
-w^i & = z^{\alpha+1} - z^\alpha \;\;\; , \;\;\; 1\leq \alpha < k \label{coords1}\\
+w^\alpha & = z^{\alpha+1} - z^\alpha \;\;\; , \;\;\; 1\leq \alpha < k \label{coords1}\\
 w^k & = z^k \label{coords2} .
 \end{align}
 Introduce the following operators
@@ -1668,20 +1787,20 @@ The expression inside the parentheses is zero since each term in the sum over $\
 This completes the proof for $k=d$. 
 \end{proof}
 
-\begin{lem}
+\begin{lem}\label{lem: tech 1}
 Let $(k, (\vec{n}))$ be a pair of wheel data such that $k > d$.
 Then the $\epsilon \to 0$ limit of the analytic weight
 \ben
 \lim_{\epsilon \to 0} W_{\epsilon < L}^{k, (n)}
 \een
-exists as a distribution on $\CC{dk}$. 
+exists as a distribution on $\CC^{dk}$. 
 \end{lem}
 
 \begin{proof}
 
 We will bound the absolute value of the weight in Equation (\ref{weight1}) and show that it has a well-defined $\epsilon\to 0$ limit.
 First, consider the change of coordinates as in Equations (\ref{coords1}),(\ref{coords2}).
-The weight applied to the compactly supported function $\Phi$ can be written as
+For any compactly supported function $\Phi$ we see that $W_{\epsilon < L}^{k, (n)} (\Phi)$ has the form
 \be\label{weight2}
 \int_{w^k \in \CC^d} \d^{d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \left(\prod_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^\alpha}P^{an}_{\epsilon < L} (w^\alpha) \right) \sum_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^k} P^{an} \left(\sum_{\alpha=1}^{k-1} w^\alpha\right) .
 \ee
@@ -1694,7 +1813,7 @@ Expanding out the propagators the weight takes the form
 \ben
 \begin{array}{lll}
 & \displaystyle \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \prod_{\alpha=1}^k \frac{\d t_\alpha}{(4 \pi t_\alpha)^d} \\
-& \displaystyle \times \sum_{i_1,\ldots,i_{k-1} =1}^d \left(\frac{\wbar^1_{i_1}}{t_1} \frac{(\wbar^1)^{n^1}}{t^{|n^1|}}\right) \cdots \left(\frac{\wbar^{k-1}_{i_{k-1}}}{t_{k-1}}\frac{(\wbar^{k-1})^{n^{k-1}}}{t^{|n^{k-1}|}}\right) \left(\sum_{\alpha=1}^{k-1} \frac{\wbar^\alpha_{i_k}}{t_k} \cdot \frac{1}{t^{|n^k|}} \left(\sum_{\alpha=1}^{k-1} \wbar^\alpha\right)^{n^k}\right) \\
+& \displaystyle \times \sum_{i_1,\ldots,i_{k-1} =1}^d \epsilon_{i_1\cdots,i_k} \left(\frac{\wbar^1_{i_1}}{t_1} \frac{(\wbar^1)^{n^1}}{t^{|n^1|}}\right) \cdots \left(\frac{\wbar^{k-1}_{i_{k-1}}}{t_{k-1}}\frac{(\wbar^{k-1})^{n^{k-1}}}{t^{|n^{k-1}|}}\right) \left(\sum_{\alpha=1}^{k-1} \frac{\wbar^\alpha_{i_k}}{t_k} \cdot \frac{1}{t^{|n^k|}} \left(\sum_{\alpha=1}^{k-1} \wbar^\alpha\right)^{n^k}\right) \\
 & \displaystyle \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right)
 \end{array}
 \een
@@ -1740,10 +1859,10 @@ Thus, we can integrate by parts iteratively to obtain the following expression f
 \ben
 \begin{array}{lll}
 & \displaystyle \pm \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}}\left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \prod_{\alpha=1}^k \frac{\d t_\alpha}{(4 \pi t_\alpha)^d}  \\ 
-& \displaystyle \times\left( \sum_{i_1,\ldots, i_d} D_{1, i_1} \cdots D_{k-1,i_{k-1}} \sum_{\alpha=1}^{k-1} D_{\alpha, i_k} \Phi(w^1,\ldots,w^k) \right) \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+& \displaystyle \times\left( \sum_{i_1,\ldots, i_k} \epsilon_{i_1\cdots,i_d} D_{1, i_1} \cdots D_{k-1,i_{k-1}} \sum_{\alpha=1}^{k-1} D_{\alpha, i_k} \Phi(w^1,\ldots,w^k) \right) \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
 \end{array}
 \een
-\brian{all the differential operators $D_{\alpha, i_\alpha}$ are uniformly bounded in $t$. To make these precise I should find what the uniform bound is.}
+%\brian{all the differential operators $D_{\alpha, i_\alpha}$ are uniformly bounded in $t$. To make these precise I should find what the uniform bound is.}
 
 Thus, the absolute value of the weight is bounded by 
 \be\label{weight bound1}
@@ -1771,7 +1890,7 @@ After some straightforward linear algebra we find that
 \det(M_{\alpha\beta})^{-1} = \frac{t_1\cdots t_k}{t_1+\cdots+t_k} .
 \een 
 We now perform a Wick expansion for the Gaussian integral in the variables $(w^1,\ldots,w^{k-1})$.
-For a reference similar to the notation used here see the Appendix of \cite{EWY}.
+For a reference similar to the notation used here see the Appendix of our work in \cite{EWY}.
 The inequality in (\ref{weight bound1}) becomes
 \begin{align}\label{weight bound2}
 |W_{\epsilon < L}^{k, (n)}(\Phi)| & \leq C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1\cdots t_k)^d}\left(\frac{t_1\cdots t_k}{t_1+\cdots+t_k}\right)^d + O(\epsilon) \\ & = C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1+\cdots+t_k)^d} + O(\epsilon) .
@@ -1803,7 +1922,7 @@ This concludes the proof.
 %^{n_j^\alpha} \right| 
 \end{proof}
 
-\subsection{A general fact about chiral anomalies}
+\subsection{A general result about chiral anomalies}
 
 Once any theory has been renormalized, the next step to constructing a quantization is to solve the quantum master equation. 
 In general, there may be an obstruction to solving this equation.
@@ -1854,7 +1973,7 @@ We conclude that the one-loop anomaly is
 
 The main result of this section is the following.
 
-\begin{lem}\label{lem: gen chiral anomaly}
+\begin{lem}\label{lem: chiral anomaly}
 The obstruction $\Theta = \lim_{L \to 0} \Theta[L]$ to satisfying the one-loop quantum master equation is given by the expression
 \ben
 \Theta = \lim_{L \to 0} \lim_{\epsilon \to 0} \sum_{\Gamma \in {\rm Wheel}_{d+1}} W_\Gamma(P_{\epsilon < L}, K_\epsilon,I)
@@ -1866,31 +1985,134 @@ where the sum is over all wheels with $(d+1)$-vertices.
 
 Like the proof of the non-existence of counterterms for holomorphic theories, the proof of this result will be the consequence of an explicit calculations and bounds of certain Feynman diagrams. 
 
-If we expand the quantity 
+Consider the quantity
 \be\label{graph exp}
-\lim_{\epsilon \to 0} e^{-I/\hbar} e^{\hbar \partial_{P_{\epsilon < L}}} \left(\{I,I\}_\epsilon e^{I/\hbar}\right) \mod \hbar^2
+\lim_{\epsilon \to 0} e^{-I/\hbar} e^{\hbar \partial_{P_{\epsilon < L}}} \left(\{I,I\}_\epsilon e^{I/\hbar}\right)\mod \hbar^2
 \ee
-over a sum of graphs, we see that the following two types of weights occur. 
-Note that, by assumption, we are only looking at graphs of genus one which look like wheels with possible trees attach.
+which can be thought of as a sum over graphs.
+By assumption, we are only looking at graphs of genus one which look like wheels with possible trees attach.
 Graphically, the quantity $\{I,I\}_\epsilon$ is the graph of two vertices with a separating edge labeled by the heat kernel $K_\epsilon$.
 Thus, all weights appearing in the expansion of (\ref{graph exp}) attach the propagator $P_{\epsilon<L}$ to all edges besides a single distinguished edge $e$, which is labeled by $K_\epsilon$. 
-The two types of weights are the following:
-\begin{enumerate}
+Thus, as a over a sum of graphs, we see that the following two types of weights occur in the expansion of (\ref{graph exp}).
+\begin{enumerate}[(a)]
 \item the distinguished edge $e$ is separating;
 \item the distinguished edge $e$ is {\em not} separating, and so appears as the internal edge of the wheel portion of the graph.
 \end{enumerate}
 
-By the classical master equation, we see that the $\epsilon \to 0$ limit of weights of Type (1) go to zero.
-Thus, we must only consider the weights of Type (2). 
+By the classical master equation, we see that the $\epsilon \to 0$ limit of weights of Type (a) go to zero.
+Thus, we must only consider the weights of Type (b). 
 
 The result will follow from two steps.
+These should seem familiar from the proof of the main result about the existence of no counterterms.
 \begin{enumerate}
 \item If $\Gamma$ is a wheel with $k < d+1$ vertices, then $ W_\Gamma(P_{\epsilon < L}, K_\epsilon,I)
  = 0$ identically. 
 \item If $\Gamma$ is a wheel with $k > d+1$ vertices, then $\lim_{\epsilon \to 0} W_\Gamma(P_{\epsilon < L}, K_\epsilon,I) =0$.
 \end{enumerate} 
 
-The proof of (1) follows a similar to 
+The proof of both of these facts is only dependent on the analytic part of the weights. 
+Thus, it suffices to make the same reduction as we did in the previous section.
+To extract that analytic part of the graph we proceed as in Definition \ref{dfn: analytic weight}.
+If $(k, (\vec{n}))$ is a pair of wheel data (recall $k$ labels the number of vertices and $\vec{n}$ labels the derivatives at each vertex) define the smooth distribution
+\ben
+\Tilde{W}_{\epsilon < L}^{k, (n)} : C_c^\infty((\CC^d)^k) \to \CC,
+\een
+that sends a smooth compactly supported function $\Phi \in C_c^\infty((\CC^d)^k) = C_c^\infty(\CC^{dk})$ to
+\be\label{anomalyweight1}
+\Tilde{W}_{\epsilon < L}^{k, (n)} (\Phi) = \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha)  \left(\frac{\partial}{\partial z^k}\right)^{\vec{n}^k} K_{\epsilon}(z^1,z^k) \prod_{\alpha = 1}^{k-1} \left(\frac{\partial}{\partial z^\alpha}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^\alpha, z^{\alpha+1}) .
+\ee
+
+Item (1) follows from the following observation.
+
+\begin{lem} Let $(k, (\vec{n}))$ be a pair of wheel data.
+If the number of vertices $k$ satisfies $k \leq d$ then
+\ben
+\Tilde{W}_{\epsilon < L}^{k, (n)}  = 0
+\een
+as a distribution on $\CC^{dk}$ for any $\epsilon,L > 0$. 
+\end{lem}
+\begin{proof}
+In fact, the integrand of (\ref{anomalyweight1}) is identically zero provided $k \leq d$ by a simple observation of the differential form type.
+Consider the factor in the integrand of $\Tilde{W}_{\epsilon < L}^{k, (n)}$ given by
+\ben
+ \left(\frac{\partial}{\partial z^k}\right)^{\vec{n}^k} K_{\epsilon}(z^1,z^k) \prod_{\alpha = 1}^{k-1} \left(\frac{\partial}{\partial z^\alpha}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^\alpha, z^{\alpha+1}).
+\een
+Making the usual change of coordinates $w^\alpha = z^{\alpha +1} - z^\alpha$ and $w^k = z^k$ we see that this factor is proportional to the following constant coefficient differential form
+\ben
+\left(\prod_{i=1}^d \left(\sum_{\alpha = 1}^{k-1} \d \wbar_{i}^\alpha\right) \right) \prod_{\alpha=1}^{k-1}\left( \eta^\alpha \prod_{i=1}^d \d \wbar_i^\alpha\right) .
+\een
+Note that this differential form only involves the coordinates $(w_i^\alpha)$ for $\alpha = 1,\ldots,k-1$.
+Thus, we may consider it as a Dolbeualt form on $\CC^{d(k-1)}$.
+As such, it is of the type $(0, d + (k-1)(d-1)) = (0, (d-k+1) + d(k-1))$. 
+Clearly, $(d-k+1) + d (k-1) > d (k-1)$ provided $k \leq d$.
+Thus, the weight is identically zero provided $k \leq d$, as desired.
+\end{proof}
+
+Item (2) follows from the following technical lemma that the analytic weight associated to the wheels of valency $k > d+1$ vanish in the limit $\epsilon \to 0$. 
+
+\begin{lem}
+Let $(k, (\vec{n}))$ be a pair of wheel data such that $k > d+1$.
+Then the $\epsilon \to 0$ limit of the analytic weight
+\ben
+\lim_{\epsilon \to 0} \Tilde{W}_{\epsilon < L}^{k, (n)} = 0
+\een
+is identically zero as a distribution on $\CC^{dk}$. 
+\end{lem}
+\begin{proof}
+The proof is very similar to the argument we gave in the proof of Lemma \ref{lem: tech 1}, so we will be a bit more concise.
+First, we make the familiar change of coordinates as in Equations (\ref{coords1}),(\ref{coords2}).
+Using the explicit form the heat kernel and propagator we see that for any $\Phi \in C^\infty_c(\CC^{dk})$ the weight is
+\ben
+\begin{array}{lll}
+\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) & = \displaystyle \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^{k-1}} \frac{1}{(4 \pi \epsilon)^d} \prod_{\alpha=1}^{k-1} \frac{\d t_\alpha}{(4 \pi t_\alpha)^d} \\
+& \displaystyle \times \sum_{i_1,\ldots,i_{k-1} =1}^d \epsilon_{i_1,\ldots,i_d} \left(\frac{\wbar^1_{i_1}}{t_1} \frac{(\wbar^1)^{n^1}}{t^{|n^1|}}\right) \cdots \left(\frac{\wbar^{k-1}_{i_{k-1}}}{t_{k-1}}\frac{(\wbar^{k-1})^{n^{k-1}}}{t^{|n^{k-1}|}}\right) \left(\frac{1}{t^{|n^k|}} \left(\sum_{\alpha=1}^{k-1} \wbar^\alpha\right)^{n^k}\right) \\
+& \displaystyle \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+\end{array}
+\een
+We will integrate by parts to eliminate the factors of $\wbar_i^\alpha$.
+
+For each $1 \leq \alpha < k$ and $i_\alpha$, define the $\epsilon$ and $t=(t_1,\ldots,t_{k-1})$-dependent holomorphic differential operator
+\ben
+D_{\alpha, i_\alpha}(t) := \left(\frac{\partial}{\partial w^\alpha_{i_\alpha}} - \sum_{\beta = 1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{i_\alpha}^{\beta}}\right)
+\prod_{j=1}^d \left(\frac{\partial}{\partial w_j^\alpha} - \sum_{\beta =1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{j}^\beta}\right)
+^{n_j^\alpha} .
+\een
+And the $\epsilon,t$-dependent holomorphic differential operator
+\ben
+D_{k}(t) = \prod_{j=1}^d \left(\frac{\partial}{\partial w_j^k} - \sum_{\beta =1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{j}^\beta}\right)^{n_j^k} .
+\een
+
+By a completely analogous version of Lemma \label{lem: diff applied E} the operators above allow us to integrate by parts and express the weight in the form
+\ben
+\begin{array}{lll}
+\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) & = \displaystyle \pm \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}}\left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \int_{(t_1,\ldots,t_{k-1}) \in [\epsilon,L]^{k-1}} \frac{1}{(4 \pi \epsilon)^d} \prod_{\alpha=1}^{k-1} \frac{\d t_\alpha}{(4 \pi t_\alpha)^d}  \\ 
+& \displaystyle \times\left( \sum_{i_1,\ldots, i_{k-1}} \epsilon_{i_1\cdots,i_d} D_{1, i_1}(t) \cdots D_{k-1,i_{k-1}} (t) D_k(t) \Phi(w^1,\ldots,w^k) \right) \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+\end{array}
+\een 
+Observe that the operators $D_{\alpha,i_\alpha}(t), D_k(t)$ are uniformly bounded in $t$.
+Thus, there exists a constant $C = C(\Phi) > 0$ depending only on the function $\Phi$ such that we can bound the weight as
+\be\label{anomaly bound 1}
+\begin{array}{lll}
+|\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi)| & \leq & \displaystyle C \int_{(w^1,\ldots,w^{k-1}} \prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha  \int_{(t_1,\ldots,t_{k-1}) \in [\epsilon,L]^{k-1}} \d t_1 \ldots \d t_k \frac{1}{\epsilon^d t^d_1\cdots t^d_{k-1}} \\
+& & \displaystyle \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+\end{array}
+\ee
+Thus, to show that the limit $\lim_{L \to 0} \lim_{\epsilon \to 0}  \Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) = 0$ it suffices to show that the limit of the right-hand side vanishes. 
+
+The Gaussian integral over the variables $w^\alpha_i$ contributes the following factor
+\ben
+\int_{(w^1,\ldots,w^{k-1}} \prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) = C' \left(\frac{\epsilon t_1 \cdots t_{k-1}}{\epsilon + t_1 + \cdots + t_{k-1}}\right)^{d} .
+\een
+Where $C'$ involves factors of $2$ and $\pi$.
+Plugging this back in to the right-hand side of (\ref{anomaly bound 1}) we see that 
+\ben
+|\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi)| \leq C C' \int_{[\epsilon,L]^{k-1}} \frac{\d t_1 \cdots \d t_{k-1}}{(\epsilon + t_1 + \cdots + t_{k-1})^d} \leq C C' \prod_{\alpha = 1}^{k-1} \int_{t_\alpha = \epsilon}^L \d t_\alpha t_\alpha^{-d/(k-1)} .
+\een
+In the second inequality we have used the fact that $\epsilon > 0$ and the AM-GM inequality.  
+It is immediate to see that the $\epsilon \to 0$ limit of the above exists provided $k > d+1$, which is the situation we are in, and that the $L \to 0$ limit vanishes. 
+\end{proof}
+
+This completes the proof of Lemma \ref{lem: chiral anomaly} 
 \end{proof}
 %By the compatibility between the QME and RG flow, it suffices to solve this equation at any scale $L$. 
 %Thus, $(Q + \hbar \Delta_L)e^{I[L] / \hbar} = 0$ if and only if 
@@ -1900,15 +2122,68 @@ The proof of (1) follows a similar to
 %\een
 %\end{lem}
 
+\subsubsection{Relation to the ABJ anomaly}
+
+The lemma we have just proved implies that for holomorphic theories on $\CC^d$ the anomaly is given by evaluating a collection of wheel diagrams with exactly $d+1$ vertices. 
+This expression for the obstruction fits into a generic class of of one-loop anomalies from gauge theory called the Adler-Bardeen-Jackiw (ABJ) anomaly \cite{Adler, BJ}.
+This anomaly is most commonly associated with four dimensional gauge theory.
+
+We recall the basic setup for the ABJ anomaly. 
+Consider a free Dirac fermion $\Psi$ on $\RR^4$ coupled to a background gauge field $A \in \Omega^1(\RR^4) \tensor \fg$. 
+For this to make sense, $\Psi$ is taken to be in valued in a representation $V$ of the Lie algebra $\fg$ so we may think of it as an element $\Psi \in \sS(\RR^4) \tensor V$.
+Here, $\sS(\RR^4)$ is the space of sections of the full spinor bundle on $\RR^4$.
+The action functional is
+\ben
+S(A, \Psi) = \int \<\Psi, \slashed\partial_A \Psi\>_V
+\een
+where $\slashed\partial_A = \slashed\partial + [A,-]$ is the $A$-coupled Dirac operator. 
+We are implicitly using the canonical spin invariant symplectic pairing $\sS \tensor \sS \to \Omega^4(\RR^4) = C^\infty(\RR^4) \d^4 x$ and a $\fg$-invariant pairing $\<-,-\>_V : V \tensor V \to \CC$, to obtain a local functional.
+
+For any smooth map $\alpha : \RR^4 \to \fg$, the infinitesimal transformation $\Psi \to \Psi + \epsilon [\alpha, \Psi]$ (where $\epsilon$ is an even parameter of square zero) is a classical symmetry of $S(A, \Psi)$. 
+Quantum mechanically, there is a one-loop anomaly which measures the failure of the path integral to be invariant with respect to this symmetry. 
+It is a well-known calculation, see for instance \cite{FujikawaSuzuki}, that this anomaly is measured by the following local functional
+\be\label{ABJ}
+\int \Tr_V \left(\alpha F_A F_A\right) .
+\ee
+The trace is taken in the representation $V$.
+The fundamental calculation is the infamous "triangle diagram", see Figure \ref{fig: triangle}, where two vertices are labeled by the gauge field and the third by $\alpha$.
+In practice, physicists express the anomaly as a failure for the Noether current associated to the symmetry $\alpha$ to be divergenceless. 
+
+There is the following holomorphic version of this anomaly. 
+Again, let $V$ be a $\fg$ representation.
+Consider the following action functional on $\CC^2$:
+\ben
+S(A, \beta,\gamma) = \int \<\beta, \dbar_A \gamma\>_V
+\een
+where $\gamma : \CC^2 \to V$, $\beta \in \Omega^{2,1}(\CC^2 , V)$, and $A \in \Omega^{0,1}(\CC^2, \fg)$. 
+Since $A$ is a $(0,1)$ form it defines a deformation of the trivial holomorphic $G$-bundle. 
+Although we have not put this theory in the BV formalism, there is a natural way to do so. 
+The infinitesimal symmetry we contemplate is of the form $\gamma \to \gamma + \epsilon [\alpha, \gamma]$ where $\alpha : \CC^2 \to \fg$. 
+We study the anomaly to quantizing this symmetry to one-loop.
+Following the result for the anomaly given in the previous section, one sees that it is computed by a wheel with three vertices. 
+For type reasons, one vertex is labeled $\alpha$ and the other two are labeled by the gauge fields $A$.
+A special case of a general calculation performed later in Chapter \ref{chap: symmetries} of this thesis computes the value of the diagram as
+\ben
+\int {\rm Tr}_V(\alpha \partial A \partial A) .
+\een
+This is the holomorphic version of ABJ anomaly (\ref{ABJ}). 
+Note that there are no terms of order $A^3$ or above. 
+In fact, the functional $\int {\rm Tr}(\alpha F_A F_A)$ is cohomologous to the expression above in the local deformation complex.
+
+\begin{rmk} 
+In the next section, using the concept of the "equivariant" BV formalism, we will make coupling background fields to a classical theory precise. 
+Then, Lemma \ref{lem: chiral anomaly} above applies rigorously to give the form of anomaly we have given. 
+We will see a precise statement of this for the holomorphic current algebra in our proof of the Grothendieck-Riemann-Roch theorem in Chapter \ref{chap: symmetries}.
+\end{rmk}
 
 \subsection{Relation to renormalization of topological theories}
 
 \brian{it's a fun corollary to see that a slight modification of the above actually shows that topological BF theory in any dimension has a one-loop quantization with no counterterms, not sure if I'll put that here.}
 
-\section{Equivariant BV quantization}
+\section{Equivariant BV quantization} \label{sec: equiv BV}
 
 Equivariant BV quantization is an enhancement of ordinary BV quantization where one takes into account the action of a group or Lie algebra. 
-We will heavily rely on techniques of equivariant BV quantization throughout this thesis, notably in the construction of the holomorphic $\sigma$-model in Chapter \ref{chap hol sig} and in the proof of a local version of the Grothendieck-Riemann-Roch theorem in Chapter \ref{chap symmetries} using Feynman diagrammatic expansions.
+We will heavily rely on techniques of equivariant BV quantization throughout this thesis, notably in the construction of the holomorphic $\sigma$-model in Chapter \ref{chap: holsig} and in the proof of a local version of the Grothendieck-Riemann-Roch theorem in Chapter \ref{chap: symmetries} using Feynman diagrammatic expansions.
 
 In this section we define the notion of an equivariance in our formalism through the lens of a central result of classical field theory: Noether's theorem.
 Roughly speaking, this states that symmetries of a theory are encoded by a conserved quantity. 
@@ -2005,7 +2280,7 @@ where the first ``free'' term is a quadratic functional and the second ``interac
 In this situation, the effective action $S[L] = S_{\text{free}} + I[L]$, 
 i.e., only the interaction changes with the length scale.
 
-As in Section \ref{??} we let $\sO_{P,sm}^+(\sE)$ be the functionals that are at least cubic, have proper support, and have smooth first derivative. 
+As in Section \ref{sec: qme} we let $\sO_{P,sm}^+(\sE)$ be the functionals that are at least cubic, have proper support, and have smooth first derivative. 
 
 \begin{dfn} \label{eqQFT} 
 An {\em $\fh$-equivariant BV quantization} is a collection of effective interactions $\{I^\fh[L]\}_{L \in (0\infty)} \subset \cred^*(\fh) \tensor \sO_{P,sm}^+(\sE)[[\hbar]]$
@@ -2025,7 +2300,7 @@ lives in $\clie^*(\fh)$ for every scale $L$, and
 \end{enumerate}
 \end{dfn}
 
-In other words, we simply follow the constructions of \cite{CosRenormalization} working over the base ring $\clie^*(\fh)$.
+In other words, we simply follow the constructions of \cite{CostelloRenormalization} working over the base ring $\clie^*(\fh)$.
 A careful reading of those texts shows that the freedom to work over interesting dg commutative algebras is built into the formalism.
 %\owen{We may need to be a bit careful since a version of nilpotency is used there but ..}
 %Note that our situation is particularly simple since the non-equivariant classical field theory is free and hence admits a very simple quantization,
@@ -2053,7 +2328,7 @@ We can further quotient this subspace by $\oloc(\sL[1]) \oplus \oloc(\sE) \subse
 \een
 Thus, ${\rm Act}(\sL, \sE)$ consists of functionals on $\sL [1] \oplus \sE$ that are local as both a function of $\sL[1]$ and $\sE$ and do not depend solely on $\sL[1]$ and $\sE$. 
 
-\begin{lem}[Chapter ?? \cite{CG2}]
+\begin{lem}[Chapter 12 \cite{CG2}]
 The differential and bracket defining the dg Lie algebra $\cred^*(\sL_c(X)) \tensor \oloc(\sE)[-1]$ in (\ref{dgLie1}) restricts to give a dg Lie algebra structure on the subspace ${\rm Act}(\sL,\sE)[-1]$. 
 \end{lem} 
 
@@ -2077,11 +2352,11 @@ The data of an action of $\fh$ on a theory as in Definition \ref{dfn: fh equiv} 
 In fact, there is an equivalence of dg Lie algebras $\cred^*(\fh) \tensor \oloc(\sE)[-1] \simeq {\rm Act}(\Omega^*_X \tensor \fh, \sE)$. 
 \end{rmk}
 
-\subsubsection{}
+\subsubsection{The action of a local Lie algebra on a QFT}
 
 The quantum story for an action by a local Lie algebra is also similar to the case of an ordinary Lie algebra.
 There are two spaces of functionals that appear when discussing actions of a local Lie algebra $\sL$ on a quantum field theory.
-We will fix a quantum field theory as in Definition \ref{dfn: qft}.
+We will fix the data of a quantum field theory as in Definition \ref{dfn: qft}.
 This is the data of a free BV theory $(\sE, Q, \omega)$ together with a family of functionals $\{I[L]\}$ satisfying RG flow and the QME (plus a locality condition). 
 
 \begin{dfn}
@@ -2123,7 +2398,7 @@ we have $I^{\sL}[L] \mapsto I[L]$ for each $L > 0$.
 
 Every inner action clearly defines an ordinary action on a QFT.
 In practice, we will study the problem of {\em lifting} an ordinary action to an inner action. 
-Just as in the obstruction theory discussed in Section \ref{sec: obstruction} there is a deformation complex controlling this lifting problem. 
+Just as in the obstruction theory discussed in Section \ref{sec: qme} there is a deformation complex controlling this lifting problem. 
 Indeed, suppose $I^{\sL}[L] \in \sO_{P, sm}^+(\sL[1] \oplus \sE) / \sO_{P,sm} (\sL[1]) [[\hbar]]$ is a family satisfying the condition of having an action by $\sL$. 
 We can lift this to a family of functionals
 \ben
@@ -2152,7 +2427,3 @@ the interaction terms $I^\sL[L]$ encode the variation of the path integral measu
 (Solving the QME is our definition of well-posedness of the measure.)
 This should not be confused with {\em gauging} a theory by $\sL$, which involves putting the elements of $\sL$ in the theory as propagating fields.
 \end{rmk}
-
-
-
-\end{document}

@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: frame.aux
+The style file: alpha.bst
+Database file #1: thesis.bib
+Warning--I didn't find a database entry for "CosttelloRenormalization"
+Warning--I didn't find a database entry for "GK"
+Warning--I didn't find a database entry for "GF"
+Warning--I didn't find a database entry for "GetlzerLie"
+Warning--I didn't find a database entry for "AF1"
+Warning--I didn't find a database entry for ".."
+Warning--I didn't find a database entry for "ref?"
+Warning--I didn't find a database entry for "DT"
+Warning--I didn't find a database entry for "Hopf"
+Warning--I didn't find a database entry for "AFT1"
+Warning--I didn't find a database entry for "CosBook"
+Warning--I didn't find a database entry for "CG"
+Warning--I didn't find a database entry for "GwilliamHaugs"
+Warning--I didn't find a database entry for "KM"
+Warning--I didn't find a database entry for "CostelloLiSUGRA"
+Warning--I didn't find a database entry for "GFnontrivial"
+Warning--I didn't find a database entry for "GF1"
+Warning--there's a number but no volume in CF2
+You've used 76 entries,
+            2543 wiz_defined-function locations,
+            1102 strings with 15265 characters,
+and the built_in function-call counts, 27280 in all, are:
+= -- 2819
+> -- 1149
+< -- 50
++ -- 373
+- -- 361
+* -- 1928
+:= -- 4575
+add.period$ -- 247
+call.type$ -- 76
+change.case$ -- 425
+chr.to.int$ -- 73
+cite$ -- 77
+duplicate$ -- 1083
+empty$ -- 1967
+format.name$ -- 472
+if$ -- 5469
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 72
+newline$ -- 394
+num.names$ -- 228
+pop$ -- 360
+preamble$ -- 1
+purify$ -- 512
+quote$ -- 0
+skip$ -- 841
+stack$ -- 0
+substring$ -- 1624
+swap$ -- 114
+text.length$ -- 50
+text.prefix$ -- 35
+top$ -- 0
+type$ -- 552
+warning$ -- 1
+while$ -- 280
+width$ -- 80
+write$ -- 988
+(There were 18 warnings)

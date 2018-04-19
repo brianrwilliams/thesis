@@ -1,6 +1,32 @@
-\documentclass[10pt]{amsart}
+\documentclass[10pt]{report}
 
 \usepackage{macros}
+
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\tikzset{
+	% >=stealth', %%  Uncomment for more conventional arrows
+    vector/.style={decorate, decoration={snake}, draw},
+	provector/.style={decorate, decoration={snake,amplitude=2.5pt}, draw},
+	antivector/.style={decorate, decoration={snake,amplitude=-2.5pt}, draw},
+    fermion/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+    fermionbar/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    fermionnoarrow/.style={draw=black},
+    gluon/.style={decorate, draw=black,
+        decoration={coil,amplitude=4pt, segment length=5pt}},
+    scalar/.style={dashed,draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+    scalarbar/.style={dashed,draw=black, postaction={decorate},
+        dwecoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    scalarnoarrow/.style={dashed,draw=black},
+    electron/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+	bigvector/.style={decorate, decoration={snake,amplitude=4pt}, draw},
+}
+
+\usepackage[final]{pdfpages}
 
 \linespread{1.25}
 
@@ -8,9 +34,11 @@
 \setlength{\parindent}{18pt}
 \setlength{\parindent}{0cm}
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
 
 \title{The holomorphic $\sigma$-model and its symmetries}
+\author{Brian R. Williams}
 
 \def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
 
@@ -19,6 +47,8 @@
 
 \tableofcontents
 
+\input{intro}
+
 \input{chap1}
 
 %General intro, acknowledgements, overview of bv and factorization, summary of results (including that not appearing in thesis). 
@@ -26,7 +56,7 @@
 %2) Holomorphic theories. 
 %3) Noether's theorem. 
 
-%\input{Higher dimensional holomorphic $\sigma$-models}
+\input{chap2}
 
 %1) Holomorphic sigma models in the BV formalism. Using L-infinity algebras. Recall CDO result? Twist of chiral matter.
 %2) Gelfand-Kazhdan formal geometry.
@@ -34,7 +64,7 @@
 %4) Local operators OPE.
 %5) Chiral algebraic index theorem. 
 
-%\input{Symmetries of holomorphic theories} 
+\input{chap3} 
 
 %1) The higher KM algebra.
 %2) The higher Virasoro. Coupling to matter "holomorphic gravity". 
