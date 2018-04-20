@@ -33,38 +33,39 @@
 \BOOKMARK [2][-]{subsection.3.3.2}{A description using L spaces}{section.3.3}% 33
 \BOOKMARK [1][-]{section.3.4}{Deformations of the holomorphic -model}{chapter.3}% 34
 \BOOKMARK [2][-]{subsection.3.4.1}{Forms as local functionals}{section.3.4}% 35
-\BOOKMARK [1][-]{section.3.5}{BV quantization of the holomorphic -model}{chapter.3}% 36
-\BOOKMARK [2][-]{subsection.3.5.1}{The Wn-equivariant quantization}{section.3.5}% 37
-\BOOKMARK [2][-]{subsection.3.5.2}{Quantization on general manifolds via formal geometry}{section.3.5}% 38
-\BOOKMARK [1][-]{section.3.6}{The local operators}{chapter.3}% 39
-\BOOKMARK [2][-]{subsection.3.6.1}{The factorization algebra of observables}{section.3.6}% 40
-\BOOKMARK [2][-]{subsection.3.6.2}{The observables on the d-disk}{section.3.6}% 41
-\BOOKMARK [2][-]{subsection.3.6.3}{The sphere observables}{section.3.6}% 42
-\BOOKMARK [2][-]{subsection.3.6.4}{The disk as a module}{section.3.6}% 43
-\BOOKMARK [2][-]{subsection.3.6.5}{A formula for the character}{section.3.6}% 44
-\BOOKMARK [0][-]{chapter.4}{Local symmetries of holomorphic theories}{}% 45
-\BOOKMARK [1][-]{section.4.1}{The current algebra on complex manifolds}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.1.1}{Definitions}{section.4.1}% 47
-\BOOKMARK [2][-]{subsection.4.1.2}{Factorization Lie algebras}{section.4.1}% 48
-\BOOKMARK [2][-]{subsection.4.1.3}{Local cohomology}{section.4.1}% 49
-\BOOKMARK [2][-]{subsection.4.1.4}{The Kac-Moody factorization algebra}{section.4.1}% 50
-\BOOKMARK [1][-]{section.4.2}{Local structures of the Kac-Moody factorization algebra}{chapter.4}% 51
-\BOOKMARK [2][-]{subsection.4.2.1}{The higher sphere algebras}{section.4.2}% 52
-\BOOKMARK [2][-]{subsection.4.2.2}{The strategy}{section.4.2}% 53
-\BOOKMARK [2][-]{subsection.4.2.3}{An Ed algebra from tori}{section.4.2}% 54
-\BOOKMARK [2][-]{subsection.4.2.4}{The disk as a module}{section.4.2}% 55
-\BOOKMARK [1][-]{section.4.3}{The Kac-Moody factorization algebra on general manifolds}{chapter.4}% 56
-\BOOKMARK [2][-]{subsection.4.3.1}{The P0-structure}{section.4.3}% 57
-\BOOKMARK [2][-]{subsection.4.3.2}{Factorization homology along Hopf manifolds}{section.4.3}% 58
-\BOOKMARK [2][-]{subsection.4.3.3}{A variant of the factorization algebra}{section.4.3}% 59
-\BOOKMARK [1][-]{section.4.4}{Universal Grothendieck-Riemann-Roch from BV quantization}{chapter.4}% 60
-\BOOKMARK [2][-]{subsection.4.4.1}{The classical family}{section.4.4}% 61
-\BOOKMARK [2][-]{subsection.4.4.2}{BV quantization in families}{section.4.4}% 62
-\BOOKMARK [2][-]{subsection.4.4.3}{Local to global}{section.4.4}% 63
-\BOOKMARK [2][-]{subsection.4.4.4}{A module for the higher Kac-Moody}{section.4.4}% 64
-\BOOKMARK [1][-]{section.4.5}{Holomorphic diffeomorphisms}{chapter.4}% 65
-\BOOKMARK [2][-]{subsection.4.5.1}{Holomorphic vector fields}{section.4.5}% 66
-\BOOKMARK [2][-]{subsection.4.5.2}{Gelfand-Fuks cohomology}{section.4.5}% 67
-\BOOKMARK [2][-]{subsection.4.5.3}{The local cohomology of holomorphic vector fields}{section.4.5}% 68
-\BOOKMARK [2][-]{subsection.4.5.4}{An explicit description of the local cocycles}{section.4.5}% 69
-\BOOKMARK [1][-]{section.Alph0.1}{The dg model for punctured affine space}{chapter.4}% 70
+\BOOKMARK [2][-]{subsection.3.4.2}{Computing the deformation complex}{section.3.4}% 36
+\BOOKMARK [1][-]{section.3.5}{BV quantization of the holomorphic -model}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.5.1}{The Wn-equivariant quantization}{section.3.5}% 38
+\BOOKMARK [2][-]{subsection.3.5.2}{Quantization on general manifolds via formal geometry}{section.3.5}% 39
+\BOOKMARK [1][-]{section.3.6}{The local operators}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.3.6.1}{The factorization algebra of observables}{section.3.6}% 41
+\BOOKMARK [2][-]{subsection.3.6.2}{The observables on the d-disk}{section.3.6}% 42
+\BOOKMARK [2][-]{subsection.3.6.3}{The sphere observables}{section.3.6}% 43
+\BOOKMARK [2][-]{subsection.3.6.4}{The disk as a module}{section.3.6}% 44
+\BOOKMARK [2][-]{subsection.3.6.5}{A formula for the character}{section.3.6}% 45
+\BOOKMARK [0][-]{chapter.4}{Local symmetries of holomorphic theories}{}% 46
+\BOOKMARK [1][-]{section.4.1}{The current algebra on complex manifolds}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.1.1}{Definitions}{section.4.1}% 48
+\BOOKMARK [2][-]{subsection.4.1.2}{Factorization Lie algebras}{section.4.1}% 49
+\BOOKMARK [2][-]{subsection.4.1.3}{Local cohomology}{section.4.1}% 50
+\BOOKMARK [2][-]{subsection.4.1.4}{The Kac-Moody factorization algebra}{section.4.1}% 51
+\BOOKMARK [1][-]{section.4.2}{Local structures of the Kac-Moody factorization algebra}{chapter.4}% 52
+\BOOKMARK [2][-]{subsection.4.2.1}{The higher sphere algebras}{section.4.2}% 53
+\BOOKMARK [2][-]{subsection.4.2.2}{The strategy}{section.4.2}% 54
+\BOOKMARK [2][-]{subsection.4.2.3}{An Ed algebra from tori}{section.4.2}% 55
+\BOOKMARK [2][-]{subsection.4.2.4}{The disk as a module}{section.4.2}% 56
+\BOOKMARK [1][-]{section.4.3}{The Kac-Moody factorization algebra on general manifolds}{chapter.4}% 57
+\BOOKMARK [2][-]{subsection.4.3.1}{The P0-structure}{section.4.3}% 58
+\BOOKMARK [2][-]{subsection.4.3.2}{Factorization homology along Hopf manifolds}{section.4.3}% 59
+\BOOKMARK [2][-]{subsection.4.3.3}{A variant of the factorization algebra}{section.4.3}% 60
+\BOOKMARK [1][-]{section.4.4}{Universal Grothendieck-Riemann-Roch from BV quantization}{chapter.4}% 61
+\BOOKMARK [2][-]{subsection.4.4.1}{The classical family}{section.4.4}% 62
+\BOOKMARK [2][-]{subsection.4.4.2}{BV quantization in families}{section.4.4}% 63
+\BOOKMARK [2][-]{subsection.4.4.3}{Local to global}{section.4.4}% 64
+\BOOKMARK [2][-]{subsection.4.4.4}{A module for the higher Kac-Moody}{section.4.4}% 65
+\BOOKMARK [1][-]{section.4.5}{Holomorphic diffeomorphisms}{chapter.4}% 66
+\BOOKMARK [2][-]{subsection.4.5.1}{Holomorphic vector fields}{section.4.5}% 67
+\BOOKMARK [2][-]{subsection.4.5.2}{Gelfand-Fuks cohomology}{section.4.5}% 68
+\BOOKMARK [2][-]{subsection.4.5.3}{The local cohomology of holomorphic vector fields}{section.4.5}% 69
+\BOOKMARK [2][-]{subsection.4.5.4}{An explicit description of the local cocycles}{section.4.5}% 70
+\BOOKMARK [1][-]{section.Alph0.1}{The dg model for punctured affine space}{chapter.4}% 71

@@ -59,62 +59,62 @@
 \contentsline {subsection}{\numberline {3.3.2}A description using $L_\infty $ spaces}{79}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Deformations of the holomorphic $\sigma $-model}{82}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Forms as local functionals}{85}{subsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.1.1}Computing the deformation complex}{87}{subsubsection.3.4.1.1}
+\contentsline {subsection}{\numberline {3.4.2}Computing the deformation complex}{87}{subsection.3.4.2}
 \contentsline {section}{\numberline {3.5}BV quantization of the holomorphic $\sigma $-model}{90}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}The ${{\rm W}_n}$-equivariant quantization}{90}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.1}The ${{\rm W}_n}$-equivariant quantization}{91}{subsection.3.5.1}
 \contentsline {subsubsection}{\numberline {3.5.1.1}A reminder of the propagator}{91}{subsubsection.3.5.1.1}
 \contentsline {subsubsection}{\numberline {3.5.1.2}The prequantization}{92}{subsubsection.3.5.1.2}
-\contentsline {subsubsection}{\numberline {3.5.1.3}The one-loop anomaly}{92}{subsubsection.3.5.1.3}
+\contentsline {subsubsection}{\numberline {3.5.1.3}The one-loop anomaly}{93}{subsubsection.3.5.1.3}
 \contentsline {subsubsection}{\numberline {3.5.1.4}The extended theory}{98}{subsubsection.3.5.1.4}
 \contentsline {subsection}{\numberline {3.5.2}Quantization on general manifolds via formal geometry}{101}{subsection.3.5.2}
 \contentsline {section}{\numberline {3.6}The local operators}{103}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}The factorization algebra of observables}{104}{subsection.3.6.1}
 \contentsline {subsubsection}{\numberline {3.6.1.1}The classical observables}{104}{subsubsection.3.6.1.1}
 \contentsline {subsubsection}{\numberline {3.6.1.2}The quantum observables}{105}{subsubsection.3.6.1.2}
-\contentsline {subsection}{\numberline {3.6.2}The observables on the $d$-disk}{105}{subsection.3.6.2}
-\contentsline {subsubsection}{\numberline {3.6.2.1}The cohomology of the observables}{105}{subsubsection.3.6.2.1}
+\contentsline {subsection}{\numberline {3.6.2}The observables on the $d$-disk}{106}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}The cohomology of the observables}{106}{subsubsection.3.6.2.1}
 \contentsline {subsubsection}{\numberline {3.6.2.2}An explicit characterization}{106}{subsubsection.3.6.2.2}
-\contentsline {subsection}{\numberline {3.6.3}The sphere observables}{108}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.3}The sphere observables}{109}{subsection.3.6.3}
 \contentsline {subsubsection}{\numberline {3.6.3.1}Nesting spherical shells}{111}{subsubsection.3.6.3.1}
 \contentsline {subsubsection}{\numberline {3.6.3.2}Using the Moyal formula}{113}{subsubsection.3.6.3.2}
-\contentsline {subsubsection}{\numberline {3.6.3.3}Using smoothed observables}{116}{subsubsection.3.6.3.3}
-\contentsline {subsection}{\numberline {3.6.4}The disk as a module}{118}{subsection.3.6.4}
-\contentsline {subsection}{\numberline {3.6.5}A formula for the character}{121}{subsection.3.6.5}
-\contentsline {chapter}{\numberline {4}Local symmetries of holomorphic theories}{124}{chapter.4}
-\contentsline {section}{\numberline {4.1}The current algebra on complex manifolds}{126}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Definitions}{126}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Factorization Lie algebras}{128}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Local cohomology}{130}{subsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.3.1}The $J$ functional}{131}{subsubsection.4.1.3.1}
-\contentsline {subsubsection}{\numberline {4.1.3.2}Relation to Chern-Weil theory}{132}{subsubsection.4.1.3.2}
-\contentsline {subsubsection}{\numberline {4.1.3.3}Holomorphic translation invariance}{133}{subsubsection.4.1.3.3}
-\contentsline {subsection}{\numberline {4.1.4}The Kac-Moody factorization algebra}{133}{subsection.4.1.4}
-\contentsline {section}{\numberline {4.2}Local structures of the Kac-Moody factorization algebra}{134}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}The higher sphere algebras}{136}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}The strategy}{138}{subsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.2.1}The case of zero level}{138}{subsubsection.4.2.2.1}
-\contentsline {subsubsection}{\numberline {4.2.2.2}The case of non-zero level}{139}{subsubsection.4.2.2.2}
-\contentsline {subsection}{\numberline {4.2.3}An $E_d$ algebra from tori}{143}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}The disk as a module}{144}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}The Kac-Moody factorization algebra on general manifolds}{144}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}The $P_0$-structure}{145}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Factorization homology along Hopf manifolds}{146}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}A variant of the factorization algebra}{148}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Universal Grothendieck-Riemann-Roch from BV quantization}{151}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}The classical family}{153}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}BV quantization in families}{153}{subsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.2.1}The anomaly calculation}{155}{subsubsection.4.4.2.1}
-\contentsline {subsection}{\numberline {4.4.3}Local to global}{157}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}A module for the higher Kac-Moody}{159}{subsection.4.4.4}
-\contentsline {section}{\numberline {4.5}Holomorphic diffeomorphisms}{160}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Holomorphic vector fields}{161}{subsection.4.5.1}
-\contentsline {subsubsection}{\numberline {4.5.1.1}The local Lie algebra}{161}{subsubsection.4.5.1.1}
-\contentsline {subsubsection}{\numberline {4.5.1.2}Holomorphically covariant theories}{162}{subsubsection.4.5.1.2}
-\contentsline {subsubsection}{\numberline {4.5.1.3}Higher central charges}{163}{subsubsection.4.5.1.3}
-\contentsline {subsubsection}{\numberline {4.5.1.4}Chiral conformal field theory}{164}{subsubsection.4.5.1.4}
-\contentsline {subsection}{\numberline {4.5.2}Gelfand-Fuks cohomology}{165}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}The local cohomology of holomorphic vector fields}{168}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}An explicit description of the local cocycles}{172}{subsection.4.5.4}
-\contentsline {subsubsection}{\numberline {4.5.4.1}From GF classes to local functionals}{172}{subsubsection.4.5.4.1}
-\contentsline {subsubsection}{\numberline {4.5.4.2}A comparison to other cocycles}{173}{subsubsection.4.5.4.2}
-\contentsline {section}{\numberline {.1}The dg model for punctured affine space}{174}{section.Alph0.1}
+\contentsline {subsubsection}{\numberline {3.6.3.3}Using smoothed observables}{117}{subsubsection.3.6.3.3}
+\contentsline {subsection}{\numberline {3.6.4}The disk as a module}{119}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.5}A formula for the character}{122}{subsection.3.6.5}
+\contentsline {chapter}{\numberline {4}Local symmetries of holomorphic theories}{125}{chapter.4}
+\contentsline {section}{\numberline {4.1}The current algebra on complex manifolds}{127}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Definitions}{127}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Factorization Lie algebras}{129}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Local cohomology}{131}{subsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.3.1}The $J$ functional}{132}{subsubsection.4.1.3.1}
+\contentsline {subsubsection}{\numberline {4.1.3.2}Relation to Chern-Weil theory}{133}{subsubsection.4.1.3.2}
+\contentsline {subsubsection}{\numberline {4.1.3.3}Holomorphic translation invariance}{134}{subsubsection.4.1.3.3}
+\contentsline {subsection}{\numberline {4.1.4}The Kac-Moody factorization algebra}{134}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Local structures of the Kac-Moody factorization algebra}{135}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}The higher sphere algebras}{137}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}The strategy}{139}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}The case of zero level}{139}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}The case of non-zero level}{140}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {4.2.3}An $E_d$ algebra from tori}{144}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}The disk as a module}{145}{subsection.4.2.4}
+\contentsline {section}{\numberline {4.3}The Kac-Moody factorization algebra on general manifolds}{145}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}The $P_0$-structure}{146}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Factorization homology along Hopf manifolds}{147}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}A variant of the factorization algebra}{149}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Universal Grothendieck-Riemann-Roch from BV quantization}{152}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}The classical family}{154}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}BV quantization in families}{154}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}The anomaly calculation}{156}{subsubsection.4.4.2.1}
+\contentsline {subsection}{\numberline {4.4.3}Local to global}{158}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}A module for the higher Kac-Moody}{160}{subsection.4.4.4}
+\contentsline {section}{\numberline {4.5}Holomorphic diffeomorphisms}{161}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Holomorphic vector fields}{162}{subsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.1.1}The local Lie algebra}{162}{subsubsection.4.5.1.1}
+\contentsline {subsubsection}{\numberline {4.5.1.2}Holomorphically covariant theories}{163}{subsubsection.4.5.1.2}
+\contentsline {subsubsection}{\numberline {4.5.1.3}Higher central charges}{164}{subsubsection.4.5.1.3}
+\contentsline {subsubsection}{\numberline {4.5.1.4}Chiral conformal field theory}{165}{subsubsection.4.5.1.4}
+\contentsline {subsection}{\numberline {4.5.2}Gelfand-Fuks cohomology}{166}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}The local cohomology of holomorphic vector fields}{169}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}An explicit description of the local cocycles}{173}{subsection.4.5.4}
+\contentsline {subsubsection}{\numberline {4.5.4.1}From GF classes to local functionals}{173}{subsubsection.4.5.4.1}
+\contentsline {subsubsection}{\numberline {4.5.4.2}A comparison to other cocycles}{174}{subsubsection.4.5.4.2}
+\contentsline {section}{\numberline {.1}The dg model for punctured affine space}{175}{section.Alph0.1}

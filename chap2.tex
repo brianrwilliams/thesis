@@ -1864,8 +1864,9 @@ We will relate it to our description above using formal geometry.
 
 The language of $L_\infty$ spaces allows one to incorporate many natural geometries in the language of Lie theory.
 Of course, $L_\infty$ spaces are much more flexible than ordinary manifolds, and so also provide a nice geometric description of stacky-like objects as well.
-The key aspect of the formalism we will utilize is based on a general result of Costello \cite{CostelloHolomorphic, WG2} that states $\sigma$-models in the BV formalism can be represented as maps from a elliptic ringed space to an $L_\infty$ space.
-An elliptic ringed space is a pair $(Y, \sA)$ where $Y$ is a manifold and $\sA$ is a sheaf of commutative dg algebras defined over $\Omega^*_Y$ satisfying some conditions. 
+The key aspect of the formalism we will utilize is based on a general result of Costello \cite{CostelloHolomorphic, WG2} that asserts $\sigma$-models in the BV formalism can be represented as maps from a elliptic ringed space to an $L_\infty$ space.
+
+An {\em elliptic ringed space} is a pair $(Y, \sA)$ where $Y$ is a smooth manifold and $\sA$ is a sheaf of commutative dg algebras defined over the dg ring $\Omega^*_Y$ satisfying some conditions. 
 For a precise definition see Definition 4.0.5 of \cite{CostelloHolomorphic}.
 The most important condition for us is that underlying sheaf of cochain complexes is elliptic.
 For us, the elliptic ringed space representing the source of the $\sigma$-model is of the form
@@ -1875,7 +1876,7 @@ Y_{\dbar} = (Y, \Omega^{0,*}_Y) .
 We refer to this as the {\em Dolbeualt space} of the complex manifold $Y$. 
 As complexes of sheaves $\Omega^{0,*}_Y \simeq \sO^{hol}_Y$, but the resolution is necessary since holomorphic functions are not the smooth sections of any vector bundle. 
 
-By definition, an $L_\infty$ space is a manifold $X$ together with a sheaf of curved $L_\infty$ algebras $\fg$ defined over the de Rham complex $\Omega^*_X$. 
+By definition, an $L_\infty$ {\em space} is a manifold $X$ together with a sheaf of curved $L_\infty$ algebras $\fg$ defined over the de Rham complex $\Omega^*_X$. 
 The most important $L_\infty$ space for us exists on any complex manifold $X$. 
 In \cite{WG2} it is shown that there exists an $L_\infty$ space $(X, \fg_{X_{\dbar}})$ which is uniquely characterized by the fact that its Chevalley-Eilenberg cochains is isomorphic to the de Rham complex of holomorphic jets of the trivial bundle:
 \ben
@@ -1900,7 +1901,7 @@ We can summarize this in the following way.
 
 \begin{lem}\label{lem: comparison}
 Let $\fg_n = \CC^n[-1]$.
-Then, the Gelfand-Kazhdan descent $\bdesc_X(\fg_n)$ has the structure of a curved $L_\infty$ algebra defined over $\Omega^*_X$. 
+Then, the Gelfand-Kazhdan descent $\bdesc_{X, \sigma}(\fg_n)$ has the structure of a curved $L_\infty$ algebra defined over $\Omega^*_X$. 
 Moreover, it is equivalent to Costello's $L_\infty$ algebra $\fg_{X_{\dbar}}$.
 \end{lem}
 
@@ -1908,10 +1909,13 @@ We'd now like to describe how formal geometry allows us to describe holomorphic 
 First, we summarize Costello's approach for characterizing mapping stacks using $L_\infty$ spaces.
 We will then apply this to the case that the target is the $L_\infty$ space $\fg_{X_{\dbar}}$ to obtain a model for the holomorphic $\sigma$-model.
 
-By definition, a map from the locally ringed space $(Y, \sA)$ to the $L_\infty$ space $(X, \fg)$ is a smooth map of underlying manifolds $\varphi : Y \to X$ together with the data of a Maurer-Cartan element in 
+By definition, a map from the locally ringed space $(Y, \sA)$ to the $L_\infty$ space $(X, \fg)$ is a smooth map of underlying manifolds $\varphi : Y \to X$ together with the data of a Maurer-Cartan element in the curved $L_\infty$ algebra
 \ben
-\varphi^*\fg = \sA \tensor_{\varphi^* \Omega^*_X} \varphi^{-1} \fg,
+\sA \tensor_{\varphi^* \Omega^*_X} \varphi^{-1} \fg.
 \een
+The way to interpret this sheaf of Lie algebras is as follows. 
+The inverse image $\varphi^{-1} \fg$ is a sheaf of $\varphi^* \Omega^*_X$-modules on $Y$. 
+We tensor the sheaf of commutative rings $\sA$ over the ring $\varphi^* \Omega^*_X$ to obtain a sheaf of curved $L_\infty$ algebras over $\Omega^*_Y$. 
 The extra data of an elliptic ringed space is an ideal $\sI \subset \sA$, and we require that this Maurer-Cartan element vanish modulo $\sI \subset \sA$. 
 If one were to use a functor of points approach to define the $L_\infty$ space $(X, \fg)$, this would be the value of $(X,\fg)$ on the ringed space $(Y, \sA)$. 
 
@@ -1924,7 +1928,11 @@ Then, a map
 is the same as a holomorphic map $\varphi : Y \to X$. 
 \end{lem}
 
-What this says is that the curving in $\fg_{X_{\dbar}}$ pulls back to zero along $\varphi$ precisely when the map is holomorphic.
+Recall, $Y_{\dbar} = (Y, \Omega^{0,*}_Y)$.
+The idea $\sI$ defining this elliptic ringed space is equal to $\Omega^{0,>0}_X$ with the $\dbar$ differential.
+Thus, if $\varphi : Y \to X$ is a smooth map, we are looking at Maurer-Cartan elements in the curved $L_\infty$ algebra $\Omega^{0,>0}_X \tensor \varphi^* T_X^{1,0}[-1]$.
+Note that this curved $L_\infty$ algebra is concentrated in degrees $\geq 2$ so it suffices to show that the curving vanishes.
+Thus, the lemma states that the curving in $\fg_{X_{\dbar}}$ pulls back to zero along $\varphi$ precisely when the underlying map is holomorphic.
 
 This lemma gives a procedure for describing the formal neighborhood of a fixed holomorphic map in the moduli space of all maps $Y \to X$. 
 If $\varphi : Y \to X$ is holomorphic, the lemma implies that there is an isomorphism of $\Omega^{0,*}_Y$-modules
@@ -1933,7 +1941,7 @@ Since $\clie^*(\varphi^*\fg_{X_{\dbar}}) = \Omega^{0,*}(Y, \varphi^* J^{hol}_X)$
 \ben
 \Omega^{0,*}(Y , \varphi^* J_X^{hol}) \to \Omega^{0,*}_Y \tensor m .
 \een 
-This is precisely a deformation of the holomorphic map $\varphi$.
+This is precisely a deformation of the holomorphic map $\varphi$, see our discussion in Section \ref{sec: formal moduli}.
 
 In particular, when $\varphi$ is a constant map, we see that the curved $L_\infty$ algebra
 \ben
@@ -1944,26 +1952,26 @@ The following formalizes this statement and is proved in detail in \cite{WG2}.
 
 \begin{prop}[\cite{WG2} Proposition 5.0.1] \label{prop: constant def}
 Let ${\rm MC}_{(X,\fg_{X_{\dbar}})}(Y, \Omega^{0,*})$ be the derived space of maps $(Y, \Omega^{0,*}_Y) \to (X, \fg_{X_{\dbar}})$. 
-Then, there is a subspace of $\Hat{\rm MC}$ consisting of those maps whose underlying smooth map of manifolds $Y \to X$ is constant.
+Then, there is a substack of $\Hat{\rm MC}$ consisting of those maps whose underlying smooth map of manifolds $Y \to X$ is constant.
 Moreover, this subspace is represented by the $L_\infty$ space 
 \ben
 (X, \Omega^{0,*}(Y) \tensor \fg_{X_{\dbar}}).
 \een
 \end{prop}
 
-The derived space of maps from a ringed space to an $L_\infty$ space is a huge object, and in general will not be represented by an $L_\infty$ space. 
-What this proposition says that there is a formal completion inside of this mapping space near the constant maps that is described by the $L_\infty$ space $(X, \Omega^{0,*}(Y) \tensor \fg_{X_{\dbar}})$.
+The full derived space of maps from a ringed space to an $L_\infty$ space is a huge object, and in general will not be represented by an $L_\infty$ space. 
+What this proposition says that there is a substack arising as the formal completion of the constant maps that is described by the $L_\infty$ space $(X, \Omega^{0,*}(Y) \tensor \fg_{X_{\dbar}})$.
 
 We have the following interpretation of the $L_\infty$ algebra $\Omega^{0,*}(Y) \tensor \fg_X$ via formal geometry.
 This follows immediately from Lemma \ref{lem: comparison} above.
 
 \begin{lem}
-The Gelfand-Kazhdan descent $\desc_X(\Omega^{0,*}(Y) \tensor \fg_n)$ has the structure of a curved $L_\infty$ algebra over $\Omega^*_X$ and is equivalent to $\Omega^{0,*}_Y \tensor \fg_{X_{\dbar}}$ as in Proposition \ref{prop: constant def}.
+The Gelfand-Kazhdan descent $\bdesc_{X,\sigma}(\Omega^{0,*}(Y) \tensor \fg_n)$ has the structure of a curved $L_\infty$ algebra over $\Omega^*_X$ and is equivalent to $\Omega^{0,*}_Y \tensor \fg_{X_{\dbar}}$ as in Proposition \ref{prop: constant def}.
 \end{lem}
 
 As a corollary of Proposition \ref{prop: constant def} and this lemma we see that the Gelfand-Kazhdan descent along $X$ of $\Omega^{0,*}_Y \tensor \fg_n$ is the curved $L_\infty$ algebra controlling deformations of constant maps inside of all holomorphic maps $Y \to X$.
 
-Since descent intertwines with the shifted cotangent bundle construction, we see that the descent of the BV theory $\sE_n = T^*[-1] (\Omega^{0,*}_Y \tensor \fg_n)$ along $X$ is the shifted cotangent bundle of the elliptic moduli problem of deformations of constant maps inside of all holomorphic maps $Y \to X$.
+Since descent intertwines with the shifted cotangent bundle construction, we see that the descent of the BV theory $\sE_n = T^*[-1] (\Omega^{0,*}_Y \tensor \fg_n[1])$ along $X$ is the shifted cotangent bundle of the elliptic moduli problem of deformations of constant maps inside of all holomorphic maps $Y \to X$.
 Explicitly, the cotangent theory to the moduli problem described by $\Omega^{0,*}(Y) \tensor \fg_{X_{\dbar}}$ has fields of the form
 \ben
 \sE_{Y \to X} = \Omega^{0,*}(Y) \tensor \fg_{X_{\dbar}} [1] \oplus \Omega^{d,*}(Y) \tensor \fg_{X_{\dbar}}^\vee [-2]
@@ -2228,7 +2236,7 @@ Indeed, if $\alpha,\alpha' \in \sO(B \fg)$ then $\partial((\alpha\alpha')^Y) = \
 
 %\brian{geometric intepretation?}
 
-\subsubsection{Computing the deformation complex}
+\subsection{Computing the deformation complex}
 
 In this section we specialize the functional $J$ to the space $Y = \CC^d$ and use it to completely characterize the $U(d)$-invariant, holomorphically translation invariant deformation complex.
 
@@ -2581,16 +2589,18 @@ but we attach the propagator $P_{\epsilon < 1}$ to every other internal edge.
 \end{rmk}
 
 \begin{proof}
-By Corollary 16.0.5 of \cite{WG2} we see that the scale $L$ obstruction is given by a sum over wheels.
-That is
-\ben
-\Theta[L] = \sum_{\substack{\Gamma \in \text{Wheels}\\ e \in {\rm Edge}(\Gamma)}} W_{\Gamma,e}(P_{\epsilon<1}, K_\epsilon,
-I^{\rm W}[\epsilon]) .
-\een
-Thus, to prove the lemma we must show that only the $(d+1)$-vertex wheels contribute to the $\epsilon \to 0$ limit. 
-Both of these 
-First, we have 
-It is here that we must recall the explicit form of the heat kernel and propagator:
+
+This is an immediate corollary of the general result we proved about one-loop anomalies of holomorphic theories in Lemma \ref{lem: chiral anomaly}.
+%By Corollary 16.0.5 of \cite{WG2} we see that the scale $L$ obstruction is given by a sum over wheels.
+%That is
+%\ben
+%\Theta[L] = \sum_{\substack{\Gamma \in \text{Wheels}\\ e \in {\rm Edge}(\Gamma)}} W_{\Gamma,e}(P_{\epsilon<1}, K_\epsilon,
+%I^{\rm W}[\epsilon]) .
+%\een
+%Thus, to prove the lemma we must show that only the $(d+1)$-vertex wheels contribute to the $\epsilon \to 0$ limit. 
+%Both of these 
+%First, we have 
+%It is here that we must recall the explicit form of the heat kernel and propagator:
 
 \end{proof}
 
@@ -3112,12 +3122,30 @@ In cohomology, deformations live in $H^0$ of this complex which is $H^{d}(\TVect
 The cohomology $H^{d}(\TVectd , \GL_n ; \hOmega^{d+1}_{n,cl})$ is trivial.
 \end{lem}
 \begin{proof}
-There is a spectral sequence computing $H^{*}(\TVectd , \GL_n ; \hOmega^{d+1}_{n,cl})$ from filtering cochains on $\TVectd$ by the number of $\hOmega^{d+1}_{n,cl}$-inputs.
+We use a spectral sequence computing the cohomology $H^{*}(\TVectd , \GL_n ; \hOmega^{d+1}_{n,cl})$.
+Consider the following natural filtration on the $L_\infty$ algebra $\TVectd$:
+\ben
+F^1 = \TVectd \supset F^0 = \hOmega^{d+1}_{n,cl}[d-1] .
+\een
+The associated graded $L_\infty$ algebra is a direct sum ${\rm Gr} \; \TVectd = \Vect \oplus \hOmega^{d+1}_{n,cl}[d-1]$. 
+There is an induced filtration on the Chevalley-Eilenberg cochain complex with values in any module $\clie^*(\TVectd ; M)$ and hence a spectral sequence converging to $H^*(\TVectd ; M)$. 
+For us, the module $M$ is restricted from a $\Vect$-module. 
 The $E_1$-page of the spectral sequence is 
 \ben
-H^{*}_{\rm Lie}(\Vect \ltimes \hOmega^{d+1}_{n,cl} [d-1] , \GL_n ; \hOmega^{d+1}_{n,cl}),
+H^*(\Vect \oplus \hOmega^{d+1}_{n,cl}[d-1] ; M) = H^*(\Vect ; M) \tensor \Sym \left(\hOmega^{d+1}_{n,cl}\right)^\vee [-d] .
 \een
-where the semi-direct product uses the natural $\Vect$-module structure on forms.
+
+We now plug in the module $M = \hOmega^{d+1}_{n,cl}$. 
+According to the description of the $E_1$-page, to compute the degree $d$ cohomology we need only consider the component $H^d(\Vect ; \hOmega^{d+1}_{n,cl})$.
+There is a similar spectral sequence where we work relative to $\GL_n$, where this cohomology becomes $H^d(\Vect , \GL_n; \hOmega^{d+1}_{n,cl})$.
+The cohomology of $\Vect$-module $\hOmega^{k}_n$ relative to $\GL_n$ has been recounted in Section \ref{sec: gf}.
+For an original reference see \cite{Fuks}.
+In particular, $H^{d}(\Vect, \GL_n ; \hOmega^{k}_n) = 0$ for $k \geq d+1$. 
+If we take the standard $(\Vect ,\GL_n)$-equivariant resolution
+\ben
+\hOmega^{d+1}_{n,cl} \simeq \hOmega^{d+1}_n \xto{\partial} \hOmega^{d+2}_n [-1] \xto{\partial} \cdots ,
+\een
+we see that $H^{d}(\Vect, \GL_n ; \hOmega^{d+1}_{n,cl}) = 0$ as well.
 
 \end{proof}
 
