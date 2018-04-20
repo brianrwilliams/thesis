@@ -1,0 +1,172 @@
+\documentclass[10pt]{amsart}
+
+\usepackage{macros,slashed}
+
+\linespread{1.25}
+
+\title{The holomorphic twist of $\cN=1$ in four dimensions}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+\def\SU{{\rm SU}}
+\def\Spin{{\rm Spin}}
+\def\dvol{{\rm dvol}}
+\def\dslash{\slashed{\partial}}
+\def\fso{\mathfrak{s}\mathfrak{o}}
+
+\begin{document}
+\maketitle
+
+In this section we show that there exists a twist of the $\cN = 1$ chiral supermultiplet in four dimensions that is equivalent to our prototypical example of a holomorphic theory: the two dimensional $\beta\gamma$ system. 
+
+\subsection{$\cN=1$ supersymmetry}
+
+\subsubsection{The $\cN=1$ SUSY algebra}
+
+First, we set up some representation theoretic notations. 
+Let $S_+,S_-$ be the irreducible spin representations. 
+With respect to the decomposition, ${\rm Spin}(4) = SU(2)\times SU(2)$ they are the two defining representations of $SU(2)$, hence $S_\pm$ are each complex two dimensional. 
+Let $V_\RR$ be the real vector representation of ${\rm Spin}(4)$. 
+This is a real four dimensional representation.
+We denote by $V_\CC = V_\RR \tensor_\RR \CC \cong \CC^4$ its 
+complexification.
+
+There are $SU(2)$-invariant pairings 
+\ben
+\<-,-\> : S_\pm \tensor S_\pm \to \CC,
+\een
+and a ${\rm Spin}(4)$-invariant vector valued pairing
+\ben
+\Gamma : S_+ \tensor S_- \xto{\cong} V_\CC .
+\een
+If we choose a basis for $V$ one can think of the components of $\Gamma$ as the usual $4 \times 4$ gamma matrices. 
+
+Define the super Lie algebra
+\ben
+T^{\cN = 1} = V_\CC \oplus \Pi(S) = V_\CC \oplus \Pi(S_+ \oplus S_-)
+\een
+with only non-trivial bracket
+\ben
+[(v, Q), (v',Q')] = \Gamma(Q \tensor Q') .
+\een
+Note that $V_\CC$ is central.
+This is the $d = 4$, $\cN=1$ supertranslation Lie algebra.
+
+A supersymmetric theory on $\RR^4$ is one that is invariant under the spin extension of the Poincar\'{e} group ${\rm Spin}(4) \ltimes \RR^n$ such that the complexified infinitesimal action of the complex Lie algebra $\fso(4 , \CC) \ltimes \CC^4$ lifts to an action of the super Lie algebra
+\ben
+\fso(4 , \CC) \ltimes T^{\cN=1} .
+\een
+
+\subsubsection{The chiral multiplet}
+
+We work on the four manifold $\RR^4$ equipped with the flat metric and coordinates $\{x_1,\ldots,x_4\}$.
+We will write $\Omega^i$ for the space of complexified smooth $i$-forms on $\RR^4$. 
+The complexified space of sections of the spinor bundles $S_\pm$ are denoted by $\sS_{\pm}$. 
+Write $\d^4 x = \d x_1 \cdots \d x_4$ and $\star$ for the Hodge star operator. 
+
+We start by recalling the physical description of the $\cN=1$ chiral multiplet, then show how to embed the theory into the classical BV formalism.
+In the next section we will discuss twisting the BV theory.
+
+The chiral matter we consider will take values in a complex vector space $V$ (not to be confused with $V_\CC$).
+The physical fields consist of bosonic fields $\varphi_\pm, F_\pm$ fermionic fields $\psi_\pm \in \sS_\pm$. 
+
+The chiral scalar $\varphi_+$ takes is a function with values in $V$, $\varphi \in C^\infty(\RR^4) \tensor V$, and the chiral spinor is an element $\psi_+ \in \sS_+ \tensor V$. 
+The auxillary scalar field $F \in C^\infty(\RR^4) \tensor V$ does not propagate, but exists to ensure the closure of the SUSY algebra.
+
+Similarly, the antichiral fields are elements $\varphi_- \in C^\infty(\RR^4) \tensor V^*, \psi_- \in \sS_- \tensor V^*$, $F \in C^\infty(\RR^4) \tensor V*$. 
+
+The action functional is given by
+\ben
+S^{\cN = 1} (\varphi_\pm, \psi_\pm, F_\pm) = \int \varphi_- \Delta \varphi_+ \d^4 x + \int \<\psi_+ , \dslash \psi_-\> \d^4 x +\int F_+ F_- \d^4 .
+\een
+Here, $\<-,-\>$ denotes the standard symplectic pairing $S_+ \tensor S_+ \to \CC$. 
+We are also implicitly using the pairing between $V$ and $V^*$.
+
+It is convenient to introduce the $\cN=1$ superfield formalism to organize the theory.
+Choose a basis $\{\theta_\alpha\} = \{\theta_1,\theta_2\}$ for the positive spin representation $S_+$ and a basis $\{\theta_{\dot{\alpha}}\}$ for the negative spin representation $S_-$.
+The chiral multiplet consists of a pair of superfields $\Phi_+ \in C^\infty(\RR^4)[\theta_{\alpha}], \Phi_- \in C^\infty(\RR^4)[\theta_{\dot{\alpha}}]$. 
+The variables $\theta_{\alpha}, \theta{\dot{\alpha}}$ are odd and hence $C^\infty(\RR^4)[\theta_{\alpha}], C^\infty(\RR^4)[\theta_{\dot{\alpha}}]$ are superalgebras. 
+
+In the notation above, the superfields can be written as
+\bestar 
+\Phi_+ & = \varphi_+ + \theta_\alpha \psi_{+,\alpha} + \theta_{1}\theta_{2} F_+ \\
+\Phi_- & = \varphi_- + \theta_{\dot{\alpha}} \psi_{-,\dot{\alpha}} + \theta_{\dot{1}} \theta_{\dot{2}} F_- .
+\eestar
+The action functional can be written as
+\ben
+S^{\cN = 1}(\Phi_{\pm}) = \int \d D_+ \Phi_+ D_- \Phi_-
+\een
+\brian{what is $D\pm$?}
+
+We will write the chiral supermultiplet in the BV-BRST formalism.
+To do this, we must introduce anti-fields that pair with the physical fields above.
+There are no gauge symmetries, so this is all we have to do.
+In superfield notation, let
+\bestar
+\Phi_+' & = & (\varphi_+^', \psi_+^
+, F_+') \in \Omega^4 \tensor V \oplus \cS_-' \tensor V \oplus \Omega^2 \tensor V \\
+\Phi_-' & = & (\varphi_-', \psi_-^\vee, F_-^\vee) \in \Omega^4 \tensor V \oplus \cS_-' \tensor V \oplus \Omega^2 \tensor V .
+\eestar
+We note that the anti-field to a positive spinor $\psi_+ \in \cS_{\pm}$ is a spinor $\psi_\pm^\vee \in \cS_+$ of the same chirality. The prime simply indicates the same underlying spinor bundle except we are viewing it as an anti-field. Using this notation, we can define the classical theory in the BV formalism in a succinct way. 
+
+\begin{dfn} The $N=1$ chiral supermultiplet on $\RR^4$ in the BV formalism is the $\ZZ \times \ZZ/2$ graded theory with complex of fields given by
+\end{dfn}
+
+The $R$-charge of an anti-field is opposite to that of the corresponding field. Thus, $\psi_{\pm}^\vee$ has $R$-charge $\mp 1$ and $F^\vee_{\pm}$ has $R$-charge $\mp 2$. 
+
+We will perform a twist of the free chiral supermultiplet by a fixed constant spinor $Q \in \cS_-$. This element acts on the fields $\Phi = (\varphi_+, \psi_+, F)$ as above:
+\ben
+Q \cdot (\varphi_+, \psi_+, F) = (0, Q \cdot (\d \varphi_+), \<Q, \dslash \psi_+\>) .
+\een
+The action of $Q$ on the anti-fields reads is determined by compatibility with the $(-1)$-shifted symplectic pairing. Explicitly it is
+\ben
+Q \cdot (\varphi_+^\vee, \psi_+^\vee, F) = (\<Q, \dslash \psi_+^\vee\>, Q \cdot (\star F_+^\vee), 0) .
+\een
+
+We have arrived at the following. 
+
+\begin{prop} The twist of the $N=1$ free chiral supermultiplet on $\RR^4$ with values in the hermitian vector space $V$ by an element $Q \in \cS_-$ is equivalent to the free $\beta\gamma$ system on $\CC^2$ with values in $V$:
+\ben
+(\gamma,\beta) \in \Omega^{0,*}(\CC^2 ; V) \oplus \Omega^{1,*}(\CC^2 ; V^\vee)[1] .
+\een
+The action functional is $S(\gamma,\beta) = \int \<\beta, \dbar \gamma\>$ where $\<-,-\>$ is the evaluation pairing on $V$. 
+\end{prop}
+
+\subsubsection{}
+We will introduce the following ``first-order" reformulation of the chiral supermultiplet that will be convenient for our description of it as a BV theory. Introduce additional scalar fields of the form
+\ben
+B \in \Omega^3 \tensor V
+\een
+and define the action 
+\bestar
+S^{\rm FO}(\varphi, B , \psi , F) & = &  \int h(B \wedge \d \varphi) - \frac{1}{2} \int h(B \wedge \star B)  \\ & + & \int h(\<\psi_+ , \dslash \psi_-\>) \dvol 
+\eestar
+
+\begin{lem} The theories $S^{\rm SO}$ and $S^{\rm FO}$ are classically equivalent. 
+\end{lem}
+\begin{proof} We show that the spaces of solutions to the classical equations of motion are equivalent. The equations of motion for the chiral supermultiplet read
+\bestar
+\Delta \varphi & = & 0 \\
+\dslash \psi & = & 0 \\
+F & = & 0 .
+\eestar 
+Next, consider $S^{\rm FO}$. The pieces of the action functional involving $\psi, F$ are identical. We use the variation of the scalar field $\varphi \mapsto \varphi + \delta \varphi$ to obtain the equation of motion $\d B = 0$. The variation $B \mapsto B + \delta B$ yields the equation $\d \varphi - h^\vee(\star B)$. This equation is equivalent to $\star \d \varphi = h^\vee (B)$. Applying $\d$ to this equation and using the equation $\d B = 0$ we obtain $\d \star \d \varphi = \Delta \varphi = 0$, as desired. 
+
+An explicit equivalence at the level of fields can be written as follows. \brian{Want $\varphi \mapsto \varphi, B \mapsto \star h^\vee(\d \varphi) + h^\vee(F)$.}
+\end{proof}
+
+\brian{physics description of susy action}
+
+\subsubsection{}
+We describe the theory $S^{\rm FO}$ as a classical theory in the BV formalism. The space of fields
+\[
+\xymatrix{
+& \ul{0} & \ul{1} \\
+{\rm Fermion \; degree}\;\; \ul{0} & \Omega^0 \tensor V \ar[r]^-{\d_+} & (\Omega^1 \tensor V)_+ \\
+{\rm Fermion \; degree} \; \; \ul{0} & (\Omega^{3} \tensor V)_- \ar[r]^-{\d} & \Omega^4 \tensor V  \\
+{\rm Fermion \; degree} \; \; \ul{1} & (\sS_+ \oplus \sS_-) \tensor V \ar[r]^-{\dslash} & (\sS'_-\oplus \sS'_+) \tensor V \\
+}
+\]
+
+
+\end{document}
