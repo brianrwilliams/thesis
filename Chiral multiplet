@@ -4,7 +4,7 @@
 
 \linespread{1.25}
 
-\title{The holomorphic twist of $\cN=1$ in four dimensions}
+\title{The holomorphic twist of $\cN=1$ supermultiplet in four dimensions}
 
 \def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
 
@@ -39,7 +39,7 @@ and a ${\rm Spin}(4)$-invariant vector valued pairing
 \ben
 \Gamma : S_+ \tensor S_- \xto{\cong} V_\CC .
 \een
-If we choose a basis for $V$ one can think of the components of $\Gamma$ as the usual $4 \times 4$ gamma matrices. 
+If we choose a basis for $V$ one can think of the components of $\Gamma$ as the usual gamma matrices $\Gamma_{\alpha \dot{\beta}}^i$ where $\alpha, \dot{\beta}=1,2$ run over a basis for $S_+,S_-$ respectively, and $i=1,\ldots,4$ runs over a basis for $V$. 
 
 Define the super Lie algebra
 \ben
@@ -73,11 +73,11 @@ The physical fields consist of bosonic fields $\varphi_\pm, F_\pm$ fermionic fie
 The chiral scalar $\varphi_+$ takes is a function with values in $V$, $\varphi \in C^\infty(\RR^4) \tensor V$, and the chiral spinor is an element $\psi_+ \in \sS_+ \tensor V$. 
 The auxillary scalar field $F \in C^\infty(\RR^4) \tensor V$ does not propagate, but exists to ensure the closure of the SUSY algebra.
 
-Similarly, the antichiral fields are elements $\varphi_- \in C^\infty(\RR^4) \tensor V^*, \psi_- \in \sS_- \tensor V^*$, $F \in C^\infty(\RR^4) \tensor V*$. 
+Similarly, the antichiral fields are elements $\varphi_- \in C^\infty(\RR^4) \tensor V^*, \psi_- \in \sS_- \tensor V^*$, $F \in C^\infty(\RR^4) \tensor V^*$. 
 
 The action functional is given by
 \ben
-S^{\cN = 1} (\varphi_\pm, \psi_\pm, F_\pm) = \int \varphi_- \Delta \varphi_+ \d^4 x + \int \<\psi_+ , \dslash \psi_-\> \d^4 x +\int F_+ F_- \d^4 .
+S^{\cN = 1} (\varphi_\pm, \psi_\pm, F_\pm) = \int \varphi_- \Delta \varphi_+ \d^4 x + \int \<\psi_+ , \dslash \psi_-\> \d^4 x +\int F_+ F_- \d^4 x .
 \een
 Here, $\<-,-\>$ denotes the standard symplectic pairing $S_+ \tensor S_+ \to \CC$. 
 We are also implicitly using the pairing between $V$ and $V^*$.
@@ -85,7 +85,7 @@ We are also implicitly using the pairing between $V$ and $V^*$.
 It is convenient to introduce the $\cN=1$ superfield formalism to organize the theory.
 Choose a basis $\{\theta_\alpha\} = \{\theta_1,\theta_2\}$ for the positive spin representation $S_+$ and a basis $\{\theta_{\dot{\alpha}}\}$ for the negative spin representation $S_-$.
 The chiral multiplet consists of a pair of superfields $\Phi_+ \in C^\infty(\RR^4)[\theta_{\alpha}], \Phi_- \in C^\infty(\RR^4)[\theta_{\dot{\alpha}}]$. 
-The variables $\theta_{\alpha}, \theta{\dot{\alpha}}$ are odd and hence $C^\infty(\RR^4)[\theta_{\alpha}], C^\infty(\RR^4)[\theta_{\dot{\alpha}}]$ are superalgebras. 
+The variables $\theta_{\alpha}, \theta{\dot{\alpha}}$ are odd and hence $C^\infty(\RR^4)[\theta_{\alpha}], C^\infty(\RR^4)[\theta_{\dot{\alpha}}]$ are considered as superalgebras. 
 
 In the notation above, the superfields can be written as
 \bestar 
@@ -94,23 +94,71 @@ In the notation above, the superfields can be written as
 \eestar
 The action functional can be written as
 \ben
-S^{\cN = 1}(\Phi_{\pm}) = \int \d D_+ \Phi_+ D_- \Phi_-
+S^{\cN = 1}(\Phi_{\pm}) = \int \d^4 \theta \d^4 x \Phi_+ D^2 \Bar{D}^2 \Phi_-
 \een
-\brian{what is $D\pm$?}
+Here, $\int \d^4 \theta$ is the Berezin integral.
 
 We will write the chiral supermultiplet in the BV-BRST formalism.
 To do this, we must introduce anti-fields that pair with the physical fields above.
 There are no gauge symmetries, so this is all we have to do.
 In superfield notation, let
 \bestar
-\Phi_+' & = & (\varphi_+^', \psi_+^
-, F_+') \in \Omega^4 \tensor V \oplus \cS_-' \tensor V \oplus \Omega^2 \tensor V \\
-\Phi_-' & = & (\varphi_-', \psi_-^\vee, F_-^\vee) \in \Omega^4 \tensor V \oplus \cS_-' \tensor V \oplus \Omega^2 \tensor V .
+\Phi_+' & = & (\varphi_+', \psi_+'
+, F_+') \in \Omega^4 \tensor V \oplus \cS_- \tensor V \oplus \Omega^4 \tensor V \\
+\Phi_-' & = & (\varphi_-', \psi_-', F_-') \in \Omega^4 \tensor V^* \oplus \cS_- \tensor V^* \oplus \Omega^4 \tensor V^* .
 \eestar
 We note that the anti-field to a positive spinor $\psi_+ \in \cS_{\pm}$ is a spinor $\psi_\pm^\vee \in \cS_+$ of the same chirality. The prime simply indicates the same underlying spinor bundle except we are viewing it as an anti-field. Using this notation, we can define the classical theory in the BV formalism in a succinct way. 
 
-\begin{dfn} The $N=1$ chiral supermultiplet on $\RR^4$ in the BV formalism is the $\ZZ \times \ZZ/2$ graded theory with complex of fields given by
+The fields together with the anti-fields fit into the complex.
+We describe the theory $S^{\rm FO}$ as a classical theory in the BV formalism. The space of fields
+\be\label{n=1}
+\begin{tikzcd}
+& \ul{0} & \ul{1} \\
+{\rm Fermion \; degree}\;\; \ul{0} & C^\infty(\RR^4) \tensor V \arrow[r,"\Delta"] \arrow[dotted, d, "Q"] & \left(\Omega^4 \tensor V\right)' \\
+{\rm Fermion \; degree} \; \; \ul{1} & \sS_+  \tensor V \arrow[dotted, d, "Q"] \ar[r,"\dslash"] & \left(\sS_- \tensor V\right)' \\
+{\rm Fermion \; degree} \; \; \ul{0} & (C^\infty(\RR^4) \tensor V) & \left(\Omega^4 \tensor V\right)'  \\
+{\rm Fermion \; degree}\;\; \ul{0} & C^\infty(\RR^4) \tensor V* \arrow[r,"\Delta"] \arrow[dotted, d, "Q"] & \left(\Omega^4 \tensor V^*\right)' \\
+{\rm Fermion \; degree} \; \; \ul{1} & \sS_-  \tensor V^* \ar[r,"\dslash"] \arrow[dotted, d, "Q"] & \left(\sS_+ \tensor V^*\right)' \\
+{\rm Fermion \; degree} \; \; \ul{0} & (C^\infty(\RR^4) \tensor V^*) & \left(\Omega^4 \tensor V^*\right)'  \\
+\end{tikzcd}
+\ee
+The first three rows comprise the chiral superfield $\Phi_+ = (\varphi_+, \psi_+, F_+)$ in degree zero, and its antifield $\Phi'_+ = (\varphi_+',\psi', F_+')$. 
+We use the prime label in the diagram to stress that the space consists of antifields, this will be a useful bookkeeping device once we twist. 
+The last three rows comprise the anti-chiral superfield and its anitfield $\Phi_-,\Phi_-'$. 
+The dotted arrows denote the SUSY transformations which we describe momentarily.
+
+\begin{dfn} The free $\cN=1$ chiral supermultiplet on $\RR^4$ in the BV formalism is the $\ZZ \times \ZZ/2$ graded theory with complex of fields in (\ref{n=1}) (forgetting the dotted arrows).
+The $(-1)$-symplectic pairing is given by 
+\brian{define this}.
 \end{dfn}
+
+We now turn to showing that this theory is actually supersymmetric.
+That is, we construct an invariant action by the super Lie algebra $\fso(4;\CC) \ltimes T^{\cN=1}$.
+The action of $\fso(4 ; \CC)$ is the natural one by the defining representation on spacetime. 
+The action of the bosonic part $V_\CC = \CC^4$ of the supertranslations is by the constant vector fields $\frac{\partial}{\partial x_i}$. 
+It is easiest to define the action of the odd part of the supertranslations using the superfield notation. 
+Define the differential operators on superspace $D_{\alpha}, D_{\dot{\alpha}}$ by
+\bestar
+D_\alpha & = \frac{\partial}{\partial \theta_\alpha} + \Gamma^{\alpha \dot{\beta}}_i \theta_{\dot{\beta}} \frac{\partial}{\partial x_i} \\
+D_{\dot{\alpha}} & = \frac{\partial}{\partial \theta_{\dot{\alpha}}} + \Gamma_i^{\beta \dot{\alpha}} \theta_{\beta} \frac{\partial}{\partial _i} .
+\eestar
+Note that $\Gamma^{\alpha \dot{\beta}}_i \partial_{x_i}$  are the components of the Dirac operator $\slashed\partial : \sS_+ \to \sS_-$. 
+Choose a basis $\{Q_1, Q_2\}$ and $\{Q_{\dot{1}}, Q_{\dot{2}}\}$ for $S_{+}$ and $S_-$, respectively.
+The action of $Q_\alpha, Q_{\dot{\alpha}}$ on the theory is by the operators by $D_\alpha, D_{\dot{\alpha}}$, respectively.
+
+We are most interested for the explicit form in which an element $Q_- \in S_-$ acts on the theory. 
+For any $Q_- \in \sS_-$ we have 
+\ben
+Q_+ \cdot (\varphi_+, \psi_+, F) = (0, \Gamma_+(Q \tensor \d \varphi_+), \<Q, \dslash \psi_+\>) .
+\een
+The right-hand side requires a bit of explanation. 
+The gamma matrices identify $\Gamma : S_+ \tensor S_- \cong V$. 
+Together with the spin pairing, this defines a map
+\ben
+\Gamma_+ : S_- \tensor \Omega^1(\RR^4) \to \sS_+ .
+\een
+Thus $\Gamma_+(Q \tensor \d \varphi_+) \in \sS_+$. 
+Also, the spin pairing defines a map $\<-,-\> : S_- \tensor \sS_- \to C^\infty(\RR^4)$ so $\<Q, \dslash \psi_+\> \in C^\infty(\RR^4)$. 
 
 The $R$-charge of an anti-field is opposite to that of the corresponding field. Thus, $\psi_{\pm}^\vee$ has $R$-charge $\mp 1$ and $F^\vee_{\pm}$ has $R$-charge $\mp 2$. 
 
@@ -158,15 +206,7 @@ An explicit equivalence at the level of fields can be written as follows. \brian
 \brian{physics description of susy action}
 
 \subsubsection{}
-We describe the theory $S^{\rm FO}$ as a classical theory in the BV formalism. The space of fields
-\[
-\xymatrix{
-& \ul{0} & \ul{1} \\
-{\rm Fermion \; degree}\;\; \ul{0} & \Omega^0 \tensor V \ar[r]^-{\d_+} & (\Omega^1 \tensor V)_+ \\
-{\rm Fermion \; degree} \; \; \ul{0} & (\Omega^{3} \tensor V)_- \ar[r]^-{\d} & \Omega^4 \tensor V  \\
-{\rm Fermion \; degree} \; \; \ul{1} & (\sS_+ \oplus \sS_-) \tensor V \ar[r]^-{\dslash} & (\sS'_-\oplus \sS'_+) \tensor V \\
-}
-\]
+
 
 
 \end{document}
