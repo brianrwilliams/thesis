@@ -1,0 +1,185 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% nuthesis-template.tex - Miguel A, Lerma - 3/31/2013
+%                         mlerma@math.northwestern.edu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%% DISCLAIMER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% In spite of the effort to accommodate this template and the nuthesis
+% class to the official requirements of the university to write a 
+% Ph.D. dissertation, it is not possible to guarantee that it will 
+% always work, and the author of the dissertation remains responsible
+% for checking that such requirements are actually fulfilled by 
+% his/her final work.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt]{nuthesis}	% The nuthesis class is based on 
+				% amsbook.cls.
+
+\usepackage{macros}
+
+\def\brian{\textcolor{blue}{BW: }\textcolor{blue}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DATA OF AUTHOR AND DISSERTATION %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{Brian R. Williams}
+
+\title{The holomorphic $\sigma$-model and its symmetries}
+
+%\degree{DOCTOR OF PHILOSOPHY}  % Default: DOCTOR OF PHILOSOPHY
+
+%\field{Mathematics}            % Default: Mathematics
+
+%\graduationmonth{June}         % The default is June or December
+                                % depending on current date.
+
+%\graduationyear{2003}          % Default: current year.
+
+
+				% Use \includeonly to select the 
+%\includeonly{chap1,chap2,...}	% chapters to include if you are 
+				% using the \include command below.
+				% This way you can latex only a the 
+				% part you are working on, which 
+				% is faster than latexing the entire 
+				% thesis. 
+
+
+\begin{document}
+%	
+%	THE BODY OF YOUR THESIS STARTS HERE
+%
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Some initial stuff %
+%%%%%%%%%%%%%%%%%%%%%%
+
+\frontmatter		% Preliminary pages start here.
+
+\maketitle		% Produces the title page.
+
+\copyrightpage		% Creates the copyright page.
+
+
+\abstract		% Abstract.
+
+This is the abstract.
+
+\acknowledgements	% Acknowledgements (optional).
+
+\input{thanks}
+
+%\preface		% Preface (optional).
+
+%This is the preface.
+
+
+%% A few more optional pages (uncomment if needed)
+%
+%\listofabbreviations 
+%
+%This is the list of abbreviations (optional).
+%
+%\glossary
+%
+%This is the glossary (optional).
+%
+%\nomenclature
+%
+%This is the nomenclature (optional).
+%
+%% Note that the dedication text must be passed as an argument
+%% of the \dedication command
+%\dedication{This is the dedication (optional).}
+%
+
+\clearpage\phantomsection % needed for the hyperlinks to work correctly
+\tableofcontents	% Table of Contents will be automatically
+			% generated and placed here.
+
+\clearpage\phantomsection % needed for the hyperlinks to work correctly
+\listoftables		% List of Tables and List of Figures will be placed
+
+\clearpage\phantomsection % needed for the hyperlinks to work correctly
+\listoffigures		% here, if applicable (optional).
+
+
+
+\mainmatter             % Actual text starts here.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Actual text starts here %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% If there is an introduction it must be the first chapter
+
+\input{intro}
+
+\input{chap1}
+
+\input{chap2}
+
+\input{chap3}
+
+\bibliographystyle{alpha}
+%\bibliographystyle{spmpsci}  
+\bibliography{thesis}
+
+% Alternatively, you may write the chapters in separate
+% files, say chap1.tex, chap2.tex, etc., and include them 
+% with commands:
+
+%\include{chap1}
+
+%\include{chap2}
+
+% The command \includeonly above allows to include a selected 
+% set of chapters only.
+
+% Uncomment the 'singlespace' environment and '\bibsep' command
+% if needed - some bibliographic styles overide the definition
+% of 'thebibliography' in nuthesis.cls
+%
+%\begin{singlespace}
+%%\bibsep 12pt
+%\clearpage\phantomsection % needed for hyperlikns to work correctly
+%\begin{thebibliography}{xxx}
+%
+%\bibitem{label1} A bibliographic item.  A bibliographic item.  A
+%bibliographic item.  A bibliographic item.
+%\bibitem{label2} Another bibliographic item.  
+%\bibitem{label3} Yet another bibliographic item.  
+%% The usages of \bibitem and \cite{..} are 
+%% explained in Section 4.3 (page 73) of % LaTeX manual.
+%% Or you may use BibTeX.
+%\end{thebibliography}
+%\end{singlespace}
+
+% (The following suggested by Francisco Iacobelli - 5/11/2010)
+% In case, you want to use BibTeX, you should replace (or comment)
+% the bibliography environment.
+% Instead uncomment the following 3 lines and replace <bib file>
+% with your .bib file:
+% \renewcommand\refname{\begin{centering}References\end{centering}}
+% \bibliography{<bib file>}
+% \bibliographystyle{acm} %or another suitable style.
+
+
+
+\appendix		% Appendix begins here (optional).
+
+%\appendices	        % If more than one appendix chapters,
+				% use appendices instead of appendix
+\input{appendix}
+
+
+%\begin{vita}                    % Vita (optional).
+%\end{vita}
+
+
+\end{document}
+

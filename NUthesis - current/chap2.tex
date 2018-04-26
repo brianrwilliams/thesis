@@ -131,9 +131,7 @@ One can also study the problem of quantizing a higher dimensional version of the
 In general there is a more sensitive obstruction, which is still satisfied so long as the target admits a flat connection.
 
 In the final section of this chapter we turn to a description of the local operators of the theory. 
-The factorization algebra of observables is holomorphically translation invariant, in the sense of Section \ref{sec: hol trans}.
-We show that there is a subspace of the operators supported on the sphere in $\CC^d$ that the factorization product endows with the structure of an associative algebra.
-Further, we show that the state space is a natural dg module for this associative algebra, and we express it as a vacuum representation of the sphere algebra. 
+\brian{say more.}
 
 \section{Gelfand-Kazhdan formal geometry} \label{sec: gk formal geometry}
 
@@ -3400,8 +3398,6 @@ In this section we give a description of the observables of the holomorphic $\si
 
 \subsubsection{The cohomology of the observables}
 
-In this section we compute the cohomology of the factorization algebra supported on a disk $D(w,r) \subset \CC^d$ centered at $w \in \CC^d$ of radius $r > 0$. 
-
 \begin{lem}\label{lem: disk cohomology}
 For any $d$-dimensional disk in $\CC^d$ there is an isomorphism
 \ben
@@ -3409,27 +3405,6 @@ H^* \left(\Obs^{\q}_V(D(w,r))\right) \cong \Sym\left( \left(\sO^{hol}(D(w,r)\rig
 \een
 where the $(-)^\vee$ is the topological dual.
 \end{lem}
-
-\begin{proof}
-A result of Serre \cite{Serre} states that if $U$ is a Stein manifold and $1 \leq p \leq d = \dim_\CC(U)$ that the compactly supported Dolbeualt cohomology $H^{p,q}_{\dbar, c}(U)$ is only nonzero when $q = d$.
-In this case, there is a canonical isomorphism $H^{p,d}_{\dbar,c}(U) \cong \left(\Omega^{d-p, hol}(U)\right)^\vee$. 
-
-To apply this fact, we consider the following spectral sequence. 
-We define a filtration on $\Obs^\q(D(w,r))$ by
-\ben
-F^k = \bigoplus_{j \geq k} \hbar^j \cdot \Sym(\Omega^{d,*}_c(U,V^*)[d] \oplus \Omega^{0,*}_c(U,V)[1]) .
-\een
-The $E_1$-page of the corresponding spectral sequence is simply given by the $\dbar$ cohomology.
-The $\dbar$ differential preserves the symmetric degree, so it suffices to compute the cohomology at each layer of the symmetric grading. 
-Since the disk $U = D(w,r)$ is Stein, we obtain
-\begin{align*}
-H^*\left(\Sym(\Omega^{d,*}_c(U,V^*)[d] \oplus \Omega^{0,*}_c(U,V)[1]), \dbar\right) & = \bigoplus_{n\geq 0} H^*\left( \left(\Omega^{d,*}_c(U,V^*)[d] \oplus \Omega^{0,*}_c(U,V)[1]\right)^{\tensor n}_{S_n}, \dbar\right) \\ & \cong H^*\left( \left(\Omega^{d,*}_c(U^n,(V^*)^{\times n})[d] \oplus \Omega^{0,*}_c(U^n,V^{\times n})[1]\right)^{\tensor n}_{S_n}, \dbar\right) \\ & \cong \Sym\left( \left(\sO^{hol}(U)\right)^\vee \tensor V^* \oplus \left(\Omega^{d,hol}(U)\right)^\vee \tensor V [-d+1] \right) .
-\end{align*}
-In the second line we have used the fundamental property of the completed tensor product recounted in Equation (\ref{tensor1}).
-In the last line, we have applied Serre's result. 
-
-Note that the BV Laplacian is identically zero on the $E_1$-page of the $\hbar$-spectral sequence, thus it collapses and the lemma follows.
-\end{proof}
 
 \subsubsection{An explicit characterization}
 

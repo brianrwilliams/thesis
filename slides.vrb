@@ -1,0 +1,20 @@
+\frametitle{Gelfand-Kazhdan descent}
+Define a category of ``formal vector bundles" on the formal $n$-disk.
+In particular, these are $(\W_n, \GL_n)$-modules.
+For each $X$, there is a functor
+\ben
+\begin{tikzcd}[row sep = small]
+\sV \arrow[r, mapsto] \arrow[d, phantom, "\vin"] & \left({\rm Fr}_X \times^{\GL_n} \sV, \nabla^{coor}\right)  \arrow[d, phantom, "\vin"] \\
+{\rm VB}_{\hD^n} \arrow[r,"\desc_X"] & {\rm VB}^{flat}_{X} \\
+{\rm Mod}_{(\W_n, \GL_n)} \arrow[u, hook]&
+\end{tikzcd}
+\een
+Moreover, there are ``formal characteristic classes" that live in the Gelfand-Fuks cohomology.
+The descent functor determines a transformation of cohomology theories and hence a map of complexes
+\ben
+{\rm char}_X : \clie^*(\W_n , \GL_n ; \sV) \to \Omega^*(X, \desc_X(\sV)) .
+\een
+
+When $\sV = \hO_n$, $\desc_X(\hO_n) = J^\infty \sO_X$ equipped with its natural flat connection.
+Recover all natural bundles in this way.
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 APR 2018 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 APR 2018 12:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,10 +866,6 @@ s.code.tex
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathreplacing.code.tex))
-\c@thm=\count148
-\c@dfn/lem=\count149
-\c@assumption=\count150
-)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathmorphing.code.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
@@ -886,15 +882,15 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count151
-\calc@Bcount=\count152
+\calc@Acount=\count148
+\calc@Bcount=\count149
 \calc@Adimen=\dimen279
 \calc@Bdimen=\dimen280
 \calc@Askip=\skip56
 \calc@Bskip=\skip57
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count153
+\calc@Ccount=\count150
 \calc@Cskip=\skip58
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/eso-pic/eso-pic.sty
@@ -909,8 +905,12 @@ File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
 \AM@pagebox=\box64
 \AM@global@opts=\toks50
 \AM@toc@title=\toks51
-\c@AM@survey=\count154
+\c@AM@survey=\count151
 \AM@templatesizebox=\box65
+)
+\c@thm=\count152
+\c@dfn/lem=\count153
+\c@assumption=\count154
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
@@ -922,6 +922,9 @@ LaTeX Warning: Label `lem: diff applied E' multiply defined.
 LaTeX Warning: Label `gauge equiv' multiply defined.
 
 
+LaTeX Warning: Label `sec: sphere ops' multiply defined.
+
+
 LaTeX Warning: Label `thm sphere alg' multiply defined.
 
 
@@ -930,21 +933,21 @@ LaTeX Warning: Label `cohbung' multiply defined.
 )
 \openout1 = `frame.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 23.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
@@ -1013,7 +1016,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring ON on input line 45.
+Package hyperref Info: Link coloring ON on input line 23.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1022,56 +1025,56 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count161
 )
-LaTeX Info: Redefining \ref on input line 45.
-LaTeX Info: Redefining \pageref on input line 45.
-LaTeX Info: Redefining \nameref on input line 45.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
 
 (./frame.out) (./frame.out)
 \@outlinefile=\write5
 \openout5 = `frame.out'.
 
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 45.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 23.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 45.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 23.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 45.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 23.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 45.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 23.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 45.
+(Font)              scaled to size 10.42007pt on input line 23.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 45.
+(Font)              scaled to size 7.91925pt on input line 23.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 45.
+(Font)              scaled to size 6.25204pt on input line 23.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 45.
+(Font)              scaled to size 10.42007pt on input line 23.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 45.
+(Font)              scaled to size 7.91925pt on input line 23.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 45.
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 45.
+(Font)              scaled to size 6.25204pt on input line 23.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 23.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-Package xypdf Info: Line width: 0.4pt on input line 45.
+Package xypdf Info: Line width: 0.4pt on input line 23.
 
 ABD: EveryShipout initializing macros
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/pdflscape.sty
@@ -1083,26 +1086,26 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 18.00587pt on input line 47.
+(Font)              scaled to size 18.00587pt on input line 25.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 47.
+(Font)              scaled to size 12.50409pt on input line 25.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 18.00587pt on input line 47.
+(Font)              scaled to size 18.00587pt on input line 25.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 47.
+(Font)              scaled to size 12.50409pt on input line 25.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 47.
+(Font)              scaled to size 9.37807pt on input line 25.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 47.
+(Font)              scaled to size 7.29405pt on input line 25.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 47.
+(Font)              scaled to size 9.37807pt on input line 25.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 47.
+(Font)              scaled to size 7.29405pt on input line 25.
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 26.
  (./frame.toc
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
@@ -1110,7 +1113,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 ...eta \gamma $ system}{77}{subsection.3.3.1}
+l.57 ...m the extended pair}{79}{subsection.3.2.2}
                                                    [1
 
 ])
@@ -1118,57 +1121,59 @@ l.57 ...eta \gamma $ system}{77}{subsection.3.3.1}
 \openout6 = `frame.toc'.
 
  (./intro.tex [2]
+[3]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 2.
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 9.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 22.
-) (./chap1.tex
-[3
-
-]
-Chapter 2.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 4.
 [4
 
-]
-LaTeX Font Info:    Try loading font information for U+eus on input line 67.
+] [5]
+LaTeX Font Info:    Try loading font information for U+eus on input line 69.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
-) [5]
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 104.
+)
+[6]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 99.
 
-[6] [7] [8] [9]
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+) [7])
+(./chap1.tex [8]
+Chapter 2.
+[9
+
+] [10]
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 107.
+ [11] [12] [13] [14]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 325.
+(Font)              scaled to size 8.33606pt on input line 328.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 325.
+(Font)              scaled to size 5.21004pt on input line 328.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 325.
+(Font)              scaled to size 8.33606pt on input line 328.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 325.
- [10] [11] [12] [13] [14] [15]
-Overfull \hbox (12.07072pt too wide) in paragraph at lines 607--610
+(Font)              scaled to size 5.21004pt on input line 328.
+ [15] [16] [17] [18] [19] [20]
+Overfull \hbox (12.07072pt too wide) in paragraph at lines 610--613
 []\OT1/ppl/m/n/10 We in-tro-duce the for-mal vari-able $[]$ and con-sider $[]$-
 dependent func-tion-als $\U/eus/m/n/10 O\OT1/zplm/m/n/10 (\U/eus/m/n/10 E\OT1/z
 plm/m/n/10 )[[[]]]$\OT1/ppl/m/n/10 . Let $\U/eus/m/n/10 O[]\OT1/zplm/m/n/10 (\U
 /eus/m/n/10 E\OT1/zplm/m/n/10 )[[[]]] \OMS/zplm/m/n/10 ^^Z
  []
 
-[16] [17]
-Overfull \hbox (5.7792pt too wide) in paragraph at lines 705--708
+[21] [22]
+Overfull \hbox (5.7792pt too wide) in paragraph at lines 708--711
 \OT1/ppl/m/n/10 The ob-struc-tion $\OT1/zplm/m/n/10 ^^B[\OML/zplm/m/it/10 L\OT1
 /zplm/m/n/10 ]$ \OT1/ppl/m/n/10 sat-is-fies the clas-si-cal mas-ter equa-tion a
 nd hence the limit $\OT1/zplm/m/n/10 ^^B[] = [][] ^^B[\OML/zplm/m/it/10 L\OT1/z
 plm/m/n/10 ]$
  []
 
-[18] [19] <xymatrix 2x2 150>
-Overfull \hbox (12.96251pt too wide) in paragraph at lines 833--835
+[23] [24] <xymatrix 2x2 150>
+Overfull \hbox (12.96251pt too wide) in paragraph at lines 836--838
 [][]\OT1/ppl/b/n/10 Definition/Lemma 1. []\OT1/ppl/m/n/10 A \OT1/ppl/m/it/10 fr
 ee holo-mor-phic the-ory \OT1/ppl/m/n/10 on a com-plex man-i-fold $\OML/zplm/m/
 it/10 X$ \OT1/ppl/m/n/10 is the data $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1
@@ -1176,8 +1181,8 @@ it/10 X$ \OT1/ppl/m/n/10 is the data $\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1
 m/m/n/10 ^^@\OT1/ppl/m/n/10 , \OMS/zplm/m/n/10 ^^@\OT1/zplm/m/n/10 )[])$
  []
 
-[20]
-Overfull \hbox (11.47258pt too wide) in paragraph at lines 897--901
+[25]
+Overfull \hbox (11.47258pt too wide) in paragraph at lines 900--904
 [][]\OT1/ppl/m/it/10 Remark \OT1/ppl/m/n/10 2.2.3\OT1/ppl/m/it/10 . []\OT1/ppl/
 m/n/10 We will only work with a holo-mor-phic the-ory pre-scribed by the data $
 \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1/ppl/m/n/10 , \OT1/zplm/m/n/10 (\OMS/z
@@ -1185,13 +1190,13 @@ plm/m/n/10 ^^@\OT1/ppl/m/n/10 , \OMS/zplm/m/n/10 ^^@\OT1/zplm/m/n/10 )[]\OT1/pp
 l/m/n/10 , \OML/zplm/m/it/10 Q[]\OT1/zplm/m/n/10 )$
  []
 
-[21] [22] <xymatrix 3x1 92>
-Overfull \hbox (57.35954pt too wide) detected at line 975
+[26] [27] <xymatrix 3x1 92>
+Overfull \hbox (57.35954pt too wide) detected at line 978
 []
  []
 
 
-Overfull \hbox (74.95895pt too wide) in paragraph at lines 975--979
+Overfull \hbox (74.95895pt too wide) in paragraph at lines 978--982
 \OT1/ppl/m/n/10 ply the eval-u-a-tion pair-ing. We sym-metrize this to ob-tain 
 an el-e-ment $\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 F\OT1/ppl/m/n/10 , \OML/zplm/
 m/it/10 F[]\OMS/zplm/m/n/10 g[] 2 [][]\OT1/zplm/m/n/10 ([][](\OML/zplm/m/it/10 
@@ -1199,27 +1204,27 @@ V\OT1/zplm/m/n/10 )[]\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 K[]\OT1/zplm/m/n/10 )[
 ]$\OT1/ppl/m/n/10 .
  []
 
-[23] [24]
-Overfull \hbox (3.6216pt too wide) in paragraph at lines 1102--1106
+[28] [29]
+Overfull \hbox (3.6216pt too wide) in paragraph at lines 1105--1109
 \OT1/ppl/m/n/10 bin-ing the Lie al-ge-bra struc-ture on $\U/euf/m/n/10 g$ \OT1/
 ppl/m/n/10 with the wedge prod-uct of the holo-mor-phic bun-dles $\OMS/zplm/m/n
 /10 ^[]\OML/zplm/m/it/10 T[]X$\OT1/ppl/m/n/10 .
  []
 
-[25] [26] [27] [28] [29] [30] [31] [32] [33]
-Overfull \hbox (80.20438pt too wide) detected at line 1813
+[30] [31] [32] [33] [34] [35] [36] [37] [38]
+Overfull \hbox (80.20438pt too wide) detected at line 1823
 [] [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [] \OT1/zplm/m/n/10 ^^H(\
 OML/zplm/m/it/10 w[]\OT1/ppl/m/n/10 , [] , \OML/zplm/m/it/10 w[]\OT1/zplm/m/n/1
 0 ) [] [] [][] \OML/zplm/m/it/10 P[] [] \OT1/ppl/m/n/10 .
  []
 
-[34]
-Overfull \hbox (10.6809pt too wide) detected at line 1871
+[39] [40]
+Overfull \hbox (10.6809pt too wide) detected at line 1881
 []
  []
 
 
-Overfull \hbox (93.42703pt too wide) detected at line 1877
+Overfull \hbox (93.42703pt too wide) detected at line 1887
 []\OMS/zplm/m/n/10 j\OML/zplm/m/it/10 W[]\OT1/zplm/m/n/10 (^^H)\OMS/zplm/m/n/10
  j ^^T \OML/zplm/m/it/10 C [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [
 ] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[]\OT1/zplm/m/n/10 	(\OML/zplm/m/it/10 
@@ -1230,36 +1235,41 @@ T1/zplm/m/n/10 (\OML/zplm/m/it/10 w\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 t\OT1/zp
 lm/m/n/10 )
  []
 
-[35]
-Overfull \hbox (62.73666pt too wide) in paragraph at lines 1904--1904
+
+Overfull \hbox (62.73666pt too wide) in paragraph at lines 1916--1916
 [] 
  []
 
-[36] [37] [38]
-Overfull \hbox (68.17952pt too wide) detected at line 2078
+[41]
+Overfull \hbox (0.37042pt too wide) in paragraph at lines 1968--1972
+\OT1/ppl/m/n/10 or, equiv-a-lently $\OT1/zplm/m/n/10 ^^B[\OML/zplm/m/it/10 L\OT
+1/zplm/m/n/10 ] = \OML/zplm/m/it/10 e[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 Q \O
+T1/zplm/m/n/10 + []^^A[])\OML/zplm/m/it/10 e[]$\OT1/ppl/m/n/10 . By def-i-ni-ti
+on, $\OML/zplm/m/it/10 I\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]
+ = [][] \OML/zplm/m/it/10 W\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 P[]\OT1/ppl/m/n/
+10 , \OML/zplm/m/it/10 I\OT1/zplm/m/n/10 )[]  [][]$
+ []
+
+[42] [43] [44]
+Overfull \hbox (68.17952pt too wide) detected at line 2090
 []
  []
 
-[39]
-Overfull \hbox (70.29083pt too wide) detected at line 2098
+
+Overfull \hbox (75.20071pt too wide) detected at line 2110
 []
  []
 
-[40]
-
-LaTeX Warning: Reference `fig: triangle' on page 41 undefined on input line 215
-6.
-
-[41] [42] [43] [44]
-Overfull \hbox (25.34227pt too wide) in paragraph at lines 2293--2295
+[45] [46] [47] [48] [49]
+Overfull \hbox (25.34227pt too wide) in paragraph at lines 2311--2313
 [][]\OT1/ppl/b/n/10 Definition 2.4.3. []\OT1/ppl/m/n/10 An $\U/euf/m/n/10 h$\OT
 1/ppl/m/it/10 -equivariant BV quan-ti-za-tion \OT1/ppl/m/n/10 is a col-lec-tion
  of ef-fec-tive in-ter-ac-tions $\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 I[]\OT1/zp
 lm/m/n/10 [\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]\OMS/zplm/m/n/10 g[] ^^Z
  []
 
-[45]
-Overfull \hbox (8.46442pt too wide) in paragraph at lines 2339--2340
+[50]
+Overfull \hbox (8.46442pt too wide) in paragraph at lines 2357--2358
 [][]\OT1/ppl/b/n/10 Lemma 2.4.4 \OT1/ppl/m/n/10 (Chap-ter 12 [[]])\OT1/ppl/b/n/
 10 . []\OT1/ppl/m/it/10 The dif-fer-en-tial and bracket defin-ing the dg Lie al
 -ge-bra $\OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 (\U/eus/m/n/10 L[]\OT1/zplm/m/n/10
@@ -1267,7 +1277,7 @@ Overfull \hbox (8.46442pt too wide) in paragraph at lines 2339--2340
 
  []
 
-[46]) (./chap2.tex [47]
+[51]) (./chap2.tex [52]
 Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1300,29 +1310,17 @@ r-sym-met-ric $\OML/zplm/m/it/10 ^^[$\OT1/ppl/m/n/10 -model is the two-dimensio
 nal
  []
 
-[48
+[53
 
-]
-
-LaTeX Warning: Citation `CosttelloRenormalization' on page 49 undefined on inpu
-t line 73.
-
-
-LaTeX Warning: Citation `GK' on page 49 undefined on input line 88.
-
-[49]
-
-LaTeX Warning: Citation `GF' on page 50 undefined on input line 100.
-
-[50] [51] [52] <xymatrix 6x2 393> [53] [54] [55] [56]
-Overfull \hbox (7.65082pt too wide) in paragraph at lines 473--478
+] [54] [55] [56] [57] [58] <xymatrix 6x2 393> [59] [60] [61]
+Overfull \hbox (7.65082pt too wide) in paragraph at lines 477--482
 \OT1/ppl/m/n/10 For most of our pur-poses, it is con-ve-nient and suf-fi-cient 
 to work with a small cat-e-gory of $\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 , [][]\
 OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 -
  []
 
-[57] [58] [59]
-Overfull \hbox (20.49551pt too wide) detected at line 682
+[62] [63] [64]
+Overfull \hbox (20.54572pt too wide) detected at line 686
 \OT1/zplm/m/n/10 (
 []([][]) \OMS/zplm/m/n/10 
  V\OT1/zplm/m/n/10 )[] \OMS/zplm/m/n/10 
@@ -1337,23 +1335,15 @@ Overfull \hbox (20.49551pt too wide) detected at line 682
 [] W\OT1/zplm/m/n/10 ))[]
  []
 
-[60] [61] [62] [63]
-Overfull \hbox (1.25543pt too wide) in paragraph at lines 930--936
-[]\OT1/ppl/m/n/10 For $\OMS/zplm/m/n/10 V$ \OT1/ppl/m/n/10 in $[][]$ there is a
-n in-duced ac-tion of $\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 , [][]\OT1/zplm/m/n/
-10 )$ \OT1/ppl/m/n/10 on the ten-sor prod-uct $\OMS/zplm/m/n/10 V 
-[] []\OT1/zplm/m/n/10 /[]$\OT1/ppl/m/n/10 .
- []
-
-[64]
-Overfull \hbox (3.17465pt too wide) in paragraph at lines 981--983
+[65] [66] [67] [68] [69]
+Overfull \hbox (3.17465pt too wide) in paragraph at lines 985--987
 \OT1/ppl/m/n/10 and from the ob-ser-va-tion that an ex-act se-quence in $[]\OT1
 /zplm/m/n/10 ([])$ \OT1/ppl/m/n/10 maps to an ex-act se-quence in $[]\OT1/zplm/
 m/n/10 ([][])$\OT1/ppl/m/n/10 . 
  []
 
-[65]
-Overfull \hbox (3.50058pt too wide) in paragraph at lines 1114--1118
+[70]
+Overfull \hbox (3.50058pt too wide) in paragraph at lines 1118--1122
 \OT1/ppl/m/n/10 Let $d[]$ de-note the dif-fer-en-tial on $C[]\OT1/zplm/m/n/10 (
 []\OT1/ppl/m/n/10 ; \OMS/zplm/m/n/10 V\OT1/zplm/m/n/10 )$ \OT1/ppl/m/n/10 and $
 d[]$ de-note the dif-fer-en-tial on $C[]\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 ; [
@@ -1361,25 +1351,25 @@ d[]$ de-note the dif-fer-en-tial on $C[]\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 ; [
 []
  []
 
-[66] [67] [68] [69] <xymatrix 2x2 120>
+[71] [72] [73] [74] <xymatrix 2x2 120>
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1319.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1319.
+(hyperref)                removing `math shift' on input line 1332.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\infty' on input line 1319.
+(hyperref)                removing `subscript' on input line 1332.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1319.
+(hyperref)                removing `\infty' on input line 1332.
 
-[70] [71]
-Overfull \hbox (8.5073pt too wide) in paragraph at lines 1444--1446
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1332.
+
+[75] [76] [77]
+Overfull \hbox (8.5073pt too wide) in paragraph at lines 1457--1459
 []\OT1/ppl/m/n/10 The Maurer-Cartan el-e-ment $\OML/zplm/m/it/10 ! \OMS/zplm/m/
 n/10 2 \OT1/zplm/m/n/10 
 [](\OML/zplm/m/it/10 P\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 
@@ -1388,38 +1378,38 @@ $\OT1/zplm/m/n/10
 [](\OML/zplm/m/it/10 P\OT1/ppl/m/n/10 ; []\OT1/zplm/m/n/10 ) =
  []
 
-[72] <xymatrix 3x1 102> [73] <xymatrix 3x1 150> [74] [75]
+<xymatrix 3x1 102> [78] <xymatrix 3x1 150> [79] [80]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1701.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1701.
+(hyperref)                removing `math shift' on input line 1715.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1701.
-
-[76]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1728.
+(hyperref)                removing `\sigma' on input line 1715.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 1728.
+(hyperref)                removing `math shift' on input line 1715.
+
+[81]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1742.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\gamma' on input line 1728.
+(hyperref)                removing `\beta' on input line 1742.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1728.
+(hyperref)                removing `\gamma' on input line 1742.
 
-[77] [78]
-Overfull \hbox (3.64235pt too wide) in paragraph at lines 1832--1833
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1742.
+
+[82] [83]
+Overfull \hbox (3.64235pt too wide) in paragraph at lines 1846--1847
 []\OT1/ppl/m/n/10 The de-for-ma-tion com-plex of the for-mal $\OML/zplm/m/it/10
  ^^L^^M$ \OT1/ppl/m/n/10 sys-tem is sim-ply the space of lo-cal func-tion-als e
 quipped
@@ -1427,22 +1417,22 @@ quipped
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1859.
+(hyperref)                removing `math shift' on input line 1873.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1859.
+(hyperref)                removing `subscript' on input line 1873.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\infty' on input line 1859.
+(hyperref)                removing `\infty' on input line 1873.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1859.
+(hyperref)                removing `math shift' on input line 1873.
 
-[79]
-Overfull \hbox (2.2016pt too wide) in paragraph at lines 1894--1901
+[84]
+Overfull \hbox (0.73782pt too wide) in paragraph at lines 1908--1915
 \OT1/ppl/m/n/10 phism $\OML/zplm/m/it/10 ^^[$\OT1/ppl/m/n/10 . More-over, the d
 e-scent of $[] \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 (\U/fplmb
 b/m/n/10 C[]\OT1/zplm/m/n/10 [\OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 1\OT1/zplm/m/
@@ -1451,21 +1441,21 @@ n/10 ])$ \OT1/ppl/m/n/10 us-ing this data is ex-actly $\OT1/zplm/m/n/10
 []\OT1/zplm/m/n/10 ))$
  []
 
-[80] [81]
+[85] [86] [87]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2011.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 2011.
+(hyperref)                removing `math shift' on input line 2025.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2011.
+(hyperref)                removing `\sigma' on input line 2025.
 
-[82]
-Overfull \hbox (39.65302pt too wide) in paragraph at lines 2029--2032
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2025.
+
+
+Overfull \hbox (39.65302pt too wide) in paragraph at lines 2043--2046
 []\OT1/ppl/m/n/10 The holo-mor-phic $\OML/zplm/m/it/10 ^^[$\OT1/ppl/m/n/10 -mod
 el with tar-get $\OML/zplm/m/it/10 B\U/euf/m/n/10 g$\OT1/ppl/m/n/10 , see ([][]
 3.10[][]), is a cotan-gent the-ory of the form $\OML/zplm/m/it/10 T[]\OT1/zplm/
@@ -1474,78 +1464,78 @@ m/n/10 [\OMS/zplm/m/n/10 ^^@\OT1/ppl/m/n/10 1\OT1/zplm/m/n/10 ](
 pl/m/n/10 1\OT1/zplm/m/n/10 ]))$\OT1/ppl/m/n/10 .
  []
 
-[83] [84] [85]
-Overfull \hbox (24.87785pt too wide) in paragraph at lines 2187--2188
+[88] [89] [90]
+Overfull \hbox (24.87785pt too wide) in paragraph at lines 2201--2202
 []\OT1/ppl/m/n/10 Note that $\OML/zplm/m/it/10 J[]$ \OT1/ppl/m/n/10 is a lo-cal
  func-tional which is in-duced from the holo-mor-phic La-grangian $\OML/zplm/m/
 it/10 ^^M \OMS/zplm/m/n/10 7! h\OML/zplm/m/it/10 ^^M\OT1/ppl/m/n/10 , \OML/zplm
 /m/it/10 @^^M [] @^^M\OMS/zplm/m/n/10 i$\OT1/ppl/m/n/10 . 
  []
 
-<xymatrix 6x1 216> [86] [87]
-Overfull \hbox (57.21916pt too wide) detected at line 2315
+<xymatrix 6x1 216> [91] [92] [93]
+Overfull \hbox (57.21916pt too wide) detected at line 2329
 [] [] [] \OMS/zplm/m/n/10 ^[] [] ^ ^[] [] \OT1/ppl/m/n/10 C[] [] d[]\OML/zplm/m
 /it/10 z\OT1/ppl/m/n/10 .
  []
 
-[88] <xymatrix 4x2 34> <xymatrix 2x2 174> <xymatrix 5x2 198> [89]
+<xymatrix 4x2 34> <xymatrix 2x2 174> [94] <xymatrix 5x2 198>
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2420.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 2420.
+(hyperref)                removing `math shift' on input line 2434.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2420.
-
-[90]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2437.
+(hyperref)                removing `\sigma' on input line 2434.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 2437.
+(hyperref)                removing `math shift' on input line 2434.
+
+[95]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2451.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2437.
+(hyperref)                removing `subscript' on input line 2451.
 
 
-Overfull \hbox (15.33133pt too wide) in alignment at lines 2480--2482
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2451.
+
+[96]
+Overfull \hbox (15.33133pt too wide) in alignment at lines 2494--2496
  [][][] []
  []
 
-[91] [92] [93] [94]
-Overfull \hbox (37.31021pt too wide) detected at line 2853
+[97] [98] [99] [100]
+Overfull \hbox (37.31021pt too wide) detected at line 2867
 []
  []
 
-[95] [96]
-Overfull \hbox (56.24893pt too wide) detected at line 2898
+[101]
+Overfull \hbox (56.24893pt too wide) detected at line 2912
 [] [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[][] [][] [] [] [] ^^O[] [][] [] 
 []\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 M\OT1/zplm/m/n/10 )[] [](\OML/zplm/m/it/1
 0 M\OT1/zplm/m/n/10 )[]
  []
 
 
-Overfull \hbox (55.0047pt too wide) detected at line 2902
+Overfull \hbox (55.0047pt too wide) detected at line 2916
 [] \OML/zplm/m/it/10 ^^O[] [][] \OT1/zplm/m/n/10 = [] \OML/zplm/m/it/10 ^^O[] [
 ][] [] []\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 M\OT1/zplm/m/n/10 )[]
  []
 
 
-Overfull \hbox (34.4546pt too wide) detected at line 2911
+Overfull \hbox (34.4546pt too wide) detected at line 2925
 [][] \OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 w[] [][] [] [][] []\OT1/ppl/m/n/10 d\
 OML/zplm/m/it/10 t[] [] \OT1/ppl/m/n/10 d\OML/zplm/m/it/10 t[]\OT1/ppl/m/n/10 .
 
  []
 
-[97] [98]
-Overfull \hbox (17.44392pt too wide) detected at line 3051
+[102] [103]
+Overfull \hbox (17.44392pt too wide) detected at line 3065
 \OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 ; []\OT1/zplm/m/n/10 [\O
 ML/zplm/m/it/10 d\OT1/zplm/m/n/10 ]) = \OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 ([])
  \OMS/zplm/m/n/10 
@@ -1554,50 +1544,62 @@ ML/zplm/m/it/10 d\OT1/zplm/m/n/10 ]) = \OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 ([])
 [] [][] \OT1/zplm/m/n/10 = [][]\OT1/ppl/m/n/10 .
  []
 
-[99]
-Overfull \hbox (3.75882pt too wide) in paragraph at lines 3113--3116
+[104]
+Overfull \hbox (3.75882pt too wide) in paragraph at lines 3127--3130
 \OT1/ppl/m/n/10 We have al-ready seen that the non-extended ver-sion of this co
 m-plex is quasi-isomorphic to $[]\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 d\OT1/zplm
 /m/n/10 ]$
  []
 
-[100]
-Overfull \hbox (19.20038pt too wide) in paragraph at lines 3129--3134
+[105]
+Overfull \hbox (19.20038pt too wide) in paragraph at lines 3143--3148
 \OT1/ppl/m/n/10 duced fil-tra-tion on the Chevalley-Eilenberg cochain com-plex 
 with val-ues in any mod-ule $C[]\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 ; \OML/zplm
 /m/it/10 M\OT1/zplm/m/n/10 )$
  []
 
 
-Overfull \hbox (12.19115pt too wide) in paragraph at lines 3158--3161
+Overfull \hbox (12.19115pt too wide) in paragraph at lines 3172--3175
 []\OT1/ppl/m/n/10 We have al-ready seen how for-mal ge-om-e-try al-lows us to d
 e-scend the clas-si-cal $\OT1/zplm/m/n/10 ([]\OT1/ppl/m/n/10 , [][]\OT1/zplm/m/
 n/10 )$\OT1/ppl/m/n/10 -equivariant
  []
 
-[101] [102]
-Overfull \hbox (7.33275pt too wide) in paragraph at lines 3235--3237
+[106] [107]
+Overfull \hbox (7.33275pt too wide) in paragraph at lines 3249--3251
 \OT1/ppl/m/n/10 By the sec-ond part of The-o-rem [][]3.5.8[][] this is a holo-m
 or-phi-cally trans-la-tion in-vari-ant $\OML/zplm/m/it/10 U\OT1/zplm/m/n/10 (\O
 ML/zplm/m/it/10 d\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 -equivariant
  []
 
-[103] [104]
-Overfull \hbox (98.66139pt too wide) detected at line 3368
+[108] [109] [110]
+Overfull \hbox (98.66139pt too wide) detected at line 3382
 []
  []
 
-[105]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3383.
+(hyperref)                removing `math shift' on input line 3397.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 3383.
+(hyperref)                removing `math shift' on input line 3397.
 
-[106] [107] <xymatrix 2x2 166> [108] [109]
-Overfull \hbox (3.08302pt too wide) in paragraph at lines 3641--3644
+[111]
+Overfull \hbox (19.1453pt too wide) in paragraph at lines 3417--3419
+[]\OT1/ppl/m/n/10 To ap-ply this fact, we con-sider the fol-low-ing spec-tral s
+e-quence. We de-fine a fil-tra-tion on $[][]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10
+ D\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 w\OT1/ppl/m/n/10 , \OML/zplm/m/it/10 r\OT
+1/zplm/m/n/10 ))$
+ []
+
+
+Overfull \hbox (35.56532pt too wide) in paragraph at lines 3427--3427
+[] 
+ []
+
+[112] [113] <xymatrix 2x2 166> [114] [115]
+Overfull \hbox (3.08302pt too wide) in paragraph at lines 3686--3689
 []\OT1/ppl/m/n/10 This is a con-se-quence of Stokes' the-o-rem. Sup-pose $\OML/
 zplm/m/it/10  \OT1/zplm/m/n/10 = []\OML/zplm/m/it/10 []$\OT1/ppl/m/n/10 . The
 n, for any $\OML/zplm/m/it/10 ! \OMS/zplm/m/n/10 2 \OT1/zplm/m/n/10 
@@ -1605,46 +1607,42 @@ n, for any $\OML/zplm/m/it/10 ! \OMS/zplm/m/n/10 2 \OT1/zplm/m/n/10
 )$
  []
 
-[110]
-Overfull \hbox (25.35712pt too wide) detected at line 3660
+[116]
+Overfull \hbox (25.35712pt too wide) detected at line 3705
 \OML/zplm/m/it/10 i[] \OT1/zplm/m/n/10 : \OML/zplm/m/it/10 A[] \OMS/zplm/m/n/10
  
  [] ! [][] ^^Z [][] [] \OT1/ppl/m/n/10 .
  []
 
-<nesting.pdf, id=1476, page=1, 325.33104pt x 308.47124pt>
+<nesting.pdf, id=1538, page=1, 325.33104pt x 308.47124pt>
 File: nesting.pdf Graphic file (type pdf)
 
 <use nesting.pdf, page 1>
-Package pdftex.def Info: nesting.pdf, page1 used on input line 3719.
+Package pdftex.def Info: nesting.pdf, page1 used on input line 3764.
 (pdftex.def)             Requested size: 191.87535pt x 181.93054pt.
- [111] <xymatrix 2x2 164> [112 <./nesting.pdf>]
-[113] [114] [115]
-Overfull \hbox (5.8453pt too wide) in alignment at lines 3932--3934
+ [117] <xymatrix 2x2 164> [118 <./nesting.pdf>]
+[119] [120] [121]
+Overfull \hbox (5.8453pt too wide) in alignment at lines 3977--3979
  [][][] []
  []
 
-[116]
-Overfull \hbox (70.62349pt too wide) in paragraph at lines 3973--3976
+[122]
+Overfull \hbox (70.62349pt too wide) in paragraph at lines 4019--4022
 \OT1/ppl/m/n/10 Indeed, the right hand side as-signs to each open $\OML/zplm/m/
 it/10 U$ \OT1/ppl/m/n/10 the cochain com-plex $C[]\OT1/zplm/m/n/10 ([](\OML/zpl
 m/m/it/10 U\OT1/zplm/m/n/10 )) = []$\OT1/ppl/m/n/10 .
  []
 
 
-Overfull \hbox (2.59074pt too wide) in paragraph at lines 4008--4009
+Overfull \hbox (2.59074pt too wide) in paragraph at lines 4054--4055
 []\OT1/ppl/m/it/10 As a lo-cally con-stant one-dimensional fac-tor-iza-tion al-
 ge-bra $\U/eus/m/n/10 F[]$ \OT1/ppl/m/it/10 is equiv-a-lent to the dg al-ge-bra
  $\OML/zplm/m/it/10 U\OT1/zplm/m/n/10 (\U/eus/m/n/10 H[]\OT1/zplm/m/n/10 )$\OT1
 /ppl/m/it/10 . 
  []
 
-[117] [118] [119] <xymatrix 2x3 208> [120]
-
-LaTeX Warning: Reference `??' on page 121 undefined on input line 4239.
-
-
-Overfull \hbox (18.35968pt too wide) detected at line 4246
+[123] [124] [125] <xymatrix 2x3 208> [126]
+Overfull \hbox (18.35968pt too wide) detected at line 4292
 []\OT1/zplm/m/n/10 (\OT1/ppl/m/n/10 d[]\OML/zplm/m/it/10 zH[]\OT1/zplm/m/n/10 (
 \OML/zplm/m/it/10 A[]\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 
  \OML/zplm/m/it/10 V[]\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 d \OMS/zplm/m/n/10 ^^
@@ -1659,46 +1657,36 @@ Overfull \hbox (18.35968pt too wide) detected at line 4246
 OT1/zplm/m/n/10 + \OT1/ppl/m/n/10 1\OT1/zplm/m/n/10 ])[[]]
  []
 
-[121] [122]
-Overfull \hbox (45.89546pt too wide) detected at line 4344
+[127] [128]
+Overfull \hbox (45.89546pt too wide) detected at line 4390
 [] [] \OMS/zplm/m/n/10 ! [] [] \OT1/ppl/m/n/10 ,
  []
 
 
-Overfull \hbox (3.5346pt too wide) detected at line 4350
+Overfull \hbox (3.5346pt too wide) detected at line 4396
 [] [] [] [] [] \OMS/zplm/m/n/10 
  [] [] \OT1/ppl/m/n/10 .
  []
 
-[123]) (./chap3.tex [124]
+[129]) (./chap3.tex [130]
 Chapter 4.
-[125
+[131
 
-] [126]
-
-LaTeX Warning: Citation `GetlzerLie' on page 127 undefined on input line 156.
-
-[127]
+] [132] [133]
 
 Package amsfonts Warning: Obsolete command \frak; \mathfrak should be used inst
-ead on input line 205.
+ead on input line 218.
 
-[128]
+[134] [135]
+Overfull \hbox (13.33629pt too wide) in paragraph at lines 283--285
+[]\OT1/ppl/m/n/10 By con-struc-tion, the for-mal mod-uli prob-lem $[][]$ is rep
+-re-sented by the dg Lie al-ge-bra $\U/eus/m/n/10 A\OT1/ppl/m/n/10 d\OT1/zplm/m
+/n/10 (\OML/zplm/m/it/10 P\OT1/zplm/m/n/10 )[](\OML/zplm/m/it/10 X\OT1/zplm/m/n
+/10 )$
+ []
 
-LaTeX Warning: Citation `AF1' on page 129 undefined on input line 228.
-
-
-LaTeX Warning: Citation `AF1' on page 129 undefined on input line 258.
-
-
-LaTeX Warning: Citation `..' on page 129 undefined on input line 258.
-
-[129] [130]
-
-LaTeX Warning: Citation `ref?' on page 131 undefined on input line 340.
-
-[131] [132]
-Overfull \hbox (1.3769pt too wide) in paragraph at lines 443--445
+[136] [137] [138] [139] [140]
+Overfull \hbox (1.3769pt too wide) in paragraph at lines 515--517
 \OT1/ppl/m/n/10 If $\U/euf/m/n/10 g$ \OT1/ppl/m/n/10 is the Lie al-ge-bra of a 
 group $\OML/zplm/m/it/10 G$\OT1/ppl/m/n/10 , there is an in-ter-pre-ta-tion of 
 the space of ex-ten-sions $[][]\OT1/zplm/m/n/10 (\U/euf/m/n/10 g[]\OT1/zplm/m/n
@@ -1706,7 +1694,7 @@ the space of ex-ten-sions $[][]\OT1/zplm/m/n/10 (\U/euf/m/n/10 g[]\OT1/zplm/m/n
  []
 
 
-Overfull \hbox (5.32898pt too wide) in paragraph at lines 458--460
+Overfull \hbox (5.32898pt too wide) in paragraph at lines 530--532
 []\OT1/ppl/m/n/10 The con-tin-u-ous group co-ho-mol-ogy sat-is-fies $\OML/zplm/
 m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 G\OT1/ppl/m/n/10 , [][]\OT1/zplm
 /m/n/10 (\U/euf/m/n/10 g[]\OT1/zplm/m/n/10 )) = \OT1/ppl/m/n/10 0$ for $\OML/zp
@@ -1715,23 +1703,8 @@ OML/zplm/m/it/10 G\OT1/ppl/m/n/10 , [][]\OT1/zplm/m/n/10 (\U/euf/m/n/10 g[]\OT1
 /zplm/m/n/10 )) =
  []
 
-[133] [134] [135] [136]
-
-LaTeX Warning: Citation `DT' on page 137 undefined on input line 610.
-
-
-Overfull \hbox (5.14369pt too wide) in paragraph at lines 609--612
-\OT1/ppl/m/n/10 See [[]] for de-tails on the def-i-ni-tion of $\OT1/zplm/m/n/10
- 
-[](\OML/zplm/m/it/10 S[]\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 . The de-gree zero p
-art of $\OT1/zplm/m/n/10 
-[](\OML/zplm/m/it/10 S[]\OT1/zplm/m/n/10 )$ \OT1/ppl/m/n/10 is $\OML/zplm/m/it/
-10 C[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[]\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10
- ,
- []
-
-[137]
-Overfull \hbox (1.49075pt too wide) in paragraph at lines 691--693
+[141] [142] [143] [144] [145]
+Overfull \hbox (1.49075pt too wide) in paragraph at lines 763--765
 []\OT1/ppl/m/n/10 We are in-ter-ested in the dg Lie al-ge-bra $\OML/zplm/m/it/1
 0 A[] \OMS/zplm/m/n/10 
  \U/euf/m/n/10 g$\OT1/ppl/m/n/10 . For any $\OML/zplm/m/it/10 d$ \OT1/ppl/m/n/1
@@ -1739,94 +1712,69 @@ Overfull \hbox (1.49075pt too wide) in paragraph at lines 691--693
 zplm/m/n/10 (\U/euf/m/n/10 g[]\OT1/zplm/m/n/10 )[]$\OT1/ppl/m/n/10 ,
  []
 
-[138] [139] <xymatrix 4x2 170> [140] <xymatrix 5x2 446>
-Overfull \hbox (49.97086pt too wide) detected at line 857
+[146] [147] <xymatrix 4x2 170> [148] <xymatrix 5x2 446>
+Overfull \hbox (49.97086pt too wide) detected at line 929
 []\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 '[]a[]X[]\OT1/ppl/m/n/10 , [] , \OML/zplm
 /m/it/10 '[]a[]X[]\OT1/zplm/m/n/10 ) = [] [] [] [] \OML/zplm/m/it/10 ^^R\OT1/zp
 lm/m/n/10 (\OML/zplm/m/it/10 X[]\OT1/ppl/m/n/10 , [] , \OML/zplm/m/it/10 X[]\OT
 1/zplm/m/n/10 )\OT1/ppl/m/n/10 .
  []
 
-[141]
-Overfull \hbox (59.98094pt too wide) in paragraph at lines 862--863
+
+Overfull \hbox (59.98094pt too wide) in paragraph at lines 934--935
 []\OT1/ppl/m/n/10 In fact, we will show that $[]$ is ac-tu-ally an ex-act co-cy
 -cle via the cobound-ing el-e-ment $\OML/zplm/m/it/10 ^^Q \OMS/zplm/m/n/10 2 \O
 T1/ppl/m/n/10 C[] []$
  []
 
 
-Overfull \hbox (35.89622pt too wide) detected at line 865
+Overfull \hbox (35.89622pt too wide) detected at line 937
 \OML/zplm/m/it/10 ^^Q\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 '[]a[]X[]\OT1/ppl/m/n/
 10 , [] , \OML/zplm/m/it/10 '[]a[]X[]\OT1/zplm/m/n/10 ) = [] [] [] \OML/zplm/m/
 it/10 ^^R\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X[]\OT1/ppl/m/n/10 , [] , \OML/zpl
 m/m/it/10 X[]\OT1/zplm/m/n/10 )\OT1/ppl/m/n/10 .
  []
 
-[142] [143]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 935.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 935.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 935.
-
-[144]
-Overfull \hbox (4.49529pt too wide) in paragraph at lines 971--973
-[]\OT1/ppl/m/n/10 To state our re-sult pre-cisely, let $[] \OT1/zplm/m/n/10 : (
-\U/fplmbb/m/n/10 C[]\OT1/zplm/m/n/10 )[] \OMS/zplm/m/n/10 ! \OT1/zplm/m/n/10 (\
-U/fplmbb/m/n/10 R[]\OT1/zplm/m/n/10 )[]$ \OT1/ppl/m/n/10 be the pro-jec-tion $\
-OT1/zplm/m/n/10 (\OML/zplm/m/it/10 z[]\OT1/ppl/m/n/10 , [] , \OML/zplm/m/it/10 
-z[]\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 7! \OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 j\
-OML/zplm/m/it/10 z[]\OMS/zplm/m/n/10 j\OT1/ppl/m/n/10 , []  , \OMS/zplm/m/n/10 
-j\OML/zplm/m/it/10 z[]\OMS/zplm/m/n/10 j\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 .
- []
-
-[145]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1020.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1020.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1020.
-
-
-Overfull \hbox (10.10236pt too wide) in paragraph at lines 1051--1053
-\OT1/ppl/m/it/10 Then, any el-e-ment $\OML/zplm/m/it/10  \OMS/zplm/m/n/10 2 \O
-ML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\U/eus/m/n/10 A\OT1/ppl/m/n/10 d\OT1/zplm/
-m/n/10 (\OML/zplm/m/it/10 P\OT1/zplm/m/n/10 ))$ \OT1/ppl/m/it/10 de-ter-mines t
-he struc-ture of a $\OML/zplm/m/it/10 P[]$ \OT1/ppl/m/it/10 fac-tor-iza-tion al
--ge-bra on $[] \U/fplmbb/m/n/10 U\OT1/zplm/m/n/10 (\U/eus/m/n/10 A\OT1/ppl/m/n/
-10 d\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 P\OT1/zplm/m/n/10 ))$\OT1/ppl/m/it/10 .
- 
- []
-
-[146]
-
-LaTeX Warning: Citation `Hopf' on page 147 undefined on input line 1068.
-
-[147] [148] <xymatrix 2x2 191>
-
-LaTeX Warning: Citation `AFT1' on page 149 undefined on input line 1178.
-
-
-LaTeX Warning: Citation `AFT1' on page 149 undefined on input line 1184.
-
 [149] [150]
 
-LaTeX Warning: Citation `CosBook' on page 151 undefined on input line 1312.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1007.
 
-[151] <xymatrix 2x2 154> [152] <xymatrix 3x2 114>
-Overfull \hbox (14.83519pt too wide) in paragraph at lines 1369--1372
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1007.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1007.
+
+[151] [152]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1091.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1091.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1091.
+
+[153]
+Overfull \hbox (12.68225pt too wide) in paragraph at lines 1122--1124
+\OT1/ppl/m/it/10 Then, any el-e-ment $\OT1/zplm/m/n/10 ^^B \OMS/zplm/m/n/10 2 \
+OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\U/eus/m/n/10 A\OT1/ppl/m/n/10 d\OT1/zplm
+/m/n/10 (\OML/zplm/m/it/10 P\OT1/zplm/m/n/10 ))$ \OT1/ppl/m/it/10 de-ter-mines 
+the struc-ture of a $\OML/zplm/m/it/10 P[]$ \OT1/ppl/m/it/10 fac-tor-iza-tion a
+l-ge-bra on $[] \U/fplmbb/m/n/10 U\OT1/zplm/m/n/10 (\U/eus/m/n/10 A\OT1/ppl/m/n
+/10 d\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 P\OT1/zplm/m/n/10 ))$\OT1/ppl/m/it/10 
+. 
+ []
+
+[154] [155] <xymatrix 2x2 191> [156] [157] [158] [159] <xymatrix 2x2 154>
+<xymatrix 3x2 114> [160]
+Overfull \hbox (14.83519pt too wide) in paragraph at lines 1443--1446
 \OT1/ppl/m/n/10 where $\OML/zplm/m/it/10 ^^Y \OT1/zplm/m/n/10 : [][](\OML/zplm/
 m/it/10 X\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ^^B \OML/zplm/m/it/10 X \OMS/zplm/
 m/n/10 ! [][]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/zplm/m/n/10 )$ \OT1/ppl/
@@ -1836,17 +1784,8 @@ m/n/10 de-notes the pro-jec-tion. If $\OML/zplm/m/it/10 ^^R \OMS/zplm/m/n/10 2
 []) \OMS/zplm/m/n/10 ^^Z
  []
 
-
-LaTeX Warning: Reference `sec equivariance' on page 153 undefined on input line
- 1395.
-
-[153] [154] [155]
-
-LaTeX Warning: Reference `lem g wheels' on page 156 undefined on input line 155
-9.
-
-
-Overfull \hbox (10.28786pt too wide) in paragraph at lines 1563--1566
+[161] [162] [163]
+Overfull \hbox (10.28786pt too wide) in paragraph at lines 1635--1638
 [][]\OT1/ppl/b/n/10 Lemma 4.4.7. []\OT1/ppl/m/it/10 The limit $\OT1/zplm/m/n/10
  ^^B[] := [][] ^^B[][\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]$ \OT1/ppl/m/it/10 ex
 -ists and is an el-e-ment of de-gree one in $\OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/1
@@ -1854,70 +1793,19 @@ Overfull \hbox (10.28786pt too wide) in paragraph at lines 1563--1566
 )$\OT1/ppl/m/it/10 .
  []
 
-[156]
-
-LaTeX Warning: Reference `lem anomaly' on page 157 undefined on input line 1657
-.
-
-
-Overfull \hbox (47.98877pt too wide) detected at line 1676
+[164]
+Overfull \hbox (47.98877pt too wide) detected at line 1748
 []
  []
 
 
-Overfull \hbox (61.21701pt too wide) detected at line 1692
+Overfull \hbox (61.21701pt too wide) detected at line 1764
 []
  []
 
-[157] [158]
-
-LaTeX Warning: Citation `CG' on page 159 undefined on input line 1739.
-
-
-LaTeX Warning: Citation `GwilliamHaugs' on page 159 undefined on input line 175
-0.
-
-[159] [160]
-
-LaTeX Warning: Reference `sec sphere operators' on page 161 undefined on input 
-line 1849.
-
-
-LaTeX Warning: Citation `KM' on page 161 undefined on input line 1876.
-
-[161]
-
-LaTeX Warning: Citation `CostelloLiSUGRA' on page 162 undefined on input line 1
-891.
-
-[162] [163] [164] [165]
-
-LaTeX Warning: Reference `??' on page 166 undefined on input line 2076.
-
-
-LaTeX Warning: Reference `sec: gk formal geometry' on page 166 undefined on inp
-ut line 2083.
-
-[166]
-
-LaTeX Warning: Citation `GFnontrivial' on page 167 undefined on input line 2128
-.
-
-[167] <xymatrix 3x2 148> [168] <xymatrix 2x2 154>
-
-LaTeX Warning: Citation `GF1' on page 169 undefined on input line 2208.
-
-
-LaTeX Warning: Reference `chap: hol sig' on page 169 undefined on input line 22
-28.
-
-[169] [170] [171]
-
-LaTeX Warning: Reference `lem: hol dmodule' on page 172 undefined on input line
- 2380.
-
-[172]
-Overfull \hbox (30.25554pt too wide) in paragraph at lines 2428--2430
+[165] [166] [167] [168] [169] [170] [171] [172] [173] [174] <xymatrix 3x2 148>
+[175] <xymatrix 2x2 154> [176] [177] [178] [179]
+Overfull \hbox (30.25554pt too wide) in paragraph at lines 2499--2501
 []\OT1/ppl/m/n/10 Now, the $1$-cocycles $\OML/zplm/m/it/10 a[]\OT1/ppl/m/n/10 ,
  \OML/zplm/m/it/10 ^^\[]$ \OT1/ppl/m/n/10 can both be in-ter-preted as func-tio
 n-als on the Dol-beault com-plex $\OT1/zplm/m/n/10 
@@ -1925,35 +1813,32 @@ n-als on the Dol-beault com-plex $\OT1/zplm/m/n/10
 OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 .
  []
 
-[173] [174] [175]) (./frame.bbl [176] [177
+[180] [181] [182] [183]) (./frame.bbl [184] [185
 
-] [178] [179] [180] [181]) [182]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
-
-(./frame.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
+] [186] [187] [188] [189]
+[190]) [191]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
+ (./frame.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
 Package rerunfilecheck Info: File `frame.out' has not changed.
-(rerunfilecheck)             Checksum: BD96E7A6BF897D2D8DF19ACA71BDB0C2;5778.
+(rerunfilecheck)             Checksum: 8669C734B14855AB6E1C2CD0322057E5;5787.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.43996pt have occurred.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 59.
  ) 
 Here is how much of TeX's memory you used:
- 26282 strings out of 492995
- 507817 string characters out of 6132704
- 632247 words of memory out of 5000000
- 28445 multiletter control sequences out of 15000+600000
+ 26315 strings out of 492995
+ 508130 string characters out of 6132704
+ 631063 words of memory out of 5000000
+ 28439 multiletter control sequences out of 15000+600000
  82646 words of font info for 261 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,86p,3242b,1112s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1977,10 +1862,10 @@ texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/public/xypic/xycmbt10.pfb>
-Output written on frame.pdf (183 pages, 978211 bytes).
+Output written on frame.pdf (192 pages, 1009926 bytes).
 PDF statistics:
- 2369 PDF objects out of 2487 (max. 8388607)
- 2140 compressed objects within 22 object streams
- 781 named destinations out of 1000 (max. 500000)
- 586 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2500 PDF objects out of 2984 (max. 8388607)
+ 2261 compressed objects within 23 object streams
+ 820 named destinations out of 1000 (max. 500000)
+ 594 words of extra memory for PDF output out of 10000 (max. 10000000)
 
