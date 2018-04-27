@@ -1,72 +1,70 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Acknowledgements}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Introduction}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Summary of the results}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{Overview}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.5}{What's not in this thesis}{chapter.1}% 6
-\BOOKMARK [0][-]{chapter.2}{Holomorphic quantum field theory}{}% 7
-\BOOKMARK [1][-]{section.2.1}{The definition of a quantum field theory}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.1.1}{Classical field theory}{section.2.1}% 9
-\BOOKMARK [2][-]{subsection.2.1.2}{Quantum field theory}{section.2.1}% 10
-\BOOKMARK [1][-]{section.2.2}{Holomorphic field theories}{chapter.2}% 11
-\BOOKMARK [2][-]{subsection.2.2.1}{The definition of a holomorphic theory}{section.2.2}% 12
-\BOOKMARK [2][-]{subsection.2.2.2}{Holomorphically translation invariant theories}{section.2.2}% 13
-\BOOKMARK [1][-]{section.2.3}{Renormalization of holomorphic theories}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.3.1}{Holomorphic gauge fixing}{section.2.3}% 15
-\BOOKMARK [2][-]{subsection.2.3.2}{One-loop weights}{section.2.3}% 16
-\BOOKMARK [2][-]{subsection.2.3.3}{A general result about chiral anomalies}{section.2.3}% 17
-\BOOKMARK [1][-]{section.2.4}{Equivariant BV quantization}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.4.1}{Classical equivariance}{section.2.4}% 19
-\BOOKMARK [2][-]{subsection.2.4.2}{Quantum equivariance}{section.2.4}% 20
-\BOOKMARK [2][-]{subsection.2.4.3}{The case of a local Lie algebra}{section.2.4}% 21
-\BOOKMARK [0][-]{chapter.3}{The holomorphic -model}{}% 22
-\BOOKMARK [1][-]{section.3.1}{Gelfand-Kazhdan formal geometry}{chapter.3}% 23
-\BOOKMARK [2][-]{subsection.3.1.1}{A Harish-Chandra pair for the formal disk}{section.3.1}% 24
-\BOOKMARK [2][-]{subsection.3.1.2}{Formal coordinates}{section.3.1}% 25
-\BOOKMARK [2][-]{subsection.3.1.3}{The category of formal vector bundles}{section.3.1}% 26
-\BOOKMARK [2][-]{subsection.3.1.4}{Gelfand-Kazhdan descent}{section.3.1}% 27
-\BOOKMARK [2][-]{subsection.3.1.5}{Formal characteristic classes}{section.3.1}% 28
-\BOOKMARK [2][-]{subsection.3.1.6}{A family of extended pairs}{section.3.1}% 29
-\BOOKMARK [1][-]{section.3.2}{Descent for extended pairs}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.2.1}{General theory of descent for L pairs}{section.3.2}% 31
-\BOOKMARK [2][-]{subsection.3.2.2}{The flat connection from the extended pair}{section.3.2}% 32
-\BOOKMARK [1][-]{section.3.3}{The classical holomorphic -model}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.3.1}{The free \040system}{section.3.3}% 34
-\BOOKMARK [2][-]{subsection.3.3.2}{A description using L spaces}{section.3.3}% 35
-\BOOKMARK [1][-]{section.3.4}{Deformations of the holomorphic -model}{chapter.3}% 36
-\BOOKMARK [2][-]{subsection.3.4.1}{Forms as local functionals}{section.3.4}% 37
-\BOOKMARK [2][-]{subsection.3.4.2}{Computing the deformation complex}{section.3.4}% 38
-\BOOKMARK [1][-]{section.3.5}{BV quantization of the holomorphic -model}{chapter.3}% 39
-\BOOKMARK [2][-]{subsection.3.5.1}{The Wn-equivariant quantization}{section.3.5}% 40
-\BOOKMARK [2][-]{subsection.3.5.2}{Quantization on general manifolds via formal geometry}{section.3.5}% 41
-\BOOKMARK [1][-]{section.3.6}{The local operators}{chapter.3}% 42
-\BOOKMARK [2][-]{subsection.3.6.1}{The factorization algebra of observables}{section.3.6}% 43
-\BOOKMARK [2][-]{subsection.3.6.2}{The observables on the d-disk}{section.3.6}% 44
-\BOOKMARK [2][-]{subsection.3.6.3}{The sphere observables}{section.3.6}% 45
-\BOOKMARK [2][-]{subsection.3.6.4}{The disk as a module}{section.3.6}% 46
-\BOOKMARK [2][-]{subsection.3.6.5}{A formula for the character}{section.3.6}% 47
-\BOOKMARK [0][-]{chapter.4}{Local symmetries of holomorphic theories}{}% 48
-\BOOKMARK [1][-]{section.4.1}{The current algebra on complex manifolds}{chapter.4}% 49
-\BOOKMARK [2][-]{subsection.4.1.1}{Definitions}{section.4.1}% 50
-\BOOKMARK [2][-]{subsection.4.1.2}{Factorization Lie algebras}{section.4.1}% 51
-\BOOKMARK [2][-]{subsection.4.1.3}{Local cohomology}{section.4.1}% 52
-\BOOKMARK [2][-]{subsection.4.1.4}{The Kac-Moody factorization algebra}{section.4.1}% 53
-\BOOKMARK [1][-]{section.4.2}{Local structures of the Kac-Moody factorization algebra}{chapter.4}% 54
-\BOOKMARK [2][-]{subsection.4.2.1}{The higher sphere algebras}{section.4.2}% 55
-\BOOKMARK [2][-]{subsection.4.2.2}{The strategy}{section.4.2}% 56
-\BOOKMARK [2][-]{subsection.4.2.3}{An Ed algebra from tori}{section.4.2}% 57
-\BOOKMARK [1][-]{section.4.3}{The Kac-Moody factorization algebra on general manifolds}{chapter.4}% 58
-\BOOKMARK [2][-]{subsection.4.3.1}{The P0-structure}{section.4.3}% 59
-\BOOKMARK [2][-]{subsection.4.3.2}{Factorization homology along Hopf manifolds}{section.4.3}% 60
-\BOOKMARK [2][-]{subsection.4.3.3}{A variant of the factorization algebra}{section.4.3}% 61
-\BOOKMARK [1][-]{section.4.4}{Universal Grothendieck-Riemann-Roch from BV quantization}{chapter.4}% 62
-\BOOKMARK [2][-]{subsection.4.4.1}{The classical family}{section.4.4}% 63
-\BOOKMARK [2][-]{subsection.4.4.2}{BV quantization in families}{section.4.4}% 64
-\BOOKMARK [2][-]{subsection.4.4.3}{Local to global}{section.4.4}% 65
-\BOOKMARK [2][-]{subsection.4.4.4}{A module for the higher Kac-Moody}{section.4.4}% 66
-\BOOKMARK [1][-]{section.4.5}{Holomorphic diffeomorphisms}{chapter.4}% 67
-\BOOKMARK [2][-]{subsection.4.5.1}{Holomorphic vector fields}{section.4.5}% 68
-\BOOKMARK [2][-]{subsection.4.5.2}{Gelfand-Fuks cohomology}{section.4.5}% 69
-\BOOKMARK [2][-]{subsection.4.5.3}{The local cohomology of holomorphic vector fields}{section.4.5}% 70
-\BOOKMARK [2][-]{subsection.4.5.4}{An explicit description of the local cocycles}{section.4.5}% 71
-\BOOKMARK [1][-]{section.Alph0.1}{The dg model for punctured affine space}{chapter.4}% 72
+\BOOKMARK [1][-]{section.1.1}{Summary of the results}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Overview}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Holomorphic quantum field theory}{}% 4
+\BOOKMARK [1][-]{section.2.1}{The definition of a quantum field theory}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.1.1}{Classical field theory}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.2}{Quantum field theory}{section.2.1}% 7
+\BOOKMARK [1][-]{section.2.2}{Holomorphic field theories}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{The definition of a holomorphic theory}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{Holomorphically translation invariant theories}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Renormalization of holomorphic theories}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.3.1}{Holomorphic gauge fixing}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.2}{One-loop weights}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.3}{A general result about chiral anomalies}{section.2.3}% 14
+\BOOKMARK [1][-]{section.2.4}{Equivariant BV quantization}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.4.1}{Classical equivariance}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.2}{Quantum equivariance}{section.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.4.3}{The case of a local Lie algebra}{section.2.4}% 18
+\BOOKMARK [0][-]{chapter.3}{The holomorphic -model}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Gelfand-Kazhdan formal geometry}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.1.1}{A Harish-Chandra pair for the formal disk}{section.3.1}% 21
+\BOOKMARK [2][-]{subsection.3.1.2}{Formal coordinates}{section.3.1}% 22
+\BOOKMARK [2][-]{subsection.3.1.3}{The category of formal vector bundles}{section.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.1.4}{Gelfand-Kazhdan descent}{section.3.1}% 24
+\BOOKMARK [2][-]{subsection.3.1.5}{Formal characteristic classes}{section.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.1.6}{A family of extended pairs}{section.3.1}% 26
+\BOOKMARK [1][-]{section.3.2}{Descent for extended pairs}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.2.1}{General theory of descent for L pairs}{section.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.2.2}{The flat connection from the extended pair}{section.3.2}% 29
+\BOOKMARK [1][-]{section.3.3}{The classical holomorphic -model}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.1}{The free \040system}{section.3.3}% 31
+\BOOKMARK [2][-]{subsection.3.3.2}{A description using L spaces}{section.3.3}% 32
+\BOOKMARK [1][-]{section.3.4}{Deformations of the holomorphic -model}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.4.1}{Forms as local functionals}{section.3.4}% 34
+\BOOKMARK [2][-]{subsection.3.4.2}{Computing the deformation complex}{section.3.4}% 35
+\BOOKMARK [1][-]{section.3.5}{BV quantization of the holomorphic -model}{chapter.3}% 36
+\BOOKMARK [2][-]{subsection.3.5.1}{The Wn-equivariant quantization}{section.3.5}% 37
+\BOOKMARK [2][-]{subsection.3.5.2}{Quantization on general manifolds via formal geometry}{section.3.5}% 38
+\BOOKMARK [1][-]{section.3.6}{The local operators}{chapter.3}% 39
+\BOOKMARK [2][-]{subsection.3.6.1}{The factorization algebra of observables}{section.3.6}% 40
+\BOOKMARK [2][-]{subsection.3.6.2}{The observables on the d-disk}{section.3.6}% 41
+\BOOKMARK [2][-]{subsection.3.6.3}{The sphere observables}{section.3.6}% 42
+\BOOKMARK [2][-]{subsection.3.6.4}{The disk as a module}{section.3.6}% 43
+\BOOKMARK [2][-]{subsection.3.6.5}{A formula for the character}{section.3.6}% 44
+\BOOKMARK [0][-]{chapter.4}{Local symmetries of holomorphic theories}{}% 45
+\BOOKMARK [1][-]{section.4.1}{The current algebra on complex manifolds}{chapter.4}% 46
+\BOOKMARK [2][-]{subsection.4.1.1}{Definitions}{section.4.1}% 47
+\BOOKMARK [2][-]{subsection.4.1.2}{Factorization Lie algebras}{section.4.1}% 48
+\BOOKMARK [2][-]{subsection.4.1.3}{Local cohomology}{section.4.1}% 49
+\BOOKMARK [2][-]{subsection.4.1.4}{The Kac-Moody factorization algebra}{section.4.1}% 50
+\BOOKMARK [1][-]{section.4.2}{Local structures of the Kac-Moody factorization algebra}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.2.1}{The higher sphere algebras}{section.4.2}% 52
+\BOOKMARK [2][-]{subsection.4.2.2}{The strategy}{section.4.2}% 53
+\BOOKMARK [2][-]{subsection.4.2.3}{An Ed algebra from tori}{section.4.2}% 54
+\BOOKMARK [1][-]{section.4.3}{The Kac-Moody factorization algebra on general manifolds}{chapter.4}% 55
+\BOOKMARK [2][-]{subsection.4.3.1}{The P0-structure}{section.4.3}% 56
+\BOOKMARK [2][-]{subsection.4.3.2}{Factorization homology along Hopf manifolds}{section.4.3}% 57
+\BOOKMARK [2][-]{subsection.4.3.3}{A variant of the factorization algebra}{section.4.3}% 58
+\BOOKMARK [1][-]{section.4.4}{Universal Grothendieck-Riemann-Roch from BV quantization}{chapter.4}% 59
+\BOOKMARK [2][-]{subsection.4.4.1}{The classical family}{section.4.4}% 60
+\BOOKMARK [2][-]{subsection.4.4.2}{BV quantization in families}{section.4.4}% 61
+\BOOKMARK [2][-]{subsection.4.4.3}{Local to global}{section.4.4}% 62
+\BOOKMARK [2][-]{subsection.4.4.4}{A module for the higher Kac-Moody}{section.4.4}% 63
+\BOOKMARK [1][-]{section.4.5}{Holomorphic diffeomorphisms}{chapter.4}% 64
+\BOOKMARK [2][-]{subsection.4.5.1}{Holomorphic vector fields}{section.4.5}% 65
+\BOOKMARK [2][-]{subsection.4.5.2}{Gelfand-Fuks cohomology}{section.4.5}% 66
+\BOOKMARK [2][-]{subsection.4.5.3}{The local cohomology of holomorphic vector fields}{section.4.5}% 67
+\BOOKMARK [2][-]{subsection.4.5.4}{An explicit description of the local cocycles}{section.4.5}% 68
+\BOOKMARK [0][-]{chapter.5}{Appendix}{}% 69
+\BOOKMARK [1][-]{section.5.1}{The dg model for punctured affine space}{chapter.5}% 70

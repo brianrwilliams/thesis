@@ -13,7 +13,7 @@
 %Information to be included in the title page:
 \title{The holomorphic $\sigma$-model and its symmetries}
 \author{Brian Williams}
-\institute{Northwestern University}
+\institute{Northwestern University \\ Advisors: John Francis and Kevin Costello}
 \date{May 1, 2018}
 
 \begin{document}
@@ -79,7 +79,7 @@ We call $\hbar$ the {\em perturbation} parameter.
 \frametitle{The BV formalism (cont.)}
 When we set $\hbar = 0$, the QME reduces to condition
 \ben
-\boxed{Q I_0 + \frac{1}{2} \{I,I\} = 0}.
+\boxed{Q I_0 + \frac{1}{2} \{I_0,I_0\} = 0}.
 \een
 We call this the classical master equation (CME).
 \begin{eg}
@@ -186,7 +186,7 @@ where $K_{L},K_{L'}$ are both smooth and $\lim_{L \to 0} K_L = K_0$.
 
 \begin{frame}
 \frametitle{The definition of a QFT}
-By definition, a quantization is a family of functionals $\{I[L]\}$ satisfying the following two conditions:
+By definition, a quantization is a family of functionals $\{I[L]\}$ with $I_0 = \lim_{L \to 0} I[L] \mod \hbar$ satisfying the following two conditions:
 \begin{enumerate}
 \item the collection of functionals $\{I[L]\}$ are related by {\em renormalization group flow}
 \ben
@@ -298,8 +298,8 @@ For each $X$, there is a functor
 \ben
 \begin{tikzcd}[row sep = small]
 \sV \arrow[r, mapsto] \arrow[d, phantom, "\vin"] & \left({\rm Fr}_X \times^{\GL_n} \sV, \nabla^{coor}\right)  \arrow[d, phantom, "\vin"] \\
-{\rm VB}_{\hD^n} \arrow[r,"\desc_X"] & {\rm VB}^{flat}_{X} \\
-{\rm Mod}_{(\W_n, \GL_n)} \arrow[u, hook]& 
+{\rm VB}_{\hD^n} \arrow[r,"\desc_X"] \arrow[d, hook] & {\rm VB}^{flat}_{X} \arrow[d,hook] \\
+{\rm Mod}_{(\W_n, \GL_n)} \arrow[r] & {\rm Mod}_{D_X} . 
 \end{tikzcd}
 \een
 Moreover, there are ``formal characteristic classes" that live in the Gelfand-Fuks cohomology.
@@ -308,8 +308,70 @@ The descent functor determines a transformation of cohomology theories and hence
 {\rm char}_X : \clie^*(\W_n , \GL_n ; \sV) \to \Omega^*(X, \desc_X(\sV)) .
 \een
 
-When $\sV = \hO_n$, $\desc_X(\hO_n) = J^\infty \sO_X$ equipped with its natural flat connection.
+When $\sV = \hO_n$ formal power series, $\desc_X(\hO_n) = J^\infty \sO_X$ equipped with its natural flat connection.
 Recover all natural bundles in this way.
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\frametitle{The formal holomorphic $\sigma$-model}
+
+Consider the formal disk $\hD^n$ as a ringed space whose ring of functions is formal power series $\hO_n$.
+\ben
+\begin{tikzcd}
+Y \arrow[r] & \hD^n \arrow[loop right] & (\W_n,\GL_n) .
+\end{tikzcd}
+\een
+
+{\bf Key idea:} study the free theory equivariant for the action of the pair $(\Vect, \GL_n)$.
+Get global target $\sigma$-model via descent.
+
+Quantization: holomorphic theory $\implies$ renormalization is simple. 
+Obstruction is controlled by an element in Gelfand-Fuks cohomology.
+
+\begin{thm}
+There is an obstruction to quantizing the formal holomorphic $\sigma$-model of maps $\CC^d \to \hD^n$ given by the class
+\ben
+\ch_{d+1}^{\GF} (\hT_n) \in \clie^{d+1}(\W_n , \GL_n; \hOmega^{d+1}_{n,cl}) .
+\een
+\end{thm}
+
+Under characteristic map, this returns the ordinary Chern class. 
+Determines an {\em $L_\infty$-extension}
+\ben
+0 \to \hOmega^{d+1}_{n,cl} \to \TVectd \to \W_n \to 0 .
+\een
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Extended descent}
+Given any trivialization $\alpha$ of $\ch_{d+1}(T_X)$ we can lift the structure of the coordinate bundle. 
+\ben
+\begin{tikzcd}
+\Tilde{X}^{coor}_{\alpha} \arrow[d, dotted] \arrow[dr, dotted] & &   \\ 
+\arrow[loop left] X^{coor} \arrow[dd] \arrow[dr] & ({\rm Fr}_X, \Tilde{\omega}_{\alpha}^{coor})\arrow[d] &   \Tilde{\omega}^{coor}_{\alpha} \in \oplus_{p + q = 1} \Omega^p({\rm Fr}_X , (\TVectd)^q )  \\
+ & ({\rm Fr}_X, \omega^{coor}) \arrow[dl] &  \d \Tilde{\omega}^{coor}_{\alpha} + \sum_{k \geq 2} \ell_k(\Tilde{\omega}^{coor}_{\alpha}) = 0 \\
+X &
+\end{tikzcd}
+\een
+Descent functor
+\ben
+\Tilde{\desc}_{X,\alpha} : {\rm Mod}_{(\TVectd, \GL_n)} \to {\rm Mod}_{D_X} .
+\een
+Theorem implies quantization is equivariant for $(\TVectd, \GL_n)$. 
+This says that for any trivialization $\alpha$ we obtain a global quantization. 
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Main result}
+Explicit GF calculation shows there is a unique $(\TVectd, \GL_n)$-quantization for the formal theory.
+Extended descent implies the following main result.
+
+\begin{thm} Suppose $\ch_{d+1}(T_X) = 0$.
+Then, the space of quantizations respecting certain natural symmetries of the holomorphic $\sigma$-model of maps $\CC^d \to \hD^n$ is a torsor for the abelian group $H^{d}(X , \Omega^{d+1,hol}_X)$. 
+\end{thm}
 
 \end{frame}
 

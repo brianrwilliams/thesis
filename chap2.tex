@@ -3985,9 +3985,8 @@ In particular, the third term in the last line vanishes.
 The calculation for the $\star_{23}$ product is similar. 
 We conclude that in cohomology the commutator between the quantum observables $\cO_{\gamma, \alpha}(0;v^*)$ and $\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v)$ is precisely
 \ben
-\# \hbar \<v, v^*\> \oint_{|z| = r_1} \alpha(z) \alpha'(z) \d^d z .
+\hbar \<v, v^*\> \oint_{|z| = r_1} \alpha(z) \alpha'(z) \d^d z .
 \een
-\brian{work out factor!}
 This agrees with the commutator $(\ref{HV bracket})$ in $\sH_V$. 
 The extension to commutators between non-linear observables is completely analogous. 
 Thus, we conclude that as associative graded algebras one as 
@@ -4063,6 +4062,8 @@ Now, we define $\sF_V$ as the factorization envelope of this local Lie algebra
 \ben
 \sF_V = \UU\left(\Omega^*_{\RR_{>0},c} \tensor \sH_V\right) .
 \een
+By construction, $\sF_V$ is locally constant and equivalent, as an associative dg algebra, to $U(\sH_V)$. 
+Thus, we must only show part (1). 
 
 We have just expressed $\Obs_V^\q$ as a factorization enveloping algebra as well.
 Since the pushforward commutes with the functor $\UU(-)$, to construct the map in (1) it suffices to provide a map of factorization Lie algebras
@@ -4117,8 +4118,8 @@ By functoriality of the enveloping factorization algebra together with compatibi
 \ben
 \Phi : \sF_V = \UU\left( \Omega^*_{\RR_{>0},c} \tensor \sH_V \right) \to \rho_* \UU (\sH_V') = \rho_* \Obs^\q_V .
 \een
+That this map is dense in cohomology follows from Proposition \ref{prop: Ad} in the appendix.
 \end{proof}
-
 
 
 %\begin{rmk}
