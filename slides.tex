@@ -6,6 +6,30 @@
 
 \usepackage{tikz-cd}
 
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\tikzset{
+	% >=stealth', %%  Uncomment for more conventional arrows
+    vector/.style={decorate, decoration={snake}, draw},
+	provector/.style={decorate, decoration={snake,amplitude=2.5pt}, draw},
+	antivector/.style={decorate, decoration={snake,amplitude=-2.5pt}, draw},
+    fermion/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+    fermionbar/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    fermionnoarrow/.style={draw=black},
+    gluon/.style={decorate, draw=black,
+        decoration={coil,amplitude=4pt, segment length=5pt}},
+    scalar/.style={dashed,draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+    scalarbar/.style={dashed,draw=black, postaction={decorate},
+        dwecoration={markings,mark=at position .55 with {\arrow[draw=black]{<}}}},
+    scalarnoarrow/.style={dashed,draw=black},
+    electron/.style={draw=black, postaction={decorate},
+        decoration={markings,mark=at position .55 with {\arrow[draw=black]{>}}}},
+	bigvector/.style={decorate, decoration={snake,amplitude=4pt}, draw},
+}
+
 \newcommand{\vin}{\rotatebox[origin=c]{-90}{$\in$}}
  
  \setbeamertemplate{footline}[frame number]
@@ -23,7 +47,7 @@
 \begin{frame}
 \frametitle{Outline of this talk}
 \begin{enumerate}
-\item Rapid overview of the BV formalism.
+\item Rapid overview of the Batalin-Vilkovisky (BV) formalism.
 \item Holomorphic theories, in general. 
 One-loop finiteness and a formula for the general chiral anomaly. 
 \item The holomorphic $\sigma$-model and its factorization algebra.
@@ -32,7 +56,7 @@ One-loop finiteness and a formula for the general chiral anomaly.
 
 \begin{frame}[fragile]
 \frametitle{The BV formalism}
-The Batalin-Vilkovisky formalism is a technique used to study quantization in field theory.
+The BV formalism is a technique used to study quantizations of field theories.
 A generalization of the usual problem of {\em deformation quantization}.
 \ben
 \begin{tikzcd}
@@ -130,6 +154,10 @@ A classical field theory on a smooth manifold $M$ is:
 We require that $(\sE, Q)$ is an elliptic complex.
 The pairing $(-,-)_E$ defines a $(-1)$-shifted symplectic structure via integration $$\omega = \int_X \circ (-,-)_E .$$
 The sheaf of sections $\sE$ evaluated on an open set $U$ returns the graded space $\sE(U)$ which we refer to as the space of fields supported on $U$.
+The {\em classical observables} supported on $U$:
+\ben
+\Obs^{\cl}(U) = \left(\Sym(\sE(U)^\vee), Q + \{I_0,-\}\right) .
+\een
 \end{frame}
 
 
@@ -190,12 +218,13 @@ By definition, a quantization is a family of functionals $\{I[L]\}$ with $I_0 = 
 \begin{enumerate}
 \item the collection of functionals $\{I[L]\}$ are related by {\em renormalization group flow}
 \ben
-I[L'] = W(P_{L < L'} , I[L]) .
+I[L'] = W(P_{L < L'} , I[L]) ;
 \een
 \item for each $L$, the functional solves the {\em scale L} quantum master equation
 \ben
-(Q + \hbar \Delta_L) e^{I[L] / \hbar} = 0 .
+(Q + \hbar \Delta_L) e^{I[L] / \hbar} = 0 ;
 \een
+\item some technical locality conditions. 
 \end{enumerate}
 
 For abstract reasons, proved by Costello, one can always find a family such that (1) is satisfied.
@@ -205,6 +234,7 @@ There may be unavoidable obstructions to solving problem (2).
 \end{frame}
 
 \begin{frame}
+\frametitle{Holomorphic renormalization}
 
 The na\"{i}ve definition of $I[L]$ is to apply the operator $P_{0<L}$ to the classical interaction
 \ben
@@ -228,7 +258,9 @@ This is essentially an algebraic problem.
 \end{itemize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
+\frametitle{A general formula for the chiral anomaly}
+
 A corollary of this result is a characterization of the {\em anomaly}, or obstruction, for a holomorphic theory to solve the QME. 
 
 \begin{cor}
@@ -238,7 +270,39 @@ The obstruction for a classical holomorphic theory on $\CC^d$ to admit a one-loo
 \een
 \end{cor}
 
-Pictorially PICTURE
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[line width=.1mm, scale=1]
+
+%\pgfmathsetmacro{\ex}{0}
+%\pgfmathsetmacro{\ey}{1}
+
+%\draw (\ex,\ey) ++(45:.8) arc (45:-45:.8);
+
+		\draw[fill=black] (0,0) circle (1cm);
+		%\draw[fill=red] (0,0) arc (145:215:1);
+		\draw[fill=white] (0,0) circle (0.99cm);
+		\draw[line width=0.35mm,red] ++(145:0.995) arc (145:215:0.995);
+		%\draw[red] (0,0) arc (30:60:3);
+
+		\draw[vector](145:2) -- (145:1);
+		\node at (145:2.3) {$\alpha^{(0)}$};
+			%\node at (145:0.85) {$v_0$};
+		\node at (60:0.75) {$P_{\epsilon<L}$};
+		\node at (-60:0.75) {$P_{\epsilon<L}$};
+		\draw[vector](215:2) -- (215:1cm);
+		\node at (215:2.3) {$\alpha^{(2)}$};
+			%\node at (215:0.85) {$v_{d}$};
+		\node[red] at (180:0.8) {$K_\epsilon$};
+		\draw[vector](0:2) -- (0:1);
+		\node at (0:2.3) {$\alpha^{(1)}$};
+			%\node at (35:0.85) {$v_{\alpha}$};
+		%\node at (0:0.8) {$P_{\epsilon<L}$};
+		%\node at (270:0.8) {$P_{\epsilon<L}$};
+	    	\clip (0,0) circle (1cm);
+\end{tikzpicture}
+\end{center}
+\end{figure}
 
 This gives a holomorphic characterization, and generalization, of the Adler-Bell-Jackiw anomaly for four-dimensional gauge theory.
 \end{frame}
@@ -317,14 +381,14 @@ Recover all natural bundles in this way.
 
 \frametitle{The formal holomorphic $\sigma$-model}
 
-Consider the formal disk $\hD^n$ as a ringed space whose ring of functions is formal power series $\hO_n$.
+Consider the formal disk $\hD^n$ as a ringed space whose functions are formal power series $\hO_n$.
 \ben
 \begin{tikzcd}
 Y \arrow[r] & \hD^n \arrow[loop right] & (\W_n,\GL_n) .
 \end{tikzcd}
 \een
 
-{\bf Key idea:} study the free theory equivariant for the action of the pair $(\Vect, \GL_n)$.
+{\bf Key idea:} study the free theory {\em equivariant} for the action of the pair $(\Vect, \GL_n)$.
 Get global target $\sigma$-model via descent.
 
 Quantization: holomorphic theory $\implies$ renormalization is simple. 
@@ -349,10 +413,10 @@ Determines an {\em $L_\infty$-extension}
 Given any trivialization $\alpha$ of $\ch_{d+1}(T_X)$ we can lift the structure of the coordinate bundle. 
 \ben
 \begin{tikzcd}
-\Tilde{X}^{coor}_{\alpha} \arrow[d, dotted] \arrow[dr, dotted] & &   \\ 
-\arrow[loop left] X^{coor} \arrow[dd] \arrow[dr] & ({\rm Fr}_X, \Tilde{\omega}_{\alpha}^{coor})\arrow[d] &   \Tilde{\omega}^{coor}_{\alpha} \in \oplus_{p + q = 1} \Omega^p({\rm Fr}_X , (\TVectd)^q )  \\
- & ({\rm Fr}_X, \omega^{coor}) \arrow[dl] &  \d \Tilde{\omega}^{coor}_{\alpha} + \sum_{k \geq 2} \ell_k(\Tilde{\omega}^{coor}_{\alpha}) = 0 \\
-X &
+\TVectd \arrow[d] & \arrow[loop left] \Tilde{X}^{coor}_{\alpha} \arrow[d, dotted] \arrow[dr, dotted] & &   \\ 
+\W_n & \arrow[loop left] X^{coor} \arrow[dd] \arrow[dr] & ({\rm Fr}_X, \Tilde{\omega}_{\alpha}^{coor})\arrow[d] &   \Tilde{\omega}^{coor}_{\alpha} \in \oplus_{p\geq 1} \Omega^p({\rm Fr}_X , \TVectd)  \\
+& & ({\rm Fr}_X, \omega^{coor}) \arrow[dl] &  \d \Tilde{\omega}^{coor}_{\alpha} + \sum_{k \geq 2} \ell_k(\Tilde{\omega}^{coor}_{\alpha}) = 0 \\
+& X & &
 \end{tikzcd}
 \een
 Descent functor
@@ -370,9 +434,79 @@ Explicit GF calculation shows there is a unique $(\TVectd, \GL_n)$-quantization 
 Extended descent implies the following main result.
 
 \begin{thm} Suppose $\ch_{d+1}(T_X) = 0$.
-Then, the space of quantizations respecting certain natural symmetries of the holomorphic $\sigma$-model of maps $\CC^d \to \hD^n$ is a torsor for the abelian group $H^{d}(X , \Omega^{d+1,hol}_X)$. 
+Then, the space of quantizations (respecting certain natural symmetries) of the holomorphic $\sigma$-model of maps $\CC^d \to X$ is a torsor for the abelian group $H^{d}(X , \Omega^{d+1,hol}_X)$. 
 \end{thm}
 
+\begin{itemize}
+\item Quantizations exist on other source manifolds: affine manifolds, abelian varieties, Hopf manifolds $Y = \CC^d \setminus \{0\} / q^\ZZ \cong S^{2d-1} \times S^1$. 
+\item Local calculation of the index produces elliptic $\Gamma$-functions.
+This agrees with the partition function for supersymmetric theories in dimensions $2,4,6$. 
+For a general target, this should produced refined invariants generalizing the Witten genus in complex dimension one.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+
+\frametitle{Relation to deformation quantization}
+
+Immediate corollary: obtain the following deformation quantization for ''sphere algebras". 
+Theory on 
+\ben
+\begin{tikzcd}
+\CC^{d} \setminus \{0\} \arrow[d,"\pi"'] \arrow[r, "\cong"] & \RR_{>0} \times S^{2d-1} \\
+\RR_{>0} . 
+\end{tikzcd}
+\een
+Reduction along the sphere:
+\ben
+\begin{tikzcd}
+\pi_*\left({\rm Holomorphic\;}\sigma {\rm -model} \; \CC^d \setminus \{0\} \to X\right) \arrow[d, equals] \\
+{\rm One \; dimensional\;} \sigma {\rm -model} \; \RR_{>0} \to T^* {\rm Map}^{alg}(S^{2d-1}, X) .
+\end{tikzcd}
+\een
+Sphere mapping space is really a derived algebraic version.
+There is a dg algebra $A_d$ with $A_d^0 \hookrightarrow C^\infty(S^{2d-1})$ densely and
+\ben
+A_d \hookrightarrow \Omega^{0,*}(\CC^d \setminus \{0\})
+\een
+which is dense in cohomology. 
+When $d=1$, $A_1 = \CC[z,z^{-1}]$ and we get algebraic loop space.
+
+\end{frame}
+
+\begin{frame}[fragile]
+
+\frametitle{Observables}
+
+BV quantization produces a (sheaf of) factorization algebras on $\CC^{d}$. 
+In the one-dimensional reduction, restricts to a factorization algebra on $\RR_{>0} \rightsquigarrow$ dg associative algebra.
+When $\ch_{d+1}(T_X) = 0$ we get a deformation quantization = "differential operators on the sphere mapping space". 
+\ben
+\begin{tikzcd}
+\sO_\hbar \left(T^*{\rm Map}(S^{2d-1}, X)\right) \ar[d,"\hbar \to 0"] \ar[r,equals]& : D_{\hbar}\left({\rm Map}(S^{2d-1}, X)\right) \\
+\sO \left(T^*{\rm Map}(S^{2d-1}, X)\right) .
+\end{tikzcd}
+\een
+The state space $\sV_X$ is equal to the observables supported on the disk in $\CC^d$. 
+Factorization product endows $\sV_X$ with the structure of a dg module over $D_{\hbar}({\rm Map}(S^{2d-1}, X))$. 
+It is equal to the ``vacuum" module
+\ben
+\sV_X = D_\hbar \tensor_{D_{\hbar,+}} \CC[[\hbar]] .
+\een
+Where $D_{\hbar,+} \subset D_\hbar$ is a maximal commutative subalgebra of ''positive modes". 
+This plays the role of the Hilbert space in quantum mechanics.
+\end{frame}
+
+\begin{frame}
+\frametitle{Conclusions and outlook}
+
+\begin{itemize}
+\item Have not discussed much about "source symmetries" of the holomorphic $\sigma$-model.
+Big part of my thesis was to characterize symmetries by holomorphic gauge transformations and by holomorphic diffeomorphisms. 
+Lead to higher dimensional Kac-Moody algebras and Virasoro algebras, respectively. 
+\item In particular, there is a dg Lie algebra central extension of holomorphic vector fields on punctured affine space that embeds inside of $D_{\hbar}$. 
+This central extension is parametrized by a higher dimensional version of ''central charge" in CFT. 
+\end{itemize}
 \end{frame}
 
 \end{document}

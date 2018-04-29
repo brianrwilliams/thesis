@@ -1144,7 +1144,13 @@ Moreover, there is a quasi-isomorphism of $D$-modules
 \ben
 \Omega^{d,d}_{X} \tensor^{\LL}_{D_X} M^{C^\infty} \simeq \Omega^{d,hol}_X \tensor_{D_X^{hol}} M [d] .
 \een
-We apply this to the case $M = J^{hol} V$, where $V$ is a holomorphic vector bundle.
+
+We apply this to the case $M = \sO_{red}(J^{hol} V)$, where $V$ is a holomorphic vector bundle.
+To complete the proof, we need to show that for any holomorphic vector bundle $V$ that there is a quasi-isomorphism of $D_X$-modules between $\sO_{red}(J \Omega^{0,*}(X , V))$ and $\sO_{red}(J^{hol}V)$. 
+For this, it suffices to show that the space of linear functionals are quasi-ismorphic. 
+For any vector bundle $E$ there always exists a (non-canonical) splitting $J E \cong \sE \tensor_{C^\infty_X} J_X$, where $\sE$ is the sheaf of sections and $J_X$ is the sheaf of $\infty$-jets of the trivial bundle.
+Thus, we can assume that $V$ is the trivial vector bundle, where the claim is now $(J\Omega^{0,*}(X))^\vee \simeq (J^{hol}_X)^\vee$. 
+Both sides are quasi-isomorphic to the smooth sections of the bundle of holomorphic differential operators $D^{hol}$, so we are done. 
 \end{proof}
 
 \begin{rmk}

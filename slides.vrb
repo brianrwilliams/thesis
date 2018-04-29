@@ -1,18 +1,20 @@
-\frametitle{Extended descent}
-Given any trivialization $\alpha$ of $\ch_{d+1}(T_X)$ we can lift the structure of the coordinate bundle.
+
+\frametitle{Observables}
+
+BV quantization produces a (sheaf of) factorization algebras on $\CC^{d}$.
+In the one-dimensional reduction, restricts to a factorization algebra on $\RR_{>0} \rightsquigarrow$ dg associative algebra.
+When $\ch_{d+1}(T_X) = 0$ we get a deformation quantization = "differential operators on the sphere mapping space".
 \ben
 \begin{tikzcd}
-\Tilde{X}^{coor}_{\alpha} \arrow[d, dotted] \arrow[dr, dotted] & &   \\
-\arrow[loop left] X^{coor} \arrow[dd] \arrow[dr] & ({\rm Fr}_X, \Tilde{\omega}_{\alpha}^{coor})\arrow[d] &   \Tilde{\omega}^{coor}_{\alpha} \in \oplus_{p + q = 1} \Omega^p({\rm Fr}_X , (\TVectd)^q )  \\
- & ({\rm Fr}_X, \omega^{coor}) \arrow[dl] &  \d \Tilde{\omega}^{coor}_{\alpha} + \sum_{k \geq 2} \ell_k(\Tilde{\omega}^{coor}_{\alpha}) = 0 \\
-X &
+\sO_\hbar \left(T^*{\rm Map}(S^{2d-1}, X)\right) \ar[d,"\hbar \to 0"] \ar[r,equals]& : D_{\hbar}\left({\rm Map}(S^{2d-1}, X)\right) \\
+\sO \left(T^*{\rm Map}(S^{2d-1}, X)\right) .
 \end{tikzcd}
 \een
-Can find flat connection $\Tilde{\omega}_{\alpha} \in \Omega^1({\rm Fr}_X , \TVectd)$.
-Descent functor
+The state space $\sV_X$ is equal to the observables supported on the disk in $\CC^d$.
+Factorization product endows $\sV_X$ with the structure of a dg module over $D_{\hbar}({\rm Map}(S^{2d-1}, X))$.
+It is equal to the ``vacuum" module
 \ben
-\Tilde{\desc}_{X,\alpha} : {\rm Mod}_{(\TVectd, \GL_n)} \to {\rm Mod}_{D_X} .
+\sV_X = D_\hbar \tensor_{D_{\hbar,+}} \CC[[\hbar]] .
 \een
-Theorem implies quantization is equivariant for $(\TVectd, \GL_n)$.
-This says that for any trivialization $\alpha$ we obtain a global quantization.
-
+Where $D_{\hbar,+} \subset D_\hbar$ is a maximal commutative subalgebra of ''positive modes".
+This plays the role of the Hilbert space in quantum mechanics.

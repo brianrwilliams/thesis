@@ -314,6 +314,16 @@ Victor~W. Guillemin.
 \newblock Cohomology of vector fields on a manifold.
 \newblock {\em Advances in Math.}, 10:192--220, 1973.
 
+\bibitem[GWa]{GWsigma}
+Ryan Grady and Brian Williams.
+\newblock Homotopy {R}{G} flow and the nonlinear $\sigma$-model.
+\newblock https://arxiv.org/abs/1710.05973, accepted for publication.
+
+\bibitem[GWb]{GWstring}
+Owen Gwilliam and Brian Williams.
+\newblock The holomorphic bosonic string.
+\newblock https://arxiv.org/abs/1711.05823, accepted for publication.
+
 \bibitem[Gwi12]{GwThesis}
 Owen Gwilliam.
 \newblock {\em Factorization {A}lgebras and {F}ree {F}ield {T}heories}.
@@ -378,6 +388,11 @@ Andreas Kriegl and Peter~W. Michor.
 D.~R. Karakhanyan, R.~P. Manvelyan, and R.~L. Mkrtchyan.
 \newblock Trace anomalies and cocycles of {W}eyl and diffeomorphisms groups.
 \newblock {\em Modern Phys. Lett. A}, 11(5):409--421, 1996.
+
+\bibitem[Knu]{KnudsenEn}
+Ben Knudsen.
+\newblock Higher enveloping algebras.
+\newblock https://arxiv.org/abs/1605.01391.
 
 \bibitem[KO03]{KapOrlov}
 Anton Kapustin and Dmitri Orlov.

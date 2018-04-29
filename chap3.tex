@@ -1021,10 +1021,10 @@ These $E_d$-algebras are related to interesting extensions of the Lie algebra $L
 
 When $d=1$, we have seen that the nesting of ordinary annuli give rise to the structure of an associative algebra. For $d > 1$, a polyannulus is a complex submanifold of the form ${\rm Ann}_1 \times \cdots \times {\rm Ann}_d \subset (\CC^\times)^d$ where each ${\rm Ann}_i \subset \CC^\times$ is an ordinary annulus. Equivalently, a polyannulus is the complement of a closed polydisk inside of a larger open polydisk. We will see how the nesting of annuli in each component gives rise to the structure of a locally constant factorization algebra in $d$ {\em real} dimensions, and hence defines an $E_d$ algebra. 
 
-A result of Knudsen \cite{BK}, which we recall below, states that every dg Lie algebra determines an $E_d$-algebra, for any $d>1$, called the universal $E_d$ enveloping algebra.
+A result of Knudsen \cite{KnudsenEn}, which we recall below, states that every dg Lie algebra determines an $E_d$-algebra, for any $d>1$, called the universal $E_d$ enveloping algebra.
 To state the result precisely we need to be in the context of $\infty$-categories.
 
-\begin{thm}[\cite{BK}] Let $\sC$ be a stable, $\CC$-linear, presentable, symmetric monoidal $\infty$-category.
+\begin{thm}[\cite{KnudsenEn}] Let $\sC$ be a stable, $\CC$-linear, presentable, symmetric monoidal $\infty$-category.
 There is an adjunction
 \ben
 U^{E^d} : {\rm LieAlg}(\sC) \leftrightarrows E_d{\rm Alg} (\sC): F
@@ -2088,7 +2088,7 @@ In complex dimension one, this definition agrees with the usual definition of th
 \def\Riem{{\rm Riem}}
 \def\Conf{{\rm Conf}}
 
-In complex dimension one there is an intimate relationship between complex and Riemannian structures. 
+In complex dimension one there is an intimate relationship between complex structures and Riemannian structures. 
 Every Riemann surface admits a natural Riemannian metric and hence a conformal structure. 
 Conversely, a conformal class of a metric defines a complex structures. 
 It is well-known that the moduli of Riemann surfaces is equivalent to the moduli of conformal structures.
@@ -2144,7 +2144,7 @@ Moreover, under the map of local Lie algebras, one checks that $\phi_{\rm Weyl}^
 \een
 We have already remarked that $\omega_{\rm Vir}$ is the generator of the cohomology $H^1_{\rm loc}(\sT_\Sigma)$ for any Riemann surface.
 Thus, in complex dimension one we see that our definition of central charge agrees with the usual one from CFT.
-We have verified an explicit calculation of the central charge in the BV formalism in \cite{BWVir}.
+We have verified an explicit calculation of the central charge in the BV formalism for a particular holomorphic theory on Riemann surfaces in \cite{BWVir}.
 
 \subsection{Gelfand-Fuks cohomology} \label{sec: gf}
 
@@ -2334,7 +2334,7 @@ Any tensor bundle $\sV$ (those built from the tangent bundle via duals and tenso
 Further, this vector bundle defines a locally free sheaf of $\sM$ via the derived pushforward $\RR \pi_* \sV$ and hence a Chern class $c_1(\sV) = c_1(\RR \pi_* \sV) \in H^2(\sM)$. 
 These are higher dimensional analogs of the tautological classes on the moduli space of curves.
 
-There is a relationship of these tautological classes with Gelfand-Fuks cohomology as follows. The vector bundle $\sV \to \sX$ is classified by a map $f_{\sV} : \sX \to B \U(d)$. 
+There is a relationship of these tautological classes with Gelfand-Fuks cohomology as follows. The vector bundle $\sV \to \sX$ is classified by a map $f_{\sV} : \sX \to B \U(d)$, and so we obtain the diagram. 
 \ben
 \begin{tikzcd}
 & \sV \arrow[d] & \\
@@ -2344,8 +2344,7 @@ B \U(d) & & \sM .
 \een
 If $\alpha \in H^{2d+2} (B \U(d))$ we obtain the class via the push-pull construction $\pi_* f_{\sV}^* \alpha \in H^2(\sM)$.
 Since $H^{2d+2} (B \U(d)) \cong H^{2d+1}(\W_d)$, this shows that our Gelfand-Fuks classes define tautological classes on the moduli of complex manifolds. 
-The precise relations between the classes $c_1(\sV)$ and Gelfand-Fuks cohomology is not yet known, but \brian{finish}
-
+It would be interesting to work out the precise relationship between the classes $c_1(\sV)$ and Gelfand-Fuks classes, but we postpone this to future work.
 
 %\begin{thm}
 %Let $X$ be a complex $d$-fold. 
