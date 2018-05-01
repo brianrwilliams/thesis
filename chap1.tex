@@ -502,7 +502,7 @@ One requires that $F$ satisfies the following conditions:
 \begin{enumerate}
 \item $F(\CC) \simeq *$ ($F$ is pointed);
 \item $F$ takes surjective maps of dg Artin algebras to fibrations of simplicial sets;
-\item $F$ preserves fiber products: $F(A \times_B C) \xto{\simeq} F(A) \times_{F(B)} F(C)$.
+\item if $A\to B, C \to B$ are maps of dg Artin algebras such that one of them is surjective on $H^0$, then $F$ preserves the fiber product: $F(A \times_B C) \xto{\simeq} F(A) \times_{F(B)} F(C)$.
 \end{enumerate}
 
 The most important way in which formal moduli problems arise is through the {\em Maurer-Cartan} equation.
@@ -969,11 +969,11 @@ Suppose that $V$ is part of the data of a free holomorphic theory $(V, Q^{hol},(
 The pairing $(-,-)_V$ endows the space of holomorphic Lagrangians with a sort of bracket.
 Indeed, suppose $F, F' \in \sO_{red}^{hol}(V)$.
 For simplicity suppose $F,F'$ are of homogenous symmetric degree $k,k'$ respectively.
-Then, their product $F \tensor F'$ is a symmetric element in the homomorphism space
+Then, their product $F \tensor F'$ is an element in the homomorphism space
 \ben
 {\rm Hom}({\rm Jet}^{hol}(V)^{\tensor (k +k')} , K_X \tensor K_X) .
 \een
-Now, the bundle map $(-,-)_V : V \tensor V \to K_X[d-1]$ is invertible, hence it determines an element $(-,-)^{-1}_V \in V \tensor K_X^*$, where $K_X^*$ is the dual bundle. 
+Now, the bundle map $(-,-)_V : V \tensor V \to K_X[d-1]$ is invertible, hence it determines an element $(-,-)^{-1}_V \in V \tensor V \tensor K_X^*$, where $K_X^*$ is the dual bundle. 
 We can then consider the composition
 \ben
 \xymatrix{
@@ -2218,11 +2218,13 @@ We will see a precise statement of this for the holomorphic current algebra in o
 
 \begin{rmk} 
 We have already shown how familiar topological theories can be cast in a holomorphic language.
+For instance, topological $BF$ theory is a holomorphic deformation of holomorphic $BF$ theory. 
 It is a peculiar consequence of the above result that such topological theories also admit a simple regularization procedure. 
-For instance, in even dimensions this gives a finite one-loop quantizations of topological BF theory. 
 Without much more difficulty, one can extend this to certain topological theories to odd dimensional manifolds of the form $X \times S$, where $X$ is a complex manifold and $S$ is a real one-dimensional manifold. 
 We consider the theory as a product of a holomorphic theory on $X$ and a one-dimensional topological theory on $S$. 
 This can be further extended to transversely holomorphic foliations \cite{THF1,THF2}, which we will study in a future publication.
+Further, often topological BF theory further deforms to Yang-Mills.
+It would be interesting to apply our analysis above to such gauge theories. 
 \end{rmk}
 
 \section{Equivariant BV quantization} \label{sec: equiv BV}

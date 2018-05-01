@@ -1,0 +1,13 @@
+\frametitle{Factorization homology}
+On a Hopf manifold $Y \cong S^{2d-1} \times S^1$, this algebra appears in the factorization homology.
+\ben
+\begin{tikzcd}
+\CC^d \setminus \{0\} \arrow[r] \arrow[d] & X \arrow[d] \\
+\RR_{>0} \arrow[r] & S^1 .
+\end{tikzcd}
+\een
+\ben
+\int_{X} {\rm Obs}^\q_{X, \alpha} \simeq {\rm Hoch}_*(D_\hbar) \simeq \Omega^{-*}(T^*X)[[\hbar]] .
+\een
+The zero modes inside $D_\hbar$ give ordinary differential operators on $X$, and the Hochschild homology ``localizes" to this subalgebra.
+Reminiscent of Nest-Tsygan's result in deformation quantization.

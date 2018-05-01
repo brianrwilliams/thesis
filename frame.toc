@@ -1,5 +1,5 @@
 \contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Summary of the results}{6}{section.1.1}
+\contentsline {section}{\numberline {1.1}Summary of the results}{7}{section.1.1}
 \contentsline {section}{\numberline {1.2}Overview}{7}{section.1.2}
 \contentsline {chapter}{\numberline {2}Holomorphic quantum field theory}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}The definition of a quantum field theory}{11}{section.2.1}

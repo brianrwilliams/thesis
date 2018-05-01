@@ -816,10 +816,10 @@ Moreover, we have the following.
 The cohomology class of $(2\pi i)^{-k} S_k(\At(V))$ provides a section
 of the sheaf $H^k(X ; \Omega^{k,hol})$. On any compact K\"ahler manifold, it agrees with $c_k(V)$.
 \end{lem}
-desc
+
 \subsubsection{The formal Atiyah class}
 
-We now wish to show that Gelfand-Kazhdan descent sends an exact sequence in $\VB_{\hc}$ to an exact sequence in $\vb(\GK_n)$ (and hence in $\vb(\Hol_n)$). 
+We show that Gelfand-Kazhdan descent sends an exact sequence in $\VB_{\hc}$ to an exact sequence in $\vb(\GK_n)$ (and hence in $\vb(\Hol_n)$). 
 It will then remain to verify that for each tensor bundle on $\Hol_n$, 
 there is an exact sequence over the formal $n$-disk that descends to the Atiyah sequence for that tensor bundle.
 
@@ -1265,7 +1265,7 @@ Indeed, it turns out that $\TVectd$ is also part of a Harish-Chandra pair.
 To make this possible, we need to slightly enlarge our category of pairs to include the data of an $L_\infty$ algebra, instead of an ordinary Lie algebra. 
 
 \begin{rmk}
-Note that $\hOmega^{k}_{n,cl}$ does not fit our definition of a formal vector bundle, but it does admit a resolution by such. 
+Note that $\hOmega^{k}_{n,cl}$ does not fit our definition of a formal vector bundle, but it does admit a resolution by such objects. 
 Indeed, there is a $(\Vect, \GL_n)$-equivariant resolution of the form
 \ben
 \hOmega^{k}_{n,cl} \simeq \hOmega^{k}_n \xto{\d} \hOmega^{k+1}_n [-1] \xto{\d} \cdots \xto{\d} \hOmega^n_n [-n+k]
@@ -1396,7 +1396,7 @@ Here $D \rho^K_V : \Lie(K) \to \End(V)$ is the differential of the strict $K$-ac
 
 \subsubsection{Basic forms}
 
-Before the construction of descent, we recall a basic object in equivariant differential geometry.
+Before we give construction of semi-strict descent, we recall a basic object in equivariant differential geometry.
 
 Let $V$ be a finite-dimensional $K$-representation. 
 Denote by $\ul{V}$ the trivial vector bundle on $P$ with fiber $V$. 
@@ -1598,7 +1598,7 @@ Rearranging terms on the left-hand side we have
 The first term is zero since $\omega_\sigma$ is a flat connection one-form.
 The term $\d + [\omega_\sigma,-]$ is the differential in the complex (\ref{alpha de rham}).
 Thus, by assumption, the second term is equal to $j_\infty\ch_{d+1}(T_X^{1,0})$, the $\infty$-jet expansion of the Chern character viewed as an element in $\Omega^* (\Fr_X) \tensor \hOmega^{\geq d+1}_n [d-1]$.
-The only nontrivial contribution in the sum appearing in the last term is $k=d+1$, and this is precisely the defining cocycle for the extension $\TVect'$ applied to $\omega_\sigma$.
+The only nontrivial contribution in the sum appearing in the last term is $k=d+1$, and this is precisely the defining cocycle for the extension $\TVectd'$ applied to $\omega_\sigma$.
 Thus $\ell_{d+1} (\omega_\sigma,\ldots,\omega_\sigma)$ is equal to a multiple of $j_\infty \ch_{d+1}(T^{1,0}_X)$.
 So, up to rescaling $\alpha$, we see that the MC equation is satisfied. 
 
@@ -3643,12 +3643,12 @@ For any $\epsilon > 0$, the open set $N_{r,\epsilon}$ is a neighborhood of the c
 Note that when $d=1$, $N_{r,\epsilon}$ is simply an annulus centered at $w$. 
 
 Like in the case of a disk, it is convenient to get our hands on a class of simple observables supported on $N_{r,\epsilon}(w)$. 
-To describe these particular observables we introduce the dg algebra $A_d$ discussed in the Appendix of Chapter \ref{chap: symmetries}.
+To describe these particular observables we introduce the dg algebra $A_d$ discussed in Appendix \ref{chap: appendix}.
 This algebra is a dg model for the derived space of sections of algebraic functions on the punctured affine space $\AA^{d \times}$:
 \ben 
 A_d \simeq \RR \Gamma(\AA^{d \times}, \sO^{alg}) .
 \een
-We refer the reader to the Appendix for a more detailed discussion.
+We refer the reader to the appendix for a more detailed discussion.
 What we will use at the moment is the existence of a linear embedding of cochain complexes $A_d \hookrightarrow \Omega^{0,*}(\CC^d \setminus \{0\})$, which is dense at the level of cohomology.
 In particular, $A_d$ embedds inside the Dolbeault complex of any of the spherical shells $N_{\epsilon,r}$ we have just introduced.
 
@@ -4118,7 +4118,7 @@ By functoriality of the enveloping factorization algebra together with compatibi
 \ben
 \Phi : \sF_V = \UU\left( \Omega^*_{\RR_{>0},c} \tensor \sH_V \right) \to \rho_* \UU (\sH_V') = \rho_* \Obs^\q_V .
 \een
-That this map is dense in cohomology follows from Proposition \ref{prop: Ad} in the appendix.
+That this map is dense in cohomology follows from Proposition \ref{prop: Ad} in the Appendix \ref{chap: appendix}.
 \end{proof}
 
 

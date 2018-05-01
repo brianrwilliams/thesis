@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 APR 2018 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 APR 2018 11:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1132,13 +1132,13 @@ LaTeX Font Info:    Try loading font information for U+eus on input line 13.
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [5
 
-]
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 58.
+] [6]
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 60.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [6] [7])
+) [7])
 (./chap1.tex [8]
 Chapter 2.
 [9
@@ -1260,7 +1260,7 @@ Overfull \hbox (75.20071pt too wide) detected at line 2129
  []
 
 [46] [47] [48] [49] [50]
-Overfull \hbox (25.34227pt too wide) in paragraph at lines 2330--2332
+Overfull \hbox (25.34227pt too wide) in paragraph at lines 2332--2334
 [][]\OT1/ppl/b/n/10 Definition 2.4.3. []\OT1/ppl/m/n/10 An $\U/euf/m/n/10 h$\OT
 1/ppl/m/it/10 -equivariant BV quan-ti-za-tion \OT1/ppl/m/n/10 is a col-lec-tion
  of ef-fec-tive in-ter-ac-tions $\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 I[]\OT1/zp
@@ -1268,7 +1268,7 @@ lm/m/n/10 [\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]\OMS/zplm/m/n/10 g[] ^^Z
  []
 
 [51]
-Overfull \hbox (8.46442pt too wide) in paragraph at lines 2376--2377
+Overfull \hbox (8.46442pt too wide) in paragraph at lines 2378--2379
 [][]\OT1/ppl/b/n/10 Lemma 2.4.4 \OT1/ppl/m/n/10 (Chap-ter 12 [[]])\OT1/ppl/b/n/
 10 . []\OT1/ppl/m/it/10 The dif-fer-en-tial and bracket defin-ing the dg Lie al
 -ge-bra $\OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/10 (\U/eus/m/n/10 L[]\OT1/zplm/m/n/10
@@ -1771,9 +1771,17 @@ l-ge-bra on $[] \U/fplmbb/m/n/10 U\OT1/zplm/m/n/10 (\U/eus/m/n/10 A\OT1/ppl/m/n
 . 
  []
 
-[155] [156] <xymatrix 2x2 191> [157] [158] [159] [160] <xymatrix 2x2 154>
-<xymatrix 3x2 114> [161]
-Overfull \hbox (14.83519pt too wide) in paragraph at lines 1443--1446
+[155]
+Overfull \hbox (15.003pt too wide) in paragraph at lines 1185--1187
+[]\OT1/ppl/m/n/10 Let's first con-sider the un-twisted case where the state-men
+t re-duces to $[][] \U/fplmbb/m/n/10 U\OT1/zplm/m/n/10 (\U/eus/m/n/10 G[]\OT1/z
+plm/m/n/10 ) \OMS/zplm/m/n/10 ' [][]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 U\U/euf
+/m/n/10 g\OT1/zplm/m/n/10 )$\OT1/ppl/m/n/10 .
+ []
+
+[156] <xymatrix 2x2 191> [157] [158] [159] [160] <xymatrix 2x2 154> <xymatrix
+3x2 114> [161]
+Overfull \hbox (14.83519pt too wide) in paragraph at lines 1441--1444
 \OT1/ppl/m/n/10 where $\OML/zplm/m/it/10 ^^Y \OT1/zplm/m/n/10 : [][](\OML/zplm/
 m/it/10 X\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ^^B \OML/zplm/m/it/10 X \OMS/zplm/
 m/n/10 ! [][]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/zplm/m/n/10 )$ \OT1/ppl/
@@ -1784,7 +1792,7 @@ m/n/10 de-notes the pro-jec-tion. If $\OML/zplm/m/it/10 ^^R \OMS/zplm/m/n/10 2
  []
 
 [162] [163] [164]
-Overfull \hbox (10.28786pt too wide) in paragraph at lines 1635--1638
+Overfull \hbox (10.28786pt too wide) in paragraph at lines 1633--1636
 [][]\OT1/ppl/b/n/10 Lemma 4.4.7. []\OT1/ppl/m/it/10 The limit $\OT1/zplm/m/n/10
  ^^B[] := [][] ^^B[][\OML/zplm/m/it/10 L\OT1/zplm/m/n/10 ]$ \OT1/ppl/m/it/10 ex
 -ists and is an el-e-ment of de-gree one in $\OT1/ppl/m/n/10 C[]\OT1/zplm/m/n/1
@@ -1793,18 +1801,18 @@ Overfull \hbox (10.28786pt too wide) in paragraph at lines 1635--1638
  []
 
 [165]
-Overfull \hbox (47.98877pt too wide) detected at line 1748
+Overfull \hbox (47.98877pt too wide) detected at line 1746
 []
  []
 
 
-Overfull \hbox (61.21701pt too wide) detected at line 1764
+Overfull \hbox (61.21701pt too wide) detected at line 1762
 []
  []
 
 [166] [167] [168] [169] [170] [171] [172] [173] [174] [175] <xymatrix 3x2 148>
 [176] <xymatrix 2x2 154> [177] [178] [179] [180]
-Overfull \hbox (30.25554pt too wide) in paragraph at lines 2498--2500
+Overfull \hbox (30.25554pt too wide) in paragraph at lines 2496--2498
 []\OT1/ppl/m/n/10 Now, the $1$-cocycles $\OML/zplm/m/it/10 a[]\OT1/ppl/m/n/10 ,
  \OML/zplm/m/it/10 ^^\[]$ \OT1/ppl/m/n/10 can both be in-ter-preted as func-tio
 n-als on the Dol-beault com-plex $\OT1/zplm/m/n/10 
@@ -1843,10 +1851,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
- 26324 strings out of 492995
- 508204 string characters out of 6132704
- 631160 words of memory out of 5000000
- 28440 multiletter control sequences out of 15000+600000
+ 26326 strings out of 492995
+ 508228 string characters out of 6132704
+ 631193 words of memory out of 5000000
+ 28442 multiletter control sequences out of 15000+600000
  82646 words of font info for 261 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,86p,3242b,1112s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1870,10 +1878,10 @@ texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/palatino/uplri8a.pfb></usr/local/texlive/2017/texmf-dist/fo
 nts/type1/public/xypic/xycmat10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/public/xypic/xycmbt10.pfb>
-Output written on frame.pdf (194 pages, 1015868 bytes).
+Output written on frame.pdf (194 pages, 1017094 bytes).
 PDF statistics:
- 2511 PDF objects out of 2984 (max. 8388607)
- 2270 compressed objects within 23 object streams
+ 2513 PDF objects out of 2984 (max. 8388607)
+ 2272 compressed objects within 23 object streams
  824 named destinations out of 1000 (max. 500000)
  578 words of extra memory for PDF output out of 10000 (max. 10000000)
 

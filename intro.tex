@@ -1,18 +1,18 @@
 \chapter{Introduction}
 
 The topic of this thesis is a mathematically rigorous analysis of a class of quantum field theories that depend on the complex structure of a manifold in an analogous way that topological theories depend on the smooth structure. 
-Topological field theories (TFT) have gained much interest in the world of mathematics due to their elegant functorial descriptions, as well as their applications to geometry and topology. 
+Topological field theories have gained much interest in the world of mathematics due to their elegant functorial descriptions, as well as their applications to geometry and topology. 
 Holomorphic theories, as we will define them, often contain strictly more information than their topological counterparts.
 We will show how such theories also admit their own mathematical description using techniques of homological algebra and renormalization combined with the theory of factorization algebras. 
 
 This approach to perturbative quantum field theory is largely based on Costello's program developed in \cite{CostelloRenormalization} which provides a rigorous construction of the path integral where the quantum parameter $\hbar$ is treated formally. 
 The central mathematical players in this setup are the {\em observables} of a quantum field theory. 
-Physically speaking, the fields $\varphi$ are the objects describing a theory and the observables are the so-called measurements, or functions on the space of fields, $\varphi \mapsto \cO(\varphi)$ one can perform on a system.
+Physically speaking, the fields $\varphi$ are the objects describing a theory and the observables are the so-called measurements, or functions on the space of fields, $\varphi \mapsto \cO(\varphi)$, one can perform on a system.
 These measurements appear in quantum theory through their expectation values
 \ben
 \<\cO\> = \int_{\varphi \in {\rm Fields}} \sD \varphi \; e^{-S(\varphi)/ \hbar} \;  \cO(\varphi) ,
 \een
-where the integral is over the the fields $\varphi \in {\rm Fields}$, and $\sD \varphi \; e^{-S(\varphi)/ \hbar}$ is the a priori ill-defined path integral measure.
+where the integral is over the the fields $\varphi \in {\rm Fields}$, and $\sD \varphi \; e^{-S(\varphi)/ \hbar}$ is the {\em a priori} ill-defined path integral measure.
 The main objective of \cite{CostelloRenormalization} is to give a mathematical definition of this path integral measure largely inspired by a combination of the Wilsonian perspective of effective field theory together with Batalin-Vilkovisky approach to studying gauge theories.
 Building off of this foundation, the work of Costello-Gwilliam in \cite{CG1,CG2} sets up the mathematical theory of observables in quantum field theory using the language of {\em factorization algebras}. 
 
@@ -29,20 +29,22 @@ While the class of field theories we consider are very natural from a mathematic
 Often times, topological theories provide a useful simplification, or approximation, of supersymmetric field theories. 
 Perhaps the most well-known example of this are the $A$ and $B$-models of topological string theory.
 These are topological theories that appear as ``twists" of the two-dimensional $(2,2)$-supersymmetric $\sigma$-model and have shown to be an extremely useful window into supersymmetric string theory. 
-One issue with this is that for low numbers of supersymmetry topological twists may not exist (for example, four-dimensional $\cN=1$).
-On the other hand, {\em holomorphic twists} always exist. 
+One issue with this is that for low numbers of supersymmetry, topological twists may not exist (for example, four-dimensional $\cN=1$).
+On the other hand, {\em holomorphic twists} almost always exist. 
 In this thesis, we make the argument that holomorphic theories in the BV formalism can provide insight into various supersymmetric theories while at the same time admit salient mathematical structures that are readily studied by well-known techniques in homological algebra.
 
 The primary holomorphic theory we focus on in this thesis is the {\em holomorphic $\sigma$-model}. 
 The classical theory pertains to the moduli space of holomorphic maps between complex manifolds $Y \to X$. 
-In complex dimension one this theory has appeared as the holomorphic twist of the $(0,2)$-supersymmetric $\sigma$-model by Witten \cite{WittenCDO} and was rigorously shown to recover the Witten genus by Costello in \cite{WG2}. 
+In complex dimension one, this theory has appeared as the holomorphic twist of the $(0,2)$-supersymmetric $\sigma$-model by Witten \cite{WittenCDO} and was rigorously shown to recover the Witten genus by Costello in \cite{WG2}. 
 In higher dimensions, we find a more sensitive invariant controlling the quantization of the model, generalizing the geometric condition for a manifold to be {\rm String}.
+This $\sigma$-model appears naturally in many physical theories, most notably as reductions of (twists of) higher dimensional supersymmetric and supergravity theories.
+This is one of the primary motivations we have for considering this class of theories.  
 %In this theory, we give an example of a program for studying the local operators in holomorphic theories that is an higher dimensional analog of how vertex 
 
 A tried and true method for understanding field theory is by characterizing its symmetries. 
-In conformal field theory there are two important classes of symmetries: gauge symmetries and conformal symmetries. 
-It is a special fact about CFT that each of these classes admit enhancements to symmetries by infinite dimensional Lie algebras that have very interesting representation theoretic properties. 
-There is a natural generalization of this in higher dimensions that we will arrive at using the theory of factorization algebras. 
+In conformal field theory there are two important classes of symmetries: gauge symmetries and chiral conformal symmetries. 
+It is a special fact in two dimensional conformal field theory that each of these classes admit enhancements to symmetries by infinite dimensional Lie algebras that have very interesting representation theoretic properties. 
+We find a natural generalization of these ``current algebras" in higher dimensional holomorphic theories that we will arrive at using factorization algebras. 
 %We look at a generic class of symmetries present in holomorphic field theories, which are, in particular, present in the holomorphic $\sigma$-model.
 
 %Often, physicists apply various index theorems to argue certain anomaly cancellation results. 
@@ -55,15 +57,15 @@ Here is a summary of the main results of this thesis.
 \begin{enumerate}
 \item The renormalization group flow of holomorphic theories in any dimension is finite at one-loop.
 We show that there exists a regularization scheme based on heat kernels that provides a one-loop renormalization that requires no counterterms. 
-Further, for holomorphic theories on $\CC^d$ we exhibit a general formula for the obstruction to satisfying the quantum master equation as a sum over wheels of valence $(d+1)$. 
+Further, for holomorphic theories on $\CC^d$, we exhibit a general formula for the obstruction to satisfying the quantum master equation as a sum over wheels of valence $(d+1)$. 
 
-\item For any complex manifold $X$ we prove that the space of quantizations of the holomorphic $\sigma$-model of maps $\CC^d \to X$ is nonempty if and only if $\ch_{d+1}(T^{1,0}X) = 0$. 
-In the case the component of the Chern character does vanish we construct an effective BV theory using Gelfand-Kazhdan formal geometry.
+\item For any complex manifold $X$, we prove that the space of quantizations of the holomorphic $\sigma$-model of maps $\CC^d \to X$ is nonempty if and only if $\ch_{d+1}(T^{1,0}X) = 0$. 
+In the case the component of the Chern character does vanish, we construct an effective BV theory using Gelfand-Kazhdan formal geometry.
 We proceed to provide a complete description of the local operators of the theory using factorization algebras.
 
 \item We classify local extensions of the holomorphic current algebra associated to a Lie algebra $\fg$ and the Lie algebra of holomorphic vector fields on any complex manifold.
-In the case of the current algebra, we extract from the enveloping factorization algebra a dg Lie algebra extending the sphere algebra of $\fg$.
-In the one-dimensional case this recovers the usual affine algebra.
+For the current algebra, we extract from the enveloping factorization algebra a dg Lie algebra extending the sphere algebra of $\fg$.
+In complex dimension one this recovers the usual affine algebra.
 Further, using techniques developed in item (1) we prove a version of the Grothendieck-Riemann-Roch theorem over the formal moduli space of $G$-bundles using techniques of Feynman diagrams and BV quantization.
 The associated factorization algebras provide higher dimensional generalizations of the Kac-Moody and Virasoro vertex algebras in two-dimensional CFT. 
 
@@ -75,8 +77,8 @@ The remainder of this thesis is divided up into three interrelated chapters.
 
 We begin in Chapter \ref{chap: holtheory} with a recollection of the classical and quantum Batalin-Vilkovisky (BV) formalism, while also setting up the requisite homological algebra and analysis that we will use throughout the remainder of the thesis. 
 We give a definition of a holomorphic field theory on a general complex manifold. 
-On the complex manifold $\CC^d$ we discuss a stronger notion of a holomorphic theory where one also requires compatibility with translations. 
-With the terminology set up, we then prove our main result of this chapter that holomorphic theories on $\CC^d$ 
+On the complex manifold $\CC^d$, we discuss a stronger notion of a holomorphic theory where one also requires compatibility with translations. 
+With the terminology set up, we then prove our main result of this chapter: holomorphic theories on $\CC^d$ 
 are one-loop finite.
 In addition, we provide a characterization of anomalies for holomorphic theories. 
 We end with a recollection of the equivariant BV formalism. 
@@ -88,7 +90,7 @@ We then prove the main result of the chapter which constructs a BV quantization 
 We provide a complete description of the local operators of the theory using factorization algebras, while making comparisons to the use of vertex algebras to describe one-dimensional holomorphic theories. 
 
 In Chapter \ref{chap: symmetries} we study the local symmetries present in holomorphic field theories, with special emphasis on the holomorphic $\sigma$-model.
-We start with holomorphic gauge symmetries, and with the language factorization algebras we are led to a higher dimensional version of the Kac-Moody vertex algebra.
+We start with holomorphic gauge symmetries, and with the language factorization algebras, we are led to a higher dimensional version of the Kac-Moody vertex algebra.
 We prove a version of the Grothendieck-Riemann-Roch theorem over the moduli space of holomorphic $G$-bundles using heat kernel methods and Feynman diagrams. 
 Finally, we consider symmetries given by holomorphic diffeomorphisms and classify local central extensions of the Lie algebra of holomorphic vector fields. 
 These central extensions characterize higher dimensional analogs of the "central charge" in conformal field theory, and we relate our construction to versions in the physics literature. 

@@ -73,94 +73,71 @@ In field theory, one works on a smooth manifold $X$ (the spacetime).
 \een
 Given a classical BV theory we study lifts of the $P_0$ factorization algebra of classical observables to the $BV$ factorization algebra of quantum observables.
 
-In the one-dimensional case $X = \RR$ there exists a classical BV theory associated to a symplectic manifold $(M, \omega)$. 
+In the one-dimensional case $X = \RR$ there is a classical BV theory associated to a symplectic manifold $(M, \omega)$. 
 In this case, BV quantization recovers ordinary deformation quantization. 
 \end{frame}
 
-\begin{frame}
-\frametitle{The BV formalism (cont.)}
-In QFT, BV algebras provide a mathematical model for the path integral.
-\begin{dfn}
-A {\em BV algebra} is a triple $(A, Q, \Delta)$ where $(A, Q)$ is a commutative dg algebra, and $\Delta : A \to A$ is a degee one linear map such that
-\begin{enumerate}[(a)] 
-\item $\Delta^2 = [\Delta, Q] = 0$;
-\item the degree one bilinear map
-\ben
-\{a,b\} := \Delta(ab) - \Delta(a) b \pm a \Delta(b)
-\een
-satisfies graded Jacobi, and is a graded biderivation with respect to the commutative product. 
-\end{enumerate}
-\end{dfn}
-Thus $\{-,-\}$ behaves like a Poisson bracket, except with a weird shift. 
-We say an element $I = I_0 + \hbar I_1 + \cdots \in A[[\hbar]]$ satisfies the {\em quantum master equation} (QME) if
-\ben
-\boxed{(Q+ \hbar \Delta) e^{I/\hbar} = 0 .}
-\een
-We call $\hbar$ the {\em perturbation} parameter. 
-\end{frame}
+%\begin{frame}
+%\frametitle{The BV formalism (cont.)}
+%In QFT, BV algebras provide a mathematical model for the path integral.
+%{\bf Ingredients:} A classical theory on smooth manifold $M$ (the spacetime) plus the data:
+%\begin{itemize}
+%\item a $\ZZ$-graded vector bundle $E$ on $M$ with smooth section $\sE$ (the fields);
+%\item a differential operator $Q : \sE \to \sE$ of cohomological degree one, $Q^2 = 0$ (the linear BRST operator);
+%\item a graded antisymmetric bundle map $(-,-)_E : E \tensor E \to {\rm Dens}_X$ of degree $(-1)$ that is fiberwise nondegenerate.
+%The pairing $(-,-)_E$ defines a $(-1)$-shifted symplectic structure via integration $$\omega = \int_X \circ (-,-)_E .$$
+%\item $I \in \oloc(\sE)$ satisfying the classical master equation.
+%\end{itemize}
+%
+%\end{frame}
 
 \begin{frame}
-\frametitle{The BV formalism (cont.)}
-When we set $\hbar = 0$, the QME reduces to condition
+\frametitle{Classical field theory}
+Start with a manifold $X$ (the spacetime). 
+A {\em classical theory} on $X$ is the data of a sheaf of dg Lie (really $L_\infty$) algebras $\sE$ equipped with a pairing $\omega \in \Wedge^2 \sE^*$ satisfying:
+\begin{enumerate}
+\item Locality. The structure maps are given by polydifferential operators (in particular $\sE$ comes as the smooth sections of a graded vector bundle on $X$);
+\item Ellipticity.
+$(\sE, \ell_1 = Q)$ is an elliptic complex ($Q = \d_{dR}, \Delta, \dbar,\ldots$);
+\item $\omega$ equips $B \sE = \sE[1]$ with a $(-1)$-shifted symplectic structure.
+\end{enumerate}
+(1), (3) are equivalent to prescribing $I_0 \in \sO^{\geq 3} (B \sE) = \Sym^{\geq 3} (\sE^*[-1])$ satisfying the MC equation
 \ben
 \boxed{Q I_0 + \frac{1}{2} \{I_0,I_0\} = 0}.
 \een
-We call this the classical master equation (CME).
-\begin{eg}
-Suppose $A = \sO(V) = \Sym(V^*)$ for some graded vector space $V$. 
-Then a functional $I_0$ satisfying the CME is equivalent to an data of an $L_\infty$ structure on the graded vector space $V[-1]$. 
-\end{eg}
-Most important example of BV algebras in QFT come from $(-1)$-shifted geometry.
-Suppose $(V,\omega)$ is a $(-1)$-shifted symplectic vector space. 
-Then, the symmetric tensor $K_0 := \omega^{-1} \in \Sym^2(V)$ defines an operator (of order two)
-\ben
-\Delta_0 = \partial_{K_0} : \sO(V) \to \sO(V)
-\een
-by contraction. 
-This operator defines a BV algebra $(\sO(V), Q, \Delta_0)$, where $Q$ is the internal differential of $V$. 
-
-\end{frame}
-
-\begin{frame}
-\frametitle{The BV formalism (cont.)}
-Suppose that $P \in \Sym^2(V)$ is a symmetric tensor of degree zero, and define $K_P = K_0 + Q P$. 
-One checks that $K_P$ defines another BV algebra based on $\sO(V)$.
-
-Given $I \in \sO^+(V)$ (at least cubic), define $W(P, I) \in \sO(V)[[\hbar]]$ formally by 
-\ben
-\boxed{e^{W(P,I) / \hbar} = e^{\hbar \partial_P} e^{I/\hbar}}.
-\een
-\begin{lem}
-The functional $I$ satisfies the QME relative to $K_0$ if and only if $W(P,I)$ satisfies the QME relative to $K_P$.
-\end{lem}
-
-The functional $W(P, I)$ decomposes as a sum over connected graphs
-\ben
-W(P,I) = \sum_{\Gamma} \frac{\hbar^{g(\Gamma)}}{|{\rm Aut}(\Gamma)|} W_\Gamma(P,I),
-\een
-where $W_\Gamma$ is the {\em weight} of the graph $\Gamma$. 
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Field theory}
-A classical field theory on a smooth manifold $M$ is:
-\begin{enumerate}[(i)]
-\item a graded vector bundle $E$ whose sections we denote $\sE$;
-\item a differential operator $Q : \sE \to \sE$ of degree one;
-\item a graded antisymmetric bundle map $(-,-)_E : E \tensor E \to {\rm Dens}_X$ of degree $(-1)$ that is fiberwise nondegenerate.
-\item a {\em local functional} $I_0 \in \oloc(\sE)$ satisfying the CME.
-\end{enumerate}
-We require that $(\sE, Q)$ is an elliptic complex.
-The pairing $(-,-)_E$ defines a $(-1)$-shifted symplectic structure via integration $$\omega = \int_X \circ (-,-)_E .$$
-The sheaf of sections $\sE$ evaluated on an open set $U$ returns the graded space $\sE(U)$ which we refer to as the space of fields supported on $U$.
-The {\em classical observables} supported on $U$:
+The {\em classical observables} supported on $U \subset X$:
 \ben
 \Obs^{\cl}(U) = \left(\Sym(\sE(U)^\vee), Q + \{I_0,-\}\right) .
 \een
 \end{frame}
 
-
+\begin{frame}
+\frametitle{The quantum BV formalism}
+Want to find $I \in \sO(\sE) [[\hbar]]$, $I_0 = I \mod \hbar$ satisfying the {\em quantum master equation}
+\ben
+(Q + \hbar \Delta) e^{I / \hbar} = 0 ,
+\een
+where $\Delta = \partial_{K_0} \in \End(\sO(\sE))$, $K_0 = \omega^{-1}$.
+\begin{itemize}
+\item {\bf Problem: } The tensor $\omega^{-1}$ is {\em distributional}, thus $\Delta_0$ is not well-defined on functionals. 
+{\bf Solution: } Find a homotopy replacement $K_L = K_0 + Q P_{0 < L}$ that so that $\Delta_L = \partial_{K_L}$ {\em is} well-defined on functionals. 
+\end{itemize}
+A {\em quantization} is a family of functionals $\{I[L]\}_{L > 0} \subset \sO(\sE)[[\hbar]]$ such that:
+\begin{enumerate}
+\item the collection of functionals are related by {\em renormalization group flow}
+\ben
+\boxed{I[L'] = W(P_{L < L'} , I[L])} ;
+\een
+\item for each $L$, the functional solves the {\em scale L} QME
+\ben
+\boxed{(Q + \hbar \Delta_L) e^{I[L] / \hbar} = 0} ;
+\een
+\item some technical locality conditions. 
+\end{enumerate}
+For abstract reasons, proved by Costello, one can always solve (1), (3). 
+Subtle analysis in (1), involves counterterms.
+\end{frame}
+ 
 \begin{frame}
 \frametitle{Holomorphic field theory}
 In the world of complex geometry we have the following definition of a {\em holomorphic} field theory on a complex manifold $X$:
@@ -189,67 +166,22 @@ Holomorphic Lagrangian $\sI^{hol}_0$ & Local functional $I^{\Omega^{0,*}}_0 \in 
 \end{frame}
 
 \begin{frame}
-\frametitle{Regularization}
-
-Let $(\sE, Q, \omega, I_0)$ be a classical BV theory.
-The first thing to do is define the BV operator $\Delta_0 = \omega^{-1}$. 
-\begin{itemize}
-\item {\bf Problem: } The tensor $\omega^{-1}$ is {\em distributional}, thus $\Delta_0$ is not well-defined on functionals. 
-\end{itemize}
-The solution is to find a homotopy replacement for $K_0$
-\ben
-\Tilde{K} = K_0 + Q P,
-\een
-so that its BV operator is well-defined. 
-(By elliptic regularity, one always exists). 
-Such a regularization is parametrized by a length scale $L > 0$.
-
-For each $L < L'$ a regularization scheme prescribes a {\em propagator} $P_{L < L'}$ such that
-\ben
-K_{L'} = K_L + Q P_{L < L'}
-\een
-where $K_{L},K_{L'}$ are both smooth and $\lim_{L \to 0} K_L = K_0$.
-
-\end{frame}
-
-\begin{frame}
-\frametitle{The definition of a QFT}
-By definition, a quantization is a family of functionals $\{I[L]\}$ with $I_0 = \lim_{L \to 0} I[L] \mod \hbar$ satisfying the following two conditions:
-\begin{enumerate}
-\item the collection of functionals $\{I[L]\}$ are related by {\em renormalization group flow}
-\ben
-I[L'] = W(P_{L < L'} , I[L]) ;
-\een
-\item for each $L$, the functional solves the {\em scale L} quantum master equation
-\ben
-(Q + \hbar \Delta_L) e^{I[L] / \hbar} = 0 ;
-\een
-\item some technical locality conditions. 
-\end{enumerate}
-
-For abstract reasons, proved by Costello, one can always find a family such that (1) is satisfied.
-In general, the answer is not constructive and involves choosing counterterms with respect to a renormalization scheme. 
-There may be unavoidable obstructions to solving problem (2). 
-
-\end{frame}
-
-\begin{frame}
 \frametitle{Holomorphic renormalization}
 
 The na\"{i}ve definition of $I[L]$ is to apply the operator $P_{0<L}$ to the classical interaction
 \ben
-I[L] = W(P_{0<L} , I_0)
+I[L] = W(P_{0<L} , I_0) .
 \een
 The problem is that the right-hand side is rarely well-defined (same issue as above).
 A solution to this, which always exists, is to find counterterms. 
 
-\begin{thm}
-There is a regularization scheme for {\bf holomorphic theories} on $\CC^d$ such that the limit
+\begin{thm} [W.]
+There is a regularization for {\bf holomorphic theories} on $\CC^d$ such that the limit
 \ben
 I[L] = \lim_{\epsilon \to 0} W(P_{\epsilon<L} , I_0) \mod \hbar^2 
 \een
 exists. 
-In other words, holomorphic theories on $\CC^d$ are one-loop finite.
+In other words, holomorphic theories on $\CC^d$ are one-loop {\em finite}.
 \end{thm}
 The main ingredient is in the existence of the {\em gauge fixing operator} $\dbar^*$. 
 \begin{itemize}
@@ -263,7 +195,7 @@ This is essentially an algebraic problem.
 
 A corollary of this result is a characterization of the {\em anomaly}, or obstruction, for a holomorphic theory to solve the QME. 
 
-\begin{cor}
+\begin{cor}[W.]
 The obstruction for a classical holomorphic theory on $\CC^d$ to admit a one-loop quantization is given by the following expression:
 \ben
 \Theta = \lim_{\epsilon,L \to 0} \sum_{\Gamma \in {\rm Wheel}_{d+1}} W_{\Gamma}(P_{\epsilon < L}, K_\epsilon, I_0) .
@@ -394,7 +326,7 @@ Get global target $\sigma$-model via descent.
 Quantization: holomorphic theory $\implies$ renormalization is simple. 
 Obstruction is controlled by an element in Gelfand-Fuks cohomology.
 
-\begin{thm}
+\begin{thm}[W.]
 There is an obstruction to quantizing the formal holomorphic $\sigma$-model of maps $\CC^d \to \hD^n$ given by the class
 \ben
 \ch_{d+1}^{\GF} (\hT_n) \in \clie^{d+1}(\W_n , \GL_n; \hOmega^{d+1}_{n,cl}) .
@@ -404,7 +336,7 @@ There is an obstruction to quantizing the formal holomorphic $\sigma$-model of m
 Under characteristic map, this returns the ordinary Chern class. 
 Determines an {\em $L_\infty$-extension}
 \ben
-0 \to \hOmega^{d+1}_{n,cl} \to \TVectd \to \W_n \to 0 .
+0 \to \hOmega^{d+1}_{n,cl} [d-1] \to \TVectd \to \W_n \to 0 .
 \een
 \end{frame}
 
@@ -426,22 +358,25 @@ Descent functor
 Theorem implies quantization is equivariant for $(\TVectd, \GL_n)$. 
 This says that for any trivialization $\alpha$ we obtain a global quantization. 
 
-\end{frame}
+\end{frame} 
 
 \begin{frame}
 \frametitle{Main result}
 Explicit GF calculation shows there is a unique $(\TVectd, \GL_n)$-quantization for the formal theory.
 Extended descent implies the following main result.
 
-\begin{thm} Suppose $\ch_{d+1}(T_X) = 0$.
+\begin{thm}[W.] Suppose $\ch_{d+1}(T_X) = 0$.
 Then, the space of quantizations (respecting certain natural symmetries) of the holomorphic $\sigma$-model of maps $\CC^d \to X$ is a torsor for the abelian group $H^{d}(X , \Omega^{d+1,hol}_X)$. 
 \end{thm}
 
 \begin{itemize}
+\item Get sheaf on $X$ of factorization algebras on $\CC^{d}$. 
+``Higher dimensional chiral differential operators". 
+Gwilliam-Gorbounov-W. in $\dim_\CC = 1$. 
 \item Quantizations exist on other source manifolds: affine manifolds, abelian varieties, Hopf manifolds $Y = \CC^d \setminus \{0\} / q^\ZZ \cong S^{2d-1} \times S^1$. 
 \item Local calculation of the index produces elliptic $\Gamma$-functions.
 This agrees with the partition function for supersymmetric theories in dimensions $2,4,6$. 
-For a general target, this should produced refined invariants generalizing the Witten genus in complex dimension one.
+For a general target, this produces refined invariants generalizing the Witten genus in complex dimension one.
 \end{itemize}
 \end{frame}
 
@@ -471,15 +406,12 @@ A_d \hookrightarrow \Omega^{0,*}(\CC^d \setminus \{0\})
 \een
 which is dense in cohomology. 
 When $d=1$, $A_1 = \CC[z,z^{-1}]$ and we get algebraic loop space.
-
 \end{frame}
 
 \begin{frame}[fragile]
 
 \frametitle{Observables}
-
-BV quantization produces a (sheaf of) factorization algebras on $\CC^{d}$. 
-In the one-dimensional reduction, restricts to a factorization algebra on $\RR_{>0} \rightsquigarrow$ dg associative algebra.
+One-dimensional reduction, restricts to a factorization algebra on $\RR_{>0} \rightsquigarrow$ dg associative algebra.
 When $\ch_{d+1}(T_X) = 0$ we get a deformation quantization = "differential operators on the sphere mapping space". 
 \ben
 \begin{tikzcd}
@@ -497,15 +429,34 @@ Where $D_{\hbar,+} \subset D_\hbar$ is a maximal commutative subalgebra of ''pos
 This plays the role of the Hilbert space in quantum mechanics.
 \end{frame}
 
+\begin{frame}[fragile]
+\frametitle{Factorization homology}
+On a Hopf manifold $Y \cong S^{2d-1} \times S^1$, this algebra appears in the factorization homology. 
+\ben
+\begin{tikzcd}
+\CC^d \setminus \{0\} \arrow[r] \arrow[d] & X \arrow[d] \\
+\RR_{>0} \arrow[r] & S^1 .
+\end{tikzcd}
+\een
+\ben
+\int_{X} {\rm Obs}^\q_{X, \alpha} \simeq {\rm Hoch}_*(D_\hbar) \simeq \Omega^{-*}(T^*X)[[\hbar]] .
+\een
+The zero modes inside $D_\hbar$ give ordinary differential operators on $X$, and the Hochschild homology ``localizes" to this subalgebra. 
+Reminiscent of Nest-Tsygan's result in deformation quantization. 
+\end{frame}
+
+
 \begin{frame}
 \frametitle{Conclusions and outlook}
 
 \begin{itemize}
 \item Have not discussed much about "source symmetries" of the holomorphic $\sigma$-model.
-Big part of my thesis was to characterize symmetries by holomorphic gauge transformations and by holomorphic diffeomorphisms. 
+Part of my thesis characterizes symmetries by holomorphic gauge transformations and by holomorphic diffeomorphisms. 
 Lead to higher dimensional Kac-Moody algebras and Virasoro algebras, respectively. 
-\item In particular, there is a dg Lie algebra central extension of holomorphic vector fields on punctured affine space that embeds inside of $D_{\hbar}$. 
+\item In particular, there is a dg Lie algebra central extension of holomorphic vector fields on punctured affine space that embeds inside of the associative dg algebra $D_{\hbar}$. 
 This central extension is parametrized by a higher dimensional version of ''central charge" in CFT. 
+\item Gives a sensitive invariant to test dualities in physics (Seiberg duality, mirror symmetry, $\ldots$). 
+\item "Gelfand-Kazhdan descent" on the source manifold. 
 \end{itemize}
 \end{frame}
 
