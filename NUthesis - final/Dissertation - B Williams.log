@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 APR 2018 10:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 MAY 2018 14:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**nuthesis-template.tex
-(./nuthesis-template.tex
+**"Dissertation - B Williams.tex"
+(./Dissertation - B Williams.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (./nuthesis.cls
@@ -293,42 +293,6 @@ Package: euscript 2009/06/22 v3.00 Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 (Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
-\Gread@gobject=\count115
-))
-\Gin@req@height=\dimen123
-\Gin@req@width=\dimen124
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count116
-\Gm@cntv=\count117
-\c@Gm@tempcnt=\count118
-\Gm@bindingoffset=\dimen125
-\Gm@wd@mp=\dimen126
-\Gm@odd@mp=\dimen127
-\Gm@even@mp=\dimen128
-\Gm@layoutwidth=\dimen129
-\Gm@layoutheight=\dimen130
-\Gm@layouthoffset=\dimen131
-\Gm@layoutvoffset=\dimen132
-\Gm@dimlist=\toks30
-)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xypic/xy.sty
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
 catcodes, docmode,
@@ -340,51 +304,51 @@ catcodes, docmode,
  Xy-pic is free software: see the User's Guide for details.
 
 Loading kernel: messages; fonts; allocations: state,
-\X@c=\dimen133
-\Y@c=\dimen134
-\U@c=\dimen135
-\D@c=\dimen136
-\L@c=\dimen137
-\R@c=\dimen138
-\Edge@c=\toks31
-\X@p=\dimen139
-\Y@p=\dimen140
-\U@p=\dimen141
-\D@p=\dimen142
-\L@p=\dimen143
-\R@p=\dimen144
-\Edge@p=\toks32
-\X@origin=\dimen145
-\Y@origin=\dimen146
-\X@xbase=\dimen147
-\Y@xbase=\dimen148
-\X@ybase=\dimen149
-\Y@ybase=\dimen150
-\X@min=\dimen151
-\Y@min=\dimen152
-\X@max=\dimen153
-\Y@max=\dimen154
+\X@c=\dimen123
+\Y@c=\dimen124
+\U@c=\dimen125
+\D@c=\dimen126
+\L@c=\dimen127
+\R@c=\dimen128
+\Edge@c=\toks30
+\X@p=\dimen129
+\Y@p=\dimen130
+\U@p=\dimen131
+\D@p=\dimen132
+\L@p=\dimen133
+\R@p=\dimen134
+\Edge@p=\toks31
+\X@origin=\dimen135
+\Y@origin=\dimen136
+\X@xbase=\dimen137
+\Y@xbase=\dimen138
+\X@ybase=\dimen139
+\Y@ybase=\dimen140
+\X@min=\dimen141
+\Y@min=\dimen142
+\X@max=\dimen143
+\Y@max=\dimen144
 \lastobjectbox@=\box29
 \zerodotbox@=\box30
-\almostz@=\dimen155
+\almostz@=\dimen145
  direction,
-\d@X=\dimen156
-\d@Y=\dimen157
-\K@=\count119
-\KK@=\count120
-\Direction=\count121
-\K@dXdY=\dimen158
-\K@dYdX=\dimen159
+\d@X=\dimen146
+\d@Y=\dimen147
+\K@=\count115
+\KK@=\count116
+\Direction=\count117
+\K@dXdY=\dimen148
+\K@dYdX=\dimen149
 \xyread@=\read2
 \xywrite@=\write3
-\csp@=\count122
-\quotPTK@=\dimen160
+\csp@=\count118
+\quotPTK@=\dimen150
 
 utility macros; pictures: \xy, positions,
-\swaptoks@@=\toks33
+\swaptoks@@=\toks32
 \connectobjectbox@@=\box31
  objects,
-\styletoks@=\toks34
+\styletoks@=\toks33
  decorations;
 kernel objects: directionals, circles, text; options; algorithms: directions,
 edges, connections;  Xy-pic loaded)
@@ -398,21 +362,21 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: All features v.3.8
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xypic/xycurve.tex
  Xy-pic option: Curve and Spline extension v.3.12 curve,
-\crv@cnt@=\count123
-\crvpts@=\toks35
+\crv@cnt@=\count119
+\crvpts@=\toks34
 \splinebox@=\box32
-\splineval@=\dimen161
-\splinedepth@=\dimen162
-\splinetol@=\dimen163
-\splinelength@=\dimen164
+\splineval@=\dimen151
+\splinedepth@=\dimen152
+\splinetol@=\dimen153
+\splinelength@=\dimen154
  circles,
-\L@=\dimen165
+\L@=\dimen155
  loaded)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xypic/xyframe.tex
  Xy-pic option: Frame and Bracket extension v.3.14 loaded)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xypic/xyline.tex
  Xy-pic option: Line styles extension v.3.10
-\xylinethick@=\dimen166
+\xylinethick@=\dimen156
  loaded)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xypic/xyrotate.tex
  Xy-pic option: Rotate and Scale extension v.3.8 loaded)
@@ -420,13 +384,13 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
  Xy-pic option: Colour extension v.3.11 loaded)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xypic/xymatrix.tex
  Xy-pic option: Matrix feature v.3.14
-\Row=\count124
-\Col=\count125
-\queue@=\toks36
-\queue@@=\toks37
-\qcount@=\count126
-\qcount@@=\count127
-\matrixsize@=\count128
+\Row=\count120
+\Col=\count121
+\queue@=\toks35
+\queue@@=\toks36
+\qcount@=\count122
+\qcount@@=\count123
+\matrixsize@=\count124
  loaded)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
@@ -449,9 +413,9 @@ loaded))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks38
-\pgfutil@tempdima=\dimen167
-\pgfutil@tempdimb=\dimen168
+\pgfutil@everybye=\toks37
+\pgfutil@tempdima=\dimen157
+\pgfutil@tempdimb=\dimen158
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
@@ -465,34 +429,55 @@ Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+\Gread@gobject=\count125
+))
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks39
-\pgfkeys@temptoks=\toks40
+\pgfkeys@pathtoks=\toks38
+\pgfkeys@temptoks=\toks39
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
-\pgfkeys@tmptoks=\toks41
+\pgfkeys@tmptoks=\toks40
 ))
-\pgf@x=\dimen169
-\pgf@y=\dimen170
-\pgf@xa=\dimen171
-\pgf@ya=\dimen172
-\pgf@xb=\dimen173
-\pgf@yb=\dimen174
-\pgf@xc=\dimen175
-\pgf@yc=\dimen176
+\pgf@x=\dimen161
+\pgf@y=\dimen162
+\pgf@xa=\dimen163
+\pgf@ya=\dimen164
+\pgf@xb=\dimen165
+\pgf@yb=\dimen166
+\pgf@xc=\dimen167
+\pgf@yc=\dimen168
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count129
-\c@pgf@countb=\count130
-\c@pgf@countc=\count131
-\c@pgf@countd=\count132
-\t@pgf@toka=\toks42
-\t@pgf@tokb=\toks43
-\t@pgf@tokc=\toks44
+\c@pgf@counta=\count126
+\c@pgf@countb=\count127
+\c@pgf@countc=\count128
+\c@pgf@countd=\count129
+\t@pgf@toka=\toks41
+\t@pgf@tokb=\toks42
+\t@pgf@tokc=\toks43
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -510,8 +495,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count133
-\pgfsyssoftpath@bigbuffer@items=\count134
+\pgfsyssoftpath@smallbuffer@items=\count130
+\pgfsyssoftpath@bigbuffer@items=\count131
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -539,12 +524,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen177
-\pgfmath@count=\count135
+\pgfmath@dimen=\dimen169
+\pgfmath@count=\count132
 \pgfmath@box=\box34
-\pgfmath@toks=\toks45
-\pgfmath@stack@operand=\toks46
-\pgfmath@stack@operation=\toks47
+\pgfmath@toks=\toks44
+\pgfmath@stack@operand=\toks45
+\pgfmath@stack@operation=\toks46
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -565,37 +550,37 @@ code.tex)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count136
+\c@pgfmathroundto@lastzeros=\count133
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen178
-\pgf@picmaxx=\dimen179
-\pgf@picminy=\dimen180
-\pgf@picmaxy=\dimen181
-\pgf@pathminx=\dimen182
-\pgf@pathmaxx=\dimen183
-\pgf@pathminy=\dimen184
-\pgf@pathmaxy=\dimen185
-\pgf@xx=\dimen186
-\pgf@xy=\dimen187
-\pgf@yx=\dimen188
-\pgf@yy=\dimen189
-\pgf@zx=\dimen190
-\pgf@zy=\dimen191
+\pgf@picminx=\dimen170
+\pgf@picmaxx=\dimen171
+\pgf@picminy=\dimen172
+\pgf@picmaxy=\dimen173
+\pgf@pathminx=\dimen174
+\pgf@pathmaxx=\dimen175
+\pgf@pathminy=\dimen176
+\pgf@pathmaxy=\dimen177
+\pgf@xx=\dimen178
+\pgf@xy=\dimen179
+\pgf@yx=\dimen180
+\pgf@yy=\dimen181
+\pgf@zx=\dimen182
+\pgf@zy=\dimen183
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen192
-\pgf@path@lasty=\dimen193
+\pgf@path@lastx=\dimen184
+\pgf@path@lasty=\dimen185
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen194
-\pgf@shorten@start@additional=\dimen195
+\pgf@shorten@end@additional=\dimen186
+\pgf@shorten@start@additional=\dimen187
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
@@ -603,19 +588,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box35
 \pgf@hbox=\box36
 \pgf@layerbox@main=\box37
-\pgf@picture@serial@count=\count137
+\pgf@picture@serial@count=\count134
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen196
+\pgflinewidth=\dimen188
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen197
-\pgf@pt@y=\dimen198
-\pgf@pt@temp=\dimen256
+\pgf@pt@x=\dimen189
+\pgf@pt@y=\dimen190
+\pgf@pt@temp=\dimen191
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -632,13 +617,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen257
+\pgfarrowsep=\dimen192
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen258
-\pgf@sys@shading@range@num=\count138
+\pgf@max=\dimen193
+\pgf@sys@shading@range@num=\count135
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -673,8 +658,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen259
-\pgf@nodesepend=\dimen260
+\pgf@nodesepstart=\dimen194
+\pgf@nodesepend=\dimen195
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -689,10 +674,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen261
-\pgffor@skip=\dimen262
-\pgffor@stack=\toks48
-\pgffor@toks=\toks49
+\pgffor@iter=\dimen196
+\pgffor@skip=\dimen197
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -701,32 +686,32 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count139
-\pgfplotmarksize=\dimen263
+\pgf@plot@mark@count=\count136
+\pgfplotmarksize=\dimen198
 )
-\tikz@lastx=\dimen264
-\tikz@lasty=\dimen265
-\tikz@lastxsaved=\dimen266
-\tikz@lastysaved=\dimen267
-\tikzleveldistance=\dimen268
-\tikzsiblingdistance=\dimen269
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikzleveldistance=\dimen260
+\tikzsiblingdistance=\dimen261
 \tikz@figbox=\box40
 \tikz@figbox@bg=\box41
 \tikz@tempbox=\box42
 \tikz@tempbox@bg=\box43
-\tikztreelevel=\count140
-\tikznumberofchildren=\count141
-\tikznumberofcurrentchild=\count142
-\tikz@fig@count=\count143
+\tikztreelevel=\count137
+\tikznumberofchildren=\count138
+\tikznumberofcurrentchild=\count139
+\tikz@fig@count=\count140
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count144
-\pgfmatrixcurrentcolumn=\count145
-\pgf@matrix@numberofcolumns=\count146
+\pgfmatrixcurrentrow=\count141
+\pgfmatrixcurrentcolumn=\count142
+\pgf@matrix@numberofcolumns=\count143
 )
-\tikz@expandcount=\count147
+\tikz@expandcount=\count144
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -747,10 +732,10 @@ File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
-\pgfarrowinset=\dimen270
-\pgfarrowlength=\dimen271
-\pgfarrowwidth=\dimen272
-\pgfarrowlinewidth=\dimen273
+\pgfarrowinset=\dimen262
+\pgfarrowlength=\dimen263
+\pgfarrowwidth=\dimen264
+\pgfarrowlinewidth=\dimen265
 )))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryarrows.code.tex
@@ -759,7 +744,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen274
+\arrowsize=\dimen266
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryshapes.code.tex
@@ -855,14 +840,14 @@ s/tikzlibrarydecorations.pathreplacing.code.tex
 s/tikzlibrarydecorations.code.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen275
-\pgfdecoratedremainingdistance=\dimen276
-\pgfdecoratedinputsegmentcompleteddistance=\dimen277
-\pgfdecoratedinputsegmentremainingdistance=\dimen278
-\pgf@decorate@distancetomove=\dimen279
-\pgf@decorate@repeatstate=\count148
-\pgfdecorationsegmentamplitude=\dimen280
-\pgfdecorationsegmentlength=\dimen281
+\pgfdecoratedcompleteddistance=\dimen267
+\pgfdecoratedremainingdistance=\dimen268
+\pgfdecoratedinputsegmentcompleteddistance=\dimen269
+\pgfdecoratedinputsegmentremainingdistance=\dimen270
+\pgf@decorate@distancetomove=\dimen271
+\pgf@decorate@repeatstate=\count145
+\pgfdecorationsegmentamplitude=\dimen272
+\pgfdecorationsegmentlength=\dimen273
 )
 \tikz@lib@dec@box=\box64
 )
@@ -884,37 +869,37 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count149
-\calc@Bcount=\count150
-\calc@Adimen=\dimen282
-\calc@Bdimen=\dimen283
+\calc@Acount=\count146
+\calc@Bcount=\count147
+\calc@Adimen=\dimen274
+\calc@Bdimen=\dimen275
 \calc@Askip=\skip58
 \calc@Bskip=\skip59
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count151
+\calc@Ccount=\count148
 \calc@Cskip=\skip60
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 )
-\AM@pagewidth=\dimen284
-\AM@pageheight=\dimen285
+\AM@pagewidth=\dimen276
+\AM@pageheight=\dimen277
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2017/01/14 v0.5h Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box65
-\AM@global@opts=\toks50
-\AM@toc@title=\toks51
-\c@AM@survey=\count152
+\AM@global@opts=\toks49
+\AM@toc@title=\toks50
+\c@AM@survey=\count149
 \AM@templatesizebox=\box66
 )
-\c@thm=\count153
-\c@dfn/lem=\count154
-\c@assumption=\count155
+\c@thm=\count150
+\c@dfn/lem=\count151
+\c@assumption=\count152
 )
-(./nuthesis-template.aux
+(./Dissertation - B Williams.aux
 
 LaTeX Warning: Label `lem: diff applied E' multiply defined.
 
@@ -931,7 +916,7 @@ LaTeX Warning: Label `thm sphere alg' multiply defined.
 LaTeX Warning: Label `cohbung' multiply defined.
 
 )
-\openout1 = `nuthesis-template.aux'.
+\openout1 = `"Dissertation - B Williams.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
@@ -970,30 +955,32 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count156
+\c@section@level=\count153
 )
 LaTeX Info: Redefining \ref on input line 52.
 LaTeX Info: Redefining \pageref on input line 52.
 LaTeX Info: Redefining \nameref on input line 52.
 
-(./nuthesis-template.out) (./nuthesis-template.out)
+(./Dissertation - B Williams.out) (./Dissertation - B Williams.out)
 \@outlinefile=\write5
-\openout5 = `nuthesis-template.out'.
+\openout5 = `"Dissertation - B Williams.out"'.
 
+Package xypdf Info: Line width: 0.47998pt on input line 52.
 
+ABD: EveryShipout initializing macros
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count157
-\scratchdimen=\dimen286
+\scratchcounter=\count154
+\scratchdimen=\dimen278
 \scratchbox=\box68
-\nofMPsegments=\count158
-\nofMParguments=\count159
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count160
-\MPscratchDim=\dimen287
-\MPnumerator=\count161
-\makeMPintoPDFobject=\count162
-\everyMPtoPDFconversion=\toks53
+\nofMPsegments=\count155
+\nofMParguments=\count156
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count157
+\MPscratchDim=\dimen279
+\MPnumerator=\count158
+\makeMPintoPDFobject=\count159
+\everyMPtoPDFconversion=\toks52
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1011,42 +998,6 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(93.95122pt, 426.39256pt, 93.95122pt)
-* v-part:(T,H,B)=(72.26999pt, 632.3625pt, 90.3375pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=426.39256pt
-* \textheight=632.3625pt
-* \oddsidemargin=21.68123pt
-* \evensidemargin=21.68123pt
-* \topmargin=-48.135pt
-* \headheight=12.0pt
-* \headsep=36.135pt
-* \topskip=10.0pt
-* \footskip=36.135pt
-* \marginparwidth=90.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=7.0pt plus 11.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-Package xypdf Info: Line width: 0.47998pt on input line 52.
-ABD: EveryShipout initializing macros
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
@@ -1089,42 +1040,45 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5])
-[6]
-Table of Contents
-(./nuthesis-template.toc
-Underfull \vbox (badness 4001) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7
+ [6]
+[7]
+Table of Contents
+(./Dissertation - B Williams.toc
+Underfull \vbox (badness 2384) has occurred while \output is active []
+
+ [8
 
 
 
 ])
 \tf@toc=\write6
-\openout6 = `nuthesis-template.toc'.
+\openout6 = `"Dissertation - B Williams.toc"'.
 
 
-[8]
+[9]
 List of Tables
-(./nuthesis-template.lot)
+(./Dissertation - B Williams.lot)
 \tf@lot=\write7
-\openout7 = `nuthesis-template.lot'.
+\openout7 = `"Dissertation - B Williams.lot"'.
 
- [9
+ [10
 
 
 
 ]
 List of Figures
-(./nuthesis-template.lof
+(./Dissertation - B Williams.lof
 LaTeX Font Info:    Try loading font information for U+euf on input line 9.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ))
 \tf@lof=\write8
-\openout8 = `nuthesis-template.lof'.
+\openout8 = `"Dissertation - B Williams.lof"'.
 
- [10
+ [11
 
 
 
@@ -1137,54 +1091,62 @@ File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11
+ [12
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-Underfull \vbox (badness 2591) has occurred while \output is active []
-
  [13]
-[14]) (./chap1.tex [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+Underfull \vbox (badness 2027) has occurred while \output is active []
+
+ [15]
+Underfull \vbox (badness 3861) has occurred while \output is active []
+
+ [16])
+(./chap1.tex [17]
 Chapter 2
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16
+ [18
 
 
 ]
-Underfull \vbox (badness 2343) has occurred while \output is active []
-
- [17]
-[18] [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[19]
+Underfull \vbox (badness 6063) has occurred while \output is active []
 
  [20]
+[21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
-[22]
+ [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24]
-[25]
+[24]
 Underfull \vbox (badness 1199) has occurred while \output is active []
+
+ [25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [26]
 [27] [28]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29]
-Underfull \vbox (badness 4621) has occurred while \output is active []
+[30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
-Overfull \hbox (30.91978pt too wide) in paragraph at lines 430--434
+ [31]
+[32]
+Underfull \vbox (badness 2635) has occurred while \output is active []
+
+ [33]
+Overfull \hbox (2.01114pt too wide) in paragraph at lines 432--436
 \OT1/cmr/m/n/12 consisting of cochains $\OML/cmm/m/it/12 ' \OT1/cmr/m/n/12 : []
 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ! \U/msb/m/n/12 C$ \OT1
 /cmr/m/n/12 sat-is-fy-ing $\OML/cmm/m/it/12 '\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
@@ -1192,101 +1154,61 @@ X[]; [] ; X[]\OT1/cmr/m/n/12 ) = 0$ if $[][] [](\OML/cmm/m/it/12 X[]\OT1/cmr/m/
 n/12 ) =
  []
 
-
-Overfull \hbox (8.84795pt too wide) in paragraph at lines 430--434
-\OT1/cmr/m/n/12 triv-ially. The in-clu-sion of the lo-cal cochain com-plex $C[]
-([](\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 ^^Z \OT1/cmr/m/n/12 C
-[]([](\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ))$
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]
+[34]
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 457.
+(Font)              using `OT1/cmr/bx/n' instead on input line 459.
 
-[32] [33]
-Underfull \vbox (badness 3354) has occurred while \output is active []
-
- [34]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[35]
+Underfull \vbox (badness 6559) has occurred while \output is active []
 
  [36]
-Overfull \hbox (5.90742pt too wide) in paragraph at lines 610--613
-[]\OT1/cmr/m/n/12 We in-tro-duce the for-mal vari-able $\U/msb/m/n/12 ~$ \OT1/c
-mr/m/n/12 and con-sider $\U/msb/m/n/12 ~$\OT1/cmr/m/n/12 -dependent func-tion-a
-ls $\U/eus/m/n/12 O\OT1/cmr/m/n/12 (\U/eus/m/n/12 E\OT1/cmr/m/n/12 )[[\U/msb/m/
-n/12 ~\OT1/cmr/m/n/12 ]]$.
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37]
+[37]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [38]
-[39] [40] [41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+Underfull \vbox (badness 1527) has occurred while \output is active []
+
+ [41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
 [43]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1460) has occurred while \output is active []
 
  [44]
-<xymatrix 2x2 150>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3049) has occurred while \output is active []
 
  [45]
-[46] [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+[47] <xymatrix 2x2 150>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48]
-<xymatrix 3x1 92>
-Overfull \hbox (157.0529pt too wide) detected at line 978
-[]
- []
-
-
-Underfull \vbox (badness 6708) has occurred while \output is active []
-
- [49]
-[50]
+[49]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [50]
+[51]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [52]
-[53] [54]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [55]
+<xymatrix 2x2 96> [53] [54] [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [56]
-[57] [58]
-Overfull \hbox (3.65158pt too wide) in paragraph at lines 1305--1308
-\OT1/cmr/m/n/12 with dif-fer-en-tial in-duced from that in $\U/msb/m/n/12 C[]$\
-OT1/cmr/m/n/12 . Note that this al-ge-bra is quasi-isomorphic
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
-Overfull \hbox (1.36638pt too wide) in paragraph at lines 1351--1353
-[]\OT1/cmr/m/n/12 The lo-cal func-tional $\OML/cmm/m/it/12 I$ \OT1/cmr/m/n/12 d
-efin-ing the clas-si-cal holo-mor-phic the-ory en-dows $\OML/cmm/m/it/12 J[]V\O
-T1/cmr/m/n/12 [\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1]$
- []
-
-
+ [57]
+[58] [59]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [60]
@@ -1294,13 +1216,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [62]
-Underfull \vbox (badness 8151) has occurred while \output is active []
-
- [63]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[63]
+Underfull \vbox (badness 4242) has occurred while \output is active []
 
  [64]
-Underfull \vbox (badness 1005) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [65]
 [66]
@@ -1310,130 +1230,62 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [68]
-[69]
-Overfull \hbox (166.32254pt too wide) detected at line 1823
-[] [][] \OT1/cmr/m/n/12 d[]\OML/cmm/m/it/12 w[] [][] [] \OT1/cmr/m/n/12 ^^H(\OM
-L/cmm/m/it/12 w[]; [] ; w[]\OT1/cmr/m/n/12 ) [] [] [][] \OML/cmm/m/it/12 P[] []
- :
- []
-
-
-Overfull \hbox (37.25061pt too wide) detected at line 1836
-[]
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [70]
-Overfull \hbox (1.7221pt too wide) detected at line 1864
-\OML/cmm/m/it/12 D[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) := [] 
-[] [][] \OML/cmm/m/it/12 :
- []
-
-
-Underfull \vbox (badness 4193) has occurred while \output is active []
+ [69]
+[70]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71]
-Overfull \hbox (83.11023pt too wide) detected at line 1881
-[]
- []
-
-
-Overfull \hbox (169.50444pt too wide) detected at line 1887
-[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 W[]\OT1/cmr/m/n/12 (^^H)\OMS/cmsy/m/n/12 j
- ^^T \OML/cmm/m/it/12 C [][] \OT1/cmr/m/n/12 d[]\OML/cmm/m/it/12 w[] [][] [] \O
-T1/cmr/m/n/12 d[]\OML/cmm/m/it/12 w[]\OT1/cmr/m/n/12 	(\OML/cmm/m/it/12 w[]; []
- ; w[]; w[]\OT1/cmr/m/n/12 ) [][] d\OML/cmm/m/it/12 t[] [] \OT1/cmr/m/n/12 d\OM
-L/cmm/m/it/12 t[][][] \OMS/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\
-OML/cmm/m/it/12 w; t\OT1/cmr/m/n/12 )
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5302) has occurred while \output is active []
 
  [72]
-Overfull \hbox (31.42256pt too wide) in paragraph at lines 1910--1914
-\OT1/cmr/m/n/12 We now per-form a Wick ex-pan-sion for the Gauss-ian in-te-gral
- in the vari-ables $(\OML/cmm/m/it/12 w[]; [] ; w[]\OT1/cmr/m/n/12 )$.
- []
-
-
-Overfull \hbox (133.81012pt too wide) in paragraph at lines 1916--1916
-[] 
- []
-
-
-Overfull \hbox (38.66353pt too wide) detected at line 1933
-[][] [] \OMS/cmsy/m/n/12 ^^T [][] [] \OT1/cmr/m/n/12 = [] [][] \OML/cmm/m/it/12
- :
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74]
-Overfull \hbox (17.27603pt too wide) in paragraph at lines 1968--1972
-\OT1/cmr/m/n/12 or, equiv-a-lently $^^B[\OML/cmm/m/it/12 L\OT1/cmr/m/n/12 ] = \
-OML/cmm/m/it/12 e[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Q \OT1/cmr/m/n/12 + \U/msb
-/m/n/12 ~\OT1/cmr/m/n/12 ^^A[])\OML/cmm/m/it/12 e[]$\OT1/cmr/m/n/12 . By def-i-
-ni-tion, $\OML/cmm/m/it/12 I\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 L\OT1/cmr/m/n/12 
-] = [][] \OML/cmm/m/it/12 W\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]; I\OT1/cmr/m/n
-/12 )
+[75]
+Overfull \hbox (8.34196pt too wide) detected at line 1855
+[]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75]
-[76]
-Overfull \hbox (70.29515pt too wide) detected at line 2042
-[][]\OT1/cmr/m/n/12 (^^H) = [][] [] d[]\OML/cmm/m/it/12 z[]\OT1/cmr/m/n/12 ^^H(
-\OML/cmm/m/it/12 z[]; [] ; z[]\OT1/cmr/m/n/12 ) [][] \OML/cmm/m/it/12 K[]\OT1/c
-mr/m/n/12 (\OML/cmm/m/it/12 z[]; z[]\OT1/cmr/m/n/12 ) [] [][] \OML/cmm/m/it/12 
-P[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z[]; z[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 
-:
- []
+ [76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[77]
-Overfull \hbox (132.95602pt too wide) detected at line 2090
-[]
- []
+ [77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[78]
-Overfull \hbox (61.87753pt too wide) detected at line 2098
-\OML/cmm/m/it/12 D[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) := [] 
-[] [][] \OML/cmm/m/it/12 :
+ [78]
+Overfull \hbox (2.51392pt too wide) in paragraph at lines 1929--1933
+\OT1/cmr/m/n/12 We now per-form a Wick ex-pan-sion for the Gauss-ian in-te-gral
+ in the vari-ables $(\OML/cmm/m/it/12 w[]; [] ; w[]\OT1/cmr/m/n/12 )$.
  []
 
 
-Overfull \hbox (153.55678pt too wide) detected at line 2110
-[]
+Overfull \hbox (3.73035pt too wide) in paragraph at lines 1935--1935
+[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [79]
-Overfull \hbox (7.41685pt too wide) detected at line 2124
-[][] [] \OT1/cmr/m/n/12 d[]\OML/cmm/m/it/12 w[] [] [] \OT1/cmr/m/n/12 = \OML/cm
-m/m/it/12 C[] [][] :
+Overfull \hbox (9.75488pt too wide) detected at line 1952
+[][] [] \OMS/cmsy/m/n/12 ^^T [][] [] \OT1/cmr/m/n/12 = [] [][] \OML/cmm/m/it/12
+ :
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [80]
+[80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [81]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [82]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[82]
+Underfull \vbox (badness 1226) has occurred while \output is active []
 
  [83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1445,11 +1297,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [86]
-[87]
-Underfull \vbox (badness 1308) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [87]
+Underfull \vbox (badness 6412) has occurred while \output is active []
 
  [88]
-[89] [90] [91]) (./chap2.tex [92]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [89]
+[90]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [92]
+[93] [94]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+Underfull \vbox (badness 4205) has occurred while \output is active []
+
+ [96]
+[97]
+Underfull \vbox (badness 6063) has occurred while \output is active []
+
+ [98]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99])
+(./chap2.tex [100]
 Chapter 3
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1466,688 +1344,496 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [93
+ [101
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [94]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [95]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [96]
-[97]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [98]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [99]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [100]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [101]
-[102] <xymatrix 6x2 393>
+ [102]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [103]
-[104] [105] [106]
-Underfull \vbox (badness 1028) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [104]
+[105]
+Underfull \vbox (badness 6063) has occurred while \output is active []
+
+ [106]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [107]
-[108] [109] [110] [111] [112]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [113]
+ [108]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [114]
-Overfull \hbox (49.54855pt too wide) detected at line 684
-\OT1/cmr/m/n/12 (
-[]([][]) \OMS/cmsy/m/n/12 
- V\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 
- \OT1/cmr/m/n/12 (
-[]([][]) \OMS/cmsy/m/n/12 
- W\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 (
-[]([][]) \OMS/cmsy/m/n/12 
- \OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 V 
- W\OT1/cmr/m/n/12 ))[] \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 (
-[]([][]) \OMS/cmsy/m/n/12 
- \OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 V 
-[] W\OT1/cmr/m/n/12 ))[]
- []
+ [109]
+Underfull \vbox (badness 7397) has occurred while \output is active []
 
-[115] [116]
+ [110]
+<xymatrix 6x2 393>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [117]
-[118] [119]
-Overfull \hbox (96.17326pt too wide) in paragraph at lines 854--855
-[][][]\OT1/cmr/bx/sc/12 Corollary 3.1.30. []\OT1/cmr/m/it/12 There is a canon-i
--cal map from $[][]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 B\OML/cmm/m/it/12 ; \OMS/c
-msy/m/n/12 A\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 to $[][]\OT1/cmr/m/n/12 (\U/eus
-/m/n/12 D[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 B\OT1/cmr/m/n/12 )\OML/cmm/m/it/12
- ; \U/eus/m/n/12 D[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 A\OT1/cmr/m/n/12 ))$\OT1/
-cmr/m/it/12 . 
- []
+ [111]
+[112] [113] [114] [115]
+Underfull \vbox (badness 7186) has occurred while \output is active []
 
+ [116]
+[117] [118]
+Underfull \vbox (badness 7667) has occurred while \output is active []
 
-Overfull \hbox (38.27672pt too wide) in paragraph at lines 857--859
-\OT1/cmr/m/n/12 sor field $\OMS/cmsy/m/n/12 V$\OT1/cmr/m/n/12 , we will have a 
-very lo-cal model for the Atiyah class liv-ing in $C[]([]\OML/cmm/m/it/12 ; [][
-]\OT1/cmr/m/n/12 ; [] \OMS/cmsy/m/n/12 
-[]
- []
+ [119]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[120]
+ [120]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [121]
-[122]
-Overfull \hbox (6.08159pt too wide) in paragraph at lines 987--988
-[][][]\OT1/cmr/bx/sc/12 Corollary 3.1.36. []\OT1/cmr/m/it/12 There is a co-cy-c
-le $[][]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 V\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2
- \OT1/cmr/m/n/12 C[]([]\OML/cmm/m/it/12 ; [][]\OT1/cmr/m/n/12 ; [] \OMS/cmsy/m/
-n/12 
-[] [][]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 V\OT1/cmr/m/n/12 ))$
- []
-
-[123]
-Overfull \hbox (16.58368pt too wide) in paragraph at lines 1032--1034
-[][][]\OT1/cmr/bx/sc/12 Definition 3.1.37. []\OT1/cmr/m/n/12 The \OT1/cmr/m/it/
-12 Gelfand-Fuks-Chern char-ac-ter \OT1/cmr/m/n/12 is the for-mal sum $[][](\OMS
-/cmsy/m/n/12 V\OT1/cmr/m/n/12 ) =
- []
-
-
-Underfull \vbox (badness 3579) has occurred while \output is active []
-
- [124]
-[125]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [126]
-Overfull \hbox (2.60318pt too wide) in paragraph at lines 1178--1180
-[]\OT1/cmr/m/n/12 We can use this re-sult to ex-plic-itly com-pute the co-cy-cl
-es rep-re-sent-ing the Gelfand-
+ [122]
+Underfull \vbox (badness 5203) has occurred while \output is active []
+
+ [123]
+[124] [125] [126] [127] [128]
+Overfull \hbox (8.89389pt too wide) in paragraph at lines 826--831
+[]\OT1/cmr/m/n/12 We will use the no-ta-tion $[](\U/eus/m/n/12 V\OT1/cmr/m/n/12
+ )$ to de-note the func-tor $[](\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ; \U/eus/m
+/n/12 V\OT1/cmr/m/n/12 ) : [][] \OMS/cmsy/m/n/12 ! []\OT1/cmr/m/n/12 ([])[]$,
  []
 
+[129]
+Underfull \vbox (badness 1199) has occurred while \output is active []
 
-Overfull \hbox (28.85793pt too wide) detected at line 1187
-[][]\OT1/cmr/m/n/12 ([][]([])[]) : (\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cmr/m/n/
-12 ) \OMS/cmsy/m/n/12 7! [][] []
- []
-
-[127] [128]
+ [130]
+[131] [132] [133]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [129]
-[130] [131] <xymatrix 2x2 120> [132]
-Underfull \vbox (badness 1038) has occurred while \output is active []
-
- [133]
-[134]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [134]
+Underfull \vbox (badness 1688) has occurred while \output is active []
 
  [135]
-[136] <xymatrix 3x1 102>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [137]
-Overfull \hbox (10.0209pt too wide) in paragraph at lines 1505--1507
-[][][]\OT1/cmr/bx/sc/12 Definition 3.2.5. []\OT1/cmr/m/n/12 Fix a Gelfand-Kazhd
-an struc-ture $(\OML/cmm/m/it/12 X; ^^[\OT1/cmr/m/n/12 )$. A $\OML/cmm/m/it/12 
-d$\OT1/cmr/m/it/12 -extended Gelfand-
- []
-
-
-Overfull \hbox (10.60303pt too wide) in paragraph at lines 1505--1507
-\OT1/cmr/m/it/12 Kazhdan struc-ture \OT1/cmr/m/n/12 ex-tend-ing $(\OML/cmm/m/it
-/12 X; ^^[\OT1/cmr/m/n/12 )$ is a re-duc-tion of $([][]\OML/cmm/m/it/12 ; ![]\O
-T1/cmr/m/n/12 )$ along the map $(\OML/cmm/m/it/12 ^^Y[]; []\OT1/cmr/m/n/12 ) :
- []
-
-[138]
-Overfull \hbox (2.071pt too wide) in paragraph at lines 1519--1520
-\OT1/cmr/m/n/12 Chern char-ac-ter $[][](\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 )$ 
-de-ter-mines an ex-ten-sion of the orig-i-nal Gelfand-Kazhdan
- []
-
-
-Overfull \hbox (17.93471pt too wide) in paragraph at lines 1527--1531
-\OT1/cmr/m/n/12 This is the char-ac-ter-is-tic map for the semi-strict de-scent
- along the prin-ci-pal $([]\OML/cmm/m/it/12 ; [][]\OT1/cmr/m/n/12 )$-
- []
-
-<xymatrix 3x1 150>
-Overfull \hbox (12.6217pt too wide) in paragraph at lines 1535--1540
-\OT1/cmr/m/n/12 Now, the im-age of the Gelfand-Fuks class $[][]([])$ along $[][
-]$ is pre-cisely $[][](\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 )$.
- []
-
-
-Underfull \vbox (badness 3407) has occurred while \output is active []
+ [136]
+[137] [138]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [139]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[140] [141] <xymatrix 2x2 120>
+Underfull \vbox (badness 1270) has occurred while \output is active []
 
- [140]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [141]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1713.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 1713.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1713.
-
-[142]
+ [142]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [143]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [144]
-[145]
+[144] [145]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [146]
+<xymatrix 3x1 102>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [147]
-Underfull \vbox (badness 1158) has occurred while \output is active []
-
- [148]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [149]
-Overfull \hbox (8.3882pt too wide) in paragraph at lines 1915--1918
-[][][]\OT1/cmr/bx/sc/12 Lemma 3.3.6. []\OT1/cmr/m/it/12 Let $\U/euf/m/n/12 g[] 
-\OT1/cmr/m/n/12 = \U/msb/m/n/12 C[]\OT1/cmr/m/n/12 [\OMS/cmsy/m/n/12 ^^@\OT1/cm
-r/m/n/12 1]$\OT1/cmr/m/it/12 . Then, the Gelfand-Kazhdan de-scent $[][]\OT1/cmr
-/m/n/12 (\U/euf/m/n/12 g[]\OT1/cmr/m/n/12 )$
+Overfull \hbox (10.03836pt too wide) in paragraph at lines 1500--1503
+\OT1/cmr/m/n/12 In Sec-tion []3.1.6.2[] we have in-tro-duced the $\OML/cmm/m/it
+/12 L[]$ \OT1/cmr/m/n/12 pair $([]\OML/cmm/m/it/12 ; [][]\OT1/cmr/m/n/12 )$ ex-
+tend-ing the pair $([]\OML/cmm/m/it/12 ; [][]\OT1/cmr/m/n/12 )$.
  []
 
-[150] [151]
-Underfull \vbox (badness 2538) has occurred while \output is active []
+
+Underfull \vbox (badness 8038) has occurred while \output is active []
+
+ [148]
+[149] <xymatrix 3x1 150>
+Overfull \hbox (12.93156pt too wide) in paragraph at lines 1543--1545
+[]\OT1/cmr/m/n/12 Suppose now we fix a triv-i-al-iza-tion $\OML/cmm/m/it/12 $ 
+\OT1/cmr/m/n/12 of the com-po-nent of the Chern char-ac-ter $[][](\OML/cmm/m/it
+/12 T[]\OT1/cmr/m/n/12 )$.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [150]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [151]
+Underfull \vbox (badness 2478) has occurred while \output is active []
 
  [152]
-[153]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2023.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 2023.
+(hyperref)                removing `math shift' on input line 1715.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2023.
+(hyperref)                removing `\sigma' on input line 1715.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1715.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [153]
 [154]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [155]
-Overfull \vbox (1.25943pt too high) has occurred while \output is active []
+Underfull \vbox (badness 3302) has occurred while \output is active []
 
-
-[156]
+ [156]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [157]
-[158]
-Underfull \vbox (badness 3158) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [159]
+ [158]
+[159]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [160]
-<xymatrix 6x1 216>
-Overfull \hbox (52.10062pt too wide) detected at line 2206
-[][]
- []
-
-
-Underfull \vbox (badness 5771) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [161]
-[162]
-Overfull \hbox (57.08263pt too wide) in paragraph at lines 2277--2279
-\OT1/cmr/m/n/12 com-plex com-put-ing Lie al-ge-bra ho-mol-ogy of $\U/msb/m/n/12
- C[]$ \OT1/cmr/m/n/12 with val-ues in the mod-ule $C[](\U/euf/m/n/12 g\OT1/cmr/
-m/n/12 [[\OML/cmm/m/it/12 z[]; [] ; z[]\OT1/cmr/m/n/12 ]])$: 
- []
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+ [162]
+[163] [164]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2025.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 2025.
 
- [163]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [164]
-Overfull \hbox (117.43536pt too wide) detected at line 2327
-[] [] [] \OMS/cmsy/m/n/12 ^[] [] ^ ^[] [] \OT1/cmr/m/n/12 C[] [] d[]\OML/cmm/m/
-it/12 z:
- []
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2025.
 
-<xymatrix 4x2 34>
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [165]
-Overfull \hbox (42.26826pt too wide) detected at line 2352
-\OT1/cmr/m/n/12 d[] [] = [](\OML/cmm/m/it/12 @[]; z[]\OT1/cmr/m/n/12 ) \OMS/cms
-y/m/n/12 
- \OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 
- \OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 
- \OT1/cmr/m/n/12 d[]\OML/cmm/m/it/12 z \OMS/cmsy/m/n/12 2 ^[] [] ^ \U/msb/m/n/1
-2 C\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 z[]\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 C[] 
-[] d[]\OML/cmm/m/it/12 z:
- []
-
-<xymatrix 2x2 174> <xymatrix 5x2 198>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [166]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2432.
+Overfull \vbox (1.48325pt too high) has occurred while \output is active []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\sigma' on input line 2432.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2432.
-
-[167]
-Underfull \vbox (badness 2529) has occurred while \output is active []
-
- [168]
-Overfull \hbox (78.82372pt too wide) in alignment at lines 2492--2494
- [][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [169]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[167] [168] [169]
+Underfull \vbox (badness 2591) has occurred while \output is active []
 
  [170]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [171]
-[172]
-Overfull \hbox (7.8636pt too wide) in paragraph at lines 2578--2581
-\OT1/cmr/m/n/12 and so $^^B[][\OML/cmm/m/it/12 L\OT1/cmr/m/n/12 ]$ only de-pend
-s on $\OML/cmm/m/it/12 ^^M$ \OT1/cmr/m/n/12 and hence is a de-gree one el-e-men
-t of $C[]([]; \U/eus/m/n/12 O\OT1/cmr/m/n/12 (\U/eus/m/n/12 E[]\OT1/cmr/m/n/12 
-))$. 
- []
-
-
-Underfull \vbox (badness 7851) has occurred while \output is active []
+<xymatrix 5x1 188> [172]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [173]
-Overfull \hbox (18.88837pt too wide) in paragraph at lines 2689--2695
-\OT1/cmr/m/n/12 Given for-mal vec-tor fields $\OML/cmm/m/it/12 X[]; [] ; X[]$\O
-T1/cmr/m/n/12 , let $^^B[](\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cmr/m/n/12 ) = []
-[] ^^B[][\OML/cmm/m/it/12 L\OT1/cmr/m/n/12 ](\OML/cmm/m/it/12 X[]; [] ; X[]\OT1
-/cmr/m/n/12 )$
- []
+[174]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 5105) has occurred while \output is active []
-
- [174]
-[175]
-Overfull \hbox (48.9351pt too wide) in paragraph at lines 2845--2845
-[] 
- []
-
-
+ [175]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [176]
-Overfull \hbox (109.38167pt too wide) detected at line 2865
-[]
- []
-
-
-Overfull \hbox (27.96301pt too wide) detected at line 2879
-[]
- []
-
-
+<xymatrix 4x2 34>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [177]
-Overfull \hbox (120.39925pt too wide) detected at line 2910
-[] [][] \OT1/cmr/m/n/12 d[]\OML/cmm/m/it/12 w[][] [][] [] [] [] ^^O[] [][] [] [
-]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M\OT1/cmr/m/n/12 )[] [](\OML/cmm/m/it/12 M\O
-T1/cmr/m/n/12 )[]
- []
-
-
+<xymatrix 2x2 174> <xymatrix 5x2 198>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [178]
-Overfull \hbox (123.93613pt too wide) detected at line 2914
-[] \OML/cmm/m/it/12 ^^O[] [][] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 ^^O[] [][]
- [] []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M\OT1/cmr/m/n/12 )[]
- []
-
-
-Overfull \hbox (94.66377pt too wide) detected at line 2923
-[][] \OT1/cmr/m/n/12 d[]\OML/cmm/m/it/12 w[] [][] [] [][] []\OT1/cmr/m/n/12 d\O
-ML/cmm/m/it/12 t[] [] \OT1/cmr/m/n/12 d\OML/cmm/m/it/12 t[]:
- []
-
-
-Overfull \hbox (32.03589pt too wide) detected at line 2936
-\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 : (\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cmr/
-m/n/12 ) \OMS/cmsy/m/n/12 7! [][] [] 2 []
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [179]
-[180]
-Overfull \hbox (16.13138pt too wide) in paragraph at lines 2997--2999
-[][][]\OT1/cmr/bx/sc/12 Theorem 3.5.8. []\OT1/cmr/m/it/12 The ef-fec-tive fam-i
-ly $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 L\O
-T1/cmr/m/n/12 ] + \U/msb/m/n/12 ~[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 L\OT1/cmr/
-m/n/12 ]\OMS/cmsy/m/n/12 g[]$ \OT1/cmr/m/it/12 de-fines a $[]$-equivariant
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2434.
 
 
-Underfull \vbox (badness 2671) has occurred while \output is active []
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\sigma' on input line 2434.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 2434.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [180]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [181]
-[182]
-Overfull \hbox (71.1107pt too wide) detected at line 3063
-\OT1/cmr/m/n/12 C[]([]; [][\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 ]) = C[]([]) \OMS/
-cmsy/m/n/12 
-[] \OT1/cmr/m/n/12 C[]([]; []) [] C[]([]) \OMS/cmsy/m/n/12 
-[] [][] \OT1/cmr/m/n/12 = [][]\OML/cmm/m/it/12 :
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[183]
-Overfull \hbox (1.4623pt too wide) detected at line 3116
-\OT1/cmr/m/n/12 (d[] + [])(\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/1
-2 L\OT1/cmr/m/n/12 ] + \U/msb/m/n/12 ~[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 L\OT1
-/cmr/m/n/12 ]) + []\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 [\OML/
-cmm/m/it/12 L\OT1/cmr/m/n/12 ] + \U/msb/m/n/12 ~[]\OT1/cmr/m/n/12 [\OML/cmm/m/i
-t/12 L\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 ; I[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 
-L\OT1/cmr/m/n/12 ] + \U/msb/m/n/12 ~[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 L\OT1/c
-mr/m/n/12 ]\OMS/cmsy/m/n/12 g[] \OT1/cmr/m/n/12 + \U/msb/m/n/12 ~\OT1/cmr/m/n/1
-2 ^^A[](\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 L\OT1/cmr/m/n/12 
-] + \U/msb/m/n/12 ~[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 L\OT1/cmr/m/n/12 ]) = 0\
-OML/cmm/m/it/12 :
- []
+ [182]
+[183] [184]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 7558) has occurred while \output is active []
-
- [184]
-Overfull \hbox (2.70776pt too wide) in paragraph at lines 3130--3132
-\OT1/cmr/m/n/12 In co-ho-mol-ogy, de-for-ma-tions live in $\OML/cmm/m/it/12 H[]
-$ \OT1/cmr/m/n/12 of this com-plex which is $\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/1
-2 ([]\OML/cmm/m/it/12 ; [][]\OT1/cmr/m/n/12 ; [])$. 
- []
-
-
-Overfull \hbox (17.67476pt too wide) in paragraph at lines 3137--3139
-[]\OT1/cmr/m/n/12 We use a spec-tral se-quence com-put-ing the co-ho-mol-ogy $\
-OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; [][]\OT1/cmr/m/n/12 ; 
-[])$.
- []
-
-[185] [186]
+ [185]
+[186]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [187]
-[188] [189]
+Overfull \hbox (8.85065pt too wide) in paragraph at lines 2799--2802
+\OT1/cmr/m/it/12 mark one in-ter-nal edge as dis-tin-guished. Then, we have an 
+iden-ti-fi-ca-tion $\OT1/cmr/m/n/12 ^^B[](\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cm
+r/m/n/12 ) =
+ []
+
+[188]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [189]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [190]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [191]
-[192]
-Underfull \vbox (badness 7451) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [193]
-Overfull \hbox (157.97203pt too wide) detected at line 3380
-[]
+ [192]
+Overfull \hbox (3.12724pt too wide) detected at line 2938
+\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 : (\OML/cmm/m/it/12 X[]; [] ; X[]\OT1/cmr/
+m/n/12 ) \OMS/cmsy/m/n/12 7! [][] [] 2 []
  []
 
-
-Overfull \hbox (29.3042pt too wide) detected at line 3405
-\OML/cmm/m/it/12 H[] [] [] [] [] \OT1/cmr/m/n/12 [\U/msb/m/n/12 ~\OT1/cmr/m/n/1
-2 ]
- []
-
-[194]
+[193] [194]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [195]
-Underfull \vbox (badness 4084) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [196]
-Underfull \vbox (badness 1168) has occurred while \output is active []
-
- [197]
-Underfull \vbox (badness 1721) has occurred while \output is active []
+[197]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [198]
-<xymatrix 2x2 166> [199] [200] [201] [202]
-Overfull \hbox (81.11511pt too wide) detected at line 3680
-\OML/cmm/m/it/12 i[] \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 A[] \OMS/cmsy/m/n/12 
- [] ! [][] ^^Z [][] [] \OML/cmm/m/it/12 :
+[199]
+Overfull \hbox (4.5301pt too wide) in paragraph at lines 3172--3175
+[]\OT1/cmr/m/n/12 We have al-ready seen how for-mal ge-om-e-try al-lows us to d
+e-scend the clas-si-cal $([]\OML/cmm/m/it/12 ; [][]\OT1/cmr/m/n/12 )$-
  []
 
 
-Underfull \vbox (badness 3240) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [200]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [201]
+Overfull \hbox (8.16103pt too wide) in paragraph at lines 3215--3217
+[][][]\OT1/cmr/bx/sc/12 Theorem 3.5.13. []\OT1/cmr/m/it/12 Let $\OML/cmm/m/it/1
+2 $ \OT1/cmr/m/it/12 be a triv-i-al-iza-tion of $[][]\OT1/cmr/m/n/12 (\OML/cmm
+/m/it/12 T[]\OT1/cmr/m/n/12 )$\OT1/cmr/m/it/12 . Then, the fam-ily $\OMS/cmsy/m
+/n/12 f\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 L\OT1/cmr/m/n/12 ]
+\OMS/cmsy/m/n/12 g[]$
+ []
+
+[202]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [203]
-<nesting.pdf, id=1735, page=1, 325.33104pt x 308.47124pt>
-File: nesting.pdf Graphic file (type pdf)
-
-<use nesting.pdf, page 1>
-Package pdftex.def Info: nesting.pdf, page1 used on input line 3739.
-(pdftex.def)             Requested size: 191.87535pt x 181.93054pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [204]
-<xymatrix 2x2 164>
-Underfull \vbox (badness 3579) has occurred while \output is active []
-
- [205 <./nesting.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [205]
+Underfull \vbox (badness 6575) has occurred while \output is active []
 
  [206]
 [207]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [208]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3260) has occurred while \output is active []
 
  [209]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1342) has occurred while \output is active []
 
  [210]
+[211]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [211]
-Overfull \hbox (67.61488pt too wide) in alignment at lines 3952--3954
+ [212]
+Underfull \vbox (badness 3690) has occurred while \output is active []
+
+ [213]
+<xymatrix 2x2 166>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [214]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [215]
+Underfull \vbox (badness 5245) has occurred while \output is active []
+
+ [216]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [217]
+[218] [219]
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
+ [220]
+<nesting.pdf, id=1827, page=1, 325.33104pt x 308.47124pt>
+File: nesting.pdf Graphic file (type pdf)
+
+<use nesting.pdf, page 1>
+Package pdftex.def Info: nesting.pdf, page1 used on input line 3764.
+(pdftex.def)             Requested size: 204.88414pt x 194.26729pt.
+ <xymatrix 2x2 164>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [221 <./nesting.pdf>] [222]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [223]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [224]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [225]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [226]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [227]
+Overfull \hbox (13.2667pt too wide) in alignment at lines 3977--3979
  [][][] []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [212]
+ [228]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [213]
-Overfull \hbox (8.67657pt too wide) in paragraph at lines 3994--3997
-\OT1/cmr/m/n/12 Indeed, the right hand side as-signs to each open $\OML/cmm/m/i
-t/12 U$ \OT1/cmr/m/n/12 the cochain com-plex $C[]([](\OML/cmm/m/it/12 U\OT1/cmr
-/m/n/12 )) =
- []
-
-
-Underfull \vbox (badness 2351) has occurred while \output is active []
-
- [214]
-Overfull \hbox (4.25813pt too wide) detected at line 4058
-[]
- []
-
-
+ [229]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [215]
-Overfull \hbox (10.22095pt too wide) in paragraph at lines 4088--4088
-[] 
- []
-
-
+ [230]
+[231]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [216]
+ [232]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [217]
-Underfull \vbox (badness 1270) has occurred while \output is active []
-
- [218]
-<xymatrix 2x3 208> [219]
+ [233]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [220]
-[221]
-Overfull \hbox (48.48747pt too wide) detected at line 4267
-[]\OT1/cmr/m/n/12 (d[]\OML/cmm/m/it/12 zH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[
-]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
- \OML/cmm/m/it/12 V[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 d \OMS/cmsy/m/n/12 ^^@ \
-OT1/cmr/m/n/12 1] \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (\OM
-L/cmm/m/it/12 A[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
- \OML/cmm/m/it/12 V\OT1/cmr/m/n/12 )[\U/msb/m/n/12 ~\OT1/cmr/m/n/12 ] \OMS/cmsy
-/m/n/12 ! []\OT1/cmr/m/n/12 (d[]\OML/cmm/m/it/12 zH[]\OT1/cmr/m/n/12 (\OML/cmm/
-m/it/12 A[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
- \OML/cmm/m/it/12 V[] \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 
-(\OML/cmm/m/it/12 A[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
- \OML/cmm/m/it/12 V\OT1/cmr/m/n/12 [\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 d \OT1
-/cmr/m/n/12 + 1])[\U/msb/m/n/12 ~\OT1/cmr/m/n/12 ]
+ [234]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [235]
+[236] <xymatrix 2x3 208>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [237]
+Underfull \vbox (badness 1540) has occurred while \output is active []
+
+ [238]
+Overfull \hbox (12.62386pt too wide) in paragraph at lines 4285--4291
+\OT1/cmr/m/n/12 Us-ing the holo-mor-phic vol-ume form $d[]\OML/cmm/m/it/12 z$ \
+OT1/cmr/m/n/12 the higher residue pair-ing de-fines a map $\OML/cmm/m/it/12 H[]
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 !
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [222]
-Overfull \hbox (26.85942pt too wide) detected at line 4354
-[]
- []
-
-
+ [239]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [223]
-Overfull \hbox (100.32393pt too wide) detected at line 4365
-[] [] \OMS/cmsy/m/n/12 ! [] [] \OML/cmm/m/it/12 ;
+ [240]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [241]
+Underfull \vbox (badness 2277) has occurred while \output is active []
+
+ [242]
+Overfull \hbox (8.43124pt too wide) in paragraph at lines 4423--4428
+[][][]\OT1/cmr/bx/sc/12 Remark 3.6.25. []\OT1/cmr/m/n/12 One should com-pare th
+is to the stan-dard sit-u-a-tion for two-dimensional
  []
 
-
-Overfull \hbox (58.23444pt too wide) detected at line 4371
-[] [] [] [] [] \OMS/cmsy/m/n/12 
- [] [] \OML/cmm/m/it/12 :
- []
-
-[224] [225]) (./chap3.tex [226]
+[243]) (./chap3.tex [244]
 Chapter 4
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [227
+ [245
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [228]
-Overfull \hbox (51.18976pt too wide) in paragraph at lines 107--109
-\OT1/cmr/m/it/12 com-plex man-i-fold $\OML/cmm/m/it/12 X$\OT1/cmr/m/it/12 . The
-re is an em-bed-ding of the co-ho-mol-ogy $\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 
-(\U/euf/m/n/12 g\OML/cmm/m/it/12 ; [][]g[]\OT1/cmr/m/n/12 [\OMS/cmsy/m/n/12 ^^@
-\OML/cmm/m/it/12 d \OMS/cmsy/m/n/12 ^^@
- []
-
-[229]
-Overfull \hbox (7.83784pt too wide) in paragraph at lines 109--110
-\OT1/cmr/m/it/12 fields on any com-plex man-i-fold $\OML/cmm/m/it/12 X$ \OT1/cm
-r/m/it/12 of di-men-sion $\OML/cmm/m/it/12 d$ \OT1/cmr/m/it/12 and $\OML/cmm/m/
-it/12 H[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
-
- \OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 (W[])[2\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 ]
-$\OT1/cmr/m/it/12 ,
- []
-
-
+ [246]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [230]
-[231] [232]
+ [247]
+[248]
+Underfull \vbox (badness 1824) has occurred while \output is active []
+
+ [249]
+[250] [251]
 
 Package amsfonts Warning: Obsolete command \frak; \mathfrak should be used inst
 ead on input line 218.
 
-[233] [234]
-Overfull \hbox (56.79797pt too wide) detected at line 260
-[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )[\OML/cmm/m/it/12 n\OT1
-/cmr/m/n/12 ] = [] \OML/cmm/m/it/12 :
+[252]
+Overfull \hbox (8.22313pt too wide) in paragraph at lines 240--243
+\OT1/cmr/m/n/12 This el-e-ment is $\OML/cmm/m/it/12 G$\OT1/cmr/m/n/12 -equivari
+ant, so that it ac-tu-ally de-scends to an el-e-ment $\OML/cmm/m/it/12  \OMS/c
+msy/m/n/12 2 \OT1/cmr/m/n/12 
+[](\OML/cmm/m/it/12 X; []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 ))$
+.
  []
 
 
-Underfull \vbox (badness 1199) has occurred while \output is active []
-
- [235]
-[236]
-Underfull \vbox (badness 1721) has occurred while \output is active []
-
- [237]
-[238]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [239]
-[240]
-Overfull \hbox (30.4952pt too wide) in paragraph at lines 410--414
+ [253]
+[254]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [255]
+[256]
+Underfull \vbox (badness 3312) has occurred while \output is active []
+
+ [257]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [258]
+[259]
+Overfull \hbox (1.58655pt too wide) in paragraph at lines 410--414
 []\OT1/cmr/m/n/12 We note that the cochain com-plex of lo-cal func-tion-als is 
 a sub-com-plex of $C[](\U/eus/m/n/12 L\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/c
 mr/m/n/12 ))$,
  []
 
-[241]
+
+Underfull \vbox (badness 3758) has occurred while \output is active []
+
+ [260]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [242]
-Overfull \hbox (38.02837pt too wide) in paragraph at lines 470--472
+ [261]
+Overfull \hbox (9.11972pt too wide) in paragraph at lines 470--472
 \OT1/cmr/m/n/12 then we can write the co-cy-cle more suc-cinctly as $\OML/cmm/m
 /it/12 J[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 )(\OML/cmm/m/it/
 12 []; [] ; []\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 (\
@@ -2157,339 +1843,122 @@ OML/cmm/m/it/12 []; @[]; [] ; @[]\OT1/cmr/m/n/12 )$.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [243]
-Underfull \vbox (badness 1728) has occurred while \output is active []
-
- [244]
-Underfull \vbox (badness 3657) has occurred while \output is active []
-
- [245]
-[246]
-Overfull \hbox (5.89801pt too wide) in paragraph at lines 590--592
-\OT1/cmr/m/n/12 When $^^B = \OML/cmm/m/it/12 J[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/
-12 ^^R\OT1/cmr/m/n/12 )$ for $\OML/cmm/m/it/12 ^^R \OMS/cmsy/m/n/12 2 [][]\OT1/
-cmr/m/n/12 (\U/euf/m/n/12 g[]\OT1/cmr/m/n/12 )[]$ we de-note this by $\U/msb/m/
-n/12 U[]\OT1/cmr/m/n/12 (\U/eus/m/n/12 A\OT1/cmr/m/n/12 d(\OML/cmm/m/it/12 P\OT
-1/cmr/m/n/12 )) = \U/msb/m/n/12 U[]\OT1/cmr/m/n/12 (\U/eus/m/n/12 A\OT1/cmr/m/n
-/12 d(\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 ))$. 
- []
-
-[247] [248]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [249]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [250]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [251]
-Overfull \hbox (19.05888pt too wide) in paragraph at lines 685--689
-[]\OT1/cmr/m/n/12 The model $\OML/cmm/m/it/12 A[]$\OT1/cmr/m/n/12 , by def-i-ni
--tion, has co-ho-mol-ogy equal to the co-ho-mol-ogy of $\U/msb/m/n/12 R\OT1/cmr
-/m/n/12 ^^@(\U/msb/m/n/12 A[]\OML/cmm/m/it/12 ; \U/eus/m/n/12 O\OT1/cmr/m/n/12 
-)$.
- []
-
-
-Overfull \hbox (4.7578pt too wide) in paragraph at lines 685--689
-\OT1/cmr/m/n/12 In [[]] they have stud-ied a class of co-cy-cles as-so-ci-ated 
-to el-e-ments $\OML/cmm/m/it/12 ^^R \OMS/cmsy/m/n/12 2 [][]\OT1/cmr/m/n/12 (\U/
-euf/m/n/12 g[]\OT1/cmr/m/n/12 )[]$
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [252]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [253]
-Overfull \hbox (18.23772pt too wide) in paragraph at lines 752--759
-[]\OT1/cmr/m/n/12 Hence, the de-rived global sec-tions $\U/msb/m/n/12 R\OT1/cmr
-/m/n/12 ^^@(\U/msb/m/n/12 A[]\OML/cmm/m/it/12 ; \U/eus/m/n/12 O\OT1/cmr/m/n/12 
-)$ of $\U/eus/m/n/12 O$ \OT1/cmr/m/n/12 pro-vide a homotopy-commutative
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [254]
-[255]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [256]
-<xymatrix 4x2 170>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [257]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [258]
-<xymatrix 5x2 446>
-Overfull \hbox (27.08224pt too wide) detected at line 920
-\OML/cmm/m/it/12 ^^R[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 '[]a[]X[]; [] ; [] ; '[
-]a[]X[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 ^^R[]\OT1/cmr/m/n/12 (\OML/cmm/m/it
-/12 '[]a[]X[]; [] ; [] ; '[]a[]X[]\OT1/cmr/m/n/12 ) + [](\OML/cmm/m/it/12 '[]a[
-]X[]; [] ; [] ; '[]a[]X[]\OT1/cmr/m/n/12 )
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [259]
-Overfull \hbox (137.28293pt too wide) detected at line 929
-[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 '[]a[]X[]; [] ; '[]a[]X[]\OT1/cmr/m/n/12 ) 
-= [] [] [] [] \OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]; [] ; X
-[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
- []
-
-
-Overfull \hbox (120.27269pt too wide) detected at line 937
-\OML/cmm/m/it/12 ^^Q\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 '[]a[]X[]; [] ; '[]a[]X[]
-\OT1/cmr/m/n/12 ) = [] [] [] \OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 (\OML/cmm/m/it
-/12 X[]; [] ; X[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [260]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [261]
-Overfull \hbox (37.71344pt too wide) in alignment at lines 961--964
- [][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [262]
-Overfull \hbox (71.08601pt too wide) detected at line 998
-[] [][] \OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r\OT1/cmr/m/n/12 
-) [] \OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r\OT1/cmr/m/n/12 ) [
-] [] [] \OML/cmm/m/it/12 '[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 r\OT1/cmr/m/n/12 
-)d\OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 d\OML/cmm/m/it/12 z[]a[]\OT1/cmr/m/n/12 (
-\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 a[]\OT1/cmr/m/n/12 (\OML/cm
-m/m/it/12 z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 @a[]\OT1/cmr/m/n/12 (\OML/cmm/m/it
-/12 z\OT1/cmr/m/n/12 ) [] [] [] \OML/cmm/m/it/12 @a[]\OT1/cmr/m/n/12 (\OML/cmm/
-m/it/12 z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
- []
-
-
+[263] [264] [265] [266] [267] [268] [269]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [263]
-[264]
-Overfull \hbox (12.53671pt too wide) detected at line 1051
-[]
- []
-
-[265]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [266]
-Underfull \vbox (badness 2529) has occurred while \output is active []
-
- [267]
-[268] [269]
-Underfull \vbox (badness 1199) has occurred while \output is active []
 
  [270]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6063) has occurred while \output is active []
 
  [271]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [272]
-<xymatrix 2x2 191>
+[272]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [273]
-Underfull \vbox (badness 1259) has occurred while \output is active []
-
- [274]
-Underfull \vbox (badness 5175) has occurred while \output is active []
+[274]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [275]
-Overfull \hbox (26.78735pt too wide) in paragraph at lines 1332--1334
-[]\OT1/cmr/m/n/12 Suppose that $\OML/cmm/m/it/12 U \OMS/cmsy/m/n/12 ^^Z \OT1/cm
-r/m/n/12 ^^F$ is open. Then, the fac-tor-iza-tion al-ge-bra $\OML/cmm/m/it/12 ^
-^Y[]\U/msb/m/n/12 U[] []$
- []
-
-
-Underfull \vbox (badness 1430) has occurred while \output is active []
+<xymatrix 4x2 170>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [276]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [277]
+<xymatrix 5x2 446>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [278]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [279]
-<xymatrix 2x2 154>
-Underfull \vbox (badness 4518) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [280]
-<xymatrix 3x2 114>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4036) has occurred while \output is active []
 
  [281]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [282]
-[283]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [284]
-Overfull \hbox (13.0136pt too wide) in paragraph at lines 1546--1550
-\OT1/cmr/m/it/12 where the sum is over wheels and dis-tin-guished edges. The no
--ta-tion $\OML/cmm/m/it/12 W[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]; K[]; I[]\O
-T1/cmr/m/n/12 [\OML/cmm/m/it/12 ^^O\OT1/cmr/m/n/12 ])$
+ [283]
+[284]
+Underfull \vbox (badness 3312) has occurred while \output is active []
+
+ [285]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [286]
+[287] [288] [289] [290]
+Overfull \hbox (7.68028pt too wide) in paragraph at lines 1203--1204
+[]\OT1/cmr/m/n/12 Applied to the global sec-tions of the Kac-Moody we see that 
+there is a quasi-isomorphism 
  []
 
 
-Overfull \hbox (4.52403pt too wide) in paragraph at lines 1599--1601
-[][][]\OT1/cmr/bx/sc/12 Lemma 4.4.5. []\OT1/cmr/m/it/12 The ef-fec-tive fam-ily
- $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 L\OT1
-/cmr/m/n/12 ]\OMS/cmsy/m/n/12 g$ \OT1/cmr/m/it/12 de-fines a one-loop ex-act $\
-U/eus/m/n/12 G$\OT1/cmr/m/it/12 -equivariant
- []
+Underfull \vbox (badness 4328) has occurred while \output is active []
 
-[285]
-Overfull \hbox (3.10832pt too wide) in paragraph at lines 1624--1625
-[][][]\OT1/cmr/bx/sc/12 Proposition 4.4.6. []\OT1/cmr/m/it/12 The $\OML/cmm/m/i
-t/12 L \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 0$ \OT1/cmr/m/it/12 limit of the anom
--aly co-cy-cle $\OT1/cmr/m/n/12 ^^B = [][] ^^B[][\OML/cmm/m/it/12 L\OT1/cmr/m/n
-/12 ] \OMS/cmsy/m/n/12 2
- []
+ [291]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[286]
-Underfull \vbox (badness 2538) has occurred while \output is active []
+ [292]
+<xymatrix 2x2 191> [293]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [287]
-Overfull \hbox (36.06883pt too wide) detected at line 1735
+ [294]
+[295] [296]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [297]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [298]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [299]
+<xymatrix 2x2 154> [300] <xymatrix 3x2 114>
+Underfull \vbox (badness 1259) has occurred while \output is active []
+
+ [301]
+[302] [303]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [304]
+[305] [306] [307]
+Overfull \hbox (7.16019pt too wide) detected at line 1735
 \OML/cmm/m/it/12 W[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 []; [] ; []\OT1/cmr/m/n
 /12 ) = \OMS/cmsy/m/n/12 ^^F [] [][] [] \OML/cmm/m/it/12 K[]\OT1/cmr/m/n/12 (\O
 ML/cmm/m/it/12 z[]; z[]\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12
  (\OML/cmm/m/it/12 z[]; z[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 :
  []
 
-
-Overfull \hbox (107.9563pt too wide) detected at line 1748
-[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [288]
-Overfull \hbox (121.53944pt too wide) detected at line 1764
-[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [289]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [290]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [291]
-Overfull \hbox (8.73727pt too wide) in paragraph at lines 1846--1849
-\OT1/cmr/m/n/12 nary (re-duced) Lie al-ge-bra co-ho-mol-ogy of global sec-tions
- $C[](\U/eus/m/n/12 L\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )) \OMS
-/cmsy/m/n/12 ^^Z \OT1/cmr/m/n/12 C[](\U/eus/m/n/12 L\OT1/cmr/m/n/12 (\OML/cmm/m
-/it/12 X\OT1/cmr/m/n/12 ))$.
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [292]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [293]
-Underfull \vbox (badness 5622) has occurred while \output is active []
-
- [294]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [295]
-[296]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [297]
-[298] [299] [300]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [301]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [302]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [303]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [304]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [305]
-[306] <xymatrix 3x2 148>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [307]
-<xymatrix 2x2 154>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [308]
+[308]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [309]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [310]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[310]
+Underfull \vbox (badness 1817) has occurred while \output is active []
 
  [311]
+[312] [313]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [312]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [313]
-Underfull \vbox (badness 4492) has occurred while \output is active []
 
  [314]
-Underfull \vbox (badness 3884) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [315]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [316]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [317]
+[316] [317]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [318]
-[319]) (./nuthesis-template.bbl [320]
-References
+[319]
+Underfull \vbox (badness 7415) has occurred while \output is active []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [321
-
-
-]
+ [320]
+[321]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [322]
@@ -2499,65 +1968,148 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [324]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1701) has occurred while \output is active []
 
  [325]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [326]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [327]
+[326] [327] <xymatrix 3x2 148>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [328]
+<xymatrix 2x2 154>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [329]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [330]
+[331]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [331])
-(./appendix.tex [332]
-Appendix A
-
-Overfull \hbox (5.11844pt too wide) in paragraph at lines 17--19
-[]\OT1/cmr/m/n/12 The dg com-mu-ta-tive al-ge-bra $\U/msb/m/n/12 R\OT1/cmr/m/n/
-12 (\U/msb/m/n/12 A[]\OML/cmm/m/it/12 ; \U/eus/m/n/12 O[]\OT1/cmr/m/n/12 )$ is 
-well-defined up to quasi-isomorphism.
- []
-
-
+ [332]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [333
-
-
-]
-Overfull \hbox (1.44325pt too wide) in paragraph at lines 43--45
-\OT1/cmr/m/n/12 module given by the de-rived space of sec-tions of holo-mor-phi
-c $\OML/cmm/m/it/12 p$\OT1/cmr/m/n/12 -forms $\U/msb/m/n/12 R\OT1/cmr/m/n/12 ^^
-@(\U/msb/m/n/12 A[]\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 
-[])$.
- []
-
-
-Underfull \vbox (badness 3158) has occurred while \output is active []
+ [333]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [334]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [335])
+ [335]
+Overfull \hbox (9.43594pt too wide) in paragraph at lines 2471--2472
+[][][]\OT1/cmr/bx/sc/12 Lemma 4.5.14. []\OT1/cmr/m/it/12 The $\U/euf/m/n/12 g$\
+OT1/cmr/m/it/12 -module struc-ture on the cochain com-plexes $\OT1/cmr/m/n/12 C
+[](\U/euf/m/n/12 g\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 and $\OT1/cmr/m/n/12 C[](
+\U/euf/m/n/12 g\OT1/cmr/m/n/12 )$
+ []
+
 [336]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
- (./nuthesis-template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
-Package rerunfilecheck Info: File `nuthesis-template.out' has not changed.
-(rerunfilecheck)             Checksum: 2BD77493EB6E66A3CD5C79E735E65D61;2188.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [337]
+Overfull \hbox (4.67442pt too wide) in paragraph at lines 2560--2563
+ \OT1/cmr/bx/sc/12 4.5.4.1.From GF classes to lo-cal func-tion-als.[] \OT1/cmr/
+m/n/12 The de-scrip-tion of the one-dimensional
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [338]
+Underfull \vbox (badness 4886) has occurred while \output is active []
+
+ [339]
+[340]) (./Dissertation - B Williams.bbl [341]
+References
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [342
+
+
+]
+Underfull \hbox (badness 1442) in paragraph at lines 75--79
+[]\OT1/cmr/m/n/12 I. N. Bern-stein and B. I. Rosen-feld. Ho-mo-ge-neous spaces 
+of infinite-
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 86--89
+[]\OT1/cmr/m/n/12 Marco Brunella. On trans-versely holo-mor-phic flows. I. \OT1
+/cmr/m/it/12 In-vent. Math.\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [343]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [344]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [345]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [346]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [347]
+Underfull \hbox (badness 2818) in paragraph at lines 280--283
+[][]\OT1/cmr/m/n/12 Etienne Ghys. On trans-versely holo-mor-phic flows. II. \OT
+1/cmr/m/it/12 In-vent. Math.\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [348]
+Underfull \hbox (badness 1688) in paragraph at lines 323--326
+[]\OT1/cmr/m/n/12 Owen Gwilliam and Brian Williams. The holo-mor-phic bosonic s
+tring.
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [349]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [350]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [351]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [352])
+(./appendix.tex [353]
+Appendix A
+
+Overfull \hbox (5.71246pt too wide) in paragraph at lines 9--14
+[]\OT1/cmr/m/n/12 Let $\U/msb/m/n/12 A[]$ \OT1/cmr/m/n/12 be al-ge-braic affine
+ space with sheaf of func-tions given by $\U/eus/m/n/12 O[]\OT1/cmr/m/n/12 (\U/
+msb/m/n/12 A[]\OT1/cmr/m/n/12 ) = \U/msb/m/n/12 C\OT1/cmr/m/n/12 [\OML/cmm/m/it
+/12 z[]; [] ; z[]\OT1/cmr/m/n/12 ]$.
+ []
+
+[354
+
+
+]
+Underfull \vbox (badness 1867) has occurred while \output is active []
+
+ [355]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [356])
+[357]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 189.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 189.
+ (./Dissertation - B Williams.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 189.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 189.
+Package rerunfilecheck Info: File `"Dissertation - B Williams".out' has not cha
+nged.
+(rerunfilecheck)             Checksum: E9A01D67A0CFC75C755807080DD13BD7;2174.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2565,16 +2117,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 184.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
  ) 
 Here is how much of TeX's memory you used:
- 26582 strings out of 492995
- 508945 string characters out of 6132704
- 637681 words of memory out of 5000000
- 28461 multiletter control sequences out of 15000+600000
+ 26184 strings out of 492995
+ 503172 string characters out of 6132704
+ 623362 words of memory out of 5000000
+ 28035 multiletter control sequences out of 15000+600000
  21210 words of font info for 89 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 63i,15n,84p,3254b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,18n,84p,3264b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -2607,10 +2159,10 @@ texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2
 ve/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/xypic/xycmat10.pfb></usr/local/texlive
 /2017/texmf-dist/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on nuthesis-template.pdf (336 pages, 1252218 bytes).
+Output written on "Dissertation - B Williams.pdf" (357 pages, 1268439 bytes).
 PDF statistics:
- 3033 PDF objects out of 3580 (max. 8388607)
- 2633 compressed objects within 27 object streams
- 967 named destinations out of 1000 (max. 500000)
+ 3149 PDF objects out of 3580 (max. 8388607)
+ 2727 compressed objects within 28 object streams
+ 999 named destinations out of 1000 (max. 500000)
  250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

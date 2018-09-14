@@ -131,7 +131,9 @@ One can also study the problem of quantizing a higher dimensional version of the
 In general there is a more sensitive obstruction, which is still satisfied so long as the target admits a flat connection.
 
 In the final section of this chapter we turn to a description of the local operators of the theory. 
-\brian{say more.}
+The factorization algebra of observables is holomorphically translation invariant, in the sense of Section \ref{sec: hol trans}.
+We show that there is a subspace of the operators supported on the sphere in $\CC^d$ that the factorization product endows with the structure of an associative algebra.
+Further, we show that the state space is a natural dg module for this associative algebra, and we express it as a vacuum representation of the sphere algebra. 
 
 \section{Gelfand-Kazhdan formal geometry} \label{sec: gk formal geometry}
 
@@ -485,19 +487,19 @@ have actions of both the pair and the algebra $\hO_n$ with obvious
 compatibility restrictions. 
 
 \begin{dfn} A {\em formal $\hO_n$-module} is a
-  vector space $\cV$ equipped with
+  vector space $\sV$ equipped with
 \begin{itemize}
 \item[(i)] the structure of a $(\Vect, \GL_n)$-module;
 \item[(ii)] the structure of a $\hO_n$-module;
 \end{itemize}
 such that 
 \begin{itemize}
-\item[(1)] for all $X \in \Vect$, $f \in \hO_n$ and $v \in \cV$ we
+\item[(1)] for all $X \in \Vect$, $f \in \hO_n$ and $v \in \sV$ we
   have $X(f \cdot v) = X(f) \cdot v + f \cdot (X \cdot v)$;
 \item[(2)] for all $A \in \GL_n$ we have $A (f \cdot v) = (A \cdot f) \cdot (A \cdot v)$,  where $A$ acts on $f$ by a linear change of frame.
 \end{itemize}
 A morphism of formal $\hO_n$-modules is a $\hO_n$-linear map of
-$(\Vect, \GL_n)$-modules $f : \cV \to \cV'$. We denote this category
+$(\Vect, \GL_n)$-modules $f : \sV \to \sV'$. We denote this category
 by $\Mod_{(\Vect, \GL_n)}^{\hO_n}$. 
 \end{dfn}
 
@@ -527,7 +529,7 @@ X \cdot (s \otimes t) = (X s) \otimes t + s \otimes (Xt).
 This should not look surprising; it is the same formula for tensoring
 $D$-modules over $\hO$. 
 
-The internal hom $\Hom_{\hO}(\cV,\cW)$ also provides a vector bundle on the formal disk, 
+The internal hom $\Hom_{\hO}(\sV,\sW)$ also provides a vector bundle on the formal disk, 
 where the Harish-Chandra action is extended by
 \[
 (X \cdot \phi)(v) = X \cdot (\phi(v)) - \phi(X\cdot v). 
@@ -540,12 +542,12 @@ Observe that for any $D$-module $M$, we have an isomorphism
 since a map of $\hD$-modules out of $\hO$ is determined by where it sends the constant function 1. 
 Hence we find that there is a quasi-isomorphism 
 \[
-\RR\Hom_{D}(\hO, \cV) \simeq \clie^*(\Vect ; \cV),
+\RR\Hom_{D}(\hO, \sV) \simeq \clie^*(\Vect ; \sV),
 \]
 or more accurately a zig-zag of quasi-isomorphisms. Here
-$\clie^*(\Vect ; \cV)$ is the continuous cohomology of $\Vect$ with
-coefficients in $\cV$. This is known as the {\em Gelfand-Fuks}
-cohomology of $\cV$ and is what we use for the remainder of the
+$\clie^*(\Vect ; \sV)$ is the continuous cohomology of $\Vect$ with
+coefficients in $\sV$. This is known as the {\em Gelfand-Fuks}
+cohomology of $\sV$ and is what we use for the remainder of the
 paper. 
 
 This relationship extends to the $\GL_n$-equivariant setting as well, giving us the following result.
@@ -553,7 +555,7 @@ This relationship extends to the $\GL_n$-equivariant setting as well, giving us 
 \begin{lem}
 There is a quasi-isomorphism
 \[
-\clie^*(\Vect,\GL_n; \cV) \simeq \RR \Hom_D(\hO,\cV)^{\GL_n-{\rm eq}},
+\clie^*(\Vect,\GL_n; \sV) \simeq \RR \Hom_D(\hO,\sV)^{\GL_n-{\rm eq}},
 \]
 where the superscript $\GL_n-{\rm eq}$ denotes the $\GL_n$-equivariant maps.
 \end{lem}
@@ -572,7 +574,7 @@ hence makes its sheaf of sections a $D$-module on the formal disk.
 \end{rmk}
 
 Many of the important $\hO_n$-modules we will consider simply come from linear tensor representations of $\GL_n$. 
-Given a finite-dimensional $\GL_n$-representation $V$, we construct a $\hO_n$-module $\cV \in \VB_n$ as follows. 
+Given a finite-dimensional $\GL_n$-representation $V$, we construct a $\hO_n$-module $\sV \in \VB_n$ as follows. 
 
 Consider the decreasing filtration of $\Vect$ by vanishing order of jets 
 \ben
@@ -582,14 +584,14 @@ The induced map $\fm_n^1 \cdot \Vect \to \fm_n^1 \cdot \Vect / \fm_n^2
 \cdot \Vect \cong \fgl_n$ allows us to restrict $V$ to a $\fm_n^1 \cdot
 \Vect$-module. 
 We  then coinduce this module along the inclusion $\fm^1 \cdot \Vect
-\subset \Vect$ to get a $\Vect$-module $\cV = \Hom_{\fm_n^1 \cdot \Vect}(\Vect,V)$. 
-There is an induced action of $\GL_n$ on $\cV$. Indeed, as a $\GL_n$-representation one has $\cV \cong \hO_n \tensor_{\CC} V$.
-Moreover, this action is compatible with the $\Vect$-module structure, so that $\cV$ is actually a $(\Vect, \GL_n)$-module. 
+\subset \Vect$ to get a $\Vect$-module $\sV = \Hom_{\fm_n^1 \cdot \Vect}(\Vect,V)$. 
+There is an induced action of $\GL_n$ on $\sV$. Indeed, as a $\GL_n$-representation one has $\sV \cong \hO_n \tensor_{\CC} V$.
+Moreover, this action is compatible with the $\Vect$-module structure, so that $\sV$ is actually a $(\Vect, \GL_n)$-module. 
 Thus, the construction provides a functor  from $\Rep_{\GL_n}$ to
 $\VB_n$.
 
 \begin{dfn} 
-We denote by ${\rm Tens}_n$ the image of finite-dimensional $\GL_n$-representations in $\VB_n$ along this functor. 
+We denote by ${\rm Tens}_n$ the image of finite-dimensional $\GL_n$ representations in $\VB_n$ along this functor. 
 We call it the category of {\em formal tensor fields}.
 \end{dfn}
 
@@ -639,15 +641,15 @@ construction on all $n$-manifolds to the problem of making an
 equivariant construction on the formal $n$-disk,
 since the descent procedure automates extension from the formal to the global.
 
-Note that every formal vector bundle $\cV \in \WGLCAT$ is naturally filtered via a filtration inherited from $\hO_n$. 
-Explicitly, we see that $\cV$ is the limit of the sequence of finite-dimensional vector spaces
+Note that every formal vector bundle $\sV \in \WGLCAT$ is naturally filtered via a filtration inherited from $\hO_n$. 
+Explicitly, we see that $\sV$ is the limit of the sequence of finite-dimensional vector spaces
 \[
 \cdots \to \hO_n/\fm_n^k \otimes V \to \cdots \to \hO_n/\fm_n \otimes V \cong V
 \]
 where $V$ is the underlying $\GL_n$-representation.
 Each quotient $\hO_n/\fm_n^k \otimes V$ is a module over $\Aut_{n,k}$, and 
 hence determines a vector bundle on $X$ by the associated bundle construction along $X^{coor}_k$.
-In this way, $\cV$ produces a natural sequence of vector bundles on $X$ and thus a pro-vector bundle on $X$.
+In this way, $\sV$ produces a natural sequence of vector bundles on $X$ and thus a pro-vector bundle on $X$.
 
 Given a formal exponential $\sigma$ on $X$, we obtain a $\GL_n$-equivariant map from $\Fr_X$ to $X^{coor}_k$ for every $k$,
 by composing the projection map $X^{coor} \to X_k^{coor}$ with the $\GL_n$-equivariant map from $\Fr_X$ to $X^{coor}$.
@@ -658,8 +660,8 @@ by composing the projection map $X^{coor} \to X_k^{coor}$ with the $\GL_n$-equiv
 \desc : \GK_n^\op \times \WGLCAT \to \Pro(\VB)_{flat}
 \]
 sending $(X,\sigma)$ --- a Gelfand-Kazhdan structure
---- and a formal vector bundle $\cV$ 
-to the pro-vector bundle $\Fr_X \times^{\GL_n} \cV$ with flat connection induced by the Grothendieck connection.
+--- and a formal vector bundle $\sV$ 
+to the pro-vector bundle $\Fr_X \times^{\GL_n} \sV$ with flat connection induced by the Grothendieck connection.
 \end{dfn}
 
 When the Gelfand-Kazhdan structure $(X, \sigma)$ is fixed we will denote the corresponding functor $\desc((X, \sigma), -) :  \WGLCAT \to \Pro(\VB)_{flat}$ by $\desc_{X,\sigma}$. 
@@ -678,9 +680,9 @@ For any choice of Gelfand-Kazhdan structure $(X,\sigma)$, the descent functor $\
 \end{lem}
 
 \begin{proof}
-For every $\cV,\cW$ in $\WGLCAT$, we have natural maps
+For every $\sV,\sW$ in $\WGLCAT$, we have natural maps
 \[
-(\Omega^*(\Fr_X) \otimes \cV)_{basic} \otimes (\Omega^*(\Fr_X) \otimes \cW)_{basic} \to (\Omega^*(\Fr_X) \otimes (\cV \otimes \cW))_{basic} \to (\Omega^*(\Fr_X) \otimes (\cV \otimes_{\hO_n} \cW))_{basic}
+(\Omega^*(\Fr_X) \otimes \sV)_{bas} \otimes (\Omega^*(\Fr_X) \otimes \sW)_{bas} \to (\Omega^*(\Fr_X) \otimes (\sV \otimes \sW))_{bas} \to (\Omega^*(\Fr_X) \otimes (\sV \otimes_{\hO_n} \sW))_{bas}
 \]
 and the composition provides the natural transformation producing the lax symmetric monoidal structure.
 \end{proof}
@@ -710,10 +712,10 @@ this pro-vector bundle over $x$ can be identified with
 This pro-vector bundle has a canonical flat connection.
 
 \begin{prop}
-For $\cV \in \VB_n$ corresponding to the $\GL_n$-representation $V$,
+For $\sV \in \VB_n$ corresponding to the $\GL_n$-representation $V$,
 there is a natural isomorphism of flat pro-vector bundles
 \[
-\desc((X, \sigma),\cV) \cong {\rm Jet}^{hol}(\Fr_X
+\desc((X, \sigma),\sV) \cong {\rm Jet}^{hol}(\Fr_X
 \times^{\GL_n} V)
 \]
 In other words, the functor of descent along the frame bundle is
@@ -722,13 +724,13 @@ naturally isomorphic to the functor of taking $\infty$-jets of the associated bu
 
 As a corollary, we see that the associated sheaf of flat sections is
 \ben
-\sdesc ((X,\sigma), \cV) \cong \Gamma^{hol}(\Fr_X
+\sdesc ((X,\sigma), \sV) \cong \Gamma^{hol}(\Fr_X
 \times^{\GL_n} V)
 \een
 where $\Gamma^{hol}(-)$ denotes holomorphic sections. 
 
 In other words, Gelfand-Kazhdan descent produces every tensor bundle. 
-For example, for the defining representation $V = \CC^n$ of $\GL_n$, we have $\cV =\hT_n$, 
+For example, for the defining representation $V = \CC^n$ of $\GL_n$, we have $\sV =\hT_n$, 
 i.e., the vector fields on the formal disk viewed as the adjoint representation of  $\Vect$. 
 Under Gelfand-Kazhdan descent, it produces the tangent bundle ${\rm T}$ on $\Hol_n$.
 
@@ -814,17 +816,17 @@ Moreover, we have the following.
 The cohomology class of $(2\pi i)^{-k} S_k(\At(V))$ provides a section
 of the sheaf $H^k(X ; \Omega^{k,hol})$. On any compact K\"ahler manifold, it agrees with $c_k(V)$.
 \end{lem}
-desc
+
 \subsubsection{The formal Atiyah class}
 
-We now wish to show that Gelfand-Kazhdan descent sends an exact sequence in $\VB_{\hc}$ to an exact sequence in $\vb(\GK_n)$ (and hence in $\vb(\Hol_n)$). 
+We show that Gelfand-Kazhdan descent sends an exact sequence in $\VB_{\hc}$ to an exact sequence in $\vb(\GK_n)$ (and hence in $\vb(\Hol_n)$). 
 It will then remain to verify that for each tensor bundle on $\Hol_n$, 
 there is an exact sequence over the formal $n$-disk that descends to the Atiyah sequence for that tensor bundle.
 
-We will use the notation $\desc(\cV)$ to denote the functor $\desc(-,\cV): \GK_n^\op \to \Pro(\vb)_{flat}$, 
+We will use the notation $\desc(\sV)$ to denote the functor $\desc(-,\sV): \GK_n^\op \to \Pro(\vb)_{flat}$, 
 since we want to focus on the sheaf on $\GK_n$ (or $\Hol_n$) defined
-by each formal vector bundle~$\cV$. Taking flat sections we get an
-$\cO$-module $\sdesc(\cV)$ which is locally free of finite
+by each formal vector bundle~$\sV$. Taking flat sections we get an
+$\cO$-module $\sdesc(\sV)$ which is locally free of finite
 rank and so determines an object in $\vb(\GK_n)$. 
 
 \begin{lem}
@@ -851,26 +853,26 @@ hypothesis.
  %To see that we recover our original sequence, note that \owen{not sure how much to add here}
 
 \begin{cor}
-There is a canonical map from $\Ext^1_{\hc}(\cB,\cA)$ to $\Ext^1_{\GK_n}(\sdesc(\cB), \sdesc(\cA))$.
+There is a canonical map from $\Ext^1_{\hc}(\cB,\cA)$ to \\ $\Ext^1_{\GK_n}(\sdesc(\cB), \sdesc(\cA))$.
 \end{cor}
 
-In particular, once we produce the $\hc$-Atiyah sequence for a formal tensor field $\cV$, 
-we will have a very local model for the Atiyah class living in $\clie^*(\Vect,\GL_n; \hOmega^1_n \otimes_{\hO_n} \End_{\hO_n}(\cV))$.
+In particular, once we produce the $\hc$-Atiyah sequence for a formal tensor field $\sV$, 
+we will have a very local model for the Atiyah class living in $\clie^*(\Vect,\GL_n; \hOmega^1_n \otimes_{\hO_n} \End_{\hO_n}(\sV))$.
 
-%\owen{For $\cV$ a formal tensor field, there is a natural Lie algebra inclusion $\Vect \to \End_\CC(\cV)$ in addition to the Lie algebra inclusion $\End_{\hO_n}(\cV)) \to \End_\CC(\cV)$.
-%By direct computation (e.g., picking an $\hO_n$ frame for $\cV$), one can show that the commutator of a vector field with an $\hO_n$-linear endomorphism is again an $\hO_n$-linear endomorphism.
-%Hence these subalgebras together span a Lie subalgebra, which we denote $\cA(\cV)$ for the {\em Atiyah algebra} of $\cV$.
+%\owen{For $\sV$ a formal tensor field, there is a natural Lie algebra inclusion $\Vect \to \End_\CC(\sV)$ in addition to the Lie algebra inclusion $\End_{\hO_n}(\sV)) \to \End_\CC(\sV)$.
+%By direct computation (e.g., picking an $\hO_n$ frame for $\sV$), one can show that the commutator of a vector field with an $\hO_n$-linear endomorphism is again an $\hO_n$-linear endomorphism.
+%Hence these subalgebras together span a Lie subalgebra, which we denote $\cA(\sV)$ for the {\em Atiyah algebra} of $\sV$.
 %In fact, these Lie algebras sit in an exact sequence
 %\[
-%\End_{\hO_n}(\cV) \to \cA(\cV) \xto{\sigma} \End_{\hO_n}(\cV) \otimes_{\hO_n}\hT_n.
+%\End_{\hO_n}(\sV) \to \cA(\sV) \xto{\sigma} \End_{\hO_n}(\sV) \otimes_{\hO_n}\hT_n.
 %\]
-%This sequence splits as $\hO_n$-modules (e.g., by picking an $\hO_n$ frame for $\cV$ and coordinates on the formal $n$-disk), 
+%This sequence splits as $\hO_n$-modules (e.g., by picking an $\hO_n$ frame for $\sV$ and coordinates on the formal $n$-disk), 
 %but it is also a sequence of formal tensor fields and typically does not split in $\vb(\hD^n)_{\hc}$.}
 
 %\owen{\begin{dfn}
-%The {\em $\hc$-Atiyah sequence} of $\cV$ is the short exact sequence
+%The {\em $\hc$-Atiyah sequence} of $\sV$ is the short exact sequence
 %\[
-%\End_{\hO}(\cV) \to \cA(\cV) \to \hT_n
+%\End_{\hO}(\sV) \to \cA(\sV) \to \hT_n
 %\]
 %in $\vb(\hD^n)_{\hc}$.
 %\end{dfn}
@@ -878,9 +880,9 @@ we will have a very local model for the Atiyah class living in $\clie^*(\Vect,\G
 
 \subsubsection{The formal Atiyah sequence} \label{sec: formal atiyah}
 
-Let $\cV$ be a formal vector bundle. 
-We will now construct the ``formal'' Atiyah sequence associated to $\cV$.  
-First, we need to define the $(\Vect, \GL_n)$-module of {\em first order jets} of $\cV$. 
+Let $\sV$ be a formal vector bundle. 
+We will now construct the ``formal'' Atiyah sequence associated to $\sV$.  
+First, we need to define the $(\Vect, \GL_n)$-module of {\em first order jets} of $\sV$. 
 Let's begin by recalling the construction of jets in ordinary geometry.
 
 If $X$ is a manifold, we have the diagonal embedding $\Delta : X \hookrightarrow X \times X$. 
@@ -890,12 +892,12 @@ describing the $k$th order neighborhood of the diagonal in $X \times X$.
 Let $\Delta^{(k)} : X^{(k)} \to X \times X$ denote the natural map of ringed spaces.
 The projections $\pi_1, \pi_2 : X \times X \to X$ compose with $\Delta^{(k)}$ 
 to define maps $\pi^{(k)}_1, \pi_2^{(k)} : X^{(k)} \to X$. 
-Given an $\cO_X$-module $\cV$, 
+Given an $\cO_X$-module $\sV$, 
 ``push-and-pull'' along these projections,
 \ben
-J^k_X(\cV) = (\pi_1^{(k)})_* (\pi_2^{(k)})^* \cV,
+J^k_X(\sV) = (\pi_1^{(k)})_* (\pi_2^{(k)})^* \sV,
 \een
-defines the $\cO_X$-module of $k$th order jets of~$\cV$.
+defines the $\cO_X$-module of $k$th order jets of~$\sV$.
 
 There is a natural adaptation in the formal case. 
 The diagonal map corresponds to an algebra map $\Delta^* : \hO_{2n} \to \hO_n$.
@@ -915,30 +917,30 @@ which in coordinates are $\pi_1^*(t_i) = t'_i$ and $\pi_2^*(t_i)
 =~t''_i$. 
 
 \begin{dfn} 
-Let $\cV$ be a formal vector bundle on $\hD^n$.
+Let $\sV$ be a formal vector bundle on $\hD^n$.
 Consider the $\hO_{2n} / \Hat{I}_n^{k+1}$-module
-$\cV \tensor_{\hO_n} \left(\hO_{2n} / \Hat{I}_n^{k+1}\right)$,
+$\sV \tensor_{\hO_n} \left(\hO_{2n} / \Hat{I}_n^{k+1}\right)$,
 where the tensor product uses the $\hO_n$-module structure on the
 quotient $\hO_{2n} / \Hat{I}_n^{k+1}$ coming from the map $\pi_2^{(k)*}$. 
-We define the {\em $k$th order formal jets of $\cV$}, denoted $J^k(\cV)$, 
+We define the {\em $k$th order formal jets of $\sV$}, denoted $J^k(\sV)$, 
 as the restriction of this $\hO_{2n}/\Hat{I}_n^{k+1}$-module 
 to a $\hO_n$-module using the map $\pi_1^{(k)*} : \hO_n \to \hO_{2n} / \Hat{I}_n^{k+1}$. 
 \end{dfn}
 
-\begin{lem} For any $\cV \in \VB_n$ the $k$th order formal jets
-  $J^k(\cV)$ is an element of $\VB_n$. 
+\begin{lem} For any $\sV \in \VB_n$ the $k$th order formal jets
+  $J^k(\sV)$ is an element of $\VB_n$. 
 \end{lem}
 \begin{proof}
-For $\cV$ in $\VB_n$ there is an induced action of $(\Vect, \GL_n)$ on
-the tensor product $\cV \tensor_{\hO_n} \hO_{2n} /
+For $\sV$ in $\VB_n$ there is an induced action of $(\Vect, \GL_n)$ on
+the tensor product $\sV \tensor_{\hO_n} \hO_{2n} /
 \Hat{I}_{n}^{k+1}$. For fixed $k$ we see that $\hO_{2n} / \Hat{I}_n^{k+1}$ is
 finite rank as a $\hO_n$ module. Thus it
 is immediate that this module satisfies the conditions of a formal
 vector bundle.
 \end{proof}
 
-As a $\CC$-linear vector space we have $J^1(\cV) = \cV \oplus (\cV \tensor_{\hO_n} \hOmega^1_n)$. 
-For $f \in \hO_n$ and $(v, \beta) \in \cV \oplus (\cV \tensor \hOmega^1_n)$, 
+As a $\CC$-linear vector space we have $J^1(\sV) = \sV \oplus (\sV \tensor_{\hO_n} \hOmega^1_n)$. 
+For $f \in \hO_n$ and $(v, \beta) \in \sV \oplus (\sV \tensor \hOmega^1_n)$, 
 the $\hO_n$-module structure is given by
 \ben
 f \cdot (v, \beta) = (f v, (f \beta + v \tensor \d f)).
@@ -949,78 +951,78 @@ exact analogy as in the non-formal case which can also be found in
 Section 4 of \cite{atiyah}, for instance. 
 
 \begin{prop}\label{1jet2} 
-For any $\cV \in \VB_{\hc}$, the $\hO_n$-module $J^1(\cV)$ has a compatible action of the pair $(\Vect, \GL_n)$ and hence determines an object in $\VB_{\hc}$. 
+For any $\sV \in \VB_{\hc}$, the $\hO_n$-module $J^1(\sV)$ has a compatible action of the pair $(\Vect, \GL_n)$ and hence determines an object in $\VB_{\hc}$. 
 Moreover, it sits in a short exact sequence of formal vector bundles 
 \be\label{formalatiyah1}
-\cV \tensor \hOmega^1_n \to J^1 (\cV) \to \cV .
+\sV \tensor \hOmega^1_n \to J^1 (\sV) \to \sV .
 \ee
 Finally, the Gelfand-Kazhdan descent of this short exact sequence is isomorphic to the Atiyah sequence
 \ben
-\sdesc_{\GK}(\cV) \tensor \Omega^1_{hol} \to J^1 \sdesc_{\GK} (\cV) \to \sdesc_{\GK}(\cV) .
+\sdesc_{\GK}(\sV) \tensor \Omega^1_{hol} \to J^1 \sdesc_{\GK} (\sV) \to \sdesc_{\GK}(\sV) .
 \een
-In particular, $J^1 \desc_{\GK}(\cV) = \desc_{\GK}(J^1 \cV)$.
+In particular, $J^1 \desc_{\GK}(\sV) = \desc_{\GK}(J^1 \sV)$.
 \end{prop}
 
-We henceforth call the sequence (\ref{formalatiyah1}) {\em the formal Atiyah sequence} for $\cV$. 
+We henceforth call the sequence (\ref{formalatiyah1}) {\em the formal Atiyah sequence} for $\sV$. 
 
 \begin{rmk} 
-Note that $J^1(\cV)$ is an element of the category $\VB_n$ but it is {\em not} a formal tensor field. 
+Note that $J^1(\sV)$ is an element of the category $\VB_n$ but it is {\em not} a formal tensor field. 
 That is, it does not come from a linear representation of $\GL_n$ via coinduction. 
 \end{rmk}
 
 \begin{rmk} 
 A choice of a formal coordinate defines a splitting of the first-order jet sequence as $\hO_n$-modules. 
-If we write $\cV = \hO_n \tensor_\CC \cV$, then one defines 
+If we write $\sV = \hO_n \tensor_\CC \sV$, then one defines 
 \ben
-j^1 : \cV \to J^1 \cV \;\; , \;\; f \tensor_\CC v \mapsto (f \tensor_\CC v, (1 \tensor_\CC v) \tensor_{\cO} \d f) .
+j^1 : \sV \to J^1 \sV \;\; , \;\; f \tensor_\CC v \mapsto (f \tensor_\CC v, (1 \tensor_\CC v) \tensor_{\cO} \d f) .
 \een
-It is a map of $\hO_n$-modules, and it splits the obvious projection $J^1(\cV) \to \cV$. 
+It is a map of $\hO_n$-modules, and it splits the obvious projection $J^1(\sV) \to \sV$. 
 We stress, however, that it is {\em not} a splitting of $\Vect$-modules. 
 We will soon see that this is reflected by the existence of a certain characteristic class in Gelfand-Fuks cohomology. 
 \end{rmk}
 
 Note the following corollary, which follows from the identification 
-$$\Ext^1(\cV \tensor_{\hO_n} \hOmega_{n}^1, \cV) \cong \clie^1(\Vect,\GL_n; \hOmega^1_n \otimes_{\hO_n} \End_{\hO_n}(\cV))$$ 
+$$\Ext^1(\sV \tensor_{\hO_n} \hOmega_{n}^1, \sV) \cong \clie^1(\Vect,\GL_n; \hOmega^1_n \otimes_{\hO_n} \End_{\hO_n}(\sV))$$ 
 and from the observation that an exact sequence in $\vb(\hD^n)$ maps to an exact sequence in $\vb(\GK_n)$.
 
 \begin{cor}
-There is a cocycle $\At^\GF(\cV) \in \clie^1(\Vect,\GL_n; \hOmega^1_n \otimes_{\hO_n} \End_{\hO_n}(\cV))$ representing the Atiyah class $\At(\desc(\cV))$. 
+There is a cocycle $\At^\GF(\sV) \in \clie^1(\Vect,\GL_n; \hOmega^1_n \otimes_{\hO_n} \End_{\hO_n}(\sV))$ representing the Atiyah class $\At(\desc(\sV))$. 
 \end{cor}
 
-We call this cocycle the Gelfand-Fuks-Atiyah class of $\cV$ since it
-descends to the ordinary Atiyah class for $\desc(\cV)$ as a sheaf of
+We call this cocycle the Gelfand-Fuks-Atiyah class of $\sV$ since it
+descends to the ordinary Atiyah class for $\desc(\sV)$ as a sheaf of
 $\cO$-modules. 
 
 %We call this cocycle the {\em universal Atiyah class} since it descends to the Atiyah class on any $n$-manifold with respect to the map
 %\ben
-%{\rm H}^1(\Vect, \GL_n ; \hOmega^1_n \tensor \End_{\hO_n}(\cV)) \cong \Ext^1(\cV \tensor \hOmega^1_n, \cV) \to \Ext_{\GK_n}(\desc(\cV) \tensor \Omega^1, \desc(\cV)) .
+%{\rm H}^1(\Vect, \GL_n ; \hOmega^1_n \tensor \End_{\hO_n}(\sV)) \cong \Ext^1(\sV \tensor \hOmega^1_n, \sV) \to \Ext_{\GK_n}(\desc(\sV) \tensor \Omega^1, \desc(\sV)) .
 %\een
 
 %Let us fix a GK-structure $\sigma$ over a complex manifold $X$. 
 
 %\begin{lemma} There is a quasi-isomorphism
 %\ben
-%\Ext^1_{\cO_X}(\sdesc(\sigma, \cV_1), \sdesc(\sigma, \cV_2)) \simeq \bdesc()
+%\Ext^1_{\cO_X}(\sdesc(\sigma, \sV_1), \sdesc(\sigma, \sV_2)) \simeq \bdesc()
 %\een
 %\end{lemma}
 
-%For a fixed GK-structure $\sigma$ over a complex manifold $X$ the image of $\At^\GF(\cV)$ under t%he characteristic map
+%For a fixed GK-structure $\sigma$ over a complex manifold $X$ the image of $\At^\GF(\sV)$ under t%he characteristic map
 %\ben
-%\ch_\sigma : \clie^*(\Vect , \GL_n ; \hOmega^1 \tensor_{\hO_n} \End_{\hO_n}(\cV)) \to \bdesc(\sigma, \\cV) = \dR\left(X ; \desc(\sigma, \cV)\right) \simeq \ch^*(X ; \sdesc(\sigma, \cV))
+%\ch_\sigma : \clie^*(\Vect , \GL_n ; \hOmega^1 \tensor_{\hO_n} \End_{\hO_n}(\sV)) \to \bdesc(\sigma, \\sV) = \dR\left(X ; \desc(\sigma, \sV)\right) \simeq \ch^*(X ; \sdesc(\sigma, \sV))
 %\een
-%agrees with the ordinary Atiyah class for $\desc(\cV)$ in cohomology.
+%agrees with the ordinary Atiyah class for $\desc(\sV)$ in cohomology.
 
 %\owen{\begin{proof}[Proof of lemma]
-%The key is to use the Lie algebra structure on the formal Atiyah sequence for $\cV$. 
-%The action of formal vector fields on $\cV$ descends to the action of vector fields on the tensor bundle $\desc(\cV)$, which is canonical and determined by the Lie derivative.
-%Likewise, the action of $\cO$-linear endomorphisms $\End_{\hO_n}(\cV)$ descends to the action of $\cO$-linear endomorphisms $\End_{\cO}(\desc(\cV))$, which is also canonical.
+%The key is to use the Lie algebra structure on the formal Atiyah sequence for $\sV$. 
+%The action of formal vector fields on $\sV$ descends to the action of vector fields on the tensor bundle $\desc(\sV)$, which is canonical and determined by the Lie derivative.
+%Likewise, the action of $\cO$-linear endomorphisms $\End_{\hO_n}(\sV)$ descends to the action of $\cO$-linear endomorphisms $\End_{\cO}(\desc(\sV))$, which is also canonical.
 %Hence, we have a short exact sequence of Lie algebras in sheaves on the site $\GK_n$, 
 %and its leftmost and rightmost terms are the same as Atiyah's sequence.
 %We need to identify the Lie algebras in the middle of the exact sequences.
-%One strategy would be to reinterpret $\cA(\cV)$ as "invariant vector fields on the total space of $\cV$ over $\hD^n$," although that may seem silly.
+%One strategy would be to reinterpret $\cA(\sV)$ as "invariant vector fields on the total space of $\sV$ over $\hD^n$," although that may seem silly.
 %\end{proof}}
 %\owen{BW suggests the following approach: verify that $\desc(\Diff^{\leq 1})$ is the appropriate tensor bundle by directly doing sufficiently many examples}
-%%\owen{I'd like to say that $$\loc(\Diff^{\leq 1}_\cV) = \Diff^{\leq 1}_{\loc(\cV)}$$ but I'm not sure how to write something rigorous. The crux seems to be showing that this localized Lie algebra, whose avatar on the formal disk acts naturally on $\cV$ as a ``Lie algebroid,'' acts on the localization of $\cV$ in the appropriate way.}
+%%\owen{I'd like to say that $$\loc(\Diff^{\leq 1}_\sV) = \Diff^{\leq 1}_{\loc(\sV)}$$ but I'm not sure how to write something rigorous. The crux seems to be showing that this localized Lie algebra, whose avatar on the formal disk acts naturally on $\sV$ as a ``Lie algebroid,'' acts on the localization of $\sV$ in the appropriate way.}
 %
 %\owen{Vague thoughts: 
 %The local action of formal vector fields globalizes to the action of vector fields on a tensor bundle, which is canonical and determined by the Lie derivative.
@@ -1029,15 +1031,15 @@ $\cO$-modules.
 %This must be somewhere in the literature.}
 
 \begin{dfn}
-The {\em Gelfand-Fuks-Chern character} is the formal sum $\ch^\GF(\cV) = \sum_{k \geq 0} \ch^\GF_k(\cV)$, 
+The {\em Gelfand-Fuks-Chern character} is the formal sum $\ch^\GF(\sV) = \sum_{k \geq 0} \ch^\GF_k(\sV)$, 
 where the $k$th component
 \ben
-{\rm ch}_k^\GF(\cV) := \frac{1}{(-2 \pi i)^k k!} {\rm Tr}({\At}^\GF(\cV)^k)
+{\rm ch}_k^\GF(\sV) := \frac{1}{(-2 \pi i)^k k!} {\rm Tr}({\At}^\GF(\sV)^k)
 \een
 lives in $\clie^k(\Vect,\GL_n; \hOmega^k_n)$.
 \end{dfn}
 
-It is a direct calculation to see that $\ch^{\GF}_k(\cV)$ is closed for
+It is a direct calculation to see that $\ch^{\GF}_k(\sV)$ is closed for
 the differential on formal differential forms, 
 i.e., it lifts to an element in $\clie^k(\Vect,\GL_n; \hOmega^k_{n,cl})$.
 
@@ -1045,16 +1047,16 @@ i.e., it lifts to an element in $\clie^k(\Vect,\GL_n; \hOmega^k_{n,cl})$.
 
 In this section we provide an explicit description of the Gelfand-Fuks-Atiyah class  
 \ben
-\At^{\rm GF}(\cV) \in \clie^1(\Vect, \GL_n ; \hOmega^1_n
-\tensor_{\hO_n} \End_{\hO}(\cV)) .
+\At^{\rm GF}(\sV) \in \clie^1(\Vect, \GL_n ; \hOmega^1_n
+\tensor_{\hO_n} \End_{\hO}(\sV)) .
 \een 
-of a formal vector bundle $\cV$. 
+of a formal vector bundle $\sV$. 
 
-By definition, any formal vector bundle has the form $\cV = \hO_n \tensor V$, 
+By definition, any formal vector bundle has the form $\sV = \hO_n \tensor V$, 
 with $V$ a finite-dimensional vector space.
-We view $V$ as the ``constant sections'' in $\cV$ by the inclusion $i: v \mapsto 1 \otimes v$.
-This map then determines a connection on $\cV$:
-we define a $\CC$-linear map $\nabla: \cV \to \hOmega^1_n \otimes_{\hO_n} \cV$
+We view $V$ as the ``constant sections'' in $\sV$ by the inclusion $i: v \mapsto 1 \otimes v$.
+This map then determines a connection on $\sV$:
+we define a $\CC$-linear map $\nabla: \sV \to \hOmega^1_n \otimes_{\hO_n} \sV$
 by saying that for any $f \in \hO_n$ and $v \in V$,
 \[
 \nabla(f v) = \d (f) v,
@@ -1064,27 +1066,27 @@ differential on functions. This connection appeared earlier when we
 defined the splitting of the jet sequence $j^1 = 1 \oplus \nabla$. 
 
 The connection $\nabla$ determines an element in $\clie^1(\Vect ;
-\hOmega^1_n \tensor_{\hO} \End_{\hO}(\cV))$, as follows. Let 
+\hOmega^1_n \tensor_{\hO} \End_{\hO}(\sV))$, as follows. Let 
 \ben
-\rho_{\cV} : \Vect \tensor \cV \to \cV
+\rho_{\sV} : \Vect \tensor \sV \to \sV
 \een
 denote the action of formal vector fields and consider the composition
 \ben
-\Vect \tensor V \xto{\id \tensor i} \Vect \tensor \cV \xto{\rho_{\cV}} \cV \xto{\nabla} \hOmega^1_n \tensor_{\hO} \cV .
+\Vect \tensor V \xto{\id \tensor i} \Vect \tensor \sV \xto{\rho_{\sV}} \sV \xto{\nabla} \hOmega^1_n \tensor_{\hO} \sV .
 \een 
-Since $V$ spans $\cV$ over $\hO_n$, this composite map determines a $\CC$-linear map
+Since $V$ spans $\sV$ over $\hO_n$, this composite map determines a $\CC$-linear map
 \[
-\alpha_{\cV,\nabla}: \Vect \to \hOmega^1_n \tensor_{\hO} \End_{\hO}(\cV)
+\alpha_{\sV,\nabla}: \Vect \to \hOmega^1_n \tensor_{\hO} \End_{\hO}(\sV)
 \]
 by
 \[
-\alpha_{\cV,\nabla}(X)(fv) = f \nabla( \rho_\cV(X)(i(v))),
+\alpha_{\sV,\nabla}(X)(fv) = f \nabla( \rho_\sV(X)(i(v))),
 \]
 with $f \in \hO_n$ and $v \in V$.
 
 \begin{prop} \label{atiyahprop1} 
-Let $\cV$ be a formal vector bundle. 
-Then $\alpha_{\cV,\nabla}$ is a representative for the Gelfand-Fuks-Atiyah class~$\At^{\rm GF}(\cV)$. 
+Let $\sV$ be a formal vector bundle. 
+Then $\alpha_{\sV,\nabla}$ is a representative for the Gelfand-Fuks-Atiyah class~$\At^{\rm GF}(\sV)$. 
 \end{prop}
 
 \begin{proof}
@@ -1095,43 +1097,43 @@ and that choice provides a trivialization of the jet bundles by providing a pref
 This frame identifies, for instance, $J^1$ with $\hO_n \oplus \hOmega^1_n$,
 and the1-jet of a formal function $f$ can be understood as~$(f, \d f)$.
 
-For a formal vector bundle $\cV = \hO_n \otimes V$, something similar happens after choosing coordinates.
-We have $J^1(\cV) \cong \cV \oplus \hOmega^1_n \otimes_{\hO_n} \cV$ and
-the 1-jet of an element of $\cV$ can be written as
+For a formal vector bundle $\sV = \hO_n \otimes V$, something similar happens after choosing coordinates.
+We have $J^1(\sV) \cong \sV \oplus \hOmega^1_n \otimes_{\hO_n} \sV$ and
+the 1-jet of an element of $\sV$ can be written as
 \ben
 \begin{array}{cccc}
-j^1 : & \cV & \to & J^1(\cV)   \\
+j^1 : & \sV & \to & J^1(\sV)   \\
 & f v & \mapsto & (f  v, \d (f) v ) .
 \end{array}
 \een 
 where $f \in \hO_n$ and $v \in V$. 
-The projection onto the second summand is precisely the connection $\nabla$ on $\cV$ 
-determined by $\cV = \hO_n \otimes V$, the defining decomposition.
+The projection onto the second summand is precisely the connection $\nabla$ on $\sV$ 
+determined by $\sV = \hO_n \otimes V$, the defining decomposition.
 
 The Gelfand-Fuks-Atiyah class is the failure for this map $\nabla$ to be a map of $\Vect$-modules. 
 Indeed, $\nabla$ determines a map of graded vector spaces
 \ben
-1 \tensor \nabla : \clie^\#(\Vect ; \cV) \to \clie^\#(\Vect ;\hOmega^1_n
-\tensor_{\hO} \cV) .
+1 \tensor \nabla : \clie^\#(\Vect ; \sV) \to \clie^\#(\Vect ;\hOmega^1_n
+\tensor_{\hO} \sV) .
 \een
-Let $\d_{\cV}$ denote the differential on $\clie^*(\Vect; \cV)$ and
-$\d_{\Omega^1 \tensor \cV}$ denote the differential on $\clie^*(\Vect
-; \hOmega^1_n \tensor_{\hOmega} \cV)$. The failure for $1 \tensor \nabla$ is precisely the difference
+Let $\d_{\sV}$ denote the differential on $\clie^*(\Vect; \sV)$ and
+$\d_{\Omega^1 \tensor \sV}$ denote the differential on \\ $\clie^*(\Vect
+; \hOmega^1_n \tensor_{\hOmega} \sV)$. The failure for $1 \tensor \nabla$ is precisely the difference
 \be\label{difference}
-(1 \tensor \nabla) \circ \d_{\cV} - \d_{\Omega^1 \tensor \cV} \circ (1 \tensor
+(1 \tensor \nabla) \circ \d_{\sV} - \d_{\Omega^1 \tensor \sV} \circ (1 \tensor
 \nabla).
 \ee
 This difference is $\clie^\#(\Vect)$ linear and can hence be
 thought of as a cocycle of degree one in $\clie^*(\Vect ; \hOmega^1
-\tensor_{\hO} \End_{\hO} (\cV))$. This is the representative for the Atiyah
+\tensor_{\hO} \End_{\hO} (\sV))$. This is the representative for the Atiyah
 class. 
 
-We proceed to compute this difference. The differential $\d_{\cV}$ splits as $\d_{\Vect}
-\tensor 1_\cV
+We proceed to compute this difference. The differential $\d_{\sV}$ splits as $\d_{\Vect}
+\tensor 1_\sV
 + \d'$ where $\d_{\Vect}$ is the differential on the complex
 $\clie^*(\Vect)$ and $\d'$ encodes the action of $\Vect$ on
-$\cV$. Likewise, the differential $\d_{\Omega^1 \tensor \cV}$ splits
-as $\d_{\Vect} \tensor 1_{\Omega^1 \tensor \cV} + \d_{\Omega^1}
+$\sV$. Likewise, the differential $\d_{\Omega^1 \tensor \sV}$ splits
+as $\d_{\Vect} \tensor 1_{\Omega^1 \tensor \sV} + \d_{\Omega^1}
 \tensor 1_V + 1_{\Omega^1} \tensor \d '$ where $\d_{\Omega^1}$ is the differential on the complex $\clie^*(\Vect ;
 \hOmega^1_n)$. 
 
@@ -1144,11 +1146,11 @@ action of vector fields so that $(1 \tensor \d) \circ
 \tensor \nabla) .
 \een
 By definition $\d'$ is the piece of the Chevalley-Eilenberg
-differential that encodes the action of $\Vect$ on $\cV$, so if we
+differential that encodes the action of $\Vect$ on $\sV$, so if we
 evaluate on an element of the form $1 \in v \in \clie^0(\Vect ; V)
-\subset \clie^0(\Vect ; \cV)$ the only term that survives is the GF 1-cocycle
+\subset \clie^0(\Vect ; \sV)$ the only term that survives is the GF 1-cocycle
 \ben
-X \mapsto \nabla \d'(1 \tensor v)(X) = \nabla (\rho_\cV(X) (v)) .
+X \mapsto \nabla \d'(1 \tensor v)(X) = \nabla (\rho_\sV(X) (v)) .
 \een
 as desired. 
 \end{proof}
@@ -1199,13 +1201,13 @@ Explicitly:
 
 \subsection{A family of extended pairs}
 
-We will be most interested in the cocycles $\ch_k(\cV)$ for $k \geq 2$. 
-When $k=2$ we obtain a $2$-cocycle with values in $\hOmega^2_{n,cl}$, $\ch_2(\cV) \in \clie(\Vect , \GL_n ; \hOmega^2_{n,cl})$. 
-This $2$-cocycle $\ch_2^{\GF}(\cV)$ determines an abelian extension Lie algebras of $\Vect$ by $\hOmega^2_{n,cl}$
+We will be most interested in the cocycles $\ch_k(\sV)$ for $k \geq 2$. 
+When $k=2$ we obtain a $2$-cocycle with values in $\hOmega^2_{n,cl}$, $\ch_2(\sV) \in \clie(\Vect , \GL_n ; \hOmega^2_{n,cl})$. 
+This $2$-cocycle $\ch_2^{\GF}(\sV)$ determines an abelian extension Lie algebras of $\Vect$ by $\hOmega^2_{n,cl}$
 \ben
-0 \to \hOmega^2_{n,cl} \to \Tilde{\rm W}_{n, \cV} \to \Vect \to 0 .
+0 \to \hOmega^2_{n,cl} \to \Tilde{\rm W}_{n, \sV} \to \Vect \to 0 .
 \een
-When $\cV = \hT_n$, denote this extension by $\Tilde{\rm W}_{n, \cV} = \Tilde{\rm W}_{n,1}$. (The notation will become clearer momentarily)
+When $\sV = \hT_n$, denote this extension by $\Tilde{\rm W}_{n, \sV} = \Tilde{\rm W}_{n,1}$. (The notation will become clearer momentarily)
 
 We have already discussed the pair $(\Vect, \GL_n)$. We will need that
 the above extension of Lie algebras fits in to a Harish-Chandra pair
@@ -1230,7 +1232,7 @@ $\GL_n$ so that it does not get extended.
 
 \subsubsection{An $L_\infty$ extension}
 
-For $k > 2$, it will be useful to think of $\ch_k(\cV)$ as defining a similar type of extension.
+For $k > 2$, it will be useful to think of $\ch_k(\sV)$ as defining a similar type of extension.
 For this to make sense, we observe the following interpretation of higher cocycles. 
 Suppose $M$ is a module for a Lie algebra $\fg$, and suppose $c \in \clie^k(\fg ; M)$ is a cocycle $\d_{CE} c = 0$. 
 Then, $c$ determines an abelian extension of $L_{\infty}$-{\em algebras}
@@ -1245,8 +1247,8 @@ The $L_\infty$ structure on $\Tilde{\fg}$ is defined by, for $x,y,x_1,\ldots,x_k
 \end{align*}
 Here, $x \cdot m \in M$ uses the module structure. 
 
-Thus, for any formal vector bundle $\cV$, $\ch_k(\cV)$ determines an abelian $L_\infty$ extension of $\Vect$ by the abelian Lie algebra $\hOmega^{k}_{n,cl}$. 
-The case $\cV= \hT_n$ will be especially relevant for us. 
+Thus, for any formal vector bundle $\sV$, $\ch_k(\sV)$ determines an abelian $L_\infty$ extension of $\Vect$ by the abelian Lie algebra $\hOmega^{k}_{n,cl}$. 
+The case $\sV= \hT_n$ will be especially relevant for us. 
 
 
 
@@ -1263,7 +1265,7 @@ Indeed, it turns out that $\TVectd$ is also part of a Harish-Chandra pair.
 To make this possible, we need to slightly enlarge our category of pairs to include the data of an $L_\infty$ algebra, instead of an ordinary Lie algebra. 
 
 \begin{rmk}
-Note that $\hOmega^{k}_{n,cl}$ does not fit our definition of a formal vector bundle, but it does admit a resolution by such. 
+Note that $\hOmega^{k}_{n,cl}$ does not fit our definition of a formal vector bundle, but it does admit a resolution by such objects. 
 Indeed, there is a $(\Vect, \GL_n)$-equivariant resolution of the form
 \ben
 \hOmega^{k}_{n,cl} \simeq \hOmega^{k}_n \xto{\d} \hOmega^{k+1}_n [-1] \xto{\d} \cdots \xto{\d} \hOmega^n_n [-n+k]
@@ -1394,7 +1396,7 @@ Here $D \rho^K_V : \Lie(K) \to \End(V)$ is the differential of the strict $K$-ac
 
 \subsubsection{Basic forms}
 
-Before the construction of descent, we recall a basic object in equivariant differential geometry.
+Before we give construction of semi-strict descent, we recall a basic object in equivariant differential geometry.
 
 Let $V$ be a finite-dimensional $K$-representation. 
 Denote by $\ul{V}$ the trivial vector bundle on $P$ with fiber $V$. 
@@ -1512,7 +1514,7 @@ We will show that extended Gelfand-Kazhdan structures are precisely associated t
 
 \begin{prop}\label{prop: extended GK}
 Fix an ordinary Gelfand-Kazhdan structure $(X,\sigma)$.
-Then, a $d$-extensed Gelfand-Kazhdan structure exists if and only if $\ch_{d+1}(T^{1,0}_X) = 0$.
+Then, a $d$-extended Gelfand-Kazhdan structure exists if and only if $\ch_{d+1}(T^{1,0}_X) = 0$.
 Moreover, if $\ch_{d+1}(T_X^{1,0}) = 0$ then the equivalence classes of $d$-extended Gelfand-Kazhdan structures extending $(X,\sigma)$ is a torsor for the abelian group $H^{d}(X , \Omega^{d+1}_{cl})$.
 \end{prop}
 
@@ -1538,10 +1540,10 @@ Notice, however, that the image of $\ch_{d+1}^\GF(\hT_n)$ in the middle cohomolo
 This is because it is the defining cocycle for the $L_\infty$ extension $\TVectd$. 
 It follows that the component of the Chern character $\ch_{d+1}(T_X^{1,0})$ is trivial in $H^{d+1}(X, \Omega^{d+1}_{cl})$. 
 
-Suppose now we fix a trivialization $\alpha$ of the component of the Chern character $\ch_{d+1}(T_X^{1,0}) \in H^{d+1}(X, \Omega^{d+1, hol}_{cl})$.
+Suppose now we fix a trivialization $\alpha$ of the component of the Chern character $\ch_{d+1}(T_X^{1,0})$.
 We will resolve $\Omega^{d+1}_{cl}$ by holomorphic vector bundles via the complex
 \ben
-\Omega^{\geq d+1,hol}_X = \Omega^{d +1,hol}_X \xto{\Hat{\partial}} \Omega^{d+2,hol}_X[-1] \to \cdots .
+\Omega^{\geq d+1,hol}_X = \Omega^{d +1,hol}_X \xto{\partial} \Omega^{d+2,hol}_X[-1] \to \cdots .
 \een
 For now, we put the $\Hat{\partial}$ for the formal holomorphic de Rham differential to not confuse it with the de Rham differential on $X$.
 Suppose we have a trivialization of $\ch_{d+1}(T_X^{1,0})$.
@@ -1571,11 +1573,11 @@ Consider the defining exact sequence for the $L_\infty$ algebra $\TVectd$:
 \ben
 0 \to \hOmega^{d+1}_{n,cl}[d-1] \to \TVectd \xto{\pi_{n,d}} \Vect \to 0 .
 \een
-If we resolve $\hOmega^{d+1}_{n,cl}[d-1]$ we obtain an extension
+The cocycle $\ch_{d+1}(\hT_n)$ also defines an extension by the resolution $\hOmega^{d+1}_{n,cl}[d-1]$
 \ben
-0 \to \hOmega^{\geq d+1}_{n,cl}[d-1] \to \TVectd ' \xto{\pi'_{n,d}} \Vect \to 0
+0 \to \hOmega^{\geq d+1}_{n,cl}[d-1] \to \TVectd ' \xto{\pi'_{n,d}} \Vect \to 0 .
 \een
-where $\TVectd '$ is quasi-isomorphic to $\TVectd$. 
+By construction, $\TVectd '$ is quasi-isomorphic to $\TVectd$. 
 Let us tensor this exact sequence with the commutative dg algebra $\Omega^*(\Fr_X)$ to obtain an exact sequence of $L_\infty$ algebras
 \ben
 0 \to \Omega^*(\Fr_X) \tensor \hOmega^{\geq d+1}_n[d-1] \to \Omega^*(\Fr_X) \tensor \TVectd' \to \Omega^*(\Fr_X) \tensor \Vect \to 0 .
@@ -1596,9 +1598,9 @@ Rearranging terms on the left-hand side we have
 The first term is zero since $\omega_\sigma$ is a flat connection one-form.
 The term $\d + [\omega_\sigma,-]$ is the differential in the complex (\ref{alpha de rham}).
 Thus, by assumption, the second term is equal to $j_\infty\ch_{d+1}(T_X^{1,0})$, the $\infty$-jet expansion of the Chern character viewed as an element in $\Omega^* (\Fr_X) \tensor \hOmega^{\geq d+1}_n [d-1]$.
-The only nontrivial contribution in the sum appearing in the last term is $k=d+1$, and this is precisely the defining cocycle for the extension $\TVect'$ applied to $\omega_\sigma$.
+The only nontrivial contribution in the sum appearing in the last term is $k=d+1$, and this is precisely the defining cocycle for the extension $\TVectd'$ applied to $\omega_\sigma$.
 Thus $\ell_{d+1} (\omega_\sigma,\ldots,\omega_\sigma)$ is equal to a multiple of $j_\infty \ch_{d+1}(T^{1,0}_X)$.
-So, up to rescaling $\alpha$, we see that the MC equation is satisfied. 
+So, up to rescaling $\alpha$, we see that the Maurer-Cartan equation is satisfied. 
 
 %Next, suppose that $\ch_{d+1}(T_X^{1,0}) = 0$ and suppose $X$ is K\"ahler.
 %Also, let $\nabla$ be a smooth connection of type $(1,0)$ on $X$ for a
@@ -2201,7 +2203,7 @@ Note that $J^k_\omega$ is a local functional which is induced from the holomorph
 Next, we introduce the truncated de Rham complex
 \be\label{truncated de rham1}
 \xymatrix{
-R[1] \ar[r] & \sO (B \fg) \ar[r]^-{\partial} & \Omega^1(B \fg)[-1] \ar[r] & \cdots \ar[r] & \Omega^{d-1} (B \fg)[-d+1] \ar[r]^-{\partial} & \Omega^{d}(B \fg)[-d] .
+R[1] \ar[r] & \sO (B \fg) \ar[r]^-{\partial} & \Omega^1(B \fg)[-1] \ar[r]^-{\partial}& \cdots \ar[r]^-{\partial} & \Omega^{d}(B \fg)[-d] .
 }
 \ee
 Here, $R$ is the ring for which $\fg$ is defined over.
@@ -2322,9 +2324,9 @@ Thus, as a graded vector space the invariant subcomplex has the following decomp
 It follows from Schur-Weyl that the space of $U(d)$ invariants of the $d$th tensor power of the fundamental representation $\CC^d$ is one-dimensional, spanned by the top exterior power. 
 Thus, when we pass to the $U(d)$-invariants, only the unique totally antisymmetric tensor involving $\frac{\partial}{\partial z_i}$ and $z_i^\vee$ survives. 
 Thus, for each $k$, we have
-\be\label{U(d) invariants}
-\left(\Sym^k(\CC^d[1]) \tensor \left(\bigoplus_{i \leq d-k} \Sym^{i} \left(\fg^\vee [z_1^\vee,\ldots,z_d^\vee][-1] \right) \right) \d^d z\right) \cong \wedge^{k}\left(\frac{\partial}{\partial z_i}\right) \wedge \wedge^{d-k}\left(z_i^\vee\right) \clie^*\left(\fg , \Sym^{d-k}(\fg^\vee)\right) \d^d z .
-\ee
+\begin{align}\label{U(d) invariants}
+& \left(\Sym^k(\CC^d[1]) \tensor \left(\bigoplus_{i \leq d-k} \Sym^{i} \left(\fg^\vee [z_1^\vee,\ldots,z_d^\vee][-1] \right) \right) \d^d z\right) \\ & \cong \wedge^{k}\left(\frac{\partial}{\partial z_i}\right) \wedge \wedge^{d-k}\left(z_i^\vee\right) \clie^*\left(\fg , \Sym^{d-k}(\fg^\vee)\right) \d^d z .
+\end{align}
 Here, $\wedge^{k}\left(\frac{\partial}{\partial z_i}\right) \wedge \wedge^{d-k}\left(z_i^\vee\right)$ is just a copy of the determinant $U(d)$-representation, but we'd like to keep track of the appearances of the partial derivatives and $z_i^\vee$. 
 Note that for degree reasons, we must have $k \leq d$. 
 When $k = 0$ this complex is the (shifted) space of functions modulo constants on the formal moduli space $B\fg$, $\sO_{red}(B\fg)[d]$. 
@@ -2347,9 +2349,9 @@ Consider the subspace corresponding to $k=d$ in Equation (\ref{U(d) invariants})
 \frac{\partial}{\partial z_1} \cdots \frac{\partial}{\partial z_d} \cred^*(\fg) \d^d z .
 \een 
 Then, if $x \in \fg^\vee [-1] \subset \cred^*(\fg)$ we observe that
-\ben
-\d_{\CC^d} \left(\frac{\partial}{\partial z_1} \cdots \frac{\partial}{\partial z_d} \tensor f \tensor \d^d z \right) = \det (\partial_i, z_j^\vee) \tensor 1 \tensor x \tensor \d^d z \in  \wedge^{d-1}\left(\frac{\partial}{\partial z_i}\right) \wedge \CC \{z_i^\vee\} \clie^*\left(\fg , \fg^\vee \right) \d^d z.
-\een
+\begin{align*}
+\d_{\CC^d} \left(\frac{\partial}{\partial z_1} \cdots \frac{\partial}{\partial z_d} \tensor f \tensor \d^d z \right) & = \det (\partial_i, z_j^\vee) \tensor 1 \tensor x \tensor \d^d z \\ & \in  \wedge^{d-1}\left(\frac{\partial}{\partial z_i}\right) \wedge \CC \{z_i^\vee\} \clie^*\left(\fg , \fg^\vee \right) \d^d z.
+\end{align*}
 This follows from the fact that the action of $\frac{\partial}{\partial z_i}$ on $x = x \tensor 1 \in \fg^\vee \tensor \CC[z_i^\vee]$ is given by
 \ben
 \frac{\partial}{\partial z_i} \cdot (x \tensor 1) = 1 \tensor x \tensor z_i^\vee \in \clie^*(\fg , \fg^\vee) z_i^\vee .
@@ -2490,7 +2492,7 @@ P_{\epsilon<L} (z,w) = \int_{t = \epsilon}^L \d t (\dbar^* \tensor 1) K_t(z,w) .
 \een 
 We can compute this propagator directly
 \bestar
-P_{\epsilon}(z,w) & = & \int_{t = \epsilon}^L \d t e^{- |z-w|^2 / 4t} \frac{1}{(4 \pi i t)^d} \sum_{j = 1}^d (-1)^{j-1} \frac{\zbar_j - \wbar_j}{4t} (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \d \wbar_i) \\ & = & \frac{1}{(4 \pi)^d} \frac{1}{|z-w|^{2d}} \sum_{j} (-1)^{j-1} (\zbar_j - \wbar_j) (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \wbar_i) \int_{u = |z-w|^2/L}^{|z-w|^2/\epsilon} \d u u^{d-1} e^{-u} .
+P_{\epsilon}(z,w) & = & \int_{t = \epsilon}^L \d t e^{- |z-w|^2 / 4t} \frac{1}{(4 \pi i t)^d} \sum_{j = 1}^d (-1)^{j-1} \frac{\zbar_j - \wbar_j}{4t} (\d^d z - \d^d w) \prod_{i \ne j} (\d \zbar_i - \d \wbar_i) \\ & = & \frac{1}{(4 \pi)^d} \frac{1}{|z-w|^{2d}} \sum_{j} (-1)^{j-1} (\zbar_j - \wbar_j) (\d^d z - \d^d w) \\ & & \times \prod_{i \ne j} (\d \zbar_i - \d \wbar_i) \int_{u = |z-w|^2/L}^{|z-w|^2/\epsilon} \d u u^{d-1} e^{-u} .
 \eestar
 In the second line we have made the substitution $u = |z-w|^2 / 4t$. 
 We see that the differential form part above is proportional to the Bochner-Martinelli kernel $\omega_{BM} \in \Omega^*(\CC^d \times \CC^d \setminus \Delta)$ 
@@ -2560,7 +2562,7 @@ such that
 \Theta_{d,n}  = a J^{\rm W}(\ch^{\GF}_{d+1}(\hT_n))
 \]
 for some non-zero constant $a$, where $J^{\rm W}$ is the quasi-isomorphism of Equation (\ref{j w map})
-and $\ch^{\GF}_{d+1}(\hT_n)$ is the component of the Gelfand-Fuks-Chern character living in~$\clie^{d+1}(\Vect, \GL_n; \hOmega_{n,cl}^{d+1}).$ 
+and $\ch^{\GF}_{d+1}(\hT_n)$ is the component of the Gelfand-Fuks-Chern character living in $$\clie^{d+1}(\Vect, \GL_n; \hOmega_{n,cl}^{d+1}).$$
 \end{prop}
 
 By definition, the scale $L$ {\em obstruction cocycle} $\Theta_{d,n}[L]$ is 
@@ -2840,8 +2842,8 @@ This contributes a factor of the Jacobian ${\rm Jac}(X_\alpha)(\gamma)$ at each 
 Since we are computing a wheel, the total contribution is the trace of the product of the Jacobians. 
 Putting in the analytic factors in we see that the weight of the weight of the diagram is of the form
 \begin{align*}
-\Theta_{\Gamma,e}(X_\alpha) (\gamma) = \lim_{\epsilon \to 0} & \int_{(z^1,\ldots, z^{d+1}) \in (\CC^d)^{d+1}} \left(\prod_{\alpha=0}^d \d^d z^\alpha\right) \Tr\left(\Jac(X_0) (\gamma)(z_0) \cdots \Jac(X_{d+1})(\gamma)(z_{d+1})\right) \times \\
-&  K^{an}_\epsilon(z_0,z_d) \prod_{\alpha = 1}^{d} P_{\epsilon < L}^{an}(z^{\alpha-1}, z^{\alpha}) 
+\Theta_{\Gamma,e}(X_\alpha) (\gamma) = & \lim_{\epsilon \to 0} \int_{(z^1,\ldots, z^{d+1}) \in (\CC^d)^{d+1}} \left(\prod_{\alpha=0}^d \d^d z^\alpha\right) \\ & \times \Tr\left(\Jac(X_0) (\gamma)(z_0) \cdots \Jac(X_{d+1})(\gamma)(z_{d+1})\right)
+ K^{an}_\epsilon(z_0,z_d) \prod_{\alpha = 1}^{d} P_{\epsilon < L}^{an}(z^{\alpha-1}, z^{\alpha}) 
 \end{align*}
 
 We now turn to actually computing this weight.
@@ -2860,7 +2862,7 @@ Notice that the product of the heat kernel and the propagator is of the form
 \ben
 \begin{array}{lll}
 \displaystyle K_{\epsilon<L}^{an} \left(\sum_{\alpha=1}^d w^\alpha\right) \prod_{\alpha = 1}^{d} P_{\epsilon < L}^{an}(w^\alpha) & = & \displaystyle \pm \frac{1}{(4 \pi \epsilon)^d} \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^d} \prod_{\alpha=1}^{d} \frac{\d t_\alpha}{(4 \pi t_\alpha)^d}  \times \\
-& &\displaystyle \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d} \left(\prod_{\alpha=1}^d \frac{\wbar_{i_{\alpha}}^\alpha}{4 t _\alpha} \right) \exp\left(-\sum_{\alpha=1}^{d} \frac{|w^\alpha|^2}{4 t_\alpha} -\frac{1}{4 \epsilon} \left|\sum_{\alpha=1}^d w^\alpha \right|^2\right) \prod_{\alpha,i=1}^d \d \wbar_i^\alpha .
+& &\displaystyle \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d} \left(\prod_{\alpha=1}^d \frac{\wbar_{i_{\alpha}}^\alpha}{4 t _\alpha} \right) \prod_{\alpha,i=1}^d \d \wbar_i^\alpha \\ & \times & \displaystyle \exp\left(-\sum_{\alpha=1}^{d} \frac{|w^\alpha|^2}{4 t_\alpha} -\frac{1}{4 \epsilon} \left|\sum_{\alpha=1}^d w^\alpha \right|^2\right) .
 \end{array}
 \een
 Here $\epsilon_{i_1,\ldots,i_d}$ is totally antisymmetric tensor and the above expression is proportional to the top anti-holomorphic form in the variables $w^\alpha$. 
@@ -2904,23 +2906,23 @@ Since each of the $D_{\alpha,i_\alpha}(t)$ commute we can iteratively perform an
 \een
 We now perform the Wick integration over the variables $w^1,\ldots,w^d$. 
 The leading term is of the form
-\be\label{wick1}
- \int_{w^0\in \CC^d}\d^{2d}w^0  \frac{1}{(4 \pi \epsilon)^d} \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^d} \prod_{\alpha=1}^{d} \frac{\d t_\alpha}{t_\alpha^d} \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left. \left(\prod_{\alpha=1}^d \frac{\partial}{\partial w^\alpha_{i_\alpha}} \Psi \right)\right|_{w^1=\cdots=w^d=0}
+\begin{align}\label{wick1}
+& \int_{w^0\in \CC^d}\d^{2d}w^0  \frac{1}{(4 \pi \epsilon)^d} \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^d} \prod_{\alpha=1}^{d} \frac{\d t_\alpha}{t_\alpha^d} \\ & \times \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left. \left(\prod_{\alpha=1}^d \frac{\partial}{\partial w^\alpha_{i_\alpha}} \Psi \right)\right|_{w^1=\cdots=w^d=0}
 \frac{1}{t_1\cdots t_d} \det(M)^{-1} \det(M)^{-d} 
-\ee
+\end{align}
 We have used the expression for the determinant as a sum over indices $i_1,\ldots,i_d$: $\det(A) = \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d} A_{1i_1}\cdots A_{di_d}$ hence: 
-\ben
-\sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left. \left(\prod_{\alpha=1}^d \frac{1}{t_\alpha} \sum_{\beta=1}^d M_{\alpha\beta}^{-1} \frac{\partial}{\partial w_{i_\alpha}^{\beta}} \Psi \right)\right|_{w^1=\cdots=w^d=0} = \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left. \left(\prod_{\alpha=1}^d \frac{\partial}{\partial w^\alpha_{i_\alpha}} \Psi \right)\right|_{w^1=\cdots=w^d=0} \frac{1}{t_1\cdots t_d} \det(M)^{-1}
-\een
+\begin{align*}
+& \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left. \left(\prod_{\alpha=1}^d \frac{1}{t_\alpha} \sum_{\beta=1}^d M_{\alpha\beta}^{-1} \frac{\partial}{\partial w_{i_\alpha}^{\beta}} \Psi \right)\right|_{w^1=\cdots=w^d=0} \\ & = \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left. \left(\prod_{\alpha=1}^d \frac{\partial}{\partial w^\alpha_{i_\alpha}} \Psi \right)\right|_{w^1=\cdots=w^d=0} \frac{1}{t_1\cdots t_d} \det(M)^{-1}
+\end{align*}
 The term $\det(M)^{-d}$ comes from performing the $d$-dimensional Gaussian integral. 
 A calculation we performed in Section \ref{sec: hol renorm} shows that 
 \ben
 \det(M_{\alpha\beta}) = \frac{\epsilon + t_1+\cdots+t_d}{\epsilon t_1\cdots t_d}
 \een
 Hence, we can write the first term in the Wick expansion (\ref{wick1}) as
-\ben
- \int_{w^0\in \CC^d}\d^{2d}w^0  \left. \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left(\prod_{\alpha=1}^d \frac{\partial}{\partial w^\alpha_{i_\alpha}} \Psi \right)\right|_{w^1=\cdots=w^d=0} \frac{1}{(4\pi)^d} \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^d} \frac{\epsilon}{(\epsilon+t_1+\cdots + t_d)^{d+1}} \d t_1 \cdots \d t_d .
- \een
+\begin{align*} 
+ \int_{w^0\in \CC^d}\d^{2d}w^0  & \left. \sum_{i_1,\ldots,i_d} \epsilon_{i_1,\ldots,i_d}  \left(\prod_{\alpha=1}^d \frac{\partial}{\partial w^\alpha_{i_\alpha}} \Psi \right)\right|_{w^1=\cdots=w^d=0} \\ & \times \frac{1}{(4\pi)^d} \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^d} \frac{\epsilon}{(\epsilon+t_1+\cdots + t_d)^{d+1}} \d t_1 \cdots \d t_d .
+ \end{align*}
 The $t$-integral is easily seen to be convergent as $\epsilon \to 0$. 
 Finally, plugging back in $\Psi = \sum_{I} \Phi_I$ we see that the obstruction can be written as 
 \be\label{finally}
@@ -3058,9 +3060,9 @@ The local functional $\Tilde{J} \in \Tilde{\Def}_n^{\rm W}$ trivializes $\pi_{n,
 \begin{proof} 
 The functional $J$ is the image of $\id_{\Omega^{d+1}}$ under
 the map 
-\ben
-\clie^*(\TVect ; \hOmega^{d+1}_{n,cl}[d]) = \clie^*(\TVect) \tensor_{\clie^*(\Vect)} \clie^*(\Vect ; \hOmega^{d+1}_{n,cl}) \xto{\id \tensor J}   \clie^*(\TVect) \tensor_{\clie^*(\Vect)} \Def_n^{\rm W} = \Tilde{\Def}_n^{\rm W} .
-\een
+\begin{align*}
+\clie^*(\TVect ; \hOmega^{d+1}_{n,cl}[d]) & = \clie^*(\TVect) \tensor_{\clie^*(\Vect)} \clie^*(\Vect ; \hOmega^{d+1}_{n,cl}) \\ & \xto{\id \tensor J}   \clie^*(\TVect) \tensor_{\clie^*(\Vect)} \Def_n^{\rm W} = \Tilde{\Def}_n^{\rm W} .
+\end{align*}
 Denote this composition by $J^{\Tilde{W}}$, so that $\Tilde{J} = J^{\Tilde{W}}(\id_{\Omega^{d+1}})$.
 The composition above is a map of cochains, so for any $\varphi \in \clie^*(\TVect ; \hOmega^{d+1}_{n,cl}[d])$ we have
 \ben
@@ -3375,7 +3377,7 @@ This follows from ellipticity of the Dolbeault complex.
 Consequently we can introduce the qausi-isomorphic subcomplex 
 \ben
 \begin{tikzcd}    
-\Obs^{\cl}_V(U) := \left(\Sym(\Omega^{d,*}_c(U,V^*)[d] \oplus \Omega^{0,*}_c(U,V)[1]), \dbar\right) \arrow[hook]{r}{\simeq} & \left(\Sym(\Bar{\Omega}^{d,*}_c(U,V^*)[d] \oplus \Bar{\Omega}^{0,*}_c(U,V)[1]), \dbar \right) = \overline{\Obs}_V^{\cl}(U)
+& \Obs^{\cl}_V(U) = \left(\Sym(\Omega^{d,*}_c(U,V^*)[d] \oplus \Omega^{0,*}_c(U,V)[1]), \dbar\right) \arrow[hook]{d}{\simeq} \\ & \left(\Sym(\Bar{\Omega}^{d,*}_c(U,V^*)[d] \oplus \Bar{\Omega}^{0,*}_c(U,V)[1]), \dbar \right) = \overline{\Obs}_V^{\cl}(U)
 \end{tikzcd}
 \een
 Just as in the case above, it is easy to see that the assignment $U \mapsto \Obs^{\cl}_V(U)$ defines a factorization algebra on $\CC^d$.
@@ -3398,6 +3400,8 @@ In this section we give a description of the observables of the holomorphic $\si
 
 \subsubsection{The cohomology of the observables}
 
+In this section we compute the cohomology of the factorization algebra supported on a disk $D(w,r) \subset \CC^d$ centered at $w \in \CC^d$ of radius $r > 0$. 
+
 \begin{lem}\label{lem: disk cohomology}
 For any $d$-dimensional disk in $\CC^d$ there is an isomorphism
 \ben
@@ -3405,6 +3409,27 @@ H^* \left(\Obs^{\q}_V(D(w,r))\right) \cong \Sym\left( \left(\sO^{hol}(D(w,r)\rig
 \een
 where the $(-)^\vee$ is the topological dual.
 \end{lem}
+
+\begin{proof}
+A result of Serre \cite{Serre} states that if $U$ is a Stein manifold and $1 \leq p \leq d = \dim_\CC(U)$ that the compactly supported Dolbeualt cohomology $H^{p,q}_{\dbar, c}(U)$ is only nonzero when $q = d$.
+In this case, there is a canonical isomorphism $H^{p,d}_{\dbar,c}(U) \cong \left(\Omega^{d-p, hol}(U)\right)^\vee$. 
+
+To apply this fact, we consider the following spectral sequence. 
+We define a filtration on $\Obs^\q(D(w,r))$ by
+\ben
+F^k = \bigoplus_{j \geq k} \hbar^j \cdot \Sym(\Omega^{d,*}_c(U,V^*)[d] \oplus \Omega^{0,*}_c(U,V)[1]) .
+\een
+The $E_1$-page of the corresponding spectral sequence is simply given by the $\dbar$ cohomology.
+The $\dbar$ differential preserves the symmetric degree, so it suffices to compute the cohomology at each layer of the symmetric grading. 
+Since the disk $U = D(w,r)$ is Stein, we obtain
+\begin{align*}
+& H^*\left(\Sym(\Omega^{d,*}_c(U,V^*)[d] \oplus \Omega^{0,*}_c(U,V)[1]), \dbar\right) \\ & = \bigoplus_{n\geq 0} H^*\left( \left(\Omega^{d,*}_c(U,V^*)[d] \oplus \Omega^{0,*}_c(U,V)[1]\right)^{\tensor n}_{S_n}, \dbar\right) \\ & \cong H^*\left( \left(\Omega^{d,*}_c(U^n,(V^*)^{\times n})[d] \oplus \Omega^{0,*}_c(U^n,V^{\times n})[1]\right)^{\tensor n}_{S_n}, \dbar\right) \\ & \cong \Sym\left( \left(\sO^{hol}(U)\right)^\vee \tensor V^* \oplus \left(\Omega^{d,hol}(U)\right)^\vee \tensor V [-d+1] \right) .
+\end{align*}
+In the second line we have used the fundamental property of the completed tensor product recounted in Equation (\ref{tensor1}).
+In the last line, we have applied Serre's result. 
+
+Note that the BV Laplacian is identically zero on the $E_1$-page of the $\hbar$-spectral sequence, thus it collapses and the lemma follows.
+\end{proof}
 
 \subsubsection{An explicit characterization}
 
@@ -3593,7 +3618,7 @@ N_j = \left(n_{1,j} + \cdots + n_{k,j}\right) + \left(m_{1,j} + \cdots + m_{l,j}
 The result for the quantum observables follows from the spectral sequence induced by the $\hbar$-filtration.
 \end{proof}
 
-We will denote $\cV_V = \Obs_V^\q(r)$, which is well-defined up to quasi-isomorphism by the preceding proposition. 
+We will denote $\sV_V = \Obs_V^\q(r)$, which is well-defined up to quasi-isomorphism by the preceding proposition. 
 This is the ``state space" of the higher dimensional holomorphic theory. 
 We will elaborate more on its structure later on in this section.
 
@@ -3618,12 +3643,12 @@ For any $\epsilon > 0$, the open set $N_{r,\epsilon}$ is a neighborhood of the c
 Note that when $d=1$, $N_{r,\epsilon}$ is simply an annulus centered at $w$. 
 
 Like in the case of a disk, it is convenient to get our hands on a class of simple observables supported on $N_{r,\epsilon}(w)$. 
-To describe these particular observables we introduce the dg algebra $A_d$ discussed in the Appendix of Chapter \ref{chap: symmetries}.
+To describe these particular observables we introduce the dg algebra $A_d$ discussed in Appendix \ref{chap: appendix}.
 This algebra is a dg model for the derived space of sections of algebraic functions on the punctured affine space $\AA^{d \times}$:
 \ben 
 A_d \simeq \RR \Gamma(\AA^{d \times}, \sO^{alg}) .
 \een
-We refer the reader to the Appendix for a more detailed discussion.
+We refer the reader to the appendix for a more detailed discussion.
 What we will use at the moment is the existence of a linear embedding of cochain complexes $A_d \hookrightarrow \Omega^{0,*}(\CC^d \setminus \{0\})$, which is dense at the level of cohomology.
 In particular, $A_d$ embedds inside the Dolbeault complex of any of the spherical shells $N_{\epsilon,r}$ we have just introduced.
 
@@ -3676,7 +3701,7 @@ sending $\alpha \in A_{d} [d-1]$ to the functional
 These two embeddings allow us to provide a succinct description of the class of linear operators on $N_{r,\epsilon}(w)$ we are interested in. 
 Indeed they determine a cochain map (that we proceed to denote by the same symbol):
 \ben
-i_{S^{2d-1}} : A_d \tensor \left(V^*[d-1] \oplus V\right) \to \left(\Omega^{0,*}(N_{r,\epsilon}(w)) \tensor V \oplus \Omega^{d,*}(N_{r,\epsilon}(w)) \tensor V^*[d-1] \right)^\vee \subset \Obs_V^{\cl}\left(N_{r,\epsilon}(w)\right).
+i_{S^{2d-1}} : A_d \tensor \left(V^*[d-1] \oplus V\right) \to \left(\Omega^{0,*}(N_{r,\epsilon}(w)) \tensor V \oplus \Omega^{d,*}(N_{r,\epsilon}(w)) \tensor V^*[d-1] \right)^\vee
 \een
 
 \begin{dfn}
@@ -3950,7 +3975,7 @@ We can now perform the main calculation.
 Recall, we have fixed observables $\cO_{\gamma, \alpha}(0;v^*)$ and $\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v)$.
 In the notation of Equation (\ref{starprods}), we have
 \bestar
-\cO_{\gamma, \alpha}(0;v^*) \star_{12} \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v) & = &  \cO_{\gamma, \alpha}(0;v^*) \cdot \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v) \\ & & + \hbar \<v, v^*\>\oint_{|z^1| = r_1} \oint_{|z^2| = r_2} \alpha(z^1) \d^d z^1 \alpha'(z^2) P(z^1,z^2) \\ & = & \cO_{\gamma, \alpha}(0;v^*) \cdot \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v) \\ & & + \hbar \<v, v^*\> \oint_{|z^1| = r_1} \oint_{|z^2| = r_2}  \alpha(z^1) \alpha'(z^2) \d^d z^1 \omega_{BM}(z^1,z^2) \\ & = & \cO_{\gamma, \alpha}(0;v^*) \cdot \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v)  +  \hbar \<v, v^*\> \oint_{|z| = r_1} \alpha(z) \alpha'(z) \d^d z \\ & & +  \hbar \<v, v^*\> \oint_{|z^1| = r_1} \int_{z^2 \in D(0, r_2)} \; \alpha(z^1) (\dbar \alpha')(z^2) \omega_{BM}(z^1,z^2) . 
+\cO_{\gamma, \alpha}(0;v^*) \star_{12} \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v) & = &  \cO_{\gamma, \alpha}(0;v^*) \cdot \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v) \\ & & + \hbar \<v, v^*\>\oint_{|z^1| = r_1} \oint_{|z^2| = r_2} \alpha(z^1) \d^d z^1 \alpha'(z^2) P(z^1,z^2) \\ & = & \cO_{\gamma, \alpha}(0;v^*) \cdot \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v) \\ & & + \hbar \<v, v^*\> \oint_{|z^1| = r_1} \oint_{|z^2| = r_2}  \alpha(z^1) \alpha'(z^2) \d^d z^1 \omega_{BM}(z^1,z^2) \\ & = & \cO_{\gamma, \alpha}(0;v^*) \cdot \cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v)  \\ & & + \hbar \<v, v^*\> \oint_{|z| = r_1} \alpha(z) \alpha'(z) \d^d z \\ & & +  \hbar \<v, v^*\> \oint_{|z^1| = r_1} \int_{z^2 \in D(0, r_2)} \; \alpha(z^1) (\dbar \alpha')(z^2) \omega_{BM}(z^1,z^2) . 
 \eestar 
 In the first line we have used the Moyal formula.
 In the second line we have used the explicit form of the propagator. 
@@ -3960,9 +3985,8 @@ In particular, the third term in the last line vanishes.
 The calculation for the $\star_{23}$ product is similar. 
 We conclude that in cohomology the commutator between the quantum observables $\cO_{\gamma, \alpha}(0;v^*)$ and $\cO_{\beta, z_1^{-1}\cdots z_d^{-1} \alpha'} (0;v)$ is precisely
 \ben
-\# \hbar \<v, v^*\> \oint_{|z| = r_1} \alpha(z) \alpha'(z) \d^d z .
+\hbar \<v, v^*\> \oint_{|z| = r_1} \alpha(z) \alpha'(z) \d^d z .
 \een
-\brian{work out factor!}
 This agrees with the commutator $(\ref{HV bracket})$ in $\sH_V$. 
 The extension to commutators between non-linear observables is completely analogous. 
 Thus, we conclude that as associative graded algebras one as 
@@ -4038,6 +4062,8 @@ Now, we define $\sF_V$ as the factorization envelope of this local Lie algebra
 \ben
 \sF_V = \UU\left(\Omega^*_{\RR_{>0},c} \tensor \sH_V\right) .
 \een
+By construction, $\sF_V$ is locally constant and equivalent, as an associative dg algebra, to $U(\sH_V)$. 
+Thus, we must only show part (1). 
 
 We have just expressed $\Obs_V^\q$ as a factorization enveloping algebra as well.
 Since the pushforward commutes with the functor $\UU(-)$, to construct the map in (1) it suffices to provide a map of factorization Lie algebras
@@ -4092,8 +4118,8 @@ By functoriality of the enveloping factorization algebra together with compatibi
 \ben
 \Phi : \sF_V = \UU\left( \Omega^*_{\RR_{>0},c} \tensor \sH_V \right) \to \rho_* \UU (\sH_V') = \rho_* \Obs^\q_V .
 \een
+That this map is dense in cohomology follows from Proposition \ref{prop: Ad} in the Appendix \ref{chap: appendix}.
 \end{proof}
-
 
 
 %\begin{rmk}
@@ -4262,9 +4288,9 @@ Consider the topological vector space $\sO^{hol}(D(w,r))^\vee$.
 Using the holomorphic volume form $\d^d z$ the higher residue pairing defines a map $H^{d-1}(A_d) \to \sO^{hol}(D(w,r))^\vee$ which is an isomorphism after taking $U(d)$-eigenspaces
 Similarly, residue pairing defines a map $H^{d-1}(A_d) \to (\Omega^{d,hol}(D(w,r)))^\vee$ which is an isomorphism at the level of $U(d)$-eigenspaces. 
 Thus, we can identify the map ${\rm Gr} H^*(\sA_V) \to {\rm Gr} H^*(\sV_V)$ with the map
-\ben
-\Sym(\d^d z H^*(A_d) \tensor V^*[d-1] \oplus H^*(A_d) \tensor V)[\hbar] \to \Sym(\d^d z H^{d-1}(A_d) \tensor V^* \oplus H^*(A_d)\tensor V [-d+1]) [\hbar] 
-\een
+\begin{align*}
+\Sym & (\d^d z H^*(A_d) \tensor V^*[d-1] \oplus H^*(A_d) \tensor V)[\hbar] \\ & \to \Sym(\d^d z H^{d-1}(A_d) \tensor V^* \oplus H^*(A_d)\tensor V [-d+1]) [\hbar] 
+\end{align*}
 induced by the projection $H^*(A_d) \to H^{d-1}(A_d) [-d+1] = \sA_{d,-}$ as desired.
 \end{proof}
 
@@ -4360,15 +4386,15 @@ As a vector space $V_{n_1,n_2}^* \cong V^*$, but we want to remember the weights
 Likewise, for $n_1 , n_2 > 0$, let $V_{n_1,n_2} \cong V$ be the linear span of the operators $O_{\beta}(n_1, n_2 ; v)$. 
 
 There is an injective map of graded vector spaces
-\ben
-\Sym \left( \left(\bigoplus_{n_1,n_2 \geq 0} V_{n_1,n_2}^*\right) \oplus \left(\bigoplus_{n_1,n_2 > 0}  V_{n_1,n_2}[-1] \right)\right)  \to \Sym\left( \left(\sO^{hol}(D^2) \tensor V\right)^\vee \oplus \left( \Omega^{2,hol}(D^2) \tensor V^*\right)^\vee [-1] \right),
-\een
+\begin{align*}
+\Sym & \left( \left(\bigoplus_{n_1,n_2 \geq 0} V_{n_1,n_2}^*\right) \oplus \left(\bigoplus_{n_1,n_2 > 0}  V_{n_1,n_2}[-1] \right)\right)  \\ & \to \Sym\left( \left(\sO^{hol}(D^2) \tensor V\right)^\vee \oplus \left( \Omega^{2,hol}(D^2) \tensor V^*\right)^\vee [-1] \right),
+\end{align*}
 where the right-hand side is the cohomology of the observables on $D^2$ and the left-hand side is the cohomology of the state space that we denoted $H^*\sV_V$ in Section \ref{sec: disk obs}. 
 
 Thus, to compute the character of the local operators it suffices to compute it on the vector space
-\ben
-\Sym \left( \left(\bigoplus_{n_1,n_2 \geq 0} V_{n_1,n_2}^*\right) \oplus \left(\bigoplus_{n_1,n_2 > 0} \oplus V_{n_1,n_2}[-1] \right)\right) \cong \Sym \left(\bigoplus_{n_1,n_2 \geq 0} V_{n_1,n_2}^*\right) \tensor \Wedge \left(\bigoplus_{n_1,n_2 > 0} V_{n_1,n_2} \right) .
-\een
+\begin{align*}
+\Sym & \left( \left(\bigoplus_{n_1,n_2 \geq 0} V_{n_1,n_2}^*\right) \oplus \left(\bigoplus_{n_1,n_2 > 0} \oplus V_{n_1,n_2}[-1] \right)\right) \\ & \cong \Sym \left(\bigoplus_{n_1,n_2 \geq 0} V_{n_1,n_2}^*\right) \tensor \Wedge \left(\bigoplus_{n_1,n_2 > 0} V_{n_1,n_2} \right) .
+\end{align*}
 We have used the convention that as (ungraded) vector spaces the symmetric algebra of a vector space in odd degree is the exterior algebra. 
 For instance, $\Sym(W[-1]) = \Wedge(W)$ as ungraded vector spaces. 
 We can further simplify the right-hand side as

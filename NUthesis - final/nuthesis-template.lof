@@ -1,0 +1,11 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The $(d+1)$-vertex wheel contributing to the anomaly. The vertices are given by $v_0,\ldots ,v_d$ which are labeled by a formal vector field $X_\alpha $. On the black internal edges are we place the propagator $P_{\epsilon < L}$. On the red edge labeled by $e$ we place the heat kernel $K_\epsilon $.}}{187}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Nesting spherical shells. The blue and green shaded regions represent the spherical shells $N_{r_1,\epsilon _1}$ and $N_{r_2,\epsilon _2}$, respectively. The black spheres denote the inner and outer boundaries of the closure of the neighborhood $N_{r,\epsilon }$.}}{219}{figure.3.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The diagram representing the weight $W_{\Gamma , e}(P_{\epsilon <L}, K_\epsilon , I^\mathfrak g)$ in the case $d=2$. On the black internal edges are we place the propagator $P_{\epsilon < L}$ of the $\beta \gamma $ system. On the red edge labeled by $e$ we place the heat kernel $K_\epsilon $. The external edges are labeled by elements $\alpha ^{(i)} \in \Omega ^{0,*}_c(\mathbb C^2)$.}}{304}{figure.4.1}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

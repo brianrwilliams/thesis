@@ -1,39 +1,39 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 APR 2018 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 MAY 2018 16:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**thanks.tex
-(./thanks.tex
+**macros.sty
+(./macros.sty
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 
-./thanks.tex:1: LaTeX Error: Missing \begin{document}.
+./macros.sty:1: LaTeX Error: \usepackage before \documentclass.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1 M
-     y journey to pursue mathematics started well before entering the Ph.D. ...
+l.1 \usepackage{
+                mathrsfs,amsmath, amscd, amsthm,amssymb, amsfonts, verbatim,...
 
 ? 
-./thanks.tex:1: Emergency stop.
+./macros.sty:1: Emergency stop.
  ...                                              
                                                   
-l.1 M
-     y journey to pursue mathematics started well before entering the Ph.D. ...
+l.1 \usepackage{
+                mathrsfs,amsmath, amscd, amsthm,amssymb, amsfonts, verbatim,...
 
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
 
  
 Here is how much of TeX's memory you used:
- 5 strings out of 492995
- 250 string characters out of 6132704
+ 7 strings out of 492995
+ 269 string characters out of 6132704
  54074 words of memory out of 5000000
  3658 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 5i,0n,4p,109b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
-./thanks.tex:1:  ==> Fatal error occurred, no output PDF file produced!
+ 5i,0n,5p,114b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+./macros.sty:1:  ==> Fatal error occurred, no output PDF file produced!

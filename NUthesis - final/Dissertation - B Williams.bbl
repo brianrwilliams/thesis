@@ -35,7 +35,7 @@ Nicole Berline, Ezra Getzler, and Mich\`ele Vergne.
 
 \bibitem[BJ69]{BJ}
 J.~S. Bell and R.~Jackiw.
-\newblock {A PCAC puzzle: pi0 --> gamma gamma in the sigma model}.
+\newblock {A PCAC puzzle: $\pi \to \gamma \gamma$ in the sigma model}.
 \newblock {\em Nuovo Cim.}, A60:47--61, 1969.
 
 \bibitem[BK04]{BK}
@@ -314,6 +314,16 @@ Victor~W. Guillemin.
 \newblock Cohomology of vector fields on a manifold.
 \newblock {\em Advances in Math.}, 10:192--220, 1973.
 
+\bibitem[GWa]{GWsigma}
+Ryan Grady and Brian Williams.
+\newblock Homotopy {R}{G} flow and the nonlinear $\sigma$-model.
+\newblock https://arxiv.org/abs/1710.05973, accepted for publication.
+
+\bibitem[GWb]{GWstring}
+Owen Gwilliam and Brian Williams.
+\newblock The holomorphic bosonic string.
+\newblock https://arxiv.org/abs/1711.05823, accepted for publication.
+
 \bibitem[Gwi12]{GwThesis}
 Owen Gwilliam.
 \newblock {\em Factorization {A}lgebras and {F}ree {F}ield {T}heories}.
@@ -378,6 +388,11 @@ Andreas Kriegl and Peter~W. Michor.
 D.~R. Karakhanyan, R.~P. Manvelyan, and R.~L. Mkrtchyan.
 \newblock Trace anomalies and cocycles of {W}eyl and diffeomorphisms groups.
 \newblock {\em Modern Phys. Lett. A}, 11(5):409--421, 1996.
+
+\bibitem[Knu]{KnudsenEn}
+Ben Knudsen.
+\newblock Higher enveloping algebras.
+\newblock https://arxiv.org/abs/1605.01391.
 
 \bibitem[KO03]{KapOrlov}
 Anton Kapustin and Dmitri Orlov.
@@ -470,6 +485,13 @@ Joseph Polchinski.
 \newblock Cambridge Monographs on Mathematical Physics. Cambridge University
   Press, Cambridge, 1998.
 \newblock An introduction to the bosonic string.
+
+\bibitem[Ser53]{Serre}
+Jean-Pierre Serre.
+\newblock Quelques probl\`emes globaux relatifs aux vari\'et\'es de {S}tein.
+\newblock In {\em Colloque sur les fonctions de plusieurs variables, tenu \`a
+  {B}ruxelles, 1953}, pages 57--68. Georges Thone, Li\`ege; Masson \& Cie,
+  Paris, 1953.
 
 \bibitem[Sta92]{StasheffDG}
 Jim Stasheff.

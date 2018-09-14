@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Dissertation - B Williams.aux
+The style file: alpha.bst
+Database file #1: thesis.bib
+Warning--there's a number but no volume in CF2
+You've used 93 entries,
+            2543 wiz_defined-function locations,
+            1180 strings with 17611 characters,
+and the built_in function-call counts, 33622 in all, are:
+= -- 3487
+> -- 1412
+< -- 61
++ -- 457
+- -- 442
+* -- 2364
+:= -- 5616
+add.period$ -- 301
+call.type$ -- 93
+change.case$ -- 521
+chr.to.int$ -- 89
+cite$ -- 94
+duplicate$ -- 1338
+empty$ -- 2429
+format.name$ -- 575
+if$ -- 6768
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 85
+newline$ -- 479
+num.names$ -- 279
+pop$ -- 445
+preamble$ -- 1
+purify$ -- 626
+quote$ -- 0
+skip$ -- 1047
+stack$ -- 0
+substring$ -- 2022
+swap$ -- 151
+text.length$ -- 61
+text.prefix$ -- 40
+top$ -- 0
+type$ -- 684
+warning$ -- 1
+while$ -- 349
+width$ -- 97
+write$ -- 1203
+(There was 1 warning)

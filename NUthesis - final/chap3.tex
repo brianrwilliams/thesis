@@ -231,7 +231,7 @@ Note that in the case of the trivial holomorphic principal $G$-bundle on $X$ one
  
 \subsubsection{Deformations of holomorphic principal bundles}
 
-The dg Lie algebra $\sAd(P)^{sh}(X) = \Omega^{0,*}(X, \ad(P))$ appears naturally in the deformation theory of holomorphic $G$-bundles. 
+The dg Lie algebra $$\sAd(P)^{sh}(X) = \Omega^{0,*}(X, \ad(P))$$ appears naturally in the deformation theory of holomorphic $G$-bundles. 
 By definition, a holomorphic principal bundle $P \to X$ comes equipped with a $G$-equivariant $(0,1)$-connection $\dbar_P : C^\infty_P \to \Omega^{0,1}_P$. 
 Consider two complex structures $\dbar_P$ and $\dbar_P'$. 
 By the fundamental property of connections we see that $\dbar_P - \dbar_P'$ defines a $(0,1)$ form with values in $\fg$:
@@ -256,7 +256,7 @@ Define
 \een
 which sends a dg Artinian ring $(A, \fm)$ (again, see Section \ref{sec: formal moduli}) to the simplicial set $\Def_{P \to X}(A)$ whose $n$-simplices are
 \ben
-{\rm Def}_{P \to X}(A) [n] = \left\{\alpha \in \left(\Omega^{0,*}(X , {\rm ad}(P)) \tensor \fm \tensor \Omega^*(\Delta^n)\right)^1  \;  | \; \dbar_P \alpha + \d_A \alpha + \d_{\Delta_n} \alpha + \frac{1}{2} [\alpha,\alpha] = 0\right\} .
+\left\{\alpha \in \left(\Omega^{0,*}(X , {\rm ad}(P)) \tensor \fm \tensor \Omega^*(\Delta^n)\right)^1  \;  | \; \dbar_P \alpha + \d_A \alpha + \d_{\Delta_n} \alpha + \frac{1}{2} [\alpha,\alpha] = 0\right\} .
 \een
 Here, $\d_A$ is the internal differential of $A$ and $\d_{\Delta_n}$ is the de Rham operator for differential forms on the $n$-simplex $\Delta^n$. 
 
@@ -475,7 +475,7 @@ and since integration is local on $X$,
 it intertwines nicely with the structure maps of~$\sG_X$.
 
 \begin{prop}\label{prop j map} 
-For any complex $d$-fold $X$ and invariant polynomial $\theta \in \Sym^{d+1}(\fg^*)^\fg$, the functional $J_X(\theta)$ is a local functional in $\cloc^*(\sG_X)$. 
+For any complex $d$-fold $X$ and invariant polynomial $\theta$ in \\ $\Sym^{d+1}(\fg^*)^\fg$, the functional $J_X(\theta)$ is a local functional in $\cloc^*(\sG_X)$. 
 In fact, the assignment 
 \ben
 J_X : \Sym^{d+1} (\fg^*)^\fg [-1] \to \cloc^*(\sG_X) \;\;\; , \;\; \theta \mapsto J_X(\theta)
@@ -702,7 +702,7 @@ As a one-dimensional locally constant factorization algebra, $\sF^{lc}_{1d}$ is 
 %\end{thm}
 
 In the final part of this section we specialize to the manifold $X = (\CC \setminus \{0\})^d$. 
-Note that when $d=1$ this is the same as above the annular algebra, but for $d>1$ this factorization algebra has a different flavor. 
+Note that when $d=1$ this is the same as the algebra above, but for $d>1$ this factorization algebra has a different flavor. 
 We will show how to extract the data of an $E_d$-algebra from this configuration, and discuss its role in the theory of higher dimensional vertex algebras. 
 
 %In a similar way in Section \ref{sec: ...} we will see how the Kac-Moody factorization algebra on $(\CC \setminus \{0\})^d$ are related to extensions of higher loop Lie algebras
@@ -727,7 +727,7 @@ The central extension is determined by the cocycle
 (f \tensor X, g \tensor Y) \mapsto \oint f \d g \kappa(X,Y) .
 \een 
 A natural generalization of the loop algebra is to generalize the circle $S^1$, which is equal to the units in $\CC$, by the sphere $S^{2d-1}$, which is equal to the units in $\CC^d$.
-That is, we work with a ``sphere algebra'' of maps from $S^{2d-1}$ into $\fg$.
+That is, we take the ``sphere algebra'' of maps from $S^{2d-1}$ into $\fg$.
 For topologists, this direction might seem natural,
 but it may not seem too natural from the perspective of algebraic geometry.
 In particular, an algebro-geometric sphere is given by a punctured affine $d$-space $\AA^{d\times} = \AA^d \setminus \{0\}$ or a punctured formal $d$-disk,
@@ -758,7 +758,7 @@ It should be no surprise that we like to work with the Dolbeault complex.
 We will use this approach to relate the sphere Lie algebra and its extensions to the current algebras that we've already introduced.
 
 An explicit dg model $A_d$ for the derived global sections has been written down in \cite{FHK} based on the Jouanolou method for resolving singularities. 
-We have recalled its definition in the Appendix of this chapter.
+We have recalled its definition in Appendix \ref{chap: appendix}.
 
 We are interested in the dg Lie algebra $A_d \tensor \fg$. 
 For any $d$ and symmetric function $\theta \in \Sym^{d+1}(\fg^*)^\fg$, in \cite{FHK} they define the cocycle
@@ -768,7 +768,7 @@ For any $d$ and symmetric function $\theta \in \Sym^{d+1}(\fg^*)^\fg$, in \cite{
 where $\d$ is the algebraic de Rham differential.
 It is immediate that this cocycle has cohomological degree $+2$ and so determines a(n) (unshifted) dg Lie algebra central extension of $A_d \tensor \fg$:
 \be\label{gdt}
-\CC \to \Hat{\fg}_{d, \theta} \to A_d \tensor \fg .
+\CC \cdot K \to \Hat{\fg}_{d, \theta} \to A_d \tensor \fg .
 \ee
 Our aim is to show how the Kac-Moody factorization algebra is related to this dg Lie algebra. 
 
@@ -924,17 +924,17 @@ E & = r \frac{\partial}{\partial r} , \\
 \d \vartheta & = \sum_i \frac{\d z_i}{z_i} .
 \end{align*} 
 We view $E$ as a vector field on $\RR_{>0}$ and $\d \vartheta$ as a $(1,0)$-form on $\CC^{d} \setminus 0$. Define the functional
-\ben
-\Tilde{\theta}_1(\varphi_0 a_0 X_0,\ldots,\varphi_d a_d X_d) = \frac{1}{2} \sum_{i=1}^{d} \left( \int_I \varphi_0 (E \cdot \varphi_i) \varphi_1\cdots \Hat{\varphi_i} \cdots \varphi_{d}\right)\left(\oint \left(a_0 a_i \d \vartheta\right) \partial a_1 \cdots \Hat{\partial a_i} \cdots \partial a_d \right) \theta(X_0,\ldots,X_d)  .
-\een
+\begin{align*}
+\Tilde{\theta}_1(\varphi_0 a_0 X_0,\ldots,\varphi_d a_d X_d) = \frac{1}{2} \sum_{i=1}^{d} & \left( \int_I \varphi_0 (E \cdot \varphi_i) \varphi_1\cdots \Hat{\varphi_i} \cdots \varphi_{d}\right) \\ & \times \left(\oint \left(a_0 a_i \d \vartheta\right) \partial a_1 \cdots \Hat{\partial a_i} \cdots \partial a_d \right) \theta(X_0,\ldots,X_d)  .
+\end{align*}
 The functional $\Tilde{\theta}$ defines a local functional in $\cloc^*\left(\Omega^*_{\RR_{>0}} \tensor (A_d \tensor \fg) \right)$ of cohomological degree one. One immediately checks that it is a cocycle. This completes the definition of the factorization Lie algebra $\sG_1'$. 
 
 The factorization Lie algebras $\sG_1$ and $\sG_1'$ are identical as precosheaves of vector spaces. In fact, if we put a filtration on $\sG_1$ and $\sG_1'$ where the central element $K$ has filtration degree one, then the associated graded factorization Lie algebras ${\rm Gr} \; \sG_1$ and ${\rm Gr} \; \sG_1'$ are also identified. The only difference in the Lie algebra structures comes from the deformation of the cocycle determining the extension of $\sG_1'$ given by $\Tilde{\theta}_1$. 
 
 In fact, we will show that $\Tilde{\theta}_1$ is actually an exact cocycle via the cobounding element $\eta \in \cloc^*\left(\Omega^*_{\RR_{>0}} \tensor (A_d \tensor \fg)\right)$ defined by
-\ben
-\eta(\varphi_0a_0X_0,\ldots,\varphi_da_dX_d) = \sum_{i=1}^d \left(\int_I \varphi_0 \left(\iota_{E} \varphi_i \right) \varphi_1 \cdots \Hat{\varphi_i} \cdots \varphi_d\right)\left(\oint \left(a_0 a_i \d \vartheta\right) \partial a_1 \cdots \Hat{\partial a_i} \cdots \partial a_d \right) \theta(X_0,\ldots,X_d)  .
-\een
+\begin{align*}
+\eta(\varphi_0a_0X_0,\ldots,\varphi_da_dX_d) = \sum_{i=1}^d & \left(\int_I \varphi_0 \left(\iota_{E} \varphi_i \right) \varphi_1 \cdots \Hat{\varphi_i} \cdots \varphi_d\right) \\ & \times \left(\oint \left(a_0 a_i \d \vartheta\right) \partial a_1 \cdots \Hat{\partial a_i} \cdots \partial a_d \right) \theta(X_0,\ldots,X_d)  .
+\end{align*}
 
 \begin{lem} One has $\d \eta = \Tilde{\theta}_1$, where $\d$ is the differential for the cochain complex $\cloc^*(\Omega^*_{\RR_{>0}} \tensor (A_d \tensor \fg))$. In particular, the factorization Lie algebras $\sG_1$ and $\sG_1'$ are quasi-isomorphic (as $L_\infty$ algebras). An explicit quasi-isomorphism is given by the $L_\infty$ map $\Phi_1 : \sG_1 \to \sG_1'$ that sends the central element $K$ to itself and an element $(\varphi_0 a_0 X_0,\ldots, \varphi_d a_d X_d) \in \Sym^{d+1}(\Omega^*_c \tensor (A_d \tensor \fg)$ to 
 \ben
@@ -958,11 +958,13 @@ Modulo the central element $\Phi_2$ reduces to the map $\Phi$, which we have alr
 \theta_1'(\varphi_0 a_0 X_0,\ldots,\varphi_d a_d X_d) = \theta_2(\Phi(\varphi_0 a_0X_0),\ldots,\Phi(\varphi_da_dX_d))
 \ee
 for all $\varphi_i a_i X_i \in \Omega^*_{c}(I) \tensor (A_d \tensor \fg)$. The cocycle $\theta_1'$ is only nonzero if one of the $\varphi_i$ inputs is a $1$-form. We evaluate the left-hand side on the $(d+1)$-tuple $(\varphi_0 \d r a_0X_0,\varphi_1 a_1 X_1,\ldots,\varphi_da_dX_d)$ where $\varphi_i \in C^\infty_c(I)$, $a_i \in A_d$, $X_i \in \fg$ for $i=0,\ldots,d$. The result is
-\bearray
-& &\label{calc1a} \left(\int_I \varphi_0 \cdots \varphi_d \d r\right) \left(\oint a_0 \partial a_1 \cdots \partial a_d\right) \theta(X_0,\ldots,X_d) \\
-& + & \label{calc1b} \frac{1}{2} \sum_{i=1}^{d} \left( \int_I \varphi_0 (E \cdot \varphi_i) \varphi_1\cdots \Hat{\varphi_i} \cdots \varphi_{d}\d r\right)\left(\oint \left(a_0 a_i \d \vartheta\right) \partial a_1 \cdots \Hat{\partial a_i} \cdots \partial a_d \right) \theta(X_0,\ldots,X_d)
-\eearray
-We wish to compare this to the right-hand side of Equation (\ref{1vs2}). Recall that $\Phi(\varphi_0 \d r a_0 X_0) = \varphi(r) \d r a_0(z) X_0$ and $\Phi(\varphi_i a_i X_i) = \varphi(r) a_i(z) X_i$. Plugging this into the explicit formula for the cocycle $\theta_2$ we see the right-hand side of (\ref{1vs2}) is 
+\be
+\begin{array}{ccl}
+\label{calc1a} & \;\;\; & \displaystyle \left(\int_I \varphi_0 \cdots \varphi_d \d r\right) \left(\oint a_0 \partial a_1 \cdots \partial a_d\right) \theta(X_0,\ldots,X_d) \\
+ & + &  \displaystyle \frac{1}{2} \sum_{i=1}^{d} \left( \int_I \varphi_0 (E \cdot \varphi_i) \varphi_1\cdots \Hat{\varphi_i} \cdots \varphi_{d}\d r\right)\left(\oint \left(a_0 a_i \d \vartheta\right) \partial a_1 \cdots \Hat{\partial a_i} \cdots \partial a_d \right)\\ & \times & \theta(X_0,\ldots,X_d)
+\end{array}
+\ee
+We wish to compare this to the right-hand side of Equation (\ref{1vs2}). Recall that $$\Phi(\varphi_0 \d r a_0 X_0) = \varphi(r) \d r a_0(z) X_0$$ and $\Phi(\varphi_i a_i X_i) = \varphi(r) a_i(z) X_i$. Plugging this into the explicit formula for the cocycle $\theta_2$ we see the right-hand side of (\ref{1vs2}) is 
 \be\label{calc2}
 \left(\int_{\rho^{-1}(I)} \varphi_0(r) \d r a_0(z) \partial(\varphi_1(r) a_1(z)) \cdots \partial(\varphi_d(r) a_d(z))\right) \theta(X_0,\ldots,X_d) .
 \ee
@@ -993,14 +995,14 @@ Now, $\partial \varphi_i(r) = \omega \frac{\partial \varphi}{\partial r}$ where 
 which is clearly zero as $\omega$ appears twice.
 
 We observe that terms in the expansion of (\ref{calc2}) for which $\partial$ acts on precisely one of the functions $\varphi_1,\ldots,\varphi_d$ can be written as
-\ben
-\sum_{i=1}^d \int_{\rho^{-1}(I)} \varphi_0(r)\left(r \frac{\partial}{\partial r} \varphi_i(r)\right) \varphi_1(r) \cdots \Hat{\varphi_i(r)} \cdots \varphi_d(r) \d r \frac{r}{2 z_i} \d z_i a_0(z) a_i(z) \partial a_1(z) \cdots \Hat{\partial a_i(z)} \cdots \partial a_d(z) .
-\een 
+\begin{align*}
+\sum_{i=1}^d \int_{\rho^{-1}(I)} \varphi_0(r)\left(r \frac{\partial}{\partial r} \varphi_i(r)\right) & \varphi_1(r) \cdots \Hat{\varphi_i(r)} \cdots \varphi_d(r) \d r \frac{r}{2 z_i} \d z_i \\ & \times a_0(z) a_i(z) \partial a_1(z) \cdots \Hat{\partial a_i(z)} \cdots \partial a_d(z) .
+\end{align*}
 Finally, notice that the function $z_i / 2r$ is independent of the radius $r$. Thus, separating variables we find the integral can be written as
 \ben
 \frac{1}{2} \sum_{i=1}^d \left(\int_{I} \varphi_0 \left(r \frac{\partial}{\partial r} \varphi_i \right) \varphi_1 \cdots \Hat{\varphi_i } \cdots \varphi_d \d r\right) \left(\oint \frac{\d z_i}{z_i} a_0 a_i \partial a_2 \cdots \Hat{\partial a_i} \cdots \partial a_d \right) .
 \een
-This is precisely equal to the second term (\ref{calc1b}) above. Hence, the cocycles are compatible and the proof is complete. 
+This is precisely equal to the second line in (\ref{calc1a}) above. Hence, the cocycles are compatible and the proof is complete. 
 
 \end{proof}
 
@@ -1021,10 +1023,10 @@ These $E_d$-algebras are related to interesting extensions of the Lie algebra $L
 
 When $d=1$, we have seen that the nesting of ordinary annuli give rise to the structure of an associative algebra. For $d > 1$, a polyannulus is a complex submanifold of the form ${\rm Ann}_1 \times \cdots \times {\rm Ann}_d \subset (\CC^\times)^d$ where each ${\rm Ann}_i \subset \CC^\times$ is an ordinary annulus. Equivalently, a polyannulus is the complement of a closed polydisk inside of a larger open polydisk. We will see how the nesting of annuli in each component gives rise to the structure of a locally constant factorization algebra in $d$ {\em real} dimensions, and hence defines an $E_d$ algebra. 
 
-A result of Knudsen \cite{BK}, which we recall below, states that every dg Lie algebra determines an $E_d$-algebra, for any $d>1$, called the universal $E_d$ enveloping algebra.
+A result of Knudsen \cite{KnudsenEn}, which we recall below, states that every dg Lie algebra determines an $E_d$-algebra, for any $d>1$, called the universal $E_d$ enveloping algebra.
 To state the result precisely we need to be in the context of $\infty$-categories.
 
-\begin{thm}[\cite{BK}] Let $\sC$ be a stable, $\CC$-linear, presentable, symmetric monoidal $\infty$-category.
+\begin{thm}[\cite{KnudsenEn}] Let $\sC$ be a stable, $\CC$-linear, presentable, symmetric monoidal $\infty$-category.
 There is an adjunction
 \ben
 U^{E^d} : {\rm LieAlg}(\sC) \leftrightarrows E_d{\rm Alg} (\sC): F
@@ -1038,7 +1040,7 @@ In this situation, the enveloping algebra $U^{E^d}$ agrees with the ordinary uni
 When the twisting cocycle defining the Kac-Moody factorization algebra is zero we will see that the $E_d$ algebra coming from the product of polyannuli is equivalent to $U^{E_d} (L^d \fg)$.
 When we turn on a twisting cocycle we will find the $E_d$-enveloping algebra of a central extension of the iterated loop algebra. 
 
-The Kac-Moody factorization algebra on the $d$-fold $(\CC^\times)^d$ determines a real $d$-dimensional factorization algebra by considering the radius in each complex direction. 
+The Kac-Moody factorization algebra on the $d$-fold $(\CC^\times)^d$ determines a real $d$ dimensional factorization algebra by considering the radius in each complex direction. 
 This factorization algebra on $(\RR_{>0})^d$ is defined by the pushforward $\vec{\rho}_*\left(\sG_{\CC^{\times d}}\right)$, 
 where $\vec{\rho} : (\CC^\times)^d \to (\RR_{>0})^d$ is the projection $(z_1,\ldots,z_d) \mapsto (|z_1|, \cdots, |z_d|)$. 
 
@@ -1133,7 +1135,7 @@ and
 \Pi_{\theta} : \left(\Omega^{0,*}_X \tensor \fg\right)^{\tensor d} \to \Omega^{d,*}_X\tensor \fg
 \een
 sends $\alpha_1 \tensor \cdots \tensor \alpha_d \mapsto \partial \alpha_1 \wedge \cdots \wedge \partial \alpha_d$. 
-In complex dimension one, Butson and Yoo \cite{BY} show that this $P_0$ algebra is compatible with the usual Poisson vertex algebra structure on the Kac-Moody vacuum module.
+In complex dimension one, Butson and Yoo \cite{BY} show that this $P_0$ algebra is compatible with the usual Poisson vertex algebra structure on the classical limit of the ordinary Kac-Moody vacuum module.
 
 \subsection{Factorization homology along Hopf manifolds}
 
@@ -1152,11 +1154,11 @@ Note that $X_{f}$ is compact for any $f$.
 In the case $d=1$ all Hopf surfaces are equivalent to elliptic curves.
 
 \begin{lem} 
-For any $f$ there is a diffeomorphism $Y_f \cong S^{2d-1} \times S^1$.
+For any $f$ there is a diffeomorphism $X_f \cong S^{2d-1} \times S^1$.
 \end{lem}
 
 This implies that when $d > 1$, the cohomology $H^{2}_{dR} (X_f) = 0$ for any $f$. 
-In particular, $X_f$ is not K\"{a}hler when $d > 1$. 
+In particular, $X_f$ is {\em not} K\"{a}hler when $d > 1$. 
 For $1 \leq i \leq d$ let $q_i \in D(0,1)^{\times}$ be a nonzero complex number of modulus $|q_i| <1$. 
 The $d$-dimensional {\em Hopf manifold of type} ${\bf q} = (q_1,\ldots,q_d)$ is the following quotient of punctured affine space $\CC^d \setminus \{0\}$ by the discrete group $\ZZ^d$:
 \ben
@@ -1172,19 +1174,17 @@ Passing to the quotient, we obtain an $S^{2d - 1}$-fibration
 X_{\bf q} \to \left. \RR_{>0} \right/ \left(r \sim \lambda^{\ZZ} \cdot r \right) \cong S^1 .
 \een
 Here, $\lambda = (|q_1|^2 + \cdots + |q_d|^2)^{1/2} > 0$. 
-Since there are no topologically non-trivial $S^{2d-1}$ fibrations over $S^1$ we obtain $X_{\bf q} = S^{2d-1} \times S^1$. 
+Since there are no non-trivial $S^{2d-1}$ fibrations over $S^1$ we obtain $X_{\bf q} = S^{2d-1} \times S^1$ as smooth manifolds. 
 
 \begin{prop}
 Let $X$ be a Hopf manifold and suppose $\theta \in \Sym^{d+1}(\fg^*)^\fg$ is any $\fg$-invariant polynomial of degree $(d+1)$. 
-Then, there is a quasi-isomorphism
+Then, there is a quasi-isomorphism of $\CC[K]$-modules
 \ben
-\int_X \UU_\theta (\sG_X) \simeq \Hoch_*(U \fg)[K]
+\int_X \UU_\theta (\sG_X) \simeq \Hoch_*(U \fg)[K] .
 \een
-where $K$ is the central parameter of cohomological degree zero. 
 \end{prop}
 \begin{proof}
-Let's first consider the untwisted case.
-In this case, we must show $\int_X \UU (\sG_X) \simeq \Hoch_*(U \fg)$.
+Let's first consider the untwisted case where the statement reduces to $$\int_X \UU (\sG_X) \simeq \Hoch_*(U \fg).$$
 The factorization homology on the left hand side is computed by
 \ben
 \int_X \UU(\sG_X) = \clieu_*(\Omega^{0,*}(X) \tensor \fg) .
@@ -1234,7 +1234,7 @@ By the same argument as in the untwisted case, we conclude that in this case the
 \end{proof}
 
 There is an interesting consequence of this calculation to the Hochschild homology for the $A_\infty$ algebra $U(\Hat{\fg}_{d,\theta})$.
-It is easiest to state this when $X$ is a Hopf manifold of the form $(\CC^d \setminus \{0\}) / q^\ZZ$ for a single $q \in D(0,1)^\times$ where the quotient is by the relation $(z_1,\ldots,z_d) \simeq (q^\ZZ z_1,\ldots,q^\ZZ)$.
+It is easiest to state this when $X$ is a Hopf manifold of the form $(\CC^d \setminus \{0\}) / q^\ZZ$ for a single $q =q_1=\cdots=q_d \in D(0,1)^\times$ where the quotient is by the relation $(z_1,\ldots,z_d) \simeq (q^\ZZ z_1,\ldots,q^\ZZ)$.
 Let $p_q :  \CC^d \setminus \{0\} \to X$ be the quotient map.
 Consider the following diagram
 \ben
@@ -1742,8 +1742,7 @@ The heat kernel and propagator part of the integral is of the form
 \[
 \begin{array}{ccl}
 \displaystyle
-K_\epsilon(w^{(0)},w^{(d)}) \prod_{a =1}^d P_{\epsilon,L} (w^{(a-1)}, w^{(a)}) & = & \displaystyle \frac{1}{(4 \pi \epsilon)^d} \int_{t_1,\ldots,t_d = \epsilon}^L \frac{\d t_1 \cdots \d t_d}{(4 \pi t_1)^d \cdots (4 \pi t_d)^d} \frac{1}{t_1\cdots t_d}  \\ & & \displaystyle \times \d^d w^{(0)} \prod_{i=1}^d (\d \Bar{w}^{(1)}_i + \cdots + \d \Bar{w}^{(d)}_i) \prod_{a = 1}^d \d^d w^{(a)} \left(\sum_{i = 1}^d \Bar{w}_i^{(a)} \prod_{j \ne i} \d \Bar{w}_{j}^{(a)}\right)
-\\ & & \displaystyle \times e^{-\sum_{a,b = 1}^d M_{a b} w^{(a)} \cdot \Bar{w}^{(b)}} .
+K_\epsilon(w^{(0)},w^{(d)}) \prod_{a =1}^d P_{\epsilon,L} (w^{(a-1)}, w^{(a)}) & = & \displaystyle \frac{1}{(4 \pi \epsilon)^d} \int_{t_1,\ldots,t_d = \epsilon}^L \frac{\d t_1 \cdots \d t_d}{(4 \pi t_1)^d \cdots (4 \pi t_d)^d} \frac{1}{t_1\cdots t_d}  \\ & & \displaystyle \times \d^d w^{(0)} \prod_{i=1}^d (\d \Bar{w}^{(1)}_i + \cdots + \d \Bar{w}^{(d)}_i) \prod_{a = 1}^d \d^d w^{(a)} \\ & & \displaystyle \times \left(\sum_{i = 1}^d \Bar{w}_i^{(a)} \prod_{j \ne i} \d \Bar{w}_{j}^{(a)}\right) e^{-\sum_{a,b = 1}^d M_{a b} w^{(a)} \cdot \Bar{w}^{(b)}} .
 \end{array}
 \]
 Here, $M_{ab}$ is the $d \times d$ square matrix satisfying
@@ -1759,7 +1758,7 @@ In particular, only the $\d w_i^{(0)}$ components of $\alpha^{(0)} \cdots \alpha
 For some compactly supported function $\Phi$ we can write the weight as
 \ben
 \begin{array}{ccl}
-W (\alpha^{(0)}, \ldots, \alpha^{(d)}) & = & \lim_{\epsilon \to 0} \displaystyle \int_{\CC^{d(d+1)}} \left(\prod_{a = 0}^{d} \d^d w^{(a)} \d^d \Bar{w}^{(a)}\right) \Phi \\ & \times & \displaystyle \frac{1}{(4 \pi \epsilon)^d} \int_{t_1,\ldots,t_d = \epsilon}^L \frac{\d t_1 \cdots \d t_d}{(4 \pi t_1)^d \cdots (4 \pi t_d)^d} \frac{1}{t_1\cdots t_d} \sum_{i_1,\ldots, i_d} \epsilon_{i_1\cdots i_d} \Bar{w}_{i_1}^{(1)} \cdots \Bar{w}_{i_d}^{(d)} e^{-\sum_{a,b = 1}^d M_{a b} w^{(a)} \cdot \Bar{w}^{(b)}} 
+W (\alpha^{(0)}, \ldots, \alpha^{(d)}) & = & \lim_{\epsilon \to 0} \displaystyle \int_{\CC^{d(d+1)}} \left(\prod_{a = 0}^{d} \d^d w^{(a)} \d^d \Bar{w}^{(a)}\right) \Phi \\ & \times & \displaystyle \frac{1}{(4 \pi \epsilon)^d} \int_{t_1,\ldots,t_d = \epsilon}^L \frac{\d t_1 \cdots \d t_d}{(4 \pi t_1)^d \cdots (4 \pi t_d)^d} \frac{1}{t_1\cdots t_d} \\ & \times & \displaystyle \sum_{i_1,\ldots, i_d} \epsilon_{i_1\cdots i_d} \Bar{w}_{i_1}^{(1)} \cdots \Bar{w}_{i_d}^{(d)} e^{-\sum_{a,b = 1}^d M_{a b} w^{(a)} \cdot \Bar{w}^{(b)}} 
 \end{array}
 \een
 
@@ -2088,7 +2087,7 @@ In complex dimension one, this definition agrees with the usual definition of th
 \def\Riem{{\rm Riem}}
 \def\Conf{{\rm Conf}}
 
-In complex dimension one there is an intimate relationship between complex and Riemannian structures. 
+In complex dimension one there is an intimate relationship between complex structures and Riemannian structures. 
 Every Riemann surface admits a natural Riemannian metric and hence a conformal structure. 
 Conversely, a conformal class of a metric defines a complex structures. 
 It is well-known that the moduli of Riemann surfaces is equivalent to the moduli of conformal structures.
@@ -2144,7 +2143,7 @@ Moreover, under the map of local Lie algebras, one checks that $\phi_{\rm Weyl}^
 \een
 We have already remarked that $\omega_{\rm Vir}$ is the generator of the cohomology $H^1_{\rm loc}(\sT_\Sigma)$ for any Riemann surface.
 Thus, in complex dimension one we see that our definition of central charge agrees with the usual one from CFT.
-We have verified an explicit calculation of the central charge in the BV formalism in \cite{BWVir}.
+We have verified an explicit calculation of the central charge in the BV formalism for a particular holomorphic theory on Riemann surfaces in \cite{BWVir}.
 
 \subsection{Gelfand-Fuks cohomology} \label{sec: gf}
 
@@ -2178,12 +2177,12 @@ By our usual yoga of studying equivariant quantizations, we know such anomalies 
 
 \begin{dfn/lem} Consider the following two classes of cocycles on $\W_d$.
 \begin{itemize}
-\item[Chern type:] For $1 \leq k \leq d$, let $\tau_k \in \clie^k(\W_d ; \hOmega_d^k)$ be the cocycle
+\item[] Chern type: For $1 \leq k \leq d$, let $\tau_k \in \clie^k(\W_d ; \hOmega_d^k)$ be the cocycle
 \ben
 \tau_k = s_k \left(\At^{\GF}(\hT_d)\right),
 \een
 where $s_k(\At^{\GF}(\hT_d)) $ is the homogeneous degree $k$ piece of the characteristic polynomial defined by $\det(I + t \At^{\GF}(\hT_d))$. 
-\item[$\GL$ type:] For $1 \leq i \leq d$ let $a_i \in \clie^{2i-1}(\W_d ; \hO_d)$ be the cocycle 
+\item[] $\GL_n$ type: For $1 \leq i \leq d$ let $a_i \in \clie^{2i-1}(\W_d ; \hO_d)$ be the cocycle 
 \ben
 a_i : (\xi_1,\ldots,\xi_{2i-1}) \mapsto \sum_{\sigma \in S_{2i-1}} {\rm sign}(\sigma) \Tr({\rm Jac}(\xi_{\sigma(1)}) \cdots {\rm Jac}(\xi_{\sigma(2i-1)}) .
 \een
@@ -2334,7 +2333,7 @@ Any tensor bundle $\sV$ (those built from the tangent bundle via duals and tenso
 Further, this vector bundle defines a locally free sheaf of $\sM$ via the derived pushforward $\RR \pi_* \sV$ and hence a Chern class $c_1(\sV) = c_1(\RR \pi_* \sV) \in H^2(\sM)$. 
 These are higher dimensional analogs of the tautological classes on the moduli space of curves.
 
-There is a relationship of these tautological classes with Gelfand-Fuks cohomology as follows. The vector bundle $\sV \to \sX$ is classified by a map $f_{\sV} : \sX \to B \U(d)$. 
+There is a relationship of these tautological classes with Gelfand-Fuks cohomology as follows. The vector bundle $\sV \to \sX$ is classified by a map $f_{\sV} : \sX \to B \U(d)$, and so we obtain the diagram. 
 \ben
 \begin{tikzcd}
 & \sV \arrow[d] & \\
@@ -2344,8 +2343,7 @@ B \U(d) & & \sM .
 \een
 If $\alpha \in H^{2d+2} (B \U(d))$ we obtain the class via the push-pull construction $\pi_* f_{\sV}^* \alpha \in H^2(\sM)$.
 Since $H^{2d+2} (B \U(d)) \cong H^{2d+1}(\W_d)$, this shows that our Gelfand-Fuks classes define tautological classes on the moduli of complex manifolds. 
-The precise relations between the classes $c_1(\sV)$ and Gelfand-Fuks cohomology is not yet known, but \brian{finish}
-
+It would be interesting to work out the precise relationship between the classes $c_1(\sV)$ and Gelfand-Fuks classes, but we postpone this to future work.
 
 %\begin{thm}
 %Let $X$ be a complex $d$-fold. 
@@ -2596,12 +2594,16 @@ K_\varphi : \sT_{\CC^d} ^{\tensor k} \to \CC \;\; , \;\; (\xi_1,\ldots,\xi_k) \m
 For any $\varphi$ the cochain $K_\varphi$ is a local cochain, that is $K_\varphi \in \cloc^*(\sT_{\CC^d})$. 
 \end{lem} 
 
-Notice that we have made no claim about the closedness of the cochain $K_\varphi$. 
-We conjecture that $K_\varphi$ is closed if and only if the class $\varphi \in H^{k}(\W_d ; \hOmega^{d}_n)$ is closed for the $E_2$-differential ...\brian{finish}
+%Notice that we have made no claim about the closedness of the cochain $K_\varphi$. 
+%We conjecture that $K_\varphi$ is closed if and only if the class $\varphi \in H^{k}(\W_d ; \hOmega^{d}_n)$ is closed for the $E_2$-differential ...\brian{finish}
+
+For degree reasons, each of the classes in $H^{d+1}(\W_d ; \hOmega^{d}_d)$ survive to the $E_\infty$-page of the formal Hodge-to-de Rham spectral sequence converging to $H^*(\W_d)$, though there may be relations among them. 
+We expect, though have not thoroughly checked, that for such  the classes $K_\varphi$ are cocycles in the local Chevalley-Eilenberg complex. 
+In dimension two, this is the case.
 
 \begin{eg}
 Consider the case $d=2$. 
-Using the formal Hodge to de Rham spectral sequence, we can choose generators of $H_{\rm Lie}^5(\W_2) = \CC^2$ defined by the classes
+Using the formal Hodge-to-de Rham spectral sequence, we can choose generators of $H_{\rm Lie}^5(\W_2) = \CC^2$ defined by the classes
 \ben
 a_1\tau_1^2, a_1 \ch^{\GF}_2 \in H_{\rm Lie}^3(\W_2 ; \hOmega^2_2) .
 \een
@@ -2714,7 +2716,5 @@ In any dimension, there is a single type a-cocycle, and the remaining cocycles a
 Using the isomorphism $H^{2d+1}(\W_d) \cong H^{2d+2}(BU(d))$ we conjecture that the type $a$-cocycle corresponds to the characteristic class $c_1c_{d} \in H^{2d+2}(BU(d))$.
 
 %\subsection{The holomorphic anomaly for $\sigma$-models}
-
-
 
 %\end{document}

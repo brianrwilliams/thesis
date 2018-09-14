@@ -42,7 +42,7 @@ At each scale $L$ a theory is defined by an action functional $I[L]$, which is a
 
 In some broad generality, there are two main steps to construct a QFT in this formalism.
 \begin{itemize}
-\item[{\bf Renormalization:}] For each scale $L$ and regulator $\epsilon > 0$ consider the RG flow from scale $\epsilon$ to $L$:
+\item[] {\bf Renormalization:} For each scale $L$ and regulator $\epsilon > 0$ consider the RG flow from scale $\epsilon$ to $L$:
 \be
 W(P_{\epsilon < L} , I) .
 \ee
@@ -53,7 +53,7 @@ W(P_{\epsilon<L} , I - I^{CT}(\epsilon))
 is well-defined. 
 Denote this limit by $I[L]$.
 The family $\{I[L]\}$ defines what we call a {\em prequantization}.
-\item[{\bf Gauge consistency:}] We then ask if the family $\{I[L]\}$ defines a consistent quantization.
+\item[] {\bf Gauge consistency:} We then ask if the family $\{I[L]\}$ defines a consistent quantization.
 For each $L$ we require that $I[L]$ satisfy the scale $L$ quantum master equation
 \ben
 Q I[L] + \hbar \Delta_L I[L] + \frac{1}{2} \{I[L],I[L]\}_L = 0,
@@ -399,13 +399,14 @@ In particular, $\sL$ is a sheaf of $L_\infty$ algebras.
 
 The simplest example of a local Lie algebra starts with the data of an ordinary Lie algebra $\fg$. 
 We can then take the constant bundle $\ul{\fg}_X$ with fiber $\fg$. 
-The Lie bracket on $\fg$ extends to define the structure of a local Lie algebra. 
+The Lie bracket on $\fg$ extends to define the structure of a local Lie algebra.
+In this case, the sheaf of Lie algebras is $C^\infty_X \tensor \fg$.  
 Another important example of a local Lie algebra is given by the Lie algebra of vector fields ${\rm Vect}(X)$ on a smooth manifold. 
 The Lie bracket of vector fields is a bidifferential operator on the tangent bundle and this equips the sheaf of sections with the structure of a sheaf of Lie algebras.
 We will study the holomorphic version of this local Lie algebra in Chapter \ref{chap: symmetries}.
 
 Just as in the case of an ordinary graded vector bundle, we can discuss local functionals on a local Lie algebra $L$. 
-In this case, the $L_\infty$ structure maps give this the structure of a sheaf of complexes. 
+In this case, the $L_\infty$ structure maps give this the structure of a sheaf of complexes, providing a local version of the Chevalley-Eilenberg cochain complex. 
 Indeed, the $\infty$-jet bundle $J L$ is an $L_\infty$ algebra object in $D_X$-modules and so we can define the $D_X$-module of reduced Chevalley-Eilenberg cochains $\cred^*(J L)$. 
 Mimicking the definition above, we arrive at the following local version of Lie algebra cohomology that will come up again and again in this thesis.
 
@@ -415,9 +416,10 @@ The local Chevalley-Eilenberg cochain complex is the sheaf of cochain complexes
 \ben
 \cloc^*(\sL) = {\rm Dens}_X \tensor_{D_X} \cred^*(L) .
 \een
+We denote the global sections by $\cloc^*(\sL(X))$. 
 \end{dfn}
 
-The {\em local cohomology} of a local Lie algebra is the cohomology of the local CE complex.
+The {\em local cohomology} of a local Lie algebra is the cohomology of the local CE complex, which we will denote $H^*_{\rm loc}(\sL(X))$. 
 
 \begin{rmk}
 We have already remarked that for a graded vector bundle $E$ there is an embedding $\oloc(\sE) \hookrightarrow \sO_{red}(\sE)$.
@@ -447,10 +449,10 @@ Also, an important part of a classical field theory is ellipticity.
 We say a local $L_\infty$ algebra is {\em elliptic} if the complex $(\sL, \d = \ell_1)$ is an elliptic complex.
 
 \begin{prop}
-The following are equivalent:
+The following structures are equivalent:
 \begin{enumerate}
 \item a classical field theory in the BV formalism $(\sE, \omega, S)$;
-\item an elliptic local Lie algebra structure on $L = E [1]$ equipped with a $(-3)$-shifted symplectic structure.
+\item an elliptic local Lie algebra structure on $L = E [1]$ equipped with a $(-3)$-shifted symplectic pairing.
 \end{enumerate}
 \end{prop}
 
@@ -500,7 +502,7 @@ One requires that $F$ satisfies the following conditions:
 \begin{enumerate}
 \item $F(\CC) \simeq *$ ($F$ is pointed);
 \item $F$ takes surjective maps of dg Artin algebras to fibrations of simplicial sets;
-\item $F$ preserves fiber products: $F(A \times_B C) \xto{\simeq} F(A) \times_{F(B)} F(C)$.
+\item if $A\to B, C \to B$ are maps of dg Artin algebras such that one of them is surjective on $H^0$, then $F$ preserves the fiber product: $F(A \times_B C) \xto{\simeq} F(A) \times_{F(B)} F(C)$.
 \end{enumerate}
 
 The most important way in which formal moduli problems arise is through the {\em Maurer-Cartan} equation.
@@ -529,11 +531,11 @@ Motivated by the ordinary case we can make the following definition.
 An {\em elliptic moduli problem} is a sheaf of formal moduli problems represented by an elliptic $L_\infty$ algebra $\sL$. 
 \end{dfn}
 
-According the previous section, we see that a classical theory in the BV formalism is simply a formal moduli problem that is equipped with the data of a shifted symplectic structure. 
+According the previous section, we see that a classical theory in the BV formalism is simply a elliptic moduli problem that is equipped with the data of a shifted symplectic pairing. 
 
 \subsection{Quantum field theory}
 
-We now introduce the notion of a {\em quantum field theory} in the BV formalism.
+We now recall the notion of a {\em quantum field theory} in the BV formalism.
 We follow the effective approach defined by Costello in \cite{CostelloRenormalization}.
 
 \subsubsection{Regularization}
@@ -650,12 +652,13 @@ Q I[L] + \hbar \Delta_L I[L] + \frac{1}{2} \{I[L], I[L]\}_L = 0 ;
 \end{enumerate}
 \end{dfn}
 
-The subspace $\sO_{P,sm}^+(\sE)[[\hbar]] \subset \sO(\sE)[[\hbar]]$ is of smooth and proper functionals that are at least cubic modulo $\hbar$. 
-Smooth and properness is a technical condition that we will not delve into in this work, but refer to the original reference of Costello and Gwilliam.
-The first condition ensures that the scale $L$ action functional $S[L]$ determines the functional at every other scale.
-The second can be interpreted as saying that we have a proper path integral measure at scale $L$ 
+The subspace $\sO_{P,sm}^+(\sE)[[\hbar]] \subset \sO(\sE)[[\hbar]]$ is the one of smooth and proper functionals that are at least cubic modulo $\hbar$. 
+Smooth and properness is a technical condition that we will not delve into in this section, but refer to the original reference of Costello-Gwilliam.
+
+Condition (a) ensures that the scale $L$ action functional $S[L]$ determines the functional at every other scale.
+Condition (b) can be interpreted as saying that we have a proper path integral measure at scale $L$ 
 (i.e., the QME can be seen as a definition of the measure).
-The third condition implies that the effective action is a quantization of a classical field theory,
+Finally, condition (c) implies that the effective action is a quantization of a classical field theory,
 since a defining property of a classical theory is that its action functional is local.
 (A full definition is available in Section 8.2 of \cite{CG2}.)
 
@@ -696,8 +699,8 @@ In general this equation is not satisfied, and there may in fact be obstructions
 \end{enumerate}
 
 For holomorphic theories we will study both problems above.
-We will show that the analysis involved in finding counterterms for holomorphic theories is extremely well-behaved. 
-In fact, the counterterms for holomorphic theories on $\CC^d$ are all zero.
+We will show that the analysis involved in renormalization for holomorphic theories is extremely well-behaved. 
+In fact, the counterterms for holomorphic theories on $\CC^d$ can be taken to be zero.
 Using this, we will show how solving the QME for holomorphic theories can be done a systematic way.
 
 To study the problem of solving the quantum master equation in general, we work order by order in the formal parameter $\hbar$.
@@ -781,12 +784,12 @@ where $\d z_i \wedge (-)$ is the vector bundle homomorphism $\wedge^\ell T^{1,0*
 
 The next piece of data we fix is:
 \begin{itemize}
-\item[(2)] a square zero holomorphic differential operator 
+\item[(2)] a square-zero holomorphic differential operator 
 \ben
-Q^{hol} : \sV \to \sV[-1]
+Q^{hol} : \sV^{hol} \to \sV^{hol}
 \een
 of cohomological degree $+1$. 
-Here $\sV$ denotes the holomorphic sections of $V$. 
+Here $\sV^{hol}$ denotes the holomorphic sections of $V$. 
 \end{itemize}
 
 Finally, to define a free theory we need the data of a symplectic pairing. 
@@ -806,11 +809,12 @@ The more natural thing to do is to take the {\em holomorphic} sections of the ve
 By construction, the operator $Q^{hol}$ and the pairing $(-,-)_V$ are defined on holomorphic sections, so on the surface this seems reasonable.
 We will take a natural resolution of holomorphic sections in order to relate to the usual definition of a classical BV theory.
 
-Given any holomorphic vector bundle $E$ we can define its {\em Dolbeault complex} $\Omega^{0,*}(X , E)$ with its Dolbeault operator 
+Given any holomorphic vector bundle $V$ we can define its {\em Dolbeault complex} $\Omega^{0,*}(X , V)$ with its Dolbeault operator 
 \ben
-\dbar : \Omega^{0,p}(X, E) \to \Omega^{0,p+1}(X, E) .
+\dbar : \Omega^{0,p}(X, V) \to \Omega^{0,p+1}(X, V) .
 \een
-Here, $\Omega^{0,p}(X, E)$ denotes smooth sections of the vector bundle $\Wedge^p T^{0,1*} X \tensor E$. 
+Here, $\Omega^{0,p}(X, V)$ denotes smooth sections of the vector bundle $\Wedge^p T^{0,1*} X \tensor V$. 
+The fundamental property of the Dolbeault complex is that it provides a resolution for the sheaf of holomorphic sections $\sV^{hol} \simeq \Omega^{0,*}_X(V)$. 
 
 We now take a graded holomorphic vector bundle $V$ as above, equipped with the differential operator $Q^{hol}$. 
 We can then define the totalization of the Dolbeault complex with the operator $Q^{hol}$:
@@ -818,7 +822,7 @@ We can then define the totalization of the Dolbeault complex with the operator $
 \sE_V = \left(\Omega^{0,*}(X, E), \dbar + Q^{hol}\right) .
 \een
 The operator $\dbar + Q^{hol}$ will be the linearized BRST operator of our theory.
-By assumption, we have $\dbar Q^{hol} = Q^{hol} \dbar^*$ so that $(\dbar + Q^{hol})^2 = 0$ and hence the fields still define a complex. 
+By assumption, we have $\dbar Q^{hol} = Q^{hol} \dbar$ so that $(\dbar + Q^{hol})^2 = 0$ and hence the fields still define a complex. 
 The $(-1)$-shifted symplectic pairing is obtained by composition of the pairing $(-,-)_V$ with integration on $\Omega^{d,hol}_X$. 
 The thing to observe here is that $(-,-)_V$ extends to the Dolbeault complex in a natural way: we simply combine the wedge product of forms with the pairing on $V$.
 The $(-1)$-shifted pairing $\omega_V$ on $\sE$ is defined by the diagram
@@ -868,7 +872,7 @@ S(\gamma + \beta, \gamma'+\beta') = \int_{X} \beta \wedge \dbar \gamma' + \beta'
 \een 
 When $d = 1$ this reduces to the ordinary chiral $\beta\gamma$ system from conformal field theory. 
 The $\beta\gamma$ system is a bosonic version of the ghost $bc$ system that appears in the quantization of the bosonic string, see Chapter 6 of \cite{Polchinski1}.
-We will discuss this higher dimensional version further in Section \ref{chap: holsig}.
+We will study this higher dimensional version further in Chapter \ref{chap: holsig}.
 For instance, we will see how this theory is the starting block for constructing general holomorphic $\sigma$-models. 
 \end{eg}
 
@@ -899,8 +903,8 @@ For a general bundle $E$ we will refer to it as the $\beta\gamma$ system with co
 \begin{rmk} 
 We will only work with a holomorphic theory prescribed by the data $(V, (-,-)_V, Q^{hol})$ through its associated BV theory.
 One might propose a definition of a BV theory in the analytic category based off of holomorphic sections of holomorphic vector bundles. 
-There is a technical reason why this approach fails in our approach to QFT. 
-When one studies the {\em observables} of a QFT \brian{finish}
+There are numerous technical reason why this approach fails in our approach to QFT.
+In particular, the sheaf of holomorphic sections of a holomorphic bundle is not fine, and there do not exists partitions of unity in general. 
 \end{rmk}
 
 \subsubsection{Interacting holomorphic theories}
@@ -933,10 +937,10 @@ where $\{w_i\}$ is the local coordinate on $X$ near $w$ and $z_i$ is the fiber c
 Using holomorphic jets we can make a completely analogous definition in our setting.
 
 Differential operators between holomorphic bundles are the same as bundle maps between the associated jet bundles. 
-Suppose $V,W$ are holomorphic vector bundles with spaces of holomorphic sections given by $\sV,\sW$ respectively.
+Suppose $V,W$ are holomorphic vector bundles with spaces of holomorphic sections given by $\sV^{hol},\sW^{hol}$ respectively.
 Then we can express polydifferential operators from $V$ to $W$ as
 \ben
-{\rm PolyDiff}^{hol}(\sV \times \cdots \times \sV, \sW) \cong {\rm Hom}({\rm Jet}^{\rm hol}(V) \tensor \ldots \tensor {\rm Jet}^{\rm hol}(V) , W) .
+{\rm PolyDiff}^{hol}(\sV^{hol} \times \cdots \times \sV^{hol}, \sW^{hol}) \cong {\rm Hom}({\rm Jet}^{\rm hol}(V) \tensor \ldots \tensor {\rm Jet}^{\rm hol}(V) , W) .
 \een
 
 \begin{dfn}\label{dfn hol lag}
@@ -949,7 +953,7 @@ where Hom is taken in the category of holomorphic vector bundles.\footnote{The h
 We require the bundle maps to be continuous with respect to the natural adic topology.}
 Equivalently, a holomorphic Lagrangian density is of the form $F = \sum_n F_n \in \sO_{red}^{hol}(V)$ where each $F_n$ is a holomorphic polydifferential operator 
 \ben
-F_n : \sV \times \cdots \times \sV \to \Omega^{d,hol}_X .
+F_n : \sV^{hol} \times \cdots \times \sV^{hol} \to \Omega^{d,hol}_X .
 \een
 \end{dfn}
 
@@ -965,15 +969,15 @@ Suppose that $V$ is part of the data of a free holomorphic theory $(V, Q^{hol},(
 The pairing $(-,-)_V$ endows the space of holomorphic Lagrangians with a sort of bracket.
 Indeed, suppose $F, F' \in \sO_{red}^{hol}(V)$.
 For simplicity suppose $F,F'$ are of homogenous symmetric degree $k,k'$ respectively.
-Then, their product $F \tensor F'$ is a symmetric element in the homomorphism space
+Then, their product $F \tensor F'$ is an element in the homomorphism space
 \ben
-{\rm Hom}({\rm Jet}^{hol}(V)^{\tensor k +k'} , K_X \tensor K_X) .
+{\rm Hom}({\rm Jet}^{hol}(V)^{\tensor (k +k')} , K_X \tensor K_X) .
 \een
-Now, the bundle map $(-,-)_V : V \tensor V \to K_X[d-1]$ is invertible, hence it determines an element $(-,-)^{-1}_V \in V \tensor K_X^*$, where $K_X^*$ is the dual bundle. 
+Now, the bundle map $(-,-)_V : V \tensor V \to K_X[d-1]$ is invertible, hence it determines an element $(-,-)^{-1}_V \in V \tensor V \tensor K_X^*$, where $K_X^*$ is the dual bundle. 
 We can then consider the composition
 \ben
 \xymatrix{
-{\rm Hom}({\rm Jet}^{hol}(V)^{\tensor n} , K_X \tensor K_X) \ar[r]^-{(-,-)^{-1}_V} & {\rm Hom}({\rm Jet}^{hol}(V)^{\tensor k +k' -2} , K_X^* \tensor K_X \tensor K_X) \ar[r] & {\rm Hom}({\rm Jet}^{hol}(V)^{\tensor k +k' -2} , K_X).
+{\rm Hom}({\rm Jet}^{hol}(V)^{\tensor n} , K_X \tensor K_X) \ar[r]^-{(-,-)^{-1}_V} & {\rm Hom}({\rm Jet}^{hol}(V)^{\tensor (k +k' -2)} , K_X^* \tensor K_X \tensor K_X) \ar[d] \\ & {\rm Hom}({\rm Jet}^{hol}(V)^{\tensor (k +k' -2)} , K_X).
 }
 \een
 In the first arrow we have evaluated $(-,-)^{-1}_V$ on the first two factors and the second arrow is simply the evaluation pairing. 
@@ -1129,10 +1133,25 @@ Suppose $(V, 0, (-,-)_V, I^{hol})$ is the data of a holomorphic theory with $Q^{
 Let $(\sE_V, Q = \dbar, \omega_V, I)$ be the corresponding BV theory.
 Then, there is a quasi-isomorphism of sheaves
 \ben
-\Def_{\sE_V}  \simeq \Omega^{d,hol}_X \tensor^{\LL}_{D_X^{hol}} \sO_{red}^{hol}(V)
+\Def_{\sE_V}  \simeq \Omega^{d,hol}_X \tensor^{\LL}_{D_X^{hol}} \sO_{red}(J^{hol}V) [d]
 \een
 that is compatible with the brackets and $\{-,-\}$ and $\{-,-\}^{hol}$ on both sides.
 \end{lem}
+\begin{proof}
+This follows from the following observation about $D$-modules.
+If $M$ is a holomorphic $D_{X}^{hol}$-module, then clearly it forgets down to an ordinary smooth $D_X$-module that we denote $M^{C^\infty}$. 
+Moreover, there is a quasi-isomorphism of $D$-modules
+\ben
+\Omega^{d,d}_{X} \tensor^{\LL}_{D_X} M^{C^\infty} \simeq \Omega^{d,hol}_X \tensor_{D_X^{hol}} M [d] .
+\een
+
+We apply this to the case $M = \sO_{red}(J^{hol} V)$, where $V$ is a holomorphic vector bundle.
+To complete the proof, we need to show that for any holomorphic vector bundle $V$ that there is a quasi-isomorphism of $D_X$-modules between $\sO_{red}(J \Omega^{0,*}(X , V))$ and $\sO_{red}(J^{hol}V)$. 
+For this, it suffices to show that the space of linear functionals are quasi-ismorphic. 
+For any vector bundle $E$ there always exists a (non-canonical) splitting $J E \cong \sE \tensor_{C^\infty_X} J_X$, where $\sE$ is the sheaf of sections and $J_X$ is the sheaf of $\infty$-jets of the trivial bundle.
+Thus, we can assume that $V$ is the trivial vector bundle, where the claim is now $(J\Omega^{0,*}(X))^\vee \simeq (J^{hol}_X)^\vee$. 
+Both sides are quasi-isomorphic to the smooth sections of the bundle of holomorphic differential operators $D^{hol}$, so we are done. 
+\end{proof}
 
 \begin{rmk}
 Just as in the ordinary case we can formulate the data of a classical holomorphic theory in terms of sheaves of $L_\infty$ algebras. 
@@ -1818,9 +1837,9 @@ exists as a distribution on $\CC^{dk}$.
 We will bound the absolute value of the weight in Equation (\ref{weight1}) and show that it has a well-defined $\epsilon\to 0$ limit.
 First, consider the change of coordinates as in Equations (\ref{coords1}),(\ref{coords2}).
 For any compactly supported function $\Phi$ we see that $W_{\epsilon < L}^{k, (n)} (\Phi)$ has the form
-\be\label{weight2}
-\int_{w^k \in \CC^d} \d^{d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \left(\prod_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^\alpha}P^{an}_{\epsilon < L} (w^\alpha) \right) \sum_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^k} P^{an} \left(\sum_{\alpha=1}^{k-1} w^\alpha\right) .
-\ee
+\begin{align}\label{weight2}
+& \int_{w^k \in \CC^d} \d^{d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \\ & \times \left(\prod_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^\alpha}P^{an}_{\epsilon < L} (w^\alpha) \right) \sum_{\alpha=1}^{k-1} \left(\frac{\partial}{\partial w^\alpha}\right)^{\vec{n}^k} P^{an} \left(\sum_{\alpha=1}^{k-1} w^\alpha\right) .
+\end{align}
 For $\alpha = 1,\ldots,k-1$ the notation $P^{an}_{\epsilon < L} (w^\alpha)$ makes sense since $P^{an}_{\epsilon<L}(z^\alpha,z^{\alpha+1})$ is only a function of $w^\alpha = z^{\alpha+1}-z^\alpha$.
 Similarly $P^{an}_{\epsilon<L}(z^{k+1},z^1)$ is a function of 
 \ben
@@ -1876,15 +1895,15 @@ Thus, we can integrate by parts iteratively to obtain the following expression f
 \ben
 \begin{array}{lll}
 & \displaystyle \pm \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}}\left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \prod_{\alpha=1}^k \frac{\d t_\alpha}{(4 \pi t_\alpha)^d}  \\ 
-& \displaystyle \times\left( \sum_{i_1,\ldots, i_k} \epsilon_{i_1\cdots,i_d} D_{1, i_1} \cdots D_{k-1,i_{k-1}} \sum_{\alpha=1}^{k-1} D_{\alpha, i_k} \Phi(w^1,\ldots,w^k) \right) \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+& \displaystyle \times\left( \sum_{i_1,\ldots, i_k} \epsilon_{i_1\cdots,i_d} D_{1, i_1} \cdots D_{k-1,i_{k-1}} \sum_{\alpha=1}^{k-1} D_{\alpha, i_k} \Phi(w^1,\ldots,w^k) \right) \\ & \displaystyle \times  \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{t_\alpha} - \frac{1}{t_k} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
 \end{array}
 \een
 %\brian{all the differential operators $D_{\alpha, i_\alpha}$ are uniformly bounded in $t$. To make these precise I should find what the uniform bound is.}
 
 Thus, the absolute value of the weight is bounded by 
-\be\label{weight bound1}
-|W_{\epsilon < L}^{k, (n)}(\Phi)| \leq C \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w^1,\ldots,w^{k-1}} \prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha \Psi(w^1,\ldots,w^{k-1},w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{t^d_1\cdots t^d_k} \times E(w,t)
-\ee
+\begin{align} \label{weight bound1}
+|W_{\epsilon < L}^{k, (n)}(\Phi)| \leq & \;\; C \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w^1,\ldots,w^{k-1}} \prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha \Psi(w^1,\ldots,w^{k-1},w^k)\\ & \times \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{t^d_1\cdots t^d_k} \times E(w,t)
+\end{align}
 where $\Psi$ is some compactly supported functnio on $\CC^{dk}$ that is independent of $t$. 
 
 To compute the right hand side we will perform a Gaussian integration with respect to the variables $(w^1,\ldots,w^{k-1})$. 
@@ -1912,7 +1931,7 @@ We now perform a Wick expansion for the Gaussian integral in the variables $(w^1
 For a reference similar to the notation used here see the Appendix of our work in \cite{EWY}.
 The inequality in (\ref{weight bound1}) becomes
 \begin{align}\label{weight bound2}
-|W_{\epsilon < L}^{k, (n)}(\Phi)| & \leq C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1\cdots t_k)^d}\left(\frac{t_1\cdots t_k}{t_1+\cdots+t_k}\right)^d + O(\epsilon) \\ & = C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1+\cdots+t_k)^d} + O(\epsilon) .
+|W_{\epsilon < L}^{k, (n)}(\Phi)| & \leq C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \\ & \times \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1\cdots t_k)^d} \left(\left(\frac{t_1\cdots t_k}{t_1+\cdots+t_k}\right)^d + O(\epsilon)\right) \\ & = C' \int_{w^k \in \CC^d} \d^{2d} w^k \Psi(0, \ldots, 0, w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^k} \d t_1 \ldots \d t_k \frac{1}{(4\pi)^{dk}} \frac{1}{(t_1+\cdots+t_k)^d} \\ & + O(\epsilon) .
 \end{align}
 The first term in the Wick expansion is written out explicitly. 
 The $O(\epsilon)$ refers to higher terms in the Wick expansion, which one can show all have order $\epsilon$, so disappear in the $\epsilon \to 0$ limit.
@@ -2037,9 +2056,9 @@ If $(k, (\vec{n}))$ is a pair of wheel data (recall $k$ labels the number of ver
 \Tilde{W}_{\epsilon < L}^{k, (n)} : C_c^\infty((\CC^d)^k) \to \CC,
 \een
 that sends a smooth compactly supported function $\Phi \in C_c^\infty((\CC^d)^k) = C_c^\infty(\CC^{dk})$ to
-\be\label{anomalyweight1}
-\Tilde{W}_{\epsilon < L}^{k, (n)} (\Phi) = \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha)  \left(\frac{\partial}{\partial z^k}\right)^{\vec{n}^k} K_{\epsilon}(z^1,z^k) \prod_{\alpha = 1}^{k-1} \left(\frac{\partial}{\partial z^\alpha}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^\alpha, z^{\alpha+1}) .
-\ee
+\begin{align}\label{anomalyweight1}
+\Tilde{W}_{\epsilon < L}^{k, (n)} (\Phi) = & \int_{(z^1,\ldots, z^k) \in (\CC^d)^k} \prod_{\alpha=1}^k \d^d z^\alpha \Phi(z^1,\ldots,z^\alpha)  \left(\frac{\partial}{\partial z^k}\right)^{\vec{n}^k} K_{\epsilon}(z^1,z^k) \\ & \times \prod_{\alpha = 1}^{k-1} \left(\frac{\partial}{\partial z^\alpha}\right)^{\vec{n}^\alpha} P_{\epsilon < L}^{an}(z^\alpha, z^{\alpha+1}) .
+\end{align}
 
 Item (1) follows from the following observation.
 
@@ -2083,19 +2102,19 @@ First, we make the familiar change of coordinates as in Equations (\ref{coords1}
 Using the explicit form the heat kernel and propagator we see that for any $\Phi \in C^\infty_c(\CC^{dk})$ the weight is
 \ben
 \begin{array}{lll}
-\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) & = \displaystyle \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^{k-1}} \frac{1}{(4 \pi \epsilon)^d} \prod_{\alpha=1}^{k-1} \frac{\d t_\alpha}{(4 \pi t_\alpha)^d} \\
-& \displaystyle \times \sum_{i_1,\ldots,i_{k-1} =1}^d \epsilon_{i_1,\ldots,i_d} \left(\frac{\wbar^1_{i_1}}{t_1} \frac{(\wbar^1)^{n^1}}{4t^{|n^1|}}\right) \cdots \left(\frac{\wbar^{k-1}_{i_{k-1}}}{4t_{k-1}}\frac{(\wbar^{k-1})^{n^{k-1}}}{4t^{|n^{k-1}|}}\right) \left(\frac{1}{4t^{|n^k|}} \left(\sum_{\alpha=1}^{k-1} \wbar^\alpha\right)^{n^k}\right) \\
-& \displaystyle \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{4t_\alpha} - \frac{1}{4\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) & = \displaystyle \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}} \left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \Phi(w^1,\ldots,w^k) \\ & \times \displaystyle \int_{(t_1,\ldots,t_k) \in [\epsilon,L]^{k-1}} \frac{1}{(4 \pi \epsilon)^d} \prod_{\alpha=1}^{k-1} \frac{\d t_\alpha}{(4 \pi t_\alpha)^d} \\
+& \displaystyle \times \sum_{i_1,\ldots,i_{k-1} =1}^d \epsilon_{i_1,\ldots,i_d} \left(\frac{\wbar^1_{i_1}}{t_1} \frac{(\wbar^1)^{n^1}}{4t^{|n^1|}}\right) \cdots \left(\frac{\wbar^{k-1}_{i_{k-1}}}{4t_{k-1}}\frac{(\wbar^{k-1})^{n^{k-1}}}{4t^{|n^{k-1}|}}\right)  \\
+& \displaystyle \times \left(\frac{1}{4t^{|n^k|}} \left(\sum_{\alpha=1}^{k-1} \wbar^\alpha\right)^{n^k}\right) \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{4t_\alpha} - \frac{1}{4\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
 \end{array}
 \een
 We will integrate by parts to eliminate the factors of $\wbar_i^\alpha$.
 
 For each $1 \leq \alpha < k$ and $i_\alpha$, define the $\epsilon$ and $t=(t_1,\ldots,t_{k-1})$-dependent holomorphic differential operator
-\ben
-D_{\alpha, i_\alpha}(t) := \left(\frac{\partial}{\partial w^\alpha_{i_\alpha}} - \sum_{\beta = 1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{i_\alpha}^{\beta}}\right)
+\begin{align*}
+D_{\alpha, i_\alpha}(t) := & \left(\frac{\partial}{\partial w^\alpha_{i_\alpha}} - \sum_{\beta = 1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{i_\alpha}^{\beta}}\right) \times \\ & 
 \prod_{j=1}^d \left(\frac{\partial}{\partial w_j^\alpha} - \sum_{\beta =1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{j}^\beta}\right)
 ^{n_j^\alpha} .
-\een
+\end{align*}
 And the $\epsilon,t$-dependent holomorphic differential operator
 \ben
 D_{k}(t) = \prod_{j=1}^d \left(\frac{\partial}{\partial w_j^k} - \sum_{\beta =1}^{k-1} \frac{t_\beta}{t_1+\cdots + t_{k-1} + \epsilon} \frac{\partial}{\partial w_{j}^\beta}\right)^{n_j^k} .
@@ -2104,8 +2123,8 @@ D_{k}(t) = \prod_{j=1}^d \left(\frac{\partial}{\partial w_j^k} - \sum_{\beta =1}
 By a completely analogous version of Lemma \label{lem: diff applied E} the operators above allow us to integrate by parts and express the weight in the form
 \ben
 \begin{array}{lll}
-\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) & = \displaystyle \pm \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}}\left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \int_{(t_1,\ldots,t_{k-1}) \in [\epsilon,L]^{k-1}} \frac{1}{(4 \pi \epsilon)^d} \prod_{\alpha=1}^{k-1} \frac{\d t_\alpha}{(4 \pi t_\alpha)^d}  \\ 
-& \displaystyle \times\left( \sum_{i_1,\ldots, i_{k-1}} \epsilon_{i_1\cdots,i_d} D_{1, i_1}(t) \cdots D_{k-1,i_{k-1}} (t) D_k(t) \Phi(w^1,\ldots,w^k) \right) \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{4t_\alpha} - \frac{1}{4\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
+\Tilde{W}_{\epsilon < L}^{k, (n)}(\Phi) & = \displaystyle \pm \int_{w^k \in \CC^d} \d^{2d} w^k \int_{(w_1,\ldots,w_{k-1}) \in (\CC^d)^{k-1}}\left(\prod_{\alpha=1}^{k-1} \d^{2d} w^\alpha\right) \\ & \displaystyle \times \int_{(t_1,\ldots,t_{k-1}) \in [\epsilon,L]^{k-1}} \frac{1}{(4 \pi \epsilon)^d} \prod_{\alpha=1}^{k-1} \frac{\d t_\alpha}{(4 \pi t_\alpha)^d}  \\ 
+& \displaystyle \times\left( \sum_{i_1,\ldots, i_{k-1}} \epsilon_{i_1\cdots,i_d} D_{1, i_1}(t) \cdots D_{k-1,i_{k-1}} (t) D_k(t) \Phi(w^1,\ldots,w^k) \right) \\ & \displaystyle \times \exp\left(- \sum_{\alpha=1}^{k-1} \frac{|w^{\alpha}|^2}{4t_\alpha} - \frac{1}{4\epsilon} \left|\sum_{\alpha=1}^{k-1} w^\alpha \right|^2\right) .
 \end{array}
 \een 
 Observe that the operators $D_{\alpha,i_\alpha}(t), D_k(t)$ are uniformly bounded in $t$.
@@ -2199,11 +2218,13 @@ We will see a precise statement of this for the holomorphic current algebra in o
 
 \begin{rmk} 
 We have already shown how familiar topological theories can be cast in a holomorphic language.
+For instance, topological $BF$ theory is a holomorphic deformation of holomorphic $BF$ theory. 
 It is a peculiar consequence of the above result that such topological theories also admit a simple regularization procedure. 
-For instance, in even dimensions this gives a finite one-loop quantizations of topological BF theory. 
 Without much more difficulty, one can extend this to certain topological theories to odd dimensional manifolds of the form $X \times S$, where $X$ is a complex manifold and $S$ is a real one-dimensional manifold. 
 We consider the theory as a product of a holomorphic theory on $X$ and a one-dimensional topological theory on $S$. 
 This can be further extended to transversely holomorphic foliations \cite{THF1,THF2}, which we will study in a future publication.
+Further, often topological BF theory further deforms to Yang-Mills.
+It would be interesting to apply our analysis above to such gauge theories. 
 \end{rmk}
 
 \section{Equivariant BV quantization} \label{sec: equiv BV}
@@ -2406,7 +2427,7 @@ sends $I^{\sL}[L] \mapsto I[L]$ for each $L > 0$.
 \end{enumerate}
 \end{dfn}
 
-In the definition above we require $I^{\sL}[L]$ to be an element in $\sO_{P, sm}^+(\sL[1] \oplus \sE) / \sO_{P,sm} (\sL[1]) [[\hbar]]$, which is the space of smooth and proper functionals on $\sL[1] \oplus \sE$ that are at least cubic modulo $\hbar$ and do not depend solely on $\sL$. 
+In the definition above we require $I^{\sL}[L]$ to be an element in $$\sO_{P, sm}^+(\sL[1] \oplus \sE) / \sO_{P,sm} (\sL[1]) [[\hbar]],$$ which is the space of smooth and proper functionals on $\sL[1] \oplus \sE$ that are at least cubic modulo $\hbar$ and do not depend solely on $\sL$. 
 A stricter definition is that of an {\em inner} action, where we allow the functionals that depend solely on $\sL[1]$. 
 
 \begin{dfn}
